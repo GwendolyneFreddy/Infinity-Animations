@@ -1,0 +1,111 @@
+/* ======================================== *
+ *               GAME strings               *
+ * ======================================== */
+@500 = ~Yuan-Ti Mage~
+@501 = ~Yuan-Ti~
+@502 = ~Gnoll Captain~
+@503 = ~Hobgoblin Captain~
+@504 = ~Hobgoblin Wizard~
+@505 = ~Balor~
+
+// Nabassus soundset
+@506 = ~Who disturbs me?~ [T-NAB04]
+@507 = ~Rawrr!~ [T-NAB03]
+@508 = ~I will rend your soul!~ [T-NAB05]
+@509 = ~Your pain shall be eternal!~ [T-NAB06]
+
+// Night Hags soundset
+@510 = ~Well... hello, my pretty!~ [T-HAG01]
+@511 = ~Your bones and blood will blanket my garden.~ [T-HAG77]
+@512 = ~Off with ye. Dead I am.~ [T-HAG90A]
+@513 = ~Do not push me!~ [T-HAG13]
+
+// Wings
+@514 = ~Wings~
+// Gwen fix: use the BGEE #27583 stringref for better 1pp, Infinity Animations and EE compatibility.
+@515 = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. Though not radiating a noticeable magical aura, the wings do seem to move with their bearer in a way that defies their supposed mechanism.
+
+STATISTICS:
+
+Type: Wings
+Requires:
+ Wearer must be an elf
+
+Weight: 2~
+// 209_v4_wings.tph traified
+
+// Erinyes soundset
+@516 = ~Well hello there.~ [T-ERI02A]
+@517 = ~Farewell for now.~ [T-ERI06]
+@518 = ~On your knees!~ [T-ERI01A]
+@519 = ~You are mine!~ [T-ERI01B]
+@520 = ~Rrrauugh!~ [T-ERI01C]
+@521 = ~You tempt pain that you have never dreamed of.~ [T-ERI01D]
+@522 = ~Rend their flesh! They will not need it.~ [T-ERI01E]
+@523 = ~You want to heal me. You must.~ [T-ERI10]
+@524 = ~I need to speak with you. Come here.~ [T-ERI02B]
+@525 = ~Come to my side. Help me here.~ [T-ERI02C]
+@526 = ~Oh, yes.~ [T-ERI02D]
+@527 = ~Ha! Ha-ha-ha...~ [T-ERI02E]
+@528 = ~Oh, that is very nice.~ [T-ERI05]
+@529 = ~No. No.~ [T-ERI08]
+
+// Succubi soundset
+@530 = ~Yes?~ [T-SUC02]
+@531 = ~Your death shall be beautiful!~ [T-SUC01A]
+@532 = ~Your soul shall be mine!~ [T-SUC01B]
+
+// Tieflings males soundset
+@533 = ~You cannot win this fight!~ [T-TIM01A]
+@534 = ~Into the flames we leap!~ [T-TIM01B]
+@535 = ~Ha ha ha ha!~ [T-TIM01C]
+@536 = ~My blood calls for yours and it *will* be satisfied.~ [T-TIM01D]
+@537 = ~Do you wish to die now? Because I can certainly arrange that.~ [T-TIM01E]
+@538 = ~Greetings.~ [T-TIM02A]
+@539 = ~Yes.~ [T-TIM02B]
+@540 = ~At your command.~ [T-TIM02C]
+@541 = ~What do we have here?~ [T-TIM02D]
+@542 = ~No.~ [T-TIM11]
+@543 = ~My magic did not work!~ [T-TIM12]
+
+// Tieflings females soundset
+@544 = ~Your time in this realm is over!~ [T-TIF01]
+@545 = ~Yes? I listen.~ [T-TIF02]
+
+@546 = ~Greater Zombie~
+
+// Svirfneblins soundset
+@547 = ~Yes.~ [T-SVA01B]
+@548 = ~Help! Help!~ [T-SVA03B]
+@549 = ~My powers shall obliterate you!~ [T-SVA02C]
+@550 = ~Die!~ [T_SVA02D]
+@551 = ~I am wounded! Heal me!~ [T-SVA07]
+@552 = ~Good day!~ [T-SVA01A]
+@553 = ~I really need to talk to you.~ [T-SVA01C]
+@554 = ~Ho ha ha ha!~ [T-SVA01D]
+@555 = ~You're in GREAT peril if you bother me. Just you wait!~ [T-SVA08]
+@556 = ~That's the way it's done and done!~ [T-SVA09]
+@557 = ~No...~ [T-SVA10]
+@558 = ~Come and talk a while.~ [T-SVN01C]
+@559 = ~Please help me!~ [T-SVN03B]
+@560 = ~Take that!~ [T-SVN02C]
+@561 = ~Evil fall before me!~ [T_SVN02D]
+@562 = ~I am hurt!~ [T-SVN07]
+@563 = ~Hello there.~ [T-SVN01A]
+@564 = ~Yes.~ [T-SVN01B]
+@565 = ~Oh ho ho ho!~ [T-SVN01D]
+@566 = ~You're heading for a good beating, you are!~ [T-SVN08]
+@567 = ~Well look at that!~ [T-SVN09]
+@568 = ~No...~ [T-SVN10]
+@569 = ~So long!~ [T-SVA03A]
+@570 = ~Kill that scum! Get 'em good!~ [T-SVA02A]
+@571 = ~Blood and bloody hell!~ [T_SVA02B]
+@572 = ~Farewell.~ [T-SVN03A]
+@573 = ~Get 'em!~ [T-SVN02A]
+@574 = ~I will cut you down to size!~ [T_SVN02B]
+
+// amel_pc_nwn soundset
+@575 = ~What do you want?~ [T-AML02A]
+@576 = ~Taste steel!~ [T-AML01A]
+@577 = ~Die as you must!~ [T-AML01B]
+@578 = ~Yes?~ [T-AML02B]

@@ -1,0 +1,111 @@
+/* ======================================== *
+ *               GAME strings               *
+ * ======================================== */
+// esprit des eau
+@500 = ~Mage Yuan-Ti~
+@501 = ~Yuan-Ti~
+@502 = ~Capitaine gnoll~
+@503 = ~Capitaine Hobgobelin~
+@504 = ~Magicien Hobgobelin~
+@505 = ~Balor~
+
+// Nabassus soundset
+@506 = ~Qui me dérange ?~ [T-NAB04]
+@507 = ~Rawrr !~ [T-NAB03]
+@508 = ~Je vais déchirer ton âme !~ [T-NAB05]
+@509 = ~Que tes souffrances soient éternelles !~ [T-NAB06]
+
+// Night Hags soundset
+@510 = ~Eh bien... Bonjour, mes jolis !~ [T-HAG01]
+@511 = ~Vos os et votre sang tapisseront mon jardin.~ [T-HAG77]
+@512 = ~Allez-vous-en. Je suis morte.~ [T-HAG90A]
+@513 = ~Ne me pouusez-pas à bout !~ [T-HAG13]
+
+// Wings
+@514 = ~Ailes~
+// Gwen fix: use the BGEE #27583 stringref for better 1pp, Infinity Animations and EE compatibility.
+@515 = ~Ces douces ailes de plumes ont une apparence céleste. Pourtant, en y regardant de plus près, on se rend compte qu'il s'agit de deux fausses ailes reliées entre elles par des rubans en satin attachés à leurs bases. Même si elles n'ont rien de magique, elles semblent se mouvoir avec leur porteur, bien que leur mécanisme supposé ne semble pas pouvoir le leur permettre.
+
+PARAMÈTRES :
+
+Poids : 2
+Type : ailes
+
+Utilisable uniquement par :
+ Elfe~
+
+// Erinyes soundset
+@516 = ~Bonjour !~ [T-ERI02A]
+@517 = ~À plus tard.~ [T-ERI06]
+@518 = ~À genoux !~ [T-ERI01A]
+@519 = ~Vous êtes à moi !~ [T-ERI01B]
+@520 = ~Rrrauugh !~ [T-ERI01C]
+@521 = ~Vous allez goûter à une souffrance dont vous n'avez aucune idée.~ [T-ERI01D]
+@522 = ~Arrachez-leur la chair ! Ils n'en auront plus besoin.~ [T-ERI01E]
+@523 = ~Vous voulez me soigner. Vous le devez.~ [T-ERI10]
+@524 = ~Il faut que je vous parle. Approchez-vous.~ [T-ERI02B]
+@525 = ~Venez à mes côtés. Aidez-moi.~ [T-ERI02C]
+@526 = ~Oh, oui.~ [T-ERI02D]
+@527 = ~Ha ! Ha ha ha...~ [T-ERI02E]
+@528 = ~Oh, pas mal du tout !~ [T-ERI05]
+@529 = ~Non. Non.~ [T-ERI08]
+
+// Succubi soundset
+@530 = ~Oui ?~ [T-SUC02]
+@531 = ~Votre mort sera belle !~ [T-SUC01A]
+@532 = ~Votre âme sera mienne !~ [T-SUC01B]
+
+// Tieflings males soundset
+@533 = ~Vous ne pouvez pas remporter ce combat !~ [T-TIM01A]
+@534 = ~Nous bondissons dans les flammes !~ [T-TIM01B]
+@535 = ~Ha ha ha ha !~ [T-TIM01C]
+@536 = ~Mon sang a soif du vôtre, et il obtiendra satisfaction.~ [T-TIM01D]
+@537 = ~Vous voulez vraiment mourir maintenant ? Parce que je ça peut tout à fait s'arranger.~ [T-TIM01E]
+@538 = ~Bonjour.~ [T-TIM02A]
+@539 = ~Oui.~ [T-TIM02B]
+@540 = ~À vos ordres.~ [T-TIM02C]
+@541 = ~Qu'avons-nous là ?~ [T-TIM02D]
+@542 = ~Non.~ [T-TIM11]
+@543 = ~Mon sort a échoué !~ [T-TIM12]
+
+// Tieflings females soundset
+@544 = ~Votre séjour dans ce royaume est terminé !~ [T-TIF01]
+@545 = ~Oui ? J'écoute.~ [T-TIF02]
+
+@546 = ~Seigneur zombi~
+
+// Svirfneblins soundset
+@547 = ~Oui.~ [T-SVA01B]
+@548 = ~À l'aide !~ [T-SVA03B]
+@549 = ~Mes pouvoirs vont vous réduire en poussière !~ [T-SVA02C]
+@550 = ~Meurs !~ [T_SVA02D]
+@551 = ~Je suis blessé ! Soigne-moi !~ [T-SVA07]
+@552 = ~Bonjour !~ [T-SVA01A]
+@553 = ~Je dois vraiment vous parler.~ [T-SVA01C]
+@554 = ~Ho ha ha ha !~ [T-SVA01D]
+@555 = ~Vous allez être en GRAND danger si vous me cherchez. Attendez voir !~ [T-SVA08]
+@556 = ~C'est comme ça qu'on fait !~ [T-SVA09]
+@557 = ~Non...~ [T-SVA10]
+@558 = ~Viens, et discutons un peu.~ [T-SVN01C]
+@559 = ~S'il vous plaît, aidez-moi ! !~ [T-SVN03B]
+@560 = ~Prends ça !~ [T-SVN02C]
+@561 = ~Le Mal s'écrase devant moi !~ [T_SVN02D]
+@562 = ~Je suis blessé !~ [T-SVN07]
+@563 = ~Salut, toi.~ [T-SVN01A]
+@564 = ~Oui.~ [T-SVN01B]
+@565 = ~Oh oh oh oh !~ [T-SVN01D]
+@566 = ~Vous allez vous faire sérieusement tabasser !~ [T-SVN08]
+@567 = ~Et bien, voyez-vous ça !~ [T-SVN09]
+@568 = ~Non...~ [T-SVN10]
+@569 = ~À la prochaine !~ [T-SVA03A]
+@570 = ~Tuez cette vermine ! Attrapez-les !~ [T-SVA02A]
+@571 = ~Sang et enfers !~ [T_SVA02B]
+@572 = ~Adieu.~ [T-SVN03A]
+@573 = ~Attrapez-les !~ [T-SVN02A]
+@574 = ~Je vais vous raccourcir un poil !~ [T_SVN02B]
+
+// amel_pc_nwn soundset
+@575 = ~Que voulez-vous ?~ [T-AML02A]
+@576 = ~Viens goûter de ma lame !~ [T-AML01A]
+@577 = ~Vous devez mourir !~ [T-AML01B]
+@578 = ~Oui ?~ [T-AML02B]

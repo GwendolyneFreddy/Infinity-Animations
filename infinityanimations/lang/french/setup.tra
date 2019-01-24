@@ -1,0 +1,153 @@
+/* ========================================= *
+ *                DOS strings                *
+ * ========================================= */
+@1   = ~Infinity Animations (composant principal)~
+/* Useless as of v6
+@2   = ~Votre page code ANSI a la valeur %t-acp%. Il faut la regler sur 1252 (Latin) pour installer ce mod sur votre ordinateur~
+@3   = ~Vous devez redemarrer pour poursuivre l'installation. Redemarrer maintenant ?
+[Y]Oui [N]on~
+@4   = ~Redemarrage dans quelques secondes. Veuillez fermer toutes les autres applications.~
+*/
+@5   = ~Ce mod n'est pour l'instant pas compatible avec le systeme d'exploitation OS X.
+Si vous souhaitez vous en charger, veuillez manifester votre interet sur le forum www.shsforums.net/forum/594-infinity-animations/.
+(Si vous disposez de competences techniques, etudier l'executable du jeu et de ce patch
+dans un editeur pourrait vous etre utile.)~
+@6   = ~Un mod a ecrase les animations de BG2 de votre jeu. Veuillez extraire l'archive
+IA_BG2_Restores.rar dans le repertoire infinityanimations/restore.~
+@7   = ~Un des mods deja installes necessite l'extraction de l'archive IA_Base_Anims.rar
+dans le repertoire infinityanimations/content.~
+@8   = ~Un des mods deja installes necessite l'extraction de l'archive IA_IWD.rar dans
+le repertoire infinityanimations/content.~
+@9   = ~Un des mods deja installes necessite l'extraction de l'archive IA_BGII_IWDII.rar
+dans le repertoire infinityanimations/content.~
+@10  = ~Un mod installe necessite l'extraction de l'archive Belhifet_and_Marilith.zip
+dans le repertoire infinityanimations/content.~
+@11  = ~Un mod installe necessite l'extraction de l'archive Shadows_harpy_frostgiant.zip
+dans le repertoire infinityanimations/content.~
+@12  = ~Un mod installe necessite l'extraction des archives IA_NWN_01_Modron.rar et
+NWN_Misc_I.rar dans le repertoire infinityanimations/restore.~
+@13  = ~Un des mods installes necessite l'extraction de l'archive IA_Wh_Dr_Wyv_LoP.rar
+dans le repertoire infinityanimations/content.~
+@14  = ~NOTE : Telechargez tout le contenu necessaire dans le forum Spellhold Studios a
+cette adresse (www.shsforums.net/index.php?autocom=downloads&showcat=98). Extrayez les
+archives en selectionnant l'option "Ne pas extraire les chemins d'acces" de l'onglet 
+Avance de WinRAR. Assurez-vous aussi que le "Chemin d'acces de destination" de l'onglet
+General se termine par /content ou /restore apres infinityanimations (ils ne doivent 
+pas comporter de sous-repertoires).~
+@15  = ~Avec WinZip, assurez-vous que la case "Utiliser les noms de repertoire" n'est 
+pas cochee. Une fois l'extraction terminee, les repertoires "content" et/ou "restore" 
+devraient contenir une multitude de fichiers .bam, et AUCUN sous-repertoire. 
+Relancez alors la procedure d'installation.~
+@16  = ~Il manque du contenu necessaire.~
+@17  = ~L'executable BGMain.exe semble avoir deja ete modifie ; on saute sa modification~
+@18  = ~L'executable BGMain.exe n'est pas valide.
+Assurez-vous que vous avez bien installe le patch 26498 pour ToB !~
+@19  = ~Modification de l'executable BGMain.exe pour activer les nouvelles animations...~
+@20  = ~Remplacement des animations de creature _LOW (veuillez patienter)...~
+@21  = ~Modification des fichiers IDS...~
+@22  = ~Retablissement des animations de BG2 ecrasees par d'autres mods...~
+@23  = ~Copie des nouvelles animations dans le jeu (veuillez patienter)...~
+@24  = ~Correction des animations des creatures...~
+@25  = ~Genies differencies~
+@26  = ~Ce composant necessite le composant principal.~
+@27  = ~Vous devez extraire l'archive IA_Fiends_Genies.rar et l'installer avec le 
+composant principal.~
+@28  = ~Demons differencies~
+@29  = ~Vous devez extraire les archives IA_Fiends_Genies.rar, IA_IWD.rar, 
+IA_PST_Abishai.rar, IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et les installer avec le 
+composant principal.~
+@30  = ~Diantrefosses~
+@31  = ~Vous devez extraire l'archive IA_NWN_01_Modron.rar et l'installer avec le 
+composant principal.~
+@32  = ~Leur attribuer a tous l'animation de NWN~
+@33  = ~Attribuer a certains l'animation de NWN~
+@34  = ~Vous devez extraire l'archive IA_BGII_IWDII.rar et l'installer avec le 
+composant principal.~
+@35  = ~Animation d'Isair pour les cambions~
+@36  = ~A tous les cambions~
+@37  = ~A certains cambions~
+@38  = ~Animation de Madae pour les alu-demons~
+@39  = ~A toutes les alu-demons~
+@40  = ~A certaines alu-demons~
+@41  = ~Morts-vivants differencies~
+@42  = ~Vous devez extraire les archives IA_Base_Anims.rar, IA_IWD.rar et 
+Shadows_harpy_frostgiant.zip, et les installer avec le composant principal.~
+@43  = ~Combattants squelettes~
+@44  = ~Vous devez extraire l'archive IA_IWD.rar et l'installer avec le composant principal.~
+@45  = ~Leur attribuer l'animation de necrophage des tertres (Wight Barrow)~
+@46  = ~Leur attribuer l'animation de squelette normal (jaune)~
+@47  = ~Leur attribuer l'animation de combattant squelette~
+@48  = ~Animation de pauvre hère~
+@49  = ~Pour certains mendiants et esclaves~
+@50  = ~Pour certains mendiants~
+@51  = ~Pour certains esclaves~
+@52  = ~Animations de svirfneblins~
+@53  = ~Le mod Aurora's Shoes a deja installe ce contenu.~
+@54  = ~Vous devez extraire l'archive IA_IWD_Svirfneblin.rar et l'installer avec le 
+composant principal.~
+@55  = ~Seulement les animations~
+@56  = ~Les animations et les sons~
+@57  = ~Plus d'animations de base~
+@58  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
+composant principal.~
+@59  = ~Plus d'animations d'Icewind Dale~
+@60  = ~Plus d'animations d'Icewind Dale II~
+@61  = ~Plus d'animations de Neverwinter Nights~
+@62  = ~Vous devez extraire les archives IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et 
+les installer avec le composant principal.~
+@63  = ~Plus d'animations de Planescape: Torment~
+@64  = ~Vous devez extraire l'archive IA_PST_Paletted.rar et l'installer avec le 
+composant principal.~
+@65  = ~25 % des creatures non-recrutables concernees~
+@66  = ~50 % des creatures non-recrutables concernees~
+@67  = ~75 % des creatures non-recrutables concernees~
+@68  = ~Toutes les creatures non-recrutables concernees~
+@69  = ~Avatars de Moinesse pour IA~
+@70  = ~Vous devez extraire l'archive Moinesse_edits_IAised.rar et l'installer avec 
+le composant principal.~
+@71  = ~Animations de personnages de BG1 pour les PNJs~
+@72  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
+composant principal.~
+@73  = ~Modification des personnages non joueurs (veuillez patienter)...~
+@74  = ~25 % des creatures concernees~
+@75  = ~50 % des creatures concernees~
+@76  = ~75 % des creatures concernees~
+@77  = ~La plupart des creatures concernees~
+@78  = ~Animations de personnages de BG1 pour les PJ exportes~
+@79  = ~Demander confirmation pour chaque PJ~
+@80  = ~Demander confirmation pour les PJs posant probleme~
+@81  = ~Modifier tous les PJs sans demander confirmation~
+@82  = ~Animations de personnages de BG1 dans les parties sauvegardees~
+@83  = ~Demander confirmation pour chaque personnage~
+@84  = ~Demander confirmation pour les personnages posant probleme~
+@85  = ~Modifier tous les personnages sans demander confirmation~
+@86  = ~Correction des animations dans les parties sauvegardees~
+@87  = ~Corriger uniquement les animations _LOW~
+@88  = ~Corriger toutes les animations que IA a modifiees~
+
+// fj_cre_validity.tpp
+@89  = ~est corrompu ~
+@90  = ~taille du fichier inferieure au minimum requis~
+@91  = ~en-tete mal place~
+@92  = ~les effets globaux pointent vers l'en-tete~
+
+// t-bg1chars.tpa, t-bg1sav.tpa et t-savfix.tpa
+@93  = ~(Objet non conforme dans la deuxieme main)~
+@94  = ~(Competence en katana)~
+@95  = ~(Competence en cimeterre)~
+@96  = ~(Competence en style de combat a deux armes)~
+@97  = ~(cimeterre ou katana)~
+@98  = ~Modifier~
+@99  = ~[Y(Oui)/N(on)]?~
+@100 = ~a un objet ou une competence qui peut
+crasher le jeu avec sa nouvelle animation~
+@101 = ~Le modifier quand meme ? [Y(Oui)/N(on)]~
+@102 = ~Mise a jour du fichier .gam dans~
+@103 = ~Mise a jour du fichier .sav dans~
+
+@104 = ~Corriger les cartes~
+@105 = ~Correction des references des creatures dans les cartes~
+@106 = ~Corrige les references des creatures dans les cartes (veuillez patienter)...~
+@107 = ~Correction des animations des humanoides~
+
+@200 = ~Ce mod ne s'installe que sur le moteur de ToB classique (pas sur les jeux EE).~
