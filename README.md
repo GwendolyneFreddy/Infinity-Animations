@@ -63,7 +63,7 @@ Install this mod after most other mods, particularly those that add creatures or
 
 ## <a name="installation" id="installation"></a>Installation
 
-####Notes
+#### Notes
 
 <em>If you've previously installed the mod, remove it before extracting the new version. To do this, run <strong>setup-infinityanimations.exe</strong>, uninstall all previously installed components and delete the infinityanimations folder.</em>
 
@@ -73,6 +73,8 @@ Install this mod after most other mods, particularly those that add creatures or
 
 You can extract files from the archive using <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .rar files.
 
+<details><summary>DEPRECATED as of v 6</summary>
+<p>
 <strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/index.php?autocom=downloads&showcat=98">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "Do not extract paths" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no subfolders beyond that).
 
 <p>Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the subarchive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
@@ -80,10 +82,13 @@ You can extract files from the archive using <a href="http://www.rarlab.com/down
 For WinZip, make sure the "Use folder names" box is <em>unselected</em>.
 
 You should end up with a bunch of .bam files and no subfolders in your "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
+</p>
+</details>
+
 
 ## 
 
-####Windows
+#### Windows
 
 Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click <strong>setup-infinityanimations.exe</strong> and follow the instructions on screen.
 
@@ -91,7 +96,7 @@ Run <strong>setup-infinityanimations.exe</strong> in your game folder to reinsta
 
 ## 
 
-####Linux
+#### Linux
 
 Extract the contents of the mod to the folder of the game you wish to modify.
 
@@ -103,9 +108,157 @@ Run <strong>WeInstall setup-infinityanimations</strong> in your game folder to i
 
 ## 
 
-####Note for Complete Uninstallation
+#### Note for Complete Uninstallation
 
 In addition to the methods above for removing individual components, you can completely uninstall the mod using <strong>setup-infinityanimations --uninstall</strong> at the command line to remove all components without wading through prompts.</br>
+<div style="text-align:right"><a href="#top">Back to top</a></div>
+
+## 
+
+#### <a name="config" id="config">:warning: Warning: new installation process
+
+##### As of version 6.0.0, options needed for installation are read from <a href="../ia-config-default.ini"><em>ia-config-default.ini</em></a> file, or <em>ia-config.ini</em> if it exists.
+
+The previous versions needed all content required to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations <strong>content</strong> or <strong>restore</strong> subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
+
+From now on, the content needed by Infinity Animations is included in the <strong>archives</strong> folder and automatically copied into the respective <strong>content</strong> or <strong>restore</strong> subfolders by the main component.
+
+By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit **_ia-config-default.ini_** (found in infinityanimations folder) with Notepad or another text editor, then save it as **_ia-config.ini_**.
+
+Each line consists of a configuration option, then '=', then a number. The only thing you should edit is the number. For example, if you don't want to use svirneblins animations, change the ia_iwd_svirfneblin value to 0. If you want to install a component requiring files that you decided not to install, the installer will warn you. You will have to exit it, modify the variable value in the ini file, and rerun the installer.
+
+The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in ia-config.ini, any installation failure will be prevented by reverting it back to its default value.
+
+Here is a chart listing the options related to the installation process:</br></br>
+
+<table style="margin-left: 80px; width: 90%; " summary="Installation variables list">
+	<tr style="font-size: 125%; line-height: 160%;">
+		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Variable</th>
+		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Description</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_base_anims</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 001 - Base Content<br><br>
+		- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow), restored BG I character animations. Includes all relevant creature sounds and tables and BG1 scimitars.<br>
+		- Needed for Distinctive Undead [400], More Base Animations [500], BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
+		- Needed for BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS and RPG Kitspack mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_belhifet_and_marilith</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Belhifet and Marilith<br><br>
+		- Content: animation and audio files for the IWD Belhifet and IWD Marilith. Includes properly-slotted creature sounds and tables.<br>
+		- Needed for Drizzt Saga, RoT, TDD, TS and TS-BP mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_restores</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - BG2 Restores<br><br>
+		- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
+		- This is the content module for BG2 restored slots. It is only necessary for a megamod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_iwd2</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 002 - IWDII and unused BGII Animations<br><br>
+		- Content: all IWD II animations that are neither in BGII (Death Tyrant, Alternate Ellesime, Alternate Fire Giant, Lagoon Creature) or IWD (Abishai White, Arctic Boar, Bugbear, Bugbear Captain, Chimera, Dark Treant, Drider male/female, Elemental Water Small, Feyr lesser/greater, Fomorian Giant, IWD II goblins, Goblin Worgrider, Goblin Worgrider Captain, Half-dragon black/red, Hook Horror, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Shenrical, Undead Orcs, Werebadger, Wererat, Worg, Yuan-Ti Halfbreed). Includes all relevant creature sounds and tables.<br>
+		- Needed for Cambion get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
+		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_tob</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - EE games new Animations ported to ToB<br><br>
+		- Content: Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_fiends_genies</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Fiends and Genies<br><br>
+		- Content: Fiend green (Nabassu), Fiend blue, Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Gelugon and Tieflings sound files.<br>
+		- Needed for Distinctive Genies [50] and Distinctive Fiends [100] components.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Remaining IWD Animations<br><br>
+		- Content: Remaining IWD animations not in the other archives (Animated Plate bronze/dark/green, Arundel, Barbarian Shaman hammer/staff/club, Barbarian Warrior tan/red/brown, Barbarian Icasaracht, Belhifet Priest, Creeping Doom, Drowned Dead, Elemental Earth/Water/Fire, Fire Giant IWD, Iron Golem IWD, Remorhaz, Sahuagin small/large, Seer, Tundra Yeti, Umber Hulk Vodyanoi, Verbeeg, Wight Barrow). Includes all relevant creature sounds and tables.<br>
+		- Needed for Distinctive Fiends [100], Distinctive Undead [400], Skeleton Warriors [410-415-420], Seer Animation [450-455-460] and More Icewind Dale Animations [550] components.<br>
+		- Needed for BP, BH, CtB, NEJ, RoT, SOS and TS mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd_svirfneblin</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Svirfneblin<br><br>
+		- Content: IWD/IWD2 animations for svirfneblin (deep gnomes). By default, they are pale (flesh-coloured) whereas in canon references, they should be darker (stone-coloured). The original game had variants with and without pickaxes (they do not display separate weapon animations). Since these slots are unpaletted, there are alternates as follows (the last two being custom variants of the IWD pale animations): Svirfneblin pale with axe, Svirfneblin pale without axe, Svirfneblin dark with axe, Svirfneblin dark without axe. Includes gnome sounds ported from NWN.<br>
+		- Needed for Svirfneblin Animations [480-490] component.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_moinesse_edits_iaised</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px;">IA Content - Moinesse's Avatar Edits (IA compatible version)<br><br>
+		- Content: Female Elf Mage, Female Human Druid, Female Human Fighter, Female Human Mage, Female Human Thief, Male Human Barbarian, Male Human Ninja, Male Vampire.<br>
+		- Needed for Moinesse's Avatars for IA [7000-7010-7020-7030] component.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_01_modron</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
+		- Content: Alternate Modron, WoRm's NWN ports (Amel, Basilisk, Bebilith, Hamatula, Osyluth, Pit Fiend, Scarecrow, Vedred). Includes all relevant creature sounds and tables.<br>
+		- Needed for Distinctive Fiends [100], Pit Fiends {150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_i</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Miscellaneous NWN Animations I<br><br>
+		- Content: Bombardier Beetle, Displacer Beast, Female Fire and Frost Giants, Succubus (with object animations), Bovine Axe Thing (don't ask). Includes all relevant creature sounds and tables.<br>
+		- Needed for Distinctive Fiends [100] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_abishai</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Abishai<br><br>
+		- Content: Black Abishai, Blue Abishai, Green Abishai, Red Abishai (based on PS:T animations). Includes creature sounds.<br>
+		- Needed for Distinctive Fiends [100] component.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_paletted</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Paletted Animations<br><br>
+		- Content: Aasimar Female, Baurier Male, Curst Townie Female, Curst Townie Male, Dustman Female, Dustman Male, Ghoul Female, Ghoul Male, Githzerai, Godsman, Large Thug, Lower Class Townie Female, Lower Class Townie Male, Merchant, Midwife, Prostitute, Skeleton Priest, Skeleton Worker, Thokola, Thug, Tiefling Female, Tiefling Male, Townie Wizard, Upper Class Townie Female, Upper Class Townie Male, Zombie Female, Zombie Male. Includes animation sound clips.<br>
+		- Needed for More Planescape: Torment Animations [710-720-760-740] component.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_shadows_harpy_frostgiant</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Shadows, Harpy and Frost Giant<br><br>
+		- Content: Alternate ("murky") Shadows, Harpy and Frost Giant from IWD. Includes all relevant creature sounds and tables.<br>
+		- Needed for Distinctive Undead [400] component; and for BP, Drizzt Saga, NEJv691, RoT, TDD and TS mods.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_wh_dr_wyv_lop</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - White Wyvern and Dragon, Lady of Pain<br><br>
+		- Content: IWD White Dragon, IWD White Wyvern large, Lady of Pain. Includes all relevant creature sounds and tables.<br>
+		- Needed for Planar Sphere mod.<br><br>
+		<span style="padding-left:20px;">0 = Don't install</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+	</tr>
+</table><br>
 <div style="text-align:right"><a href="#top">Back to top</a></div>
 
 
@@ -559,27 +712,43 @@ All subcomponents require the main component (they need to since it's the one th
 
 ## <a name="versions" id="versions"></a>Versions History
 
-##### WeiDU Beta 6 - Month day, 2019
+##### Version 6 - Month day, 2019
 
-- Major update: modified animations namespaces, <strong>now compatible with non-Western code pages</strong> (got rid if the .exe patch forcing a code page change and rebooting if a non-Western code page is detected) &#128521;
-- Integrated all code and animation files BWP Fixpack fixes (thanks to their authors!)
-- Svirfneblin Animations component [480-490]: added t-svi variable used in a single routine for its two sub-components
-- Fixed Seer animations component [450-455]: "Some beggars and slaves" and "Some beggars" sub-components creatures listings were interverted &#128541;
-- Split code into separate components for more comfortable readability
+- Major updates:
+    - Modified animations namespaces, <strong>now compatible with non-Western code pages</strong> (got rid if the .exe patch forcing a code page change and rebooting if a non-Western code page is detected) &#128521;
+	- From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize their installation, please read this <a href="#config"> chapter</a>.
+	- New IA Content (EE games new animations ported to ToB): Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
+- Integrated all code and BWP Fixpack fixes (thanks to their authors!):
+    - Main component: <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+	- More Planescape: Torment Animations component: <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tunned by Lollorian.
+- Integrated all BWP Fixpack graphic fixes:
+    - IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a> and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.
+	- IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a>.
+	- IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a>
+	- IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.
+	- NWN_Misc_I content: Gwendolyne's <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">Bovine axe thing fix</a>.
+- Added missing casting animations (sp and ca bam files, with weapons variants when needed):
+	- IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.
+	- IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
+	- IA IWD content: Animated Plate small bronze/dark/green, Barbarian warrior tan/red/brown, Creeping Doom, Drowned Dead, Elemental Earth/Fire/Water, Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
+	- IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
+- Updated Distinctive Fiends component [100]: removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "<em>Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way"</em>).
+- Fixed Seer animations component [450-455]: "<em>Some beggars and slaves</em>" and "<em>Some beggars</em>" sub-components creatures listings were interverted. &#128541;
+- Svirfneblin Animations component [480-490]: added t-svi variable used in a single routine for its two sub-components.
+- Moinesse's Avatars for IA component [7000-7010-7020-7030]: integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
+- Split code into separate components for more comfortable readability.
 - Moved components tpa files into new "components" folder and kept functions and macros in "lib" folder
-- Changed lines of code for further EE compatibility whenever possible
-- Code commented as much as possible
+- Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
+- Code commented as much as possible.
 - Coding simplification:
-    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as DECOMPILE_BCS_TO_BAF and DECOMPILE_DLG_TO_D)
-    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s ps_recursive_copy.tpa library, a WeiDU action function that will recursively search into a parent directory, then copying files to a destination directory
+    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as DECOMPILE_BCS_TO_BAF and DECOMPILE_DLG_TO_D).
+    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s ps_recursive_copy.tpa library, a WeiDU action function that will recursively search into a parent directory, then copying files to a destination directory.
     - Minor fixes...
-- Rewrote Tool IA Reference Picker (can now be translated) and updated its readme
-- Updated readme (IA now supports translated readmes)
-- Added French translation (Gwendolyne)
-- Traification. Feel free to provide me with translations. I will include them as soon as possible
-- Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246
-
-- Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as DECOMPILE_DLG_TO_D)
+- Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
+- Updated readme (IA now supports translated readmes, new animation pictures...).
+- Added French translation (Gwendolyne).
+- Traification. Feel free to provide me with translations. I will include them as soon as possible.
+- Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.
 
 
 ##### WeiDU Beta 5 - May 12, 2010

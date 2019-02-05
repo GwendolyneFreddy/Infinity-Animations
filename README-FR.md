@@ -58,7 +58,7 @@ Commencez une nouvelle partie</strong> après avoir installé ce mod, ou si vous ê
 		
 ## <a name="installation" id="installation"></a>Installation
 
-####Mise en garde
+#### Mise en garde
 
 <em>Si une ancienne version de ce mod est déjà installée, désinstallez-la avant d'extraire la nouvelle. Pour cela, lancez <strong>setup-infinityanimations.exe</strong>, désinstallez tous les composants précédemment installés et supprimez le répertoire infinityanimations.</em>
 
@@ -78,7 +78,7 @@ Une fois l'extraction terminée, les répertoires « content » et/ou « restore » de
 
 ## 
 
-####Windows
+#### Windows
 
 Extrayez le contenu du mod dans le répertoire du jeu que vous souhaitez modifier (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> ou EasyTutu). Si l'extraction s'est déroulée correctement, un répertoire infinityanimations et un fichier setup-infinityanimations.exe doivent être apparus dans le répertoire du jeu. Pour installer le mod, double-cliquez sur <strong>setup-infinityanimations.exe</strong> et suivez les instructions apparaissant à l'écran.
 
@@ -86,7 +86,7 @@ Pour réinstaller, désinstaller ou changer certains composants, lancez <strong>se
 
 ## 
 
-####Linux
+#### Linux
 
 Extrayez le contenu du mod dans le répertoire du jeu que vous souhaitez modifier.
 
@@ -98,10 +98,159 @@ Pour installer le mod, exécutez <strong>WeInstall setup-infinityanimations</stro
 
 ## 
 
-####Note pour effectuer une désinstallation complète
+#### Note pour effectuer une désinstallation complète
 
 En plus des méthodes détaillées plus haut pour supprimer des composants, il est possible de désinstaller complètement le mod en tapant <strong>setup-infinityanimations --uninstall</strong> dans une ligne de commandes, ce qui supprimera tous les composants sans devoir ingurgiter tous les messages.</br>
 <div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+
+## 
+
+#### <a name="config" id="config">:warning: Avertissement : nouvelle procédure d'installation
+
+##### Depuis la version 6.0.0, les variables nécessaires à l'installation sont lues dans le fichier <a href="../ia-config-default.ini"><em>ia-config-default.ini</em></a> ou dans le fichier <em>ia-config.ini</em>, si ce dernier existe.
+
+Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires <strong>content</strong> ou <strong>restore</strong> du répertoire infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
+
+Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire <strong>archives</strong> du mod et le composant principal le copie automatiquement dans les sous-répertoires <strong>content</strong> et <strong>restore</strong>.
+
+Par défaut, tout le contenu du répertoire archives est installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier les variables concernées dans le fichier **_ia-config-default.ini_** (situé dans le répertoire infinityanimations) avec Notepad ou un autre éditeur de texte, puis de le sauvegarder sous le nom **_ia-config.ini_**.
+
+Chaque ligne comprend une option de configuration, suivie de « = », puis d'un chiffre. Tout ce que vous avez à faire, c'est modifier la valeur du chiffre. Par exemple, si vous ne souhaitez pas utiliser les animations de svirneblins, modifiez la valeur de la variable ia_iwd_svirfneblin en 0. Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation vous préviendra de leur absence. Vous pourrez alors quitter le programme, modifier la valeur dans le fichier ini et relancer la procédure d'installation. 
+
+Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier ia-config.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « <em>standard</em> »).
+
+Voici le tableau des options concernées :</br></br>
+
+<table style="margin-left: 80px; width: 90%; " summary="Installation variables list">
+	<tr style="font-size: 125%; line-height: 160%;">
+		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Variable</th>
+		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Description</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_base_anims</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 001 - Base Content<br><br>
+		- Contenu : animations de Basilic et de Tasloi, les animations manquantes de IWD référencées dans BGII (Scarabée bombardier, Scarabée de feu, Scarabée scolyte, Scarabée rhinocéros, Cyclope, Fantôme, Blême majeur, Goule majeure, Histachii, Homme lézard, Homme lézard roi, Liche blanche, Nécrophage gris/vert/jaune, Ombre petite/grande), Ombre des roches ancienne, Troll des glaces, Troll des neiges) zombi bleu/jaune), les animations de personnages de BG I. Comprend les tables et les jeux de sons des créatures concernées et les animations de cimeterre de BG1.<br>
+		- Nécessaire pour les composants Morts-vivants différenciés [400], Plus d'animations de base [500], Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
+		- Nécessaire pour les mods BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS et RPG KitsPack.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_belhifet_and_marilith</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Belhifet and Marilith<br><br>
+		- Contenu : animations et jeux de sons du Belhifet et de la Marilith d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour les mods Drizzt Saga, RoT, TDD, TS et TS-BP.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_restores</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - BG2 Restores<br><br>
+		- Contenu : Femme araignée statique (MSPL), Goblin d'élite avec arc (MGO4), Goblin d'élite avec hache (MGO3), Liche (MLIC), Liche noire (MLER), Marilith (MTAN), Myconide bleu (MMY2), Orog (MNO1), Orog d'élite (MNO2), Orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
+		- Il s'agit du contenu nécessaire pour restaurer les slots d'animation de BG2 écrasés par certains mods. Il est uniquement nécessaire pour une mega installation comprenant les mods suivants : BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere et RPG KitsPack.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_iwd2</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 002 - IWDII and unused BGII Animations<br><br>
+		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, Géant du feu alternatif, Créature des lagons, Tyramort), ni dans IWD (Abishai blanc, Blaireau-garou, Chimère, Crochorreur, Demi-dragon noir/rouge, Drider mâle/femelle, Élémentaire de l'eau petit, Freyeur normale/grande, Géant Fomorian, Gobelins de IWD II, Gobelins chevaucheurs de worg, Gobelours, Capitaine gobelours, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Orques morts-vivants, Rat-garou, Tréant, Sanglier arctique, Shenrical, Worg, Yuan-Ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour les composants Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
+		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_tob</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - EE games new Animations ported to ToB<br><br>
+		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, ùarin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+			</tr>
+			<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_fiends_genies</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Fiends and Genies<br><br>
+		- Contenu : Démon bleu, Démon vert (Nabassu), Marilith sombre, Maurezhi, Myrlochar, Dao, Dao avec jambes, Efrit, Efrit avec jambes, Jann, Jann avec jambes, Marid, Marid avec jambes, Yochlol, Reine des goules, Guenaudes (Annis, noire, verte, des mers). Comprend aussi les fichiers de sons pour Erinyes, Gelugon et Tieffelins.<br>
+		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Remaining IWD Animations<br><br>
+		- Contenu : toutes les animations manquantes de IWD non comprises dans les autres archives (Élémentaire de terre/eau/feu, Sahuagin petit/grand, Armures animées bronze/sombre/verte, Arundel, Barbare Shaman (avec marteau, bâton, gourdin), Barbare guerrier (bleu, rouge, marron), Barbare Icasaracht, Belhifet prêtre, Fatalité rampante, Mort noyé, Géant du feu de IWD, Golem de fer de IWD, Rémorhaz, Seer, Yeti, Ombre des roches Vodyanoi, Verbeeg, Nécrophage des tertres). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour les composants Démons différenciés [100], Morts-vivants différenciés [400], Combattants squelettes [410-415-420], Animation de pauvre hère [450-455-460] et Plus d'animations d'Icewind Dale [550].<br>
+		- Nécessaire pour les mods BP, BH, CtB, NEJ, RoT, SOS et TS.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd_svirfneblin</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Svirfneblin<br><br>
+		- Contenu : les animations de IWD/IWD2 pour svirfneblins (gnomes des profondeurs). Par défaut, la couleur de leur peau est pâles alors que, dans les références AD&D, elle devrait être plus foncée (couleur pierre). Le jeu original comportait des variantes avec et sans pioches (mais sans animation d'arme séparée). Comme ces emplacements ne sont pas palettisés, les variantes suivantes sont disponibles (les deux dernières étant des versions personnalisées des animations pâles IWD): Svirfneblin pâle avec hache, Svirfneblin pâle sans hache, Svirfneblin foncé avec hache, Svirfneblin foncé sans hache. Comprend des jeux de sons empruntés à NWN.<br>
+		- Nécessaire pour le composant Animations de svirfneblins [480-490].<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_moinesse_edits_iaised</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Moinesse's Avatar Edits (IA compatible version)<br><br>
+		- Contenu : Barbare humain, Druidesse humaine, Guerrière humaine, Magicienne humaine, Magicienne elfe, Voleuse humaine, Ninja humain, Vampire homme.<br>
+		- Nécessaire pour le composant Avatars de Moinesse pour IA [7000-7010-7020-7030].<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_01_modron</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
+		- Contenu : Modron alternatif, animations de NWN portées par WoRm (Amel, Basilic, Bebilith, Hamatula, Osyluth, Diantrefosse, Épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses {150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_i</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Miscellaneous NWN Animations I<br><br>
+		- Contenu : Bête éclipsante, Géante du feu et du givre, Scarabée bombardier, Succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour les composants Démons différenciés [100], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_abishai</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Abishai<br><br>
+		- Contenu : Abishai bleue, noire, rouge et verte (d'après les animations de PS:T). Comprend leurs jeux de sons.<br>
+		- Nécessaire pour le composant Démons différenciés [100].<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_paletted</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Paletted Animations<br><br>
+		- Contenu : Femme Aasimar, Baurier Mâle, Catin, Citoyen et Citoyenne de Maudith, Citoyen et Citoyenne des classes supérieures, Femme et Homme poussière, Femme et homme goule, Githzerai, Homme-dieu, Citoyen et Citoyenne des classes inférieures, Magicien citoyen, Marchand, Midwife, Sicaire et Grand sicaire, Prêtre et Travailleur squelette, Thokola, Tieffelin homme et femme, Zombi femme et homme. Comprend leurs jeux de sons.<br>
+		- Nécessaire pour le composant Plus d'animations de Planescape: Torment [710-720-760-740].<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_shadows_harpy_frostgiant</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Shadows, Harpy and Frost Giant<br><br>
+		- Contenu : Ombres alternatives d'IWD (« murky »), Harpie et Géant du givre d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour le composant Morts-vivants différenciés [400] et pour les mods BP, Drizzt Saga, NEJv691, RoT, TDD et TS.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_wh_dr_wyv_lop</span></strong></td>
+		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - White Wyvern and Dragon, Lady of Pain<br><br>
+		- Contenu : Dragon blanc et Wiverne majeure blanche d'IWD, Dame de la Douleur. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Nécessaire pour le mod Planar Sphere.<br><br>
+		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
+		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+	</tr>
+</table><br>
+<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+
 
 <hr>
 
@@ -550,22 +699,40 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 
 ## <a name="versions" id="versions"></a>Historique des versions
 
-##### WeiDU Beta 6 : jour mois 2019
+##### Version 6 : jour mois 2019
 
-- Principale mise à jour : Modification du code des animations pour les rendre compatibles avec les code pages non occidentaux (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). &#128521;
-- Intégration des correctifs de code et des animations du BWP Fixpack (merci à leurs auteurs !).
-- Composant Animations de svirneblins [480-490] : utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
-- Correction du composant Animation de pauvre hère [450-455] : les listes de créatures à modifier des sous-composants « Pour certains mendiants et esclaves » et « Pour certains mendiants » étaient interverties. &#128541;
+- Principales mises à jour :
+    - Modification du code des animations pour les rendre compatibles avec les code pages non occidentaux (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). &#128521;
+	- Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
+	- Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, ùarin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
+- Intégration des correctifs de code et des animations du BWP Fixpack (merci à leurs auteurs !) :
+    - Composant principal : <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+	- Composant « Plus d'animations de More Planescape: Torment » : <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, amélioré par Lollorian.
+- Intégration des correctifs graphiques des animations du BWP Fixpack :
+    - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
+	- Archive IA_BGII_IWDII : Correctif par Gwendolyne de l'<a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">animation de mort du petit élémentaire d'eau d'IWD2</a>.
+    - Archive IA_IWD : Correctif par Miloch des <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">sahuagins portant une arbalète qui faisaient crasher le jeu en marchant</a>.
+    - Archive IA_NWN_01_modron : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">basilic de NWN</a>.
+	- Archive NWN_Misc_I : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">l'espèce de chose bovine</a>.
+- Ajout des animations manquantes de lancement de sort (fichiers bam ca et sp, avec les armes quand nécessaire) :
+	- Archive IA base_anims: scarabées (bombardier, scolyte, de feu, rhinocéros), cyclope, ettin, fantôme, blême majeur, goule majeure, gobelins (avec hache, avec arc, d'élite avec hache, d'élite avec arc), golem de glace, Histachii, minotaure, momie, orque (mêlée, archer, d'élite, archer d'élite), orog, orog d'élite, chef orog, salamandre (du feu, du givre), ombre (petite, grande), squelette démon, combattant squelette, troll (bleu, des glaces, des neiges), esprit des eaux, yuan-ti, yuan-ti d'élite, zombi (bleu, jaune).
+	- Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg
+	- Archive IA IWD : petites armures animées (bronze/sombre/verte), barbare guerrier (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
+	- Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
+- Mise à jour du composant « Démons différenciés [100] : suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : « <em>Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way</em> »).
+- Correction du composant « Animation de pauvre hère » [450-455] : les listes de créatures à modifier des sous-composants « <em>Pour certains mendiants et esclaves</em>) » et « <em>Pour certains mendiants</em>) » étaient interverties. &#128541;
+- Composant « Animations de svirneblins » [480-490] : utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
+- Composant « Avatars de Moinesse pour IA » [7000-7010-7020-7030] : intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
 - Découpage du code en composants distincts pour offrir une meilleure lisibilité.
-- >Déplacement des fichiers tpa (code des composants) dans le nouveau répertoire « components » et conservation des fonctions et des macros dans le répertoire « lib ».
-- Adaptation du code pour une future compatibilité du mod avec les versions EE.
+- Déplacement des fichiers tpa (code des composants) dans le nouveau répertoire « components » et conservation des fonctions et des macros dans le répertoire « lib ».
+- Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
 - Ajout de commentaires dans les fichiers de code chaque fois que possible.
 - Simplification du code :
     - Utilisation de nouvelles fonctions de <acronym title="Weimer Dialogue Utility">WeiDU</acronym> (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme DECOMPILE_BCS_TO_BAF et DECOMPILE_DLG_TO_D).
-    - Utilisation ps_recursive_copy.tpa, une nouvelle bibliothèque de fonctions WeiDU crée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
+    - Utilisation de ps_recursive_copy.tpa, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
     - Corrections mineures...
 - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
-- Mise à jour du readme (IA prend désormais en compte la documentation traduite).
+- Mise à jour du readme (IA prend désormais en compte la documentation traduite, ajout de nouvelles illustrations d'animations...).
 - Ajout de la traduction française (Gwendolyne).
 - Traification.
 - Mise à jour de <acronym title="Weimer Dialogue Utility">WeiDU</acronym> (v246).
