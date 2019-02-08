@@ -1,8 +1,8 @@
 /* ======================================== *
  *               GAME strings               *
  * ======================================== */
-@500 = ~Yuan-Ti Mage~
-@501 = ~Yuan-Ti~
+@500 = ~Yuan-ti Mage~
+@501 = ~Yuan-ti~
 @502 = ~Gnoll Captain~
 @503 = ~Hobgoblin Captain~
 @504 = ~Hobgoblin Wizard~

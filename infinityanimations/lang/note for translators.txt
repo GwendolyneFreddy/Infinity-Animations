@@ -1,0 +1,59 @@
+Two files need to be translated:
+
+1. setup.tra: strings used during installation process.
+
+A few strings are commented as DEPRECATED. There is no real need for translating them as they won't be used anymore.
+
+
+2. strings.tra: strings used to add or alter content.
+
+Some have been modified to provide a full compatibility with other mods.
+
+@500 = ~Yuan-ti Mage~		// same as BG2 #1294 and #1154
+@501 = ~Yuan-ti~			// same as BG2 #1383 and #1323
+@502 = ~Gnoll Captain~		// same as BG2 #2243
+@503 = ~Hobgoblin Captain~	// same as BG2 #2258 and #2259
+@504 = ~Hobgoblin Wizard~	// same as BG2 #2268 and #2269
+
+
+// Use BGEE #27583 stringref for better 1pp, Infinity Animations and EE compatibility.
+@515 = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. Though not radiating a noticeable magical aura, the wings do seem to move with their bearer in a way that defies their supposed mechanism.
+
+STATISTICS:
+
+Type: Wings
+Requires:
+ Wearer must be an elf
+
+Weight: 2~
+
+
+// Svirfneblins soundset: if already transmated, pick Auroras-Shoes-and-Boots strings.
+@547 = ~Yes.~ [T-SVA01B]													// = @242
+@548 = ~Help! Help!~ [T-SVA03B]												// = @252
+@549 = ~My powers shall obliterate you!~ [T-SVA02C]							// = @247
+@550 = ~Die!~ [T_SVA02D]													// = @248
+@551 = ~I am wounded! Heal me!~ [T-SVA07]									// = @253
+@552 = ~Good day!~ [T-SVA01A]												// = @241
+@553 = ~I really need to talk to you.~ [T-SVA01C]							// = @243
+@554 = ~Ho ha ha ha!~ [T-SVA01D]											// = @244
+@555 = ~You're in GREAT peril if you bother me. Just you wait!~ [T-SVA08]	// = @254
+@556 = ~That's the way it's done and done!~ [T-SVA09]						// = @437
+@557 = ~No...~ [T-SVA10]													// = @438
+@558 = ~Come and talk a while.~ [T-SVN01C]									// = @441
+@559 = ~Please help me!~ [T-SVN03B]											// = @448
+@560 = ~Take that!~ [T-SVN02C]												// = @445
+@561 = ~Evil fall before me!~ [T_SVN02D]									// = @446
+@562 = ~I am hurt!~ [T-SVN07]												// = @449
+@563 = ~Hello there.~ [T-SVN01A]											// = @439
+@564 = ~Yes.~ [T-SVN01B]													// = @440
+@565 = ~Oh ho ho ho!~ [T-SVN01D]											// = @442
+@566 = ~You're heading for a good beating, you are!~ [T-SVN08]				// = @450
+@567 = ~Well look at that!~ [T-SVN09]										// = @451
+@568 = ~No...~ [T-SVN10]													// = @452
+@569 = ~So long!~ [T-SVA03A]												// = @249
+@570 = ~Kill that scum! Get 'em good!~ [T-SVA02A]							// = @245
+@571 = ~Blood and bloody hell!~ [T_SVA02B]									// = @246
+@572 = ~Farewell.~ [T-SVN03A]												// = @447
+@573 = ~Get 'em!~ [T-SVN02A]												// = @443
+@574 = ~I will cut you down to size!~ [T_SVN02B]							// = @444
