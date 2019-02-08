@@ -1,0 +1,41 @@
+3bs /harpy
+***
+                 SOUND
+ATTACK           t-har03 t-har04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-har07 t-har08
+DAMAGE           0 0
+DIE              t-har09 t-har10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-har04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-har03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-har03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-har04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-har01 t-har02
+Battle_Cry       0 0
+Selection        t-har06 nosound
+Selection        0 0

@@ -1,0 +1,41 @@
+3br /frost_giant
+***
+                 SOUND
+ATTACK           t-fro03a t-fro04b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-fro07 t-fro08
+DAMAGE           0 0
+DIE              t-fro09 t-fro10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-fro04b nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-fro03a t-fro03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-fro03a t-fro03b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-fro04a t-fro04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-fro01 t-fro02
+Battle_Cry       0 0
+Selection        t-fro11b t-fro02
+Selection        0 0
