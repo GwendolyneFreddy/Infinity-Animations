@@ -38,7 +38,7 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 	<li>Fournit un utilitaire <acronym title="Graphical User Interface">GUI</acronym> [<em>NdT : interface graphique</em>] pour vous aider à ajouter de nouvelles animations dans le jeu.</li>
 	<li>Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;</li>
 </ul>
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -53,7 +53,7 @@ Ce mod est également compatible avec les autres mods, dont <a href="http://www.p
 Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing ». [<em>NdT : archivage avec Generalized biffing</em>]
 
 Commencez une nouvelle partie</strong> après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « Correction des animations dans les parties sauvegardées ».</br>
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
 
 		
 ## <a name="installation" id="installation"></a>Installation
@@ -70,7 +70,7 @@ Vous pouvez extraire les fichiers de l'archive avec <a href="http://www.rarlab.c
 
 <strong>Important : </strong>Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/index.php?autocom=downloads&showcat=98">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « Ne pas extraire les chemins d'accès » de l'onglet <strong>Avancé</strong> de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet <strong>Général</strong> se termine par <strong>/content</strong> ou <strong>/restore</strong> après <strong>infinityanimations</strong> (ils ne doivent pas comporter de sous-répertoires).
 
-<p>Extrayez toutes les archives dans le répertoire /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.</p>
+Extrayez toutes les archives dans le répertoire /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.
 
 Si vous utilisez WinZip, assurez-vous que la case « Utiliser les noms de répertoire » <em>n'est pas cochée</em>.
 
@@ -101,7 +101,6 @@ Pour installer le mod, exécutez <strong>WeInstall setup-infinityanimations</stro
 #### Note pour effectuer une désinstallation complète
 
 En plus des méthodes détaillées plus haut pour supprimer des composants, il est possible de désinstaller complètement le mod en tapant <strong>setup-infinityanimations --uninstall</strong> dans une ligne de commandes, ce qui supprimera tous les composants sans devoir ingurgiter tous les messages.</br>
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
 
 ## 
 
@@ -163,14 +162,14 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_tob</span></strong></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - EE games new Animations ported to ToB<br><br>
-		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, ùarin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
+		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
 		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
 			</tr>
 			<tr>
 		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_fiends_genies</span></strong></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Fiends and Genies<br><br>
-		- Contenu : Démon bleu, Démon vert (Nabassu), Marilith sombre, Maurezhi, Myrlochar, Dao, Dao avec jambes, Efrit, Efrit avec jambes, Jann, Jann avec jambes, Marid, Marid avec jambes, Yochlol, Reine des goules, Guenaudes (Annis, noire, verte, des mers). Comprend aussi les fichiers de sons pour Erinyes, Gelugon et Tieffelins.<br>
+		- Contenu : Démon bleu, Démon vert (Nabassu), Marilith sombre, Maurezhi, Myrlochar, Dao, Dao avec jambes, Efrit, Efrit avec jambes, Jann, Jann avec jambes, Marid, Marid avec jambes, Yochlol, Reine des goules, Guenaudes (Annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour Erinyes, Gelugon et Tieffelins.<br>
 		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
 		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
 		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
@@ -209,7 +208,7 @@ Voici le tableau des options concernées :</br></br>
 		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_i</span></strong></td>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_1</span></strong></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Miscellaneous NWN Animations I<br><br>
 		- Contenu : Bête éclipsante, Géante du feu et du givre, Scarabée bombardier, Succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
@@ -249,7 +248,7 @@ Voici le tableau des options concernées :</br></br>
 		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
 	</tr>
 </table><br>
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -342,7 +341,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 	<li>Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].</li>
 	<li>Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 	<li>Attribue à certaines mariliths une animation plus sombre.</li>
-	<li>Attribue aux <acronym title="Night hag">sorcières de la nuit</acronym> [<em>NdT : ou guenaudes noires selon les traductions</em>] l'animation de night hag de <acronym title="Planescape: Torment">PS:T</acronym>.</li>
+	<li>Attribue aux <acronym title="Night hag">sorcières de la nuit</acronym> [<em>NdT : ou guenaudes nocturnes selon les traductions</em>] l'animation de night hag de <acronym title="Planescape: Torment">PS:T</acronym>.</li>
 	<li>Attribue aux démons d'os l'animation d'osyluth de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 	<li>Attribue aux gélugons (seulement ceux ajoutés par un mod) l'animation de salamandre des glaces.</li>
 	<li>Attribue aux yochlols (sauf celles sous l'apparence d'elfes noires) une animation d'otyugh plus foncée.</li>
@@ -371,8 +370,8 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 ## 
 
 <a name="210" id="210"></a><strong>Animation d'Isair pour les cambions<br />
-210.</strong> À tous les cambions.<br />
-<strong>230.</strong> À certains cambions.<br />
+210.</strong> Pour tous les cambions.<br />
+<strong>230.</strong> Pour certains cambions.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
 <ul style="margin-top: -1%;margin-left: 4%;">
 	<li>Même principe que celui du composant Diantrefosses.</li>
@@ -383,8 +382,8 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 ## 
 
 <a name="260" id="260"></a><strong>Animation de Madae pour les alu-démons<br />
-260.</strong> À toutes les alu-démons.<br />
-<strong>280.</strong> À certaines alu-démons.<br />
+260.</strong> Pour toutes les alu-démons.<br />
+<strong>280.</strong> Pour certaines alu-démons.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
 <ul style="margin-top: -1%;margin-left: 4%;">
 	<li>Même principe que celui du composant Diantrefosses.</li>
@@ -691,7 +690,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 
 ###### Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
 ###### Tous les copyrights et marques déposées sont la propriété de leurs propriétaires respectifs.
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -809,4 +808,4 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui i
 ##### (r.09102252)
 
 - Sortie initiale.
-<div style="text-align:right"><a href="#components">Retour en haut de page</a></div>
+<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
