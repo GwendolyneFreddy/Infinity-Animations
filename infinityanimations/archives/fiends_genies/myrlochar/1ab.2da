@@ -1,0 +1,41 @@
+1ab /myrlochar
+***
+                 SOUND
+ATTACK           t-myr03a t-myr03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-myr04a t-myr04b
+DAMAGE           0 0
+DIE              t-myr05
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-myr03b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-myr03a t-myr03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-myr03a t-myr03b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-myr03a t-myr03b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-myr01a t-myr01b
+Battle_Cry       0 0
+Selection        t-myr02a t-myr02b
+Selection        0 0

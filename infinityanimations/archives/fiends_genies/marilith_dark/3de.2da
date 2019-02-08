@@ -1,0 +1,41 @@
+3de /marilith_dark
+***
+                 SOUND
+ATTACK           snake04 nosound nosound
+ATTACK           2 0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           snake06 unearf06
+DAMAGE           0 0
+DIE              snake07 unearf07
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            snake01 nosound nosound
+SHOOT            0 0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     snake03 nosound nosound
+ATTACK_SLASH     2 0 0
+ATTACK_BACKSLASH snake02 nosound nosound
+ATTACK_BACKSLASH 2 0 0
+ATTACK_JAB       snake01 nosound nosound
+ATTACK_JAB       2 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       unearf04 unearf03
+Battle_Cry       0 0
+Selection        unearf01 unearf02
+Selection        0 0

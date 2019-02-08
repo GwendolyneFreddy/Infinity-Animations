@@ -1,0 +1,41 @@
+1aa /maurezhi
+***
+                 SOUND
+ATTACK           ghast06 nosound nosound
+ATTACK           2 0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           unearm06
+DAMAGE           0
+DIE              unearm07
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ghast03
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     ghast03 nosound nosound
+ATTACK_SLASH     2 0 0
+ATTACK_BACKSLASH ghast05 nosound nosound
+ATTACK_BACKSLASH 2 0 0
+ATTACK_JAB       ghast06 nosound nosound
+ATTACK_JAB       2 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       unearm03 unearm05
+Battle_Cry       0 0
+Selection        unearm01 unearm02
+Selection        0 0

@@ -1,0 +1,41 @@
+4aa /nabassu
+***
+                 SOUND
+ATTACK           t-nab01 t-nab02
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-nab07 t-nab08
+DAMAGE           0 0
+DIE              t-nab09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-nab03 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-nab01 nosound nosound
+ATTACK_SLASH     0 0 0
+ATTACK_BACKSLASH t-nab02 nosound nosound
+ATTACK_BACKSLASH 0 0 0
+ATTACK_JAB       t-nab03 nosound nosound
+ATTACK_JAB       0 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-nab05 t-nab06
+Battle_Cry       0 0
+Selection        t-nab03 t-nab04
+Selection        0 0

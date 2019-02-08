@@ -1,0 +1,41 @@
+8dv /yochlol
+***
+                 SOUND
+ATTACK           t-yoc02 nosound nosound
+ATTACK           2 0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-yoc07 t-yoc08
+DAMAGE           0 0
+DIE              t-yoc09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-yoc03
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-yoc02 nosound nosound
+ATTACK_SLASH     2 0 0
+ATTACK_BACKSLASH t-yoc01 nosound nosound
+ATTACK_BACKSLASH 2 0 0
+ATTACK_JAB       t-yoc03 nosound nosound
+ATTACK_JAB       2 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-yoc05 t-yoc06
+Battle_Cry       0 0
+Selection        t-yoc03 t-yoc04
+Selection        0 0
