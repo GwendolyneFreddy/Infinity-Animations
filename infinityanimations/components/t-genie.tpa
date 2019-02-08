@@ -1,0 +1,198 @@
+/* ================================================== *
+ *  INFINITY ANIMATIONS : Distinctive Genies routine  *
+ * ================================================== */
+
+SILENT
+
+/* ===== *
+ *  Dao  *
+ * ===== */
+ACTION_FOR_EACH nb IN ~ddguard5~ ~gendao01~ ~genie1~ ~genietrv~ ~trgeni02~ ~trgeni03~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fbc // Animation ID (dao)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DAO~) // classical 0x5fbc - EE none for the moment
+				WRITE_BYTE 0x2d 107		// Minor color (KHAKI_GRAY)
+				WRITE_BYTE 0x2e 39		// Major color (DARK_DIRT_BROWN)
+				WRITE_BYTE 0x2f 39		// Skin color
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============== *
+ *  Dao with Legs  *
+ * =============== */
+ACTION_FOR_EACH nb IN ~genie02~ ~kgenie1~ ~kgenie2~ ~trgeni01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fbd // Animation ID (dao_legs)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DAO_LEGS~) // classical 0x5fbd - EE none for the moment
+				WRITE_BYTE 0x2d 107		// Minor color (KHAKI_GRAY)
+				WRITE_BYTE 0x2e 39		// Major color (DARK_DIRT_BROWN)
+				WRITE_BYTE 0x2f 39		// Skin color
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======== *
+ *  Djinni  *
+ * ======== */
+ACTION_FOR_EACH nb IN ~aataqah~ ~caligen3~ ~dagenie~ ~ddguard2~ ~ddguard3~ ~drgenie~ ~dw#wish1~ ~dw#wish2~ ~dw#wish3~ ~dw#wish4~ ~e3invis~ ~fwsw1h12~ ~gendji01~ ~gendjn01~ ~genie03~ ~idjinni~ ~nshdbud~ ~pladjin~ ~ppdjinn~ ~ppdjinn2~ ~sumdjinn~ ~u!kgen~ ~wish01~ ~wish02~ ~djinnisu~ ~entdjin~ ~entdjin3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_BYTE 0x237 1			// Sex (male)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs = 194 BEGIN		// If dao
+					WRITE_BYTE 0x273 193	// Class (genie_djinni)
+				END
+				READ_BYTE 0x275 gd			// Gender
+				PATCH_IF gd != 6 BEGIN		// If not summoned
+					WRITE_BYTE 0x275 1		// male
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======== *
+ *  Efreet  *
+ * ======== */
+ACTION_FOR_EACH nb IN ~ddguard6~ ~genogeni~ ~hellgen~ ~sumefree~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fbe // Animation ID (efreeti)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~EFREETI~) // classical 0x5fbe - EE none for the moment
+				WRITE_BYTE 0x2d 49		// Minor color (DARK_RUST)
+				WRITE_BYTE 0x2e 46		// Major color (RED)
+				WRITE_BYTE 0x2f 46		// Skin color
+				WRITE_BYTE 0x237 1		// Sex (male)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1	// male
+				END
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF (cs != 197) AND (cs != 7) BEGIN // If not noble_efreeti or fighter_mage
+					WRITE_BYTE 0x273 195 // efreeti
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================== *
+ *  Efreet with Legs  *
+ * ================== */
+ACTION_FOR_EACH nb IN ~caligen1~ ~caligen2~ ~djincre~ ~efreetsu~ ~genefn01~ ~genefr01~ ~obsfir01~ ~salam01~ ~salam02~ ~salam03~ ~salam04~ ~salam05~ ~salam06~ ~uleffy~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fbf // Animation ID (efreeti_legs)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~EFREETI_LEGS~) // classical 0x5fbf - EE none for the moment
+				WRITE_BYTE 0x2d 49		// Minor color (DARK_RUST)
+				WRITE_BYTE 0x2e 46		// Major color (RED)
+				WRITE_BYTE 0x2f 46		// Skin color
+				WRITE_BYTE 0x237 1		// Sex (male)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1	// male
+				END
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF (cs != 197) AND (cs != 7) BEGIN // If not noble_efreeti or fighter_mage
+					WRITE_BYTE 0x273 195 // efreeti
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======= *
+ *  Janni  *
+ * ======= */
+ACTION_FOR_EACH nb IN ~ddguard1~ ~genie01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fc0 // Animation ID (janni)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~JANNI~) // classical 0x5fc0 - EE none for the moment
+				WRITE_BYTE 0x2d 48		// Minor color (LIGHT_RUST)
+				WRITE_BYTE 0x2e 58		// Major color (DARK_BLUE)
+				WRITE_BYTE 0x2f 36		// Skin color (LIGHT_DIRTY_YELLOW)
+				WRITE_BYTE 0x275 1		// male
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================= *
+ *  Janni with Legs  *
+ * ================= */
+ACTION_IF FILE_EXISTS_IN_GAME ~gencali1.cre~ BEGIN
+	COPY_EXISTING ~gencali1.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_SHORT 0x28 0x5fc1 // Animation ID (janni_legs)
+//			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~JANNI_LEGS~) // classical 0x5fc1 - EE none for the moment
+			WRITE_BYTE 0x2d 48		// Minor color (LIGHT_RUST)
+			WRITE_BYTE 0x2e 58		// Major color (DARK_BLUE)
+			WRITE_BYTE 0x2f 36		// Skin color (LIGHT_DIRTY_YELLOW)
+			WRITE_BYTE 0x275 1		// male
+		END
+	BUT_ONLY
+END
+
+/* ======== *
+ *  Marids  *
+ * ======== */
+ACTION_FOR_EACH nb IN ~ddguard4~ ~genie04~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5fc2 // Animation ID (marid)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARID~) // classical 0x5fc2 - EE none for the moment
+				WRITE_BYTE 0x2d 52		// Minor color (LIGHT_GREEN)
+				WRITE_BYTE 0x2e 96		// Major color (CHROME_BLUE)
+				WRITE_BYTE 0x2f 32		// Skin color (DARK_SEA_GREEN)
+				WRITE_BYTE 0x275 1		// male
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================== *
+ *  Marids with Legs  *
+ * ================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~gencali2.cre~ BEGIN
+	COPY_EXISTING ~gencali2.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_SHORT 0x28 0x5fc3 // Animation ID (marid_legs)
+//			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARID_LEGS~) // classical 0x5fc3 - EE none for the moment
+			WRITE_BYTE 0x2d 52		// Minor color (LIGHT_GREEN)
+			WRITE_BYTE 0x2e 96		// Major color (CHROME_BLUE)
+			WRITE_BYTE 0x2f 32		// Skin color (DARK_SEA_GREEN)
+			WRITE_BYTE 0x275 1		// male
+		END
+	BUT_ONLY
+END
+
+VERBOSE

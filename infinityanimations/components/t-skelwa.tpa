@@ -1,0 +1,29 @@
+/* ================================================= *
+ *  INFINITY ANIMATIONS : Skeleton Warriors routine  *
+ * ================================================= */
+
+ACTION_FOR_EACH nb IN ~ar18skel~ ~bgskel02~ ~bgskel03~ ~bgskelwa~ ~bpduehi~ ~c#ajske2~ ~ceskel01~ ~cmske03~ ~cmske04~ ~cmskel01~ ~cmskel02~ ~dw#angsk~ ~dw#diask~ ~dw#semsk~ ~endske01~ ~endske02~ ~endske03~ ~endske04~ ~fhlskl1~ ~fhlskl2~ ~firmon02~ ~golbon01~ ~grskel1~ ~grskel2~ ~grtomb01~ ~hgskl02~ ~hgskl04~ ~jc_ske01~ ~jc_ske02~ ~krshadsk~ ~nevm2~ ~ranske7~ ~ranske9~ ~riftcr02~ ~rskel02~ ~sahskel~ ~shbones~ ~sk#ssp2~ ~skellord~ ~%tsu%skelwa~ ~skelwa01~ ~%tss%kelwa02~ ~%tss%kelwa03~ ~skelwa04~ ~skelwasu~ ~skelwax2~ ~skelwax3~ ~suundead~ ~tanskw1~ ~tg#dud1~ ~tg#dud2~ BEGIN
+	  ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN // Skeleton Warriors
+		SILENT
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 wk		// Animation ID
+				WRITE_BYTE 0x237 4		// Sex (neither)
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x272 115	// Race (skeleton)
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF cs > 20 BEGIN	// If invalid class
+				  WRITE_BYTE 0x273 135	// skeleton_warrior
+				END
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+				  WRITE_BYTE 0x275 4	// neither
+				END
+				PATCH_INCLUDE ~infinityanimations/lib/glowcheck.tpp~
+			  END
+		BUT_ONLY
+		VERBOSE
+	END
+END

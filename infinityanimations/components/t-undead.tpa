@@ -1,0 +1,606 @@
+/* ================================================== *
+ *  INFINITY ANIMATIONS : Distinctive Undead routine  *
+ * ================================================== */
+
+SILENT
+
+/* =========================================== *
+ *  Banshees get the wailing_virgin animation  *
+ * =========================================== */
+ACTION_FOR_EACH nb IN ~banshe01~ ~banshee1~ ~dsbanshe~ ~f_wailin~ ~firmon01~ ~jerlia~ ~psfear~ ~telwrai~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe0f2 // Animation ID (wailing_virgin)
+				WRITE_BYTE 0x237 2		// Sex (female)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 134	// Race (wraith)
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF (cs = 118) OR (cs = 255) BEGIN // If ghast or no_class
+					WRITE_BYTE 0x273 172 // wraith
+				END
+				WRITE_BYTE 0x275 2		// Gender (female)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =================================== *
+ *  Skulls get the demilich animation  *
+ * =================================== */
+ACTION_FOR_EACH nb IN ~f_stongl~ ~hlskull~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f0e // Animation ID (demilich)
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x272 155	// Race (demilich)
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF cs = 255 BEGIN // If no_class
+					WRITE_BYTE 0x273 2	// fighter
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================ *
+ *  Ghoul Queens get the ghoul_queen animation  *
+ * ============================================ */
+ACTION_FOR_EACH nb IN ~bhghoul4~ ~sk#ssp3~ ~xghast2~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3aig1.bam~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x5b08 // Animation ID (ghoul_queen)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_QUEEN~) // classical 0x5b08 - EE none for the moment
+				WRITE_BYTE 0x237 2		// Sex (female)
+				WRITE_BYTE 0x271 4		// General (undead)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 2	// female
+				END
+				SAY INITIAL_MEETING ~~ [T-GHQ04]
+				SAY MORALE ~~ [T-GHQ07]
+				SAY UNHAPPY_BREAKING ~~ [T-GHQ07]
+				SAY BATTLE_CRY1 ~~ [T-GHQ02]
+				SAY BATTLE_CRY2 ~~ [T-GHQ09]
+				SAY ATTACK1 ~~ [T-GHQ03]
+				SAY DAMAGE ~~ [T-GHQ06]
+				SAY DYING ~~ [T-GHQ08]
+				SAY SELECT_COMMON1 ~~ [T-GHQ01]
+				SAY SELECT_COMMON2 ~~ [T-GHQ10]
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================ *
+ *  Ghasts get the ghast animation  *
+ * ================================ */
+ACTION_FOR_EACH nb IN ~bhghoul2~ ~%tsu%ghast~ ~ghast01~ ~%tsu%ghastd~ ~%tsu%ghasts~ ~gmayor~ ~%tsu%grael~ ~gron~ ~nevm3~ ~%tsu%sewerf3~ ~xghast1~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7702 // Animation ID (ghast)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 4	// neither
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================================== *
+ *  Greater guasts get the ghast_greater (IWD) animation  *
+ * ====================================================== */
+ACTION_FOR_EACH nb IN ~besamen~ ~bpghast~ ~ghastf01~ ~ghastgsu~ ~sghastgr~ ~sk#algol~ ~theshal~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe320 // Animation ID (ghast_greater)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHAST_GREATER~) // classical 0xe320 - EE 0xe320
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 4	// neither
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================== *
+ *  Ghosts get the ghost (IWD) animation  *
+ * ====================================== */
+ACTION_FOR_EACH nb IN ~cbselims~ ~cbspkded~ ~cmhaun01~ ~cmhaun02~ ~demresd~ ~mtghost~ ~psminvo~ ~sarspir~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe300 // Animation ID (ghost)
+				READ_BYTE 0x237 sx		// Sex
+				PATCH_IF sx != 2 BEGIN	// If not female
+					sx = 1
+					WRITE_BYTE 0x237 1	// Sex (male)
+				END
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 133	// Race (spectre)
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF cs > 20 BEGIN	// If invalid class
+					WRITE_BYTE 0x273 171 // spectre
+				END
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN // If not summoned and not female
+					WRITE_BYTE 0x275 1	// male
+				END
+				PATCH_IF (sx = 2) AND (gd != 2) BEGIN	// If female
+					WRITE_BYTE 0x275 2					// female
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================ *
+ *  Ghouls get the ghoul animation  *
+ * ================================ */
+ACTION_FOR_EACH nb IN ~bhghoul1~ ~bodakmd~ ~%tsu%ghoul~ ~ghoul01~ ~ghoulsu~ ~gtcit1~ ~gtcit2~ ~%tsu%korax~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7700 // Animation ID (ghoul)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 108	// Race (ghoul)
+				WRITE_BYTE 0x273 116	// Class (ghoul)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================================== *
+ *  Greater ghouls get get the ghoul_greater (IWD) animation  *
+ * ========================================================== */
+ACTION_FOR_EACH nb IN ~ghogr01~ ~gholor01~ ~%tsg%houllor~ ~lester~ ~riftcr01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe310 // Animation ID (ghoul_greater)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_GREATER~) // classical 0xe310 - EE 0xe310
+				WRITE_BYTE 0x273 116	//C lass (ghoul)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============================== *
+ *  Liches get the lich animation  *
+ * =============================== */
+ACTION_FOR_EACH nb IN ~amlich01~ ~banco~ ~bhcrypt~ ~bhelal~ ~cbc8ctl2~ ~cbc8ctl3~ ~cbc8ctzl~ ~cedelich~ ~celich~ ~d0lich01~ ~f_lich~ ~firlch01~ ~frdeath~ ~garlich1~ ~garlich2~ ~godlich1~ ~godlich2~ ~gorlic01~ ~gorpri1~ ~grvlch01~ ~hlkang~ ~hllich~ ~hlshade~ ~hlshang~ ~jarlich~ ~krlich2~ ~larrel~ ~larrel2~ ~lichel01~ ~lichguar~ ~mytos~ ~psvecna~ ~senlich~ ~va#lich~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f0d // Animation ID (lich)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 150	// Race (lich)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =================================================== *
+ *  Greater Liches get the lich_white (IWD) animation  *
+ * =================================================== */
+ACTION_FOR_EACH nb IN ~archlich~ ~b#lich01~ ~b#lich02~ ~d0lich02~ ~dpmon02~ ~dslich~ ~dslich1~ ~dslich2~ ~dslich3~ ~dw#lich1~ ~dw#lich2~ ~dw#lich3~ ~dw#lich4~ ~hlayskel~ ~macgskmg~ ~nevaziah~ ~o#srax~ ~pklich1~ ~pksum1~ ~pksum2~ ~pksum3~ ~shadeld~ ~sk#vidu~ ~travmage~ ~tunelich~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe060 // Animation ID (lich_white)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~LICH_WHITE~) // classical 0xe060 - EE 0xe060
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 150	// Race (lich)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================== *
+ *  Mist Apparitions get the mist_creature animation  *
+ * ================================================== */
+ACTION_FOR_EACH nb IN ~cultmo8~ ~iwdmist3~ ~mistwa01~ ~pkghost1~ ~pkghost2~ ~tadream~ ~tg#spir~ ~undapp~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f35		// Animation ID (mist_creature)
+				READ_BYTE 0x237 sx			// Sex
+				PATCH_IF sx != 2 BEGIN		// If not female
+					sx = 1
+					WRITE_BYTE 0x237 1		// Sex (male)
+				END
+				WRITE_BYTE 0x271 4			// General (undead)
+				WRITE_BYTE 0x272 136		// Race (mist)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs > 20 BEGIN		// If invalid class
+					WRITE_BYTE 0x273 174	// mist
+				END
+				READ_BYTE 0x275 gd			// Gender
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN // If not summoned and not female
+					WRITE_BYTE 0x275 1		// male
+				END
+				PATCH_IF (sx = 2) AND (gd != 2) BEGIN	// If female
+					WRITE_BYTE 0x275 2					// female
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================== *
+ *  Revenants get the revenant animation  *
+ * ====================================== */
+ACTION_FOR_EACH nb IN ~%tsu%fearm~ ~firmon04~ ~grreven~ ~reven01~ ~%tsu%revent~ ~srevnnt~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7701 // Animation ID (revenant)
+				WRITE_BYTE 0x271 4		// General (undead)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================== *
+ *  Shadow Fiends get the shadow animation  *
+ * ======================================== */
+ACTION_FOR_EACH nb IN ~ddplota5~ ~f_shfien~ ~hgwra02~ ~hgwra03~ ~m#ymmurd~ ~minodar1~ ~minodar2~ ~psgnight~ ~psnight~ ~psnisum~ ~sdshadfi~ ~sewsha01~ ~sewsha02~ ~shadfi01~ ~shadfx1~ ~sk#ssp1~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7703		// Animation ID (shadow)
+				WRITE_BYTE 0x237 1			// Sex (male)
+				WRITE_BYTE 0x271 4			// General (undead)
+				WRITE_BYTE 0x272 132		// Race (shadow)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs > 20 BEGIN		// If invalid class
+					WRITE_BYTE 0x273 170	// shadow
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================== *
+ *  Wraiths get the shadow_large (IWD) animation  *
+ * ============================================== */
+ACTION_FOR_EACH nb IN ~bhwraith~ ~cbmalr6a~ ~firwra01~ ~hgmis01~ ~rngsha02~ ~rngsha04~ ~telslav~ ~wraith01~ ~wraithsu~ ~wrashi01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xea20		// Animation ID (shadow_large)
+				WRITE_BYTE 0x271 4			// General (undead)
+				WRITE_BYTE 0x272 134		// Race (wraith)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs > 20 BEGIN		// If invalid class
+					WRITE_BYTE 0x273 172	// wraith
+				END
+				READ_BYTE 0x275 gd			// Gender
+				PATCH_IF gd != 6 BEGIN		// If not summoned
+					WRITE_BYTE 0x275 4		// neither
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ===================================================== *
+ *  Spectres get the shadow_large_murky (IWD) animation  *
+ * ===================================================== */
+ACTION_FOR_EACH nb IN ~caddem22~ ~cbmalr6b~ ~demspec~ ~godhate~ ~pkghost4~ ~sahspc01~ ~spectr01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x526b // Animation ID (shadow_large_murky)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SHADOW_LARGE_MURKY~) // classical 0x526b - EE none for the moment
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 133	// Race (spectre)
+				READ_BYTE 0x273 cs		// Class
+				PATCH_IF cs > 20 BEGIN	// If invalid class
+					WRITE_BYTE 0x273 172 // wraith
+				END
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// if not summoned
+					WRITE_BYTE 0x275 4	// neither
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================== *
+ *  Shadows get the shadow_small (IWD) animation  *
+ * ============================================== */
+ACTION_FOR_EACH nb IN ~a#sdsha2~ ~a#sdsha3~ ~a#sdsha4~ ~krshadm~ ~krshadow~ ~myshdw01~ ~myshdw02~ ~myshdw03~ ~myshdw04~ ~myshdw05~ ~myshdw06~ ~myshdw07~ ~myshdw08~ ~myshdw09~ ~myshdw10~ ~rngsha~ ~rngsha01~ ~rngsha03~ ~sdshadow~ ~sewsha03~ ~shadesm2~ ~shadesm3~ ~specx1~ ~uhcreat~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xea10 // Animation ID (shadow_small)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 132	// Race (shadow)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =================================================== *
+ *  Some Shadows get the shadow_small_murky animation  *
+ * =================================================== */
+ACTION_FOR_EACH nb IN ~a#sdsha1~ ~elearb01~ ~elearb02~ ~elearb03~ ~elearb04~ ~elearb05~ ~elearb06~ ~elearb07~ ~elearb08~ ~elearb09~ ~elearb10~ ~elearb11~ ~kshadow~ ~lshadfi~ ~lshadow~ ~monkss19~ ~monkss2~ ~monkss20~ ~monkss21~ ~monkss25~ ~monkss3~ ~monkss4~ ~monkss5~ ~monkss6~ ~monkss7~ ~monkss8~ ~shadesm1~ ~va#shdgl~ ~z#gaunt~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x526a // Animation ID (shadow_small_murky)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SHADOW_SMALL_MURKY~) // classical 0x526a - EE none for the moment
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 132	// Race (shadow)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ==================================================== *
+ *  Large Skeletons get the skeleton_monster animation  *
+ * ==================================================== */
+ACTION_FOR_EACH nb IN ~0xuddg~ ~bpskelar~ ~cmapocal~ ~gholske1~ ~hgskl01~ ~lk#xsk1~ ~rskel03~ ~uddoor07~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xeb00		// Animation ID (skeleton_monster)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_MONSTER~) // classical 0xeb00 - EE 0xeb00
+				WRITE_BYTE 0x237 4			// Sex (neither)
+				WRITE_BYTE 0x271 4			// General (undead)
+				WRITE_BYTE 0x272 115		// Race (skeleton)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs > 20 BEGIN		// If invalid class
+					WRITE_BYTE 0x273 134	// skeleton
+				END
+				READ_BYTE 0x275 gd			// Gender
+				PATCH_IF gd != 6 BEGIN		// If not summoned
+					WRITE_BYTE 0x275 4		// neither
+				END
+				PATCH_INCLUDE ~infinityanimations/lib/glowcheck.tpp~
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============================================== *
+ *  Moon Horrors get the skeleton_fiend animation  *
+ * =============================================== */
+ACTION_FOR_EACH nb IN ~bw05grs1~ ~bw05grs2~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xeb20 // Animation ID (skeleton_fiend)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_FIEND~) // classical 0xeb20 - EE 0xeb20
+				WRITE_BYTE 0x272 115	// Race (skeleton)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================== *
+ *  Female Vampires get the vampire_female animation  *
+ * ================================================== */
+ACTION_FOR_EACH nb IN ~cblolth3~ ~hlshyr~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f22 // Animation ID (vampire_female)
+				WRITE_BYTE 0x237 2		// Sex (female)
+				WRITE_BYTE 0x275 2		// Gender (female)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ===================================== *
+ *  Wights get the wight_gray animation  *
+ * ===================================== */
+ACTION_FOR_EACH nb IN ~nevm1~ ~wighcold~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xec00 // Animation ID (wight_gray)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WIGHT_GRAY~) // classical 0xec00 - EE 0xec00
+				WRITE_BYTE 0x272 108	// Race (ghoul)
+				WRITE_BYTE 0x273 118	// Class (ghoul_ghast)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================= *
+ *  Green Zombies get the wight_green animation  *
+ * ============================================= */
+ACTION_FOR_EACH nb IN ~d0monty2~ ~zombie01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xec10 // Animation ID (wight_green)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WIGHT_GREEN~) // classical 0xec10 - EE 0xec10
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 148	// Race (zombie)
+				WRITE_BYTE 0x273 118	// Class (ghoul_ghast)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================= *
+ *  Zombie Lords get the wight_yellow animation  *
+ * ============================================= */
+ACTION_FOR_EACH nb IN ~gzombie~ ~kelzomb~ ~ntzombju~ ~rzomb01~ ~szombl01~ ~xszomb1~ ~zombju01~ ~zomblo01~ ~zombsexx~ ~zombx1~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gzombie~ = 1) BEGIN
+					SAY 0x8 @546		 // Greater Zombie (fix botched strref)
+					SAY 0xc @546		 // Greater Zombie
+				END
+				WRITE_SHORT 0x28 0xec20 // Animation ID (wight_yellow)
+//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WIGHT_YELLOW~) // classical 0xec20 - EE 0xec20
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 148	// Race (zombie)
+				WRITE_BYTE 0x273 163	// Class (vampire)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================== *
+ *  Barrow Wights get the wight_barrow animation  *
+ * ============================================== */
+ACTION_FOR_EACH nb IN ~0xyhdg~ ~bw05skw1~ ~bw05skw2~ ~cbzomb02~ ~cbzombd2~ ~decre#04~ ~dreadx~ ~%tsk%nightsk~ ~mintskel~ ~skelbadx~ ~trskind1~ ~trskind2~ ~zombigu1~ ~zombigua~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WIGHT_BARROW~) // classical 0x528e - EE 0xe25e
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 108	// Race (ghoul)
+				WRITE_BYTE 0x273 118	// Class (ghoul_ghast)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================== *
+ *  Zombies get the zombie animation  *
+ * ================================== */
+ACTION_FOR_EACH nb IN ~c#q06002~ ~%tsu%ghorak~ ~nszomb02~ ~nszomb04~ ~nszomb06~ ~nszomb07~ ~nszomb08~ ~nszomb09~ ~nszomb10~ ~x#garz01~ ~x#garz02~ ~x#garz03~ ~x#garz04~ ~%tsu%zombie~ ~%tsz%ombie_a~ ~%tsz%ombie_b~ ~%tsz%ombie_c~ ~%tsz%ombie_d~ ~%tsz%ombie_e~ ~%tsu%zombieb~ ~%tsu%zombiew~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7d00		// Animation ID (zombie)
+				WRITE_BYTE 0x271 4			// General (undead)
+				WRITE_BYTE 0x272 148		// Race (zombie)
+				READ_BYTE 0x273 cs			// Class
+				PATCH_IF cs != 155 BEGIN	// If not "innocent"
+					WRITE_BYTE 0x273 198	// Class (zombie_normal)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================================== *
+ *  Yellow Zombies get the zombie_yellow (IWD) animation  *
+ * ====================================================== */
+ACTION_FOR_EACH nb IN ~bhghoul3~ ~bhghoul5~ ~gtcit3~ ~gtcit4~ ~gtcit5~ ~nevm5~ ~nszomb01~ ~nszomb03~ ~nszomb05~ ~ntzombie~ ~%tsu%sewerf2~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xee00 // Animation ID (zombie_yellow)
+				WRITE_BYTE 0x271 4		// General (undead)
+				WRITE_BYTE 0x272 148	// Race (zombie)
+				WRITE_BYTE 0x273 116	// Class (ghoul)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================== *
+ *  Lacedons get the zombie_blue (IWD) animation  *
+ * ============================================== */
+ACTION_FOR_EACH nb IN ~lacedo01~ ~lacedo02~ ~sahlace~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xee10 // Animation ID (zombie_blue)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================= *
+ *  Sea Zombies get the zombie_blue (IWD) animation  *
+ * ================================================= */
+ACTION_FOR_EACH nb IN ~sahzom01~ ~sahzomb~ ~va#zom01~ ~va#zom02~ ~va#zom03~ ~va#zomgl~ ~zombse01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xee10 // Animation ID (zombie_blue)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x272 148	// Race (zombie)
+				WRITE_BYTE 0x273 135	// Class (skeleton_warrior)
+			END
+		BUT_ONLY
+	END
+END
+
+VERBOSE

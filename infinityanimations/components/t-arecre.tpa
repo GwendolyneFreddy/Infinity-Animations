@@ -1,0 +1,95 @@
+/* =================================================== *
+ *  INFINITY ANIMATIONS : Creature References routine  *
+ * =================================================== */
+
+<<<<<<<< .../infinityanimations-inlined/t-arecre.log
+Area	CRE	Name	CreName	Diff	OldAnim	OldAnimText	NewAnim	NewAnimText	CreAnim	CreAnimText	FixedTo
+>>>>>>>>
+
+COPY ~.../infinityanimations-inlined/t-arecre.log~ ~infinityanimations/batch~
+
+OUTER_SPRINT t-exc ~bpdric01 bpdrif01 bpdrif02 bpdrifm1 bugarch bugbear cbbgber cbbgber1 cbbgber2 cbbgbera cbbgberb cbbgberc cbbgberd cbbgberw cbbgberx cbbgbery cbbgberz cbdrifal cbdrifml cbdrifsl cbdrimml cbdrimsl tcbugb01 tcbugb02 tcgrell ~
+OUTER_SPRINT exclude ~kptrol05 kpserv02 vam1514a vam1514b ppshad01 ppshad02 ppshad03 ppshad04 ppshad05 ppshad06 ppdie1 ppdie2 ppdie3 ppdie4 ppgith90 ppgith91 ppgith92 ppgith93 ppgith97 ppgith98 ppgith99 daway1 daway2 daduer4a daduer4b daduer4c udmove01 udmove02 slave100 slave101 slave102 slave103 slave104 slave105 slave106 slave107 udgith03 udgith04 udgith05 sarwench gateguard5500 amarch03 amarch04 amarch05 amarch06 ~
+
+ACTION_FOR_EACH t-are IN ~ag1000~ ~ar0014~ ~ar0015~ ~ar0020~ ~ar0021~ ~ar0061~ ~ar0064~ ~ar0065~ ~ar0069~ ~ar0071~ ~ar0072~ ~ar0083~ ~ar01pb~ ~ar0201~ ~ar0202~ ~ar0203~ ~ar0204~ ~ar0205~ ~ar0206~ ~ar02pb~ ~ar0300~ ~ar0301~ ~ar0302~ ~ar0303~ ~ar0305~ ~ar0306~ ~ar0307~ ~ar0308~ ~ar0309~ ~ar0312~ ~ar0313~ ~ar0314~ ~ar0315~ ~ar0316~ ~ar0317~ ~ar0319~ ~ar0322~ ~ar0327~ ~ar0329~ ~ar0330~ ~ar0400~ ~ar0401~ ~ar0402~ ~ar0404~ ~ar0405~ ~ar0406~ ~ar0407~ ~ar0408~ ~ar0410~ ~ar0411~ ~ar0412~ ~ar0414~ ~ar0418~ ~ar0421~ ~ar0500~ ~ar0503~ ~ar0504~ ~ar0505~ ~ar0506~ ~ar0509~ ~ar0510~ ~ar0511~ ~ar0512~ ~ar0513~ ~ar0514~ ~ar0515~ ~ar0516~ ~ar0519~ ~ar0520~ ~ar0521~ ~ar0522~ ~ar0600~ ~ar0601~ ~ar0602~ ~ar0603~ ~ar0604~ ~ar0605~ ~ar0606~ ~ar0700~ ~ar0701~ ~ar0702~ ~ar0703~ ~ar0704~ ~ar0705~ ~ar0706~ ~ar0707~ ~ar0709~ ~ar0711~ ~ar0712~ ~ar0800~ ~ar0802~ ~ar0805~ ~ar0806~ ~ar0808~ ~ar0809~ ~ar0810~ ~ar0900~ ~ar0901~ ~ar0902~ ~ar0903~ ~ar0904~ ~ar0905~ ~ar0907~ ~ar1000~ ~ar1001~ ~ar1002~ ~ar10pb~ ~ar1100~ ~ar1103~ ~ar1105~ ~ar1106~ ~ar11pb~ ~ar1200~ ~ar1201~ ~ar1202~ ~ar1203~ ~ar12pb~ ~ar1300~ ~ar1301~ ~ar1302~ ~ar1303~ ~ar1304~ ~ar1401~ ~ar1402~ ~ar1403~ ~ar1404~ ~ar1501~ ~ar1502~ ~ar1506~ ~ar1507~ ~ar1509~ ~ar1510~ ~ar1512~ ~ar1513~ ~ar1514~ ~ar1516~ ~ar1600~ ~ar1602~ ~ar1604~ ~ar1605~ ~ar1607~ ~ar1611~ ~ar1612~ ~ar1700~ ~ar1800~ ~ar1900~ ~ar1901~ ~ar1902~ ~ar1904~ ~ar2000~ ~ar2002~ ~ar2007~ ~ar2008~ ~ar2010~ ~ar2013~ ~ar2014~ ~ar2017~ ~ar20pb~ ~ar2100~ ~ar2101~ ~ar2102~ ~ar2200~ ~ar2201~ ~ar2202~ ~ar2300~ ~ar2400~ ~ar2401~ ~ar2402~ ~ar2500~ ~ar25pb~ ~ar2600~ ~ar2700~ ~ar2800~ ~ar2801~ ~ar2802~ ~ar2803~ ~ar2806~ ~ar2807~ ~ar2812~ ~ar2901~ ~ar2903~ ~ar2904~ ~ar3000~ ~ar3001~ ~ar3004~ ~ar3005~ ~ar3006~ ~ar3007~ ~ar3010~ ~ar3012~ ~ar3013~ ~ar3015~ ~ar3016~ ~ar3017~ ~ar3019~ ~ar3020~ ~ar3021~ ~ar30pb~ ~ar32pb~ ~ar3300~ ~ar33pb~ ~ar3401~ ~ar3498~ ~ar3499~ ~ar34pb~ ~ar3500~ ~ar3501~ ~ar3502~ ~ar3503~ ~ar3504~ ~ar3505~ ~ar3506~ ~ar3520~ ~ar3521~ ~ar3530~ ~ar3531~ ~ar3532~ ~ar3534~ ~ar3535~ ~ar3541~ ~ar3542~ ~ar3543~ ~ar3544~ ~ar3545~ ~ar3546~ ~ar3548~ ~ar3549~ ~ar3550~ ~ar3551~ ~ar3552~ ~ar3553~ ~ar3554~ ~ar3556~ ~ar3557~ ~ar3558~ ~ar3559~ ~ar3575~ ~ar3576~ ~ar3579~ ~ar3580~ ~ar3581~ ~ar3583~ ~ar3585~ ~ar3587~ ~ar3588~ ~ar3589~ ~ar3590~ ~ar3593~ ~ar3596~ ~ar3597~ ~ar3598~ ~ar3599~ ~ar35pb~ ~ar3601~ ~ar3610~ ~ar3611~ ~ar3613~ ~ar3615~ ~ar3616~ ~ar3617~ ~ar3618~ ~ar3619~ ~ar3620~ ~ar3621~ ~ar3622~ ~ar3623~ ~ar3625~ ~ar3626~ ~ar3627~ ~ar3628~ ~ar3629~ ~ar3630~ ~ar3631~ ~ar3632~ ~ar3633~ ~ar3634~ ~ar3635~ ~ar3636~ ~ar3637~ ~ar3638~ ~ar3640~ ~ar3642~ ~ar3644~ ~ar3645~ ~ar3646~ ~ar3647~ ~ar3648~ ~ar3649~ ~ar3650~ ~ar3651~ ~ar3653~ ~ar3675~ ~ar36pb~ ~ar3700~ ~ar3701~ ~ar3706~ ~ar3708~ ~ar3709~ ~ar3800~ ~ar3802~ ~ar3803~ ~ar3804~ ~ar38pb~ ~ar3900~ ~ar3901~ ~ar40pb~ ~ar4100~ ~ar4199~ ~ar4200~ ~ar4210~ ~ar4211~ ~ar4219~ ~ar4232~ ~ar4250~ ~ar4257~ ~ar4262~ ~ar4263~ ~ar4264~ ~ar4265~ ~ar4267~ ~ar4268~ ~ar4269~ ~ar4270~ ~ar4271~ ~ar4272~ ~ar4273~ ~ar4274~ ~ar4275~ ~ar4276~ ~ar4277~ ~ar4278~ ~ar4279~ ~ar4280~ ~ar4281~ ~ar4282~ ~ar4283~ ~ar4285~ ~ar4286~ ~ar4287~ ~ar4289~ ~ar4300~ ~ar4301~ ~ar4302~ ~ar4303~ ~ar4304~ ~ar4305~ ~ar4307~ ~ar4308~ ~ar4309~ ~ar4310~ ~ar4311~ ~ar4320~ ~ar4325~ ~ar4340~ ~ar4351~ ~ar4370~ ~ar4400~ ~ar4401~ ~ar4402~ ~ar4403~ ~ar4404~ ~ar4405~ ~ar4600~ ~ar4700~ ~ar4701~ ~ar4800~ ~ar4801~ ~ar4900~ ~ar4901~ ~ar5000~ ~ar5002~ ~ar5003~ ~ar5005~ ~ar5006~ ~ar5007~ ~ar5012~ ~ar5014~ ~ar5100~ ~ar51pb~ ~ar5200~ ~ar5201~ ~ar5202~ ~ar5203~ ~ar5204~ ~ar52pb~ ~ar53pb~ ~ar5400~ ~ar5500~ ~ar5501~ ~ar5502~ ~ar5503~ ~ar5504~ ~ar5506~ ~ar5508~ ~ar6000~ ~ar6001~ ~ar6003~ ~ar6008~ ~ar6012~ ~ar60pb~ ~ar6101~ ~ar6102~ ~ar6103~ ~ar6104~ ~ar6105~ ~ar6106~ ~ar6109~ ~ar61pb~ ~ar6300~ ~ar6400~ ~ar6502~ ~ar6506~ ~ar6508~ ~ar6509~ ~ar6510~ ~ar6511~ ~ar6512~ ~ar6514~ ~ar6516~ ~ar6517~ ~ar6519~ ~ar6543~ ~ar6560~ ~ar6600~ ~ar6700~ ~ar6704~ ~ar6707~ ~ar6708~ ~ar6709~ ~ar6711~ ~ar6716~ ~ar6717~ ~ar6719~ ~ar6720~ ~ar6723~ ~ar6725~ ~ar6727~ ~ar6729~ ~ar6731~ ~ar6735~ ~ar6739~ ~ar6741~ ~ar6743~ ~ar6745~ ~ar6751~ ~ar6757~ ~ar6800~ ~ar6801~ ~ar6802~ ~ar6803~ ~ar6804~ ~ar6805~ ~ar6900~ ~ar7000~ ~ar7100~ ~ar7200~ ~ar7202~ ~ar7203~ ~ar7204~ ~ar7205~ ~ar7206~ ~ar7207~ ~ar7208~ ~ar7209~ ~ar7210~ ~ar7211~ ~ar7212~ ~ar7214~ ~ar7215~ ~ar7216~ ~ar7217~ ~ar7219~ ~ar7220~ ~ar7221~ ~ar7223~ ~ar7225~ ~ar7228~ ~ar7229~ ~ar7230~ ~ar7231~ ~ar7233~ ~ar7234~ ~ar7235~ ~ar7239~ ~ar7243~ ~ar7244~ ~ar7246~ ~ar7250~ ~ar7251~ ~ar7252~ ~ar7253~ ~ar7254~ ~ar7255~ ~ar7258~ ~ar7259~ ~ar7261~ ~ar7262~ ~ar7263~ ~ar7265~ ~ar7266~ ~ar7267~ ~ar7269~ ~ar7271~ ~ar7300~ ~ar7324~ ~ar7326~ ~ar7400~ ~ar7402~ ~ar7404~ ~ar7600~ ~ar7603~ ~ar7606~ ~ar7607~ ~ar7608~ ~ar7609~ ~ar7613~ ~ar7615~ ~ar7700~ ~ar7703~ ~ar7705~ ~ar7706~ ~ar7709~ ~ar7710~ ~ar7711~ ~ar7712~ ~ar7713~ ~ar7715~ ~ar7719~ ~ar7720~ ~ar7722~ ~ar7724~ ~ar7725~ ~ar7800~ ~ar7806~ ~ar7807~ ~ar7808~ ~ar7900~ ~ar8000~ ~ar8003~ ~ar8005~ ~ar8007~ ~ar8009~ ~ar8010~ ~ar8012~ ~ar8015~ ~ar8016~ ~ar8017~ ~ar8050~ ~ar8051~ ~ar8052~ ~ar80pb~ ~ar8100~ ~ar8103~ ~ar8105~ ~ar8107~ ~ar8108~ ~ar8115~ ~ar8200~ ~ar8201~ ~ar8202~ ~ar8203~ ~ar8204~ ~ar8206~ ~ar8207~ ~ar8208~ ~ar8214~ ~ar8220~ ~ar82pb~ ~ar8301~ ~ar8400~ ~ar8402~ ~ar8600~ ~ar8601~ ~ar8603~ ~ar8604~ ~ar8700~ ~ar8801~ ~ar8900~ ~ar9000~ ~ar90pb~ ~ar91pb~ ~ar9200~ ~ar9300~ ~ar9305~ ~ar9400~ ~ar9500~ ~ar9600~ ~ar9700~ ~ar9702~ ~ar9798~ ~ar9799~ ~ar9800~ ~ar9801~ ~ar9900~ ~ar9903~ ~ar9907~ ~ar9908~ ~ar9910~ ~ar9911~ ~ar9pba~ ~ara008~ ~ara014~ ~ara016~ ~ara018~ ~ara020~ ~ara100~ ~ard000~ ~ard005~ ~ard006~ ~ard010~ ~ard011~ ~ard013~ ~ard014~ ~ard016~ ~ardem~ ~ardem1~ ~arjz00~ ~aro#01~ ~aro#02~ ~aro#03~ ~arpsq2~ ~aru000~ ~aru009~ ~arw000~ ~arw002~ ~arw500~ ~arw501~ ~bh0100~ ~bh0101~ ~bh0102~ ~bh0103~ ~bh0104~ ~bh0105~ ~bh0106~ ~bh0107~ ~bh0108~ ~bh0109~ ~bh0110~ ~bh0111~ ~bh0112~ ~bh0113~ ~bh0115~ ~bh0116~ ~bh0118~ ~bh0121~ ~bh0122~ ~bh0123~ ~bh0200~ ~bh0201~ ~bh0300~ ~bh0301~ ~bh0303~ ~bh0305~ ~bh0306~ ~bh0310~ ~bh0312~ ~bh0401~ ~bh0402~ ~bh0403~ ~bh0500~ ~bh0501~ ~bh0503~ ~bh0504~ ~bh0505~ ~bh0506~ ~bh0507~ ~bh0700~ ~bh1000~ ~bh1001~ ~bh1002~ ~bh1003~ ~bh1004~ ~bh1100~ ~bh1101~ ~bh1200~ ~bh1300~ ~bh1301~ ~bh1302~ ~bh1400~ ~bh2000~ ~bh2001~ ~bh2002~ ~bh2003~ ~bh2004~ ~bh2006~ ~bh2007~ ~bh2008~ ~bh2009~ ~bh2010~ ~bh2011~ ~bh2012~ ~bh2013~ ~bh2016~ ~bh2018~ ~bh2019~ ~bh2020~ ~bh2021~ ~bh2100~ ~bh2101~ ~bh2102~ ~bh2103~ ~bh2104~ ~bh2105~ ~bh2106~ ~bh2107~ ~bh2108~ ~bh2110~ ~bh2111~ ~bh2200~ ~bh2201~ ~bh2202~ ~bh2300~ ~bh2301~ ~cb3661~ ~cb3662~ ~cb3663~ ~cb3664~ ~cb3665~ ~cb3666~ ~cb3667~ ~cb3668~ ~cm0750~ ~cm0751~ ~cm0752~ ~cm2680~ ~cm2681~ ~cm3370~ ~cm3371~ ~cm3372~ ~cm3374~ ~cm3375~ ~cm3376~ ~cm7000~ ~cm7100~ ~d0ar01~ ~dd0300ct~ ~dd7005~ ~dsc001~ ~dsc002~ ~dsc003~ ~dsc004~ ~dsc005~ ~dsc006~ ~dsc007~ ~dsc010~ ~dsc012~ ~dsc013~ ~dsc014~ ~dsc015~ ~dsc016~ ~dsc017~ ~dsc018~ ~dsc021~ ~dsc022~ ~dsc023~ ~dsc024~ ~dsc025~ ~dsc026~ ~dsc027~ ~dsc028~ ~dsc029~ ~dsc030~ ~dsc031~ ~dsc032~ ~dsc033~ ~dsc034~ ~dsc035~ ~dsc036~ ~f_0111~ ~f_0112~ ~f_0113~ ~f_0114~ ~f_0115~ ~f_0222~ ~f_0223~ ~f_6664~ ~f_6667~ ~f_6668~ ~f_7777~ ~f_7779~ ~f_8888~ ~f_8889~ ~f_9191~ ~f_9292~ ~f_9494~ ~f_9595~ ~f_9696~ ~f_9797~ ~f_9898~ ~f_9999~ ~fw0008~ ~fw0014~ ~fw0016~ ~fw0018~ ~fw0020~ ~fw0100~ ~fw0102~ ~fw0103~ ~fw0104~ ~fw0105~ ~fw0106~ ~fw0107~ ~fw0108~ ~fw0109~ ~fw0110~ ~fw0111~ ~fw0112~ ~fw0115~ ~fw0116~ ~fw0119~ ~fw0120~ ~fw0123~ ~fw0125~ ~fw0128~ ~fw0129~ ~fw0130~ ~fw0133~ ~fw0134~ ~fw0135~ ~fw0139~ ~fw0143~ ~fw0146~ ~fw0150~ ~fw0151~ ~fw0152~ ~fw0153~ ~fw0154~ ~fw0155~ ~fw0158~ ~fw0159~ ~fw0161~ ~fw0162~ ~fw0163~ ~fw0166~ ~fw0169~ ~fw0171~ ~fw0200~ ~fw0224~ ~fw0226~ ~fw0300~ ~fw0302~ ~fw0304~ ~fw0500~ ~fw0505~ ~fw0506~ ~fw0510~ ~fw0511~ ~fw0513~ ~fw0514~ ~fw0516~ ~fw0600~ ~fw0603~ ~fw0606~ ~fw0607~ ~fw0608~ ~fw0609~ ~fw0613~ ~fw0700~ ~fw0703~ ~fw0705~ ~fw0706~ ~fw0709~ ~fw0710~ ~fw0712~ ~fw0713~ ~fw0715~ ~fw0719~ ~fw0720~ ~fw0722~ ~fw0724~ ~fw0725~ ~fw0800~ ~fw0806~ ~fw0807~ ~fw0808~ ~fw0809~ ~fw0900~ ~fw1000~ ~fw1009~ ~fw1100~ ~fw1103~ ~fw1105~ ~fw1107~ ~fw1109~ ~fw1110~ ~fw1112~ ~fw1115~ ~fw1116~ ~fw1117~ ~fw1200~ ~fw1203~ ~fw1205~ ~fw1207~ ~fw1208~ ~fw1215~ ~fw1300~ ~fw1301~ ~fw1302~ ~fw1303~ ~fw1304~ ~fw1306~ ~fw1307~ ~fw1308~ ~fw1314~ ~fw1320~ ~fw1401~ ~fw1500~ ~fw1501~ ~fw1600~ ~fw1602~ ~fw1800~ ~fw1801~ ~fw1803~ ~fw1804~ ~fw1900~ ~fw1903~ ~fw2002~ ~fw2101~ ~fw2200~ ~fw2300~ ~fw2301~ ~fw2302~ ~fw2303~ ~fw2400~ ~fw2600~ ~fw2602~ ~fw2606~ ~fw2608~ ~fw2609~ ~fw2610~ ~fw2611~ ~fw2612~ ~fw2614~ ~fw2616~ ~fw2619~ ~fw2700~ ~fw2800~ ~fw2900~ ~fw3100~ ~fw3200~ ~fw3300~ ~fw3304~ ~fw3307~ ~fw3308~ ~fw3309~ ~fw3311~ ~fw3316~ ~fw3317~ ~fw3319~ ~fw3320~ ~fw3323~ ~fw3325~ ~fw3327~ ~fw3329~ ~fw3331~ ~fw3335~ ~fw3339~ ~fw3341~ ~fw3343~ ~fw3351~ ~fw3357~ ~fw3400~ ~fw3402~ ~fw3500~ ~fw3600~ ~fw3601~ ~fw3700~ ~fw3800~ ~fw3802~ ~fw3900~ ~fw3901~ ~fw4000~ ~fw4003~ ~fw4007~ ~fw4008~ ~fw4010~ ~fw4011~ ~fw4100~ ~fw4300~ ~fw4400~ ~fw4600~ ~fw4700~ ~fw4701~ ~fw4800~ ~fw4801~ ~fw4806~ ~fw4807~ ~fw4808~ ~fw4809~ ~fw4900~ ~fw4902~ ~fw4903~ ~fw4904~ ~fw5000~ ~fw5001~ ~fw5100~ ~fw5101~ ~fw5102~ ~fw5103~ ~fw5200~ ~fw5201~ ~fw5202~ ~fw5300~ ~fw5400~ ~fw5401~ ~fw5402~ ~fw5403~ ~fw5404~ ~fw5500~ ~fw5506~ ~m#ar01~ ~m#ar02~ ~m#ar03~ ~m#ar04~ ~m#ar06~ ~md0001~ ~md0002~ ~md1000~ ~md1002~ ~md1003~ ~md1004~ ~mm0100~ ~mm0101~ ~mm0102~ ~mm0103~ ~mm0104~ ~mm0105~ ~mm0106~ ~mm0107~ ~mm0108~ ~mm0109~ ~mm0110~ ~mm0200~ ~mm0204~ ~mm0205~ ~mm0206~ ~mm0210~ ~mm0211~ ~mm0215~ ~ra3010~ ~ra3013~ ~ra3703~ ~ra3704~ ~ra3705~ ~ra3706~ ~ra3707~ ~ra3708~ ~ra3709~ ~ra3710~ ~ra3711~ ~ra3750~ ~ra3901~ ~ra3902~ ~ra3903~ ~ra3904~ ~ra3906~ ~ra3907~ ~ra3908~ ~ra3909~ ~ra3910~ ~ra4000~ ~ra4006~ ~ra4200~ ~ra4201~ ~ra4202~ ~ra4300~ ~ra4301~ ~ra4302~ ~ra4303~ ~ra4304~ ~ra4305~ ~ra4401~ ~ra4402~ ~ra4500~ ~ra4501~ ~ra4502~ ~ra4503~ ~ra4600~ ~ra4601~ ~ra4602~ ~ra4700~ ~ra4701~ ~ra4702~ ~ra4703~ ~ra4800~ ~ra5000~ ~ra5001~ ~ra5002~ ~ra5003~ ~ra5004~ ~ra5005~ ~ra5006~ ~ra5100~ ~ra5101~ ~ra5102~ ~ra5103~ ~ra5104~ ~ra5105~ ~ra5106~ ~ra5107~ ~ra5300~ ~ra5400~ ~ra5401~ ~ra5410~ ~ra5411~ ~ra5412~ ~ra5415~ ~ra5416~ ~ra5500~ ~ra5501~ ~ra5600~ ~ra5601~ ~ra5602~ ~ra5603~ ~ra5610~ ~ra5611~ ~ra5620~ ~ra5701~ ~rr0044~ ~rr3100~ ~rr3102~ ~rr3103~ ~rr3104~ ~rr3105~ ~rr3107~ ~rr3108~ ~rr3109~ ~rr3110~ ~rr3113~ ~rr3114~ ~rr3115~ ~rr3116~ ~rr3117~ ~rr3118~ ~rr3119~ ~rr3120~ ~rr3150~ ~rr3200~ ~rr3210~ ~rr3220~ ~rr3300~ ~rr3302~ ~rr3303~ ~rr3304~ ~rr3305~ ~rr3307~ ~rr3308~ ~rr3309~ ~rr3310~ ~rr3311~ ~rr3312~ ~rr3313~ ~rr3400~ ~rr3401~ ~rr3403~ ~rr3404~ ~rr3405~ ~rr3406~ ~rr3407~ ~rr3409~ ~rr3410~ ~rr3450~ ~rr3451~ ~rr3452~ ~rr3453~ ~rr3454~ ~rr3455~ ~rr3456~ ~rr3700~ ~rr3701~ ~rr3702~ ~rr3801~ ~rr3900~ ~rr4001~ ~rr4002~ ~rr4003~ ~rr4004~ ~sk0000~ ~sk5201~ ~sk5401~ ~sk6400~ ~sp1000~ ~sp1001~ ~sp1101~ ~sp1102~ ~sp1103~ ~sp1104~ ~tc0003~ ~tc0005~ ~tc0009~ ~tc0010~ ~tc0011~ ~tc0012~ ~tc0013~ ~tc0014~ ~tc0015~ ~tc0025~ ~tc0027~ ~tc0028~ ~tc0029~ ~tc0030~ ~tc0032~ ~tc0034~ ~tc0035~ ~tc0036~ ~tc0037~ ~tc0038~ ~tc0039~ ~tc0040~ ~tc0041~ ~tc0045~ ~tc0046~ ~tc0047~ ~tc0048~ ~tc0049~ ~tc0050~ ~tc0052~ ~tc0053~ ~tc0054~ ~tc0060~ ~tc0061~ ~tc0062~ ~tc0063~ ~tc0070~ ~tc0071~ ~tc0072~ ~tc0073~ ~tc0074~ ~tc0076~ ~tc0080~ ~tc0081~ ~tc0082~ ~tc0200~ ~tc0202~ ~tc0204~ ~tc0205~ ~tc0206~ ~tc0207~ ~tc0208~ ~tc0210~ ~tc0214~ ~tc0215~ ~tc0216~ ~tc0218~ ~tc0219~ ~tc0220~ ~tc0221~ ~tc0222~ ~tc0224~ ~tc0225~ ~tc0226~ ~tc0228~ ~tc0232~ ~tc0234~ ~tc0300~ ~tc0301~ ~tc0302~ ~tc0303~ ~tc0304~ ~tc0305~ ~tc0306~ ~tc0307~ ~tc0308~ ~tc0310~ ~tc0400~ ~tc0410~ ~tc0420~ ~tc0421~ ~tc0422~ ~tc0450~ ~tc0451~ ~tc0501~ ~tc0502~ ~tc0503~ ~tc0550~ ~tc0600~ ~tc0601~ ~tc0602~ ~tc0603~ ~tc0604~ ~tc0605~ ~tc0610~ ~tc0611~ ~tc0613~ ~tc0614~ ~tc1000~ ~tc1004~ ~tc1005~ ~tc1006~ ~tc1007~ ~tc1008~ ~tc1009~ ~tc1010~ ~tc1050~ ~tc1100~ ~tc1106~ ~tc1200~ ~tc1201~ ~tc1210~ ~tc1211~ ~tc1300~ ~tc1302~ ~tc1306~ ~tc1308~ ~tc1325~ ~tc1500~ ~tc1501~ ~tc1502~ ~tc1503~ ~tc1504~ ~tc1505~ ~tc1600~ ~tc1601~ ~tc1602~ ~tc1603~ ~tc1605~ ~tc1606~ ~tc1650~ ~tc1651~ ~tc1660~ ~tc1661~ ~tc2000~ ~tc2001~ ~tc2002~ ~tc2003~ ~tc2004~ ~tc2007~ ~tc2008~ ~tc2009~ ~tc2011~ ~tc2013~ ~tc2014~ ~tc2015~ ~tc2016~ ~tc2017~ ~tc2018~ ~tc2019~ ~tc2020~ ~tc2022~ ~tc2025~ ~tc2026~ ~tc2027~ ~tc2028~ ~tc2029~ ~tc2030~ ~tc2031~ ~tc2032~ ~tc2033~ ~tc2050~ ~tc2051~ ~tc2052~ ~tc2100~ ~tc2101~ ~tc2102~ ~tc2103~ ~tc2104~ ~tc2105~ ~tc2200~ ~tc3000~ ~tc3001~ ~tc3002~ ~tc3004~ ~tc3005~ ~tc3006~ ~tc3007~ ~tc3008~ ~tc3009~ ~tc3049~ ~tc3050~ ~tc3051~ ~tc3052~ ~tc3053~ ~tc3101~ ~tc3102~ ~tc3103~ ~tc3104~ ~tc3105~ ~tc3200~ ~tc3202~ ~tc3203~ ~tc3204~ ~tc3205~ ~tc3206~ ~tc3207~ ~tc3212~ ~tc3213~ ~tc3214~ ~tc3215~ ~tc3216~ ~tc3299~ ~tc3301~ ~tc3310~ ~tc3317~ ~tc3400~ ~tc3402~ ~tc3407~ ~tc3410~ ~tc3411~ ~tc3412~ ~tc3450~ ~tc3460~ ~tc3500~ ~tc3506~ ~tc3511~ ~tc3516~ ~tc3600~ ~tc3650~ ~tc3700~ ~tc3701~ ~tc3702~ ~tc3703~ ~tc3705~ ~tc3707~ ~tc3710~ ~tc3712~ ~tc3713~ ~tc3714~ ~tc3720~ ~tc3723~ ~tc3729~ ~tc3730~ ~tc3733~ ~tc3738~ ~tc3739~ ~tc3740~ ~tc3800~ ~tc3804~ ~tc3805~ ~tc3806~ ~tc3809~ ~tc3810~ ~tc3811~ ~tc3815~ ~tc3816~ ~tc3824~ ~tc3831~ ~tc3833~ ~tc3838~ ~tc3840~ ~tc3841~ ~tc3900~ ~tc3902~ ~tc3905~ ~tc3906~ ~tc3912~ ~tc3921~ ~tc4000~ ~tcx001~ ~tcx002~ ~tt0001~ ~tt0002~ ~tt0007~ ~tt0035~ ~tt0045~ ~tt0055~ ~tt0057~ ~tt0058~ ~tt0060~ ~tt0065~ ~tt0067~ ~tt0068~ ~tt0069~ ~tt0070~ ~tt0071~ ~tt0072~ ~tt0073~ ~tt0074~ ~tt0075~ ~tt0077~ ~tt0078~ ~tt0079~ ~tt0080~ ~tt0100~ ~tt0101~ ~tt0201~ ~tt0202~ ~tt0203~ ~tt0204~ ~tt0301~ ~tt0302~ ~tt0303~ ~tt0304~ ~tt0305~ ~tt0306~ ~tt0307~ ~tt1000~ ~tt1005~ ~tt1006~ ~tt1007~ ~tt1008~ ~tt1009~ ~tt1010~ ~tt1015~ ~tt1201~ ~tt2000~ ~tt2001~ ~tt2002~ ~tt2004~ ~tt2005~ ~tt2006~ ~tt2100~ ~tt2101~ ~tt2102~ ~tt2103~ ~tt2104~ ~tt2105~ ~tt2106~ ~tt2107~ ~tt2108~ ~tt2109~ ~tt2111~ ~tt2112~ ~tt3000~ ~tt3001~ ~tt3101~ ~tt3201~ ~tt3301~ ~tt3401~ ~tt3501~ ~tt3502~ ~tt3503~ ~tt3600~ ~tt3601~ ~tt3602~ ~tt3603~ ~tt4000~ ~tt4001~ ~tt4002~ ~tt4003~ ~tt4004~ ~tt4005~ ~tt5000~ ~tt5001~ ~tt5002~ ~tt5003~ ~tt5004~ ~tt5101~ ~tt5102~ ~tt5103~ ~tt5104~ ~tt5105~ ~tt5202~ ~tt5203~ ~tt5204~ ~tt5301~ ~tt5302~ ~tt5303~ ~tt5401~ ~tt5402~ ~tt5403~ ~tt5502~ ~va#002~ ~va#004~ ~va#005~ ~va#007~ ~va#009~ ~wwpets~ ~xr0601~ ~xr0602~ ~xr1200~ ~z#1002~ ~z#1005~ ~z#2803~ ~zy1800~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-are%.are~ BEGIN
+		SILENT
+		COPY_EXISTING ~%t-are%.are~ ~override~
+			PATCH_IF SOURCE_SIZE > 0x28f BEGIN
+				SPRINT sr ~%SOURCE_RES%~
+				SPRINT t-cre ~~
+				SPRINT t-name ~~
+				SPRINT t-crnm ~~
+				t-old = 0
+				READ_LONG 0x54 t-act_off
+				READ_SHORT 0x58 t-act_num
+				FOR (t = 0 ; t < t-act_num ; t += 1) BEGIN
+					READ_ASCII (t * 0x110 + t-act_off) t-name (32) NULL
+					READ_LONG (t * 0x110 + t-act_off + 0x30) t-old
+					READ_ASCII (t * 0x110 + t-act_off + 0x80) t-cre
+					SPRINT t-crnm ~%t-name%~
+					TO_LOWER t-cre
+					t-diff = 0
+					PATCH_IF (((t-old > 0x4999) AND (t-old < 0x5014)) OR ((t-old > 0x5099) AND (t-old < 0x5114)) OR ((t-old > 0x5199) AND (t-old < 0x5213)) OR ((t-old > 0x5299) AND (t-old < 0x5314))) AND (~%t-exc%~ STRING_CONTAINS_REGEXP ~%t-cre% ~ = 1) BEGIN
+						t-new = t-old + 0x1000
+					END ELSE BEGIN
+						t-new = t-old
+					END
+					t-crean = t-new
+					INNER_ACTION BEGIN
+						ACTION_IF FILE_EXISTS_IN_GAME ~%t-cre%.cre~ BEGIN
+							SILENT
+							COPY_EXISTING ~%t-cre%.cre~ ~override~
+								PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+								PATCH_IF valid BEGIN
+									READ_SLONG 0x8 t-crnr
+									PATCH_IF t-crnr > 0 BEGIN
+										READ_STRREF 0x8 t-crnm
+										t-len = STRING_LENGTH ~%t-crnm%~
+										PATCH_IF t-len > 32 BEGIN
+											INNER_PATCH ~%t-crnm%~ BEGIN
+												READ_ASCII 0 t-crnm (32)
+											END
+										END
+									END
+									READ_SHORT 0x28 t-crean
+									PATCH_IF (((t-crean > 0x4999) AND (t-crean < 0x5014)) OR ((t-crean > 0x5099) AND (t-crean < 0x5114)) OR ((t-crean > 0x5199) AND (t-crean < 0x5213)) OR ((t-crean > 0x5299) AND (t-crean < 0x5314))) AND (~%t-exc%~ STRING_CONTAINS_REGEXP ~%t-cre% ~ = 1) BEGIN
+										t-crean += 0x1000
+									END
+								END
+							BUT_ONLY
+							VERBOSE
+						END
+					END
+					PATCH_IF (~%t-name%~ STRING_EQUAL ~%t-crnm%~ = 0) AND (~%exclude%~ STRING_CONTAINS_REGEXP ~%t-name% ~ = 1) BEGIN
+						t-diff += 1
+						WRITE_ASCIIE (t * 0x110 + t-act_off) ~%t-crnm%~ #32
+					END
+					PATCH_IF t-old != t-crean BEGIN
+						LOOKUP_IDS_SYMBOL_OF_INT t-creant animate %t-crean%
+						t-anm = t-crean
+						t-diff += 2
+						WRITE_LONG (t * 0x110 + t-act_off + 0x30) t-anm
+					END ELSE BEGIN
+						t-anm = t-new
+						t-crean = 0
+						SPRINT t-creant ~~
+					END
+					PATCH_IF t-diff > 0 BEGIN
+						LOOKUP_IDS_SYMBOL_OF_INT t-oldt animate %t-old%
+						LOOKUP_IDS_SYMBOL_OF_INT t-newt animate %t-new%
+						INNER_ACTION BEGIN
+							SILENT
+							APPEND_OUTER ~infinityanimations/batch/t-arecre.log~ ~%sr%	%t-cre%	%t-name%	%t-crnm%	%t-diff%	%t-old%	%t-oldt%	%t-new%	%t-newt%	%t-crean%	%t-creant%	%t-anm%~
+							VERBOSE
+						END
+					END
+				END
+			END
+		BUT_ONLY
+		VERBOSE
+
+	END	// of ACTION_IF FILE_EXISTS_IN_GAME ~%t-are%.are~
+
+END		// of ACTION_FOR_EACH t-are

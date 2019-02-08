@@ -1,0 +1,107 @@
+/* ================================================================================================================== *
+ *  INFINITY ANIMATIONS : Cambion routine - weapon changes necessary as Isair animation displays hardcoded scimitars  *
+ * ================================================================================================================== */
+
+SILENT
+
+COPY_EXISTING ~%nb%.cre~ ~override~
+	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+	PATCH_IF valid BEGIN
+		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+		PATCH_IF rgc = 1 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ISAIR~) // classical 0x5242 - EE 0xe275
+			WRITE_BYTE 0x6e 5		// Large swords
+			SET_BG2_PROFICIENCY ~PROFICIENCY2WEAPON~ 2
+			REMOVE_CRE_ITEM ~arow11~ ~arow15~ ~ax1h11~ ~blun33~ ~bow04~ ~bow16~ ~bow17~ ~gorcamb~ ~halb02~ ~shld06~ ~shld29~ ~staf18~ ~sw1h01~ ~sw1h02~ ~sw1h42~ ~sw1h72~ ~sw1h73~ ~sw1h74~ ~sw2h02~ ~sw2h08~ ~sw2h11~ ~telswd~
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~cambion1~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~sw1h33a~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+				REPLACE_CRE_ITEM ~sw1h33a~ #0 #0 #0 ~NONE~ ~SHIELD~
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~illcamb~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~illcamb2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~kdemon01~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~genscim~ #0 #0 #0 ~NONE~ ~WEAPON2~ EQUIP
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~cambion2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3jekhri~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3taeghe~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorgua02~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~idemon01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~idemon02~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~nscamb01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~pbhunt01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~telcam1~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~teltief1~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~zaki~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~sw1h22~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+				REPLACE_CRE_ITEM ~sw1h20~ #0 #0 #0 ~NONE~ ~SHIELD~
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3cirion~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3sume~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3xekral~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~fincamb2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorcamb4~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorcamb5~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~nstief02~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~tief_w1~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~tief_w2~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~sw1h52~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+				REPLACE_CRE_ITEM ~sw1h22~ #0 #0 #0 ~NONE~ ~SHIELD~
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3taeghe~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~fincamb2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorcamb5~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~nstief02~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~dagg16~ #10 #0 #0 ~NONE~ ~WEAPON2~
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorcamb~ = 1) BEGIN	// Aesgareth
+				REPLACE_CRE_ITEM ~sw1h66~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+				REPLACE_CRE_ITEM ~sharswd~ #0 #0 #0 ~NONE~ ~SHIELD~
+			END
+		END
+		WRITE_BYTE 0x237 1		// Sex (male)
+		WRITE_BYTE 0x271 1		// General (humanoid)
+		READ_BYTE 0x275 gd		// Gender
+		PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN // If not summoned or illusionary
+			WRITE_BYTE 0x275 1	// male
+		END
+		PATCH_IF rcc = 0 BEGIN // If a cambion
+			PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+				SAY BATTLE_CRY1 ~~ [T-ISA01A]
+				SAY BATTLE_CRY2 ~~ [T-ISA01B]
+				SAY BATTLE_CRY3 ~~ [T-ISA04B]
+				SAY BATTLE_CRY4 ~~ [T-ISA05B]
+				SAY BATTLE_CRY5 ~~ [T-ISA09B]
+			END
+			PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+				SAY ATTACK1 ~~ [T-ISA05A]
+			END
+			PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+				SAY DAMAGE ~~ [T-ISA07]
+			END
+			PATCH_IF SLONG_AT DYING < 1 BEGIN
+				SAY DYING ~~ [T-ISA09A]
+			END
+			PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
+				SAY SELECT_COMMON1 ~~ [T-ISA02A]
+				SAY SELECT_COMMON2 ~~ [T-ISA02B]
+				SAY SELECT_COMMON3 ~~ [T-ISA04A]
+				SAY SELECT_COMMON4 ~~ [T-ISA08]
+			END
+			PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
+				SAY CRITICAL_MISS ~~ [T-ISA03A]
+			END
+			PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
+				SAY SPELL_DISRUPTED ~~ [T-ISA03B]
+			END
+		END ELSE BEGIN // If a tiefling
+			PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+				SAY BATTLE_CRY1 @533 // You cannot win this fight! [T-TIM01A]
+				SAY BATTLE_CRY2 @534 // Into the flames we leap! [T-TIM01B]
+				SAY BATTLE_CRY3 @535 // Ha ha ha ha! [T-TIM01C]
+				SAY BATTLE_CRY4 @536 // My blood calls for yours and it *will* be satisfied. [T-TIM01D]
+				SAY BATTLE_CRY5 @537 // Do you wish to die now? Because I can certainly arrange that. [T-TIM01E]
+			END
+			PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+				SAY ATTACK1 ~~ [T-TIM03]
+			END
+			PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+				SAY DAMAGE ~~ [T-TIM07]
+			END
+			PATCH_IF SLONG_AT DYING < 1 BEGIN
+				SAY DYING ~~ [T-TIM09]
+			END
+			PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
+				SAY SELECT_COMMON1 @538 // Greetings. [T-TIM02A]
+				SAY SELECT_COMMON2 @539 // Yes. [T-TIM02B]
+				SAY SELECT_COMMON3 @540 // At your command. [T-TIM02C]
+				SAY SELECT_COMMON4 @541 // What do we have here? [T-TIM02D]
+			END
+			PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
+				SAY CRITICAL_MISS @542 // No. [T-TIM11]
+			END
+			PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
+				SAY SPELL_DISRUPTED @543 // My magic did not work! [T-TIM12]
+			END
+		END
+	END
+BUT_ONLY
+
+VERBOSE

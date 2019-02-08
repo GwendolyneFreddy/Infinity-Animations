@@ -1,0 +1,21 @@
+/* ==================================== *
+ *  INFINITY ANIMATIONS : Seer routine  *
+ * ==================================== */
+
+SILENT
+
+COPY_EXISTING ~%nb%.cre~ ~override~
+	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+	PATCH_IF valid BEGIN
+		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+		PATCH_IF rgs = 1 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~) // classical 0x528a - EE 0xe255
+			READ_BYTE 0x237 sx		// Sex
+			PATCH_IF sx = 0 BEGIN
+				WRITE_BYTE 0x237 1	// male
+			END
+		END
+	END
+BUT_ONLY
+
+VERBOSE

@@ -1,0 +1,63 @@
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////     ps_recursive_copy    ////////////////////////////
+////////////////////////////          v0.0.1          ////////////////////////////
+//////////////////////////// Copyright (c) 2018 Sam.  ////////////////////////////
+////////////////////////////          WTFPL           ////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////    ps_recursive_copy    /////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+// This is a WeiDU action function that will recursively search into a parent directory, copying files to a destination directory.
+//   INT_VAR WarnOnOverwrite can be 1 to print a warning when a file in the destination directory will be overwritten, 2 to warn when
+//     a file already exists in the destination game, or 0 to print no warnings.
+//   STR_VAR ParentDir is a string containing the name of the parent directory that will be recursively searched.
+//   STR_VAR ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir
+//   STR_VAR FileRegex is a string containing the RegEX of files to match for the COPY_LARGE.
+//   STR_VAR DestinationDir is a sting containing the name of the destination directory any matching files will be copied into.
+//   This function returns the "Count" of files copied to the destination directory.
+//////////////////////////////////////////////////////////////////////////////////
+DEFINE_ACTION_FUNCTION ps_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = "" ChildDirRegex = "" FileRegex = "^.+$" DestinationDir = "override" RET Count BEGIN
+  SILENT
+  OUTER_SET Count = 0
+  ACTION_BASH_FOR ~%ParentDir%~ ~%FileRegex%~ BEGIN
+    ACTION_IF (WarnOnOverwrite > 0) AND (FILE_EXISTS ~%DestinationDir%/%BASH_FOR_FILE%~) BEGIN
+      WARN @310 // ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
+    END ELSE ACTION_IF (WarnOnOverwrite > 1) AND (FILE_EXISTS_IN_GAME ~%BASH_FOR_FILE%~) BEGIN
+	  WARN @311 // ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
+	END
+    SILENT
+    COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~%DestinationDir%~
+	OUTER_SET Count += 1
+  END
+  ACTION_CLEAR_ARRAY ChildDir
+  GET_DIRECTORY_ARRAY ChildDir ~%ParentDir%~ ~%ChildDirRegex%~
+  ACTION_PHP_EACH ChildDir AS dirfrom => dirC BEGIN
+    LAF ps_recursive_copy INT_VAR WarnOnOverwrite STR_VAR ParentDir = EVAL "%dirC%" ChildDirRegex FileRegex DestinationDir RET CountN = %Count% END
+    OUTER_SET Count += CountN
+  END
+  VERBOSE
+END
+
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////    ps_recursive_search    ///////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+// This is a WeiDU action function that will recursively search into a parent directory, and report how many files that match the given RegEX are found.
+//   STR_VAR ParentDir is a string containing the name of the parent directory that will be recursively searched.
+//   STR_VAR ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir.  ParentDir is always searched.
+//   STR_VAR FileRegex is a string containing the RegEX of files to match.
+//   This function returns the "Count" of files found matching the given RegEX.
+//////////////////////////////////////////////////////////////////////////////////
+DEFINE_ACTION_FUNCTION ps_recursive_search STR_VAR ParentDir = "" ChildDirRegex = "" FileRegex = "^.+$" RET Count BEGIN
+  OUTER_SET Count = 0
+  ACTION_BASH_FOR ~%ParentDir%~ ~%FileRegex%~ BEGIN
+	OUTER_SET Count += 1
+  END
+  ACTION_CLEAR_ARRAY ChildDir
+  GET_DIRECTORY_ARRAY ChildDir ~%ParentDir%~ ~%ChildDirRegex%~
+  ACTION_PHP_EACH ChildDir AS dirfrom => dirC BEGIN
+    LAF ps_recursive_search STR_VAR ParentDir = EVAL "%dirC%" ChildDirRegex FileRegex RET CountN = %Count% END
+    OUTER_SET Count += CountN
+  END
+END

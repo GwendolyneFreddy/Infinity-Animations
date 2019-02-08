@@ -1,0 +1,88 @@
+/* ====================================================================================================================== *
+ *  INFINITY ANIMATIONS : Alu-fiend routine - weapon changes necessary as Madae animation displays hardcoded morningstar  *
+ * ====================================================================================================================== */
+
+SILENT
+
+COPY_EXISTING ~%nb%.cre~ ~override~
+	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+	PATCH_IF valid BEGIN
+		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+		PATCH_IF rgf = 1 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MADAE~) // classical 0x5243 - EE 0xe277
+			WRITE_BYTE 0x73 5		// Spiked
+			REMOVE_CRE_ITEM ~bow02~ ~dagg02~ ~sharswd~ ~staf07~ ~staf17~ ~staf19~ ~sw1h09~ ~sw1h25~ ~sw1h52~ ~sw1h66~ ~sw1h74~
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~raelis~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~blun07~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~d#mary~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3eriale~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~e3savany~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~goralu01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~teltief2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~yugalu01~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~blun15~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~alufie01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~finaluf~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorcamb2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~nsaluf01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~telalu1~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~teltief3~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~tief_as~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~blun34~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~alufie02~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~telsuc1~ = 1) BEGIN
+				REPLACE_CRE_ITEM ~bow99~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
+			END
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gorwom06~ = 1) BEGIN // Xei Win Toh
+				SET_BG2_PROFICIENCY ~PROFICIENCY2WEAPON~ 2
+				REPLACE_CRE_ITEM ~gorwom4~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+				REPLACE_CRE_ITEM ~blun07~ #0 #0 #0 ~NONE~ ~SHIELD~
+			END
+		END
+		WRITE_BYTE 0x237 2		// Sex (female)
+		WRITE_BYTE 0x271 1		// General (humanoid)
+		READ_BYTE 0x275 gd		// Gender
+		PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN // If not summoned or illusionary
+			WRITE_BYTE 0x275 2	// female
+		END
+		PATCH_IF rcf = 0 BEGIN	// If an alu-fiend
+			PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+				SAY BATTLE_CRY1 ~~ [T-MAD02A]
+				SAY BATTLE_CRY2 ~~ [T-MAD02B]
+				SAY BATTLE_CRY3 ~~ [T-MAD03C]
+				SAY BATTLE_CRY4 ~~ [T-MAD04A]
+				SAY BATTLE_CRY5 ~~ [T-MAD05A]
+			END
+			PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+				SAY ATTACK1 ~~ [T-MAD05C]
+			END
+			PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+				SAY DAMAGE ~~ [T-MAD08A]
+			END
+			PATCH_IF SLONG_AT DYING < 1 BEGIN
+				SAY DYING ~~ [T-MAD09C]
+			END
+			PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
+				SAY SELECT_COMMON1 ~~ [T-MAD01A]
+				SAY SELECT_COMMON2 ~~ [T-MAD01B]
+				SAY SELECT_COMMON3 ~~ [T-MAD04B]
+				SAY SELECT_COMMON4 ~~ [T-MAD05B]
+			END
+			PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
+				SAY CRITICAL_MISS ~~ [T-MAD03A]
+			END
+			PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
+				SAY SPELL_DISRUPTED ~~ [T-MAD08B]
+			END
+		END ELSE BEGIN // If a tiefling
+			PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+				SAY BATTLE_CRY1 @544	// Your time in this realm is over! [T-TIF01]
+			END
+			PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+				SAY ATTACK1 ~~ [T-TIF03]
+			END
+			PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+				SAY DAMAGE ~~ [T-TIF07]
+			END
+			PATCH_IF SLONG_AT DYING < 1 BEGIN
+				SAY DYING ~~ [T-TIF09]
+			END
+			PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
+				SAY SELECT_COMMON1 @545	// Yes? I listen. [T-TIF02]
+			END
+		END
+	END
+BUT_ONLY
+
+VERBOSE

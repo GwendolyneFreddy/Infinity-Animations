@@ -1,0 +1,258 @@
+/* ======================================================== *
+ *  INFINITY ANIMATIONS : Humanoid Animation Fixes routine  *
+ * ======================================================== */
+
+SILENT
+
+/* ======================================================================= *
+ *  Male Human Fighters get the fighter_male_human animation (was cleric)  *
+ * ======================================================================= */
+ACTION_FOR_EACH t-bcre IN ~%tsf%lambrid~ ~%tsf%lamhusb~ ~%tsf%lampun2~ ~%tsp%heogurd~ ~%tsu%bardol~ ~%tsu%benjy~ ~%tsu%bill~ ~%tsu%bouncer~ ~%tsu%caedmo~ ~%tsu%chimp5~ ~%tsu%dandal~ ~%tsu%fergus~ ~%tsu%ffhunt~ ~%tsu%ffsleep~ ~%tsu%flam~ ~%tsu%flam10~ ~%tsu%flam11~ ~%tsu%flam12~ ~%tsu%flam13~ ~%tsu%flam2~ ~%tsu%flam4~ ~%tsu%flam5~ ~%tsu%flam6~ ~%tsu%flam7~ ~%tsu%flam8~ ~%tsu%flam9~ ~%tsu%flamal~ ~%tsu%flamc7~ ~%tsu%flame~ ~%tsu%flamen~ ~%tsu%flamen2~ ~%tsu%flamgg~ ~%tsu%flampun~ ~%tsu%flamsco~ ~%tsu%flamvai~ ~%tsu%flamwiz~ ~%tsu%guard~ ~%tsu%jonavi~ ~%tsu%leaggu1~ ~%tsu%leaggu7~ ~%tsu%phoenix~ ~%tsu%sorrel~ ~%tsu%watchm~ ~0xgguadg~ ~0xrguadg~ ~0xsguadg~ ~bgflam6~ ~bgflam62~ ~bw05fd01~ ~bw05ffde~ ~bw05ffwr~ ~bw05fist~ ~c#ajdoug~ ~c#ajshbo~ ~cb287cpt~ ~cb304sbg~ ~cb351gd1~ ~cb351gd2~ ~cb351gd3~ ~cb351gd4~ ~cb351gd5~ ~cbhld0m5~ ~cbnrtlu1~ ~cbp3act3~ ~cbpheoix~ ~cbprison~ ~cbrtralt~ ~cbsobgr1~ ~cbsobgr2~ ~cbsobgr3~ ~cbsobgr4~ ~cbsobgr5~ ~cbsobgrd~ ~cbsougrd~ ~cbsousgt~ ~ccguard1~ ~cmsora1~ ~cmsora2~ ~copamb02~ ~copamb05~ ~crgor05~ ~deadb05~ ~dpimg1~ ~fhlkav~ ~fhterl~ ~guard1~ ~guard2~ ~guard3~ ~habrega~ ~haegan~ ~haguar01~ ~haguar02~ ~jugdar01~ ~kent~ ~korpimg1~ ~m#corin~ ~naldirt~ ~nscleric~ ~nteldod~ ~nteldod1~ ~pirmur03~ ~prisonk1~ ~sailned~ ~sguard4~ ~terl~ ~terl02~ ~trfued02~ ~trfued03~ ~trfued04~ ~trfued06~ ~trfued07~ ~trfued08~ ~trgrd01~ ~ubflam5~ ~uldgua1~ ~uldgua2~ ~vakfgt01~ ~valran03~ ~x#ajdoug~ ~x#xzgu02~ ~zodesak~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6100				// Animation ID (fighter_male_human)
+				PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~habrega~ = 1) BEGIN // Brega
+					WRITE_BYTE 0x238 18				// Strength (was 17 - has a composite bow)
+					WRITE_BYTE 0x239 54				// STR % bonus (he's a fighter after all)
+				END
+				WRITE_BYTE 0x237 1					// Sex (male)
+				PATCH_IF (BYTE_AT 0x273 = 4) OR (BYTE_AT 0x273 > 200) BEGIN // If invalid class
+					WRITE_BYTE 0x273 2										// Class (fighter)
+				END
+				WRITE_BYTE 0x275 1					// Gender (male)
+				PATCH_IF BYTE_AT 0x27b = 0 BEGIN	// If no alignment
+					WRITE_BYTE 0x27b 0x12			// Alignment (lawful_neutral)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* =================================================================== *
+ *  Male Elf Fighters get the fighter_male_elf animation (was cleric)  *
+ * =================================================================== */
+ACTION_FOR_EACH t-bcre IN ~cbsbmd74~ ~sudead03~ ~suelf3~ ~udslv01~ ~ysnethr~ ~z_2elsa2~ ~z_2elsas~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6101 // Animation ID (fighter_male_elf)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================================= *
+ *  Male Halfling Fighters get the fighter_male_halfling animation (was cleric)  *
+ * ============================================================================= */
+ACTION_FOR_EACH t-bcre IN ~army4~ ~bdbart01~ ~cb270ccg~ ~cbsbtvra~ ~cbsbtvrh~ ~ffbart~ ~ffcust08~ ~garjum~ ~pirpir06~ ~toady~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6103 // Animation ID (fighter_male_halfling)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =========================================================================== *
+ *  Female Human Fighters get the fighter_female_human animation (was cleric)  *
+ * =========================================================================== */
+ACTION_FOR_EACH t-bcre IN ~bylanna~ ~daslave2~ ~ffusher2~ ~%tsu%laola~ ~%tsu%leaggu2~ ~%tsp%heoarch~ ~trgrd03~ ~%tsu%vai~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6110				// Animation ID (fighter_female_human)
+				WRITE_BYTE 0x237 2					// Sex (female)
+				PATCH_IF BYTE_AT 0x273 = 4 BEGIN	// If thief
+					WRITE_BYTE 0x273 2				// Class (fighter)
+				END
+				WRITE_BYTE 0x275 2					// Gender (female)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================================= *
+ *  Male Human Mages get the mage_male_human animation (was cleric)  *
+ * ================================================================= */
+ACTION_FOR_EACH t-bcre IN ~bazdra01~ ~cbc8ctza~ ~cbceeb01~ ~cbisson1~ ~cbisson2~ ~%tbg%king~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6200 // Animation ID (mage_male_human)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================= *
+ *  Male Elf Mages get the mage_male_elf animation (was cleric)  *
+ * ============================================================= */
+ACTION_FOR_EACH t-bcre IN ~%tsu%cuchol~ ~dreself1~ ~dreself3~ ~dreself5~ ~dreself7~ ~z_2bibli~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6201 // Animation ID (mage_male_elf (was cleric))
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x272 2		// Race (elf)
+				WRITE_BYTE 0x273 1		// Class (mage)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ===================================================================== *
+ *  Male Human Thieves get the thief_male_human animation (was fighter)  *
+ * ===================================================================== */
+ACTION_FOR_EACH t-bcre IN ~%tsu%crew4~ ~%tsu%crew7~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6300 // Animation ID (thief_male_human)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================================================= *
+ *  Female Human Thieves get the thief_female_human animation (was fighter)  *
+ * ========================================================================= */
+ACTION_IF FILE_EXISTS_IN_GAME ~%tsu%crew2.cre~ BEGIN 
+	COPY_EXISTING ~%tsu%crew2.cre~ ~override~
+		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+		PATCH_IF valid BEGIN
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+			WRITE_SHORT 0x28 0x6310 // Animation ID (thief_female_human)
+			WRITE_BYTE 0x237 2		// Sex (female, was male)
+			WRITE_BYTE 0x275 2		// Gender (female, was male)
+		END
+	BUT_ONLY
+END
+
+/* ================================================================= *
+ *  Male Human Monks get the monk_male_human animation (was cleric)  *
+ * ================================================================= */
+ACTION_FOR_EACH t-bcre IN ~ecolt~ ~monk~ ~monkd2~ ~monkde~ ~monken~ ~monkss13~ ~monkss14~ ~monkss15~ ~monkss16~ ~monkss17~ ~monkss18~ ~ntmonkd2~ ~ntmonkde~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x6500				// Animation ID (monk_male_human)
+				PATCH_IF BYTE_AT 0x273 = 3 BEGIN	// If cleric
+					WRITE_BYTE 0x273 0x14			// Class (monk)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================== *
+ *  Pirates get the pirate animation  *
+ * ================================== */
+ACTION_FOR_EACH t-bcre IN ~cbbdstrt~ ~cbp4acta~ ~cbp4actc~ ~j#pirat3~ ~pirate1~ ~pirate2~ ~pirate3~ ~pirate4~ ~pirebd01~ ~pirebd02~ ~pirebd03~ ~pirebd04~ ~pirebd05~ ~pirebd06~ ~pirebd07~ ~pirebd08~ ~pirebd09~ ~pirebd10~ ~pirebd11~ ~pirebd12~ ~pirebd13~ ~pirebd14~ ~pirebd15~ ~pirsea02~ ~ppguard~ ~ppguarda~ ~ppsail02~ ~ppsail04~ ~ppthf01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f24				// Animation ID (pirate)
+				WRITE_BYTE 0x237 1					// Sex (male)
+				PATCH_IF BYTE_AT 0x272 != 7 BEGIN
+					WRITE_BYTE 0x272 1				// Race (human)
+				END
+				PATCH_IF (BYTE_AT 0x273 > 0x14) OR (BYTE_AT 0x273 != 0x9b) BEGIN // If invalid class
+					WRITE_BYTE 0x273 4				// Class (thief)
+				END
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1				// Gender (male)
+				END
+				PATCH_IF BYTE_AT 0x27b = 0 BEGIN	// If no alignment
+					WRITE_BYTE 0x27b 0x32			// Alignment (chaotic_neutral)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================== *
+ *  Sailors get the sailor_man animation  *
+ * ====================================== */
+//TODO: add new options when IA_EE content will be released
+ACTION_FOR_EACH t-bcre IN ~%tsu%crew1~ ~%tsu%crew5~ ~%tsu%sailjos~ ~ppsailor~ ~xcrew01~ ~xcrew03~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f2a				// Animation ID (sailor_man)
+				WRITE_BYTE 0x237 1					// Sex (male)
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1				// Gender (male)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============================================================== *
+ *  Amnish Soldiers get the amnian_soldier animation (was cleric)  *
+ * =============================================================== */
+ACTION_FOR_EACH t-bcre IN ~%tsu%amnis~ ~%tsu%amnis3~ ~%tsu%amnis4~ ~%tsu%amnise~ ~%tsu%amnise2~ ~%tsu%amsleep~ ~bodyg1~ ~c#ajwac1~ ~c#ajwac2~ ~c#q03012~ ~c#q03013~ ~c#q03014~ ~c#q04005~ ~c#q04006~ ~%tsu%dead2~ ~%tsd%eadfuck~ ~docsol01~ ~hactong~ ~%tsu%hick~ ~gguard01~ ~guamur~ ~slcent~ ~vvamn1~ ~vvamn2~ ~vvamn3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f2c				// Animation ID (amnian_soldier)
+				WRITE_BYTE 0x237 1					// Sex (male)
+				PATCH_IF (BYTE_AT 0x273 = 4) OR (BYTE_AT 0x273 > 200) BEGIN // If invalid class
+					WRITE_BYTE 0x273 2				// Class (fighter)
+				END
+				WRITE_BYTE 0x275 1					// Gender (male)
+				PATCH_IF BYTE_AT 0x27b = 0 BEGIN	// If no alignment
+					WRITE_BYTE 0x27b 0x12			// Alignment (lawful_neutral)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============================================== *
+ *  Shadow Thieves get the shadow_thief animation  *
+ * =============================================== */
+ACTION_FOR_EACH t-bcre IN ~aj#sth~ ~ambsthf0~ ~ambthif2~ ~arnfgt01~ ~arnfgt02~ ~arnman09~ ~arntra05~ ~arntra06~ ~arnwar03~ ~arnwar04~ ~bpsthef3~ ~bpthief2~ ~c6mess~ ~cbshdrun~ ~cushad2~ ~cushad3~ ~cushad5~ ~dassin~ ~dockhlp1~ ~dockhlp2~ ~dsthief~ ~flyfgt01~ ~lk#nithf~ ~mfeind1~ ~mookft01~ ~ppshad01~ ~repthf1~ ~shadcr1~ ~shadth01~ ~stass1~ ~stolethf~ ~thief2~ ~vvcat~ ~vvdead1~ ~vvdead2~ ~vvshad1~ ~vvshad11~ ~vvshad12~ ~vvshad4~ ~vvshad5~ ~vvshad6~ ~vvshad8~ ~z#arch1~ ~z#arch2~ ~z#archbv~ ~zprize2~ ~zprize3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+		COPY_EXISTING ~%t-bcre%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f36 // Animation ID (shadow_thief)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+VERBOSE

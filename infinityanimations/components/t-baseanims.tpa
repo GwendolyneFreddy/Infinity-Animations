@@ -1,0 +1,227 @@
+/* ==================================================== *
+ *  INFINITY ANIMATIONS : More Base Animations routine  *
+ * ==================================================== */
+
+SILENT
+
+/* ======================================= *
+ *  Histachii get the histachii animation  *
+ * ======================================= */
+ACTION_FOR_EACH nb IN ~histach1~ ~histach2~ ~histach3~ ~histach4~ ~histach5~ ~histach6~ ~histach7~ ~histach8~ ~histachi~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe040 // Animation ID (histachii)
+				WRITE_BYTE 0x271 1		// General (humanoid)
+				WRITE_BYTE 0x272 154	// Race (yuanti)
+				WRITE_BYTE 0x273 2		// Class (fighter)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ==================================================== *
+ *  Lizardmen Brown get the lizard_man_elite animation  *
+ * ==================================================== */
+ACTION_FOR_EACH nb IN ~bazliz03~ ~bhlizgrd~ ~bplizgrd~ ~bplizman~ ~icliz01~ ~icliz03~ ~icliz04~ ~icliz05~ ~icliz06~ ~icliz07~ ~lizdead~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe500 // Animation ID (lizard_man_elite)
+				WRITE_BYTE 0x2f 114		// Skin color (YET_ANOTHER_BROWN)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x272 154	// Race (lizardman)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================================== *
+ *  Lizardman Shamans get the lizard_man (green) animation  *
+ * ======================================================== */
+ACTION_FOR_EACH nb IN ~bazliz01~ ~bazliz02~ ~bhlizsha~ ~bplizsha~ ~dw#lzsh1~ ~dw#lzsh2~ ~va#lizrd~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe510 // Animation ID (lizard_man)
+				WRITE_BYTE 0x2f 53		// Skin color (GREEN)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 1		// General (humanoid)
+				WRITE_BYTE 0x272 154	// Race (lizardman)
+				WRITE_BYTE 0x273 14		// Class (cleric_mage)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =============================================== *
+ *  Lizardman Kings get the lizard_king animation  *
+ * =============================================== */
+ACTION_FOR_EACH nb IN ~bazliz04~ ~bhlizkng~ ~bplizkng~ ~lizking~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe520 // Animation ID (lizard_king)
+				WRITE_BYTE 0x2f 36		// Skin color (LIGHT_DIRTY_YELLOW)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 1		// General (humanoid)
+				WRITE_BYTE 0x272 154	// Race (lizardman)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================ *
+ *  Trolls get the troll animation  *
+ * ================================ */
+ACTION_FOR_EACH nb IN ~bptrol01~ ~bptrsi01~ ~bptrsn01~ ~cb351tgd~ ~cdtroll1~ ~cdtroll2~ ~chaltrol~ ~clfteg~ ~clftrl~ ~datroll~ ~ddtroll1~ ~ddtroll2~ ~dgtrol01~ ~dgtrol02~ ~drshnl01~ ~drshnl02~ ~drshnl11~ ~drshnl21~ ~dw#trlde~ ~dw#trlgi~ ~dw#trlhg~ ~eletro01~ ~eletro02~ ~eletro03~ ~firamb03~ ~firamb05~ ~firtrl01~ ~godtrol1~ ~godtrol2~ ~grae~ ~hgtrl01~ ~hgtrl02~ ~kptrol01~ ~kptrol02~ ~kptrol03~ ~kptrol04~ ~kptrol05~ ~kptrol13~ ~kptrol23~ ~mygtrol~ ~plytroll~ ~quadtol1~ ~r#troll~ ~shtroll~ ~sutroll~ ~sutroll2~ ~torgal~ ~torgal2~ ~torgal3~ ~trolde01~ ~trolde02~ ~trolfr01~ ~trolgi01~ ~trolgi02~ ~troll01~ ~troll02~ ~trollens~ ~troluo01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f00 // Animation ID (troll)
+				WRITE_BYTE 0x2f 86		// Skin color (CHROME_GREEN)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 5		// General (gianthumanoid)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================== *
+ *  Blue Trolls get the troll_blue animation  *
+ * ========================================== */
+ACTION_FOR_EACH nb IN ~bptrsp01~ ~daspitro~ ~dw#trlse~ ~dw#trlsi~ ~dw#trlsp~ ~godtrol3~ ~godtrol4~ ~pptroll1~ ~pptroll2~ ~rogtro01~ ~rogtro02~ ~trolca01~ ~trolca02~ ~trolfo02~ ~trolfosu~ ~trolsi01~ ~trolsi02~ ~trolsp01~ ~trolsp02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe0b0 // Animation ID (troll_blue)
+				WRITE_BYTE 0x2f 32		// Skin color (DARK_SEA_GREEN)
+				READ_BYTE 0x237 sx		// Sex
+				PATCH_IF sx != 2 BEGIN	// If not female
+					WRITE_BYTE 0x237 1	// male
+				END
+				READ_BYTE 0x271 gn		// General
+				PATCH_IF gn != 4 BEGIN	// If not undead
+					WRITE_BYTE 0x271 5	// General (gianthumanoid)
+				END
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF (gd != 2) AND (gd != 6) BEGIN // If not female and not summoned
+					WRITE_BYTE 0x275 1	// male
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================== *
+ *  Ice Trolls get the troll_ice animation  *
+ * ======================================== */
+ACTION_FOR_EACH nb IN ~dw#trlic~ ~icetrlx2~ ~icetrlz2~ ~icetrolx~ ~icetrolz~ ~trolic01~ ~trolic02~ ~trolicd2~ ~trolicdd~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe0a0 // Animation ID (troll_ice)
+				WRITE_BYTE 0x2f 71		// Skin color (FROST_BLUE)
+				WRITE_BYTE 0x271 5		// General (gianthumanoid)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================ *
+ *  Small Trolls get the troll_small animation  *
+ * ============================================ */
+ACTION_FOR_EACH nb IN ~dw#trl01~ ~dw#trlfr~ ~dw#trlsm~ ~glbear~ ~kptrol06~ ~trolfr02~ ~troll03~ ~trollsm2~ ~wwtrol1~ ~wwtrol2~ ~wwtrol3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f0f // Animation ID (troll_small)
+				WRITE_BYTE 0x2f 86		// Skin color (CHROME_GREEN)
+				WRITE_BYTE 0x271 1		// General (humanoid)
+				WRITE_BYTE 0x275 1		// Gender (male)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================== *
+ *  Snow Trolls get the troll_snow animation  *
+ * ========================================== */
+ACTION_FOR_EACH nb IN ~dw#trlbl~ ~dw#trlsn~ ~obsice01~ ~obsice11~ ~trolic03~ ~trolic04~ ~trolsn01~ ~trolsn02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe0c0 // Animation ID (troll_snow)
+				WRITE_BYTE 0x2f 105		// Skin color (OFF_WHITE)
+				WRITE_BYTE 0x271 5		// General (gianthumanoid)
+				WRITE_BYTE 0x275 1		// Gender (male)
+				LPF DELETE_CRE_EFFECT
+					INT_VAR opcode_to_delete = 52 //Very bright by RGB
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================== *
+ *  Umber Hulks get the umber_hulk animation  *
+ * ========================================== */
+ACTION_FOR_EACH nb IN ~amumber~ ~bpumber~ ~daumber~ ~holyumb~ ~kpumb01~ ~udill02~ ~udumb02~ ~udumber~ ~umbcali1~ ~umbcali2~ ~umbcali3~ ~umbcali4~ ~umbcali5~ ~umbhul01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f11 // Animation ID (umber_hulk)
+				WRITE_BYTE 0x237 1		// male
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1	// male
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================ *
+ *  Elder Umber Hulks get the umber_hulk_elder (IWD) animation  *
+ * ============================================================ */
+ACTION_FOR_EACH nb IN ~choyol~ ~chuyol~ ~ppumb02~ ~r#umber~ ~umbhul02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0xe0d0 // Animation ID (umber_hulk_elder)
+				WRITE_BYTE 0x237 1		// male
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 1	// male
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+VERBOSE

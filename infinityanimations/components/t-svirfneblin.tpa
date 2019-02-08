@@ -1,0 +1,125 @@
+/* ====================================================== *
+ *  INFINITY ANIMATIONS : Svirfneblin Animations routine  *
+ * ====================================================== */
+
+
+SILENT
+
+COPY_EXISTING ~udsvir04.cre~ ~override~	// Innkeeper
+              ~udsvir07.cre~ ~override~	// Svirfneblin
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SVIRFNEBLIN_PALE_AXE~) // classical 0x5263 - EE 0xe259
+		WRITE_BYTE 0x2f 84				// Skin color (PEACH, was 7 LIGHT_METALLIC_GREEN)
+		WRITE_BYTE 0x32 84				// Hair color (PEACH, was 109 TERRA_COTTA)
+		WRITE_BYTE 0x272 6				// Race (gnome, was 4 dwarf)
+		PATCH_IF t-svi = 1 BEGIN
+			SAY INITIAL_MEETING @547	// Yes. [T-SVA01B]
+			SAY MORALE @548				// Help! Help! [T-SVA03B]
+			SAY UNHAPPY_BREAKING @548	// Help! Help! [T-SVA03B]
+			SAY BATTLE_CRY1 @549		// My powers shall obliterate you! [T-SVA02C]
+			SAY BATTLE_CRY2 @550		// Die! [T_SVA02D]
+			SAY ATTACK1 ~~ [T-SVA04B]
+			SAY DAMAGE ~~ [T-SVA05B]
+			SAY DYING ~~ [T-SVA06B]
+			SAY HURT @551				// I am wounded! Heal me! [T-SVA07]
+			SAY SELECT_COMMON1 @552		// Good day! [T-SVA01A]
+			SAY SELECT_COMMON2 @547		// Yes. [T-SVA01B]
+			SAY SELECT_COMMON3 @553		// I really need to talk to you. [T-SVA01C]
+			SAY SELECT_COMMON4 @554		// Ho ha ha ha! [T-SVA01D]
+			SAY DIALOGUE_HOSTILE @555	// You're in GREAT peril if you bother me. Just you wait! [T-SVA08]
+			SAY CRITICAL_HIT @556		// That's the way it's done and done! [T-SVA09]
+			SAY CRITICAL_MISS @557		// No... [T-SVA10]
+			SAY SPELL_DISRUPTED @557	// No... [T-SVA10]
+		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~udsvdead.cre~ ~override~	// Svirfneblin (Dead)
+              ~udsvir03.cre~ ~override~	// Goldander Blackenrock
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SVIRFNEBLIN_PALE_NOAXE~) // classical 0x5264 - EE 0xe25a
+		WRITE_BYTE 0x2d 18				// Minor color (BLUE, was 47 PURE_DARK_RED)
+		WRITE_BYTE 0x2f 84				// Skin color (PEACH, was 7 LIGHT_METALLIC_GREEN)
+		WRITE_BYTE 0x32 84				// Hair color (PEACH, was 109 TERRA_COTTA)
+		WRITE_BYTE 0x275 1				// Gender (male, was 4 neither)
+		PATCH_IF t-svi = 1 BEGIN
+			SAY INITIAL_MEETING @558	// Come and talk a while. [T-SVN01C]
+			SAY MORALE @559				// Please help me! [T-SVN03B]
+			SAY UNHAPPY_BREAKING @559	// Please help me! [T-SVN03B]
+			SAY BATTLE_CRY1 @560		// Take that! [T-SVN02C]
+			SAY BATTLE_CRY2 @561		// Evil fall before me! [T_SVN02D]
+			SAY ATTACK1 ~~ [T-SVN04B]
+			SAY DAMAGE ~~ [T-SVN05B]
+			SAY DYING ~~ [T-SVN06B]
+			SAY HURT @562				// I am hurt!~ [T-SVN07]
+			SAY SELECT_COMMON1 @563		// Hello there. [T-SVN01A]
+			SAY SELECT_COMMON2 @564		// Yes. [T-SVN01B]
+			SAY SELECT_COMMON3 @558		// Come and talk a while. [T-SVN01C]
+			SAY SELECT_COMMON4 @565		// Oh ho ho ho! [T-SVN01D]
+			SAY DIALOGUE_HOSTILE @566	// You're heading for a good beating, you are! [T-SVN08]
+			SAY CRITICAL_HIT @567		// Well look at that! [T-SVN09]
+			SAY CRITICAL_MISS @568		// No... [T-SVN10]
+			SAY SPELL_DISRUPTED @568	// No... [T-SVN10]
+		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~udsvir01.cre~ ~override~	// Odendal Breachgnome
+              ~udsvir02.cre~ ~override~	// Svirfneblin
+              ~udsvir08.cre~ ~override~	// Svirfneblin Leader
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SVIRFNEBLIN_DARK_AXE~) // classical 0x5265 - EE 0xe263
+		WRITE_BYTE 0x2f 38				// Skin color (LIGHT_DIRT_BROWN, was 7 LIGHT_METALLIC_GREEN)
+		WRITE_BYTE 0x32 38				// Hair color (LIGHT_DIRT_BROWN, was 7 LIGHT_METALLIC_GREEN)
+		WRITE_BYTE 0x272 6				// Race (gnome, was 4 dwarf)
+		PATCH_IF t-svi = 1 BEGIN
+			SAY INITIAL_MEETING @552	// Good day! [T-SVA01A]
+			SAY MORALE @569				// So long! [T-SVA03A]
+			SAY UNHAPPY_BREAKING @569	// So long! [T-SVA03A]
+			SAY BATTLE_CRY1 @570		// Kill that scum! Get 'em good! [T-SVA02A]
+			SAY BATTLE_CRY2 @571		// Blood and bloody hell! [T_SVA02B]
+			SAY ATTACK1 ~~ [T-SVA04A]
+			SAY DAMAGE ~~ [T-SVA05A]
+			SAY DYING ~~ [T-SVA06A]
+			SAY HURT @551				// I am wounded! Heal me! [T-SVA07]
+			SAY SELECT_COMMON1 @552		// Good day! [T-SVA01A]
+			SAY SELECT_COMMON2 @547		// Yes. [T-SVA01B]
+			SAY SELECT_COMMON3 @553		// I really need to talk to you. [T-SVA01C]
+			SAY SELECT_COMMON4 @554		//Ho ha ha ha! [T-SVA01D]
+			SAY DIALOGUE_HOSTILE @555	//You're in GREAT peril if you bother me. Just you wait! [T-SVA08]
+			SAY CRITICAL_HIT @556		//That's the way it's done and done! [T-SVA09]
+			SAY CRITICAL_MISS @557		//No... [T-SVA10]
+			SAY SPELL_DISRUPTED @557	//No... [T-SVA10]
+		END
+	END
+BUT_ONLY
+
+COPY_EXISTING ~udsvir05.cre~ ~override~	// Therndle Daglefodd
+              ~udsvir06.cre~ ~override~	// Svirfneblin
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SVIRFNEBLIN_DARK_NOAXE~) // classical 0x5266 - EE 0xe264
+		WRITE_BYTE 0x2f 38				// Skin color (LIGHT_DIRT_BROWN, was 7 LIGHT_METALLIC_GREEN)
+		WRITE_BYTE 0x32 5				// Hair color (MEDIUM_SILVER, was 109 TERRA_COTTA)
+		PATCH_IF t-svi = 1 BEGIN
+			SAY INITIAL_MEETING @563	// Hello there. [T-SVN01A]
+			SAY MORALE @572				// Farewell. [T-SVN03A]
+			SAY UNHAPPY_BREAKING @572	// Farewell. [T-SVN03A]
+			SAY BATTLE_CRY1 @573		// Get 'em! [T-SVN02A]
+			SAY BATTLE_CRY2 @574		// I will cut you down to size! [T_SVN02B]
+			SAY ATTACK1 ~~ [T-SVN04A]
+			SAY DAMAGE ~~ [T-SVN05A]
+			SAY DYING ~~ [T-SVN06A]
+			SAY HURT @562				// I am hurt! [T-SVN07]
+			SAY SELECT_COMMON1 @563		// Hello there. [T-SVN01A]
+			SAY SELECT_COMMON2 @564		// Yes. [T-SVN01B]
+			SAY SELECT_COMMON3 @558		// Come and talk a while. [T-SVN01C]
+			SAY SELECT_COMMON4 @565		// Oh ho ho ho! [T-SVN01D]
+			SAY DIALOGUE_HOSTILE @566	// You're heading for a good beating, you are! [T-SVN08]
+			SAY CRITICAL_HIT @567		// Well look at that! [T-SVN09]
+			SAY CRITICAL_MISS @568		// No... [T-SVN10]
+			SAY SPELL_DISRUPTED @568	// No... [T-SVN10]
+		END
+	END
+BUT_ONLY
+
+VERBOSE

@@ -1,0 +1,484 @@
+/* ============================================================ *
+ *  INFINITY ANIMATIONS : More Icewind Dale Animations routine  *
+ * ============================================================ */
+
+SILENT
+
+/* ===================================================================== *
+ *  Animated Plate Bronze get the animated_plate_bronze_small animation  *
+ * ===================================================================== */
+ACTION_FOR_EACH nb IN ~gorgua04~ ~gorgua05~ ~walkarm2~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+  	COPY_EXISTING ~%nb%.cre~ ~override~
+    	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+    	PATCH_IF valid BEGIN
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_BRONZE_SMALL~) // classical 0x5279 - EE none for the moment
+			WRITE_BYTE 0x271 255	// General (monster)
+			WRITE_BYTE 0x272 144	// Race (golem)
+    	END
+  	BUT_ONLY
+	END
+END
+
+/* ================================================================= *
+ *  Animated Plate Dark get the animated_plate_dark_small animation  *
+ * ================================================================= */
+ACTION_FOR_EACH nb IN ~f_demwar~ ~pspnight~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_DARK_SMALL~) // classical 0x527a - EE none for the moment
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x272 121	// Race (fiend)
+				WRITE_BYTE 0x273 160	// Class (tanar'ri)
+			END
+		BUT_ONLY
+	END
+END
+
+/* =================================================================== *
+ *  Animated Plate Green get the animated_plate_green_small animation  *
+ * =================================================================== */
+ACTION_FOR_EACH nb IN ~walkarm1~ ~walkarm3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_GREEN_SMALL~) // classical 0x527b - EE none for the moment
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x272 144	// Race (golem)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================== *
+ *  Archdruids get the arundel animation  *
+ * ====================================== */
+ACTION_FOR_EACH nb IN ~%tsu%amaran~ ~arundel~ ~arundeld~ ~cbarkslv~ ~cechal02~ ~cechalle~ ~cedruid1~ ~cedruid2~ ~dsarchdr~ ~dubnd7~ ~gdruid~ ~%tsu%seniya~ ~trevil03~ ~x#andart~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ARUNDEL~) // classical 0x527c - EE 0xe243
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x273 11		// Class (druid)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================================== *
+ *  Tan Barbarians get the barbarian_warrior_tan animation  *
+ * ======================================================== */
+ACTION_FOR_EACH nb IN ~barbar1~ ~barbar2~ ~barbar3~ ~barbar4~ ~bazpat02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_WARRIOR_TAN~) // classical 0x5280 - EE 0xe244
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================================== *
+ *  Red Barbarians get the barbarian_warrior_red animation  *
+ * ======================================================== */
+ACTION_FOR_EACH nb IN ~barb1~ ~barb2~ ~barbgrd~ ~barbgrd2~ ~barbmess~ ~tzshok01~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_WARRIOR_RED~) // classical 0x5281 - EE 0xe245
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================ *
+ *  Brown Barbarians get the barbarian_warrior_brown animation  *
+ * ============================================================ */
+ACTION_FOR_EACH nb IN ~barb3~ ~barb4~ ~barbgood~ ~barborn~ ~bargood~ ~ulgarth~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_WARRIOR_BROWN~) // classical 0x5282 - EE 0xe246
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================================ *
+ *  Barbarian Shaman Club gets the barbarian_shaman_club animation  *
+ * ================================================================ */
+ACTION_IF FILE_EXISTS_IN_GAME ~barheal.cre~ BEGIN
+	COPY_EXISTING ~barheal.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_SHAMAN_CLUB~) // classical 0x527f - EE 0xe249
+		END
+	BUT_ONLY
+END
+
+/* ==================================================================== *
+ *  Barbarian Shaman Hammers get the barbarian_shaman_hammer animation  *
+ * ==================================================================== */
+ACTION_FOR_EACH nb IN ~barbkin2~ ~barbking~ ~beogorn~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_SHAMAN_HAMMER~) // classical 0x527d - EE 0xe247
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================================== *
+ *  Barbarian Shaman Staff gets the barbarian_shaman_staff animation  *
+ * ================================================================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~barbheal.cre~ BEGIN
+	COPY_EXISTING ~barbheal.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_SHAMAN_STAFF~) // classical 0x527e - EE 0xe248
+		END
+	BUT_ONLY
+END
+
+/* ============================================================ *
+ *  Air Elementals Small get the elemental_air_small animation  *
+ * ============================================================ */
+ACTION_FOR_EACH nb IN ~li#whir~ ~wm_vortx~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7321 // Animation ID (elemental_air_small)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x273 186	// Class (elemental_air)
+				WRITE_BYTE 0x275 4		// Gender (neither)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ==================================================== *
+ *  Earth Elementals get the elemental_earth animation  *
+ * ==================================================== */
+ACTION_FOR_EACH nb IN ~b#chrear~ ~ca#sear2~ ~ca#sear3~ ~druear01~ ~elearg01~ ~elearpr2~ ~elearpr3~ ~elearsu~ ~elearsu3~ ~elearsu4~ ~elecali1~ ~elecali3~ ~elecali5~ ~elemogre~ ~elemsunn~ ~esp01~ ~godele2~ ~mdearth~ ~mdearth2~ ~swaear01~ ~swaear02~ ~udelde~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7300 // Animation ID (elemental_earth)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 255	// General (monster)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 4	// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================= *
+ *  Some Earth Elementals get the IWD elemental_earth animation  *
+ * ============================================================= */
+ACTION_FOR_EACH nb IN ~ca#sear1~ ~elear01~ ~elearpr~ ~elearsu1~ ~elearsu2~ ~elearsuw~ ~shearth~ ~suearth~ ~udearth~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELEMENTAL_EARTH_IWD~) // classical 0x5037 - EE 0xe24b
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x271 255	// General (monster)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 6 BEGIN	// If not summoned
+					WRITE_BYTE 0x275 4	// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================================ *
+ *  Earth Elementals Small get the elemental_earth_small animation  *
+ * ================================================================ */
+ACTION_FOR_EACH nb IN ~elearl01~ ~eleeel01~ ~kearth~ ~mekear01~ ~sumelear~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7301					// Animation ID (elemental_earth_small)
+				WRITE_BYTE 0x237 1						// Sex (male)
+				WRITE_BYTE 0x271 255					// General (monster)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ================================================== *
+ *  Fire Elementals get the elemental_fire animation  *
+ * ================================================== */
+ACTION_FOR_EACH nb IN ~suelew2~ ~tg#did5~ ~acidele1~ ~b#chrfir~ ~c6drowgo~ ~ca#zfir3~ ~ddguard7~ ~drufir01~ ~elecali2~ ~elecali4~ ~elemimix~ ~elemzaam~ ~elfir~ ~elfir01~ ~elfirg01~ ~godele3~ ~gorfir01~ ~gorfir02~ ~gorfir03~ ~gorfir04~ ~lightele~ ~obsfir06~ ~pschaos~ ~psmaele~ ~sk#fform~ ~suelew1~ ~sufire~ ~telelfir~ ~udeldf~ ~udfire~ ~yscara04~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7310					// Animation ID (elemental_fire)
+				WRITE_BYTE 0x237 1						// Sex (male)
+				WRITE_BYTE 0x271 255					// General (monster)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* =========================================================== *
+ *  Some Fire Elementals get the IWD elemental_fire animation  *
+ * =========================================================== */
+ACTION_FOR_EACH nb IN ~ca#zfir2~ ~deckfele~ ~elfirpr2~ ~elfirpr3~ ~elfirsu~ ~elfirsu3~ ~elfirsu4~ ~lavaele~ ~lavaele1~ ~swafir01~ ~swafir02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELEMENTAL_FIRE_IWD~) // classical 0x5038 - EE 0xe24c
+				WRITE_BYTE 0x271 255					// General (monster)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================== *
+ *  Fire Elementals Small get the elemental_fire_small animation  *
+ * ============================================================== */
+ACTION_FOR_EACH nb IN ~ca#zfir1~ ~elefel01~ ~elfirl01~ ~elfirpr~ ~elfirsu1~ ~elfirsu2~ ~elfirsuw~ ~shfire~ ~sumelfir~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7311					// Animation ID (elemental_fire_small)
+				WRITE_BYTE 0x271 255					// General (monster)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================================= *
+ *  Water Elementals get the IWD elemental_water animation  *
+ * ========================================================= */
+ACTION_FOR_EACH nb IN ~elemwag~ ~elwatg01~ ~li#druwa~ ~tg#benh~ ~tg#wel2~ ~tg#wel3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELEMENTAL_WATER~) // classical 0x5039 - EE 0xe24d
+				WRITE_BYTE 0x237 1						// Sex (male)
+				WRITE_BYTE 0x271 255					// General (monster)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ======================================== *
+ *  Olhydra gets the water_weird animation  *
+ * ======================================== */
+COPY_EXISTING ~elemhydr.cre~ ~override~
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_SHORT 0x28 0xef10 // Animation ID (water_weird)
+		WRITE_BYTE 0x271 255	// General (monster)
+	END
+BUT_ONLY
+
+/* =================================================== *
+ *  Some Fire Giants get the IWD giant_fire animation  *
+ * =================================================== */
+ACTION_FOR_EACH nb IN ~gorfirg~ ~hgber01~ ~hgwar02~ ~sorkyst~ ~yscara03~ ~ysfire01~ ~ysfire02~ ~ysg2~ ~yssold10~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_IWD~) // classical 0x504a - EE 0xe24e
+				WRITE_BYTE 0x237 1						// Sex (male)
+				WRITE_BYTE 0x271 5						// General (gianthumanoid)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 1					// Gender (male)
+				END
+				WRITE_BYTE 0x27b 19						// Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================== *
+ *  Rock Golem gets the golem_clay animation  *
+ * ========================================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~rockgol1.cre~ BEGIN
+	COPY_EXISTING ~rockgol1.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_SHORT 0x28 0x7f07 // Animation ID (golem_clay)
+		END
+	BUT_ONLY
+END
+
+/* ================================================ *
+ *  Adamantite golems get the golem_iron animation  *
+ * ================================================ */
+ACTION_FOR_EACH nb IN ~garsaph1~ ~garsaph2~ ~gholim~ ~godgol1~ ~godgol2~ ~golada01~ ~golkill2~ ~golsaph1~ ~golsaph2~ ~golsaph3~ ~gordeckb~ ~ritgol0~ ~ritgol1~ ~ritgol2~ ~z#gadama~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f04					// Animation ID (golem_iron)
+				WRITE_BYTE 0x237 1						// Sex (male)
+				WRITE_BYTE 0x271 5						// General (gianthumanoid)
+				READ_BYTE 0x275 gd						// Gender
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
+					WRITE_BYTE 0x275 4					// Gender (neither)
+				END
+				LPF DELETE_CRE_EFFECT
+					INT_VAR opcode_to_delete = 51		// Strong-dark by RGB
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================== *
+ *  Iron Golems get the IWD golem_iron animation  *
+ * ============================================== */
+ACTION_FOR_EACH nb IN ~cbgorgrd~ ~cbgorgre~ ~gartopz1~ ~gartopz2~ ~godgol3~ ~godgol4~ ~godgol5~ ~godgol6~ ~godruby~ ~goliro01~ ~golruby1~ ~gorgrd01~ ~gorgrd02~ ~gorsta08~ ~irontomb~ ~kpgol04~ ~kpgol07~ ~shiron~ ~tomegol4~ ~yacasas~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOLEM_IRON_IWD~) // classical 0x504b - EE 0xe250
+				WRITE_BYTE 0x237 1					// Sex (male)
+				LPF DELETE_CRE_EFFECT
+					INT_VAR opcode_to_delete = 51	// Strong-dark by RGB
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ====================================== *
+ *  Sahuagins get the sahuagin animation  *
+ * ====================================== */
+ACTION_FOR_EACH nb IN ~bpsahugi~ ~chevil04~ ~elesah01~ ~elesah02~ ~obssah01~ ~obssah03~ ~obssah04~ ~obssah05~ ~ppsaha~ ~ppsahale~ ~sahamb01~ ~sahamb02~ ~sahamb03~ ~sahamb04~ ~sahamb05~ ~sahamb06~ ~sahbar01~ ~sahchf01~ ~sahchf02~ ~sahramb1~ ~sahramb2~ ~sahramb4~ ~sahramb5~ ~sahrar01~ ~sahrgr03~ ~sahrnt01~ ~sahspy01~ ~sahspy02~ ~sahspy04~ ~sahsss01~ ~sahsss02~ ~sahsss03~ ~sahuag01~ ~x#saha01~ ~x#saha02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f09 // Animation ID (sahuagin)
+				WRITE_BYTE 0x2f 31		// Skin color (LIGHT_SEA_BLUE)
+				READ_BYTE 0x237 sx		// Sex
+				PATCH_IF sx != 2 BEGIN	// If not female
+					WRITE_BYTE 0x237 1	// male
+				END
+				WRITE_BYTE 0x271 1		// General (humanoid)
+				READ_BYTE 0x275 gd		// Gender
+				PATCH_IF gd != 2 BEGIN	// If not female
+					WRITE_BYTE 0x275 1	// male
+				END
+			END
+		BUT_ONLY
+	END
+END
+
+/* ===================================================== *
+ *  Sahuagin Priestesses get the IWD sahuagin animation  *
+ * ===================================================== */
+ACTION_FOR_EACH nb IN ~obssah02~ ~sahpr1~ ~sahpr3~ ~sahpr4~ ~sahpr5~ ~sahpri02~ ~sahramb3~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SAHUAGIN_IWD~) // classical 0x5277 - EE 0xe261
+				WRITE_BYTE 0x2f 53		// Skin color (GREEN)
+				WRITE_BYTE 0x237 2		// Sex (female)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ============================================================== *
+ * Sahuagins chiefs (Large) get the IWD sahuagin_large animation  *
+ * ============================================================== */
+ACTION_FOR_EACH nb IN ~guareye6~ ~sahbar02~ ~sahbar03~ ~sahcapt0~ ~sahcapt1~ ~sahcpt02~ ~sahkin01~ ~sahkng01~ ~sahkng02~ ~sahpri01~ ~sahreb02~ ~sahryl01~ ~udsaha~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SAHUAGIN_LARGE_IWD~) // classical 0x5278 - EE 0xe262
+				WRITE_BYTE 0x2f 56		// Skin color (DARK_TURQUOISE)
+				WRITE_BYTE 0x237 1		// Sex (male)
+				WRITE_BYTE 0x273 169	// Class (sahuagin)
+			END
+		BUT_ONLY
+	END
+END
+
+/* ========================================================= *
+ *  Sahuagins royal guards get the sahuagin_large animation  *
+ * ========================================================= */
+ACTION_FOR_EACH nb IN ~sahcpt01~ ~sahextra~ ~sahgrd01~ ~sahgrd02~ ~sahgrd03~ ~sahpr2~ ~sahrgr01~ ~sahrgr02~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_SHORT 0x28 0x7f23 // Animation ID (sahuagin_large)
+				WRITE_BYTE 0x2f 31		// Skin color (LIGHT_SEA_BLUE)
+			END
+		BUT_ONLY
+	END
+END
+
+VERBOSE
