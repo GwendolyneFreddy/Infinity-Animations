@@ -1,0 +1,41 @@
+3da /tundra_yeti
+***
+                 SOUND
+ATTACK           t-yet03 t-yet04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-yet07 t-yet08
+DAMAGE           0 0
+DIE              t-yet09 t-yet10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-yet04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-yet03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-yet03 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-yet04 nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-yet01 t-yet02
+Battle_Cry       0 0
+Selection        t-yet01 t-yet02
+Selection        0 0

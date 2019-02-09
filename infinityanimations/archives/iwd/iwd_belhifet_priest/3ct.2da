@@ -1,0 +1,41 @@
+3ct /belhifet_priest
+***
+                 SOUND
+ATTACK           t-bep03 t-bep04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bep07 t-bep08
+DAMAGE           0 0
+DIE              t-bep09a t-bep09b
+DIE              2 2
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bep04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bep03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-bep03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-bep04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bep01 nosound
+Battle_Cry       0 0
+Selection        t-bep01 nosound
+Selection        0 0

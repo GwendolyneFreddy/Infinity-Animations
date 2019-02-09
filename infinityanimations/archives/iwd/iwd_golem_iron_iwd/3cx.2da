@@ -1,0 +1,41 @@
+3cx /golem_iron_iwd
+***
+                 SOUND
+ATTACK           t-gol03 t-gol04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-gol07 t-gol08
+DAMAGE           0 0
+DIE              t-gol09a t-gol10a
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-gol04 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-gol03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-gol03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-gol04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-gol02a t-gol02b
+Battle_Cry       0 0
+Selection        t-gol01 t-gol02b
+Selection        0 0

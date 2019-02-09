@@ -1,0 +1,41 @@
+3cy /remorhaz
+***
+                 SOUND
+ATTACK           t-rem03
+ATTACK           0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-rem07 t-rem08
+DAMAGE           0 0
+DIE              t-rem09 t-rem10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-rem03
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-rem03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-rem03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-rem03
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-rem01 t-rem02
+Battle_Cry       0 0
+Selection        ***
+Selection        0

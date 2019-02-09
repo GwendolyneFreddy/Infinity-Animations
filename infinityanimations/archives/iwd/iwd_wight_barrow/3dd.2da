@@ -1,0 +1,41 @@
+3dd /wight_barrow
+***
+                 SOUND
+ATTACK           t-wgb03 t-wgb04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-wgb07 t-wgb08
+DAMAGE           0 0
+DIE              t-wgb09 t-wgb10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-wgb04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-wgb03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-wgb03 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-wgb04 nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-wgb01 t-wgb02
+Battle_Cry       0 0
+Selection        t-wgb02 nosound
+Selection        0 0

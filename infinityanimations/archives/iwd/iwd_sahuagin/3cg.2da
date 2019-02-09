@@ -1,0 +1,41 @@
+3cg /sahuagin_iwd
+***
+                 SOUND
+ATTACK           t-sah03 t-sah04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-sah07 t-sah08
+DAMAGE           0 0
+DIE              t-sah09 t-sah10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-sah06
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-sah03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-sah04 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-sah06
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-sah01 t-sah02
+Battle_Cry       0 0
+Selection        ***
+Selection        0
