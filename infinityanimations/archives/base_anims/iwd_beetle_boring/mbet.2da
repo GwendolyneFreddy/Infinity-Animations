@@ -1,0 +1,41 @@
+mbet/beetle_copper
+***
+                 SOUND
+ATTACK           t-btl03a t-btl03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-btl07 t-btl08
+DAMAGE           0 0
+DIE              t-btl09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-btl11
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-btl11 t-btl03a
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-btl11 t-btl03b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-btl03a
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-btl02a t-btl02b
+Battle_Cry       0 0
+Selection        t-btl01 t-btl02a
+Selection        0 0

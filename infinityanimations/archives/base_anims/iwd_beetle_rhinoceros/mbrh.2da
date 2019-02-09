@@ -1,0 +1,41 @@
+mbrh/beetle_rhino
+***
+                 SOUND
+ATTACK           t-rhi07a t-rhi07b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-rhi08a t-rhi08b
+DAMAGE           0 0
+DIE              t-rhi09a t-rhi09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-rhi07b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-rhi07a t-rhi07b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-rhi07a t-rhi07b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-rhi07a t-rhi07b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-rhi01 t-rhi02
+Battle_Cry       0 0
+Selection        t-rhi01 t-rhi02
+Selection        0 0

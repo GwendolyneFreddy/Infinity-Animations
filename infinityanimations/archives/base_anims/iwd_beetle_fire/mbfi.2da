@@ -1,0 +1,41 @@
+mbfi/beetle_fire
+***
+                 SOUND
+ATTACK           t-bmb03a t-bmb03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bmb07 t-bmb08
+DAMAGE           2 2
+DIE              t-bmb09a t-bmb09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bmb03b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bmb03a t-bmb03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-bmb03a t-bmb03b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-bmb03a t-bmb03b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bmb01 t-bmb02
+Battle_Cry       0 0
+Selection        t-bmb01 t-bmb02
+Selection        0 0
