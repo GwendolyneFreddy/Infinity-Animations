@@ -1,0 +1,41 @@
+Mtas/kobold_tasloi
+***
+                 SOUND
+ATTACK           taslo05 taslo06
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           taslo08 nosound
+DAMAGE           0 0
+DIE              taslo09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            taslo06 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     taslo05 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH taslo05 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       taslo06 nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       taslo03 taslo04
+Battle_Cry       0 0
+Selection        taslo01 taslo02
+Selection        0 0
