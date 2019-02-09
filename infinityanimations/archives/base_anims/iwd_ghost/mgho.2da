@@ -1,0 +1,41 @@
+mgho/ghost_iwd
+***
+                 SOUND
+ATTACK           t-ghs03a t-ghs04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-ghs07a t-ghs08a
+DAMAGE           0 0
+DIE              t-ghs09a t-ghs10a
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-ghs04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-ghs03a t-ghs03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-ghs04a t-ghs04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-ghs04a t-ghs04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-ghs01 t-ghs02
+Battle_Cry       0 0
+Selection        t-ghs01 t-ghs02
+Selection        0 0

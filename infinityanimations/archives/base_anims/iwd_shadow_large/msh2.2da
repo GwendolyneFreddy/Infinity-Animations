@@ -1,0 +1,41 @@
+msh2/shadow_large_iwd
+***
+                 SOUND
+ATTACK           t-shl03 t-shl04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-shl07 t-shl08
+DAMAGE           0 0
+DIE              t-shl09 t-shl10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-shl04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-shl03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-shl04
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-shl04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-shl01 t-shl02
+Battle_Cry       0 0
+Selection        t-shl01 t-shl02
+Selection        0 0

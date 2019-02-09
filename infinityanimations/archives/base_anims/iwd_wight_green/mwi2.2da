@@ -1,0 +1,41 @@
+mwi2/wight_green
+***
+                 SOUND
+ATTACK           t-wgr03a t-wgr04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-wgr07a t-wgr08a
+DAMAGE           0 0
+DIE              t-wgr09a t-wgr10a
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-wgr05
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-wgr03a t-wgr03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-wgr04a t-wgr04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-wgr05
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-wgr01 t-wgr02
+Battle_Cry       0 0
+Selection        t-wgr01 t-wgr02
+Selection        0 0

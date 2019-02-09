@@ -1,0 +1,41 @@
+mgh3/ghast_iwd
+***
+                 SOUND
+ATTACK           t-ght03a t-ght04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-ght07 t-ght08
+DAMAGE           0 0
+DIE              t-ght09 t-ght10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-ght04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-ght03a t-ght03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-ght04a t-ght04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-ght04a t-ght04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-ght01 t-ght02
+Battle_Cry       0 0
+Selection        t-ght01 t-ght02
+Selection        0 0

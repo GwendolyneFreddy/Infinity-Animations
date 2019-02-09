@@ -1,0 +1,41 @@
+mwi3/wight_yellow
+***
+                 SOUND
+ATTACK           t-wgy03a t-wgy04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-wgy07a t-wgy08a
+DAMAGE           0 0
+DIE              t-wgy09a t-wgy09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-wgy04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-wgy03a t-wgy03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-wgy04a t-wgy04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-wgy04a t-wgy04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-wgy01 t-wgy02
+Battle_Cry       0 0
+Selection        t-wgy01 t-wgy02
+Selection        0 0
