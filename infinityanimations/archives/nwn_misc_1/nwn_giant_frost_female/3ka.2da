@@ -1,0 +1,41 @@
+3ka /frost_giant_female
+***
+                 SOUND
+ATTACK           t-frf03 t-frf04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-frf07 t-frf08
+DAMAGE           0 0
+DIE              t-frf09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-frf04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-frf03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-frf03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-frf04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-frf01 nosound
+Battle_Cry       0 0
+Selection        ***
+Selection        0
