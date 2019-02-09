@@ -1,0 +1,41 @@
+mli3/lizard_king
+***
+                 SOUND
+ATTACK           t-lzk03a t-lzk04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-lzk07 t-lzk08
+DAMAGE           0 0
+DIE              t-lzk09a t-lzk09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-lzk04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-lzk03a t-lzk03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-lzk04a t-lzk04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-lzk04a t-lzk04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-lzk01 t-lzk02
+Battle_Cry       0 0
+Selection        t-lzk01 t-lzk02
+Selection        0 0

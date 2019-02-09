@@ -1,0 +1,41 @@
+mcyc/cyclops
+***
+                 SOUND
+ATTACK           t-cyc03a t-cyc03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-cyc07 t-cyc08
+DAMAGE           0 0
+DIE              t-cyc09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-cyc04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-cyc04a t-cyc04b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-cyc04a t-cyc04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-cyc03a t-cyc03b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-cyc01 nosound
+Battle_Cry       0 0
+Selection        t-cyc01
+Selection        0

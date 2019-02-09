@@ -1,0 +1,41 @@
+mhis/histachii
+***
+                 SOUND
+ATTACK           t-his03b t-his04b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-his07b t-his08a
+DAMAGE           0 0
+DIE              t-his09a t-his07a
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-his05a
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-his03a t-his03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-his04a t-his04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-his05a
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-his01 t-his02
+Battle_Cry       0 0
+Selection        t-his01 t-his02
+Selection        0 0
