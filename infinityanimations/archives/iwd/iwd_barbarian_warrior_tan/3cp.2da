@@ -1,0 +1,41 @@
+3cp /barbarian_warrior_tan
+***
+                 SOUND
+ATTACK           t-bwa03a t-bwa04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bwa07a t-bwa07b
+DAMAGE           0 0
+DIE              t-bwa09a t-bwa09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bwa04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bwa03a t-bwa03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-bwa03b t-bwa03c
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-bwa04a t-bwa04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bwa01a t-bwa01b
+Battle_Cry       0 0
+Selection        t-bwa01a t-bwa01c
+Selection        0 0

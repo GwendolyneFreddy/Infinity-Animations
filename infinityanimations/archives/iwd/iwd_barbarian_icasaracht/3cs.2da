@@ -1,0 +1,41 @@
+3cs /barbarian_icasaracht
+***
+                 SOUND
+ATTACK           t-bic03a t-bic04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bic07a t-bic08a
+DAMAGE           0 0
+DIE              t-bic09a t-bic10a
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bic06a
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bic04a nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-bic05a nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-bic06a nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bic01a t-bic02a
+Battle_Cry       0 0
+Selection        t-bic01a t-bic02a
+Selection        0 0

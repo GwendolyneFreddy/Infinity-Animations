@@ -1,0 +1,41 @@
+3cr /barbarian_warrior_brown
+***
+                 SOUND
+ATTACK           t-bwa03c t-bwa04c
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bwa07b t-bwa07c
+DAMAGE           0 0
+DIE              t-bwa09b t-bwa09c
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bwa04b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bwa03b t-bwa03c
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-bwa03a t-bwa03b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-bwa04b t-bwa04c
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bwa01b t-bwa01c
+Battle_Cry       0 0
+Selection        t-bwa01a t-bwa01b
+Selection        0 0
