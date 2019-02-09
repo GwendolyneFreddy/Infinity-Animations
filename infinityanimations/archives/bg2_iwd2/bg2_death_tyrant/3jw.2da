@@ -1,0 +1,41 @@
+3jw /death_tyrant
+***
+                 SOUND
+ATTACK           bhold01 nosound nosound
+ATTACK           2 0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           bhold06
+DAMAGE           0
+DIE              bhold07
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            bhold03
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     bhold03 nosound nosound
+ATTACK_SLASH     0 0 0
+ATTACK_BACKSLASH bhold03 nosound nosound
+ATTACK_BACKSLASH 0 0 0
+ATTACK_JAB       bhold03 nosound nosound
+ATTACK_JAB       0 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       bhold01
+Battle_Cry       0
+Selection        bhold01
+Selection        0

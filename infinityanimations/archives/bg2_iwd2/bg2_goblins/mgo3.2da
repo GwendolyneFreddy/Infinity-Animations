@@ -1,0 +1,41 @@
+Mgo3/goblinelite_axe
+***
+                 SOUND
+ATTACK           t-gex03a t-gex03b
+ATTACK           2 2
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-gex08a t-gex08b
+DAMAGE           0 0
+DIE              t-gex10a t-gex10b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-gex03e nosound
+SHOOT            2 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-gex03a t-gex03b
+ATTACK_SLASH     2 2
+ATTACK_BACKSLASH t-gex03c t-gex03d
+ATTACK_BACKSLASH 2 2
+ATTACK_JAB       t-gex03e
+ATTACK_JAB       2
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-gex01a t-gex01b
+Battle_Cry       0 0
+Selection        t-gex02a t-gex11a
+Selection        0 0

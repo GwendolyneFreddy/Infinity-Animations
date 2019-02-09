@@ -1,0 +1,41 @@
+Mgo4/goblinelite_bow
+***
+                 SOUND
+ATTACK           t-geb06c t-geb06d
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-geb07a t-geb07b
+DAMAGE           0 0
+DIE              t-geb09a t-geb09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-geb06c t-geb06d
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-geb03b nosound
+ATTACK_SLASH     2 0
+ATTACK_BACKSLASH t-geb03c nosound
+ATTACK_BACKSLASH 2 0
+ATTACK_JAB       t-geb03a nosound
+ATTACK_JAB       2 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-geb02a t-geb02b
+Battle_Cry       0 0
+Selection        t-geb01a t-geb01b
+Selection        0 0
