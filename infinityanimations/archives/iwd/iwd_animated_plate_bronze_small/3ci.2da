@@ -1,0 +1,41 @@
+3ci /animated_plate_bronze
+***
+                 SOUND
+ATTACK           t-dgu03a nosound
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-dgu07a t-dgu08a
+DAMAGE           0 0
+DIE              t-dgu10a t-dgu10b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-dgu05c nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-dgu04a nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-dgu05a nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-dgu03c nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-dgu02a t-dgu02b
+Battle_Cry       0 0
+Selection        t-dgu01a t-dgu01b
+Selection        0 0
