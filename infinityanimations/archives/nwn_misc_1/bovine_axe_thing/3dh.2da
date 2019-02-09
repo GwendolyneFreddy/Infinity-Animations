@@ -1,0 +1,41 @@
+3dh /bovine_axe_thing
+***
+                 SOUND
+ATTACK           t-bov03 nosound
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-bov07 nosound
+DAMAGE           0 0
+DIE              t-bov09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-bov03 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-bov03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-bov03 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-bov03 nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-bov01 nosound
+Battle_Cry       0 0
+Selection        t-bov07 nosound
+Selection        0 0
