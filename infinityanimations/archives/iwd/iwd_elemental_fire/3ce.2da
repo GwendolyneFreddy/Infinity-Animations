@@ -1,0 +1,41 @@
+3ce /elemental_fire_iwd
+***
+                 SOUND
+ATTACK           t-fir03a t-fir04a
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-fir07a t-fir08a
+DAMAGE           0 0
+DIE              t-fir09b t-fir10b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-fir08b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-fir03a t-fir03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-fir04a t-fir04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-fir07b t-fir08b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-fir02a t-fir02b
+Battle_Cry       0 0
+Selection        t-fir01a t-fir01b
+Selection        0 0

@@ -1,0 +1,41 @@
+3cw /fire_giant_iwd
+***
+                 SOUND
+ATTACK           gfire03a gfire04a
+ATTACK           2 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           gfire07 gfire08
+DAMAGE           0 0
+DIE              gfire09 gfire10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            gfire04b nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     gfire03a gfire03b
+ATTACK_SLASH     2 2
+ATTACK_BACKSLASH gfire03b nosound
+ATTACK_BACKSLASH 2 0
+ATTACK_JAB       gfire04a gfire04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       gfire01 gfire02
+Battle_Cry       0 0
+Selection        gfire01 nosound
+Selection        0 0

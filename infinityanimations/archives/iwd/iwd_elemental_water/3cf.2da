@@ -1,0 +1,41 @@
+3cf /elemental_water
+***
+                 SOUND
+ATTACK           t-wat03 t-wat04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-wat07 t-wat08
+DAMAGE           0 0
+DIE              t-wat09 t-wat10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-wat04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-wat03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-wat03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-wat04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-wat01 t-wat02
+Battle_Cry       0 0
+Selection        t-wat01 t-wat02
+Selection        0 0
