@@ -1,0 +1,41 @@
+3ca /osyluth_nwn
+***
+                 SOUND
+ATTACK           t-osy03 nosound
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-osy07 nosound
+DAMAGE           0 0
+DIE              t-osy09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-osy03 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-osy03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-osy03 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-osy03 nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-osy01
+Battle_Cry       0
+Selection        t-osy02
+Selection        0

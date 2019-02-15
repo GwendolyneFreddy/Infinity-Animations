@@ -1,0 +1,41 @@
+3bz /hamatula_nwn
+***
+                 SOUND
+ATTACK           t-ham03 t-ham04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-ham07 t-ham08
+DAMAGE           0 0
+DIE              t-ham09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-ham02b
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-ham03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-ham04 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-ham02b nosound
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-ham01a t-ham01b
+Battle_Cry       0 0
+Selection        t-ham02a t-ham02b
+Selection        0 0

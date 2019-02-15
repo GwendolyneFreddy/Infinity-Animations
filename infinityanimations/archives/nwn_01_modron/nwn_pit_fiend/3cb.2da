@@ -1,0 +1,41 @@
+3cb /pit_fiend_nwn
+***
+                 SOUND
+ATTACK           t-pit03 t-pit04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-pit07 t-pit08
+DAMAGE           0 0
+DIE              t-pit09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-pit04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-pit03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-pit03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-pit04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-pit01a t-pit01b
+Battle_Cry       0 0
+Selection        t-pit02 nosound
+Selection        0 0
