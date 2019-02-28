@@ -1,0 +1,41 @@
+Mwwe/water_weird
+***
+                 SOUND
+ATTACK           t-wei06 nosound
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-wei07 t-wei08
+DAMAGE           0 0
+DIE              t-wei09 t-wei10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-wei06 nosound
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-wei06 nosound
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-wei06 nosound
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-wei06 nosound
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-wei01 t-wei02
+Battle_Cry       0 0
+Selection        ***
+Selection        0
