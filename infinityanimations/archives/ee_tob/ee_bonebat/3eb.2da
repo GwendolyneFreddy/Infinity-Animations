@@ -1,0 +1,41 @@
+3eb /bonebat
+***
+                 SOUND
+ATTACK           t-var03 t-var04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-var06 t-var07
+DAMAGE           0 0
+DIE              t-var08
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-var03 nosound nosound
+SHOOT            0 0 0
+TWITCH           ***
+TWITCH           0
+WALK             t-var02
+WALK             0
+ATTACK_SLASH     t-var03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-var03
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-var04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-var01
+Battle_Cry       0 0
+Selection        t-var01
+Selection        0
