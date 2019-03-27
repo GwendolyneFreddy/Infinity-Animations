@@ -1,0 +1,41 @@
+3kk /troll_scrag
+***
+						SOUND
+ATTACK          		t-scra03
+ATTACK          		0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-scra07 t-scra08
+DAMAGE          		0 0
+DIE             		t-scra09 t-scra10
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-scra03
+ATTACK_SLASH    		0
+ATTACK_BACKSLASH		t-scra03
+ATTACK_BACKSLASH		0
+ATTACK_JAB      		t-scra04
+ATTACK_JAB      		0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-scra01 t-scra02
+Battle_Cry				0 0
+Selection				***
+Selection				0

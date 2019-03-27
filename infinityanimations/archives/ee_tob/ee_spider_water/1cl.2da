@@ -1,0 +1,41 @@
+1cl /spider_water
+***
+						SOUND
+ATTACK          		gspid03 nosound nosound
+ATTACK          		0 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		gspid08
+DAMAGE          		0
+DIE             		gspid09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		gspid05 nosound nosound
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		gspid06 nosound nosound
+ATTACK_BACKSLASH		0 0 0
+ATTACK_JAB      		***
+ATTACK_JAB      		0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				gspid03 gspid04
+Battle_Cry				0 0
+Selection				gspid03
+Selection				0
