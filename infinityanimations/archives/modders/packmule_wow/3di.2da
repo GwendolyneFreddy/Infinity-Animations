@@ -1,0 +1,41 @@
+3di /packmule_wow
+***
+                 SOUND
+ATTACK           ***
+ATTACK           0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           w_mdam
+DAMAGE           0
+DIE              w_mdie
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ***
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     ***
+ATTACK_SLASH     0
+ATTACK_BACKSLASH ***
+ATTACK_BACKSLASH 0
+ATTACK_JAB       ***
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       w_mbcry
+Battle_Cry       0
+Selection        w_msele w_mread
+Selection        0 0

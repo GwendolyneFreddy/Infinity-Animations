@@ -1,0 +1,41 @@
+3dk /bear_giant_d2
+***
+						SOUND
+ATTACK          		pbear03 nosound nosound
+ATTACK          		0 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		pbear08
+DAMAGE          		0
+DIE             		pbear09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		pbear05 nosound nosound
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		pbear06 nosound nosound
+ATTACK_BACKSLASH		0 0 0
+ATTACK_JAB      		pbear06 nosound nosound
+ATTACK_JAB      		0 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry          	pbear03 pbear04
+Battle_Cry          	0 0
+Selection          		pbear03
+Selection          		0

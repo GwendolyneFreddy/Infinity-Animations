@@ -1,0 +1,41 @@
+3js /the_butcher_tots
+***
+						SOUND
+ATTACK          		ub#tb_a1 ub#tb_a2 none
+ATTACK          		0 0 0
+AWAKE           		ub#tb_wk
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		ub#tb_h2
+DAMAGE          		0
+DIE             		ub#tb_de
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		***
+ATTACK_SLASH    		0
+ATTACK_BACKSLASH		***
+ATTACK_BACKSLASH		0
+ATTACK_JAB      		***
+ATTACK_JAB      		0
+EMERGE          		ub#tb_l4 ub#tb_l3 ub#tb_l1
+EMERGE          		0 0 0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				***
+Battle_Cry				0
+Selection               ub#tb_fm ub#tb_k ub#tb_l4
+Selection               0 0 0
