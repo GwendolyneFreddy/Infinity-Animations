@@ -1,0 +1,41 @@
+-ag /dragon_green_juvenile
+***
+						SOUND
+ATTACK          		black01 nosound
+ATTACK          		2 0
+AWAKE           		***
+AWAKE           		0
+CAST            		black02
+CAST            		0
+CONJURE         		black03
+CONJURE         		0
+DAMAGE          		black06
+DAMAGE          		0
+DIE             		black07
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		black03 nosound
+ATTACK_SLASH    		2 0
+ATTACK_BACKSLASH		black04 nosound
+ATTACK_BACKSLASH		2 0
+ATTACK_JAB      		black05 nosound
+ATTACK_JAB      		2 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				black01 black02
+Battle_Cry				0 0
+Selection				black01
+Selection				0

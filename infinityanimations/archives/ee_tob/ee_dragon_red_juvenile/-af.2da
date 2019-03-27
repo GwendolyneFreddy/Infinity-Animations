@@ -1,0 +1,41 @@
+-af /dragon_red_juvenile
+***
+						SOUND
+ATTACK          		red01 nosound
+ATTACK          		2 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		red06
+DAMAGE          		0
+DIE             		red07
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		red03 nosound
+ATTACK_SLASH    		2 0
+ATTACK_BACKSLASH		red04 nosound
+ATTACK_BACKSLASH		2 0
+ATTACK_JAB      		red05 nosound
+ATTACK_JAB      		2 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				red01 red02
+Battle_Cry				0 0
+Selection				red01
+Selection				0
