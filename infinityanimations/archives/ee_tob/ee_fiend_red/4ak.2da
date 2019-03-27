@@ -1,0 +1,41 @@
+4ak /fiend_red
+***
+                 SOUND
+ATTACK           tanar04 nosound nosound
+ATTACK           0 0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           tanar06
+DAMAGE           0
+DIE              tanar07
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            tanar03 nosound nosound
+SHOOT            0 0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     tanar03 nosound nosound
+ATTACK_SLASH     0 0 0
+ATTACK_BACKSLASH tanar03 nosound nosound
+ATTACK_BACKSLASH 0 0 0
+ATTACK_JAB       tanar04 nosound nosound
+ATTACK_JAB       0 0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       tanar01 tanar02
+Battle_Cry       0 0
+Selection        tanar01
+Selection        0
