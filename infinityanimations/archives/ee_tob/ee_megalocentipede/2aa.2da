@@ -1,0 +1,41 @@
+2aa /megalocentipede
+***
+						SOUND
+ATTACK          		carrn03 nosound nosound
+ATTACK          		0 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		carrn08
+DAMAGE          		0 0
+DIE             		carrn09
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		carrn05 nosound nosound
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		carrn06 nosound nosound
+ATTACK_BACKSLASH		0 0 0
+ATTACK_JAB      		carrn06 nosound nosound
+ATTACK_JAB      		0 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				carrn03 carrn04
+Battle_Cry				0 0
+Selection				carrn03
+Selection				0
