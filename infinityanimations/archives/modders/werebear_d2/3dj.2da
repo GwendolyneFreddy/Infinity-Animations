@@ -1,0 +1,41 @@
+3dj /werebear_d2
+***
+						SOUND
+ATTACK          		cbear03 nosound cbear03
+ATTACK          		0 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		cbear08
+DAMAGE          		0
+DIE             		cbear09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		cbear05 cbear05 nosound
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		cbear06 nosound cbear06
+ATTACK_BACKSLASH		0 0 0
+ATTACK_JAB      		cbear06
+ATTACK_JAB      		cbear06
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			cbear09
+SLEEP          			0
+Battle_Cry         		cbear03 cbear04
+Battle_Cry         		0 0
+Selection          		cbear03
+Selection          		0
