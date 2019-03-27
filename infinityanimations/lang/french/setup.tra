@@ -7,6 +7,12 @@
 @3   = ~Vous devez redemarrer pour poursuivre l'installation. Redemarrer maintenant ?
 [Y]Oui [N]on~
 @4   = ~Redemarrage dans quelques secondes. Veuillez fermer toutes les autres applications.~
+*/
+@5   = ~Ce mod n'est pour l'instant pas compatible avec le systeme d'exploitation OS X.
+Si vous souhaitez vous en charger, veuillez manifester votre interet sur le forum www.shsforums.net/forum/594-infinity-animations/.
+(Si vous disposez de competences techniques, etudier l'executable du jeu et de ce patch
+dans un editeur pourrait vous etre utile.)~
+/* DEPRECATED and useless as of v6
 @6   = ~Un mod a ecrase les animations de BG2 de votre jeu. Veuillez extraire l'archive
 IA_BG2_Restores.rar dans le repertoire infinityanimations/restore.~
 @7   = ~Un des mods deja installes necessite l'extraction de l'archive IA_Base_Anims.rar
@@ -33,169 +39,181 @@ pas comporter de sous-repertoires).~
 pas cochee. Une fois l'extraction terminee, les repertoires "content" et/ou "restore" 
 devraient contenir une multitude de fichiers .bam, et AUCUN sous-repertoire. 
 Relancez alors la procedure d'installation.~
-
-@27  = ~Vous devez extraire l'archive IA_Fiends_Genies.rar et l'installer avec le 
-composant principal.~
-@29  = ~Vous devez extraire les archives IA_Fiends_Genies.rar, IA_IWD.rar, 
-IA_PST_Abishai.rar, IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et les installer avec le 
-composant principal.~
-@31  = ~Vous devez extraire l'archive IA_NWN_01_Modron.rar et l'installer avec le 
-composant principal.~
-@34  = ~Vous devez extraire l'archive IA_BGII_IWDII.rar et l'installer avec le 
-composant principal.~
-@42  = ~Vous devez extraire les archives IA_Base_Anims.rar, IA_IWD.rar et 
-Shadows_harpy_frostgiant.zip, et les installer avec le composant principal.~
-@44  = ~Vous devez extraire l'archive IA_IWD.rar et l'installer avec le composant principal.~
-@54  = ~Vous devez extraire l'archive IA_IWD_Svirfneblin.rar et l'installer avec le 
-composant principal.~
-@58  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
-composant principal.~
-@62  = ~Vous devez extraire les archives IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et 
-les installer avec le composant principal.~
-@64  = ~Vous devez extraire l'archive IA_PST_Paletted.rar et l'installer avec le 
-composant principal.~
-@70  = ~Vous devez extraire l'archive Moinesse_edits_IAised.rar et l'installer avec 
-le composant principal.~
 */
-@5   = ~Ce mod n'est pour l'instant pas compatible avec le systeme d'exploitation OS X.
-Si vous souhaitez vous en charger, veuillez manifester votre interet sur le forum www.shsforums.net/forum/594-infinity-animations/.
-(Si vous disposez de competences techniques, etudier l'executable du jeu et de ce patch
-dans un editeur pourrait vous etre utile.)~
-@6   = ~Un mod a ecrase les animations de BG2 de votre jeu. Assurez-vous que la 
-valeur de l'option de configuration ia_bg2_restores est egale a 1 dans le fichier 
-ia-config-default.ini ou ia-config.ini.~
-@7   = ~Un des mods installes necessite le contenu de l'archive IA_Base_Anims dans 
-le repertoire infinityanimations/content. Assurez-vous que la valeur de l'option de 
-configuration ia_base_anims est egale a 1 dans le fichier ia-config-default.ini
-ou dans ia-config.ini.~
-@8   = ~Un des mods deja installes necessite le contenu de l'archive IA_IWD dans
-le repertoire infinityanimations/content. Assurez-vous que la valeur de l'option de 
-configuration ia_iwd est egale a 1 dans le fichier ia-config-default.ini ou 
-ia-config.ini.~
-@9   = ~Un des mods deja installes necessite le contenu de l'archive IA_BGII_IWDII 
-dans le repertoire infinityanimations/content. Assurez-vous que la valeur de l'option
-de configuration ia_bg2_iwd2 est egale a 1 dans le fichier ia-config-default.ini
-ou dans ia-config.ini.~
-@10  = ~Un mod installe necessite le contenu de l'archive Belhifet_and_Marilith dans
-le repertoire infinityanimations/content. Assurez-vous que la valeur de l'option de
-configuration ia_belhifet_and_marilith est egale a 1 dans le fichier 
-ia-config-default.ini ou ia-config.ini.~
-@11  = ~Un mod installe necessite le contenu de l'archive Shadows_harpy_frostgiant 
-dans le repertoire infinityanimations/content. Assurez-vous que la valeur de l'option
-de configuration ia_shadows_harpy_frostgiant est egale a 1 dans le fichier 
-ia-config-default.ini ou ia-config.ini.~
-@12  = ~Un mod installe necessite le contenu des archives IA_NWN_01_Modron et
-NWN_Misc_I dans le repertoire infinityanimations/restore. Assurez-vous que la
-valeur des options de configuration ia_nwn_01_modron et ia_nwn_misc_i est 
-egale a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
-@13  = ~Un des mods installes necessite le contenu de l'archive IA_Wh_Dr_Wyv_LoP 
-dans le repertoire infinityanimations/content. Assurez-vous que la valeur de 
-l'option de configuration ia_wh_dr_wyv_lop est egale a 1 dans le fichier 
-ia-config-default.ini ou ia-config.ini.~
-@14  = ~Modifiez la valeur des options de configurations concernees dans fichier 
-ia-config-default.ini (situe dans le repertoire infinityanimations) avec Notepad
-ou un autre editeur de texte, puis sauvegardez-le sous le nom ia-config.ini.~
-@15  = ~Relancez la procedure d'installation lorsque vous avez modifie les options
-de configuration.~
+@6   = ~Un mod a ecrase les animations de BG2 de votre jeu. Assurez-vous que vous 
+avez bien extrait le repertoire bg2_restores dans infinityanimations/archives.~
+@7   = ~Un des mods installes necessite que le repertoire base_anims soit extrait 
+dans le repertoire infinityanimations/archives.~
+@8   = ~Un des mods deja installes necessite que le repertoire iwd soit extrait dans
+le repertoire infinityanimations/archives.~
+@9   = ~Un des mods deja installes necessite que le repertoire bg2_iwd2 soit extrait
+dans le repertoire infinityanimations/archives.~
+@10  = ~Un mod installe necessite que le repertoire belhifet_and_marilith soit
+extrait dans le repertoire infinityanimations/archives.~
+@11  = ~Un mod installe necessite que le repertoire shadows_harpy_frostgiant soit
+extrait dans le repertoire infinityanimations/archives.~
+@12  = ~Un mod installe necessite que les repertoires nwn_01_modron et nwn_misc_1 
+soient extraits dans le repertoire infinityanimations/archives.~
+@13  = ~Un des mods installes necessite que le repertoire wh_dr_wyv_lop soit extrait 
+dans le repertoire infinityanimations/archives.~
+@14  = ~NOTE : Ouvrez le fichier zip du mod et extrayez tous les sous-repertoires 
+du repertoire archives dans le votre dossier infinityanimations/archives.~
+@15  = ~Relancez la procedure d'installation lorsque vous avez extrait tout le 
+contenu necessaire.~
 @16  = ~Il manque du contenu necessaire.~
-@17  = ~L'executable BGMain.exe semble avoir deja ete modifie ; on saute sa modification~
+
+@17  = ~L'executable BGMain.exe semble avoir deja ete modifie. On saute sa modification~
 @18  = ~L'executable BGMain.exe n'est pas valide.
 Assurez-vous que vous avez bien installe le patch 26498 pour ToB !~
 @19  = ~Modification de l'executable BGMain.exe pour activer les nouvelles animations...~
+
 @20  = ~Remplacement des animations de creature _LOW (veuillez patienter)...~
 @21  = ~Modification des fichiers IDS...~
+
 @22  = ~Retablissement des animations de BG2 ecrasees par d'autres mods...~
 @23  = ~Copie des nouvelles animations dans le jeu (veuillez patienter)...~
 @24  = ~Correction des animations des creatures...~
-@25  = ~Genies differencies~
-@26  = ~Ce composant necessite le composant principal.~
-@27  = ~Vous devez installer l'archive IA_Fiends_Genies avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_fiends_genies est egale
-a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+
+@25  = ~Ce composant necessite le composant principal.~
+@26  = ~Genies differencies~
+/* DEPRECATED and useless as of v6
+@27  = ~Vous devez extraire l'archive IA_Fiends_Genies.rar et l'installer avec le 
+composant principal.~*/
+@27  = ~Le contenu de l'archive IA_Fiends_Genies doit etre extrait et/ou installe avec
+le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire fiends_genies.~
+
 @28  = ~Demons differencies~
-@29  = ~Vous devez installer les archives IA_Fiends_Genies, IA_IWD, IA_PST_Abishai,
-IA_NWN_01_Modron et NWN_Misc_I avec le composant principal. Assurez-vous que la 
-valeur des options de configuration ia_fiends_genies, ia_iwd, ia_pst_abishai,
-ia_nwn_01_modron et ia_nwn_misc_i est egale a 1 dans le fichier ia-config-default.ini
-ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@29  = ~Vous devez extraire les archives IA_Fiends_Genies.rar, IA_IWD.rar, 
+IA_PST_Abishai.rar, IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et les installer avec le 
+composant principal.~*/
+@29  = ~Le contenu des archives IA_Fiends_Genies, IA_IWD, IA_PST_Abishai, NWN_Misc_I
+et IA_NWN_01_Modron doit etre extrait et/ou installe avec le composant principal.
+Assurez-vous que le dossier infinityanimations/archives contient bien les sous-
+repertoires fiends_genies, iwd, pst_abishai, nwn_01_modron et nwn_misc_1.~
+
 @30  = ~Diantrefosses~
-@31  = ~Vous devez installer l'archive IA_NWN_01_Modron avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_nwn_01_modron est egale
-a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@31  = ~Vous devez extraire l'archive IA_NWN_01_Modron.rar et l'installer avec le 
+composant principal.~*/
+@31  = ~Le contenu de l'archive IA_NWN_01_Modron doit etre extrait et/ou installe avec
+le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire nwn_01_modron.~
 @32  = ~Attribuer a tous l'animation de NWN~
 @33  = ~Attribuer a certains l'animation de NWN~
-@34  = ~Vous devez installer l'archive IA_BGII_IWDII avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_bg2_iwd2 est egale a
-1 dans le fichier ia-config-default.ini ou ia-config.ini.~
-@35  = ~Animation d'Isair pour les cambions~
+
+@34  = ~Animation d'Isair pour les cambions~
+/* DEPRECATED and useless as of v6
+@35  = ~Vous devez extraire l'archive IA_BGII_IWDII.rar et l'installer avec le 
+composant principal.~*/
+@35  = ~Le contenu de l'archive IA_BGII_IWDII doit etre extrait et/ou installe avec 
+le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire bg2_iwd2.~
 @36  = ~Pour tous les cambions~
 @37  = ~Pour certains cambions~
 @38  = ~Animation de Madae pour les alu-demons~
 @39  = ~Pour toutes les alu-demons~
 @40  = ~Pour certaines alu-demons~
+
 @41  = ~Morts-vivants differencies~
-@42  = ~Vous devez installer les archives IA_Base_Anims, Shadows_harpy_frostgiant et
-IA_IWD avec le composant principal. Assurez-vous que la valeur des options de 
-configuration ia_base_anims, ia_iwd et ia_shadows_harpy_frostgiant est egale
-a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@42  = ~Vous devez extraire les archives IA_Base_Anims.rar, IA_IWD.rar et 
+Shadows_harpy_frostgiant.zip, et les installer avec le composant principal.~*/
+@42  = ~Le contenu des archives IA_Base_Anims, Shadows_harpy_frostgiant et IA_IWD 
+doit etre extrait et/ou installe avec avec le composant principal. Assurez-vous
+que le dossier infinityanimations/archives contient bien les sous-repertoires
+base_anims, iwd et shadows_harpy_frostgiant.~
+
 @43  = ~Combattants squelettes~
-@44  = ~Vous devez installer l'archive IA_IWD avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_iwd est egale a 1
-dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@44  = ~Vous devez extraire l'archive IA_IWD.rar et l'installer avec le composant principal.~*/
+@44  = ~Le contenu de l'archive IA_IWD doit etre extrait et/ou installe avec le 
+composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire iwd.~
 @45  = ~Leur attribuer l'animation de necrophage des tertres (Wight Barrow)~
 @46  = ~Leur attribuer l'animation de squelette normal (jaune)~
 @47  = ~Leur attribuer l'animation de combattant squelette~
+
 @48  = ~Animation de pauvre here~
 @49  = ~Pour certains mendiants et esclaves~
 @50  = ~Pour certains mendiants~
 @51  = ~Pour certains esclaves~
+
 @52  = ~Animations de svirfneblins~
 @53  = ~Le mod Aurora's Shoes a deja installe ce contenu.~
-@54  = ~Vous devez installer l'archive IA_IWD_Svirfneblin avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_iwd_svirfneblin est
-egale a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@54  = ~Vous devez extraire l'archive IA_IWD_Svirfneblin.rar et l'installer avec le 
+composant principal.~*/
+@54  = ~Le contenu de l'archive IA_IWD_Svirfneblin doit etre extrait et/ou installe 
+avec le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire iwd_svirfneblin.~
 @55  = ~Seulement les animations~
 @56  = ~Les animations et les sons~
+
 @57  = ~Plus d'animations de base~
-@58  = ~Vous devez installer l'archive IA_Base_Anims avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_base_anims est egale
-a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@58  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
+composant principal.~*/
+@58  = ~Le contenu de l'archive IA_Base_Anims doit etre extrait et/ou installe avec 
+le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire base_anims.~
+
 @59  = ~Plus d'animations d'Icewind Dale~
+
 @60  = ~Plus d'animations d'Icewind Dale II~
+
 @61  = ~Plus d'animations de Neverwinter Nights~
-@62  = ~Vous devez installer les archives IA_NWN_01_Modron et NWN_Misc_I avec le
-composant principal. Assurez-vous que la valeur des options de configuration
-ia_nwn_01_modron et ia_nwn_misc_i est egale a 1 dans le fichier
-ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@62  = ~Vous devez extraire les archives IA_NWN_01_Modron.rar et NWN_Misc_I.rar, et 
+les installer avec le composant principal.~*/
+@62  = ~Le contenu des archives IA_NWN_01_Modron et NWN_Misc_I doit etre extrait 
+et/ou installe avec avec le composant principal. Assurez-vous que le dossier 
+infinityanimations/archives contient bien les sous-repertoires nwn_01_modron 
+et nwn_misc_1.~
+
 @63  = ~Plus d'animations de Planescape: Torment~
-@64  = ~Vous devez installer l'archive IA_PST_Paletted avec le composant principal.
-Assurez-vous que la valeur de l'option de configuration ia_pst_paletted est
-egale a 1 dans le fichier ia-config-default.ini ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@64  = ~Vous devez extraire l'archive IA_PST_Paletted.rar et l'installer avec le 
+composant principal.~*/
+@64  = ~Le contenu de l'archive IA_PST_Paletted doit etre extrait et/ou installe avec
+le composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire pst_paletted.~
 @65  = ~25 % des creatures non-recrutables concernees~
 @66  = ~50 % des creatures non-recrutables concernees~
 @67  = ~75 % des creatures non-recrutables concernees~
 @68  = ~Toutes les creatures non-recrutables concernees~
+
 @69  = ~Avatars de Moinesse pour IA~
-@70  = ~Vous devez installer l'archive Moinesse_edits_IAised avec le composant
-principal. Assurez-vous que la valeur de l'option de configuration
-ia_moinesse_edits_iaised est egale a 1 dans le fichier ia-config-default.ini
-ou ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@70  = ~Vous devez extraire l'archive Moinesse_edits_IAised.rar et l'installer avec 
+le composant principal.~
+*/
+@70  = ~Le contenu de l'archive Moinesse_edits_IAised doit etre extrait et/ou avec le
+composant principal. Assurez-vous que le dossier infinityanimations/archives
+contient bien le sous-repertoire moinesse_edits_iaised.~
+
 @71  = ~Animations de personnages de BG1 pour les PNJs~
-/*@72  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
-composant principal.~ // DEPRECATED: same as @58 */
+/* DEPRECATED and useless as of v6: same as @58
+@72  = ~Vous devez extraire l'archive IA_Base_Anims.rar et l'installer avec le 
+composant principal.~*/
+
 @73  = ~Modification des personnages non joueurs (veuillez patienter)...~
 @74  = ~25 % des creatures concernees~
 @75  = ~50 % des creatures concernees~
 @76  = ~75 % des creatures concernees~
 @77  = ~La plupart des creatures concernees~
+
 @78  = ~Animations de personnages de BG1 pour les PJ exportes~
 @79  = ~Demander confirmation pour chaque PJ~
 @80  = ~Demander confirmation pour les PJs posant probleme~
 @81  = ~Modifier tous les PJs sans demander confirmation~
+
 @82  = ~Animations de personnages de BG1 dans les parties sauvegardees~
 @83  = ~Demander confirmation pour chaque personnage~
 @84  = ~Demander confirmation pour les personnages posant probleme~
 @85  = ~Modifier tous les personnages sans demander confirmation~
+
 @86  = ~Correction des animations dans les parties sauvegardees~
 @87  = ~Corriger uniquement les animations _LOW~
 @88  = ~Corriger toutes les animations que IA a modifiees~
@@ -227,6 +245,7 @@ crasher le jeu avec sa nouvelle animation~
 
 @200 = ~Ce mod ne s'installe que sur le moteur de ToB classique (pas sur les jeux EE).~
 
+// ia_read_configuration.tph and always.tpa
 @301 = ~La valeur de l'option de configuration 1a_%variable_0% (%wrong_value%) n'est pas conforme et a ete reinitialisee a sa valeur par defaut (%default%).~
 @302 = ~L'option de configuration 1a_%variable_0% n'existe pas : elle a ete initialisee a sa valeur par defaut (%default%).~
 @303 = ~RECAPITULATIF DES OPTIONS DE CONFIGURATION UTILISEES POUR L'INSTALLATION :
@@ -234,6 +253,7 @@ crasher le jeu avec sa nouvelle animation~
 	ia_base_anims = %ia_base_anims%
 	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
 	ia_bg2_restores = %ia_bg2_restores%
+	ia_ee_missing = %ia_ee_missing%
 	ia_bg2_iwd2 = %ia_bg2_iwd2%
 	ia_ee_tob = %ia_ee_tob%
 	ia_fiends_genies = %ia_fiends_genies%
@@ -248,10 +268,11 @@ crasher le jeu avec sa nouvelle animation~
 	ia_wh_dr_wyv_lop = %ia_wh_dr_wyv_lop%
 --------------------------------------------------------------------------~
 
+// ps_recursive_copy.tpa
 @310 = ~Le fichier %BASH_FOR_FILE% existe deja dans le dossier %DestinationDir% et sera ecrase.~
 @311 = ~Le fichier %BASH_FOR_FILE% existe deja dans le jeu et sera ecrase.~
 
-@320 = ~Contenu du repertoire %iacontent% (#%archives%) deplace dans /content : %Count% fichiers deplaces (valeur de l'option de configuration ia_%iacontent% = %variable%)~
-@321 = ~Contenu du repertoire %iacontent% (#%archives%) deplace dans /restore : %Count% fichiers deplaces (valeur de l'option de configuration ia_%iacontent% = %variable%)~
-@322 = ~Contenu du repertoire %iacontent% (#%archives%) non deplace dans /content ou /restore (valeur de l'option de configuration ia_%iacontent% = %variable%)~
-@323 = ~Contenu du repertoire %iacontent% (#%archives%) deplace dans /content et copie dans override : %Count% files~
+// .tpa
+@320 = ~Contenu du repertoire %iacontent% (#%archives%) copie dans override : %Count% fichiers copies (valeur de l'option de configuration ia_%iacontent% = %variable%).~
+@321 = ~Contenu du repertoire %iacontent% (#%archives%) non copie dans override (valeur de l'option de configuration ia_%iacontent% = %variable%).~
+@322 = ~Contenu du repertoire %iacontent% (#%archives%) copie dans override : %Count% fichiers copies.~

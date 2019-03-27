@@ -4,9 +4,11 @@ SaveGame	File	Creature	Name	OldAnimation	NewAnimation
 >>>>>>>>
 
 	COPY ~.../infinityanimations-inlined/t-savlog.txt~ ~infinityanimations/batch~
+
 END
 
 DEFINE_PATCH_MACRO t-animfix BEGIN
+
 	READ_SLONG (t-cf + 8) t-nr
 	PATCH_IF t-nr < 1 BEGIN
 		READ_ASCII (t-pf + i * 0x160 + 0xc0) t-nm (32) NULL
@@ -80,4 +82,5 @@ DEFINE_PATCH_MACRO t-animfix BEGIN
 			VERBOSE
 		END
 	END
+
 END	// of DEFINE_PATCH_MACRO t-animfix

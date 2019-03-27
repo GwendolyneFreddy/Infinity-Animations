@@ -1,0 +1,41 @@
+8dr /golem_mini
+***
+						SOUND
+ATTACK          		clayg01 nosound nosound
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		clayg06
+DAMAGE          		0
+DIE             		clayg07
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		clayg03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		clayg04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		clayg05 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				clayg01 clayg02
+Battle_Cry				0 0
+Selection				clayg01
+Selection				0

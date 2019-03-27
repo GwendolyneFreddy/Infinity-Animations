@@ -7,7 +7,12 @@
 for mod animation compatibility.~
 @3  = ~You must reboot to continue the installation. Reboot now? [Y]es [N]o~
 @4  = ~Rebooting in a few seconds. Please close all other applications.~
-
+*/
+@5  = ~This mod is not currently compatible with OS X. If you wish to make it so,
+please post your interest to www.shsforums.net/forum/594-infinity-animations/.
+(It may help to examine your game launcher and the contents of the existing
+patch in an editor if you have any technical expertise.)~
+/* DEPRECATED and useless as of v6
 @6  = ~A mod has overwritten BG2 animations in your game. Extract IA_BG2_Restores.rar
 to your infinityanimations/restore folder.~
 @7  = ~An installed mod requires IA_Base_Anims.rar extracted to your
@@ -32,151 +37,175 @@ make sure the "Destination path" on the General tab terminates in /content or
 @15 = ~For WinZip, make sure the "Use folder names" box is *unselected*. You should
 end up with a bunch of .bam files and no subfolders in your "content" and/or
 restore folders. Rerun this installer once you've extracted all content.~
-
-@27 = ~IA_Fiends_Genies.rar needs to be extracted and installed with the main
-component.~
-@29 = ~IA_Fiends_Genies.rar, IA_IWD.rar, IA_PST_Abishai.rar,
-IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and installed
-with the main component.~
-@31 = ~IA_NWN_01_Modron.rar needs to be extracted and installed with the main
-component.~
-@34 = ~IA_BGII_IWDII.rar needs to be extracted and installed with the main
-component.~
-@42 = ~IA_Base_Anims.rar, IA_IWD.rar and Shadows_harpy_frostgiant.zip need to
-be extracted and installed with the main component.~
-@44 = ~IA_IWD.rar needs to be extracted and installed with the main component.~
-@54 = ~IA_IWD_Svirfneblin.rar needs to be extracted and installed with the
-main component.~
-@58 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~
-@62 = ~IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and
-installed with the main component.~
-@64 = ~IA_PST_Paletted.rar needs to be extracted and installed with the main
-component.~
-@70 = ~Moinesse_edits_IAised.rar needs to be extracted and installed with the main
-component.~
-@72 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~
 */
-@5  = ~This mod is not currently compatible with OS X. If you wish to make it so,
-please post your interest to www.shsforums.net/forum/594-infinity-animations/.
-(It may help to examine your game launcher and the contents of the existing
-patch in an editor if you have any technical expertise.)~
-@6  = ~A mod has overwritten BG2 animations in your game. Please make sure option 
-ia_bg2_restores is set to 1 in ia-config-default.ini or ia-config.ini.~
-@7  = ~An installed mod requires IA_Base_Anims content files in your
-infinityanimations/content folder. Please make sure option ia_base_anims is set 
-to 1 in ia-config-default.ini or ia-config.ini~
-@8  = ~An installed mod requires IA_IWD content files in infinityanimations/content
-folder. Please make sure option ia_iwd is set to 1 in ia-config-default.ini or in 
-ia-config.ini.~
-@9  = ~An installed mod requires IA_BGII_IWDII content in infinityanimations/content
-folder. Please make sure option ia_bg2_iwd2 is set to 1 in ia-config-default.ini 
-or in ia-config.ini.~
-@10 = ~An installed mod requires Belhifet_and_Marilith content files in 
-infinityanimations/content folder. Please make sure option ia_belhifet_and_marilith
-is set to 1 in ia-config-default.ini or ia-config.ini.~
-@11 = ~An installed mod requires Shadows_harpy_frostgiant content files in 
-infinityanimations/content folder. Please make sure option ia_shadows_harpy_frostgiant
-is set to 1 in ia-config-default.ini or ia-config.ini.~
-@12 = ~An installed mod requires IA_NWN_01_Modron and NWN_Misc_I content files in
-infinityanimations/content folder. Please make sure options ia_nwn_01_modron and 
-ia_nwn_misc_i are set to 1 in ia-config-default.ini or ia-config.ini.~
-@13 = ~An installed mod requires IA_Wh_Dr_Wyv_LoP content in infinityanimations/content
-folder. Please make sure option ia_wh_dr_wyv_lop is set to 1 in ia-config-default.ini 
-or in ia-config.ini.~
-@14 = ~NOTE: Edit ia-config-default.ini (found in infinityanimations folder) with 
-Notepad or another text editor and modify configuration options accordingly. Then
-save it as ia-config.ini.~
-@15 = ~Rerun this installer once you've modified the relevant options.~
+@6  = ~A mod has overwritten BG2 animations in your game. Please make sure you have 
+extracted bg2_restores folder to your infinityanimations/archives folder.~
+@7  = ~An installed mod requires base_anims folder to be extracted in your 
+infinityanimations/archives folder.~
+@8  = ~An installed mod requires iwd folder to be extracted in your 
+infinityanimations/archives folder.~
+@9  = ~An installed mod requires bg2_iwd2 folder to be extracted in your 
+infinityanimations/archives folder.~
+@10 = ~An installed mod requires belhifet_and_marilith folder to be extracted in 
+your infinityanimations/archives folder.~
+@11 = ~An installed mod requires shadows_harpy_frostgiant folder to be extracted in 
+your infinityanimations/archives folder.~
+@12 = ~An installed mod requires nwb_01_modron and nwn_misc_1 folders to be extracted
+in your infinityanimations/archives folder.~
+@13 = ~An installed mod requires wh_dr_wyv_lop folder to be extracted in your
+infinityanimations/archives folder.~
+@14 = ~NOTE: Open the mod zip file and extract the whole archives subfolders in your
+infinityanimations/archives folder.~
+@15 = ~Rerun this installer once you've extracted all needed content.~
 @16 = ~Required content missing.~
+
 @17 = ~BGMain.exe appears to be patched already; skipping .exe modifications ...~
 @18 = ~BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
 @19 = ~Patching BGMain.exe to enable new animations ...~
+
 @20 = ~Replacing _LOW creature animations (this may take a while) ...~
 @21 = ~Patching IDS files ...~
+
 @22 = ~Restoring previously overwritten BG2 animations ...~
 @23 = ~Copying new animations to the game (this may take a while) ...~
 @24 = ~Correcting creature animations ...~
-@25 = ~Distinctive Genies~
-@26 = ~This component requires the main component.~
-@27 = ~IA_Fiends_Genies content needs to be installed with the main component.
-Please make sure option ia_fiends_genies is set to 1 in ia-config-default.ini 
-or in ia-config.ini.~
+
+@25 = ~This component requires the main component.~
+@26 = ~Distinctive Genies~
+
+/* DEPRECATED and useless as of v6
+@27 = ~IA_Fiends_Genies.rar needs to be extracted and installed with the main
+component.~*/
+@27 = ~IA_Fiends_Genies content needs to be extracted and/or installed with the main
+component. Please make sure infinityanimations/archives folder contains 
+fiends_genies sub-folder.~
+
 @28 = ~Distinctive Fiends~
-@29 = ~IA_Fiends_Genies, IA_IWD, IA_PST_Abishai, IA_NWN_01_Modron and NWN_Misc_I. 
-need to be installed with the main component. Please make sure options ia_iwd, 
-ia_fiends_genies, ia_pst_abishai, ia_nwn_01_modron and ia_nwn_misc_i are set to 1
-in ia-config-default.ini or in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@29 = ~IA_Fiends_Genies.rar, IA_IWD.rar, IA_PST_Abishai.rar,
+IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and installed
+with the main component.~*/
+@29 = ~IA_Fiends_Genies, IA_IWD, IA_PST_Abishai, IA_NWN_01_Modron and NWN_Misc_I 
+contents need to be extracted and/or installed with the main component. Please
+make sure infinityanimations/archives folder contains iwd, fiends_genies, 
+pst_abishai, nwn_01_modron and nwn_misc_1 sub-folders.~
+
 @30 = ~Pit Fiends~
-@31 = ~IA_NWN_01_Modron content needs to be installed with the main component. 
-Please make sure option ia_nwn_01_modron is set to 1 in ia-config-default.ini or
-in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@31 = ~IA_NWN_01_Modron.rar needs to be extracted and installed with the main
+component.~*/
+@31 = ~IA_NWN_01_Modron content needs to be extracted and/or installed with the main
+component. Please make sure infinityanimations/archives folder contains
+nwn_01_modron sub-folder.~
 @32 = ~All get the NWN animation~
 @33 = ~Some get the NWN animation~
-@34 = ~IA_BG2_IWD2 needs to be installed with the main component. Please make sure 
-option ia_bg2_iwd2 is set to 1 in ia-config-default.ini or in ia-config.ini.~
-@35 = ~Cambions get Isair Animation~
+
+@34 = ~Cambions get Isair Animation~
+/* DEPRECATED and useless as of v6
+@35 = ~IA_BGII_IWDII.rar needs to be extracted and installed with the main
+component.~*/
+@35 = ~IA_BG2_IWD2 content needs to be extracted and/or installed with the main
+component. Please make sure infinityanimations/archives folder contains bg2_iwd2
+sub-folder.~
 @36 = ~All cambions~
 @37 = ~Some cambions~
 @38 = ~Alu-Fiends get Madae Animation~
 @39 = ~All alu-fiends~
 @40 = ~Some alu-fiends~
+
 @41 = ~Distinctive Undead~
-@42 = ~IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant content need to be 
-installed with the main component. Please make sure options ia_base_anims, ia_iwd 
-and ia_shadows_harpy_frostgiant are set to 1 in ia-config-default.ini or in ia-config.ini~
+/* DEPRECATED and useless as of v6
+@42 = ~IA_Base_Anims.rar, IA_IWD.rar and Shadows_harpy_frostgiant.zip need to
+be extracted and installed with the main component.~*/
+@42 = ~IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant contents need to be 
+extracted and/or installed with the main component. Please make sure 
+infinityanimations/archives folder contains base_anims, iwd and 
+shadows_harpy_frostgiant sub-folders.~
+
 @43 = ~Skeleton Warriors~
-@44 = ~IA_IWD content needs to be installed with the main component. Please make sure
-option ia_iwd is set to 1 in ia-config-default.ini or in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@44 = ~IA_IWD.rar needs to be extracted and installed with the main component.~*/
+@44 = ~IA_IWD content needs to be extracted and/or installed with the main component.
+Please make sure infinityanimations/archives folder contains iwd sub-folder.~
 @45 = ~Wight Barrow animation~
 @46 = ~Skeleton animation~
 @47 = ~Skeleton Warrior animation~
+
 @48 = ~Seer Animation~
 @49 = ~Some beggars and slaves~
 @50 = ~Some beggars~
 @51 = ~Some slaves~
+
 @52 = ~Svirfneblin Animations~
 @53 = ~Aurora's Shoes has already installed this.~
-@54 = ~IA_IWD_Svirfneblin content needs to be installed with the main component. 
-Please make sure option ia_iwd_svirfneblin is set to 1 in ia-config-default.ini or 
-in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@54 = ~IA_IWD_Svirfneblin.rar needs to be extracted and installed with the
+main component.~*/
+@54 = ~IA_IWD_Svirfneblin content needs to be extracted and/or installed with the 
+main component. Please make sure infinityanimations/archives folder contains 
+iwd_svirfneblin sub-folder.~
 @55 = ~Animations only~
 @56 = ~Animations and sounds~
+
 @57 = ~More Base Animations~
-@58 = ~IA_Base_Anims content needs to be installed with the main component. Please 
-make sure option ia_base_anims is set to 1 in ia-config-default.ini or in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@58 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~*/
+@58 = ~IA_Base_Anims content needs to be extracted and/or installed with the main 
+component. Please make sure infinityanimations/archives folder contains 
+base_anims sub-folder.~
+
 @59 = ~More Icewind Dale Animations~
+
 @60 = ~More Icewind Dale II Animations~
+
 @61 = ~More Neverwinter Nights Animations~
-@62 = ~IA_NWN_01_Modron and NWN_Misc_I content need to be installed with the main 
-component. Please make sure options ia_nwn_01_modron and ia_nwn_misc_i are set to 1
-in ia-config-default.ini or in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@62 = ~IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and
+installed with the main component.~*/
+@62 = ~IA_NWN_01_Modron and NWN_Misc_I content need to be extracted and/or installed
+with the main component. Please make sure infinityanimations/archives folder 
+contains nwn_01_modron and nwn_misc_1 sub-folders.~
+
 @63 = ~More Planescape: Torment Animations~
-@64 = ~IA_PST_Paletted content needs to be installed with the main component. Please
-make sure option ia_pst_paletted is set to 1 in ia-config-default.ini or in 
-ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@64 = ~IA_PST_Paletted.rar needs to be extracted and installed with the main
+component.~*/
+@64 = ~IA_PST_Paletted content needs to be extracted and/or installed with the main 
+component. Please make sure infinityanimations/archives folder contains 
+pst_paletted sub-folder.~
 @65 = ~25% of relevant non-joinables~
 @66 = ~50% of relevant non-joinables~
 @67 = ~75% of relevant non-joinables~
 @68 = ~All relevant non-joinables~
+
 @69 = ~Moinesse's Avatars for IA~
-@70 = ~Moinesse_edits_IAised content needs to be installed with the main component.
-Please make sure option ia_moinesse_edits_iaised is set to 1 in ia-config-default.ini
-or in ia-config.ini.~
+/* DEPRECATED and useless as of v6
+@70 = ~Moinesse_edits_IAised.rar needs to be extracted and installed with the main
+component.~*/
+@70 = ~Moinesse_edits_IAised content needs to be extracted and/or installed with the
+main component. Please make sure infinityanimations/archives folder contains 
+moinesse_edits_iaised sub-folder.~
+
 @71 = ~BG1 Animations for NPCs~
-//@72 = ~IA_Base_Anims content needs to be installed with the main component.~ // DEPRECATED: same as @58
+/* DEPRECATED and useless as of v6: same as @58
+@72 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~
+*/
 @73 = ~Patching character-based creatures (this may take a while) ...~
 @74 = ~25% of relevant creatures~
 @75 = ~50% of relevant creatures~
 @76 = ~75% of relevant creatures~
 @77 = ~Most relevant creatures~
+
 @78 = ~BG1 Animations for Exported PCs~
 @79 = ~Prompt for each PC~
 @80 = ~Prompt for problematic PCs~
 @81 = ~Patch all PCs without prompting~
+
 @82 = ~BG1 Animations for Saved Games~
 @83 = ~Prompt for each character~
 @84 = ~Prompt for problematic characters~
 @85 = ~Patch all characters without prompting~
+
 @86 = ~Saved Game Animation Fixer~
 @87 = ~Correct only LOW animations~
 @88 = ~Correct all animations IA has changed~
@@ -208,6 +237,7 @@ crash the game with the new animation~
 
 @200 = ~This mod requires the classical Throne of Bhaal expansion and is not available yet for EE games.~
 
+// ia_read_configuration.tph and always.tpa
 @301 = ~Configuration option 1a_%variable_0% value (%wrong_value%) does not match its scope and has been reset to its default value (%default%).~
 @302 = ~Configuration option 1a_%variable_0% does not exist: it has been set to its default value (%default%).~
 @303 = ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
@@ -215,6 +245,7 @@ crash the game with the new animation~
 	ia_base_anims = %ia_base_anims%
 	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
 	ia_bg2_restores = %ia_bg2_restores%
+	ia_ee_missing = %ia_ee_missing%
 	ia_bg2_iwd2 = %ia_bg2_iwd2%
 	ia_ee_tob = %ia_ee_tob%
 	ia_fiends_genies = %ia_fiends_genies%
@@ -229,10 +260,11 @@ crash the game with the new animation~
 	ia_wh_dr_wyv_lop = %ia_wh_dr_wyv_lop%
 ---------------------------------------------------~
 
+// ps_recursive_copy.tpa
 @310 = ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
 @311 = ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
 
-@320 = ~Folder %iacontent% (#%archives%) content moved to /content: %Count% files (configuration option ia_%iacontent% = %variable%)~
-@321 = ~Folder %iacontent% (#%archives%) content moved to /restore: %Count% files (configuration option ia_%iacontent% = %variable%)~
-@322 = ~Folder %iacontent% (#%archives%) content moved to /content or /restore (configuration option ia_%iacontent% = %variable%)~
-@323 = ~Folder %iacontent% (#%archives%) content moved to /content and copied in override: %Count% files~
+// .tpa
+@320 = ~Folder %iacontent% (#%archives%) content copied to override: %Count% files (configuration option ia_%iacontent% = %variable%)~
+@321 = ~Folder %iacontent% (#%archives%) content not copied to override (configuration option ia_%iacontent% = %variable%)~
+@322 = ~Folder %iacontent% (#%archives%) content copied to override: %Count% files~

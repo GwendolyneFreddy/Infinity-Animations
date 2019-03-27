@@ -14,12 +14,12 @@ PATCH_IF ~%SOURCE_RES%~ STRING_EQUAL_CASE charbase BEGIN
 END ELSE BEGIN
 	PATCH_IF SOURCE_SIZE < 0x2d4 BEGIN	// PATCH_IF BUFFER_LENGTH < 0x2d4 BEGIN
 		valid = 0
-		PATCH_PRINT ~%SOURCE_FILE% %m1%: %m2%.~ //is corrupt: below minimum length
+		PATCH_PRINT ~%SOURCE_FILE% %m1%: %m2%.~ // is corrupt: below minimum length
 	END ELSE BEGIN
 		READ_ASCII 0 sg
 		PATCH_IF ~%sg%~ STR_CMP ~CRE V1.0~ BEGIN
 			valid = 0
-			PATCH_PRINT ~%SOURCE_FILE% %m1%: %m3%.~ //is corrupt: header misplaced
+			PATCH_PRINT ~%SOURCE_FILE% %m1%: %m3%.~ // is corrupt: header misplaced
 		END ELSE BEGIN
 			DEFINE_ASSOCIATIVE_ARRAY cre_offset BEGIN
 				0x2a0 => 0x2a4
@@ -37,7 +37,7 @@ END ELSE BEGIN
 				END
 				PATCH_IF tmp_3 != 0 && tmp_2 < 0x2d4 BEGIN
 					valid = 0
-					PATCH_PRINT ~%SOURCE_FILE% %m1%: %m4%.~ //is corrupt: extended structures point to header
+					PATCH_PRINT ~%SOURCE_FILE% %m1%: %m4%.~ // is corrupt: extended structures point to header
 				END
 			END
 		END
