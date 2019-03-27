@@ -1,0 +1,41 @@
+3kh /dragon_white_young
+***
+						SOUND
+ATTACK          		t-bab03a nosound
+ATTACK          		0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-bab07a t-bab08a
+DAMAGE          		0 0
+DIE             		t-bab09a t-bab10a
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		t-bab06a nosound
+SHOOT           		0 0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-bab03a nosound
+ATTACK_SLASH    		2 0
+ATTACK_BACKSLASH		t-bab04a nosound
+ATTACK_BACKSLASH		2 0
+ATTACK_JAB      		t-bab05a nosound
+ATTACK_JAB      		2 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-bab01a t-bab02a
+Battle_Cry				0 0
+Selection				t-bab01a t-bab02a
+Selection				0 0
