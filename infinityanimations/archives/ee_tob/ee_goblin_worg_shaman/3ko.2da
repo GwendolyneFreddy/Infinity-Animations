@@ -1,0 +1,41 @@
+3ko /goblin_worg_shaman
+***
+						SOUND
+ATTACK          		t-gcw03a t-gcw03b
+ATTACK          		0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-gcw07a t-gcw08a
+DAMAGE          		0 0
+DIE             		t-gcw09a t-gcw10a
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-gcw03a t-gcw03b
+ATTACK_SLASH    		0 0
+ATTACK_BACKSLASH		t-gcw03a t-gcw03b
+ATTACK_BACKSLASH		0 0
+ATTACK_JAB      		t-gcw04a t-gcw04b
+ATTACK_JAB      		0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-gcw01a t-gcw02a
+Battle_Cry				0 0
+Selection				t-gcw01a t-gcw02a
+Selection				0 0

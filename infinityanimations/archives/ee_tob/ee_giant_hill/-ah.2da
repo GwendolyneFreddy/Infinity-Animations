@@ -1,0 +1,41 @@
+-ah /giant_hill
+***
+                 SOUND
+ATTACK           t-ver03 t-ver04
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-ver07 t-ver08
+DAMAGE           0 0
+DIE              t-ver09 t-ver10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-ver04
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-ver03
+ATTACK_SLASH     0
+ATTACK_BACKSLASH t-ver04
+ATTACK_BACKSLASH 0
+ATTACK_JAB       t-ver04
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-ver01 t-ver02
+Battle_Cry       0 0
+Selection        t-ver01 t-ver02
+Selection        0 0
