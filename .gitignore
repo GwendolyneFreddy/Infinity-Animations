@@ -9,8 +9,11 @@ Desktop.ini
 $RECYCLE.BIN/
 
 
+*.csv
 *.7z
 *.rar
+*.zip
+/infinityanimations/animpatch
 # Windows Installer files
 
 # Windows shortcuts
