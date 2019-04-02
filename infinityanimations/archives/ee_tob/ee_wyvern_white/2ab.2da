@@ -1,0 +1,41 @@
+2ab /wyvern_white
+***
+						SOUND
+ATTACK          		t-wyvs03 t-wyvs05
+ATTACK          		0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-wyvs07 t-wyvs08
+DAMAGE          		0 0
+DIE             		t-wyvs09 t-wyvs02
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-wyvs03 nosound nosound
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		t-wyvs05 nosound nosound
+ATTACK_BACKSLASH		0 0 0
+ATTACK_JAB      		t-wyvs06
+ATTACK_JAB      		0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-wyvs01
+Battle_Cry				0 0
+Selection				t-wyvs03
+Selection				0
