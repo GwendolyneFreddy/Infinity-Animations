@@ -1,0 +1,1786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+	body {
+		margin: 0;
+		padding: 0;
+		cursor: default;
+		text-align: center;
+		color: #000;
+		background: #e3e3db url('images/shsbkgd.jpg');
+	}
+
+	#wrap {
+		text-align: left;
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 88%;
+		font-family: Verdana, Tahoma, Arial, sans-serif;
+		font-size: 12px;
+		color: #333;
+	}
+
+	#header {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		padding: 5px 0 13px 0;
+	}
+	#header .about {
+		margin: 7px 0 0 0;
+		padding: 0;
+		font-style: italic;
+		color: #555;
+	}
+	#header .menu {
+		font-weight: bold;
+		margin: 0;
+		color: #999;
+	}
+	#header .menu a:link,
+	#header .menu a:visited {
+		color: #333;
+	}
+
+	#footer {
+		text-align: center;
+		background: #e5e5e5;
+		border: 1px solid #781808;
+		border-top: 5px solid #781808;
+		border-bottom: 5px solid #781808;
+		font-size: 75%;
+		padding: 5px 0 13px 0;
+	}
+
+	#maindiv {
+		margin: 0 auto;
+		margin-top: -20px;
+		width: 80%;
+	}
+
+	#maindiv .content {
+		counter-increment: kman;
+		counter-reset: h2;
+		background-color: #e8e8e6;
+		padding: 0 0 25px 0;
+		margin: 50px auto;
+		border-width: 1px 1px 4px 10px;
+		border-style: solid;
+		border-color: #781808;
+		position: relative;
+		display: block;
+	}
+	#maindiv .content::before {
+		content: counter(kman, lower-roman);
+		font-size: 100%;
+		font-weight: bold;
+		text-align: center;
+		color: #eee;
+		background-color: #781808;
+		width: 35px;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+
+	#maindiv .important {
+		font-size: 95%;
+		font-family: Verdana;
+		text-align: left;
+		background-color: #F1F1F1;
+		border-top: solid 1px #aaa;
+		border-bottom: solid 1px #aaa;
+		border-left: solid 1px #aaa;
+		border-right: solid 1px #aaa;
+		padding: 10px;
+		margin: 20px auto;
+		width: 80%;
+		line-height: 160%;
+	}
+	#maindiv .important::before {
+		display: none;
+	}
+	#maindiv .important p {
+		font-size: 100%;
+		text-indent: 0px;
+		margin: 5px 0 10px 0;
+	}
+	#maindiv .important ol {
+		margin: -10px 0 0 20px;
+	}
+	#maindiv .important ul {
+		margin: -10px 0 0 15px;
+	}
+
+	#maindiv p {
+		font-size: 100%;
+		font-style: normal;
+		line-height: 150%;
+		padding: 0px;
+		margin: 10px auto;
+		width: 90%;
+		display: block;
+	}
+
+	#maindiv address {
+		font-size: 95%;
+		font-style: normal;
+		font-weight: bold;
+		text-decoration: none;
+		color: #BBB;
+		background-color: #781808;
+		padding: 3px 0px 0px;
+		margin: 0px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0px;
+		display: block;
+		text-align: right;
+	}
+	#maindiv address a:active {
+		color: #fff;
+		text-decoration: line-through;
+		border: none;
+	}
+	#maindiv address a:focus,
+	#maindiv address a:hover {
+		text-decoration: none;
+		color: #F1F1F1;
+		border: 0;
+	}
+	#maindiv address a:link,
+	#maindiv address a:visited {
+		font-weight: bold;
+		text-decoration: underline;
+		background-color: transparent;
+		color: #eaeaea !important;
+		padding-right: 5px;
+		padding-left: 6px;
+	}
+
+
+	/*	Lists  */
+	#maindiv ol {
+		margin: -10px 0 0 35px;
+		*margin-left: 70px;
+	}
+	#maindiv ol li {
+		line-height: 150%;
+	}
+	#maindiv ul {
+		line-height: 170%;
+		margin-left: 4%;
+		width: 87%;
+	}
+	#maindiv ul li {
+		line-height: 150%;
+	}
+	#maindiv ul li ul {
+		margin: 0px;
+		width: 96%;
+	}
+	#maindiv ul li ul li {
+	}
+	#maindiv ul li a:link,
+	#maindiv ul li a:visited,
+	#maindiv ul li ul li a:link,
+	#maindiv ul li ul li a:visited {
+		color: #781808;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	.t1 {
+		font-weight: bold;
+		width: 26%;
+		text-align: right;
+		clear: right;
+		float: left;
+		*float: none;
+		*margin-left: 65px;
+		line-height: 22px;
+	}
+	.t2 {
+		text-align: left;
+		width: 73%;
+		float: right;
+		*float: none;
+		line-height: 22px;
+	}
+
+
+	/*	Liens internet  */
+	a:hover,
+	a:active {
+		color: #222;
+		border-bottom: 1px solid black;
+	}
+	a:link,
+	a:visited {
+		color: #781808;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 225%;
+		color: #444;
+		padding: 5px 0 5px 0;
+		margin: 0;
+		width: 100%;
+	}
+	h2 {
+		display: block;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px;
+		margin: 20px 0 0 0;
+		border-bottom: dotted 2px #d0d0d0;
+		border-top: dotted 2px #d0d0d0;
+		background: #deded9;
+		font-size: 160%;
+	}
+	h2::first-letter {
+		color: #781808;
+		background-color: transparent;
+	}
+	h3,
+	h4,
+	h5 {
+		margin: 10px 40px 10px 40px;
+		padding: 0;
+	}
+	h3 {
+		font-size: 125%;
+		font-style: italic;
+	}
+	h4 {
+		font-size: 125%;
+	}
+	h5 {
+		font-size: 100%;
+	}
+	h6 {
+		width: 100%;
+		margin: 10px 0 15px 0;
+		background-color: #ECECEC;
+		text-align: left;
+		text-indent: 30px;
+		font-size: 100%;
+		font-style: italic;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-bottom: solid 1px #bbb;
+		border-top: solid 1px #bbb;
+	}
+
+-->
+/*]]>*/
+	</style>
+	<title>
+		Spellhold Studios - Infinity Animations
+	</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="images/shsweb.ico" rel="icon" type="image/bmp" />
+  </head>
+
+  <body>
+	<div id="wrap">
+	  <a name="top" id="top"></a>
+	  <div id="header">
+
+		<h1>Infinity Animations</h1>
+
+		<strong>A Spellhold Studios mod for Baldur's Gate II:<acronym title="Throne of Bhaal">ToB</acronym>, Baldur's Gate Trilogy and <acronym title="Baldur's Gate 'To Two'">Tutu</acronym></strong>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="about">
+			Author: Erephine &#8226; <acronym title="Weimer Dialogue Utility">WeiDU</acronym> coding: Miloch
+		</p>
+		<p class="about">
+			<a href="http://www.spellholdstudios.net/ie/infinityanimations">Mod Website</a> &#8226; <a href="http://www.shsforums.net/forum/594-infinity-animations/">Mod Forum</a> &#8226; <a href="http://www.shsforums.net/index.php?app=downloads&showcat=98">Download</a> &#8226; <a href="https://github.com/SpellholdStudios/Infinity-Animations">GitHub</a> &#8226; Version 6.0.1 (Alpha)
+		</p>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="menu">
+			<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#compon">Components</a> &#x2B25; <a href="#trouble">Troubleshooting</a> &#x2B25; <a href="#anims">Animations</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#version">Version History</a>
+		</p>
+	  </div>
+
+	<div id="maindiv">
+<!-- ================== I n t r o d u c t i o n ================== -->
+	  <a name="intro" id="intro"></a>
+	  <div class="content">
+
+		<h2>Overview</h2><br>
+
+		<p>
+			This mod patches Baldur's Gate II: Throne of Bhaal to support additional creature and character animations (referred to as 'animation slots'). It also offers a dynamic automated process for claiming new animation slots. Thus, it acts as a central hub, usable by anyone who would like to add animation entries to the game without being bogged down by issues of mod conflicts and incompatibilities.
+ 		</p>
+		<p>
+			Infinity Animations supports a wide variety of animation types from Baldur's Gate I, Baldur's Gate II, Icewind Dale I, Icewind Dale II, Planescape: Torment and Neverwinter Nights. As an added bonus, the mod restores Baldur's Gate I character animations in their entirety, and paperdolls have been unlocked for some animations that did not support them previously.
+		</p>
+ 		<p>
+			An important feature for players who use several large mods (known as 'megamods') is a resolution of animation conflicts, and a restoration of standard animations that megamods have overwritten.
+		</p>
+ 		<p>
+			Finally, this mod contains optional components that implement many new animations into the game. Ongoing work will address sound sets for new animations. While the number of supported animations may not be 'infinite' as the name suggests, it should be large enough to accommodate everyone's present (and in all likelihood future) needs.
+		</p><br>
+
+		<p>
+			<strong>Key features</strong>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Restores Baldur's Gate I character animations</li>
+			<li>Improves paperdoll support for existing animations</li>
+			<li>Adds custom game animations for characters and creatures (including dragons)</li>
+			<li>Allows use of many different animation <em>types</em> (some never before seen in the games)</li>
+			<li>Resolves the problems of animation stacking, slot and naming conflicts</li>
+			<li>Offers <acronym title="Graphical User Interface">GUI</acronym> support for adding new animations</li>
+			<li>Lets you watch as the percentage of free animation entries refuses to go down &#128578;</li>
+          </ul><br>
+		<p>
+			For details on how to add new animations, consult the <a href="ia_reference_picker_readme.html#adding">Adding an Animation Entry</a> section of the IA Reference Picker documentation.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Overview</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ================= C o m p a t i b i l i t y ================= -->
+	  <a name="compat" id="compat"></a>
+	  <div class="content">
+
+		<h2>Compatibility</h2><br>
+
+		<p>
+			Infinity Animations works with <acronym title="Baldur's Gate II">BG2</acronym>: Throne of Bhaal and conversions based on <acronym title="Throne of Bhaal">ToB</acronym>. <strong>Make sure you have Throne of Bhaal patched to version 26498.</strong> Check the ReadMe files related to your patch in your game folder and the <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a> website if necessary.
+		</p>
+		<p>
+			This mod should also work with all other mods, including <a href="http://www.pocketplane.net/tutu/">Baldur's Gate Tutu</a> (and EasyTutu), <a href="http://www.shsforums.net/index.php?showforum=261">Baldur's Gate Trilogy</a> and the <a href="http://www.shsforums.net/files/file/536-big-world-installpack/">BiG World Project</a>.
+		</p>
+		<p>
+			Install this mod after most other mods, particularly those that add creatures or animations, but before any final "biffing" routines.
+		</p>
+		<p>
+			<strong>Start a new game</strong> after installing this mod, or use the Saved Game Animation Fixer component if you're reluctant to do that.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Compatibility</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ================== I n s t a l l a t i o n ================== -->
+	  <a name="installation" id="installation"></a>
+	  <div class="content">
+
+		<h2>Installation</h2><br>
+
+		<h3>Notes</h3>
+
+		<p style="margin-top:2%;">
+			<em>If you've previously installed the mod, remove it before extracting the new version. To do this, run <strong>setup-infinityanimations.exe</strong>, uninstall all previously installed components and delete the infinityanimations folder.</em>
+		</p>
+		<p>
+			<em>When installing or uninstalling, <strong>do not close the <acronym title="Disk Operating System">DOS</acronym> window</strong> by clicking on the <strong>X</strong> button! Instead, press the <strong>Enter</strong> key whenever instructed to do so.</em>
+		</p>
+		<p>
+			<strong>Disable any antivirus</strong> or other memory-resident software before installing this or any other mod. Some (particularly avast!) have a tendency to report false positives with mod activity, resulting in failed installs.
+		</p>
+		<p>
+			You can extract files from the archive using <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .rar files.
+		</p>
+		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
+			<div class="quotetitle">
+				<strong>Deprecated</strong> (<span style="text-decoration: underline">read <a href="#config">this</a> instead</span>):
+				<input value="Show" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Show'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none; ">
+				<p style="width:96%; color:#5f5f5f;">
+					<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no subfolders beyond that).
+				</p>
+				<p style="width:96%; color:#5f5f5f;">
+					Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the subarchive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.
+				</p>
+				<p style="width:96%; color:#5f5f5f;">
+					For WinZip, make sure the "Use folder names" box is <em>unselected</em>.
+				</p>
+				<p style="width:96%; color:#5f5f5f;">
+					You should end up with a bunch of .bam files and no subfolders in your "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
+				</p>
+				</div>
+			</div>
+		</div><br><br> 
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Windows</h3>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click <strong>setup-infinityanimations.exe</strong> and follow the instructions on screen.
+		</p>
+		<p>
+			Run <strong>setup-infinityanimations.exe</strong> in your game folder to reinstall, uninstall or otherwise change components.
+		</p></br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Linux</h3>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify.
+		</p>
+		<p>
+			Download the latest Linux version of <a href="http://weidu.org/~thebigg/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> and copy WeiDU and WeInstall to /usr/bin. Then open a terminal and cd to your game installation directory.
+		</p>
+		<p>
+			<em>Optional: run 'tolower' and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either, if you've extracted only this mod since the last time you lowercased file names. If unsure, running tolower and choosing both options is the safe bet.</em>
+		</p>
+		<p>
+			Run <strong>WeInstall setup-infinityanimations</strong> in your game folder to install the mod. Then run <strong>wine BGMain.exe</strong> and start playing.
+		</p><br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<h3>Note for Complete Uninstallation</h3>
+
+		<p style="margin-top:2%;">
+			In addition to the methods above for removing individual components, you can completely uninstall the mod using <strong>setup-infinityanimations --uninstall</strong> at the command line to remove all components without wading through prompts.
+		</p><br>
+
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+
+		<a name="config" id="config"></a>
+		<h3>&#9888;&#65039; Warning: new installation process</h3>
+
+		<p style="margin-top:2%;">
+			<strong><span style="font-variant:small-caps;font-size: 12px;margin-left: 30px;">As of version 6.0.0, options needed for installation are read from <a href="../infinityanimations-config-default.ini"><em>infinityanimations-config-default.ini</em></a> file, or <em>infinityanimations-config.ini</em> if it exists.</span></strong>
+		</p><br>
+		<p>
+			The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations <strong>content</strong> or <strong>restore</strong> subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
+		</p>
+		<p>
+			From now on, the content needed by Infinity Animations is included in the <strong>archives</strong> folder and automatically copied by the main component into your <strong>override</strong> folder. Being useless, the respective <em>content</em> and <em>restore</em> subfolders have been removed.
+		</p>
+		<p>
+			By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit <em>infinityanimations-config-default.ini</em> (found in infinityanimations folder) with Notepad or another text editor, then save it as <strong><span style="font-variant:small-caps;font-size: 12px;"><em>infinityanimations-config.ini</em></span></strong>.
+		</p>
+		<p>
+			Each line consists of a configuration option, then '=', then a number. The only thing you should edit is the number. For example, if you don't want to use svirneblins animations, change the ia_iwd_svirfneblin value to 0.
+		</p>
+		<p>
+			The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations-config.ini, any installation failure will be prevented by reverting it back to its default value.
+		</p>
+		<p>
+			If you want to install a component requiring files that you decided not to install, the installer will install them automaticaly if there are still in the archives folder. Otherwise, it will warn you. You will have to exit it, extract them in your mod folder, and rerun the installer.<br>
+			Following the above example, if you indeed wish the svirneblins get the svirneblins animations after having set ia_iwd_svirfneblin option to 0, the installer will force their installation if it finds them in archives folder. If not, it will warn you to extract them before installing the component.
+		</p>
+		<p>
+			Here is a chart listing the options related to the installation process:
+		</p><br>
+
+		<table style="margin-left: 80px; width: 90%; " summary="Installation variables list">
+			<tr style="font-size: 125%; line-height: 160%;">
+				<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Variable</th>
+				<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Description</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_restores</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - BG2 Restores<br><br>
+				- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
+				- This is the content module for BG2 restored slots. It is only necessary for a megamod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
+				<span style="color: #781808; padding-left:20px;">Installation forced only if needed [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_restore</span></strong><br><br>
+				(supports: only EE)</td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Base EE Content<br><br>
+				- Content: all missing animations that already have animation slots in Enhanced games, restored BG I character animations. Includes all relevant missing creature sounds and ini files.<br>
+				- Needed for all EE games (BGEE, SoD, BG2EE, EET).<br>
+				- Needed for all components.<br><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_base_anims</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 001 - Base Content<br><br>
+				- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow), restored BG I character animations. Includes all relevant creature sounds and tables and BG1 scimitars.<br>
+				- Needed for Distinctive Undead [400], More Base Animations [500], BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
+				- Needed for BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS and RPG Kitspack mods.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_belhifet_and_marilith</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Belhifet and Marilith<br><br>
+				- Content: animation and audio files for the IWD Belhifet and IWD Marilith. Includes properly-slotted creature sounds and tables.<br>
+				- Needed for Drizzt Saga, RoT, TDD, TS and TS-BP mods.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_iwd2</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 002 - IWDII and unused BGII Animations<br><br>
+				- Content: all IWD II animations that are neither in BGII (Death Tyrant, Alternate Ellesime, Alternate Fire Giant, Lagoon Creature) or IWD (Abishai White, Arctic Boar, Bugbear, Bugbear Captain, Chimera, Dark Treant, Drider male/female, Elemental Water Small, Feyr lesser/greater, Fomorian Giant, IWD II goblins, Goblin Worgrider, Goblin Worgrider Captain, Half-dragon black/red, Hook Horror, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Shenrical, Undead Orcs, Werebadger, Wererat, Worg, Yuan-Ti Halfbreed). Includes all relevant creature sounds and tables.<br>
+				- Needed for Cambion get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
+				- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_tob</span></strong><br><br>
+				(supports: only ToB)</td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - EE games new Animations ported to ToB<br><br>
+				- Content: Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_fiends_genies</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Fiends and Genies<br><br>
+				- Content: Fiend green (Nabassu), Fiend blue, Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Gelugon and Tieflings sound files.<br>
+				- Needed for Distinctive Genies [50] and Distinctive Fiends [100] components.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Remaining IWD Animations<br><br>
+				- Content: Remaining IWD animations not in the other archives (Animated Plate bronze/dark/green, Arundel, Barbarian Shaman hammer/staff/club, Barbarian Warrior tan/red/brown, Barbarian Icasaracht, Belhifet Priest, Creeping Doom, Drowned Dead, Elemental Earth/Water/Fire, Fire Giant IWD, Iron Golem IWD, Remorhaz, Sahuagin small/large, Seer, Tundra Yeti, Umber Hulk Vodyanoi, Verbeeg, Wight Barrow). Includes all relevant creature sounds and tables.<br>
+				- Needed for Distinctive Fiends [100], Distinctive Undead [400], Skeleton Warriors [410-415-420], Seer Animation [450-455-460] and More Icewind Dale Animations [550] components.<br>
+				- Needed for BP, BH, CtB, NEJ, RoT, SOS and TS mods.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd_svirfneblin</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Svirfneblin<br><br>
+				- Content: IWD/IWD2 animations for svirfneblin (deep gnomes). By default, they are pale (flesh-coloured) whereas in canon references, they should be darker (stone-coloured). The original game had variants with and without pickaxes (they do not display separate weapon animations). Since these slots are unpaletted, there are alternates as follows (the last two being custom variants of the IWD pale animations): Svirfneblin pale with axe, Svirfneblin pale without axe, Svirfneblin dark with axe, Svirfneblin dark without axe. Includes gnome sounds ported from NWN.<br>
+				- Needed for Svirfneblin Animations [480-490] component.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_moinesse_edits_iaised</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px;">IA Content - Moinesse's Avatar Edits (IA compatible version)<br><br>
+				- Content: Female Elf Mage, Female Human Druid, Female Human Fighter, Female Human Mage, Female Human Thief, Male Human Barbarian, Male Human Ninja, Male Vampire.<br>
+				- Needed for Moinesse's Avatars for IA [7000-7010-7020-7030] component.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_01_modron</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
+				- Content: Alternate Modron, WoRm's NWN ports (Amel, Basilisk, Bebilith, Hamatula, Osyluth, Pit Fiend, Scarecrow, Vedred). Includes all relevant creature sounds and tables.<br>
+				- Needed for Distinctive Fiends [100], Pit Fiends {150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_1</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Miscellaneous NWN Animations I<br><br>
+				- Content: Bombardier Beetle, Displacer Beast, Female Fire and Frost Giants, Succubus (with object animations), Bovine Axe Thing (don't ask). Includes all relevant creature sounds and tables.<br>
+				- Needed for Distinctive Fiends [100] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_abishai</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Abishai<br><br>
+				- Content: Black Abishai, Blue Abishai, Green Abishai, Red Abishai (based on PS:T animations). Includes creature sounds.<br>
+				- Needed for Distinctive Fiends [100] component.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_paletted</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Paletted Animations<br><br>
+				- Content: Aasimar Female, Baurier Male, Curst Townie Female, Curst Townie Male, Dustman Female, Dustman Male, Ghoul Female, Ghoul Male, Githzerai, Godsman, Large Thug, Lower Class Townie Female, Lower Class Townie Male, Merchant, Midwife, Prostitute, Skeleton Priest, Skeleton Worker, Thokola, Thug, Tiefling Female, Tiefling Male, Townie Wizard, Upper Class Townie Female, Upper Class Townie Male, Zombie Female, Zombie Male. Includes animation sound clips.<br>
+				- Needed for More Planescape: Torment Animations [710-720-760-740] component.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_shadows_harpy_frostgiant</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Shadows, Harpy and Frost Giant<br><br>
+				- Content: Alternate ("murky") Shadows, Harpy and Frost Giant from IWD. Includes all relevant creature sounds and tables.<br>
+				- Needed for Distinctive Undead [400] component; and for BP, Drizzt Saga, NEJv691, RoT, TDD and TS mods.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_wh_dr_wyv_lop</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - White Wyvern and Dragon, Lady of Pain<br><br>
+				- Content: IWD White Dragon, IWD White Wyvern large, Lady of Pain. Includes all relevant creature sounds and tables.<br>
+				- Needed for Planar Sphere mod.<br><br>
+				<span style="padding-left:20px;">0 = Don't install</span><br>
+				<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
+			</tr>
+			</table><br><br>
+
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Installation</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- =================== C o m p o n e n t s ==================== -->
+	  <a name="compon" id="compon"></a>
+	  <div class="content">
+
+		<h2>Components</h2><br>
+
+		<p>
+			The installer includes the following components. The number of each is the component DESIGNATED number which gives it a fixed install position, lets other components detect it and allows automated installers like the BiG World Setup specify component choices.
+		</p>
+		<p>
+			All subcomponents require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable <acronym title="Non-Player Characters">NPCs</acronym>, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)
+		</p><br>
+
+		<p>
+			<span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations (main component)</a></span></br>
+			<span style="margin-left: 50px;"><a href="#25">[25] Humanoid Animation Fixes</a></span></br>
+			<span style="margin-left: 50px;"><a href="#50">[50] Distinctive Genies</a></span></br>
+			<span style="margin-left: 50px;"><a href="#100">[100] Distinctive Fiends</a></span></br>
+			<span style="margin-left: 50px;"><a href="#150">[150-175] Pit Fiends</a></span></br>
+			<span style="margin-left: 50px;"><a href="#210">[210-230] Cambions get Isair Animation</a></span></br>
+			<span style="margin-left: 50px;"><a href="#260">[260-280] Alu-Fiends get Madae Animation</a></span></br>
+			<span style="margin-left: 50px;"><a href="#400">[400] Distinctive Undead</a></span></br>
+			<span style="margin-left: 50px;"><a href="#410">[410-415-420] Skeleton Warriors</a></span></br>
+			<span style="margin-left: 50px;"><a href="#450">[450-455-460] Seer Animation</a></span></br>
+			<span style="margin-left: 50px;"><a href="#480">[480-490] Svirneblin Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#500">[500] More Base Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#550">[550] More Icewind Dale Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#600">[600] More Icewind Dale II Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#650">[650] More Neverwinter Nights Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#710">[710-720-730-740] More Planescape: Torment Animations</a></span></br>
+			<span style="margin-left: 50px;"><a href="#7000">[7000-7010-7020-7030] Moinesse's Avatars for IA</a></span></br>
+			<span style="margin-left: 50px;"><a href="#8000">[8000-8010-8020-8030] BG1 Character Animations for NPCs</a></span></br>
+			<span style="margin-left: 50px;"><a href="#9000">[9000] Fix Area Creature References</a></span></br>
+			<span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] BG1 Character Animations for PCs</a></span></br>
+			<span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] BG1 Character Animations for Saved Games</a></span></br>
+			<span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span>
+		</p><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="0" id="0"></a>
+			<strong>0. Infinity Animations (main component)</strong><br />
+			<em><span style="margin-left: 15px;">Requires <acronym title="Throne of Bhaal">ToB</acronym> v26498</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Checks mod files</li>
+			<li>ToB only: Checks .exe validity, backs up and patches the .exe</li>
+			<li>ToB only: Replaces _LOW creature animations</li>
+			<li>Updates .ids files</li>
+			<li>Restores any necessary mod-overwritten animations</li>
+			<li>Copies new animations (any extracted to /content folder)</li>
+			<li>Fixes any affected creatures</li>
+		  </ul><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="25" id="25"></a>
+			<strong>25. Humanoid Animation Fixes</strong>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Male human fighters get the fighter instead of cleric animation</li>
+			<li>Male elf fighters get the fighter instead of cleric animation</li>
+			<li>Male halfling fighters get the fighter instead of cleric animation</li>
+			<li>Female human fighters get the fighter instead of cleric animation</li>
+			<li>Male human mages get the mage instead of cleric animation</li>
+			<li>Male elf mages get the mage instead of cleric animation</li>
+			<li>Male human thieves get the thief instead of fighter animation</li>
+			<li>Female human thieves get the thief instead of fighter animation</li>
+			<li>Male human monks get the monk instead of cleric animation</li>
+			<li>Male human pirates get the pirate animation</li>
+			<li>Male human sailors get the sailor animation</li>
+			<li>Amnish guards get the Amnish guard animation</li>
+			<li>Male human Shadow Thieves get the Shadow Thief animation</li>
+		  </ul><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		  <p><a name="50" id="50"></a>
+			<strong>50. Distinctive Genies</strong><br />
+			<em><span style="margin-left: 22px;">Requires IA_Fiends_Genies content</span></em>
+		  </p>
+		  <ul style="margin-left: 4%;">
+			<li>Uses djinn, efreet, dao, jann and marid animations where sensible</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="100" id="100"></a>
+			<strong>100. Distinctive Fiends</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_Fiends_Genies, IA_IWD and IA_PST_Abishai content<br></span>
+			<span style="margin-left: 34px;">Requires IA_NWN_01_Modron content only if certain mods are installed</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Nabassus get a green-grey tanar'ri animation</li>
+			<li>Chromatic Demon gets a somewhat more colourful base animation</li>
+			<li>Bebiliths (Longer Road and Drizzt Saga only) get the <acronym title="Neverwinter Nights">NWN</acronym> animation</li>
+			<li>Some mariliths get a darker animation</li>
+			<li>Night hags get the <acronym title="Planescape: Torment">PS:T</acronym> night hag animation</li>
+			<li>Bone fiends get the <acronym title="Neverwinter Nights">NWN</acronym> osyluth animation</li>
+			<li>Gelugons (only if added by a mod) get a frost salamander animation</li>
+			<li>Yochlols (except those in drow form) get a dark otyugh-based animation</li>
+			<li>White, green and red abishai get the relevant <acronym title="Icewind Dale">IWD</acronym> or <acronym title="Planescape: Torment">PS:T</acronym> animations</li>
+			<li>Manes get the <acronym title="Icewind Dale">IWD</acronym> drowned dead animation</li>
+			<li>Erinyes get a black-winged elf avatar</li>
+			<li>Succubi get the <acronym title="Neverwinter Nights">NWN</acronym> succubus animation</li>
+			<li>Maurezhi get a dark ghoulish animation</li>
+			<li>Glabrezu get the proper glabrezu animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="150" id="150"></a>
+			<strong>Pit Fiends<br />
+			150.</strong> All get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
+			<strong>175.</strong> Some get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
+			<em><span style="margin-left: 34px;">Requires IA_NWN_01_Modron content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Choice of subcomponent (or none); "some" = roughly half, randomly selected</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="210" id="210"></a>
+			<strong>Cambions get Isair Animation<br />
+			210.</strong> All cambions<br />
+			<strong>230.</strong> Some cambions<br />
+			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Same logic as Pit Fiends component</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="260" id="260"></a>
+			<strong>Alu-Fiends get Madae Animation<br />
+			260.</strong> All alu-fiends<br />
+			<strong>280.</strong> Some alu-fiends<br />
+			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Same logic as Pit Fiends component</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="400" id="400"></a>
+			<strong>400. Distinctive Undead</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Banshees get the wailing virgin animation</li>
+			<li>Floating skulls get the demilich animation</li>
+			<li>Greater ghasts get the <acronym title="Icewind Dale">IWD</acronym> greater ghast animation</li>
+			<li>Generic ghosts get the <acronym title="Icewind Dale">IWD</acronym> ghost animation</li>
+			<li>Greater ghouls get the <acronym title="Icewind Dale">IWD</acronym> greater ghoul animation</li>
+			<li>Some ghouls get the <acronym title= "Planescape: Torment">PS:T</acronym> ghoul queen animation</li>
+			<li>Greater liches get the <acronym title="Icewind Dale">IWD</acronym> white lich animation</li>
+			<li>Apparitions get the mist creature animation</li>
+			<li>Revenants get the revenant animation</li>
+			<li>Shadow Beasts get the shadow animation</li>
+			<li>Wraiths get the <acronym title="Icewind Dale">IWD</acronym> large shadow animation</li>
+			<li>Spectres get the <acronym title="Icewind Dale">IWD</acronym> large shadow murky animation</li>
+			<li>Shadows get the <acronym title="Icewind Dale">IWD</acronym> small shadow animation</li>
+			<li>Some shadows get the <acronym title="Icewind Dale">IWD</acronym> small shadow murky animation</li>
+			<li>Greater skeletons get the skeleton monster animation (former skeleton0)</li>
+			<li>Moon horrors get the skeleton fiend animation (former skeletonb)</li>
+			<li>Female vampires get the vampire female animation</li>
+			<li>Wights get the <acronym title="Icewind Dale">IWD</acronym> grey wight animation</li>
+			<li>Green zombies get the <acronym title="Icewind Dale">IWD</acronym> green wight animation</li>
+			<li>Zombie lords get the <acronym title="Icewind Dale">IWD</acronym> yellow wight animation</li>
+			<li>Undead knights and similar get the <acronym title="Icewind Dale">IWD</acronym> barrow wight animation</li>
+			<li>Greater zombies get the <acronym title="Icewind Dale">IWD</acronym> yellow zombie animation</li>
+			<li>Lacedons and sea zombies get the <acronym title="Icewind Dale">IWD</acronym> blue zombie animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="410" id="410"></a>
+			<strong>Skeleton Warriors<br />
+			410.</strong> Wight Barrow animation<br />
+			<strong>415.</strong> Skeleton animation<br />
+			<strong>420.</strong> Skeleton Warrior animation<br />
+			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Assigns the chosen animation to all skeleton warriors</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="450" id="450"></a>
+			<strong>Seer Animation<br />
+			450.</strong> Some beggars and slaves<br />
+			<strong>455.</strong> Some beggars<br />
+			<strong>460.</strong> Some slaves<br />
+			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Same logic as Pit Fiends component</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="480" id="480"></a>
+			<strong>Svirneblin Animations<br />
+			480.</strong> Animations only<br />
+			<strong>490.</strong> Animations and sounds<br />
+			<em><span style="margin-left: 34px;">Requires IA_IWD_Svirfneblin content</span><br />
+			<span style="margin-left: 34px;">Skipped if Aurora's Shoes installed (does the same thing)</span></em>
+		 </p>
+		  <ul style="margin-left: 4%;">
+			<li>Uses all svirfneblin variants for Underdark deep gnomes</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="500" id="500"></a>
+			<strong>500. More Base Animations</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_Base_Anims content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Histachii get the <acronym title="Icewind Dale">IWD</acronym> histachii animation</li>
+			<li>Lizardman warriors get the lizardman elite animation (brown)</li>
+			<li>Lizardman shamans get the lizardman animation (green)</li>
+			<li>Lizardman chiefs get the lizard king animation</li>
+			<li>Variant trolls (normal, blue, ice, snow, small) where relevant</li>
+			<li>Greater umber hulks get the <acronym title="Icewind Dale">IWD</acronym> elder umber hulk animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="550" id="550"></a>
+			<strong>550. More Icewind Dale Animations</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Animated Plates get small animated plate animations</li>
+			<li>Archdruids get the <acronym title="Icewind Dale">IWD</acronym> Arundel animation</li>
+			<li>Variant barbarians (brown, red, tan and shamans)</li>
+			<li>Greater elementals make use of variant <acronym title="Baldur's Gate II">BG2</acronym>/<acronym title="Icewind Dale">IWD</acronym> animations</li>
+			<li>Some fire giants get the <acronym title="Icewind Dale">IWD</acronym> fire giant animation</li>
+			<li>Iron golems get the <acronym title="Icewind Dale">IWD</acronym> iron golem animation</li>
+			<li>Adamantite golems get the <acronym title="Baldur's Gate II">BG2</acronym> iron golem animation</li>
+			<li>Sahuagin priestesses get the <acronym title="Icewind Dale">IWD</acronym> sahuagin animation</li>
+			<li>Sahuagin royal guards get the <acronym title="Baldur's Gate II">BG2</acronym> large sahuagin animation</li>
+			<li>Sahuagin chiefs get the <acronym title="Icewind Dale">IWD</acronym> large sahuagin animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="600" id="600"></a>
+			<strong>600. More Icewind Dale II Animations</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Greater fire giants and firbolgs get the fire giant variant animation</li>
+			<li>Variant goblins (worgriders, leaders, brown, green, elites)</li>
+			<li>Hook horrors get the hook horror animation</li>
+			<li>Shadow druids get the Malarite animation</li>
+			<li>Ellesime clones get the white-haired Ellesime animation</li>
+			<li>Poison mists get the lagoon creature animation</li>
+			<li>Death tyrants get the death tyrant animation</li>
+			<li>Wererat gets the wererat animation</li>
+			<li>Worgs get the <acronym title="Icewind Dale II">IWD2</acronym> worg animation</li>
+			<li>Yuan-Ti Halfbreeds get the <acronym title="Icewind Dale II">IWD2</acronym> yuan-ti halfbreed animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="650" id="650"></a>
+			<strong>650. More Neverwinter Nights Animations</strong><br />
+			<em><span style="margin-left: 34px;">Requires IA_NWN_01_Modron content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Scythe-wielders (in <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym>) get the <acronym title="Neverwinter Nights">NWN</acronym> Amel animation</li>
+			<li>Bombardier beetle (in Big Picture) gets the <acronym title="Neverwinter Nights">NWN</acronym> animation</li>
+			<li>Greater basilisks get the <acronym title="Neverwinter Nights">NWN</acronym> basilisk animation</li>
+			<li>Modrons get the modron animation</li>
+			<li>Displacer beasts (in AjocMod) get the <acronym title="Neverwinter Nights">NWN</acronym>-<acronym title="Community Creature Project">CCP</acronym> animation</li>
+			<li>Some fire giants get the <acronym title="Neverwinter Nights">NWN</acronym> female fire giant animation</li>
+			<li>Some frost giants get the <acronym title="Neverwinter Nights">NWN</acronym> female frost giant animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="710" id="710"></a>
+			<strong>More Planescape: Torment Animations<br />
+			710.</strong> 25% of relevant non-joinables<br />
+			<strong>720.</strong> 50% of relevant non-joinables<br />
+			<strong>730.</strong> 75% of relevant non-joinables<br />
+			<strong>740.</strong> Most relevant non-joinables<br />
+			<em><span style="margin-left: 34px;">Requires IA_PST_Paletted content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Female human thieves get the female Curst townie animation</li>
+			<li>Male human thieves get the male Curst townie animation</li>
+			<li>Female monks get the female Dustman animation</li>
+			<li>Male monks and Dustmen get the male Dustman animation</li>
+			<li>Some ghouls get the female ghoul animation</li>
+			<li>Some ghouls get the male ghoul animation</li>
+			<li>Male human smiths get the Godsman animation</li>
+			<li>Axe- and hammer-wielding bandits and mercenaries get the large thug animation</li>
+			<li>Sword- and dagger-wielding bandits and mercenaries get the small thug animation</li>
+			<li>Female human peasants get the female lower-class townie animation</li>
+			<li>Male human peasants get the male lower-class townie animation</li>
+			<li>Male human merchants get the merchant animation</li>
+			<li>Female human merchants get the midwife animation</li>
+			<li>Harlots get the harlot animation</li>
+			<li>Skeleton mage gets the skeleton priest animation</li>
+			<li>Skeletons get the skeleton worker animation</li>
+			<li>Female tieflings get the female tiefling animation</li>
+			<li>Male tieflings get the male tiefling animation</li>
+			<li>Male human mages get the townie wizard animation</li>
+			<li>Female human nobles get the female upper-class townie animation</li>
+			<li>Male human nobles get the male upper-class townie animation</li>
+			<li>Some zombies get the female zombie animation</li>
+			<li>Some zombies get the male zombie animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="7000" id="7000"></a>
+			<strong>Moinesse's Avatars for <acronym title="Infinity Animations">IA</acronym><br />
+			7000.</strong> 25% of relevant non-joinables<br />
+			<strong>7010.</strong> 50% of relevant non-joinables<br />
+			<strong>7020.</strong> 75% of relevant non-joinables<br />
+			<strong>7030.</strong> Most relevant non-joinables<br />
+			<em><span style="margin-left: 44px;">Requires Moinesse_edits_IAised content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Male human barbarians get the male barbarian animation</li>
+			<li>Female human druids get the female druid animation</li>
+			<li>Female human fighters get the female human fighter animation</li>
+			<li>Female elf mages get the female elf mage animation</li>
+			<li>Female human mages get the female human mage animation</li>
+			<li>Female human thieves get the female human thief animation (unless they've already received the female Curst townie animation)</li>
+			<li>Male human ninjas and assassins get the male human ninja animation (unless they've already received the male Curst townie or the Shadow thief animation)</li>
+			<li>Male vampires get the Moinesse vampire animation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="8000" id="8000"></a>
+			<strong><acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Non-Player Characters">NPCs</acronym><br />
+			8000.</strong> 25% of relevant creatures<br />
+			<strong>8010.</strong> 50% of relevant creatures<br />
+			<strong>8020.</strong> 75% of relevant creatures<br />
+			<strong>8030.</strong> Most relevant creatures<br />
+			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Uses the original Baldur's Gate character animations as specified</li>
+			<li>The last option is "most" instead of "all" because certain creatures are excluded</li>
+			<li>These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since <acronym title="Baldur's Gate">BG1</acronym> did not have these animations</li>
+			<li><strong>Use with caution</strong> in the case of joinable <acronym title="Non-Player Characters">NPCs</acronym>: it will avoid any characters with the two weapon proficiency or a second weapon equipped, but do not try to dual wield</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="9000" id="9000"></a>
+			<strong>9000. Fix Area Creature References</strong><br />
+			<em><span style="margin-left: 44px;">Installed by default</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Corrects changed creature animations in area files for easier reference</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="9500" id="9500"></a>
+			<strong><acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Player Characters">PCs</acronym><br />
+			9500.</strong> Prompt for each exported <acronym title="Player Character">PC</acronym><br />
+			<strong>9510.</strong> Prompt for problematic <acronym title="Player Characters">PCs</acronym><br />
+			<strong>9520.</strong> Patch all <acronym title="Player Characters">PCs</acronym> without prompting<br />
+			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Uses the original Baldur's Gate character animations as specified</li>
+			<li>The second option patches all <acronym title="Player Characters">PCs</acronym> but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot</li>
+			<li>Scimitars and katanas should work, but will appear as longswords on character avatars</li>
+			<li><strong>Use with caution</strong>: do not try to dual wield or the game will likely crash</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="9600" id="9600"></a>
+			<strong><acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games<br />
+			9600.</strong> Prompt for each character<br />
+			<strong>9610.</strong> Prompt for problematic characters<br />
+			<strong>9620.</strong> Patch all characters without prompting<br />
+			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>Same notes as above</li>
+			<li>You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)</li>
+			<li><strong>Back up your saved games</strong> before uninstalling this component, as it will restore the versions present at the time of the installation</li>
+		  </ul>
+		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
+		</p>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p><a name="9900" id="9900"></a>
+			<strong>Saved Game Animation Fixer<br />
+			9900.</strong> Correct only LOW animations<br />
+			<strong>9910.</strong> Correct all animations <acronym title="Infinity Animations">IA</acronym> has changed
+		</p>
+		  <ul style="margin-left: 4%;">
+			<li>The first option prevents games from crashing due to moved LOW animations</li>
+			<li>The second option does the above and also patches any changed animations into your saved games</li>
+			<li>You get to choose whether to patch each game</li>
+			<li>If you've started a new game after installing this mod, then this component is not necessary (unless you're starting in the <acronym title="Baldur's Gate II">BG2</acronym> portion of <acronym title="Baldur's Gate Trilogy">BGT</acronym>)</li>
+			<li><strong>Back up your saved games</strong> before uninstalling this component, as it will restore the versions present at the time of the installation</li>
+		  </ul><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Components</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ============== T r o u b l e s h o o t i n g =============== -->
+	  <a name="trouble" id="trouble"></a>
+	  <div class="content">
+
+          <h2>Troubleshooting</h2><br>
+
+		<p>
+			These are some general tips if you have problems getting the game working, with or without this or other mods. Many times, errors have to do with the game engine itself or the manner of installation or gameplay. The game recommends deleting all files out of the /cache, /temp and /tempsave subfolders in your game folder to see if that resolves the problem before any further troubleshooting.
+		</p><br>
+
+		<p>
+			<strong>Symptom: Game freezes or crashes to desktop (CTDs)</strong>
+		</p>
+		<p>
+			Sometimes the game displays an "assertion error" in a pop-up window when this happens, but often times it doesn't. To enable the full error message, open the file <strong>baldur.ini</strong> in your me folder with a text editor (such as Notepad). If you find you can't edit it or save changes in Windows Vista or 7, see <a href="http://forums.bioware.com/viewtopic.html?topic=662080&forum=10"> this topic</a> for assistance.
+		</p>
+		<p>
+			Under the [Program Options] section in the file, type <strong> Logging On=1</strong> (unless it's already there). While you're there, you may also want to make sure <strong>Debug Mode=1</strong> is there to enable the <a href="http://iesdp.gibberlings3.net/clua/bg2.htm">CLUA Console</a> for debugging and testing. Save the file and exit. Now go back into the game and try to reproduce the crash. Then look in your game folder again for the <strong>Baldur.err</strong> file and open it with a text editor to analyse its contents.
+		</p><br>
+
+		<p>
+			<strong>Symptom: Game crashes with no Baldur.err log and shows either a black screen or a pop-up window indicating an error at offset 005ca8a8</strong>
+		</p>
+		<p>
+			This usually indicates an animation-related issue. Make sure you have the latest version of the mod. If you've installed other mods after it and have this issue, install the fix available <a href="http://www.shsforums.net/index.php?app=downloads&showfile=884">here</a>.
+		</p><br>
+
+		<p>
+			<strong>Symptom:</strong>
+		</p>
+		<div class="important" style="background-color: black;color: #deded9;">
+			<p style="font-family: Courier New;font-size: 100%;">
+				<strong>ERROR: error copying [infinityanimations/content/somefile.bam]<br />
+				ERROR: [SOMEFILE.CRE] -> [override/SOMEFILE.CRE] Patching failed (COPY)<br />
+				Stopping installation because of error.</strong> (with no other error message)<br />
+			</p>
+		</div>
+		<p>
+			Less-than-informative messages like these may indicate you're installing to a hard drive with a low data transfer rate or an antivirus program is active during installation (which can also affect data transfer). Try installing to an internal drive with antivirus protection disabled during the install. If unsure, disconnect from the Internet (either unplug your network cable or disable your wireless adaptor) and turn off <strong>all</strong> memory-resident programs during the install. To get a list of these, go to Start > Run and type <strong>msconfig</strong> where it says "Open:" then click OK. When the System Configuration Utility appears, click on the Startup tab. The only really necessary programs that need to be loaded in memory at startup are those related to your graphics chip (typically ATI or NVIDIA). Uncheck everything else, reboot and try installing the mod again. There are well-documented issues with installing mods while Avast antivirus is running, so make absolutely sure all components of Avast are completely disabled.
+		</p><br>
+
+		<p>
+			<strong>Other issues</strong>
+		</p>
+		<p>
+			If you have more than one large mod installed, please refer to the <a href="http://www.shsforums.net/index.php?showtopic=41036">Megamod FAQ</a> for more troubleshooting tips.
+		</p><br>
+		<p>
+			If none of this resolves your issue, or you have mod-specific issues, please report the problem in the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations">forum</a>. Include the contents of your <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.log file in the post, or attach it if it's large.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Troubleshooting</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- =================== A n i m a t i o n s ==================== -->
+	  <a name="anims" id="anims"></a>
+	  <div class="content">
+
+		<h2>Animations</h2><br>
+
+		<p style="font-size: 120%;">
+			<strong><acronym title="Infinity Animations">IA</acronym> Base Animations</strong>
+		</p>
+		<p>
+			These animations do not exist in a typical Baldur's Gate II game, though the slots exist and can display the relevant Icewind Dale content if ported. Hover your cursor over each animation to see its name.
+		</p><br>
+		<p>
+			<img width=57 height=56 src="images/0xe060.gif" title="lich_white" />
+			<img width=44 height=53 src="images/0xe310.gif" title="ghoul_greater" />
+			<img width=44 height=53 src="images/0xe320.gif" title="ghast_greater" />
+			<img width=46 height=65 src="images/0xe300.gif" title="ghost" />
+			<img width=46 height=65 src="images/0xea10.gif" title="shadow_small" />
+			<img width=62 height=90 src="images/0xea20.gif" title="shadow_large" />
+			<img width=48 height=49 src="images/0xec00.gif" title="wight_gray" />
+			<img width=48 height=49 src="images/0xec10.gif" title="wight_green" />
+			<img width=64 height=65 src="images/0xec20.gif" title="wight_yellow" />
+			<img width=42 height=67 src="images/0xee00.gif" title="zombie_yellow" />
+			<img width=41 height=67 src="images/0xee10.gif" title="zombie_blue" />
+			<img width=27 height=26 src="images/0xe210.gif" title="beetle_fire" />
+			<img width=47 height=44 src="images/0xe220.gif" title="beetle_bombardier" />
+			<img width=59 height=61 src="images/0xe200.gif" title="beetle_boring" />
+			<img width=49 height=64 src="images/0xe040.gif" title="histachii" />
+			<img width=60 height=60 src="images/0xe0a0.gif" title="troll_ice" />
+			<img width=74 height=70 src="images/0xe0c0.gif" title="troll_snow" />
+			<img width=93 height=95 src="images/0xe0d0.gif" title="umber_hulk_elder" />
+			<img width=62 height=85 src="images/0xe510.gif" title="lizard_man" />
+			<img width=132 height=103 src="images/0xe520.gif" title="lizard_king" />
+			<img width=132 height=155 src="images/0xe000.gif" title="cyclops" />
+			<img width=149 height=151 src="images/0xe230.gif" title="beetle_rhinoceros" />
+		</p><br><br>
+
+		<p style="font-size: 120%;">
+			<strong>Selection of Other Animations</strong>
+		</p>
+		<p>
+			These animations do not exist in most Baldur's Gate II games; the following have been added (ported or customised) as of the last update of this readme.
+		</p><br>
+		<p>
+			<img width=48 height=34 src="images/0x5285.gif" title="creeping_doom" />
+			<img width=33 height=38 src="images/0x5264.gif" title="svirfneblin_pale_noaxe" />
+			<img width=33 height=38 src="images/0x5346.gif" title="svirfneblin_dark_noaxe" />
+			<img width=41 height=49 src="images/0x5263.gif" title="svirfneblin_pale_axe" />
+			<img width=41 height=49 src="images/0x5345.gif" title="svirfneblin_dark_axe" />
+			<img width=31 height=38 src="images/0x5259.gif" title="goblin_bow_green (IWD)" />
+			<img width=31 height=37 src="images/0x5254.gif" title="goblinelite_bow_green (IWD)" />
+			<img width=33 height=38 src="images/0x5258.gif" title="goblin_axe_green (IWD)" />
+			<img width=34 height=42 src="images/0x5253.gif" title="goblinelite_axe_green (IWD)" />
+			<img width=47 height=47 src="images/0x5257.gif" title="goblin_shaman" />
+			<img width=59 height=56 src="images/0x5252.gif" title="goblin_captain" />
+			<img width=37 height=42 src="images/0x525b.gif" title="keg1" />
+			<img width=37 height=42 src="images/0x525c.gif" title="keg2" />
+			<img width=37 height=42 src="images/0x525d.gif" title="keg3" />
+			<img width=45 height=47 src="images/0x5291.gif" title="beetle_bombardier_nwn" />
+			<img width=58 height=49 src="images/0x5262.gif" title="worg (IWD)" />
+			<img width=29 height=52 src="images/0x5b01.gif" title="lagoon_creature" />
+			<img width=39 height=52 src="images/0x528a.gif" title="seer (IWD)" />
+			<img width=72 height=52 src="images/0x5011.gif" title="elemental_water_small" />
+			<img width=18 height=54 src="images/0x5b00.gif" title="ellesime_white" />
+			<img width=46 height=54 src="images/0x547a.gif" title="maurezhi" />
+			<img width=52 height=54 src="images/0x5280.gif" title="barbarian_warrior_tan" />
+			<img width=57 height=55 src="images/0x5281.gif" title="barbarian_warrior_red" />
+			<img width=55 height=56 src="images/0x5282.gif" title="barbarian_warrior_brown" />
+			<img width=58 height=55 src="images/0x5246.gif" title="werebadger" />
+			<img width=74 height=55 src="images/0x5247.gif" title="wererat" />
+			<img width=61 height=56 src="images/0x524a.gif" title="boar_arctic" />
+			<img width=48 height=58 src="images/0x5b02.gif" title="modron_round" />
+			<img width=42 height=56 src="images/0x5b7b.gif" title="hag_night" />
+			<img width=42 height=56 src="images/0x5b0b.gif" title="hag_green" />
+			<img width=42 height=56 src="images/0x5b0c.gif" title="hag_sea" />
+			<img width=42 height=60 src="images/0x5b79.gif" title="ghoul_queen" />
+			<img width=32 height=47 src="images/0x5dc1.gif" title="merchant_pst" />
+			<img width=29 height=53 src="images/0x5d5b.gif" title="skeleton_worker_pst" />
+			<img width=25 height=53 src="images/0x5dbf.gif" title="ghoul_female_pst" />
+			<img width=26 height=54 src="images/0x5dc0.gif" title="ghoul_male_pst" />
+			<img width=20 height=52 src="images/0x5d63.gif" title="zombie_female_pst" />
+			<img width=23 height=60 src="images/0x5d64.gif" title="zombie_male_pst" />
+			<img width=28 height=56 src="images/0x5d58.gif" title="midwife_pst" />
+			<img width=32 height=58 src="images/0x5dba.gif" title="aasimar_female_pst" />
+			<img width=26 height=58 src="images/0x5d52.gif" title="githzerai_pst" />
+			<img width=24 height=56 src="images/0x5dbc.gif" title="dustman_female_pst" />
+			<img width=25 height=61 src="images/0x5dbe.gif" title="dustman_male_pst" />
+			<img width=28 height=61 src="images/0x5d4c.gif" title="townie_curst_female_pst" />
+			<img width=34 height=59 src="images/0x5dbb.gif" title="townie_curst_male_pst" />
+			<img width=31 height=60 src="images/0x5d55.gif" title="townie_lower_class_female_pst" />
+			<img width=27 height=57 src="images/0x5d56.gif" title="townie_lower_class_male_pst" />
+			<img width=32 height=58 src="images/0x5dae.gif" title="townie_upper_class_female_pst" />
+			<img width=26 height=60 src="images/0x5d62.gif" title="townie_upper_class_male_pst" />
+			<img width=26 height=65 src="images/0x5d59.gif" title="harlot_pst" />
+			<img width=28 height=59 src="images/0x5d5d.gif" title="thug_pst" />
+			<img width=35 height=63 src="images/0x5d54.gif" title="thug_large_pst" />
+			<img width=30 height=61 src="images/0x5dc3.gif" title="tiefling_female_pst" />
+			<img width=35 height=61 src="images/0x5dac.gif" title="tiefling_male_pst" />
+			<img width=31 height=62 src="images/0x5d53.gif" title="godsman_pst" />
+			<img width=48 height=66 src="images/0x5dc2.gif" title="skeleton_priest_pst" />
+			<img width=51 height=72 src="images/0x5d5c.gif" title="thokola_pst" />
+			<img width=29 height=74 src="images/0x5d4b.gif" title="bariaur_male_pst" />
+			<img width=31 height=81 src="images/0x5dad.gif" title="townie_wizard_pst" />
+			<img width=26 height=55 src="images/0x6841.gif" title="moinesse_mage_female_elf" />
+			<img width=25 height=63 src="images/0x6845.gif" title="moinesse_druid_female_human" />
+			<img width=25 height=63 src="images/0x6846.gif" title="moinesse_fighter_female_human" />
+			<img width=31 height=63 src="images/0x6847.gif" title="moinesse_mage_female_human" />
+			<img width=25 height=64 src="images/0x6848.gif" title="moinesse_thief_female_human" />
+			<img width=26 height=64 src="images/0x683f.gif" title="moinesse_vampire" />
+			<img width=25 height=63 src="images/0x683e.gif" title="moinesse_ninja_male_human" />
+			<img width=25 height=63 src="images/0x683d.gif" title="moinesse_barbarian_male_human" />
+			<img width=51 height=60 src="images/0x5244.gif" title="malarite" />
+			<img width=44 height=61 src="images/0x5347.gif" title="arundel" />
+			<img width=54 height=61 src="images/0x528e.gif" title="wight_barrow" />
+			<img width=50 height=63 src="images/0x527f.gif" title="barbarian_shaman_club" />
+			<img width=48 height=64 src="images/0x527d.gif" title="barbarian_shaman_hammer" />
+			<img width=48 height=67 src="images/0x527e.gif" title="barbarian_shaman_staff" />
+			<img width=86 height=61 src="images/0x525e.gif" title="lemure" />
+			<img width=64 height=64 src="images/0x5286.gif" title="drowned_dead" />
+			<img width=46 height=65 src="images/0x526a.gif" title="shadow_small_murky" />
+			<img width=60 height=66 src="images/0x547b.gif" title="myrlochar" />
+			<img width=143 height=65 src="images/0x5269.gif" title="harpy" />
+			<img width=47 height=64 src="images/0x5261.gif" title="orc_axe_undead" />
+			<img width=50 height=66 src="images/0x5260.gif" title="orc_shaman_undead" />
+			<img width=43 height=69 src="images/0x5290.gif" title="succubus_nwn" />
+			<img width=52 height=69 src="images/0x5248.gif" title="yuan-ti_half" />
+			<img width=52 height=73 src="images/0x5284.gif" title="belhifet_priest" />
+			<img width=52 height=73 src="images/0x526e.gif" title="vedred_pc_nwn" />
+			<img width=57 height=78 src="images/0x526d.gif" title="amel_pc_nwn" />
+			<img width=72 height=71 src="images/0x500e.gif" title="bugbear" />
+			<img width=75 height=79 src="images/0x500f.gif" title="bugbear_captain" />
+			<img width=60 height=79 src="images/0x5b7b.gif" title="hag_annis" />
+			<img width=83 height=79 src="images/0x524f.gif" title="feyr" />
+			<img width=77 height=82 src="images/0x528b.gif" title="tundra_yeti" />
+			<img width=70 height=84 src="images/0x5283.gif" title="barbarian_icasaracht" />
+			<img width=58 height=75 src="images/0x5018.gif" title="goblin_worg" />
+			<img width=64 height=89 src="images/0x5019.gif" title="goblin_worg_captain" />
+			<img width=58 height=85 src="images/0x527a.gif" title="animated_plate_dark_small" />
+			<img width=58 height=86 src="images/0x5279.gif" title="animated_plate_bronze_small" />
+			<img width=62 height=93 src="images/0x527b.gif" title="animated_plate_green_small" />
+			<img width=37 height=85 src="images/0x5fbc.gif" title="dao" />
+			<img width=37 height=85 src="images/0x5fbe.gif" title="efreeti" />
+			<img width=37 height=85 src="images/0x5fc0.gif" title="janni" />
+			<img width=37 height=85 src="images/0x5fc2.gif" title="marid" />
+			<img width=73 height=85 src="images/0x5fbd.gif" title="dao_legs" />
+			<img width=73 height=85 src="images/0x5fbf.gif" title="efreeti_legs" />
+			<img width=73 height=85 src="images/0x5fc1.gif" title="janni_legs" />
+			<img width=79 height=84 src="images/0x5fc3.gif" title="marid_legs" />
+			<img width=60 height=86 src="images/0x5277.gif" title="sahuagin_iwd" />
+			<img width=73 height=74 src="images/0x5249.gif" title="abishai_white" />
+			<img width=70 height=83 src="images/0x5b04.gif" title="abishai_blue" />
+			<img width=70 height=83 src="images/0x5b06.gif" title="abishai_red" />
+			<img width=75 height=89 src="images/0x5b05.gif" title="abishai_green" />
+			<img width=80 height=96 src="images/0x5b03.gif" title="abishai_black" />
+			<img width=47 height=88 src="images/0x526b.gif" title="shadow_large_murky" />
+			<img width=112 height=89 src="images/0x5039.gif" title="elemental_water" />
+			<img width=115 height=89 src="images/0x5037.gif" title="elemental_earth_iwd" />
+			<img width=131 height=93 src="images/0x5c00.gif" title="death_tyrant" />
+			<img width=29 height=94 src="images/0x5273.gif" title="scarecrow_nwn" />
+			<img width=126 height=96 src="images/0x5fdd.gif" title="yochlol" />
+			<img width=89 height=97 src="images/0x525f.gif" title="orog_shaman" />
+			<img width=120 height=97 src="images/0x557b.gif" title="basilisk_nwn" />
+			<img width=95 height=100 src="images/0x528c.gif" title="umber_hulk_vodyanoi" />
+			<img width=104 height=100 src="images/0x5038.gif" title="elemental_fire_iwd" />
+			<img width=80 height=94 src="images/0x5242.gif" title="isair" />
+			<img width=104 height=102 src="images/0x5243.gif" title="madae" />
+			<img width=64 height=104 src="images/0x5240.gif" title="halfdragon_black" />
+			<img width=76 height=104 src="images/0x5241.gif" title="halfdragon_red" />
+			<img width=64 height=104 src="images/0x5245.gif" title="shenrical" />
+			<img width=93 height=105 src="images/0x5b07.gif" title="displacer_beast" />
+			<img width=118 height=93 src="images/0x5002.gif" title="drider_male" />
+			<img width=124 height=106 src="images/0x5001.gif" title="drider_female" />
+			<img width=113 height=107 src="images/0x5013.gif" title="feyr_greater" />
+			<img width=97 height=110 src="images/0x5050.gif" title="giant_verbeeg" />
+			<img width=104 height=110 src="images/0x525a.gif" title="hook_horror" />
+			<img width=100 height=113 src="images/0x5033.gif" title="hamatula_nwn" />
+			<img width=125 height=115 src="images/0x5014.gif" title="giant_fomorian" />
+			<img width=225 height=116 src="images/0x1003.gif" title="wyvern_white_big" />
+			<img width=83 height=118 src="images/0x5278.gif" title="sahuagin_large_iwd" />
+			<img width=112 height=120 src="images/0x5292.gif" title="bovine_axe_thing" />
+			<img width=144 height=123 src="images/0x523d.gif" title="treant_dark" />
+			<img width=106 height=127 src="images/0x504b.gif" title="golem_iron_iwd" />
+			<img width=126 height=129 src="images/0x502a.gif" title="marilith_iwd" />
+			<img width=126 height=129 src="images/0x5052.gif" title="marilith_dark" />
+			<img width=183 height=129 src="images/0x5010.gif" title="chimera" />
+			<img width=68 height=137 src="images/0x5271.gif" title="osyluth_nwn" />
+			<img width=178 height=140 src="images/0x1001.gif" title="fiend_green" />
+			<img width=178 height=140 src="images/0x1002.gif" title="fiend_blue" />
+			<img width=137 height=146 src="images/0x504c.gif" title="remorhaz" />
+			<img width=113 height=153 src="images/0x502f.gif" title="belhifet" />
+			<img width=84 height=159 src="images/0x5035.gif" title="pit_fiend_nwn" />
+			<img width=209 height=198 src="images/0x5032.gif" title="bebilith_nwn" />
+			<img width=126 height=198 src="images/0x5c08.gif" title="lady_of_pain" />
+			<img width=92 height=156 src="images/0x5c01.gif" title="fire_giant_2" />
+			<img width=128 height=189 src="images/0x5c03.gif" title="giant_fire_female" />
+			<img width=138 height=192 src="images/0x504a.gif" title="giant_fire_iwd" />
+			<img width=129 height=206 src="images/0x5c04.gif" title="giant_frost_female" />
+			<img width=150 height=216 src="images/0x502b.gif" title="giant_frost" />
+			<img width=258 height=382 src="images/0x1101.gif" title="dragon_white" />
+		</p><br><br>
+
+		<p style="font-size: 120%;">
+			<strong>Enhanced Editions Animations</strong>
+		</p>
+		<p>
+			These animations do not exist in most Baldur's Gate II games; they have been ported to BG2 and gathered into a new content pack released with Infinity Animations v6.
+		</p><br>
+		<p>
+			<img width=35 height=31 src="images/0x54b8.gif" title="dog_grey" />
+			<img width=35 height=32 src="images/0x54ba.gif" title="gibberling_brood" />
+			<img width=42 height=45 src="images/0x5356.gif" title="mkhiin_bow" />
+			<img width=65 height=36 src="images/0x5358.gif" title="mkhiin_armor_axe" />
+			<img width=40 height=45 src="images/0x5359.gif" title="mkhiin_armor_bow" />
+			<img width=42 height=63 src="images/0x5355.gif" title="mkhiin" />
+			<img width=51 height=53 src="images/0x5357.gif" title="mkhiin_staff" />
+			<img width=30 height=43 src="images/0x5fd9.gif" title="golem_mini" />
+			<img width=48 height=30 src="images/0x54bb.gif" title="black_pudding" />
+			<img width=55 height=45 src="images/0xa001.gif" title="megalocentipede" />
+			<img width=60 height=66 src="images/0x54b9.gif" title="spider_water" />
+			<img width=43 height=60 src="images/0x534d.gif" title="hephernaan" />
+			<img width=35 height=65 src="images/0x5fd5.gif" title="sailor_green" />
+			<img width=35 height=65 src="images/0x5fd6.gif" title="sailor_red" />
+			<img width=35 height=65 src="images/0x5fd7.gif" title="sailor_sark" />
+			<img width=41 height=71 src="images/0x5fd8.gif" title="crusader_soldier" />
+			<img width=43 height=87 src="images/0x5fd4.gif" title="red_wizard" />
+			<img width=39 height=66 src="images/0x5352.gif" title="boar_wild" />
+			<img width=57 height=77 src="images/0x5111.gif" title="goblin_worg_elite" />
+			<img width=65 height=91 src="images/0x5112.gif" title="goblin_worg_shaman" />
+			<img width=64 height=64 src="images/0x5350.gif" title="drowned_dead_red" />
+			<img width=76 height=78 src="images/0x5353.gif" title="bugbear_shaman" />
+			<img width=73 height=85 src="images/0x5fdb.gif" title="efreeti_noble" />
+			<img width=58 height=76 src="images/0x534b.gif" title="troll_scrag" />
+			<img width=52 height=64 src="images/0x534c.gif" title="troll_spectral" />
+			<img width=113 height=58 src="images/0xa002.gif" title="wyvern_white" />
+			<img width=76 height=104 src="images/0x5351.gif" title="halfdragon_green" />
+			<img width=115 height=68 src="images/0x5fda.gif" title="snake_water" />
+			<img width=226 height=116 src="images/0x100a.gif" title="wyrmling_albino" />
+			<img width=148 height=105 src="images/0x100b.gif" title="fiend_red" />
+			<img width=136 height=138 src="images/0x5117.gif" title="ettin_ghost" />
+			<img width=145 height=165 src="images/0x1308.gif" title="giant_hill" />
+			<img width=124 height=181 src="images/0x510b.gif" title="dragon_white_young" />
+			<img width=124 height=181 src="images/0x510c.gif" title="dragon_green_young" />
+			<img width=124 height=181 src="images/0x510d.gif" title="dragon_silver_young" />
+			<img width=77 height=202 src="images/0x100c.gif" title="tunnel_worm" />
+			<img width=249 height=315 src="images/0x1306.gif" title="dragon_red_juvenile" />
+			<img width=249 height=315 src="images/0x1307.gif" title="dragon_green_juvenile" />
+			<img width=233 height=388 src="images/0x1103.gif" title="dragon_green_iwd" />
+		</p><br><br>
+
+		<p style="font-size: 120%;">
+			<strong>Modders' Animations</strong>
+		</p>
+		<p>
+			Those few animations did not exist in Baldur's Gate II game and were added by several modders. Others have been added (ported or customised) as of the last update of this readme.
+		</p><br>
+		<p>
+			<img width=106 height=57 src="images/0x5fc5.gif" title="gw_unicorn" />
+			<img width=83 height=94 src="images/0x5fc6.gif" title="gw_unicorn_black" />
+			<img width=99 height=71 src="images/0x5fc7.gif" title="gw_unicorn_nightmare" />
+			<img width=76 height=59 src="images/0x5fc8.gif" title="gw_horse_black_and_white" />
+			<img width=82 height=53 src="images/0x5fc9.gif" title="gw_horse_baie" />
+			<img width=88 height=57 src="images/0x5fca.gif" title="gw_horse_chestnut" />
+			<img width=61 height=63 src="images/0x5fcb.gif" title="gw_horse_blanket_baie" />
+			<img width=68 height=81 src="images/0x5fcc.gif" title="gw_horse_grullo" />
+			<img width=82 height=75 src="images/0x5fcd.gif" title="gw_horse_blue_roanned" />
+			<img width=64 height=95 src="images/0x5fce.gif" title="gw_war_horse_baie" />
+			<img width=51 height=82 src="images/0x5fcf.gif" title="gw_war_horse_baie_and_white" />
+			<img width=84 height=68 src="images/0x5fd0.gif" title="gw_war_horse_black" />
+			<img width=91 height=59 src="images/0x5fd1.gif" title="gw_war_horse_grey" />
+			<img width=87 height=68 src="images/0x5b28.gif" title="gw_paladin_mount" />
+
+			<img width=21 height=25 src="images/0x547c.gif" title="chicken_brown" />
+			<img width=27 height=38 src="images/0x5296.gif" title="jastey_wolfhound" />
+			<img width=40 height=37 src="images/0x52f7.gif" title="gw_frog_demon_green" />
+			<img width=43 height=39 src="images/0x54a2.gif" title="gw_pygmy" />
+			<img width=44 height=40 src="images/0x54a3.gif" title="gw_pygmy_blowpipe" />
+			<img width=42 height=48 src="images/0x5322.gif" title="gw_blade_creeper" />
+			<img width=72 height=47 src="images/0x52db.gif" title="gw_maggot_blue" />
+			<img width=44 height=53 src="images/0x5485.gif" title="gw_jellyfish_yellow" />
+			<img width=38 height=55 src="images/0x5b61.gif" title="gw_larval_worm_small_pst" />
+			<img width=58 height=50 src="images/0x52a1.gif" title="gw_pig" />
+			<img width=46 height=60 src="images/0x5338.gif" title="gw_hydra_fire" />
+			<img width=63 height=55 src="images/0x5309.gif" title="gw_imp_gremin_red" />
+			<img width=55 height=51 src="images/0x52f1.gif" title="gw_spider_mechanic_red" />
+			<img width=52 height=57 src="images/0x5330.gif" title="gw_mutated_rat" />
+			<img width=70 height=63 src="images/0x531a.gif" title="gw_wererat_ochre_pst" />
+			<img width=70 height=63 src="images/0x5318.gif" title="gw_wererat_blue_pst" />
+			<img width=70 height=63 src="images/0x5319.gif" title="gw_wererat_green_pst" />
+			<img width=46 height=63 src="images/0x5b7c.gif" title="gw_drone_light_pst" />
+			<img width=52 height=80 src="images/0x54a0.gif" title="gw_amazone_novice" />
+			<img width=39 height=61 src="images/0x54a1.gif" title="gw_amazone_archer" />
+			<img width=48 height=66 src="images/0x549a.gif" title="gw_amazone_scimitar" />
+			<img width=51 height=68 src="images/0x549c.gif" title="gw_amazone_saber" />
+
+			<img width=46 height=69 src="images/0x549d.gif" title="gw_amazone_axe" />
+			<img width=92 height=72 src="images/0x549e.gif" title="gw_amazone_pike" />
+			<img width=75 height=71 src="images/0x549f.gif" title="gw_amazone_trident" />
+			<img width=50 height=69 src="images/0x52a7.gif" title="gw_amazone_priestess_flail" />
+			<img width=90 height=68 src="images/0x547d.gif" title="gw_guard1_glaive_d2" />
+			<img width=89 height=63 src="images/0x5480.gif" title="gw_guard2_spear_d2" />
+			<img width=71 height=69 src="images/0x52ab.gif" title="gw_skeleton_army1" />
+			<img width=75 height=67 src="images/0x52b2.gif" title="gw_skeleton_army2_scythe" />
+			<img width=57 height=67 src="images/0x52bc.gif" title="gw_skeleton_army3_ripped_out" />
+			<img width=53 height=66 src="images/0x52bd.gif" title="gw_skeleton_army4" />
+			<img width=63 height=75 src="images/0x54a8.gif" title="gw_reanimated_horde" />
+			<img width=62 height=68 src="images/0x54a9.gif" title="gw_reanimated_horde_beheaded" />
+			<img width=73 height=76 src="images/0x52d8.gif" title="gw_goatman_two_handed_axe" />
+			<img width=88 height=89 src="images/0x52d9.gif" title="gw_goatman_great_maul" />
+			<img width=58 height=78 src="images/0x548a.gif" title="gw_guard_zealot_axe" />
+			<img width=79 height=77 src="images/0x548b.gif" title="gw_guard_zealot_voulge" />
+			<img width=84 height=78 src="images/0x548c.gif" title="gw_guard_zealot_poleaxe" />
+			<img width=69 height=73 src="images/0x548d.gif" title="gw_guard_zealot_scythe" />
+
+			<img width=69 height=75 src="images/0x52cc.gif" title="gw_panther_woman" />
+			<img width=74 height=86 src="images/0x52cf.gif" title="gw_panther_woman_whip" />
+			<img width=70 height=84 src="images/0x52d1.gif" title="gw_panther_woman_chief" />
+			<img width=53 height=72 src="images/0x52d2.gif" title="gw_panther_woman_range" />
+			<img width=53 height=79 src="images/0x52d3.gif" title="gw_panther_woman_range_elite" />
+			<img width=71 height=83 src="images/0x54a4.gif" title="gw_doom_knight" />
+			<img width=66 height=79 src="images/0x54a5.gif" title="gw_doom_knight_one_armed" />
+			<img width=71 height=72 src="images/0x54a6.gif" title="gw_doom_knight_beheaded" />
+			<img width=66 height=72 src="images/0x54a7.gif" title="gw_doom_knight_ripped_out" />
+			<img width=75 height=79 src="images/0x52c3.gif" title="gw_doom_knight_priest" />
+			<img width=81 height=79 src="images/0x52c4.gif" title="gw_doom_knight_priest_cold" />
+			<img width=70 height=79 src="images/0x52ca.gif" title="gw_doom_knight_mage_fire" />
+			<img width=70 height=75 src="images/0x5b3f.gif" title="gw_nordom_pst" />
+			<img width=58 height=80 src="images/0x5b75.gif" title="gw_drone_heavy_green_pst" />
+
+			<img width=56 height=71 src="images/0x5332.gif" title="gw_mutated_rat_brown" />
+			<img width=55 height=75 src="images/0x5331.gif" title="gw_mutated_rat_black" />
+			<img width=89 height=75 src="images/0x5293.gif" title="packmule_wow" />
+			<img width=88 height=78 src="images/0x50be.gif" title="gw_frog_demon_giant" />
+			<img width=115 height=63 src="images/0x5334.gif" title="gw_claw_viper" />
+			<img width=97 height=69 src="images/0x5335.gif" title="gw_naja_snake" />
+			<img width=78 height=86 src="images/0x52aa.gif" title="gw_pygmy_shaman" />
+			<img width=74 height=86 src="images/0x5062.gif" title="gw_cow_black_and_white" />
+			<img width=75 height=73 src="images/0x52a3.gif" title="gw_ape_black" />
+			<img width=74 height=76 src="images/0x52a4.gif" title="gw_ape_brown" />
+			<img width=118 height=85 src="images/0x52a6.gif" title="bonebat_pst" />
+			<img width=93 height=75 src="images/0x5304.gif" title="gw_bat_demon_fire" />
+			<img width=104 height=60 src="images/0x5481.gif" title="gw_snake_sea" />
+
+			<img width=140 height=82 src="images/0x50b7.gif" title="gw_razor_spine_giant" />
+			<img width=50 height=81 src="images/0x5295.gif" title="gw_bear_giant_diablo2" />
+			<img width=68 height=81 src="images/0x5294.gif" title="werebear_diablo2" />
+			<img width=56 height=85 src="images/0x5320.gif" title="gw_wererat_giant_dark_ochre_pst" />
+			<img width=56 height=85 src="images/0x5321.gif" title="gw_wererat_giant_yellow_pst" />
+			<img width=96 height=81 src="images/0x530a.gif" title="gw_succubus_diablo2" />
+			<img width=82 height=88 src="images/0x5fd2.gif" title="gw_troll_darkness" />
+			<img width=132 height=88 src="images/0x5582.gif" title="gw_regurgitator_diablo2" />
+			<img width=133 height=90 src="images/0x50a2.gif" title="gw_sand_beetle_giant" />
+			<img width=141 height=90 src="images/0x1005.gif" title="gw_overseer_warrior_diablo2" />
+			<img width=63 height=93 src="images/0x530c.gif" title="gw_succubus_diablo" />
+			<img width=68 height=97 src="images/0x5492.gif" title="gw_mosquito_giant_diablo2" />
+
+			<img width=92 height=92 src="images/0x533c.gif" title="gw_medusa" />
+			<img width=129 height=92 src="images/0x5499.gif" title="gw_minotaur_axe_and_flail" />
+			<img width=84 height=92 src="images/0x52ed.gif" title="gw_golem_mechanic_green" />
+			<img width=84 height=93 src="images/0x52ec.gif" title="gw_golem_mechanic_blue" />
+			<img width=83 height=93 src="images/0x52ee.gif" title="gw_golem_mechanic_red" />
+			<img width=106 height=94 src="images/0x5581.gif" title="gw_snow_yeti" />
+			<img width=94 height=97 src="images/0x5343.gif" title="gw_medusa_green" />
+			<img width=144 height=97 src="images/0x5494.gif" title="gw_minotaur_armor_2_axes" />
+			<img width=72 height=99 src="images/0x5fc4.gif" title="gw_golem_amber" />
+			<img width=90 height=100 src="images/0x505d.gif" title="gw_frozen_horror" />
+			<img width=112 height=99 src="images/0x52ea.gif" title="gw_evard_black_tentacles" />
+
+			<img width=175 height=100 src="images/0x5310.gif" title="gw_demon_izual" />
+			<img width=102 height=101 src="images/0x5b29.gif" title="gw_modron_pst" />
+			<img width=107 height=103 src="images/0x5317.gif" title="gw_wererat_mantuock_pst" />
+			<img width=83 height=103 src="images/0x5097.gif" title="gw_jackal_guardian" />
+			<img width=81 height=103 src="images/0x5098.gif" title="gw_zombie_guardian" />
+			<img width=40 height=108 src="images/0x533a.gif" title="gw_tiger" />
+			<img width=40 height=108 src="images/0x533b.gif" title="gw_tiger_white" />
+			<img width=94 height=108 src="images/0x52a5.gif" title="gw_gargoyle_diablo" />
+			<img width=81 height=110 src="images/0x5486.gif" title="gw_jellyfish_blue_large" />
+			<img width=166 height=114 src="images/0x557c.gif" title="gw_thorned_hulk" />
+			<img width=115 height=114 src="images/0x52e9.gif" title="gw_evard_fire_tentacles" />
+
+			<img width=157 height=115 src="images/0x5297.gif" title="gw_halfragon_silver" />
+			<img width=72 height=127 src="images/0x530b.gif" title="gw_succubus_witch_diablo2" />
+			<img width=219 height=119 src="images/0x5298.gif" title="gw_octopus_tentacle" />
+			<img width=84 height=124 src="images/0x52e8.gif" title="gw_evard_tentacles" />
+			<img width=129 height=128 src="images/0x5339.gif" title="the_butcher_hots" />
+			<img width=130 height=134 src="images/0x5344.gif" title="gw_medusa_queen" />
+			<img width=67 height=134 src="images/0x52eb.gif" title="gw_putrid_defiler" />
+			<img width=75 height=157 src="images/0xa101.gif" title="gw_shark leopard" />
+			<img width=202 height=133 src="images/0x5313.gif" title="gw_mega_demon_flamberge" />
+
+			<img width=171 height=163 src="images/0x5584.gif" title="gw_siege_beast" />
+			<img width=211 height=163 src="images/0x5585.gif" title="gw_demon_duriel" />
+			<img width=136 height=171 src="images/0x5311.gif" title="gw_demon_mephisto" />
+			<img width=141 height=168 src="images/0x5493.gif" title="gw_vulture_demon" />
+			<img width=191 height=177 src="images/0x1004.gif" title="gw_shark sandbard" />
+			<img width=125 height=175 src="images/0x50d1.gif" title="gw_demon_andariel_diablo2" />
+			<img width=279 height=200 src="images/0x1102.gif" title="gw_catapult" />
+			<img width=131 height=202 src="images/0x50d0.gif" title="gw_lolth_avatar" />
+			<img width=193 height=221 src="images/0x50d2.gif" title="gw_démon_diablo" />
+			<img width=240 height=253 src="images/0x1301.gif" title="gw_dragon_mechanic" />
+
+			<img width=335 height=317 src="images/0x1302.gif" title="gw_dragon_black_juvenile" />
+			<img width=315 height=312 src="images/0x1303.gif" title="gw_dragon_silver_juvenile" />
+			<img width=400 height=373 src="images/0x1209.gif" title="gw_tarasque" />
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Animations</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ======================= C r e d i t s ====================== -->
+	  <a name="credits" id="credits"></a>
+	  <div class="content">
+
+		<h2>Credits</h2><br>
+
+			<span class="t1">Author:</span> <span class="t2"><a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a></span><br />
+			<span class="t1"><acronym title="Weimer Dialogue Utility">WeiDU</acronym> coding:</span> <span class="t2"><a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a></span><br />
+			<span class="t1">Support:</span> <span class="t2"><a href="http://www.shsforums.net/user/10485-sam/">Sam</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a></span><br />
+
+		<hr style="clear: both; width: 90%; color: transparent; background-color: transparent; " /><br>
+
+
+		<h5>Special Acknowledgements to:</h5>
+
+ 		  <ul class="version-list c1">
+			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
+			<li>Assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.</li>
+			<li>Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading and his contribution with porting EE animations to ToB.</li>
+		  </ul><br><br>
+
+
+		<h5>Programs/tools used in creation:</h5><br />
+
+		  <ul class="version-list c1">
+			<li><a href="http://www.weidu.org/%7Ethebigg/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by Wes Weimer, the bigg and Wisp</li>
+			<li><a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained by igi and lynx</li>
+			<li><a href="http://forums.pocketplane.net/index.php/topic,25153.msg314249.html#msg314249">Near Infinity</a> by Jon Olav Hauglid, FredSRichardson and Argent77</li>
+			<li><a href="http://www.gibberlings3.net/tools/dltcep.php"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by Avenger</li>
+			<li><a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg</li>
+			<li><a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> by Jan Goyvaerts</li>
+			<li><a href="http://www.pspad.com/en/">PSPad</a> by Jan Fiala</li>
+			<li><a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the spellcheck plug-in</li>
+			<li><a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> by Argent77</li>
+		  </ul><br><br>
+
+
+		<h5>Copyrights</h5>
+
+			<div class="important" style="border-width: 1px 2px 1px 2px; border-style: solid; border-color: #781808;">
+				<p>This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.</p>
+				<p style ="width: 100%;">All copyrights and trademarks are the property of their respective owners.</p>
+			</div><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Credits</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+<!-- ============== V e r s i o n   H i s t o r y =============== -->
+	  <a name="version" id="version"></a>
+	  <div class="content">
+
+		<h2>Version History</h2><br>
+
+		<h6>Version 6 - Month day, 2019</h6>
+
+		  <ul>
+			<li>Major updates:</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-8%;">Modified animations namespaces, <strong>now compatible with non-Western code pages</strong> (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected) &#128521;</li>
+				<li style="margin-left:-4%; margin-right:-8%;">From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config"> chapter</a>.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">New IA Content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Integrated IA modders' content: <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a> (Ulb), <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a> (Ulb) and jastey's wolfhound.</li>
+			  </ul>
+			<li>Integrated all code and BWP Fixpack fixes:</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-8%;">Main component: <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.</li>
+				<li style="margin-left:-4%; margin-right:-1%;">More Planescape: Torment Animations component [710-720-760-740]: <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.</li>
+				<li style="margin-left:-4%; margin-right:-1%;">Scattered into various components: <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a>.</li>
+			  </ul>
+			<li>Integrated all BWP Fixpack graphic fixes (thanks to their authors!):</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-1%;">IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a> and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a>.</li>
+				<li style="margin-left:-4%">IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a></li>
+				<li style="margin-left:-4%">IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.</li>
+				<li style="margin-left:-4%">NWN_Misc_I content: Gwendolyne's <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">Bovine axe thing fix</a>.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">IA_Wh_Dr_Wyv_LoP content: Gwendolyne's Dragon white and PsT Lady of Pain optimized bam files (removed duplicated frames, 43,3 Mo ==> 18,7 Mo and 17 Mo ==> 2,37 Mo)</a>.</li>
+			  </ul>
+			<li style="margin-right:-8%;">IA Shadows_Harpy_Frostgiant content: Fixed alternate murky shadows folders names and 2da files that were inverted (small = 3bt / large = 3bu), then fixed t-anisnd.tpa for consistency.</li>
+			<li>Added missing casting animations (sp and ca bam files, with weapons variants when needed):</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-6%;">IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">IA IWD content: Animated Plate small bronze/dark/green, Barbarian warrior tan/red/brown, Creeping Doom, Drowned Dead, Elemental Earth/Fire/Water, Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.</li>
+			  </ul>
+			<li>Compatibility with Enhanced Editions games:</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-6%;">Restored missing bam content in EE games: Abishais (black, green, red, white), Animated plates, Arundel, Barbarian shaman (club, hammer, staff), Barbarian warriors (brown, red, tan), Barbarian Icasaracht, Beetles (boring, fire, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chicken (brown, white), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragons BG2 (black, red, silver), Dragon red juvenile, Dragon white (and young), Driders (female, male), Drowned dead, Elemental earth, Elemental (fire, water, water small), Feyr (and greater), Ghast greater, Ghost, Ghoul greater, Giant fire 2, Giant fire IWD, Giant frost, Giant fomorian, Giant hill, Giant verbeeg, Glabrezu, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Golem mini, Hag (annis, night), Halfdragon (black, red), Harpy, Hephernaan, Histachii, Hook horror, Isair, Kegs (1, 2, 3), Kuo-toa (and large), Lemure, Lich white, Lizard man (and elite, king), Madae, Malarite, Marilith, Marilith (IWD), Megalocentipede, Mkhiins, Orc axe undead, Orc shaman undead, Orog shaman, Planetar, Planetar fallen, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Svirfneblins (pale and dark, with/without axe), Trolls (ice, scrag, snow), Tundra yeti, Tunnel worm, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, gray, green, yellow), Will o wisp (and small), Worg IWD, Yuan-ti halfbreed, Zombie (blue, yellow).</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Restored missing palettes content in EE games: Abishai blue, Black pudding, Boar wild, Bugbear shaman, Crusader soldier, Dog gray, Dragons BG2, Dragon green IWD, Dragon green juvenile, Dragons young (green, silver), Drowned dead red, Efreeti noble, Elemental fire small purple, Ettin ghost, Fiends (blue, green, red), Gibberling brood, Goblin worg (elite, shaman), Hags (green, sea), Hakeashar, Halfdragon green, Hephernaan, Maurezhi, Myrlochar, Nishruu, Red wizard, Sailors (green, red, dark), Snake water, Spider water, Troll spectral, Wyrmling albino, Wyvern white, Wyvern white big, Yochlol.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Restored missing wav content in EE games: Abishai, Barbarians, Beetles (boring, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragon silver, Dragon white (and young), Driders (female, male), Drowned dead, Elemental (fire, water), Feyr (and greater), Ghast greater, Ghost, Giant fomorian, Giant frost, Giant verbeeg, Glabrezu, Goblins, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Hag night, Harpy, Halfdragon black, Histachii, Hook horror, Isair, Kegs, Kuo-toa, Lemure, Lich black, Lizard man king, Madae, Malarite, Minotaur, Mummy, Orc axe undead, Planetar, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Shrieker, Trolls (blue, ice, scrag, snow), Tundra yeti, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, green, yellow), Wyrmling albino, Yochlol, Yuan-tis (and halfbreed), Zombie yellow.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Restored missing ini files in EE games: Abishais (black, green, red, blue), Belhifet, Belhifet priest, Black pudding, Boar wild, Bonebat, Bugbear (and captain, shaman), Chimera, Crusader soldier, Dog gray, Dragon green IWD, Dragons juvenile (green, red), Dragons young (green, silver), Drider female, Drowned dead red, Elemental water small, Ettin ghost, Feyr greater, Giant fomorian, Giant hill, Gibberling brood, Goblin shaman, Goblins worg (elite, shaman, captain), Hags (annis, green, night, sea), Halfdragon (black, green, red), Hephernaan, Hook horror, Isair, Kegs (1, 2, 3), Madae, Malarite, Megalocentipede, Mkhiins, Myrlochar, Orcs undead (axe, shaman), Orog shaman, Sailors (red, dark), Shenrical, Snake water, Spider water, Troll spectral, Tunnel worm, Werebadger, Wererat, Will o wisp (and small), Worg, Wyrmling albino, Yuan-ti halfbreed.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Giant Hill animation: updated EE bam files that were missing pixels (Gwendolyne).</li>
+				<li style="margin-left:-4%; margin-right:-6%;"></li>
+			  </ul>
+			<li>Specific components fixes:</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-6%;">Main component: integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Updated Distinctive Fiends component [100]: removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "<em>Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way"</em>).</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Distinctive Undead [400], Skeleton Warriors [410-415-420] and More PsT Animations [710-720-760-740] components: integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Fixed Seer animations component [450-455]: "<em>Some beggars and slaves</em>" and "<em>Some beggars</em>" sub-components creatures listings were inverted. &#128541;</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Svirfneblin Animations component [480-490]: added t-svi variable used in a single routine for its two sub-components.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Moinesse's Avatars for IA component [7000-7010-7020-7030]: integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Fixed Area Creature References component [9000] : in some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Components Saved Game Animation Fixer [9900-9910] and BG1 Character Animations for Saved Games [9600-9610-9620] should not crash if \save or \mpsave folders do not exist.</li>
+			  </ul>
+			<li>Split code into separate components for more comfortable readability.</li>
+			<li>Moved components tpa files into new "components" folder and kept functions and macros in "lib" folder.</li>
+			<li>Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.</li>
+			<li>Code commented as much as possible.</li>
+			<li>Coding simplification:</li>
+			  <ul>
+				<li style="margin-left:-4%; margin-right:-1%;">Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as DECOMPILE_BCS_TO_BAF and DECOMPILE_DLG_TO_D)</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s ps_recursive_copy.tpa library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory</li>
+				<li style="margin-left:-4%">Minor fixes...</li>
+			  </ul>
+			<li>Renamed setup-infinityanimations.tp2 -> infinityanimations.tp2 to support AL|EN's "Project Infinity".</li>
+			<li>Added infinityanimations.ini metadata file to support AL|EN's "Project Infinity".</li>
+			<li>Rewrote Tool IA Reference Picker tool (can now be translated) and readme.</li>
+			<li>Updated readme (IA now supports translated readmes, new animation pictures...).</li>
+			<li>Added French translation (Gwendolyne).</li>
+			<li>Traification. Feel free to provide me with translations. I will include them as soon as possible.</li>
+			<li>Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.</li>
+		  </ul><br>
+
+		<h6>WeiDU Beta 5 - May 12, 2010</h6>
+
+		  <ul>
+			<li>Changed the .exe patch so that it forces a code page change and reboots if a non-Western code page is detected</li>
+			<li>Updated the .exe patch so that it recognises <acronym title="Baldur's Gate">BG1</acronym> thief avatars</li>
+			<li>Cloned missing animation tables from the unmodded game</li>
+			<li>Added other missing animation tables to base content folder</li>
+			<li>Adding missing minotaur and water weird sounds</li>
+			<li>Disabled problematic stacked animations from chitin.key</li>
+			<li>Added creature sounds where relevant (major update here)</li>
+			<li>Fixed a <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">minor READ_BYTE glitch</a> in creature patching</li>
+			<li>Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes)</li>
+			<li>Added night hags to the "Distinctive Fiends" component</li>
+			<li>Added ghoul queens to the "Distinctive Undead" component</li>
+			<li>Added white-haired Ellesime to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component</li>
+			<li>Added lagoon creature to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component</li>
+			<li>Deprecated tieflings from the cambion/alu-fiend components in favor of the <acronym title="Planescape: Torment">PS:T</acronym> animation component</li>
+			<li>Corrected skeleton warriors appearing as verbeegs glitch</li>
+			<li>Added Amel animation to <acronym title="Neverwinter Nights">NWN</acronym> component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)</li>
+			<li>Added Humanoid Animation Fixes component</li>
+			<li>Added Moinesse's Avatars component</li>
+			<li>Added More <acronym title="Planescape: Torment">PS:T</acronym> Animations component</li>
+			<li>Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games component</li>
+			<li>Added saved game animation fixing component</li>
+			<li>Traified the entire freaking mod by hand for translators (thanks for nothing, <acronym title="Weimer Dialogue Utility">WeiDU</acronym>! &#128541;)</li>
+		  </ul><br>
+
+		<h6>WeiDU Beta 4 - February 7, 2010</h6>
+
+		  <ul>
+			<li>Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Non-Player Characters">NPCs</acronym> component</li>
+			<li>Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Player Characters">PCs</acronym> component</li>
+			<li>Changed fiend patching to accommodate scripting</li>
+		  </ul><br>
+
+          <h6>WeiDU Beta 3 - February 1, 2010</h6>
+
+		  <ul>
+			<li>Fixed _LOW animation corrections causing areas crashing on load</li>
+			<li>Fixed scripts and dialogues that Polymorph to _LOW animations</li>
+			<li>Fixed code glitch preventing installation of optional components</li>
+			<li>Added option to install sounds in svirfneblin component</li>
+			<li>Added component to fix area creature references</li>
+			<li>Added revised salamander sound tables (MSAL and MSA2 slots)</li>
+			<li>Enhanced compatibility with <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a></li>
+			<li>Enhanced creature animation patches for fiends and orc shamans</li>
+		  </ul><br>
+
+          <h6>WeiDU Beta 2 - January 23, 2010</h6>
+
+		  <ul>
+			<li>Added installer support for non-ANSI system locales</li>
+		  </ul><br>
+
+          <h6>WeiDU Beta 1 - January 11, 2010</h6>
+
+		  <ul>
+			<li>First <acronym title="Weimer Dialogue Utility">WeiDU</acronym> release</li>
+			<li>All affected mod and vanilla creatures patched</li>
+			<li>Optional components added</li>
+		  </ul><br>
+
+          <h6>(r.10010043)</h6>
+
+		  <ul>
+			<li>Fixed a bug with Icewind Dale animation slots in Baldur's Gate II</li>
+		  </ul><br>
+
+          <h6>(r.09102252 update)</h6>
+
+		  <ul>
+			<li>Updated documentation and Reference Picker</li>
+			<li>Added alternate stylesheet &#128521;</li>
+		  </ul><br>
+
+          <h6>(r.09102252)</h6>
+
+		  <ul>
+			<li>Initial release</li>
+		  </ul><br>
+
+		<address>
+			<span class="footer">Infinity Animations &gt; Version History</span> &#8226;<a href="#top">BACK TO TOP</a>
+		</address>
+	  </div>
+
+	</div>
+  </body>
+</html>
