@@ -1,0 +1,41 @@
+3kw /mkhiin_staff
+***
+						SOUND
+ATTACK          		t-gbs03a t-gbs03b nosound
+ATTACK          		2 2 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-gbs07a t-gbs08a
+DAMAGE          		0 0
+DIE             		t-gbs09a t-gbs10a
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-gbs03a t-gbs03b nosound
+ATTACK_SLASH    		2 2 0
+ATTACK_BACKSLASH		t-gbs03c t-gbs03a nosound
+ATTACK_BACKSLASH		2 2 0
+ATTACK_JAB      		t-gbs04a t-gbs04b nosound
+ATTACK_JAB      		2 2 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-gbs01a t-gbs02a
+Battle_Cry				0 0
+Selection       		t-gbs01a t-gbs01b
+Selection       		0 0
