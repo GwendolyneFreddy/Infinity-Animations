@@ -1,0 +1,41 @@
+Mor3/orc_melee3
+***
+                 SOUND
+ATTACK           orcaxe03 orcaxe04
+ATTACK           2 2
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           orcaxe07 orcaxe08
+DAMAGE           0 0
+DIE              orcaxe09 orcaxe10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            orcaxe04 nosound
+SHOOT            2 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     orcaxe03 nosound nosound
+ATTACK_SLASH     2 0 0
+ATTACK_BACKSLASH orcaxe04 nosound nosound
+ATTACK_BACKSLASH 2 0 0
+ATTACK_JAB       ***
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       orcaxe01 orcaxe02
+Battle_Cry       0 0
+Selection        orcaxe01
+Selection        0
