@@ -75,9 +75,9 @@ You can extract files from the archive using <a href="http://www.rarlab.com/down
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p>
-**Important:** Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/index.php?autocom=downloads&showcat=98">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "Do not extract paths" option on the **Advanced** tab in WinRAR. Also, make sure the "Destination path" on the **General** tab terminates in **/content** or **/restore** after **infinityanimations** (there should be no sub-folders beyond that).
+<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/index.php?autocom=downloads&showcat=98">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "Do not extract paths" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
 
-<p>Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the subarchive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
+<p>Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
 
 For WinZip, make sure the "Use folder names" box is <em>unselected</em>.
 
@@ -89,7 +89,7 @@ You should end up with a bunch of .bam files and no sub-folders in your "content
 
 #### Windows
 
-Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **setup-infinityanimations.exe**and follow the instructions on screen.
+Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **setup-infinityanimations.exe** and follow the instructions on screen.
 
 Run **setup-infinityanimations.exe** in your game folder to reinstall, uninstall or otherwise change components.
 
@@ -136,7 +136,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Description</th>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; ">**<span style="color: #781808;">ia_base_anims</span>**</td>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><span style="color: #781808;">**ia_base_anims**</span></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 001 - Base Content<br><br>
 		- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow), restored BG I character animations. Includes all relevant creature sounds and tables and BG1 scimitars.<br>
 		- Needed for Distinctive Undead [400], More Base Animations [500], BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
@@ -145,7 +145,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; ">**<span style="color: #781808;">ia_belhifet_and_marilith</span>**</td>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; ">><span style="color: #781808;">**ia_belhifet_and_marilith**</span></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Belhifet and Marilith<br><br>
 		- Content: animation and audio files for the IWD Belhifet and IWD Marilith. Includes properly-slotted creature sounds and tables.<br>
 		- Needed for Drizzt Saga, RoT, TDD, TS and TS-BP mods.<br><br>
@@ -153,7 +153,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<span style="color: #781808; padding-left:20px;">1 = Install [default]</span></td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; ">**<span style="color: #781808;">ia_bg2_restores</span>**</td>
+		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><span style="color: #781808;">**ia_bg2_restores**</span></td>
 		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - BG2 Restores<br><br>
 		- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
 		- This is the content module for BG2 restored slots. It is only necessary for a megamod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
