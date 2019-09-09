@@ -1,7 +1,8 @@
+<div align="center">
 # <a name="top" id="top"></a><center>Infinity Animations</center> (WIP)
 
 ### A Spellhold Studios mod for Baldur's Gate II:ToB, Baldur's Gate Trilogy and <acronym title="Baldur's Gate 'To Two'">Tutu</acronym>
-
+</div>
 
 **Author:** Erephine<br />
 **WeiDU coding:** Miloch, revised by Sam and Gwendolyne<br />
@@ -91,7 +92,7 @@ You should end up with a bunch of .bam files and no sub-folders in your "content
 
 Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **setup-infinityanimations.exe** and follow the instructions on screen.
 
-Run **setup-infinityanimations.exe** in your game folder to reinstall, uninstall or otherwise change components.
+Run `**setup-infinityanimations.exe**` in your game folder to reinstall, uninstall or otherwise change components.
 
 ## 
 

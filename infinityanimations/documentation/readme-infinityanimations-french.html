@@ -403,7 +403,7 @@
 		</p>
 		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
 			<div class="quotetitle">
-				<strong>Obsolète </strong>(<span style="text-decoration: underline">lisez <a href="#config">ceci</a> plutôt</span>) :
+				<strong>Obsolète depuis la version 6.0.0</strong>(<span style="text-decoration: underline">lisez <a href="#config">ceci</a> plutôt</span>) :
 				<input value="Afficher" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
 				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" type="button" >
 			</div>
@@ -476,7 +476,7 @@
 		<h3>&#9888;&#65039; Avertissement : nouvelle procédure d'installation</h3>
 
 		<p style="margin-top:2%;">
-			<strong><span style="font-variant:small-caps;font-size: 12px;margin-left: 30px;">Depuis la version 6.0.0, les options de configuration nécessaires à l'installation sont lues dans le fichier <a href="../infinityanimations-config-default.ini"><em>infinityanimations-config-default.ini</em></a> ou dans le fichier <em>infinityanimations-config.ini</em>, si ce dernier existe.</span></strong>
+			<strong><span style="font-variant:small-caps;font-size: 12px;margin-left: 30px;">Depuis la version 6.0.0, les options de configuration nécessaires à l'installation sont lues dans le fichier <a href="../infinityanimations.ini"><em>infinityanimations.ini</em></a> ou dans le fichier <em>infinityanimations_user.ini</em>, si ce dernier existe.</span></strong>
 		</p><br>
 		<p>
 			Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires <strong>content</strong> ou <strong>restore</strong> du répertoire infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
@@ -485,13 +485,13 @@
 			Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire <strong>archives</strong> du mod et le composant principal le copie automatiquement dans le répertoire <strong>override</strong> de votre jeu. Le mod n'utilisant plus les sous-répertoires <em>content</em> et <em>restore</em>, ces derniers ont été supprimés.
 		</p>
 		<p>
-			Par défaut, tout le contenu du répertoire archives est installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier, avec Notepad ou un autre éditeur de texte, les options de configuration dans le fichier <em>infinityanimations-config-default.ini</em> (situé dans le répertoire infinityanimations), puis de le sauvegarder sous le nom <strong><span style="font-variant:small-caps;font-size: 12px;"><em>infinityanimations-config.ini</em></span></strong>.
+			Par défaut, tout le contenu du répertoire archives est installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier, avec Notepad ou un autre éditeur de texte, les options de configuration dans le fichier <em>infinityanimations.ini</em> (situé dans le répertoire infinityanimations), puis de le sauvegarder sous le nom <strong><span style="font-variant:small-caps;font-size: 12px;"><em>infinityanimations_user.ini</em></span></strong>.
 		</p>
 		<p>
 			Chaque ligne de ce fichier comprend une option de configuration, suivie de « = », puis d'un chiffre. Tout ce que vous avez à faire, c'est modifier la valeur du chiffre. Par exemple, si vous ne souhaitez pas utiliser les animations de svirneblins, modifiez la valeur de la variable ia_iwd_svirfneblin en 0.
 		</p>
 		<p>
-			Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations-config.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « <em>standard</em> »).
+			Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations_user.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « <em>standard</em> »).
 		</p>
 		<p>
 			Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation les installera automatiquement s'ils sont présents dans le répertoire archives. Sinon, il vous préviendra de leur absence. Vous pourrez alors quitter le programme, les extraire dans le répertoire du mod et relancer la procédure d'installation.<br>
@@ -616,7 +616,7 @@
 			<tr>
 				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_paletted</span></strong></td>
 				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Paletted Animations<br><br>
-				- Contenu : Femme Aasimar, Baurier Mâle, Catin, Citoyen et Citoyenne de Maudith, Citoyen et Citoyenne des classes supérieures, Femme et Homme poussière, Femme et homme goule, Githzerai, Homme-dieu, Citoyen et Citoyenne des classes inférieures, Magicien citoyen, Marchand, Midwife, Sicaire et Grand sicaire, Prêtre et Travailleur squelette, Thokola, Tieffelin homme et femme, Zombi femme et homme. Comprend leurs jeux de sons.<br>
+				- Contenu : Femme Aasimar, Baurier mâle, Catin, Citoyen et Citoyenne de Maudith, Citoyen et Citoyenne des classes supérieures, Femme et Homme poussière, Femme et homme goule, Githzerai, Homme-dieu, Citoyen et Citoyenne des classes inférieures, Magicien citoyen, Marchand, Midwife, Sicaire et Grand sicaire, Prêtre et Travailleur squelette, Thokola, Tieffelin homme et femme, Zombi femme et homme. Comprend leurs jeux de sons.<br>
 				- Nécessaire pour le composant Plus d'animations de Planescape: Torment [710-720-760-740].<br><br>
 				<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
 				<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
@@ -1205,9 +1205,9 @@
 		<p>
 			<img width=48 height=34 src="images/0x5285.gif" title="creeping_doom" />
 			<img width=33 height=38 src="images/0x5264.gif" title="svirfneblin_pale_noaxe" />
-			<img width=33 height=38 src="images/0x5266.gif" title="svirfneblin_dark_noaxe" />
+			<img width=33 height=38 src="images/0x5346.gif" title="svirfneblin_dark_noaxe" />
 			<img width=41 height=49 src="images/0x5263.gif" title="svirfneblin_pale_axe" />
-			<img width=41 height=49 src="images/0x5265.gif" title="svirfneblin_dark_axe" />
+			<img width=41 height=49 src="images/0x5345.gif" title="svirfneblin_dark_axe" />
 			<img width=31 height=38 src="images/0x5259.gif" title="goblin_bow_green (IWD)" />
 			<img width=31 height=37 src="images/0x5254.gif" title="goblinelite_bow_green (IWD)" />
 			<img width=33 height=38 src="images/0x5258.gif" title="goblin_axe_green (IWD)" />
@@ -1231,37 +1231,37 @@
 			<img width=74 height=55 src="images/0x5247.gif" title="wererat" />
 			<img width=61 height=56 src="images/0x524a.gif" title="boar_arctic" />
 			<img width=48 height=58 src="images/0x5b02.gif" title="modron_round" />
-			<img width=42 height=56 src="images/0x5b0a.gif" title="hag_night" />
+			<img width=42 height=56 src="images/0x5b7b.gif" title="hag_night" />
 			<img width=42 height=56 src="images/0x5b0b.gif" title="hag_green" />
 			<img width=42 height=56 src="images/0x5b0c.gif" title="hag_sea" />
-			<img width=42 height=60 src="images/0x5b08.gif" title="ghoul_queen" />
-			<img width=32 height=47 src="images/0x5d57.gif" title="merchant_pst" />
+			<img width=42 height=60 src="images/0x5b79.gif" title="ghoul_queen" />
+			<img width=32 height=47 src="images/0x5dc1.gif" title="merchant_pst" />
 			<img width=29 height=53 src="images/0x5d5b.gif" title="skeleton_worker_pst" />
-			<img width=25 height=53 src="images/0x5d50.gif" title="ghoul_female_pst" />
-			<img width=26 height=54 src="images/0x5d51.gif" title="ghoul_male_pst" />
+			<img width=25 height=53 src="images/0x5dbf.gif" title="ghoul_female_pst" />
+			<img width=26 height=54 src="images/0x5dc0.gif" title="ghoul_male_pst" />
 			<img width=20 height=52 src="images/0x5d63.gif" title="zombie_female_pst" />
 			<img width=23 height=60 src="images/0x5d64.gif" title="zombie_male_pst" />
 			<img width=28 height=56 src="images/0x5d58.gif" title="midwife_pst" />
-			<img width=32 height=58 src="images/0x5d4a.gif" title="aasimar_female_pst" />
+			<img width=32 height=58 src="images/0x5dba.gif" title="aasimar_female_pst" />
 			<img width=26 height=58 src="images/0x5d52.gif" title="githzerai_pst" />
-			<img width=24 height=56 src="images/0x5d4e.gif" title="dustman_female_pst" />
-			<img width=25 height=61 src="images/0x5d4f.gif" title="dustman_male_pst" />
+			<img width=24 height=56 src="images/0x5dbc.gif" title="dustman_female_pst" />
+			<img width=25 height=61 src="images/0x5dbe.gif" title="dustman_male_pst" />
 			<img width=28 height=61 src="images/0x5d4c.gif" title="townie_curst_female_pst" />
-			<img width=34 height=59 src="images/0x5d4d.gif" title="townie_curst_male_pst" />
+			<img width=34 height=59 src="images/0x5dbb.gif" title="townie_curst_male_pst" />
 			<img width=31 height=60 src="images/0x5d55.gif" title="townie_lower_class_female_pst" />
 			<img width=27 height=57 src="images/0x5d56.gif" title="townie_lower_class_male_pst" />
-			<img width=32 height=58 src="images/0x5d61.gif" title="townie_upper_class_female_pst" />
+			<img width=32 height=58 src="images/0x5dae.gif" title="townie_upper_class_female_pst" />
 			<img width=26 height=60 src="images/0x5d62.gif" title="townie_upper_class_male_pst" />
 			<img width=26 height=65 src="images/0x5d59.gif" title="harlot_pst" />
 			<img width=28 height=59 src="images/0x5d5d.gif" title="thug_pst" />
 			<img width=35 height=63 src="images/0x5d54.gif" title="thug_large_pst" />
-			<img width=30 height=61 src="images/0x5d5e.gif" title="tiefling_female_pst" />
-			<img width=35 height=61 src="images/0x5d5f.gif" title="tiefling_male_pst" />
+			<img width=30 height=61 src="images/0x5dc3.gif" title="tiefling_female_pst" />
+			<img width=35 height=61 src="images/0x5dac.gif" title="tiefling_male_pst" />
 			<img width=31 height=62 src="images/0x5d53.gif" title="godsman_pst" />
-			<img width=48 height=66 src="images/0x5d5a.gif" title="skeleton_priest_pst" />
+			<img width=48 height=66 src="images/0x5dc2.gif" title="skeleton_priest_pst" />
 			<img width=51 height=72 src="images/0x5d5c.gif" title="thokola_pst" />
 			<img width=29 height=74 src="images/0x5d4b.gif" title="bariaur_male_pst" />
-			<img width=31 height=81 src="images/0x5d60.gif" title="townie_wizard_pst" />
+			<img width=31 height=81 src="images/0x5dad.gif" title="townie_wizard_pst" />
 			<img width=26 height=55 src="images/0x6841.gif" title="moinesse_mage_female_elf" />
 			<img width=25 height=63 src="images/0x6845.gif" title="moinesse_druid_female_human" />
 			<img width=25 height=63 src="images/0x6846.gif" title="moinesse_fighter_female_human" />
@@ -1271,7 +1271,7 @@
 			<img width=25 height=63 src="images/0x683e.gif" title="moinesse_ninja_male_human" />
 			<img width=25 height=63 src="images/0x683d.gif" title="moinesse_barbarian_male_human" />
 			<img width=51 height=60 src="images/0x5244.gif" title="malarite" />
-			<img width=44 height=61 src="images/0x527c.gif" title="arundel" />
+			<img width=44 height=61 src="images/0x5347.gif" title="arundel" />
 			<img width=54 height=61 src="images/0x528e.gif" title="wight_barrow" />
 			<img width=50 height=63 src="images/0x527f.gif" title="barbarian_shaman_club" />
 			<img width=48 height=64 src="images/0x527d.gif" title="barbarian_shaman_hammer" />
@@ -1290,7 +1290,7 @@
 			<img width=57 height=78 src="images/0x526d.gif" title="amel_pc_nwn" />
 			<img width=72 height=71 src="images/0x500e.gif" title="bugbear" />
 			<img width=75 height=79 src="images/0x500f.gif" title="bugbear_captain" />
-			<img width=60 height=79 src="images/0x5b09.gif" title="hag_annis" />
+			<img width=60 height=79 src="images/0x5b7b.gif" title="hag_annis" />
 			<img width=83 height=79 src="images/0x524f.gif" title="feyr" />
 			<img width=77 height=82 src="images/0x528b.gif" title="tundra_yeti" />
 			<img width=70 height=84 src="images/0x5283.gif" title="barbarian_icasaracht" />
@@ -1351,7 +1351,7 @@
 			<img width=113 height=153 src="images/0x502f.gif" title="belhifet" />
 			<img width=84 height=159 src="images/0x5035.gif" title="pit_fiend_nwn" />
 			<img width=209 height=198 src="images/0x5032.gif" title="bebilith_nwn" />
-			<img width=126 height=198 src="images/0x5c02.gif" title="lady_of_pain" />
+			<img width=126 height=198 src="images/0x5c08.gif" title="lady_of_pain" />
 			<img width=92 height=156 src="images/0x5c01.gif" title="fire_giant_2" />
 			<img width=128 height=189 src="images/0x5c03.gif" title="giant_fire_female" />
 			<img width=138 height=192 src="images/0x504a.gif" title="giant_fire_iwd" />
@@ -1367,44 +1367,45 @@
 			Exemples d'animations qui ont été ajoutées dans les Éditions améliorées et intégrées à Infinity Animations.
 		</p><br>
 		<p>
-			<img width=35 height=31 src="0x54b8.gif" title="dog_grey" />
-			<img width=35 height=32 src="0x54ba.gif" title="gibberling_brood" />
-			<img width=34 height=39 src="0x534f.gif" title="mkhiin_bow" />
-			<img width=65 height=36 src="0x5351.gif" title="mkhiin_armor_axe" />
-			<img width=34 height=39 src="0x5352.gif" title="mkhiin_armor_bow" />
-			<img width=42 height=63 src="0x534e.gif" title="mkhiin" />
-			<img width=51 height=53 src="0x5350.gif" title="mkhiin_staff" />
-			<img width=30 height=43 src="0x5fd9.gif" title="golem_mini" />
-			<img width=48 height=30 src="0x54bb.gif" title="black_pudding" />
-			<img width=55 height=45 src="0xa001.gif" title="megalocentipede" />
-			<img width=60 height=66 src="0x54b9.gif" title="spider_water" />
-			<img width=43 height=60 src="0x534a.gif" title="hephernaan" />
-			<img width=35 height=65 src="0x5fd5.gif" title="sailor_green" />
-			<img width=35 height=65 src="0x5fd6.gif" title="sailor_red" />
-			<img width=35 height=65 src="0x5fd7.gif" title="sailor_sark" />
-			<img width=41 height=71 src="0x5fd8.gif" title="crusader_soldier" />
-			<img width=43 height=87 src="0x5fd4.gif" title="red_wizard" />
-			<img width=39 height=66 src="0x5348.gif" title="boar_wild" />
-			<img width=57 height=77 src="0x510f.gif" title="goblin_worg_elite" />
-			<img width=65 height=91 src="0x5110.gif" title="goblin_worg_shaman" />
-			<img width=64 height=64 src="0x5345.gif" title="drowned_dead_red" />
-			<img width=76 height=78 src="0x534b.gif" title="bugbear_shaman" />
-			<img width=58 height=76 src="0x5346.gif" title="troll_scrag" />
-			<img width=52 height=64 src="0x5347.gif" title="troll_sectral" />
-			<img width=113 height=58 src="0xa002.gif" title="wyvern_white" />
-			<img width=76 height=104 src="0x5344.gif" title="halfdragon_green" />
-			<img width=115 height=68 src="0x5fda.gif" title="snake_water" />
-			<img width=226 height=116 src="0x100a.gif" title="wyrmling_albino" />
-			<img width=148 height=105 src="0x100b.gif" title="fiend_red" />
-			<img width=136 height=138 src="0x510c.gif" title="ettin_ghost" />
-			<img width=145 height=165 src="0x1308.gif" title="giant_hill" />
-			<img width=124 height=181 src="0x5104.gif" title="dragon_white_young" />
-			<img width=124 height=181 src="0x5105.gif" title="dragon_green_young" />
-			<img width=124 height=181 src="0x5106.gif" title="dragon_silver_young" />
-			<img width=77 height=202 src="0x100c.gif" title="tunnel_worm" />
-			<img width=249 height=315 src="0x1306.gif" title="dragon_red_juvenile" />
-			<img width=249 height=315 src="0x1307.gif" title="dragon_green_juvenile" />
-			<img width=233 height=388 src="0x1103.gif" title="dragon_green_iwd" />
+			<img width=35 height=31 src="images/0x54b8.gif" title="dog_grey" />
+			<img width=35 height=32 src="images/0x54ba.gif" title="gibberling_brood" />
+			<img width=42 height=45 src="images/0x5356.gif" title="mkhiin_bow" />
+			<img width=65 height=36 src="images/0x5358.gif" title="mkhiin_armor_axe" />
+			<img width=40 height=45 src="images/0x5359.gif" title="mkhiin_armor_bow" />
+			<img width=42 height=63 src="images/0x5355.gif" title="mkhiin" />
+			<img width=51 height=53 src="images/0x5357.gif" title="mkhiin_staff" />
+			<img width=30 height=43 src="images/0x5fd9.gif" title="golem_mini" />
+			<img width=48 height=30 src="images/0x54bb.gif" title="black_pudding" />
+			<img width=55 height=45 src="images/0xa001.gif" title="megalocentipede" />
+			<img width=60 height=66 src="images/0x54b9.gif" title="spider_water" />
+			<img width=43 height=60 src="images/0x534d.gif" title="hephernaan" />
+			<img width=35 height=65 src="images/0x5fd5.gif" title="sailor_green" />
+			<img width=35 height=65 src="images/0x5fd6.gif" title="sailor_red" />
+			<img width=35 height=65 src="images/0x5fd7.gif" title="sailor_sark" />
+			<img width=41 height=71 src="images/0x5fd8.gif" title="crusader_soldier" />
+			<img width=43 height=87 src="images/0x5fd4.gif" title="red_wizard" />
+			<img width=39 height=66 src="images/0x5352.gif" title="boar_wild" />
+			<img width=57 height=77 src="images/0x5111.gif" title="goblin_worg_elite" />
+			<img width=65 height=91 src="images/0x5112.gif" title="goblin_worg_shaman" />
+			<img width=64 height=64 src="images/0x5350.gif" title="drowned_dead_red" />
+			<img width=76 height=78 src="images/0x5353.gif" title="bugbear_shaman" />
+			<img width=73 height=85 src="images/0x5fdb.gif" title="efreeti_noble" />
+			<img width=58 height=76 src="images/0x534b.gif" title="troll_scrag" />
+			<img width=52 height=64 src="images/0x534c.gif" title="troll_spectral" />
+			<img width=113 height=58 src="images/0xa002.gif" title="wyvern_white" />
+			<img width=76 height=104 src="images/0x5351.gif" title="halfdragon_green" />
+			<img width=115 height=68 src="images/0x5fda.gif" title="snake_water" />
+			<img width=226 height=116 src="images/0x100a.gif" title="wyrmling_albino" />
+			<img width=148 height=105 src="images/0x100b.gif" title="fiend_red" />
+			<img width=136 height=138 src="images/0x5117.gif" title="ettin_ghost" />
+			<img width=145 height=165 src="images/0x1308.gif" title="giant_hill" />
+			<img width=124 height=181 src="images/0x510b.gif" title="dragon_white_young" />
+			<img width=124 height=181 src="images/0x510c.gif" title="dragon_green_young" />
+			<img width=124 height=181 src="images/0x510d.gif" title="dragon_silver_young" />
+			<img width=77 height=202 src="images/0x100c.gif" title="tunnel_worm" />
+			<img width=249 height=315 src="images/0x1306.gif" title="dragon_red_juvenile" />
+			<img width=249 height=315 src="images/0x1307.gif" title="dragon_green_juvenile" />
+			<img width=233 height=388 src="images/0x1103.gif" title="dragon_green_iwd" />
 		</p><br><br>
 
 		<p style="font-size: 120%;">
@@ -1414,73 +1415,161 @@
 			Exemples d'animations qui n'existent pas dans les jeux Baldur's Gate II et qui ont été importées par différents modeurs. D'autres ont été ajoutées depuis la dernière mise à jour de ce document.
 		</p><br>
 		<p>
+			<img width=106 height=57 src="images/0x5fc5.gif" title="gw_unicorn" />
+			<img width=83 height=94 src="images/0x5fc6.gif" title="gw_unicorn_black" />
+			<img width=99 height=71 src="images/0x5fc7.gif" title="gw_unicorn_nightmare" />
+			<img width=76 height=59 src="images/0x5fc8.gif" title="gw_horse_black_and_white" />
+			<img width=82 height=53 src="images/0x5fc9.gif" title="gw_horse_baie" />
+			<img width=88 height=57 src="images/0x5fca.gif" title="gw_horse_chestnut" />
+			<img width=61 height=63 src="images/0x5fcb.gif" title="gw_horse_blanket_baie" />
+			<img width=68 height=81 src="images/0x5fcc.gif" title="gw_horse_grullo" />
+			<img width=82 height=75 src="images/0x5fcd.gif" title="gw_horse_blue_roanned" />
+			<img width=64 height=95 src="images/0x5fce.gif" title="gw_war_horse_baie" />
+			<img width=51 height=82 src="images/0x5fcf.gif" title="gw_war_horse_baie_and_white" />
+			<img width=84 height=68 src="images/0x5fd0.gif" title="gw_war_horse_black" />
+			<img width=91 height=59 src="images/0x5fd1.gif" title="gw_war_horse_grey" />
+			<img width=87 height=68 src="images/0x5b28.gif" title="gw_paladin_mount" />
+
 			<img width=21 height=25 src="images/0x547c.gif" title="chicken_brown" />
+			<img width=29 height=36 src="images/0x535a.gif" title="bee_giant_wow" />
+			<img width=64 height=24 src="images/0x5b9e.gif" title="snake_small" />
+			<img width=64 height=24 src="images/0x5b9f.gif" title="snake_small_green" />
+			<img width=64 height=24 src="images/0x5ba0.gif" title="snake_small_red" />
 			<img width=27 height=38 src="images/0x5296.gif" title="jastey_wolfhound" />
-			<img width=128 height=96 src="images/0x5fc5.gif" title="gw_unicorn" />
-			<img width=104 height=112 src="images/0x5fc6.gif" title="gw_unicorn_black" />
-			<img width=112 height=96 src="images/0x5fc7.gif" title="gw_unicorn_nightmare" />
-			<img width=96 height=96 src="images/0x5fc8.gif" title="gw_horse_black_and_white" />
-			<img width=96 height=96 src="images/0x5fc9.gif" title="gw_horse_baie" />
-			<img width=104 height=96 src="images/0x5fca.gif" title="gw_horse_chestnut" />
-			<img width=96 height=96 src="images/0x5fcb.gif" title="gw_horse_blanket_baie" />
-			<img width=96 height=96 src="images/0x5fcc.gif" title="gw_horse_grullo" />
-			<img width=96 height=112 src="images/0x5fcd.gif" title="gw_horse_blue_roanned" />
-			<img width=96 height=112 src="images/0x5fce.gif" title="gw_war_horse_baie" />
+			<img width=40 height=37 src="images/0x52f7.gif" title="gw_frog_demon_green" />
+			<img width=43 height=39 src="images/0x54a2.gif" title="gw_pygmy" />
+			<img width=44 height=40 src="images/0x54a3.gif" title="gw_pygmy_blowpipe" />
+			<img width=42 height=48 src="images/0x5322.gif" title="gw_blade_creeper" />
+			<img width=72 height=47 src="images/0x52db.gif" title="gw_maggot_blue" />
+			<img width=44 height=53 src="images/0x5485.gif" title="gw_jellyfish_yellow" />
+			<img width=38 height=55 src="images/0x5b61.gif" title="gw_larval_worm_small_pst" />
+			<img width=58 height=50 src="images/0x52a1.gif" title="gw_pig" />
+			<img width=46 height=60 src="images/0x5338.gif" title="gw_hydra_fire" />
+			<img width=63 height=55 src="images/0x5309.gif" title="gw_imp_gremin_red" />
+			<img width=55 height=51 src="images/0x52f1.gif" title="gw_spider_mechanic_red" />
+			<img width=52 height=57 src="images/0x5330.gif" title="gw_mutated_rat" />
+			<img width=70 height=63 src="images/0x531a.gif" title="gw_wererat_ochre_pst" />
+			<img width=70 height=63 src="images/0x5318.gif" title="gw_wererat_blue_pst" />
+			<img width=70 height=63 src="images/0x5319.gif" title="gw_wererat_green_pst" />
 
-			<img width=96 height=96 src="images/0x5fcf.gif" title="gw_war_horse_baie_and_white" />
-			<img width=96 height=96 src="images/0x5fd0.gif" title="gw_war_horse_black" />
-			<img width=104 height=96 src="images/0x5fd1.gif" title="gw_war_horse_grey" />
-			<img width=112 height=96 src="images/0x5b28.gif" title="gw_paladin_mount" />
-			<img width=92 height=94 src="images/0x5293.gif" title="packmule_wow" />
-			<img width=96 height=96 src="images/0x5062.gif" title="gw_cow_black_and_white" />
-			<img width=79 height=100 src="images/0x52a3.gif" title="gw_ape_black" />
-			<img width=80 height=87 src="images/0x5295.gif" title="gw_bear_giant_diablo2" />
-			<img width=64 height=128 src="images/0x533a.gif" title="gw_tiger" />
-			<img width=64 height=128 src="images/0x533b.gif" title="gw_tiger_white" />
-			<img width=64 height=64 src="images/0x5485.gif" title="gw_jellyfish_yellow" />
-			<img width=64 height=88 src="images/0x54a0.gif" title="gw_amazone_novice_diablo2" />
-			<img width=80 height=80 src="images/0x5309.gif" title="gw_imp_gremin_red" />
+			<img width=46 height=63 src="images/0x5b7c.gif" title="gw_drone_light_pst" />
+			<img width=52 height=80 src="images/0x54a0.gif" title="gw_amazone_novice" />
+			<img width=39 height=61 src="images/0x54a1.gif" title="gw_amazone_archer" />
+			<img width=48 height=66 src="images/0x549a.gif" title="gw_amazone_scimitar" />
+			<img width=51 height=68 src="images/0x549c.gif" title="gw_amazone_saber" />
+			<img width=46 height=69 src="images/0x549d.gif" title="gw_amazone_axe" />
+			<img width=92 height=72 src="images/0x549e.gif" title="gw_amazone_pike" />
+			<img width=75 height=71 src="images/0x549f.gif" title="gw_amazone_trident" />
+			<img width=50 height=69 src="images/0x52a7.gif" title="gw_amazone_priestess_flail" />
+			<img width=90 height=68 src="images/0x547d.gif" title="gw_guard1_glaive_d2" />
+			<img width=89 height=63 src="images/0x5480.gif" title="gw_guard2_spear_d2" />
+			<img width=71 height=69 src="images/0x52ab.gif" title="gw_skeleton_army1" />
+			<img width=75 height=67 src="images/0x52b2.gif" title="gw_skeleton_army2_scythe" />
+			<img width=57 height=67 src="images/0x52bc.gif" title="gw_skeleton_army3_ripped_out" />
+			<img width=53 height=66 src="images/0x52bd.gif" title="gw_skeleton_army4" />
+			<img width=63 height=75 src="images/0x54a8.gif" title="gw_reanimated_horde" />
+			<img width=62 height=68 src="images/0x54a9.gif" title="gw_reanimated_horde_beheaded" />
 
-			<img width=100 height=100 src="images/0x530c.gif" title="gw_succubus_diablo" />
-			<img width=112 height=112 src="images/0x530a.gif" title="gw_succubus_diablo2" />
-			<img width=96 height=132 src="images/0x530b.gif" title="gw_succubus_witch_diablo2" />
-			<img width=120 height=120 src="images/0x52a5.gif" title="gw_gargoyle_diablo" />
-			<img width=119 height=112 src="images/0x52a6.gif" title="bonebat_pst" />
-			<img width=104 height=88 src="images/0x5304.gif" title="gw_bat_demon_fire" />
-			<img width=102 height=84 src="images/0x50be.gif" title="gw_frog_demon_giant" />
-			<img width=112 height=112 src="images/0x5492.gif" title="gw_mosquito_giant_diablo2" />
-			<img width=88 height=122 src="images/0x5fd2.gif" title="gw_troll_darkness" />
-			<img width=96 height=96 src="images/0x5294.gif" title="werebear_diablo2" />
-			<img width=84 height=93 src="images/0x52ec.gif" title="gw_golem_mechanic_blue" />
+			<img width=73 height=76 src="images/0x52d8.gif" title="gw_goatman_two_handed_axe" />
+			<img width=88 height=89 src="images/0x52d9.gif" title="gw_goatman_great_maul" />
+			<img width=58 height=78 src="images/0x548a.gif" title="gw_guard_zealot_axe" />
+			<img width=79 height=77 src="images/0x548b.gif" title="gw_guard_zealot_voulge" />
+			<img width=84 height=78 src="images/0x548c.gif" title="gw_guard_zealot_poleaxe" />
+			<img width=69 height=73 src="images/0x548d.gif" title="gw_guard_zealot_scythe" />
+			<img width=69 height=75 src="images/0x52cc.gif" title="gw_panther_woman" />
+			<img width=74 height=86 src="images/0x52cf.gif" title="gw_panther_woman_whip" />
+			<img width=70 height=84 src="images/0x52d1.gif" title="gw_panther_woman_chief" />
+			<img width=53 height=72 src="images/0x52d2.gif" title="gw_panther_woman_range" />
+			<img width=53 height=79 src="images/0x52d3.gif" title="gw_panther_woman_range_elite" />
+			<img width=71 height=83 src="images/0x54a4.gif" title="gw_doom_knight" />
+			<img width=66 height=79 src="images/0x54a5.gif" title="gw_doom_knight_one_armed" />
+			<img width=71 height=72 src="images/0x54a6.gif" title="gw_doom_knight_beheaded" />
+			<img width=66 height=72 src="images/0x54a7.gif" title="gw_doom_knight_ripped_out" />
+			<img width=75 height=79 src="images/0x52c3.gif" title="gw_doom_knight_priest" />
 
+			<img width=81 height=79 src="images/0x52c4.gif" title="gw_doom_knight_priest_cold" />
+			<img width=70 height=79 src="images/0x52ca.gif" title="gw_doom_knight_mage_fire" />
+			<img width=70 height=75 src="images/0x5b3f.gif" title="gw_nordom_pst" />
+			<img width=58 height=80 src="images/0x5b75.gif" title="gw_drone_heavy_green_pst" />
+			<img width=56 height=71 src="images/0x5332.gif" title="gw_mutated_rat_brown" />
+			<img width=55 height=75 src="images/0x5331.gif" title="gw_mutated_rat_black" />
+			<img width=89 height=75 src="images/0x5293.gif" title="packmule_wow" />
+			<img width=88 height=78 src="images/0x50be.gif" title="gw_frog_demon_giant" />
+			<img width=115 height=63 src="images/0x5334.gif" title="gw_claw_viper" />
+			<img width=97 height=69 src="images/0x5335.gif" title="gw_naja_snake" />
+			<img width=78 height=86 src="images/0x52aa.gif" title="gw_pygmy_shaman" />
+			<img width=74 height=86 src="images/0x5062.gif" title="gw_cow_black_and_white" />
+			<img width=75 height=73 src="images/0x52a3.gif" title="gw_ape_black" />
+			<img width=74 height=76 src="images/0x52a4.gif" title="gw_ape_brown" />
+
+			<img width=118 height=85 src="images/0x52a6.gif" title="bonebat_pst" />
+			<img width=93 height=75 src="images/0x5304.gif" title="gw_bat_demon_fire" />
+			<img width=104 height=60 src="images/0x5481.gif" title="gw_snake_sea" />
+			<img width=140 height=82 src="images/0x50b7.gif" title="gw_razor_spine_giant" />
+			<img width=50 height=81 src="images/0x5295.gif" title="gw_bear_giant_diablo2" />
+			<img width=68 height=81 src="images/0x5294.gif" title="werebear_diablo2" />
+			<img width=56 height=85 src="images/0x5320.gif" title="gw_wererat_giant_dark_ochre_pst" />
+			<img width=56 height=85 src="images/0x5321.gif" title="gw_wererat_giant_yellow_pst" />
+			<img width=96 height=81 src="images/0x530a.gif" title="gw_succubus_diablo2" />
+			<img width=82 height=88 src="images/0x5fd2.gif" title="gw_troll_darkness" />
+			<img width=132 height=88 src="images/0x5582.gif" title="gw_regurgitator_diablo2" />
+			<img width=133 height=90 src="images/0x50a2.gif" title="gw_sand_beetle_giant" />
+
+			<img width=141 height=90 src="images/0x1005.gif" title="gw_overseer_warrior_diablo2" />
+			<img width=63 height=93 src="images/0x530c.gif" title="gw_succubus_diablo" />
+			<img width=68 height=97 src="images/0x5492.gif" title="gw_mosquito_giant_diablo2" />
+			<img width=92 height=92 src="images/0x533c.gif" title="gw_medusa" />
+			<img width=129 height=92 src="images/0x5499.gif" title="gw_minotaur_axe_and_flail" />
 			<img width=84 height=92 src="images/0x52ed.gif" title="gw_golem_mechanic_green" />
+			<img width=84 height=93 src="images/0x52ec.gif" title="gw_golem_mechanic_blue" />
 			<img width=83 height=93 src="images/0x52ee.gif" title="gw_golem_mechanic_red" />
-			<img width=120 height=112 src="images/0x5581.gif" title="gw_snow_yeti" />
-			<img width=128 height=128 src="images/0x5481.gif" title="gw_snake_sea" />
-			<img width=96 height=128 src="images/0x5486.gif" title="jgw_ellyfish_blue_large" />
-			<img width=160 height=128 src="images/0x5297.gif" title="gw_halfragon_silver" />
-			<img width=120 height=120 src="images/0x533c.gif" title="gw_medusa" />
-			<img width=120 height=120 src="images/0x533d.gif" title="gw_medusa_green" />
-			<img width=160 height=160 src="images/0x533e.gif" title="gw_medusa_queen" />
-			<img width=88 height=140 src="images/0x52eb.gif" title="gw_putrid_defiler" />
-			<img width=144 height=128 src="images/0x5582.gif" title="gw_regurgitator_diablo2" />
+			<img width=106 height=94 src="images/0x5581.gif" title="gw_snow_yeti" />
+			<img width=94 height=97 src="images/0x5343.gif" title="gw_medusa_green" />
+			<img width=144 height=97 src="images/0x5494.gif" title="gw_minotaur_armor_2_axes" />
 
-			<img width=160 height=128 src="images/0x1005.gif" title="gw_overseer_varrior_diablo2" />
-			<img width=144 height=144 src="images/0x5339.gif" title="the_butcher_hots" />
-			<img width=176 height=128 src="images/0x557c.gif" title="gw_thorned_hulk" />
-			<img width=216 height=148 src="images/0x5313.gif" title="gw_mega_deùon_flamberge" />
-			<img width=136 height=208 src="images/0x50d0.gif" title="gw_lolth_avatar" />
-			<img width=144 height=179 src="images/0x50d1.gif" title="gw_demon_andariel_diablo2" />
+			<img width=72 height=99 src="images/0x5fc4.gif" title="gw_golem_amber" />
+			<img width=90 height=100 src="images/0x505d.gif" title="gw_frozen_horror" />
+			<img width=112 height=99 src="images/0x52ea.gif" title="gw_evard_black_tentacles" />
+			<img width=175 height=100 src="images/0x5310.gif" title="gw_demon_izual" />
+			<img width=102 height=101 src="images/0x5b29.gif" title="gw_modron_pst" />
+			<img width=107 height=103 src="images/0x5317.gif" title="gw_wererat_mantuock_pst" />
+			<img width=83 height=103 src="images/0x5097.gif" title="gw_jackal_guardian" />
+			<img width=81 height=103 src="images/0x5098.gif" title="gw_zombie_guardian" />
+			<img width=40 height=108 src="images/0x533a.gif" title="gw_tiger" />
+			<img width=40 height=108 src="images/0x533b.gif" title="gw_tiger_white" />
+			<img width=94 height=108 src="images/0x52a5.gif" title="gw_gargoyle_diablo" />
+			<img width=81 height=110 src="images/0x5486.gif" title="gw_jellyfish_blue_large" />
 
-			<img width=226 height=192 src="images/0x5585.gif" title="gw_demon_duriel" />
-			<img width=224 height=224 src="images/0x50d2.gif" title="gw_démon_diablo" />
-			<img width=96 height=188 src="images/0xa101.gif" title="gw_shark leopard" />
-			<img width=208 height=208 src="images/0x1004.gif" title="gw_shark sandbard" />
-			<img width=256 height=272 src="images/0x1301.gif" title="gw_dragon_mechanic" />
+			<img width=166 height=114 src="images/0x557c.gif" title="gw_thorned_hulk" />
+			<img width=115 height=114 src="images/0x52e9.gif" title="gw_evard_fire_tentacles" />
+			<img width=72 height=127 src="images/0x530b.gif" title="gw_succubus_witch_diablo2" />
+			<img width=157 height=115 src="images/0x5297.gif" title="gw_halfragon_silver" />
+			<img width=219 height=119 src="images/0x5298.gif" title="gw_octopus_tentacle" />
+			<img width=84 height=124 src="images/0x52e8.gif" title="gw_evard_tentacles" />
+			<img width=110 height=124 src="images/0x511e.gif" title="elemental_ice_wow" />
+			<img width=129 height=128 src="images/0x5339.gif" title="the_butcher_hots" />
+			<img width=67 height=134 src="images/0x52eb.gif" title="gw_putrid_defiler" />
 
-			<img width=352 height=352 src="images/0x1302.gif" title="gw_dragon_black_juvenile" />
-			<img width=352 height=352 src="images/0x1303.gif" title="gw_dragon_silver_juvenile" />
-			<img width=416 height=416 src="images/0x1209.gif" title="gw_tarasque" />
+			<img width=130 height=134 src="images/0x5344.gif" title="gw_medusa_queen" />
+			<img width=75 height=157 src="images/0xa101.gif" title="gw_shark leopard" />
+			<img width=202 height=133 src="images/0x5313.gif" title="gw_mega_demon_flamberge" />
+			<img width=171 height=163 src="images/0x5584.gif" title="gw_siege_beast" />
+			<img width=211 height=163 src="images/0x5585.gif" title="gw_demon_duriel" />
+			<img width=136 height=171 src="images/0x5311.gif" title="gw_demon_mephisto" />
+			<img width=141 height=168 src="images/0x5493.gif" title="gw_vulture_demon" />
+
+			<img width=191 height=177 src="images/0x1004.gif" title="gw_shark sandbar" />
+			<img width=125 height=175 src="images/0x50d1.gif" title="gw_demon_andariel_diablo2" />
+			<img width=279 height=200 src="images/0x1102.gif" title="gw_catapult" />
+			<img width=131 height=202 src="images/0x50d0.gif" title="gw_lolth_avatar" />
+			<img width=193 height=221 src="images/0x50d2.gif" title="gw_démon_diablo" />
+			<img width=87 height=200 src="images/0x1309.gif" title="elemental_sunnis_wow" />
+
+			<img width=121 height=239 src="images/0x130a.gif" title="elemental_zaaman_wow" />
+			<img width=240 height=253 src="images/0x1301.gif" title="gw_dragon_mechanic" />
+			<img width=335 height=317 src="images/0x1302.gif" title="gw_dragon_black_juvenile" />
+			<img width=315 height=312 src="images/0x1303.gif" title="gw_dragon_silver_juvenile" />
+			<img width=400 height=373 src="images/0x1209.gif" title="gw_tarasque" />
 		</p><br>
 
 		<address>
@@ -1549,7 +1638,7 @@
 			  <ul>
 				<li style="margin-left:-4%; margin-right:-8%;">Modification du code des animations pour les rendre compatibles avec les code pages non occidentaux (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). &#128521;</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.</li>
-				<li style="margin-left:-4%; margin-right:-8%;">Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.</li>
 			  </ul>
 			<li>Intégration des correctifs de code du BWP Fixpack :</li>
 			  <ul>

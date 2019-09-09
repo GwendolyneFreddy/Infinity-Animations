@@ -403,23 +403,23 @@
 		</p>
 		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
 			<div class="quotetitle">
-				<strong>Deprecated</strong> (<span style="text-decoration: underline">read <a href="#config">this</a> instead</span>):
+				<strong>Deprecated as of v 6.0.0</strong> (<span style="text-decoration: underline">read <a href="#config">this</a> instead</span>):
 				<input value="Show" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
 				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Show'; }" type="button" >
 			</div>
 			<div class="quotecontent">
 				<div style="display: none; ">
 				<p style="width:96%; color:#5f5f5f;">
-					<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no subfolders beyond that).
+					<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub folders beyond that).
 				</p>
 				<p style="width:96%; color:#5f5f5f;">
-					Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the subarchive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.
+					Extract all archives to the /content folder except IA_BG2_Restores.rar, which should go in the /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.
 				</p>
 				<p style="width:96%; color:#5f5f5f;">
 					For WinZip, make sure the "Use folder names" box is <em>unselected</em>.
 				</p>
 				<p style="width:96%; color:#5f5f5f;">
-					You should end up with a bunch of .bam files and no subfolders in your "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
+					You should end up with a bunch of .bam files and no sub-folders in your "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
 				</p>
 				</div>
 			</div>
@@ -475,25 +475,25 @@
 		<h3>&#9888;&#65039; Warning: new installation process</h3>
 
 		<p style="margin-top:2%;">
-			<strong><span style="font-variant:small-caps;font-size: 12px;margin-left: 30px;">As of version 6.0.0, options needed for installation are read from <a href="../infinityanimations-config-default.ini"><em>infinityanimations-config-default.ini</em></a> file, or <em>infinityanimations-config.ini</em> if it exists.</span></strong>
+			<strong><span style="font-variant:small-caps;font-size: 12px;margin-left: 30px;">As of version 6.0.0, options needed for installation are read from <a href="../infinityanimations.ini"><em>infinityanimations.ini</em></a> file, or <em>infinityanimations_user.ini</em> if it exists.</span></strong>
 		</p><br>
 		<p>
-			The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations <strong>content</strong> or <strong>restore</strong> subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
+			The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations <strong>content</strong> or <strong>restore</strong> sub-folders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
 		</p>
 		<p>
-			From now on, the content needed by Infinity Animations is included in the <strong>archives</strong> folder and automatically copied by the main component into your <strong>override</strong> folder. Being useless, the respective <em>content</em> and <em>restore</em> subfolders have been removed.
+			From now on, the content needed by Infinity Animations is included in the <strong>archives</strong> folder and automatically copied by the main component into your <strong>override</strong> folder. Being useless, the respective <em>content</em> and <em>restore</em> sub-folders have been removed.
 		</p>
 		<p>
-			By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit <em>infinityanimations-config-default.ini</em> (found in infinityanimations folder) with Notepad or another text editor, then save it as <strong><span style="font-variant:small-caps;font-size: 12px;"><em>infinityanimations-config.ini</em></span></strong>.
+			By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit <em>infinityanimations.ini</em> (found in infinityanimations folder) with Notepad or another text editor, then save it as <strong><span style="font-variant:small-caps;font-size: 12px;"><em>infinityanimations_user.ini</em></span></strong>.
 		</p>
 		<p>
 			Each line consists of a configuration option, then '=', then a number. The only thing you should edit is the number. For example, if you don't want to use svirneblins animations, change the ia_iwd_svirfneblin value to 0.
 		</p>
 		<p>
-			The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations-config.ini, any installation failure will be prevented by reverting it back to its default value.
+			The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations_user.ini, any installation failure will be prevented by reverting it back to its default value.
 		</p>
 		<p>
-			If you want to install a component requiring files that you decided not to install, the installer will install them automaticaly if there are still in the archives folder. Otherwise, it will warn you. You will have to exit it, extract them in your mod folder, and rerun the installer.<br>
+			If you want to install a component requiring files that you decided not to install, the installer will install them automatically if there are still in the archives folder. Otherwise, it will warn you. You will have to exit it, extract them in your mod folder, and rerun the installer.<br>
 			Following the above example, if you indeed wish the svirneblins get the svirneblins animations after having set ia_iwd_svirfneblin option to 0, the installer will force their installation if it finds them in archives folder. If not, it will warn you to extract them before installing the component.
 		</p>
 		<p>
@@ -715,7 +715,7 @@
 			<li>Male human monks get the monk instead of cleric animation</li>
 			<li>Male human pirates get the pirate animation</li>
 			<li>Male human sailors get the sailor animation</li>
-			<li>Amnish guards get the Amnish guard animation</li>
+			<li>Amnian guards get the Amnian guard animation</li>
 			<li>Male human Shadow Thieves get the Shadow Thief animation</li>
 		  </ul><br>
 
@@ -723,7 +723,7 @@
 
 		  <p><a name="50" id="50"></a>
 			<strong>50. Distinctive Genies</strong><br />
-			<em><span style="margin-left: 22px;">Requires IA_Fiends_Genies content</span></em>
+			<em><span style="margin-left: 22px;">[DEPRECATED as of v 6.0.0: Requires IA_Fiends_Genies content]</span></em>
 		  </p>
 		  <ul style="margin-left: 4%;">
 			<li>Uses djinn, efreet, dao, jann and marid animations where sensible</li>
@@ -735,8 +735,8 @@
 
 		<p><a name="100" id="100"></a>
 			<strong>100. Distinctive Fiends</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_Fiends_Genies, IA_IWD and IA_PST_Abishai content<br></span>
-			<span style="margin-left: 34px;">Requires IA_NWN_01_Modron content only if certain mods are installed</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_Fiends_Genies, IA_IWD and IA_PST_Abishai content<br></span>
+			<span style="margin-left: 34px;">Requires IA_NWN_01_Modron content only if certain mods are installed]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Nabassus get a green-grey tanar'ri animation</li>
@@ -763,7 +763,7 @@
 			<strong>Pit Fiends<br />
 			150.</strong> All get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
 			<strong>175.</strong> Some get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
-			<em><span style="margin-left: 34px;">Requires IA_NWN_01_Modron content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_NWN_01_Modron content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Choice of subcomponent (or none); "some" = roughly half, randomly selected</li>
@@ -777,7 +777,7 @@
 			<strong>Cambions get Isair Animation<br />
 			210.</strong> All cambions<br />
 			<strong>230.</strong> Some cambions<br />
-			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_BGII_IWDII content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Same logic as Pit Fiends component</li>
@@ -791,7 +791,7 @@
 			<strong>Alu-Fiends get Madae Animation<br />
 			260.</strong> All alu-fiends<br />
 			<strong>280.</strong> Some alu-fiends<br />
-			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_BGII_IWDII content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Same logic as Pit Fiends component</li>
@@ -803,7 +803,7 @@
 
 		<p><a name="400" id="400"></a>
 			<strong>400. Distinctive Undead</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Banshees get the wailing virgin animation</li>
@@ -840,7 +840,7 @@
 			410.</strong> Wight Barrow animation<br />
 			<strong>415.</strong> Skeleton animation<br />
 			<strong>420.</strong> Skeleton Warrior animation<br />
-			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_IWD content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Assigns the chosen animation to all skeleton warriors</li>
@@ -855,7 +855,7 @@
 			450.</strong> Some beggars and slaves<br />
 			<strong>455.</strong> Some beggars<br />
 			<strong>460.</strong> Some slaves<br />
-			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_IWD content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Same logic as Pit Fiends component</li>
@@ -869,7 +869,7 @@
 			<strong>Svirneblin Animations<br />
 			480.</strong> Animations only<br />
 			<strong>490.</strong> Animations and sounds<br />
-			<em><span style="margin-left: 34px;">Requires IA_IWD_Svirfneblin content</span><br />
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_IWD_Svirfneblin content]</span><br />
 			<span style="margin-left: 34px;">Skipped if Aurora's Shoes installed (does the same thing)</span></em>
 		 </p>
 		  <ul style="margin-left: 4%;">
@@ -882,7 +882,7 @@
 
 		<p><a name="500" id="500"></a>
 			<strong>500. More Base Animations</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_Base_Anims content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_Base_Anims content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Histachii get the <acronym title="Icewind Dale">IWD</acronym> histachii animation</li>
@@ -899,7 +899,7 @@
 
 		<p><a name="550" id="550"></a>
 			<strong>550. More Icewind Dale Animations</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_IWD content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_IWD content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Animated Plates get small animated plate animations</li>
@@ -920,7 +920,7 @@
 
 		<p><a name="600" id="600"></a>
 			<strong>600. More Icewind Dale II Animations</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_BGII_IWDII content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_BGII_IWDII content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Greater fire giants and firbolgs get the fire giant variant animation</li>
@@ -932,7 +932,7 @@
 			<li>Death tyrants get the death tyrant animation</li>
 			<li>Wererat gets the wererat animation</li>
 			<li>Worgs get the <acronym title="Icewind Dale II">IWD2</acronym> worg animation</li>
-			<li>Yuan-Ti Halfbreeds get the <acronym title="Icewind Dale II">IWD2</acronym> yuan-ti halfbreed animation</li>
+			<li>Yuan-Tis Halfbreed get the <acronym title="Icewind Dale II">IWD2</acronym> yuan-ti halfbreed animation</li>
 		  </ul>
 		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
 		</p>
@@ -941,7 +941,7 @@
 
 		<p><a name="650" id="650"></a>
 			<strong>650. More Neverwinter Nights Animations</strong><br />
-			<em><span style="margin-left: 34px;">Requires IA_NWN_01_Modron content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_NWN_01_Modron content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Scythe-wielders (in <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym>) get the <acronym title="Neverwinter Nights">NWN</acronym> Amel animation</li>
@@ -963,7 +963,7 @@
 			<strong>720.</strong> 50% of relevant non-joinables<br />
 			<strong>730.</strong> 75% of relevant non-joinables<br />
 			<strong>740.</strong> Most relevant non-joinables<br />
-			<em><span style="margin-left: 34px;">Requires IA_PST_Paletted content</span></em>
+			<em><span style="margin-left: 34px;">[DEPRECATED as of v 6.0.0: Requires IA_PST_Paletted content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Female human thieves get the female Curst townie animation</li>
@@ -1001,7 +1001,7 @@
 			<strong>7010.</strong> 50% of relevant non-joinables<br />
 			<strong>7020.</strong> 75% of relevant non-joinables<br />
 			<strong>7030.</strong> Most relevant non-joinables<br />
-			<em><span style="margin-left: 44px;">Requires Moinesse_edits_IAised content</span></em>
+			<em><span style="margin-left: 44px;">[DEPRECATED as of v 6.0.0: Requires Moinesse_edits_IAised content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Male human barbarians get the male barbarian animation</li>
@@ -1024,7 +1024,7 @@
 			<strong>8010.</strong> 50% of relevant creatures<br />
 			<strong>8020.</strong> 75% of relevant creatures<br />
 			<strong>8030.</strong> Most relevant creatures<br />
-			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+			<em><span style="margin-left: 44px;">[DEPRECATED as of v 6.0.0: Requires IA_Base_Anims content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Uses the original Baldur's Gate character animations as specified</li>
@@ -1054,7 +1054,7 @@
 			9500.</strong> Prompt for each exported <acronym title="Player Character">PC</acronym><br />
 			<strong>9510.</strong> Prompt for problematic <acronym title="Player Characters">PCs</acronym><br />
 			<strong>9520.</strong> Patch all <acronym title="Player Characters">PCs</acronym> without prompting<br />
-			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+			<em><span style="margin-left: 44px;">[DEPRECATED as of v 6.0.0: Requires IA_Base_Anims content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Uses the original Baldur's Gate character animations as specified</li>
@@ -1072,7 +1072,7 @@
 			9600.</strong> Prompt for each character<br />
 			<strong>9610.</strong> Prompt for problematic characters<br />
 			<strong>9620.</strong> Patch all characters without prompting<br />
-			<em><span style="margin-left: 44px;">Requires IA_Base_Anims content</span></em>
+			<em><span style="margin-left: 44px;">[DEPRECATED as of v 6.0.0: Requires IA_Base_Anims content]</span></em>
 		</p>
 		  <ul style="margin-left: 4%;">
 			<li>Same notes as above</li>
@@ -1109,7 +1109,7 @@
           <h2>Troubleshooting</h2><br>
 
 		<p>
-			These are some general tips if you have problems getting the game working, with or without this or other mods. Many times, errors have to do with the game engine itself or the manner of installation or gameplay. The game recommends deleting all files out of the /cache, /temp and /tempsave subfolders in your game folder to see if that resolves the problem before any further troubleshooting.
+			These are some general tips if you have problems getting the game working, with or without this or other mods. Many times, errors have to do with the game engine itself or the manner of installation or gameplay. The game recommends deleting all files out of the /cache, /temp and /tempsave sub-folders in your game folder to see if that resolves the problem before any further troubleshooting.
 		</p><br>
 
 		<p>
@@ -1196,7 +1196,7 @@
 		</p><br><br>
 
 		<p style="font-size: 120%;">
-			<strong>Selection of Other Animations</strong>
+			<strong>Selection of other animations</strong>
 		</p>
 		<p>
 			These animations do not exist in most Baldur's Gate II games; the following have been added (ported or customised) as of the last update of this readme.
@@ -1430,6 +1430,10 @@
 			<img width=87 height=68 src="images/0x5b28.gif" title="gw_paladin_mount" />
 
 			<img width=21 height=25 src="images/0x547c.gif" title="chicken_brown" />
+			<img width=29 height=36 src="images/0x535a.gif" title="bee_giant_wow" />
+			<img width=64 height=24 src="images/0x5b9e.gif" title="snake_small" />
+			<img width=64 height=24 src="images/0x5b9f.gif" title="snake_small_green" />
+			<img width=64 height=24 src="images/0x5ba0.gif" title="snake_small_red" />
 			<img width=27 height=38 src="images/0x5296.gif" title="jastey_wolfhound" />
 			<img width=40 height=37 src="images/0x52f7.gif" title="gw_frog_demon_green" />
 			<img width=43 height=39 src="images/0x54a2.gif" title="gw_pygmy" />
@@ -1446,12 +1450,12 @@
 			<img width=70 height=63 src="images/0x531a.gif" title="gw_wererat_ochre_pst" />
 			<img width=70 height=63 src="images/0x5318.gif" title="gw_wererat_blue_pst" />
 			<img width=70 height=63 src="images/0x5319.gif" title="gw_wererat_green_pst" />
+
 			<img width=46 height=63 src="images/0x5b7c.gif" title="gw_drone_light_pst" />
 			<img width=52 height=80 src="images/0x54a0.gif" title="gw_amazone_novice" />
 			<img width=39 height=61 src="images/0x54a1.gif" title="gw_amazone_archer" />
 			<img width=48 height=66 src="images/0x549a.gif" title="gw_amazone_scimitar" />
 			<img width=51 height=68 src="images/0x549c.gif" title="gw_amazone_saber" />
-
 			<img width=46 height=69 src="images/0x549d.gif" title="gw_amazone_axe" />
 			<img width=92 height=72 src="images/0x549e.gif" title="gw_amazone_pike" />
 			<img width=75 height=71 src="images/0x549f.gif" title="gw_amazone_trident" />
@@ -1464,13 +1468,13 @@
 			<img width=53 height=66 src="images/0x52bd.gif" title="gw_skeleton_army4" />
 			<img width=63 height=75 src="images/0x54a8.gif" title="gw_reanimated_horde" />
 			<img width=62 height=68 src="images/0x54a9.gif" title="gw_reanimated_horde_beheaded" />
+
 			<img width=73 height=76 src="images/0x52d8.gif" title="gw_goatman_two_handed_axe" />
 			<img width=88 height=89 src="images/0x52d9.gif" title="gw_goatman_great_maul" />
 			<img width=58 height=78 src="images/0x548a.gif" title="gw_guard_zealot_axe" />
 			<img width=79 height=77 src="images/0x548b.gif" title="gw_guard_zealot_voulge" />
 			<img width=84 height=78 src="images/0x548c.gif" title="gw_guard_zealot_poleaxe" />
 			<img width=69 height=73 src="images/0x548d.gif" title="gw_guard_zealot_scythe" />
-
 			<img width=69 height=75 src="images/0x52cc.gif" title="gw_panther_woman" />
 			<img width=74 height=86 src="images/0x52cf.gif" title="gw_panther_woman_whip" />
 			<img width=70 height=84 src="images/0x52d1.gif" title="gw_panther_woman_chief" />
@@ -1481,11 +1485,11 @@
 			<img width=71 height=72 src="images/0x54a6.gif" title="gw_doom_knight_beheaded" />
 			<img width=66 height=72 src="images/0x54a7.gif" title="gw_doom_knight_ripped_out" />
 			<img width=75 height=79 src="images/0x52c3.gif" title="gw_doom_knight_priest" />
+
 			<img width=81 height=79 src="images/0x52c4.gif" title="gw_doom_knight_priest_cold" />
 			<img width=70 height=79 src="images/0x52ca.gif" title="gw_doom_knight_mage_fire" />
 			<img width=70 height=75 src="images/0x5b3f.gif" title="gw_nordom_pst" />
 			<img width=58 height=80 src="images/0x5b75.gif" title="gw_drone_heavy_green_pst" />
-
 			<img width=56 height=71 src="images/0x5332.gif" title="gw_mutated_rat_brown" />
 			<img width=55 height=75 src="images/0x5331.gif" title="gw_mutated_rat_black" />
 			<img width=89 height=75 src="images/0x5293.gif" title="packmule_wow" />
@@ -1496,10 +1500,10 @@
 			<img width=74 height=86 src="images/0x5062.gif" title="gw_cow_black_and_white" />
 			<img width=75 height=73 src="images/0x52a3.gif" title="gw_ape_black" />
 			<img width=74 height=76 src="images/0x52a4.gif" title="gw_ape_brown" />
+
 			<img width=118 height=85 src="images/0x52a6.gif" title="bonebat_pst" />
 			<img width=93 height=75 src="images/0x5304.gif" title="gw_bat_demon_fire" />
 			<img width=104 height=60 src="images/0x5481.gif" title="gw_snake_sea" />
-
 			<img width=140 height=82 src="images/0x50b7.gif" title="gw_razor_spine_giant" />
 			<img width=50 height=81 src="images/0x5295.gif" title="gw_bear_giant_diablo2" />
 			<img width=68 height=81 src="images/0x5294.gif" title="werebear_diablo2" />
@@ -1509,10 +1513,10 @@
 			<img width=82 height=88 src="images/0x5fd2.gif" title="gw_troll_darkness" />
 			<img width=132 height=88 src="images/0x5582.gif" title="gw_regurgitator_diablo2" />
 			<img width=133 height=90 src="images/0x50a2.gif" title="gw_sand_beetle_giant" />
+
 			<img width=141 height=90 src="images/0x1005.gif" title="gw_overseer_warrior_diablo2" />
 			<img width=63 height=93 src="images/0x530c.gif" title="gw_succubus_diablo" />
 			<img width=68 height=97 src="images/0x5492.gif" title="gw_mosquito_giant_diablo2" />
-
 			<img width=92 height=92 src="images/0x533c.gif" title="gw_medusa" />
 			<img width=129 height=92 src="images/0x5499.gif" title="gw_minotaur_axe_and_flail" />
 			<img width=84 height=92 src="images/0x52ed.gif" title="gw_golem_mechanic_green" />
@@ -1521,10 +1525,10 @@
 			<img width=106 height=94 src="images/0x5581.gif" title="gw_snow_yeti" />
 			<img width=94 height=97 src="images/0x5343.gif" title="gw_medusa_green" />
 			<img width=144 height=97 src="images/0x5494.gif" title="gw_minotaur_armor_2_axes" />
+
 			<img width=72 height=99 src="images/0x5fc4.gif" title="gw_golem_amber" />
 			<img width=90 height=100 src="images/0x505d.gif" title="gw_frozen_horror" />
 			<img width=112 height=99 src="images/0x52ea.gif" title="gw_evard_black_tentacles" />
-
 			<img width=175 height=100 src="images/0x5310.gif" title="gw_demon_izual" />
 			<img width=102 height=101 src="images/0x5b29.gif" title="gw_modron_pst" />
 			<img width=107 height=103 src="images/0x5317.gif" title="gw_wererat_mantuock_pst" />
@@ -1534,30 +1538,34 @@
 			<img width=40 height=108 src="images/0x533b.gif" title="gw_tiger_white" />
 			<img width=94 height=108 src="images/0x52a5.gif" title="gw_gargoyle_diablo" />
 			<img width=81 height=110 src="images/0x5486.gif" title="gw_jellyfish_blue_large" />
+
 			<img width=166 height=114 src="images/0x557c.gif" title="gw_thorned_hulk" />
 			<img width=115 height=114 src="images/0x52e9.gif" title="gw_evard_fire_tentacles" />
-
-			<img width=157 height=115 src="images/0x5297.gif" title="gw_halfragon_silver" />
 			<img width=72 height=127 src="images/0x530b.gif" title="gw_succubus_witch_diablo2" />
+			<img width=157 height=115 src="images/0x5297.gif" title="gw_halfragon_silver" />
 			<img width=219 height=119 src="images/0x5298.gif" title="gw_octopus_tentacle" />
 			<img width=84 height=124 src="images/0x52e8.gif" title="gw_evard_tentacles" />
+			<img width=110 height=124 src="images/0x511e.gif" title="elemental_ice_wow" />
 			<img width=129 height=128 src="images/0x5339.gif" title="the_butcher_hots" />
-			<img width=130 height=134 src="images/0x5344.gif" title="gw_medusa_queen" />
 			<img width=67 height=134 src="images/0x52eb.gif" title="gw_putrid_defiler" />
+
+			<img width=130 height=134 src="images/0x5344.gif" title="gw_medusa_queen" />
 			<img width=75 height=157 src="images/0xa101.gif" title="gw_shark leopard" />
 			<img width=202 height=133 src="images/0x5313.gif" title="gw_mega_demon_flamberge" />
-
 			<img width=171 height=163 src="images/0x5584.gif" title="gw_siege_beast" />
 			<img width=211 height=163 src="images/0x5585.gif" title="gw_demon_duriel" />
 			<img width=136 height=171 src="images/0x5311.gif" title="gw_demon_mephisto" />
 			<img width=141 height=168 src="images/0x5493.gif" title="gw_vulture_demon" />
-			<img width=191 height=177 src="images/0x1004.gif" title="gw_shark sandbard" />
+
+			<img width=191 height=177 src="images/0x1004.gif" title="gw_shark sandbar" />
 			<img width=125 height=175 src="images/0x50d1.gif" title="gw_demon_andariel_diablo2" />
 			<img width=279 height=200 src="images/0x1102.gif" title="gw_catapult" />
 			<img width=131 height=202 src="images/0x50d0.gif" title="gw_lolth_avatar" />
 			<img width=193 height=221 src="images/0x50d2.gif" title="gw_démon_diablo" />
-			<img width=240 height=253 src="images/0x1301.gif" title="gw_dragon_mechanic" />
+			<img width=87 height=200 src="images/0x1309.gif" title="elemental_sunnis_wow" />
 
+			<img width=121 height=239 src="images/0x130a.gif" title="elemental_zaaman_wow" />
+			<img width=240 height=253 src="images/0x1301.gif" title="gw_dragon_mechanic" />
 			<img width=335 height=317 src="images/0x1302.gif" title="gw_dragon_black_juvenile" />
 			<img width=315 height=312 src="images/0x1303.gif" title="gw_dragon_silver_juvenile" />
 			<img width=400 height=373 src="images/0x1209.gif" title="gw_tarasque" />
@@ -1575,7 +1583,8 @@
 		<h2>Credits</h2><br>
 
 			<span class="t1">Author:</span> <span class="t2"><a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a></span><br />
-			<span class="t1"><acronym title="Weimer Dialogue Utility">WeiDU</acronym> coding:</span> <span class="t2"><a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a></span><br />
+			<span class="t1"><acronym title="Weimer Dialogue Utility">WeiDU</acronym> initial coding:</span> <span class="t2"><a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a></span><br />
+			<span class="t1"><acronym title="Weimer Dialogue Utility">WeiDU</acronym> re-coding:</span> <span class="t2"><a href="http://www.shsforums.net/user/10485-sam/">Sam</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a></span><br />
 			<span class="t1">Support:</span> <span class="t2"><a href="http://www.shsforums.net/user/10485-sam/">Sam</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a></span><br />
 
 		<hr style="clear: both; width: 90%; color: transparent; background-color: transparent; " /><br>
@@ -1586,7 +1595,7 @@
  		  <ul class="version-list c1">
 			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
 			<li>Assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.</li>
-			<li>Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading and his contribution with porting EE animations to ToB.</li>
+			<li>Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading French translation and his contribution with porting a few EE animations to ToB.</li>
 		  </ul><br><br>
 
 
@@ -1600,7 +1609,7 @@
 			<li><a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg</li>
 			<li><a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> by Jan Goyvaerts</li>
 			<li><a href="http://www.pspad.com/en/">PSPad</a> by Jan Fiala</li>
-			<li><a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the spellcheck plug-in</li>
+			<li><a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the SpellCheck plug-in</li>
 			<li><a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> by Argent77</li>
 		  </ul><br><br>
 
@@ -1623,7 +1632,7 @@
 
 		<h2>Version History</h2><br>
 
-		<h6>Version 6 - Month day, 2019</h6>
+		<h6>Version 6.0.0 - Month day, 2019</h6>
 
 		  <ul>
 			<li>Major updates:</li>
@@ -1677,7 +1686,7 @@
 				<li style="margin-left:-4%; margin-right:-6%;">Components Saved Game Animation Fixer [9900-9910] and BG1 Character Animations for Saved Games [9600-9610-9620] should not crash if \save or \mpsave folders do not exist.</li>
 			  </ul>
 			<li>Split code into separate components for more comfortable readability.</li>
-			<li>Moved components tpa files into new "components" folder and kept functions and macros in "lib" folder.</li>
+			<li>Moved components tpa files into new "components" sub-folder and kept functions and macros in "lib" folder.</li>
 			<li>Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.</li>
 			<li>Code commented as much as possible.</li>
 			<li>Coding simplification:</li>
