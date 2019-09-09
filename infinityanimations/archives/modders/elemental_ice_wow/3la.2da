@@ -1,0 +1,41 @@
+3kz /elemental_ice_wow
+***
+						SOUND
+ATTACK          		ubup3a1
+ATTACK          		0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		ubup3d1 ubup3d2 ubup3d3
+DAMAGE          		0 0 0
+DIE             		ub_+plyd
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		ubup3a1 nosound
+ATTACK_SLASH    		0 0
+ATTACK_BACKSLASH		ubup3a1 nosound
+ATTACK_BACKSLASH		0 0
+ATTACK_JAB      		ubup3a1 nosound
+ATTACK_JAB      		0 0
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry          	***
+Battle_Cry          	0
+Selection          		***
+Selection          		0

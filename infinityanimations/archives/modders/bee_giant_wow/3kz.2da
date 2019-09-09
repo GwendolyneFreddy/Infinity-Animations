@@ -1,0 +1,41 @@
+3kz /bee_giant_wow
+***
+						SOUND
+ATTACK          		ub_b_a1 ub_b_a2
+ATTACK          		0 0
+AWAKE           		ub_b_cry
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		ub_b_gh1 ub_b_gh2
+DAMAGE          		0 0
+DIE             		ub_b_de
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		ub_b_cry
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		ub_b_a1 nosound
+ATTACK_SLASH    		0 0
+ATTACK_BACKSLASH		ub_b_a2 nosound
+ATTACK_BACKSLASH		0 0
+ATTACK_JAB      		ub_b_a3 nosound
+ATTACK_JAB      		0 0
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry          	ub_b_cry nosound
+Battle_Cry          	0 0
+Selection          		***
+Selection          		0
