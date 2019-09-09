@@ -90,9 +90,9 @@ You should end up with a bunch of .bam files and no sub-folders in your "content
 
 #### Windows
 
-Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **setup-infinityanimations.exe** and follow the instructions on screen.
+Extract the contents of the mod to the folder of the game you wish to modify (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> or EasyTutu). On successful extraction, there should be an infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **`setup-infinityanimations.exe`** and follow the instructions on screen.
 
-Run `**setup-infinityanimations.exe**` in your game folder to reinstall, uninstall or otherwise change components.
+Run **`setup-infinityanimations.exe`** in your game folder to reinstall, uninstall or otherwise change components.
 
 ## 
 
@@ -104,13 +104,13 @@ Download the latest Linux version of <a href="http://weidu.org/~thebigg/"><acron
 
 <em>Optional: run 'tolower' and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either, if you've extracted only this mod since the last time you lowercased file names. If unsure, running tolower and choosing both options is the safe bet.</em>
 
-Run **WeInstall setup-infinityanimations** in your game folder to install the mod. Then run **wine BGMain.exe** and start playing.
+Run **`WeInstall setup-infinityanimations`** in your game folder to install the mod. Then run **`wine BGMain.exe`** and start playing.
 
 ## 
 
 #### Note for Complete Uninstallation
 
-In addition to the methods above for removing individual components, you can completely uninstall the mod using **setup-infinityanimations --uninstall** at the command line to remove all components without wading through prompts.</br>
+In addition to the methods above for removing individual components, you can completely uninstall the mod using **`setup-infinityanimations --uninstall`** at the command line to remove all components without wading through prompts.</br>
 <div style="text-align:right"><a href="#top">Back to top</a></div>
 
 ## 
