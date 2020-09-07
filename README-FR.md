@@ -1,19 +1,37 @@
-# <a name="top" id="top"></a>Infinity Animations (WIP : don't try to install it - it will fail)
 
-### Un mod de Spellhold Studios pour Baldur's Gate II : <acronym title="Throne of Bhaal">ToB</acronym>, Baldur's Gate Trilogy et <acronym title="Baldur's Gate 'To Two'">Tutu</acronym>
-
-
-<strong>Auteure :</strong> Erephine<br />
-<strong>Code <acronym title="Weimer Dialogue Utility">WeiDU</acronym> :</strong> Miloch<br />
-<strong>Version :</strong> 6.0.1 alpha<br />
-<strong>Langues :</strong> <a href="README.md">anglais</a>, français<br />
-<strong>Platformes :</strong> Windows, linux
-
-<strong>Site internet du mod :</strong> <a href="http://www.spellholdstudios.net/ie/infinityanimations">Spellhold Studios</a><br />
-<strong>Forum du mod :</strong> <a href="http://www.shsforums.net/forum/594-infinity-animations/">Infinity Animations</a>
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Infinity-Animations?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
+<a href="README.md"><img align="right" src="infinityanimations/documentation/images/uk-flag-32.png" title="English Readme"></a>
 
 
-<center><a href="#intro">Présentation</a> &#x2B25; <a href="#compat">Compatibilité</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#compon">Composants</a> &#x2B25; <a href="#anims">Animations</a> &#x2B25; <a href="#credits">Crédits</a> &#x2B25; <a href="#version">Hostorique</a></center></br></br>
+<div align="center"><h1>Infinity Animations (WIP)</h1>
+
+<h3>Un mod de Spellhold Studios pour les jeux Infinity Engine<h3>
+### Un mod de Spellhold Studios pour Baldur's Gate II:ToB, Baldur's Gate Trilogy et Tutu
+
+</div><br />
+
+
+**Auteure :** Erephine  
+**Site internet du mod :** <a href="http://www.spellholdstudios.net/ie/infinityanimations">Spellhold Studios</a>  
+**Forum du mod :** <a href="http://www.shsforums.net/forum/594-infinity-animations/>Infinity Animations</a>  
+
+## 
+
+:warning: Readme writing in progress... Don't try to download and install this mod as it is a WIP version and its install will fail, because of missing files still in development or in beta testing
+
+## 
+
+[Read the mod's readme](https://spellholdstudios.github.io/readmes/1pp/documentation/infinityanimations-readme-french.html)
+
+[Download the mod at Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
+
+## 
+
+<div align="center">
+<a href="#intro">Présentation</a> &#x2B25; <a href="#compat">Compatibilité</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#components">Composants</a> &#x2B25; <a href="#101">Détail des composants</a> &#x2B25; &#x2B25; <a href="#anims">Animations</a> <a href="#credits">Remerciements</a> &#x2B25; <a href="#version">Historique des versions</a></br>
+</div>
 
 
 <hr>
@@ -21,24 +39,24 @@
 
 ## <a name="intro" id="intro"></a>Présentation
 
-Ce mod modifie le jeu Baldur's Gate II : Trône de Bhaal de façon à ce qu'il dispose d'animations supplémentaires de créatures et de personnages (appelées « slots d'animation » dans ce document [<em>NdT : « emplacements » ou « index »</em>]). Il fournit aussi un utilitaire permettant de définir automatiquement de nouveaux slots d'animation afin de les enregistrer dans le forum d'Infinity Animations. Il fonctionne ainsi comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods.
+Ce mod modifie le jeu Baldur's Gate II : Trône de Bhaal de façon à ce qu'il dispose d'animations supplémentaires de créatures et de personnages (appelées « slots d'animation » dans ce document [*NdT : « emplacements » ou « index »*]). Il fournit aussi un utilitaire permettant de définir automatiquement de nouveaux slots d'animation afin de les enregistrer dans le forum d'Infinity Animations. Il fonctionne ainsi comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods.
 
-Infinity Animations prend en charge les types d'animation très divers des jeux Baldur's Gate I, Baldur's Gate II, Icewind Dale I, Icewind Dale II, Planescape: Torment et Neverwinter Nights. En bonus, le mod rétablit l'intégralité des animations de personnages de Baldur's Gate I, et permet à certaines animations qui n'en avaient pas jusqu'à présent de disposer dorénavant d'un paperdoll [<em>NdT : silhouette dans l'écran des personnages</em>].
-Point important pour les joueurs installant plusieurs mods conséquents (appelés « megamods »), Infinity Animations résout les conflits de slots d'animation [<em>NdT : plusieurs mods utilisant les mêmes slots pour des animations différentes, le dernier installé écrase les modifications effectuées par les précédents</em>], et rétablit les animations de base que les megamods ont modifiées.
+Infinity Animations prend en charge les types d'animation très divers des jeux Baldur's Gate I, Baldur's Gate II, Icewind Dale I, Icewind Dale II, Planescape: Torment et Neverwinter Nights. En bonus, le mod rétablit l'intégralité des animations de personnages de Baldur's Gate I, et permet à certaines animations qui n'en avaient pas jusqu'à présent de disposer dorénavant d'un paperdoll [*NdT : silhouette dans l'écran des personnages*].
+
+Point important pour les joueurs installant plusieurs mods conséquents (appelés « megamods »), Infinity Animations résout les conflits de slots d'animation [*NdT : plusieurs mods utilisant les mêmes slots pour des animations différentes, le dernier installé écrase les modifications effectuées par les précédents</em>], et rétablit les animations de base que les megamods ont modifiées.
 
 Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouvelles animations dans le jeu, ainsi que leurs jeux de sons associés (soundsets). Bien que le nombre d'animations supportées ne soit pas « infini », comme le nom du mod l'indique, il devrait toutefois être assez important pour répondre aux besoins actuels (et probablement futurs) de tout le monde.
 
-<strong>Principales fonctions</strong>
-<ul style="margin-left: 4%;">
-	<li>Rétablit les animations de personnages de Baldur's Gate I.</li>
-	<li>Améliore la prise en charge des paperdolls pour les animations existantes.</li>
-	<li>Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).</li>
-	<li>Permet d'utiliser de nombreux <em>types</em> d'animation (dont certains n'ont jamais été vus dans les jeux).</li>
-	<li>Résout les problèmes d'empilement d'animation et les conflits de slots et de désignation des animations.</li>
-	<li>Fournit un utilitaire <acronym title="Graphical User Interface">GUI</acronym> [<em>NdT : interface graphique</em>] pour vous aider à ajouter de nouvelles animations dans le jeu.</li>
-	<li>Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;</li>
-</ul>
-<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
+**Principales fonctions :**
+- Rétablit les animations de personnages de Baldur's Gate I.
+- Améliore la prise en charge des paperdolls pour les animations existantes.
+- Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).
+- Permet d'utiliser de nombreux *types* d'animation (dont certains n'ont jamais été vus dans les jeux).
+- Harmonise les noms des animations dans tous les jeux.
+- Résout les problèmes d'empilement d'animation et les conflits de slots et de désignation des animations.
+- Fournit un utilitaire GUI[*NdT : interface graphique*] pour vous aider à ajouter de nouvelles animations dans le jeu.
+- Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;
+<div align="right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -46,209 +64,281 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 
 ## <a name="compat" id="compat"></a>Compatibilité
 
-Infinity Animations fonctionne avec <acronym title="Baldur's Gate II">BG2</acronym> : Trône de Bhaal et toutes les conversions  basées sur <acronym title="Throne of Bhaal">ToB</acronym>. <strong>Assurez-vous que vous avez bien installé le patch 26498 pour le Trône de Bhaal.</strong> Si nécessaire, vérifiez le fichier Readme relatif au patch dans votre répertoire de jeu et sur le site internet de <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a>.
+Infinity Animations est conçu pour fonctionner sur la plupart des jeux Infinity Engine, ce qui inclut :
 
-Ce mod est également compatible avec les autres mods, dont <a href="http://www.pocketplane.net/tutu/">Baldur's Gate Tutu</a> (et EasyTutu), <a href="http://www.shsforums.net/index.php?showforum=261">Baldur's Gate Trilogy</a> et le <a href="http://www.shsforums.net/files/file/536-big-world-installpack/">BiG World Project</a>.
+- La série des Éditions Améliorées (Enhanced Editions) publiées par Beamdog, Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE), Icewind Dale: Enhanced Edition (IWDEE), ainsi que l'extension de BGEE, Siege of Dragonspear (SoD). Toutes les Éditions Améliorées comprennent leurs extensions originales (ainsi, IWDEE comprend Heart of Winter et Trials - HoW - of the Luremaster - TotLM).
+- Le jeu original Baldur's Gate II avec son extension Trône de Bhaal (Throne of Bhaal : ToB). **Assurez-vous que vous avez bien installé le patch 26498 pour le Trône de Bhaal.**Si nécessaire, vérifiez le fichier Readme relatif au patch dans votre répertoire de jeu et sur le site internet de <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a>.
+- Les mods de conversion basés sur ToB : <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a>, <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) et <a href="https://github.com/K4thos/EET/releases"><strong>Enhanced Edition Trilogy</a> (EET).
 
-Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing ». [<em>NdT : archivage avec Generalized biffing</em>]
+Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum, s'il vous plaît.</a>
 
-Commencez une nouvelle partie</strong> après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « Correction des animations dans les parties sauvegardées ».</br>
-<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
+Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing ». [*NdT : archivage avec Generalized biffing*]
 
-		
+Les moddeurs souhaitant rendre leurs mods compatibles avec IA sont fortement invités à lire le document <a href="">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
+
+>Bien qu'il ne soit pas requis pour faire correctement tourner Infinity Animations, nous recommandons fortement aux joueurs de ToB original de télécharger et d'installer la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> avant d'installer ce mod.</br>
+
+**Commencez une nouvelle partie** après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « Correction des animations dans les parties sauvegardées ».</br>
+<div align="right"><a href="#top">Retour en haut de page</a></div>
+
+
+<hr>
+
+
 ## <a name="installation" id="installation"></a>Installation
 
 #### Mise en garde
 
-<em>Si une ancienne version de ce mod est déjà installée, désinstallez-la avant d'extraire la nouvelle. Pour cela, lancez <strong>setup-infinityanimations.exe</strong>, désinstallez tous les composants précédemment installés et supprimez le répertoire infinityanimations.</em>
+*Si une ancienne version de ce mod est déjà installée, il est nécessaire de la désinstaller avant d'extraire la nouvelle. Pour cela, lancez **`setup-infinityanimations.exe`**, et désinstallez tous les composants précédemment installés. Une fois la désinstallation achevée, supprimez le répertoire :file_folder: **infinityanimations** et le fichier **setup-infinityanimations.exe** (version Windows) avant d'extraire la nouvelle version du mod.*
 
-<em>Lorsque vous installez ou désinstallez, <strong>ne fermez pas la fenêtre <acronym title="Disk Operating System">DOS</acronym></strong> en cliquant sur le bouton <strong>X</strong> ! Au lieu de cela, appuyez sur la touche <strong>Entrée</strong> lorsque l'invite de commandes vous le demande.</em>
+*Lorsque vous installez ou désinstallez, **ne fermez pas la fenêtre DOS** en cliquant sur le bouton **X** ! Au lieu de cela, appuyez sur la touche **Entrée** lorsque l'invite de commandes vous le demande.*
 
-Par précaution, <strong>désactivez les antivirus</strong> ou tout logiciel résidant en mémoire avant d'installer ce mod, ou tout autre mod. Certains (en particulier avast et Norton !) ont une fâcheuse tendance à déclarer les exécutables des mods comme des faux positifs, provoquant ainsi l'échec de la procédure d'installation.
+*Par précaution, __désactivez les antivirus__ ou tout logiciel résidant en mémoire avant d'installer ce mod, ou tout autre mod. Certains (en particulier avast et Norton !) ont une fâcheuse tendance à déclarer les exécutables des mods comme des faux positifs, provoquant ainsi l'échec de la procédure d'installation.*
 
-Vous pouvez extraire les fichiers de l'archive avec <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a>, ou n'importe quel autre logiciel capable de décompresser les fichiers .rar. [<em>NdT : comme <a href="http://www.7-zip.org/">7-Zip</a></em>]
+Vous pouvez extraire les fichiers de l'archive à l'aide de <a href="http://www.7-zip.org/download.html">7zip</a>, <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a>, ou de tout autre utilitaire de compression gérant les fichiers .zip.
 
-<strong>Important : </strong>Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/index.php?autocom=downloads&showcat=98">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « Ne pas extraire les chemins d'accès » de l'onglet <strong>Avancé</strong> de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet <strong>Général</strong> se termine par <strong>/content</strong> ou <strong>/restore</strong> après <strong>infinityanimations</strong> (ils ne doivent pas comporter de sous-répertoires).
+<details><summary>Obsolète depuis la version 6.0.0</summary>
+<p></br>
+**Important :** Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « *Ne pas extraire les chemins d'accès* » de l'onglet **Avancé** de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet **Général** se termine par **/content** ou **/restore** après **infinityanimations** (ils ne doivent pas comporter de sous-répertoires).
 
-Extrayez toutes les archives dans le répertoire /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.
+Extrayez toutes les archives dans le répertoire &#x1F4C1; /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire &#x1F4C1; /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.
 
-Si vous utilisez WinZip, assurez-vous que la case « Utiliser les noms de répertoire » <em>n'est pas cochée</em>.
+Si vous utilisez WinZip, assurez-vous que la case « Utiliser les noms de répertoire » *n'est pas cochée*.
 
-Une fois l'extraction terminée, les répertoires « content » et/ou « restore » devraient contenir une multitude de fichiers .bam, et AUCUN sous-répertoire. Le programme d'installation vous préviendra s'il vous manque des fichiers nécessaires. À ce moment, vous pourrez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
+Une fois l'extraction terminée, les répertoires &#x1F4C1; « content » et/ou « restore » devraient contenir une multitude de fichiers .bam, et AUCUN sous-répertoire. Le programme d'installation vous préviendra s'il vous manque des fichiers nécessaires. À ce moment, vous pourrez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
+</p>
+</details>
+
+## 
+
+#### Note spéciale pour Siege of Dragonspear fourni par Steam/GOG
+
+Good Old Games (GOG) et Steam fournissent le contenu de Siege of Dragonspear dans un format que <acronym title="Weimer Dialogue Utility">WeiDU</acronym>, l'outil utilisé pour installer ce mod, ne peut pas reconnaitre. Vous devez donc lancer le programme <a href="https://github.com/Argent77/A7-DlcMerger/releases/latest">DLC Merger</a> dans votre répertoire de SoD avant d'installer ce mod, ou tout autre mod utilisant WeiDU.
+
+## 
+
+#### Note pour les jeux en Édition Améliorée (EE)
+
+Si vous pouvez retarder la mise à jour du patch en plein milieu d'un partie moddée (si vous en avez la possibilité, notamment chez Beamdog et Good Old Games), n'oubliez pas que même après avoir réinstallé les mods sur un nouveau patch, vous ne pourrez peut-être pas continuer le jeu avec vos anciennes sauvegardes, en particulier à cause de noms de personnages, de lieux, etc, qui pourraient être incorrects. Pour y remédier, copiez tout le dossier du jeu dans un nouveau dossier dans lequel vous installerez vos mods, et qui ne sera pas modifié par les patches de mise à jour. Il est important que vous installiez le mod dans la version linguistique dans laquelle vous jouez. Sinon, les dialogues du mod ne s'afficheront pas et provoqueront des messages d'erreur.
 
 ## 
 
 #### Windows
 
-Extrayez le contenu du mod dans le répertoire du jeu que vous souhaitez modifier (<acronym title="Baldur's Gate II">BG2</acronym>, <acronym title="Baldur's Gate Trilogy">BGT</acronym> ou EasyTutu). Si l'extraction s'est déroulée correctement, un répertoire infinityanimations et un fichier setup-infinityanimations.exe doivent être apparus dans le répertoire du jeu. Pour installer le mod, double-cliquez sur <strong>setup-infinityanimations.exe</strong> et suivez les instructions apparaissant à l'écran.
+Infinity Animations pour Windows est livré et installé avec WeiDU, et est diffusé sous forme d'archive.
 
-Pour réinstaller, désinstaller ou changer certains composants, lancez <strong>setup-infinityanimations.exe</strong> dans votre répertoire de jeu.
+Vous devez extraire les fichiers de l'archive dans votre répertoire de jeu (*le dossier qui contient le fichier CHITIN.KEY*). Une fois l'archive extraite correctement, vous devriez trouver le répertoire :file_folder: infinityanimations et le fichier setup-infinityanimations.exe dans votre répertoire de jeu. Pour installer le mod, il suffit de double-cliquer sur **`setup-infinityanimations.exe`** et de suivre les instructions affichées à l'écran.
+
+Pour réinstaller, désinstaller ou changer certains composants, lancez **`setup-infinityanimations.exe`** dans votre répertoire de jeu.
+
+## 
+
+#### Mac OS X
+
+Malheureusement, ce mod n'est pour l'instant pas compatible avec le système d'exploitation OS X car certains de ses composants modifiant l'exécutable ne fonctionnent pas sur OS X. Si vous souhaitez vous en charger, veuillez manifester votre intérêt sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (Si vous disposez de compétences techniques, étudier l'exécutable du jeu et de ce patch dans un éditeur pourrait vous être utile.)
+
+Cependant, comme les jeux EE ne nécessitent pas un patch de leur exécutable pour bénéficier des composants de Infinity Animations, ce dernier peut y être installé sur un système d'exploitation Mac.
+
+Infinity Animations pour EE et Mac OS X est livré avec WeiDU et est diffusé dans la même archive compressée.
+
+Extrayez le contenu de l'archive dans votre répertoire de jeu. Après une extraction réussie, ce dernier contiendra les fichiers setup-infinityanimations, setup-infinityanimations.command et le répertoire :file_folder: infinityanimations. Pour installer, il suffit de double-cliquer sur **`setup-infinityanimations.command`** et de suivre les instructions affichées à l'écran.
+
+Vous pouvez lancer **`setup-infinityanimations.command`** dans votre répertoire de jeu pour réinstaller, désinstaller ou changer des composants.
 
 ## 
 
 #### Linux
 
-Extrayez le contenu du mod dans le répertoire du jeu que vous souhaitez modifier.
+Infinity Animations for Linux est diffusé dans la même archive compressée sans l'installateur WeiDU.
 
-Téléchargez la version la plus récente de <acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> pour Linux sur <a href="http://www.weidu.org/%7Ethebigg/">WeiDU.org</a>, puis copiez WeiDU et WeInstall dans /usr/bin. Ouvrez ensuite un terminal et allez (<strong>cd</strong>) dans le répertoire d'installation de votre jeu.
+Extrayez le contenu du mod dans le répertoire du jeu que vous voulez modifier.
 
-<em>Facultatif : lancez « tolower » et répondez oui (« Y ») aux deux requêtes. Il n'est pas nécessaire d'exécuter la deuxième option (linux.ini) si vous l'avez déjà exécutée une fois dans le même répertoire. Pour gagner du temps, l'archive est déjà « tolower-isée », il n'y a donc pas non plus besoin d'exécuter la première option (passage des noms de fichiers en minuscules), si vous n'avez extrait que ce mod depuis la dernière fois que vous avez passé des noms de fichiers en minuscules. Si vous avez un doute, il vaut mieux exécuter tolower et accepter les deux options.</em>
+Téléchargez la version la plus récente de WeiDU pour Linux sur <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU.org</a>, puis copiez weidu et weinstall to `/usr/local/bin` (créez-le s'il n'existe pas). Ouvrez ensuite un terminal et allez (**`cd`**) dans le répertoire d'installation de votre jeu, lancez **`/usr/local/bin/tolower`** et répondez « Y » aux deux questions. Vous pouvez éviter d'exécuter la seconde option (linux.ini) si vous l'avez déjà lancée une fois dans le même dossier. Pour gagner du temps, l'archive est déjà passée en minuscules, aussi il n'est pas non plus nécessaire d'exécuter la première option (passer les noms de fichiers en minuscules) si vous n'avez extrait que ce mod depuis la dernière fois que vous avez passé les noms de fichiers en minuscules. Si vous avez un doute, il vaut mieux exécuter tolower et accepter les deux options.
 
-Pour installer le mod, exécutez <strong>WeInstall setup-infinityanimations</strong> dans votre répertoire de jeu. Exécutez ensuite <strong>wine BGMain.exe</strong>, et commencez votre partie.
+Tapez la commande **`export PATH=$PATH:/usr/local/bin`**, puis lancez **`weinstall setup-infinityanimations`** depuis le dossier de votre jeu pour installer le mod. Exécutez ensuite **`wine bgmain.exe`** (ou **`wine baldur.exe`** pour les jeux EE) et commencez votre partie.
 
 ## 
 
 #### Note pour effectuer une désinstallation complète
 
-En plus des méthodes détaillées plus haut pour supprimer des composants, il est possible de désinstaller complètement le mod en tapant <strong>setup-infinityanimations --uninstall</strong> dans une ligne de commandes, ce qui supprimera tous les composants sans devoir ingurgiter tous les messages.</br>
+En plus des méthodes détaillées plus haut pour supprimer des composants, il est possible de désinstaller complètement le mod en tapant **`setup-infinityanimations --uninstall`** dans une ligne de commandes, ce qui supprimera tous les composants sans devoir ingurgiter tous les messages.
 
 ## 
 
 #### <a name="config" id="config">:warning: Avertissement : nouvelle procédure d'installation
 
-##### Depuis la version 6.0.0, les variables nécessaires à l'installation sont lues dans le fichier <a href="../infinityanimations-default.ini"><em>infinityanimations_user.ini</em></a> ou dans le fichier <em>infinityanimations-config.ini</em>, si ce dernier existe.
+##### Depuis la version 6.0.0, les les options de configuration nécessaires à l'installation sont lues dans le fichier <a href="infinityanimations/infinityanimations-config-default.ini">infinityanimations-config-default.ini</a> ou dans le fichier *infinityanimations-config-user.ini*, si ce dernier existe.
 
-Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires <strong>content</strong> ou <strong>restore</strong> du répertoire infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
+Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous aviez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires :file_folder: **content** ou :file_folder: **restore** du répertoire :file_folder: infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
 
-Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire **archives** du mod et le composant principal le copie automatiquement dans le répertoire **override** de votre jeu. Le mod n'utilisant plus les sous-répertoires <em>content</em> et <em>restore</em>, ces derniers ont été supprimés.
+Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire :file_folder: **archives** du mod et le composant principal le copie automatiquement dans le répertoire :file_folder: **override** de votre jeu. Le mod n'utilisant plus les sous-répertoires :file_folder: *content* et :file_folder: *restore*, ces derniers ont été supprimés.
 
-Par défaut, tout le contenu du répertoire archives est installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier les variables concernées dans le fichier **_infinityanimations.ini_** (situé dans le répertoire infinityanimations) avec Notepad ou un autre éditeur de texte, puis de le sauvegarder sous le nom **_infinityanimations_user.ini_**.
+Par défaut, tout le contenu du répertoire archives est désormais installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier, avec Notepad ou un autre éditeur de texte, les options d'installation dans le fichier **_infinityanimations-config-default.ini_** (situé dans le répertoire :file_folder: infinityanimations), puis de le sauvegarder sous le nom **_infinityanimations-config-user.ini_**.
 
-Chaque ligne comprend une option de configuration, suivie de « = », puis d'un chiffre. Tout ce que vous avez à faire, c'est modifier la valeur du chiffre. Par exemple, si vous ne souhaitez pas utiliser les animations de svirneblins, modifiez la valeur de la variable ia_iwd_svirfneblin en 0. Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation vous préviendra de leur absence. Vous pourrez alors quitter le programme, modifier la valeur dans le fichier ini et relancer la procédure d'installation. 
+Chaque ligne de ce fichier comprend une option d'installation, suivie de « = », puis d'un chiffre. Tout ce que vous avez à faire, c'est modifier la valeur du chiffre. Par exemple, si vous ne souhaitez pas installer les animations de svirneblins, modifiez la valeur de la variable ia_iwd_svirfneblin en 0.
 
-Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations_user.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « <em>standard</em> »).
+Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations-config-user.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « _standard_ »)
+
+Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation les installera automatiquement s'ils sont présents dans le répertoire :file_folder: archives. Sinon, il vous préviendra de leur absence. Vous pourrez alors quitter le programme, les extraire dans le répertoire du mod et relancer la procédure d'installation.<br>
+Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous préviendra de leur absence et vous demandera de les extraire avant d'installer le composant.
 
 Voici le tableau des options concernées :</br></br>
 
-<table style="margin-left: 80px; width: 90%; " summary="Installation variables list">
-	<tr style="font-size: 125%; line-height: 160%;">
-		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Variable</th>
-		<th style="border: 1px solid #781808; text-align: center; background-color: #781808; color: #e5e5e5; ">Description</th>
+
+<table summary="Liste des variables d'installation">
+	<tr style="font-size: 125%; line-height: 300%;">
+		<th>Variable</th>
+		<th>Description</th>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_base_anims</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 001 - Base Content<br><br>
-		- Contenu : animations de Basilic et de Tasloi, les animations manquantes de IWD référencées dans BGII (Scarabée bombardier, Scarabée de feu, Scarabée scolyte, Scarabée rhinocéros, Cyclope, Fantôme, Blême majeur, Goule majeure, Histachii, Homme lézard, Homme lézard roi, Liche blanche, Nécrophage gris/vert/jaune, Ombre petite/grande), Ombre des roches ancienne, Troll des glaces, Troll des neiges) zombi bleu/jaune), les animations de personnages de BG I. Comprend les tables et les jeux de sons des créatures concernées et les animations de cimeterre de BG1.<br>
+		<td><div align="center">**ia_bg2_restores**</td>
+		<td><ins><ins>IA Content - BG2 Restores</ins><br><br>
+		- Contenu : femme araignée statique (MSPL), gobelin d'élite avec arc (MGO4), gobelin d'élite avec hache (MGO3), liche (MLIC), liche noire (MLER), marilith (MTAN), myconide bleu (MMY2), orog (MNO1), orog d'élite (MNO2), orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
+		- Il s'agit du contenu nécessaire pour restaurer les slots d'animation de BG2 écrasés par certains mods. Il est uniquement nécessaire pour une mega installation comprenant les mods suivants : BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere et RPG KitsPack.<br><br>
+		*Installation automatique seulement si nécessaire [par défaut]*</td>
+	</tr>
+	<tr>
+		<td><div align="center">**ia_ee_restore**<br><br>
+		</td>
+		<td><ins>IA Content - Base EE Content (nouveau)<br><br>
+		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
+		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
+		- Nécessaire pour tous les composants.<br><br>
+		*Installation automatique [par défaut]*</td>
+	</tr>
+	<tr>
+		<td><div align="center">**ia_base_anims**</td>
+		<td><ins>IA Content 001 - Base Content</ins><br><br>
+		- Contenu : animations de basilic et de tasloi, les animations manquantes de IWD référencées dans BGII (scarabée bombardier, scarabée de feu, scarabée scolyte, scarabée rhinocéros, cyclope, fantôme, blême majeur, goule majeure, histachii, homme lézard, homme lézard roi, liche blanche, nécrophage gris/vert/jaune, ombre petite/grande), ombre des roches ancienne, troll des glaces, troll des neiges, zombi bleu/jaune), les animations de personnages de BG. Comprend les tables et les jeux de sons des créatures concernées et les animations de cimeterre de BG1.<br>
 		- Nécessaire pour les composants Morts-vivants différenciés [400], Plus d'animations de base [500], Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
 		- Nécessaire pour les mods BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS et RPG KitsPack.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_belhifet_and_marilith</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Belhifet and Marilith<br><br>
-		- Contenu : animations et jeux de sons du Belhifet et de la Marilith d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_belhifet_and_marilith**</td>
+		<td><ins>IA Content - IWD Belhifet and Marilith</ins><br><br>
+		- Contenu : animations et jeux de sons du belhifet et de la marilith d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les mods Drizzt Saga, RoT, TDD, TS et TS-BP.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_restores</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - BG2 Restores<br><br>
-		- Contenu : Femme araignée statique (MSPL), Goblin d'élite avec arc (MGO4), Goblin d'élite avec hache (MGO3), Liche (MLIC), Liche noire (MLER), Marilith (MTAN), Myconide bleu (MMY2), Orog (MNO1), Orog d'élite (MNO2), Orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
-		- Il s'agit du contenu nécessaire pour restaurer les slots d'animation de BG2 écrasés par certains mods. Il est uniquement nécessaire pour une mega installation comprenant les mods suivants : BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere et RPG KitsPack.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
-	</tr>
-	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_bg2_iwd2</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content 002 - IWDII and unused BGII Animations<br><br>
-		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, Géant du feu alternatif, Créature des lagons, Tyramort), ni dans IWD (Abishai blanc, Blaireau-garou, Chimère, Crochorreur, Demi-dragon noir/rouge, Drider mâle/femelle, Élémentaire de l'eau petit, Freyeur normale/grande, Géant Fomorian, Gobelins de IWD II, Gobelins chevaucheurs de worg, Gobelours, Capitaine gobelours, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Orques morts-vivants, Rat-garou, Tréant, Sanglier arctique, Shenrical, Worg, Yuan-Ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_bg2_iwd2**</td>
+		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
+		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, géant du feu alternatif, créature des lagons, tyramort), ni dans IWD (abishai blanc, blaireau-garou, chimère, crochorreur, demi-dragon noir/rouge, drider mâle/femelle, élémentaire de l'eau petit, freyeur normale/grande, géant Fomorian, gobelins de IWD II, gobelins chevaucheurs de worg, gobelours, capitaine gobelours, isair, kegs, lémure, madae, malarite, orog shaman, orques morts-vivants, rat-garou, tréant, sanglier arctique, shenrical, worg, yuan-ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
 		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_ee_tob</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - EE games new Animations ported to ToB<br><br>
-		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
-			</tr>
-			<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_fiends_genies</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Fiends and Genies<br><br>
-		- Contenu : Démon bleu, Démon vert (Nabassu), Marilith sombre, Maurezhi, Myrlochar, Dao, Dao avec jambes, Efrit, Efrit avec jambes, Jann, Jann avec jambes, Marid, Marid avec jambes, Yochlol, Reine des goules, Guenaudes (Annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour Erinyes, Gelugon et Tieffelins.<br>
+		<td><div align="center">**ia_ee_tob**<br><br>
+		(uniquement pour ToB)</td>
+		<td>IA Content - EE games new Animations ported to ToB (nouveau)</ins><br><br>
+		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
+	</tr>
+	<tr>
+		<td><div align="center">**ia_fiends_genies**</td>
+		<td><ins>IA Content - Fiends and Genies</ins><br><br>
+		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour erinyes, gelugon et tieffelins.<br>
 		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Remaining IWD Animations<br><br>
-		- Contenu : toutes les animations manquantes de IWD non comprises dans les autres archives (Élémentaire de terre/eau/feu, Sahuagin petit/grand, Armures animées bronze/sombre/verte, Arundel, Barbare Shaman (avec marteau, bâton, gourdin), Barbare guerrier (bleu, rouge, marron), Barbare Icasaracht, Belhifet prêtre, Fatalité rampante, Mort noyé, Géant du feu de IWD, Golem de fer de IWD, Rémorhaz, Seer, Yeti, Ombre des roches Vodyanoi, Verbeeg, Nécrophage des tertres). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_iwd**</td>
+		<td><ins>IA Content - Remaining IWD Animations</ins><br><br>
+		- Contenu : toutes les animations manquantes de IWD non comprises dans les autres archives (élémentaire de terre/eau/feu, sahuagin petit/grand, armures animées bronze/sombre/verte, arundel, barbare shaman (avec marteau, bâton, gourdin), barbare guerrier (bleu, rouge, marron), barbare Icasaracht, belhifet prêtre, fatalité rampante, mort noyé, géant du feu de IWD, golem de fer de IWD, rémorhaz, pauvre hère, yeti, ombre des roches vodyanoi, verbeeg, nécrophage des tertres). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Morts-vivants différenciés [400], Combattants squelettes [410-415-420], Animation de pauvre hère [450-455-460] et Plus d'animations d'Icewind Dale [550].<br>
 		- Nécessaire pour les mods BP, BH, CtB, NEJ, RoT, SOS et TS.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_iwd_svirfneblin</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - IWD Svirfneblin<br><br>
-		- Contenu : les animations de IWD/IWD2 pour svirfneblins (gnomes des profondeurs). Par défaut, la couleur de leur peau est pâles alors que, dans les références AD&D, elle devrait être plus foncée (couleur pierre). Le jeu original comportait des variantes avec et sans pioches (mais sans animation d'arme séparée). Comme ces emplacements ne sont pas palettisés, les variantes suivantes sont disponibles (les deux dernières étant des versions personnalisées des animations pâles IWD): Svirfneblin pâle avec hache, Svirfneblin pâle sans hache, Svirfneblin foncé avec hache, Svirfneblin foncé sans hache. Comprend des jeux de sons empruntés à NWN.<br>
+		<td><div align="center">**ia_iwd_svirfneblin**</td>
+		<td><ins>IA Content - IWD Svirfneblin</ins><br><br>
+		- Contenu : les animations de IWD/IWD2 pour svirfneblins (gnomes des profondeurs). Par défaut, la couleur de leur peau est pâles alors que, dans les références AD&D, elle devrait être plus foncée (couleur pierre). Le jeu original comportait des variantes avec et sans pioches (mais sans animation d'arme séparée). Comme ces emplacements ne sont pas palettisés, les variantes suivantes sont disponibles (les deux dernières étant des versions personnalisées des animations pâles IWD): svirfneblin pâle avec hache, svirfneblin pâle sans hache, svirfneblin foncé avec hache, svirfneblin foncé sans hache. Comprend des jeux de sons empruntés à NWN.<br>
 		- Nécessaire pour le composant Animations de svirfneblins [480-490].<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_moinesse_edits_iaised</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Moinesse's Avatar Edits (IA compatible version)<br><br>
+		<td><div align="center">**ia_moinesse_edits_iaised**<br><br>
+		(uniquement pour ToB)</td>
+		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
 		- Contenu : Barbare humain, Druidesse humaine, Guerrière humaine, Magicienne humaine, Magicienne elfe, Voleuse humaine, Ninja humain, Vampire homme.<br>
 		- Nécessaire pour le composant Avatars de Moinesse pour IA [7000-7010-7020-7030].<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_01_modron</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
-		- Contenu : Modron alternatif, animations de NWN portées par WoRm (Amel, Basilic, Bebilith, Hamatula, Osyluth, Diantrefosse, Épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_moinesse_edits_iaised_ee**<br><br>
+		(uniquement pour EE)</td>
+		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
+		Même contenu que le précédent, mais compatible avec les jeux EE.<br><br>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
+	</tr>
+	<tr>
+		<td><div align="center">**ia_nwn_01_modron**</td>
+		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
+		- Contenu : modrone alternatif, animations de NWN portées par WoRm (Amel, basilic, bebilith, hamatula, osyluth, diantrefosse, épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses {150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
-	</tr>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nwn_misc_1</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Miscellaneous NWN Animations I<br><br>
-		- Contenu : Bête éclipsante, Géante du feu et du givre, Scarabée bombardier, Succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_nwn_misc_1**</td>
+		<td><ins>IA Content - Miscellaneous NWN Animations I</ins><br><br>
+		- Contenu :  bête éclipsante, géante du feu et du givre, scarabée bombardier, succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_abishai</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Abishai<br><br>
-		- Contenu : Abishai bleue, noire, rouge et verte (d'après les animations de PS:T). Comprend leurs jeux de sons.<br>
+		<td><div align="center">**ia_pst_abishai**</td>
+		<td><ins>IA Content - PST Abishai</ins><br><br>
+		- Contenu : abishai bleue, noire, rouge et verte (d'après les animations de PS:T). Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Démons différenciés [100].<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_pst_paletted</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - PST Paletted Animations<br><br>
-		- Contenu : Femme Aasimar, Baurier Mâle, Catin, Citoyen et Citoyenne de Maudith, Citoyen et Citoyenne des classes supérieures, Femme et Homme poussière, Femme et homme goule, Githzerai, Homme-dieu, Citoyen et Citoyenne des classes inférieures, Magicien citoyen, Marchand, Midwife, Sicaire et Grand sicaire, Prêtre et Travailleur squelette, Thokola, Tieffelin homme et femme, Zombi femme et homme. Comprend leurs jeux de sons.<br>
+		<td><div align="center">**ia_pst_paletted**</td>
+		<td><ins>IA Content - PST Paletted Animations</ins><br><br>
+		- Contenu : femme Aasimar, baurier mâle, catin, citoyen et citoyenne de Maudith, citoyen et citoyenne des classes supérieures, femme et homme poussière, femme et homme goule, githzerai, homme-dieu, citoyen et citoyenne des classes inférieures, magicien citoyen, marchand, midwife, sicaire et grand sicaire, prêtre et travailleur squelette, thokola, tieffelin homme et femme, zombi femme et homme. Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Plus d'animations de Planescape: Torment [710-720-760-740].<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_shadows_harpy_frostgiant</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - Shadows, Harpy and Frost Giant<br><br>
-		- Contenu : Ombres alternatives d'IWD (« murky »), Harpie et Géant du givre d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_shadows_harpy_frostgiant**</td>
+		<td><ins>IA Content - Shadows, Harpy and Frost Giant</ins><br><br>
+		- Contenu : ombres alternatives d'IWD (« murky »), harpie et géant du givre d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le composant Morts-vivants différenciés [400] et pour les mods BP, Drizzt Saga, NEJv691, RoT, TDD et TS.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_wh_dr_wyv_lop</span></strong></td>
-		<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px">IA Content - White Wyvern and Dragon, Lady of Pain<br><br>
-		- Contenu : Dragon blanc et Wiverne majeure blanche d'IWD, Dame de la Douleur. Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><div align="center">**ia_wh_dr_wyv_lop**</td>
+		<td><ins>IA Content - White Wyvern and Dragon, Lady of Pain</ins><br><br>
+		- Contenu : dragon blanc et wiverne majeure blanche d'IWD, Dame de la Douleur. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le mod Planar Sphere.<br><br>
-		<span style="padding-left:20px;">0 = Ne pas l'installer</span><br>
-		<span style="color: #781808; padding-left:20px;">1 = L'installer [par défaut]</span></td>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
+	</tr>
+	<tr>
+		<td><div align="center">**ia_modders**</td>
+		<td><ins>IA Content - Modders resources (nouveau)</ins><br><br>
+		- Contenu : poule marron (Jarl), chien gris de jastey, mule (Kwiat_W); ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb); petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Et bien plus encore à venir dans le futur.<br><br>
+		0 = Ne pas l'installer<br>
+		*1 = L'installer [par défaut]*</td>
 	</tr>
 </table><br>
-<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
+<div align="right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -256,12 +346,9 @@ Voici le tableau des options concernées :</br></br>
 
 ## <a name="components" id="components"></a>Composants
 
-Le programme d'installation comprend les composants suivants. Chacun possède un numéro distinct et pré-défini qui lui attribue une position déterminée (<em>NdT : mot-clé DESIGNATED en langage WeiDU</em>] ; ce qui permet aux autres composants de le détecter et aux utilitaires d'installation automatiques comme le BiG World Setup de préciser quels composants installer.
+Le programme d'installation comprend les composants suivants. Chacun possède un numéro distinct et pré-défini qui lui attribue une position déterminée (*NdT : mot-clé `DESIGNATED` en langage WeiDU*] ; ce qui permet aux autres composants de le détecter et aux utilitaires d'installation automatiques de préciser quels composants installer.
 
-Tous les sous-composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym> recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
-
-
-><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations (composant principal)</a></span></br>
+><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a> <em>&nbsp;&nbsp;&nbsp;[composant principal]</em></span></br>
 ><span style="margin-left: 50px;"><a href="#25">[25] Correction des animations des humanoïdes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#50">[50] Génies différenciés</a></span></br>
 ><span style="margin-left: 50px;"><a href="#100">[100] Démons différenciés</a></span></br>
@@ -282,7 +369,11 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 ><span style="margin-left: 50px;"><a href="#9000">[9000] Correction des références des créatures dans les cartes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] Animations de personnages de BG1 pour les PJs</a></span></br>
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span></br>
+
+
+Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
+
 
 ## 
 
@@ -298,7 +389,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Corrige toutes les créatures affectées.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -319,7 +410,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux Voleurs de l'ombre humains l'animation de voleur de l'ombre.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -329,7 +420,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -353,7 +444,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux glabrezus la bonne animation de glabrezu.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -365,7 +456,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -377,7 +468,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Même principe que celui du composant Diantrefosses.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -389,7 +480,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Même principe que celui du composant Diantrefosses.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -421,7 +512,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux lacédons et aux zombis des mers l'animation de zombi bleu d'<acronym title="Icewind Dale">IWD</acronym>.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -434,7 +525,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue l'animation sélectionnée à tous les combattants squelettes.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -447,7 +538,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Même principe que celui du composant Diantrefosses.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -471,7 +562,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux anciens ombres des roches l'animation d'ombre des roches anciens d'<acronym title="Icewind Dale">IWD</acronym>.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -490,7 +581,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux chefs sahuagins l'animation de grand sahuagin d'<acronym title="Icewind Dale">IWD</acronym>.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -509,7 +600,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux Yuan-Ti demi-sang l'animation de yuan-ti demi-sang de <acronym title="Icewind Dale II">IWD2</acronym>.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -519,13 +610,13 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux porteurs de faux (dans <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym>) l'animation de Amel de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 	<li>Attribue aux scarabées bombardiers (dans Big Picture) l'animation de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 	<li>Attribue aux basilics majeurs l'animation de basilic de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux modrons l'animation de modron.</li>
+	<li>Attribue aux modrones l'animation de modrone.</li>
 	<li>Attribue aux bêtes éclipsantes (dans AjocMod) l'animation de <acronym title="Neverwinter Nights">NWN</acronym>-<acronym title="Community Creature Project">CCP</acronym>.</li>
 	<li>Attribue à certains géants du feu l'animation de géante du feu de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 	<li>Attribue à certains géants du froid l'animation de géante du froid de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -561,7 +652,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue à certains zombis l'animation d'homme zombi.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -582,7 +673,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Attribue aux vampires hommes l'animation de vampire de Moinesse.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -599,7 +690,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li><strong>À utiliser avec précaution</strong> avec des <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym> recrutables : si ce composant ne traitera pas les personnages compétents en style de combat a deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -609,23 +700,23 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9500" id="9500"></a><strong>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs<br />
-9500.</strong> Demander confirmation pour chaque <acronym title="Personnage Joueur [NdT : traduction de PC, ou Player Character">PJ</acronym> exporté.<br />
-<strong>9510.</strong> Demander confirmation pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> posant problème.<br />
-<strong>9520.</strong> Modifier tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> sans demander confirmation.<br />
+<a name="9500" id="9500"></a><strong>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym><br />
+9500.</strong> Demander confirmation pour chaque <acronym title="Personnage Joueur [NdT : traduction de PC, ou Player Character]">PJ</acronym> exporté.<br />
+<strong>9510.</strong> Demander confirmation pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> posant problème.<br />
+<strong>9520.</strong> Modifier tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> sans demander confirmation.<br />
 <em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
 <ul style="margin-top: -1%;margin-left: 4%;">
 	<li>Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.</li>
-	<li>La deuxième option modifie tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym>, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.</li>
+	<li>La deuxième option modifie tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym>, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.</li>
 	<li>Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.</li>
 	<li><strong>À utiliser avec précaution</strong> : n'essayez pas de porter deux armes, sinon le jeu crashera probablement.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -640,7 +731,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li><strong>Faites une copie de vos parties sauvegardées</strong> avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.</li>
 </ul>
 
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
@@ -654,7 +745,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 	<li>Si vous avez commencé une nouvelle partie après avoir installé ce mod, alors ce composant n'est pas nécessaire (à moins que vous ne commenciez dans la section <acronym title="Baldur's Gate II">BG2</acronym> de <acronym title="Baldur's Gate Trilogy">BGT</acronym>).</li>
 	<li><strong>Faites une copie de vos parties sauvegardées</strong> avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.</li>
 </ul>
-<div style="text-align:right"><a href="#components">Retour à la liste des composants</a></div>
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 
 <hr>
@@ -690,7 +781,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 
 ###### Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
 ###### Tous les copyrights et marques déposées sont la propriété de leurs propriétaires respectifs.
-<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
+<div align="right"><a href="#top">Retour en haut de page</a></div>
 
 
 <hr>
@@ -775,7 +866,7 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 ##### WeiDU Beta 4 : 7 février 2010
 
 - Ajout du composant « Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym> ».
-- Ajout du composant « Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> ».
+- Ajout du composant « Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> ».
 - Modification de la procédure de modification des démons.
 
 
@@ -817,4 +908,4 @@ Tous les sous-composants nécessitent le composant principal, car c'est lui qui 
 ##### (r.09102252)
 
 - Sortie initiale.
-<div style="text-align:right"><a href="#top">Retour en haut de page</a></div>
+<div align="right"><a href="#top">Retour en haut de page</a></div>
