@@ -101,7 +101,7 @@ You can extract files from the archive using <a href="http://www.rarlab.com/down
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p></br>
-<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>content</strong> or <strong>restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
+<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
 
 <p>Extract all archives to the &#x1F4C1; /content folder except IA_BG2_Restores.rar, which should go in the &#x1F4C1; /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
 
@@ -197,7 +197,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><ins>IA Content - BG2 Restores</ins><br><br>
 		- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
 		- This is the content module for BG2 restored slots. It is only necessary for a megamod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
-		*Installation forced only if needed [default]*</td>
+		<em>Installation forced only if needed [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
@@ -206,7 +206,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: all missing animations that already have animation slots in Enhanced games, restored BG I character animations. Includes all relevant missing creature sounds and ini files.<br>
 		- Needed for all EE games (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Needed for all components.<br><br>
-		*Installation by default</strong></td>
+		<em>Installation by default</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
@@ -215,7 +215,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Distinctive Undead [400], More Base Animations [500], BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
 		- Needed for BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS and RPG Kitspack mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_belhifet_and_marilith</strong></td>
@@ -223,7 +223,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: animation and audio files for the IWD Belhifet and IWD Marilith. Includes properly-slotted creature sounds and tables.<br>
 		- Needed for Drizzt Saga, RoT, TDD, TS and TS-BP mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
@@ -232,7 +232,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Cambion get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
 		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
@@ -240,7 +240,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><ins>IA Content - EE games new Animations ported to ToB (New)</ins><br><br>
 		- Content: Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
@@ -248,7 +248,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Fiend green (Nabassu), Fiend blue, Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Gelugon and Tieflings sound files.<br>
 		- Needed for Distinctive Genies [50] and Distinctive Fiends [100] components.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd</strong></td>
@@ -257,7 +257,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Distinctive Fiends [100], Distinctive Undead [400], Skeleton Warriors [410-415-420], Seer Animation [450-455-460] and More Icewind Dale Animations [550] components.<br>
 		- Needed for BP, BH, CtB, NEJ, RoT, SOS and TS mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd_svirfneblin</strong></td>
@@ -265,7 +265,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: IWD/IWD2 animations for svirfneblin (deep gnomes). By default, they are pale (flesh-coloured) whereas in canon references, they should be darker (stone-coloured). The original game had variants with and without pickaxes (they do not display separate weapon animations). Since these slots are unpaletted, there are alternates as follows (the last two being custom variants of the IWD pale animations): Svirfneblin pale with axe, Svirfneblin pale without axe, Svirfneblin dark with axe, Svirfneblin dark without axe. Includes gnome sounds ported from NWN.<br>
 		- Needed for Svirfneblin Animations [480-490] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
@@ -274,7 +274,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Female Elf Mage, Female Human Druid, Female Human Fighter, Female Human Mage, Female Human Thief, Male Human Barbarian, Male Human Ninja, Male Vampire.<br>
 		- Needed for Moinesse's Avatars for IA [7000-7010-7020-7030] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
@@ -282,7 +282,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
 		Same content as above, but EE games compatible.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
@@ -290,7 +290,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Alternate Modron, WoRm's NWN ports (Amel, Basilisk, Bebilith, Hamatula, Osyluth, Pit Fiend, Scarecrow, Vedred). Includes all relevant creature sounds and tables.<br>
 		- Needed for Distinctive Fiends [100], Pit Fiends {150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_misc_1</strong></td>
@@ -298,7 +298,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Bombardier Beetle, Displacer Beast, Female Fire and Frost Giants, Succubus (with object animations), Bovine Axe Thing (don't ask). Includes all relevant creature sounds and tables.<br>
 		- Needed for Distinctive Fiends [100] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_abishai</strong></td>
@@ -306,7 +306,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Black Abishai, Blue Abishai, Green Abishai, Red Abishai (based on PS:T animations). Includes creature sounds.<br>
 		- Needed for Distinctive Fiends [100] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_paletted</strong></td>
@@ -314,7 +314,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Aasimar Female, Baurier Male, Curst Townie Female, Curst Townie Male, Dustman Female, Dustman Male, Ghoul Female, Ghoul Male, Githzerai, Godsman, Large Thug, Lower Class Townie Female, Lower Class Townie Male, Merchant, Midwife, Prostitute, Skeleton Priest, Skeleton Worker, Thokola, Thug, Tiefling Female, Tiefling Male, Townie Wizard, Upper Class Townie Female, Upper Class Townie Male, Zombie Female, Zombie Male. Includes animation sound clips.<br>
 		- Needed for More Planescape: Torment Animations [710-720-760-740] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_shadows_harpy_frostgiant</strong></td>
@@ -322,7 +322,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Alternate ("murky") Shadows, Harpy and Frost Giant from IWD. Includes all relevant creature sounds and tables.<br>
 		- Needed for Distinctive Undead [400] component; and for BP, Drizzt Saga, NEJv691, RoT, TDD and TS mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_wh_dr_wyv_lop</strong></td>
@@ -330,7 +330,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: IWD White Dragon, IWD White Wyvern large, Lady of Pain. Includes all relevant creature sounds and tables.<br>
 		- Needed for Planar Sphere mod.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
@@ -338,7 +338,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Brow Chicken (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
 		- Plus more to come.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 </table><br>
 <div align="right"><a href="#top">Back to top</a></div>
@@ -352,6 +352,7 @@ Here is a chart listing the options related to the installation process:</br></b
 The installer includes the following components. The number of each is the component *`DESIGNATED`* number which gives it a fixed install position, lets other components detect it and allows automated installers to specify component choices.
 
 ><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a> <em>&nbsp;&nbsp;&nbsp;[main component]</em></span></br>
+
 ><span style="margin-left: 50px;"><a href="#25">[25] Humanoid Animation Fixes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#50">[50] Distinctive Genies</a></span></br>
 ><span style="margin-left: 50px;"><a href="#100">[100] Distinctive Fiends</a></span></br>
@@ -369,389 +370,349 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#710">[710-720-730-740] More Planescape: Torment Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#7000">[7000-7010-7020-7030] Moinesse's Avatars for IA</a></span></br>
 ><span style="margin-left: 50px;"><a href="#8000">[8000-8010-8020-8030] BG1 Character Animations for NPCs</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9000">[9000] Fix Area Creature References</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] BG1 Character Animations for PCs</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] BG1 Character Animations for Saved Games</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br></br>
 
 
 All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
+<div align="right"><a href="#top">Back to top</a></div>
 
+------------------------
 
-## 
+<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**<br />
+###### <em>Requires ToB v26498</em>
 
-<a name="0" id="0"></a>**0. Infinity Animations (main component)**<br />
-<em><span style="margin-left: 15px;">Requires <acronym title="Throne of Bhaal">ToB</acronym> v26498</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Checks mod files and .exe validity</li>
-	<li>Backs up and patches the .exe</li>
-	<li>Replaces _LOW creature animations</li>
-	<li>Updates .ids files</li>
-	<li>Restores any necessary mod-overwritten animations</li>
-	<li>Copies new animations (any extracted to /content folder)</li>
-	<li>Fixes any affected creatures</li>
-</ul>
-
+- Checks mod files
+- ToB only: Checks .exe validity, backs up and patches the .exe
+- Replaces _LOW creature animations
+- Updates .ids files
+- Restores any necessary mod-overwritten animations
+- Copies new animations (any extracted to :file_folder: /archives folder)
+- Fixes any affected creatures
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="25" id="25"></a>**25. Humanoid Animation Fixes**<br />
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Male human fighters get the fighter instead of cleric animation</li>
-	<li>Male elf fighters get the fighter instead of cleric animation</li>
-	<li>Male halfling fighters get the fighter instead of cleric animation</li>
-	<li>Female human fighters get the fighter instead of cleric animation</li>
-	<li>Male human mages get the mage instead of cleric animation</li>
-	<li>Male elf mages get the mage instead of cleric animation</li>
-	<li>Male human thieves get the thief instead of fighter animation</li>
-	<li>Female human thieves get the thief instead of fighter animation</li>
-	<li>Male human monks get the monk instead of cleric animation</li>
-	<li>Male human pirates get the pirate animation</li>
-	<li>Male human sailors get the sailor animation</li>
-	<li>Amnian guards get the Amnian guard animation</li>
-	<li>Male human Shadow Thieves get the Shadow Thief animation</li>
-</ul>
+<a name="25" id="25"></a>&#10173; **[25] Humanoid Animation Fixes**<br />
 
+- Male human fighters get the fighter instead of cleric animation
+- Male elf fighters get the fighter instead of cleric animation
+- Male halfling fighters get the fighter instead of cleric animation
+- Female human fighters get the fighter instead of cleric animation
+- Male human mages get the mage instead of cleric animation
+- Male elf mages get the mage instead of cleric animation
+- Male human thieves get the thief instead of fighter animation
+- Female human thieves get the thief instead of fighter animation
+- Male human monks get the monk instead of cleric animation
+- Male human pirates get the pirate animation
+- Male human sailors get the sailor animation
+- Amnian guards get the Amnian guard animation
+- Male human Shadow Thieves get the Shadow Thief animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="50" id="50"></a>**50. Distinctive Genies**<br />
+<a name="50" id="50"></a>&#10173; **[50] Distinctive Genies**<br />
 <em><span style="margin-left: 22px;">Requires IA_Fiends&#95;Genies.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Uses djinn, efreet, dao, jann and marid animations where sensible</li>
-</ul>
 
+- Uses djinn, efreet, dao, jann and marid animations where sensible
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="100" id="100"></a>**100. Distinctive Fiends**<br />
+<a name="100" id="100"></a>&#10173; **[100] Distinctive Fiends**<br />
 <em><span style="margin-left: 34px;">Requires IA_Fiends&#95;Genies.rar, IA&#95;IWD.rar and IA&#95;PST&#95;Abishai.rar<br></span>
 <span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar only if certain mods are installed</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Nabassus get a green-grey tanar'ri animation</li>
-	<li>Chromatic Demon gets a somewhat more colourful base animation</li>
-	<li>Bebiliths (Longer Road and Drizzt Saga only) get the <acronym title="Neverwinter Nights">NWN</acronym> animation</li>
-	<li>Some mariliths get a darker animation</li>
-	<li>Night hags get the <acronym title="Planescape: Torment">PS:T</acronym> night hag animation</li>
-	<li>Bone fiends get the <acronym title="Neverwinter Nights">NWN</acronym> osyluth animation</li>
-	<li>Gelugons (only if added by a mod) get an ice salamander animation</li>
-	<li>Yochlols (except those in drow form) get a dark otyugh-based animation</li>
-	<li>White, green and red abishai get the relevant <acronym title="Icewind Dale">IWD</acronym> or <acronym title="Planescape: Torment">PS:T</acronym> animations</li>
-	<li>Manes get the <acronym title="Icewind Dale">IWD</acronym> drowned dead animation</li>
-	<li>Erinyes get a black-winged elf avatar</li>
-	<li>Succubi get the <acronym title="Neverwinter Nights">NWN</acronym> succubus animation</li>
-	<li>Maurezhi get a dark ghoulish animation</li>
-	<li>Glabrezu get the proper glabrezu animation</li>
-</ul>
 
+- Nabassus get a green-grey tanar'ri animation
+- Chromatic Demon gets a somewhat more colourful base animation
+- Bebiliths (Longer Road and Drizzt Saga only) get the NWN animation
+- Some mariliths get a darker animation
+- Night hags get the PS:T night hag animation
+- Bone fiends get the NWN osyluth animation
+- Gelugons (only if added by a mod) get an ice salamander animation
+- Yochlols (except those in drow form) get a dark otyugh-based animation
+- White, green and red abishai get the relevant IWD or PS:T animations
+- Manes get the IWD drowned dead animation
+- Erinyes get a black-winged elf avatar
+- Succubi get the NWN succubus animation
+- Maurezhi get a dark ghoulish animation
+- Glabrezu get the proper glabrezu animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="150" id="150"></a>**Pit Fiends**<br />
-**150.** All get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
-**175.** Some get the <acronym title="Neverwinter Nights">NWN</acronym> animation<br />
+<a name="150" id="150"></a>&#10173; **[150-175] Pit Fiends**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br />
 <em><span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Choice of subcomponent (or none); "some" = roughly half, randomly selected</li>
-</ul>
 
+- Choice of subcomponent (or none); "some" = roughly half, randomly selected
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="210" id="210"></a>**Cambions get Isair Animation**<br />
-**210.** All cambions<br />
-**230.** Some cambions<br />
+<a name="210" id="210"></a>&#10173; **[210-230] Cambions get Isair Animation**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br />
 <em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Same logic as Pit Fiends component</li>
-</ul>
 
+- Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="260" id="260"></a>**Alu-Fiends get Madae Animation**<br />
-**260.** All alu-fiends<br />
-**280.** Some alu-fiends<br />
+<a name="260" id="260"></a>&#10173; **[260-280] Alu-Fiends get Madae Animation**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br />
 <em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Same logic as Pit Fiends component</li>
-</ul>
 
+- Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="400" id="400"></a>**400. Distinctive Undead**<br />
+<a name="400" id="400"></a>&#10173; **[400] Distinctive Undead**<br />
 <em><span style="margin-left: 34px;">Requires IA&#95;Base&#95;Anims.rar, IA&#95;IWD.rar and Shadows&#95;harpy&#95;frostgiant.zip</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Banshees get the wailing virgin animation</li>
-	<li>Floating skulls get the demilich animation</li>
-	<li>Greater ghasts get the <acronym title="Icewind Dale">IWD</acronym> greater ghast animation</li>
-	<li>Generic ghosts get the <acronym title="Icewind Dale">IWD</acronym> ghost animation</li>
-	<li>Greater ghouls get the <acronym title="Icewind Dale">IWD</acronym> greater ghoul animation</li>
-	<li>Some ghouls get the <acronym title= "Planescape: Torment">PS:T</acronym> ghoul queen animation</li>
-	<li>Greater liches get the <acronym title="Icewind Dale">IWD</acronym> white lich animation</li>
-	<li>Apparitions get the mist creature animation</li>
-	<li>Revenants get the revenant animation</li>
-	<li>Shadow Beasts get the shadow animation</li>
-	<li>Wraiths get the <acronym title="Icewind Dale">IWD</acronym> large shadow animation</li>
-	<li>Spectres get the <acronym title="Icewind Dale">IWD</acronym> large shadow murky animation</li>
-	<li>Shadows get the <acronym title="Icewind Dale">IWD</acronym> small shadow animation</li>
-	<li>Some shadows get the <acronym title="Icewind Dale">IWD</acronym> small shadow murky animation</li>
-	<li>Greater skeletons get the skeleton monster animation</li>
-	<li>Moon horrors get the skeleton fiend animation</li>
-	<li>Female vampires get the vampire female animation</li>
-	<li>Wights get the <acronym title="Icewind Dale">IWD</acronym> grey wight animation</li>
-	<li>Green zombies get the <acronym title="Icewind Dale">IWD</acronym> green wight animation</li>
-	<li>Zombie lords get the <acronym title="Icewind Dale">IWD</acronym> yellow wight animation</li>
-	<li>Undead knights and similar get the <acronym title="Icewind Dale">IWD</acronym> barrow wight animation</li>
-	<li>Greater zombies get the <acronym title="Icewind Dale">IWD</acronym> yellow zombie animation</li>
-	<li>Lacedons and sea zombies get the <acronym title="Icewind Dale">IWD</acronym> blue zombie animation</li>
-</ul>
 
+- Banshees get the wailing virgin animation
+- Floating skulls get the demilich animation
+- Greater ghasts get the IWD greater ghast animation
+- Generic ghosts get the IWD ghost animation
+- Greater ghouls get the IWD greater ghoul animation
+- Some ghouls get the PS:T ghoul queen animation
+- Greater liches get the IWD white lich animation
+- Apparitions get the mist creature animation
+- Revenants get the revenant animation
+- Shadow Beasts get the shadow animation
+- Wraiths get the IWD large shadow animation
+- Spectres get the IWD large shadow murky animation
+- Shadows get the IWD small shadow animation
+- Some shadows get the IWD small shadow murky animation
+- Greater skeletons get the skeleton monster animation
+- Moon horrors get the skeleton fiend animation
+- Female vampires get the vampire female animation
+- Wights get the IWD grey wight animation
+- Green zombies get the IWD green wight animation
+- Zombie lords get the IWD yellow wight animation
+- Undead knights and similar get the IWD barrow wight animation
+- Greater zombies get the IWD yellow zombie animation
+- Lacedons and sea zombies get the IWD blue zombie animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="410" id="410"></a>**Skeleton Warriors**<br />
-**410.** Wight Barrow animation<br />
-**415.** Skeleton animation<br />
-**420.** Skeleton warrior animation<br />
+<a name="410" id="410"></a>&#10173; **[410-415-420] Skeleton Warriors**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Wight Barrow animation<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br />
 <em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Assigns the chosen animation to all skeleton warriors</li>
-</ul>
 
+- Assigns the chosen animation to all skeleton warriors
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="450" id="450"></a>**Seer Animation**<br />
-**450.** Some beggars and slaves<br />
-**455.** Some beggars<br />
-**460.** Some slaves<br />
+<a name="450" id="450"></a>&#10173; **[450-455-460] Seer Animation**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Some beggars and slaves<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br />
 <em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Same logic as Pit Fiends component</li>
-</ul>
 
+- Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="480" id="480"></a>**Svirneblin Animations**<br />
-**480.** Animations only<br />
-**490.** Animations and sounds<br />
-<em><span style="margin-left: 34px;">Requires IA_IWD&#95;Svirfneblin.rar</span><br />
-<span style="margin-left: 34px;">Skipped if Aurora's Shoes installed (does the same thing)</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Uses all svirfneblin variants for Underdark deep gnomes</li>
-</ul>
+<a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds<br />
+<em><span style="margin-left: 34px;">Requires IA_IWD&#95;Svirfneblin.rar</span></em><br />
+###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em>
 
+- Uses all svirfneblin variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="500" id="500"></a>**500. More Base Animations**<br />
+<a name="500" id="500"></a>&#10173; **[500] More Base Animations**<br />
 <em><span style="margin-left: 34px;">Requires IA_Base&#95;Anims.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Histachii get the <acronym title="Icewind Dale">IWD</acronym> histachii animation</li>
-	<li>Lizardman warriors get the lizardman elite animation (brown)</li>
-	<li>Lizardman shamans get the lizardman animation (green)</li>
-	<li>Lizardman chiefs get the lizard king animation</li>
-	<li>Variant trolls (normal, blue, ice, snow, small) where relevant</li>
-	<li>Greater umber hulks get the <acronym title="Icewind Dale">IWD</acronym> elder umber hulk animation</li>
-</ul>
 
+- Histachii get the IWD histachii animation
+- Lizardman warriors get the lizardman elite animation (brown)
+- Lizardman shamans get the lizardman animation (green)
+- Lizardman chiefs get the lizard king animation
+- Variant trolls (normal, blue, ice, snow, small) where relevant
+- Greater umber hulks get the IWD elder umber hulk animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="550" id="550"></a>**550. More Icewind Dale Animations**<br />
+<a name="550" id="550"></a>&#10173; **[550] More Icewind Dale Animations**<br />
 <em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Animated Plates get small animated plate animations</li>
-	<li>Archdruids get the <acronym title="Icewind Dale">IWD</acronym> Arundel animation</li>
-	<li>Variant barbarians (brown, red, tan and shamans)</li>
-	<li>Greater elementals make use of variant <acronym title="Baldur's Gate II">BG2</acronym>/<acronym title="Icewind Dale">IWD</acronym> animations</li>
-	<li>Some fire giants get the <acronym title="Icewind Dale">IWD</acronym> fire giant animation</li>
-	<li>Iron golems get the <acronym title="Icewind Dale">IWD</acronym> iron golem animation</li>
-	<li>Adamantite golems get the <acronym title="Baldur's Gate II">BG2</acronym> iron golem animation</li>
-	<li>Sahuagin priestesses get the <acronym title="Icewind Dale">IWD</acronym> sahuagin animation</li>
-	<li>Sahuagin royal guards get the <acronym title="Baldur's Gate II">BG2</acronym> large sahuagin animation</li>
-	<li>Sahuagin chiefs get the <acronym title="Icewind Dale">IWD</acronym> large sahuagin animation</li>
-</ul>
 
+- Animated Plates get small animated plate animations
+- Archdruids get the IWD Arundel animation
+- Variant barbarians (brown, red, tan and shamans)
+- Greater elementals make use of variant BG2/IWD animations
+- Some fire giants get the IWD fire giant animation
+- Iron golems get the IWD iron golem animation
+- Adamantite golems get the BG2 iron golem animation
+- Sahuagin priestesses get the IWD sahuagin animation
+- Sahuagin royal guards get the BG2 large sahuagin animation
+- Sahuagin chiefs get the IWD large sahuagin animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="600" id="600"></a>**600. More Icewind Dale II Animations**<br />
+<a name="600" id="600"></a>&#10173; **[600] More Icewind Dale II Animations**<br />
 <em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Greater fire giants and firbolgs get the fire giant variant animation</li>
-	<li>Variant goblins (worgriders, leaders, browns, greens, elites)</li>
-	<li>Hook horrors get the hook horror animation</li>
-	<li>Shadow druids get the Malarite animation</li>
-	<li>Ellesime clones get the white-haired Ellesime animation</li>
-	<li>Poison mists get the lagoon creature animation</li>
-	<li>Death tyrants get the death tyrant animation</li>
-	<li>Wererat gets the wererat animation</li>
-	<li>Worgs get the <acronym title="Icewind Dale II">IWD2</acronym> worg animation</li>
-	<li>Yuan-Tis Halfbreed get the <acronym title="Icewind Dale II">IWD2</acronym> yuan-ti halfbreed animation</li>
-</ul>
 
+- Greater fire giants and firbolgs get the fire giant variant animation
+- Variant goblins (worgriders, leaders, browns, greens, elites)
+- Hook horrors get the hook horror animation
+- Shadow druids get the Malarite animation
+- Ellesime clones get the white-haired Ellesime animation
+- Poison mists get the lagoon creature animation
+- Death tyrants get the death tyrant animation
+- Wererat gets the wererat animation
+- Worgs get the IWD2 worg animation
+- Yuan-Tis Halfbreed get the IWD2 yuan-ti halfbreed animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="650" id="650"></a>**650. More Neverwinter Nights Animations**<br />
+<a name="650" id="650"></a>&#10173; **[650] More Neverwinter Nights Animations**<br />
 <em><span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Scythe-wielders (in <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym>) get the <acronym title="Neverwinter Nights">NWN</acronym> Amel animation</li>
-	<li>Bombardier beetle (in Big Picture) gets the <acronym title="Neverwinter Nights">NWN</acronym> animation</li>
-	<li>Greater basilisks get the <acronym title="Neverwinter Nights">NWN</acronym> basilisk animation</li>
-	<li>Modrons get the modron animation</li>
-	<li>Displacer beasts (in AjocMod) get the <acronym title="Neverwinter Nights">NWN</acronym>-<acronym title="Community Creature Project">CCP</acronym> animation</li>
-	<li>Some fire giants get the <acronym title="Neverwinter Nights">NWN</acronym> female fire giant animation</li>
-	<li>Some frost giants get the <acronym title="Neverwinter Nights">NWN</acronym> female frost giant animation</li>
-</ul>
 
+- Scythe-wielders (in NTotSC) get the NWN Amel animation
+- Bombardier beetle (in Big Picture) gets the NWN animation
+- Greater basilisks get the NWN basilisk animation
+- Modrons get the modron animation
+- Displacer beasts (in AjocMod) get the NWN-CCP animation
+- Some fire giants get the NWN female fire giant animation
+- Some frost giants get the NWN female frost giant animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="710" id="710"></a>**More Planescape: Torment Animations**<br />
-**710.** 25% of relevant non-joinables<br />
-**720.** 50% of relevant non-joinables<br />
-**730.** 75% of relevant non-joinables<br />
-**740.** Most relevant non-joinables<br />
+<a name="710" id="710"></a>&#10173; **[710-720-730-740] More Planescape: Torment Animations**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br />
 <em><span style="margin-left: 34px;">Requires IA_PST&#95;Paletted.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Female human thieves get the female Curst townie animation</li>
-	<li>Male human thieves get the male Curst townie animation</li>
-	<li>Female monks get the female Dustman animation</li>
-	<li>Male monks and Dustmen get the male Dustman animation</li>
-	<li>Some ghouls get the female ghoul animation</li>
-	<li>Some ghouls get the male ghoul animation</li>
-	<li>Male human smiths get the Godsman animation</li>
-	<li>Axe- and hammer-wielding bandits and mercenaries get the large thug animation</li>
-	<li>Sword- and dagger-wielding bandits and mercenaries get the small thug animation</li>
-	<li>Female human peasants get the female lower-class townie animation</li>
-	<li>Male human peasants get the male lower-class townie animation</li>
-	<li>Male human merchants get the merchant animation</li>
-	<li>Female human merchants get the midwife animation</li>
-	<li>Harlots get the harlot animation</li>
-	<li>Skeleton mage gets the skeleton priest animation</li>
-	<li>Skeletons get the skeleton worker animation</li>
-	<li>Female tieflings get the female tiefling animation</li>
-	<li>Male tieflings get the male tiefling animation</li>
-	<li>Male human mages get the townie wizard animation</li>
-	<li>Female human nobles get the female upper-class townie animation</li>
-	<li>Male human nobles get the male upper-class townie animation</li>
-	<li>Some zombies get the female zombie animation</li>
-	<li>Some zombies get the male zombie animation</li>
-</ul>
 
+- Female human thieves get the female Curst townie animation
+- Male human thieves get the male Curst townie animation
+- Female monks get the female Dustman animation
+- Male monks and Dustmen get the male Dustman animation
+- Some ghouls get the female ghoul animation
+- Some ghouls get the male ghoul animation
+- Male human smiths get the Godsman animation
+- Axe- and hammer-wielding bandits and mercenaries get the large thug animation
+- Sword- and dagger-wielding bandits and mercenaries get the small thug animation
+- Female human peasants get the female lower-class townie animation
+- Male human peasants get the male lower-class townie animation
+- Male human merchants get the merchant animation
+- Female human merchants get the midwife animation
+- Harlots get the harlot animation
+- Skeleton mage gets the skeleton priest animation
+- Skeletons get the skeleton worker animation
+- Female tieflings get the female tiefling animation
+- Male tieflings get the male tiefling animation
+- Male human mages get the townie wizard animation
+- Female human nobles get the female upper-class townie animation
+- Male human nobles get the male upper-class townie animation
+- Some zombies get the female zombie animation
+- Some zombies get the male zombie animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="7000" id="7000"></a>**Moinesse's Avatars for <acronym title="Infinity Animations">IA</acronym>**<br />
-**7000.** 25% of relevant non-joinables<br />
-**7010.** 50% of relevant non-joinables<br />
-**7020.** 75% of relevant non-joinables<br />
-**7030.** Most relevant non-joinables<br />
+<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Moinesse's Avatars for IA**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br />
 <em><span style="margin-left: 44px;">Requires Moinesse_edits&#95;IAised.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Male human barbarians get the male barbarian animation</li>
-	<li>Female human druids get the female druid animation</li>
-	<li>Female human fighters get the female human fighter animation</li>
-	<li>Female elf mages get the female elf mage animation</li>
-	<li>Female human mages get the female human mage animation</li>
-	<li>Female human thieves get the female human thief animation (unless they've already received the female Curst townie animation)</li>
-	<li>Male human ninjas and assassins get the male human ninja animation (unless they've already received the male Curst townie or the Shadow thief animation)</li>
-	<li>Male vampires get the Moinesse vampire animation</li>
-</ul>
 
+- Male human barbarians get the male barbarian animation
+- Female human druids get the female druid animation
+- Female human fighters get the female human fighter animation
+- Female elf mages get the female elf mage animation
+- Female human mages get the female human mage animation
+- Female human thieves get the female human thief animation (unless they've already received the female Curst townie animation)
+- Male human ninjas and assassins get the male human ninja animation (unless they've already received the male Curst townie or the Shadow thief animation)
+- Male vampires get the Moinesse vampire animation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="8000" id="8000"></a>**<acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Non-Player Characters">NPCs</acronym>**<br />
-**8000.** 25% of relevant creatures<br />
-**8010.** 50% of relevant creatures<br />
-**8020.** 75% of relevant creatures<br />
-**8030.** Most relevant creatures<br />
+<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] BG1 Character Animations for NPCs**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25% of relevant creatures<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50% of relevant creatures<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br />
 <em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Uses the original Baldur's Gate character animations as specified</li>
-	<li>The last option is "most" instead of "all" because certain creatures are excluded</li>
-	<li>These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since <acronym title="Baldur's Gate">BG1</acronym> did not have these animations</li>
-	<li>**Use with caution** in the case of joinable <acronym title="Non-Player Characters">NPCs</acronym>: it will avoid any characters with the two weapon proficiency or a second weapon equipped, but do not try to dual wield</li>
-</ul>
 
+- Uses the original Baldur's Gate character animations as specified
+- The last option is "most" instead of "all" because certain creatures are excluded
+- These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since BG1 did not have these animations
+- :warning: **Use with caution** in the case of joinable NPCs: it will avoid any characters with the two weapon proficiency or a second weapon equipped, but do not try to dual wield
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="9000" id="9000"></a>**9000. Fix Area Creature References**<br />
-<em><span style="margin-left: 44px;">Installed by default</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Corrects changed creature animations in area files for easier reference</li>
-</ul>
+<a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**<br />
+###### <em>Installed by default</em>
 
+- Corrects changed creature animations in area files for easier reference
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="9500" id="9500"></a>**<acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Player Characters">PCs</acronym>**<br />
-**9500.** Prompt for each exported <acronym title="Player Character">PC</acronym><br />
-**9510.** Prompt for problematic <acronym title="Player Characters">PCs</acronym><br />
-**9520.** Patch all <acronym title="Player Characters">PCs</acronym> without prompting<br />
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for PCs**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br />
 <em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Uses the original Baldur's Gate character animations as specified</li>
-	<li>The second option patches all <acronym title="Player Characters">PCs</acronym> but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot</li>
-	<li>Scimitars and katanas should work, but will appear as long swords on character avatars</li>
-	<li>**Use with caution**: do not try to dual wield or the game will likely crash</li>
-</ul>
 
+- Uses the original Baldur's Gate character animations as specified
+- The second option patches all PCs but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot
+- Scimitars and katanas should work, but will appear as long swords on character avatars
+- :warning: **Use with caution**: do not try to dual wield or the game will likely crash
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="9600" id="9600"></a>**<acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games**<br />
-**9600.** Prompt for each character<br />
-**9610.** Prompt for problematic characters<br />
-**9620.** Patch all characters without prompting<br />
+<a name="9600" id="9600"></a>&#10173; **[9600-9610-9620] BG1 Character Animations for Saved Games**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Prompt for each character<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br />
 <em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Same notes as above</li>
-	<li>You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)</li>
-	<li>**Back up your saved games** before uninstalling this component, as it will restore the versions present at the time of the installation</li>
-</ul>
 
+- Same notes as above
+- You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)
+- :warning: **Back up your saved games** before un-installing this component, as it will restore the versions present at the time of the installation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="9900" id="9900"></a>**Saved Game Animation Fixer**<br />
-**9900.** Correct only LOW animations<br />
-**9910.** Correct all animations <acronym title="Infinity Animations">IA</acronym> has changed
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>The first option prevents games from crashing due to moved LOW animations</li>
-	<li>The second option does the above and also patches any changed animations into your saved games</li>
-	<li>You get to choose whether to patch each game</li>
-	<li>If you've started a new game after installing this mod, then this component is not necessary (unless you're starting in the <acronym title="Baldur's Gate II">BG2</acronym> portion of <acronym title="Baldur's Gate Trilogy">BGT</acronym>)</li>
-	<li>**Back up your saved games** before uninstalling this component, as it will restore the versions present at the time of the installation</li>
-</ul>
+<a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Game Animation Fixer**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed
+
+- The first option prevents games from crashing due to moved _LOW animations
+- The second option does the above and also patches any changed animations into your saved games
+- You get to choose whether to patch each game
+- If you've started a new game after installing this mod, then this component is not necessary (unless you're starting in the BG2 portion of BGT
+- :warning: **Back up your saved games** before un-installing this component, as it will restore the versions present at the time of the installation
 <div align="right"><a href="#components">Back to components list</a></div>
 
 
@@ -858,14 +819,14 @@ All components require the main component (they need to since it's the one that 
 - Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes)
 - Added night hags to the "Distinctive Fiends" component
 - Added ghoul queens to the "Distinctive Undead" component
-- Added white-haired Ellesime to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component
-- Added lagoon creature to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component
-- Deprecated tieflings from the cambion/alu-fiend components in favor of the <acronym title="Planescape: Torment">PS:T</acronym> animation component
+- Added white-haired Ellesime to the "More IWD2 Animations" component
+- Added lagoon creature to the "More IWD2 Animations" component
+- Deprecated tieflings from the cambion/alu-fiend components in favor of the PS:T animation component
 - Corrected skeleton warriors appearing as verbeegs glitch
-- Added Amel animation to <acronym title="Neverwinter Nights">NWN</acronym> component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
+- Added Amel animation to NWN component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
 - Added Humanoid Animation Fixes component
 - Added Moinesse's Avatars component
-- Added More <acronym title="Planescape: Torment">PS:T</acronym> Animations component
+- Added More PS:T Animations component
 - Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games component
 - Added saved game animation fixing component
 - Traified the entire freaking mod by hand for translators (thanks for nothing, <acronym title="Weimer Dialogue Utility">WeiDU</acronym>! &#128541;)

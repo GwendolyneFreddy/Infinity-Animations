@@ -99,7 +99,7 @@ Vous pouvez extraire les fichiers de l'archive à l'aide de <a href="http://www.
 
 <details><summary>Obsolète depuis la version 6.0.0</summary>
 <p></br>
-**Important :** Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « *Ne pas extraire les chemins d'accès* » de l'onglet **Avancé** de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet **Général** se termine par **/content** ou **/restore** après **infinityanimations** (ils ne doivent pas comporter de sous-répertoires).
+<strong>Important :</strong> Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « <em>Ne pas extraire les chemins d'accès</em> » de l'onglet <strong>Avancé</strong> de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet <strong>Général</strong> se termine par <strong>/content</strong> ou <strong>/restore</strong> après <strong>infinityanimations</strong> (ils ne doivent pas comporter de sous-répertoires).
 
 Extrayez toutes les archives dans le répertoire &#x1F4C1; /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire &#x1F4C1; /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.
 
@@ -191,151 +191,151 @@ Voici le tableau des options concernées :</br></br>
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_bg2_restores**</td>
+		<td><div align="center"><strong>ia_bg2_restores</strong></td>
 		<td><ins><ins>IA Content - BG2 Restores</ins><br><br>
 		- Contenu : femme araignée statique (MSPL), gobelin d'élite avec arc (MGO4), gobelin d'élite avec hache (MGO3), liche (MLIC), liche noire (MLER), marilith (MTAN), myconide bleu (MMY2), orog (MNO1), orog d'élite (MNO2), orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
 		- Il s'agit du contenu nécessaire pour restaurer les slots d'animation de BG2 écrasés par certains mods. Il est uniquement nécessaire pour une mega installation comprenant les mods suivants : BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere et RPG KitsPack.<br><br>
-		*Installation automatique seulement si nécessaire [par défaut]*</td>
+		<em>Installation automatique seulement si nécessaire [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_ee_restore**<br><br>
+		<td><div align="center"><strong>ia_ee_restore**<br><br>
 		</td>
 		<td><ins>IA Content - Base EE Content (nouveau)<br><br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
-		*Installation automatique [par défaut]*</td>
+		<em>Installation automatique [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_base_anims**</td>
+		<td><div align="center"><strong>ia_base_anims</strong></td>
 		<td><ins>IA Content 001 - Base Content</ins><br><br>
 		- Contenu : animations de basilic et de tasloi, les animations manquantes de IWD référencées dans BGII (scarabée bombardier, scarabée de feu, scarabée scolyte, scarabée rhinocéros, cyclope, fantôme, blême majeur, goule majeure, histachii, homme lézard, homme lézard roi, liche blanche, nécrophage gris/vert/jaune, ombre petite/grande), ombre des roches ancienne, troll des glaces, troll des neiges, zombi bleu/jaune), les animations de personnages de BG. Comprend les tables et les jeux de sons des créatures concernées et les animations de cimeterre de BG1.<br>
 		- Nécessaire pour les composants Morts-vivants différenciés [400], Plus d'animations de base [500], Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
 		- Nécessaire pour les mods BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS et RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_belhifet_and_marilith**</td>
+		<td><div align="center"><strong>ia_belhifet_and_marilith</strong></td>
 		<td><ins>IA Content - IWD Belhifet and Marilith</ins><br><br>
 		- Contenu : animations et jeux de sons du belhifet et de la marilith d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les mods Drizzt Saga, RoT, TDD, TS et TS-BP.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_bg2_iwd2**</td>
+		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, géant du feu alternatif, créature des lagons, tyramort), ni dans IWD (abishai blanc, blaireau-garou, chimère, crochorreur, demi-dragon noir/rouge, drider mâle/femelle, élémentaire de l'eau petit, freyeur normale/grande, géant Fomorian, gobelins de IWD II, gobelins chevaucheurs de worg, gobelours, capitaine gobelours, isair, kegs, lémure, madae, malarite, orog shaman, orques morts-vivants, rat-garou, tréant, sanglier arctique, shenrical, worg, yuan-ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
 		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_ee_tob**<br><br>
+		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(uniquement pour ToB)</td>
 		<td>IA Content - EE games new Animations ported to ToB (nouveau)</ins><br><br>
 		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_fiends_genies**</td>
+		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
 		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour erinyes, gelugon et tieffelins.<br>
 		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_iwd**</td>
+		<td><div align="center"><strong>ia_iwd</strong></td>
 		<td><ins>IA Content - Remaining IWD Animations</ins><br><br>
 		- Contenu : toutes les animations manquantes de IWD non comprises dans les autres archives (élémentaire de terre/eau/feu, sahuagin petit/grand, armures animées bronze/sombre/verte, arundel, barbare shaman (avec marteau, bâton, gourdin), barbare guerrier (bleu, rouge, marron), barbare Icasaracht, belhifet prêtre, fatalité rampante, mort noyé, géant du feu de IWD, golem de fer de IWD, rémorhaz, pauvre hère, yeti, ombre des roches vodyanoi, verbeeg, nécrophage des tertres). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Morts-vivants différenciés [400], Combattants squelettes [410-415-420], Animation de pauvre hère [450-455-460] et Plus d'animations d'Icewind Dale [550].<br>
 		- Nécessaire pour les mods BP, BH, CtB, NEJ, RoT, SOS et TS.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_iwd_svirfneblin**</td>
+		<td><div align="center"><strong>ia_iwd_svirfneblin</strong></td>
 		<td><ins>IA Content - IWD Svirfneblin</ins><br><br>
 		- Contenu : les animations de IWD/IWD2 pour svirfneblins (gnomes des profondeurs). Par défaut, la couleur de leur peau est pâles alors que, dans les références AD&D, elle devrait être plus foncée (couleur pierre). Le jeu original comportait des variantes avec et sans pioches (mais sans animation d'arme séparée). Comme ces emplacements ne sont pas palettisés, les variantes suivantes sont disponibles (les deux dernières étant des versions personnalisées des animations pâles IWD): svirfneblin pâle avec hache, svirfneblin pâle sans hache, svirfneblin foncé avec hache, svirfneblin foncé sans hache. Comprend des jeux de sons empruntés à NWN.<br>
 		- Nécessaire pour le composant Animations de svirfneblins [480-490].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_moinesse_edits_iaised**<br><br>
+		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
 		(uniquement pour ToB)</td>
 		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
 		- Contenu : Barbare humain, Druidesse humaine, Guerrière humaine, Magicienne humaine, Magicienne elfe, Voleuse humaine, Ninja humain, Vampire homme.<br>
 		- Nécessaire pour le composant Avatars de Moinesse pour IA [7000-7010-7020-7030].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_moinesse_edits_iaised_ee**<br><br>
+		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
 		(uniquement pour EE)</td>
 		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
 		Même contenu que le précédent, mais compatible avec les jeux EE.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_nwn_01_modron**</td>
+		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
 		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
 		- Contenu : modrone alternatif, animations de NWN portées par WoRm (Amel, basilic, bebilith, hamatula, osyluth, diantrefosse, épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses {150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	<tr>
-		<td><div align="center">**ia_nwn_misc_1**</td>
+		<td><div align="center"><strong>ia_nwn_misc_1</strong></td>
 		<td><ins>IA Content - Miscellaneous NWN Animations I</ins><br><br>
 		- Contenu :  bête éclipsante, géante du feu et du givre, scarabée bombardier, succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_pst_abishai**</td>
+		<td><div align="center"><strong>ia_pst_abishai</strong></td>
 		<td><ins>IA Content - PST Abishai</ins><br><br>
 		- Contenu : abishai bleue, noire, rouge et verte (d'après les animations de PS:T). Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Démons différenciés [100].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_pst_paletted**</td>
+		<td><div align="center"><strong>ia_pst_paletted</strong></td>
 		<td><ins>IA Content - PST Paletted Animations</ins><br><br>
 		- Contenu : femme Aasimar, baurier mâle, catin, citoyen et citoyenne de Maudith, citoyen et citoyenne des classes supérieures, femme et homme poussière, femme et homme goule, githzerai, homme-dieu, citoyen et citoyenne des classes inférieures, magicien citoyen, marchand, midwife, sicaire et grand sicaire, prêtre et travailleur squelette, thokola, tieffelin homme et femme, zombi femme et homme. Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Plus d'animations de Planescape: Torment [710-720-760-740].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_shadows_harpy_frostgiant**</td>
+		<td><div align="center"><strong>ia_shadows_harpy_frostgiant</strong></td>
 		<td><ins>IA Content - Shadows, Harpy and Frost Giant</ins><br><br>
 		- Contenu : ombres alternatives d'IWD (« murky »), harpie et géant du givre d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le composant Morts-vivants différenciés [400] et pour les mods BP, Drizzt Saga, NEJv691, RoT, TDD et TS.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_wh_dr_wyv_lop**</td>
+		<td><div align="center"><strong>ia_wh_dr_wyv_lop</strong></td>
 		<td><ins>IA Content - White Wyvern and Dragon, Lady of Pain</ins><br><br>
 		- Contenu : dragon blanc et wiverne majeure blanche d'IWD, Dame de la Douleur. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le mod Planar Sphere.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center">**ia_modders**</td>
+		<td><div align="center"><strong>ia_modders</strong></td>
 		<td><ins>IA Content - Modders resources (nouveau)</ins><br><br>
 		- Contenu : poule marron (Jarl), chien gris de jastey, mule (Kwiat_W); ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb); petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Et bien plus encore à venir dans le futur.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 </table><br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>
@@ -349,6 +349,7 @@ Voici le tableau des options concernées :</br></br>
 Le programme d'installation comprend les composants suivants. Chacun possède un numéro distinct et pré-défini qui lui attribue une position déterminée (*NdT : mot-clé `DESIGNATED` en langage WeiDU*] ; ce qui permet aux autres composants de le détecter et aux utilitaires d'installation automatiques de préciser quels composants installer.
 
 ><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a> <em>&nbsp;&nbsp;&nbsp;[composant principal]</em></span></br>
+
 ><span style="margin-left: 50px;"><a href="#25">[25] Correction des animations des humanoïdes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#50">[50] Génies différenciés</a></span></br>
 ><span style="margin-left: 50px;"><a href="#100">[100] Démons différenciés</a></span></br>
@@ -366,385 +367,349 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ><span style="margin-left: 50px;"><a href="#710">[710-720-730-740] Plus d'animations de Planescape: Torment</a></span></br>
 ><span style="margin-left: 50px;"><a href="#7000">[7000-7010-7020-7030] Avatars de Moinesse pour IA</a></span></br>
 ><span style="margin-left: 50px;"><a href="#8000">[8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9000">[9000] Correction des références des créatures dans les cartes</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] Animations de personnages de BG1 pour les PJs</a></span></br>
+
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span></br>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span></br></br>
 
 
 Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
+<div align="right"><a href="#top">Retour en haut de page</a></div>
 
+------------------------
+
+<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**<br />
+###### <em>Nécessite le patch ToB v26498.</em>
+
+- Vérifie la présence des fichiers nécessaires.
+- ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.
+- ToB : Remplace les animations _LOW de créatures.
+- Met à jour les fichiers .ids.
+- Rétablit toutes les animations écrasées par les mods.
+- Copie les nouvelles animations (toutes celles extraites dans le répertoire :file_folder: /archives).
+- Corrige toutes les créatures affectées.
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
+			
+<a name="25" id="25"></a>&#10173; **[25] Correction des animations des humanoïdes**<br />
 
-<a name="0" id="0"></a><strong>0. Infinity Animations (composant principal)</strong><br />
-<em><span style="margin-left: 15px;">Nécessite le patch <acronym title="Throne of Bhaal">ToB</acronym> v26498.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Vérifie la présence des fichiers nécessaires et la validité de l'exécutable.</li>
-	<li>Fait une copie de sauvegarde de l'exécutable et le modifie.</li>
-	<li>Remplace les animations _LOW de créatures.</li>
-	<li>Met à jour les fichiers .ids.</li>
-	<li>Rétablit toutes les animations écrasées par les mods.</li>
-	<li>Copie les nouvelles animations (toutes celles extraites dans le répertoire /content).</li>
-	<li>Corrige toutes les créatures affectées.</li>
-</ul>
-
+- Attribue aux guerriers humains l'animation de guerrier plutôt que celle de prêtre.
+- Attribue aux guerriers elfes l'animation de guerrier plutôt que celle de prêtre.
+- Attribue aux guerriers petites-personnes l'animation de guerrier plutôt que celle de prêtre.
+- Attribue aux guerrières humaines l'animation de guerrière plutôt que celle de prêtresse.
+- Attribue aux magiciens humains l'animation de magicien plutôt que celle de prêtre.
+- Attribue aux magiciens elfes l'animation de magicien plutôt que celle de prêtre.
+- Attribue aux voleurs humains l'animation de voleur plutôt que celle de guerrier.
+- Attribue aux voleuses humaines l'animation de voleuse plutôt que celle de guerrière.
+- Attribue aux moines humains l'animation de moine plutôt que celle de prêtre.
+- Attribue aux pirates humains l'animation de pirate.
+- Attribue aux marins humains l'animation de marin.
+- Attribue aux gardes amniens l'animation de garde amnien.
+- Attribue aux Voleurs de l'ombre humains l'animation de voleur de l'ombre.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="25" id="25"></a><strong>25. Correction des animations des humanoïdes</strong><br />
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux guerriers humains l'animation de guerrier plutôt que celle de prêtre.</li>
-	<li>Attribue aux guerriers elfes l'animation de guerrier plutôt que celle de prêtre.</li>
-	<li>Attribue aux guerriers petites-personnes l'animation de guerrier plutôt que celle de prêtre.</li>
-	<li>Attribue aux guerrières humaines l'animation de guerrière plutôt que celle de prêtresse.</li>
-	<li>Attribue aux magiciens humains l'animation de magicien plutôt que celle de prêtre.</li>
-	<li>Attribue aux magiciens elfes l'animation de magicien plutôt que celle de prêtre.</li>
-	<li>Attribue aux voleurs humains l'animation de voleur plutôt que celle de guerrier.</li>
-	<li>Attribue aux voleuses humaines l'animation de voleuse plutôt que celle de guerrière.</li>
-	<li>Attribue aux moines humains l'animation de moine plutôt que celle de prêtre.</li>
-	<li>Attribue aux pirates humains l'animation de pirate.</li>
-	<li>Attribue aux marins humains l'animation de marin.</li>
-	<li>Attribue aux gardes amniens l'animation de garde amnien.</li>
-	<li>Attribue aux Voleurs de l'ombre humains l'animation de voleur de l'ombre.</li>
-</ul>
-
-<div align="right"><a href="#components">Retour à la liste des composants</a></div>
-
-## 
-
-<a name="50" id="50"></a><strong>50. Génies différenciés</strong><br />
+<a name="50" id="50"></a>&#10173; **[50] Génies différenciés**<br />
 <em><span style="margin-left: 22px;">Nécessite l'archive IA_Fiends&#95;Genies.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.</li>
-</ul>
 
+- Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="100" id="100"></a><strong>100. Démons différenciés</strong><br />
+<a name="100" id="100"></a>&#10173; **[100] Démons différenciés**<br />
 <em><span style="margin-left: 34px;">Nécessite les archives IA_Fiends&#95;Genies.rar, IA&#95;IWD.rar et IA&#95;PST&#95;Abishai.rar.<br></span>
 <span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar seulement si certains mods sont installés.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux nabassus une animation de tanar'ri vert-gris.</li>
-	<li>Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].</li>
-	<li>Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue à certaines mariliths une animation plus sombre.</li>
-	<li>Attribue aux <acronym title="Night hag">sorcières de la nuit</acronym> [<em>NdT : ou guenaudes nocturnes selon les traductions</em>] l'animation de night hag de <acronym title="Planescape: Torment">PS:T</acronym>.</li>
-	<li>Attribue aux démons d'os l'animation d'osyluth de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux gélugons (seulement ceux ajoutés par un mod) l'animation de salamandre des glaces.</li>
-	<li>Attribue aux yochlols (sauf celles sous l'apparence d'elfes noires) une animation d'otyugh plus foncée.</li>
-	<li>Attribue aux abishaïs d'argent, verts et rouges leur animation appropriée d'<acronym title="Icewind Dale">IWD</acronym> ou de <acronym title="Planescape: Torment">PS:T</acronym>.</li>
-	<li>Attribue aux manes l'animation de mort noyé d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux erinyes un avatar d'elfe dotée d'ailes noires.</li>
-	<li>Attribue aux succubes l'animation de succube de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux maurezhis l'animation de maurezhi (une goule sombre).</li>
-	<li>Attribue aux glabrezus la bonne animation de glabrezu.</li>
-</ul>
 
+- Attribue aux nabassus une animation de tanar'ri vert-gris.
+- Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].
+- Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de NWN.
+- Attribue à certaines mariliths une animation plus sombre.
+- Attribue aux sorcières de la nuit [<em>NdT : ou guenaudes nocturnes selon les traductions de Night hag</em>] l'animation de night hag de PS:T.
+- Attribue aux démons d'os l'animation d'osyluth de NWN.
+- Attribue aux gélugons (seulement ceux ajoutés par un mod) l'animation de salamandre des glaces.
+- Attribue aux yochlols (sauf celles sous l'apparence d'elfes noires) une animation d'otyugh plus foncée.
+- Attribue aux abishaïs d'argent, verts et rouges leur animation appropriée d'IWD ou de PS:T.
+- Attribue aux manes l'animation de mort noyé d'IWD.
+- Attribue aux erinyes un avatar d'elfe dotée d'ailes noires.
+- Attribue aux succubes l'animation de succube de NWN.
+- Attribue aux maurezhis l'animation de maurezhi (une goule sombre).
+- Attribue aux glabrezus la bonne animation de glabrezu.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="150" id="150"></a><strong>Diantrefosses<br />
-150.</strong> Attribuer à tous l'animation de <acronym title="Neverwinter Nights">NWN</acronym>.n<br />
-<strong>175.</strong> Attribuer à certains l'animation de <acronym title="Neverwinter Nights">NWN</acronym>.<br />
+<a name="150" id="150"></a>&#10173; **[150-175] Diantrefosses**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.n<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.</li>
-</ul>
 
+- Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="210" id="210"></a><strong>Animation d'Isair pour les cambions<br />
-210.</strong> Pour tous les cambions.<br />
-<strong>230.</strong> Pour certains cambions.<br />
+<a name="210" id="210"></a>&#10173; **[210-230] Animation d'Isair pour les cambions**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Même principe que celui du composant Diantrefosses.</li>
-</ul>
 
+- Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="260" id="260"></a><strong>Animation de Madae pour les alu-démons<br />
-260.</strong> Pour toutes les alu-démons.<br />
-<strong>280.</strong> Pour certaines alu-démons.<br />
+<a name="260" id="260"></a>&#10173; **[260-280] Animation de Madae pour les alu-démons**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Même principe que celui du composant Diantrefosses.</li>
-</ul>
 
+- Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="400" id="400"></a><strong>400. Morts-vivants différenciés</strong><br />
+<a name="400" id="400"></a>&#10173; **[400] Morts-vivants différenciés**<br />
 <em><span style="margin-left: 34px;">Nécessite les archives IA&#95;Base&#95;Anims.rar, IA&#95;IWD.rar et Shadows&#95;harpy&#95;frostgiant.zip.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux banshees l'animation de <acronym title="NdT : wailing virgin">vestale gémissante</acronym>.</li>
-	<li>Attribue aux crânes flottants l'animation de demi-liche.</li>
-	<li>Attribue aux blêmes majeurs l'animation de blême majeure d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux fantômes classiques l'animation de fantôme d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux goules majeures l'animation de goule majeure d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue à certaines goules l'animation de reine des goules de <acronym title="Planescape: Torment">PS:T</acronym>.</li>
-	<li>Attribue aux liches majeures l'animation de liche blanche d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux apparitions l'animation de <acronym title="NdT : mist creature">créature brumeuse</acronym>.</li>
-	<li>Attribue aux revenants l'animation de revenant.</li>
-	<li>Attribue aux démombres et aux ombre démoniaques l'animation d'ombre.</li>
-	<li>Attribue aux âmes en peine l'animation de grande ombre d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux spectres l'animation <acronym title="NdT : large shadow alternate MURKY">alternative de grande ombre</acronym> d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux ombres l'animation de petite ombre d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue à certaines ombres l'animation <acronym title="NdT : small shadow alternate MURKY">alternative de petite ombre</acronym> d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux squelettes majeurs l'animation de squelette monstrueux [<em>NdT : combattant squelette</em>].</li>
-	<li>Attribue aux horreurs lunaires l'animation de démon squelette [<em>NdT : démon d'os</em>].</li>
-	<li>Attribue aux vampires femmes l'animation de vampire femme</li>
-	<li>Attribue aux nécrophages l'animation de nécrophage gris d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux zombis vert l'animation de nécrophage vert d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux seigneurs zombi l'animation de nécrophage jaune d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux chevaliers morts-vivants et assimilés l'animation de nécrophage des tertres d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux zombis majeurs l'animation de zombi jaune d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux lacédons et aux zombis des mers l'animation de zombi bleu d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-</ul>
 
+-Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
+-Attribue aux crânes flottants l'animation de demi-liche.
+- Attribue aux blêmes majeurs l'animation de blême majeure d'IWD.
+- Attribue aux fantômes classiques l'animation de fantôme d'IWD.
+- Attribue aux goules majeures l'animation de goule majeure d'IWD.
+- Attribue à certaines goules l'animation de reine des goules de PS:T.
+- Attribue aux liches majeures l'animation de liche blanche d'IWD.
+- Attribue aux apparitions l'animation de créature brumeuse [<em>NdT : mist creature</em>].
+- Attribue aux revenants l'animation de revenant.
+- Attribue aux démombres et aux ombre démoniaques l'animation d'ombre.
+- Attribue aux âmes en peine l'animation de grande ombre d'IWD.
+- Attribue aux spectres l'animation alternative de grande ombre d'IWD [<em>NdT : large shadow alternate MURKY</em>].
+- Attribue aux ombres l'animation de petite ombre d'IWD.
+- Attribue à certaines ombres l'animation alternative de petite ombre d'IWD [<em>NdT : small shadow alternate MURKY</em>].
+- Attribue aux squelettes majeurs l'animation de squelette monstrueux [<em>NdT : combattant squelette</em>].
+- Attribue aux horreurs lunaires l'animation de démon squelette [<em>NdT : démon d'os</em>].
+- Attribue aux vampires femmes l'animation de vampire femme
+- Attribue aux nécrophages l'animation de nécrophage gris d'IWD.
+- Attribue aux zombis vert l'animation de nécrophage vert d'IWD.
+- Attribue aux seigneurs zombi l'animation de nécrophage jaune d'IWD.
+- Attribue aux chevaliers morts-vivants et assimilés l'animation de nécrophage des tertres d'IWD.
+- Attribue aux zombis majeurs l'animation de zombi jaune d'IWD.
+- Attribue aux lacédons et aux zombis des mers l'animation de zombi bleu d'IWD.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="410" id="410"></a><strong>Combattants squelettes<br />
-410.</strong> Animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>].<br />
-<strong>415.</strong> Animation de squelette normal [<em>NdT : jaune</em>].<br />
-<strong>420.</strong> Animation de combattant squelette.<br />
+<a name="410" id="410"></a>&#10173; **[410-415-420] Combattants squelettes**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Leur attribuer l'animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>].<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue l'animation sélectionnée à tous les combattants squelettes.</li>
-</ul>
 
+- Attribue l'animation sélectionnée à tous les combattants squelettes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="450" id="450"></a><strong>Animation de pauvre hère</strong> [<em>NdT : seer en anglais</em>].<br />
-450.</strong> Pour certains mendiants et esclaves.<br />
-<strong>455.</strong> Pour certains mendiants.<br />
-<strong>460.</strong> Pour certains esclaves.<br />
+<a name="450" id="450"></a>&#10173; **[450-455-460] Animation de pauvre hère**[<em>NdT : seer en anglais</em>].<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Pour certains mendiants et esclaves.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Pour certains mendiants.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Pour certains esclaves.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Même principe que celui du composant Diantrefosses.</li>
-</ul>
 
+- Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="480" id="480"></a><strong>Animations de svirneblins<br />
-480.</strong> Seulement les animations.<br />
-<strong>490.</strong> Les animations et les sons.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD&#95;Svirfneblin.rar.</span><br />
-<span style="margin-left: 34px;">Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.</li>
-</ul><br />
+<a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.<br />
+<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD&#95;Svirfneblin.rar.</span></em><br />
+###### <em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em>
 
-<a name="500" id="500"></a><strong>500. Plus d'animations de base</strong><br />
+- Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.
+<div align="right"><a href="#components">Retour à la liste des composants</a></div>
+
+## 
+
+<a name="500" id="500"></a>&#10173; **[500] Plus d'animations de base**<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux histachii l'animation d'histachii d'<acronym title="Icewind Dale">IWD.</acronym></li>
-	<li>Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).</li>
-	<li>Attribue au chaman homme-lézard l'animation d'homme-lézard vert.</li>
-	<li>Attribue aux chefs hommes-lézards l'animation de roi homme-lézard.</li>
-	<li>Attribue aux différentes espèces de trolls leur animation appropriée (normale, bleue, des glaces, des neiges, petite).</li>
-	<li>Attribue aux anciens ombres des roches l'animation d'ombre des roches anciens d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-</ul>
 
+- Attribue aux histachii l'animation d'histachii d'IWD.
+- Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
+- Attribue au chaman homme-lézard l'animation d'homme-lézard vert.
+- Attribue aux chefs hommes-lézards l'animation de roi homme-lézard.
+- Attribue aux différentes espèces de trolls leur animation appropriée (normale, bleue, des glaces, des neiges, petite).
+- Attribue aux anciens ombres des roches l'animation d'ombre des roches anciens d'IWD.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="550" id="550"></a><strong>550. Plus d'animations d'Icewind Dale</strong><br />
+<a name="550" id="550"></a>&#10173; **[550] Plus d'animations d'Icewind Dale**<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux armures animées les animations de<acronym title="NdT : animated plate">petites armures animées</acronym> d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux Archidruides l'animation d'Arundel d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux barbares leur animation appropriée (marron, rouge, brun et chaman).</li>
-	<li>Attribue aux élémentaires majeurs différentes animations de <acronym title="Baldur's Gate II">BG2</acronym>/<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue à certains géants du feu l'animation de géant du feu d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux golems de fer l'animation de golem de fer d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux golems d'adamantine l'animation de golem de fer de <acronym title="Baldur's Gate II">BG2</acronym>.</li>
-	<li>Attribue aux prêtresses sahuagins l'animation de sahuagin d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-	<li>Attribue aux gardes royaux sahuagins l'animation de grand sahuagin de <acronym title="Baldur's Gate II">BG2</acronym>.</li>
-	<li>Attribue aux chefs sahuagins l'animation de grand sahuagin d'<acronym title="Icewind Dale">IWD</acronym>.</li>
-</ul>
 
+- Attribue aux armures animées les animations de petites armures animées d'IWD [<em>NdT : animated plate</em>].
+- Attribue aux Archidruides l'animation d'Arundel d'IWD.
+- Attribue aux barbares leur animation appropriée (marron, rouge, brun et chaman).
+- Attribue aux élémentaires majeurs différentes animations de BG2/IWD.
+- Attribue à certains géants du feu l'animation de géant du feu d'IWD.
+- Attribue aux golems de fer l'animation de golem de fer d'IWD.
+- Attribue aux golems d'adamantine l'animation de golem de fer de BG2.
+- Attribue aux prêtresses sahuagins l'animation de sahuagin d'IWD.
+- Attribue aux gardes royaux sahuagins l'animation de grand sahuagin de BG2.
+- Attribue aux chefs sahuagins l'animation de grand sahuagin d'IWD.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="600" id="600"></a><strong>600. Plus d'animations d'Icewind Dale II</strong><br />
+<a name="600" id="600"></a>&#10173; **[600] Plus d'animations d'Icewind Dale II**<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.</li>
-	<li>Attribue des animations différenciées aux gobelins (chevaucheurs de worg, leaders, marrons, verts, d'élite).</li>
-	<li>Attribue aux crochorreurs l'animation de crochorreur.</li>
-	<li>Attribue aux druides de l'Ombre l'animation de Malarite.</li>
-	<li>Attribue aux clones d'Ellesime l'animation d'Ellesime avec des cheveux blancs.</li>
-	<li>Attribue aux brumes empoisonnées l'animation de <acronym title="NdT : lagoon creature">créature des lagons</acronym>.</li>
-	<li>Attribue aux tyramorts l'animation de <acronym title="NdT : death tyrant">tyramort</acronym>.</li>
-	<li>Attribue aux rats-garous l'animation de rat-garou.</li>
-	<li>Attribue aux worgs l'animation de worg d'<acronym title="Icewind Dale II">IWD2</acronym>.</li>
-	<li>Attribue aux Yuan-Ti demi-sang l'animation de yuan-ti demi-sang de <acronym title="Icewind Dale II">IWD2</acronym>.</li>
-</ul>
 
+- Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.
+- Attribue des animations différenciées aux gobelins (chevaucheurs de worg, leaders, marrons, verts, d'élite).
+- Attribue aux crochorreurs l'animation de crochorreur.
+- Attribue aux druides de l'Ombre l'animation de Malarite.
+- Attribue aux clones d'Ellesime l'animation d'Ellesime avec des cheveux blancs.
+- Attribue aux brumes empoisonnées l'animation de créature des lagons.
+- Attribue aux tyramorts l'animation de tyramort [<em>NdT : death tyrant</em>].
+- Attribue aux rats-garous l'animation de rat-garou.
+- Attribue aux worgs l'animation de worg d'IWD2.
+- Attribue aux Yuan-Ti demi-sang l'animation de yuan-ti demi-sang de IWD2.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="650" id="650"></a><strong>650. Plus d'animations de Neverwinter Nights</strong><br />
+<a name="650" id="650"></a>&#10173; **[650] Plus d'animations de Neverwinter Nights**<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux porteurs de faux (dans <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym>) l'animation de Amel de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux scarabées bombardiers (dans Big Picture) l'animation de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux basilics majeurs l'animation de basilic de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue aux modrones l'animation de modrone.</li>
-	<li>Attribue aux bêtes éclipsantes (dans AjocMod) l'animation de <acronym title="Neverwinter Nights">NWN</acronym>-<acronym title="Community Creature Project">CCP</acronym>.</li>
-	<li>Attribue à certains géants du feu l'animation de géante du feu de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-	<li>Attribue à certains géants du froid l'animation de géante du froid de <acronym title="Neverwinter Nights">NWN</acronym>.</li>
-</ul>
 
+- Attribue aux porteurs de faux (dans NTotSC) l'animation de Amel de NWN.
+- Attribue aux scarabées bombardiers (dans Big Picture) l'animation de NWN.
+- Attribue aux basilics majeurs l'animation de basilic de NWN.
+- Attribue aux modrones l'animation de modrone.
+- Attribue aux bêtes éclipsantes (dans AjocMod) l'animation de NWN-CCP.
+- Attribue à certains géants du feu l'animation de géante du feu de NWN.
+- Attribue à certains géants du froid l'animation de géante du froid de NWN.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="710" id="710"></a><strong>Plus d'animations de Planescape: Torment<br />
-710.</strong> 25 % des créatures non-recrutables concernées.<br />
-<strong>720.</strong> 50 % des créatures non-recrutables concernées.<br />
-<strong>730.</strong> 75 % des créatures non-recrutables concernées.<br />
-<strong>740.</strong> Toutes les créatures non-recrutables concernées.<br />
+<a name="710" id="710"></a>&#10173; **[710-720-730-740] Plus d'animations de Planescape: Torment**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Toutes les créatures non-recrutables concernées.<br />
 <em><span style="margin-left: 34px;">Nécessite l'archive IA_PST&#95;Paletted.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux voleuses humaines l'animation de <acronym title="NdT : female Curst townie">citoyenne de Maudith</acronym>.</li>
-	<li>Attribue aux voleurs humains l'animation de <acronym title="NdT : male Curst townie">citoyen de Maudith</acronym>.</li>
-	<li>Attribue aux femmes moines l'animation de <acronym title="NdT : female Dustman">femme-poussière</acronym>.</li>
-	<li>Attribue aux hommes moines et aux hommes-poussière l'animation d'<acronym title="NdT : male Dustman">homme-poussière</acronym>.</li>
-	<li>Attribue à certaines goules l'animation de femme goule.</li>
-	<li>Attribue à certaines goules l'animation d'homme goule.</li>
-	<li>Attribue aux forgerons humains l'animation d'<acronym title="NdT : Godsman">homme-dieu</acronym>.</li>
-	<li>Attribue aux mercenaires et bandits porteurs de hache et de marteau l'animation de <acronym title="NdT : large thug">grand sicaire</acronym>.</li>
-	<li>Attribue aux mercenaires et bandits porteurs d'épée et de dague l'animation de <acronym title="NdT : small thug">sicaire</acronym>.</li>
-	<li>Attribue aux paysannes humaines l'animation <acronym title="NdT : female lower-class townie">citoyenne des classes inférieures</acronym>.</li>
-	<li>Attribue aux paysans humains l'animation de <acronym title="NdT : male lower-class townie">citoyen des classes inférieures</acronym>.</li>
-	<li>Attribue aux marchands humains l'animation de marchand.</li>
-	<li>Attribue aux marchandes humaines l'animation de <acronym title="NdT : midwife">midwife</acronym>.</li>
-	<li>Attribue aux prostituées l'animation de <acronym title="NdT : harlot">catin</acronym>.</li>
-	<li>Attribue aux mages squelettes l'animation de prêtre squelette.</li>
-	<li>Attribue aux squelettes l'animation de <acronym title="NdT : skeleton worker">travailleur squelette</acronym>.</li>
-	<li>Attribue aux femmes tieffelins l'animation de femme tieffelin.</li>
-	<li>Attribue aux hommes tieffelins l'animation d'homme tieffelin.</li>
-	<li>Attribue aux magiciens humains l'animation de <acronym title="NdT : townie wizard">magicien citoyen</acronym>.</li>
-	<li>Attribue aux femmes nobles humaines l'animation de <acronym title="NdT : female upper-class townie">citoyenne des classes supérieures</acronym>.</li>
-	<li>Attribue aux hommes nobles humains l'animation de <acronym title="NdT : male upper-class townie">citoyen des classes supérieures</acronym>.</li>
-	<li>Attribue à certains zombis l'animation de femme zombi.</li>
-	<li>Attribue à certains zombis l'animation d'homme zombi.</li>
-</ul>
 
+- Attribue aux voleuses humaines l'animation de citoyenne de Maudith [<em>NdT : female Curst townie</em>].
+- Attribue aux voleurs humains l'animation de citoyen de Maudith [<em>NdT : male Curst townie</em>].
+- Attribue aux femmes moines l'animation de femme-poussière [<em>NdT : female Dustman</em>].
+- Attribue aux hommes moines et aux hommes-poussière l'animation d'homme-poussière [<em>NdT : male Dustman</em>].
+- Attribue à certaines goules l'animation de femme goule.
+- Attribue à certaines goules l'animation d'homme goule.
+- Attribue aux forgerons humains l'animation d'homme-dieu [<em>NdT : Godsman</em>].
+- Attribue aux mercenaires et bandits porteurs de hache et de marteau l'animation de grand sicaire [<em>NdT : large thug</em>].
+- Attribue aux mercenaires et bandits porteurs d'épée et de dague l'animation de sicaire [<em>NdT : small thug</em>].
+- Attribue aux paysannes humaines l'animation citoyenne des classes inférieures [<em>NdT : female lower-class townie</em>].
+- Attribue aux paysans humains l'animation de citoyen des classes inférieures [<em>NdT : male lower-class townie</em>].
+- Attribue aux marchands humains l'animation de marchand.
+- Attribue aux marchandes humaines l'animation de midwife.
+- Attribue aux prostituées l'animation de catin [<em>NdT : harlot</em>].
+- Attribue aux mages squelettes l'animation de prêtre squelette.
+- Attribue aux squelettes l'animation de travailleur squelette [<em>NdT : skeleton worker</em>].
+- Attribue aux femmes tieffelins l'animation de femme tieffelin.
+- Attribue aux hommes tieffelins l'animation d'homme tieffelin.
+- Attribue aux magiciens humains l'animation de magicien citoyen [<em>NdT : townie wizard</em>].
+- Attribue aux femmes nobles humaines l'animation de citoyenne des classes supérieures [<em>NdT : female upper-class townie</em>].
+- Attribue aux hommes nobles humains l'animation de citoyen des classes supérieures [<em>NdT : male upper-class townie</em>].
+- Attribue à certains zombis l'animation de femme zombi.
+- Attribue à certains zombis l'animation d'homme zombi.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="7000" id="7000"></a><strong>Avatars de Moinesse pour <acronym title="Infinity Animations">IA</acronym><br />
-7000.</strong> 25 % des créatures non-recrutables concernées.<br />
-<strong>7010.</strong> 50 % des créatures non-recrutables concernées.<br />
-<strong>7020.</strong> 75 % des créatures non-recrutables concernées.<br />
-<strong>7030.</strong> Toutes les créatures non-recrutables concernées.<br />
+<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Avatars de Moinesse pour IA**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75 % des créatures non-recrutables concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Toutes les créatures non-recrutables concernées.<br />
 <em><span style="margin-left: 44px;">Nécessite l'archive Moinesse_edits&#95;IAised.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Attribue aux barbares humains l'animation de barbare homme.</li>
-	<li>Attribue aux druidesses humaine l'animation de druidesse.</li>
-	<li>Attribue aux guerrières humaines l'animation de guerrière humaine.</li>
-	<li>Attribue aux magiciennes elfes l'animation de magicienne elfe.</li>
-	<li>Attribue aux magiciennes humaines l'animation de magicienne humaine.</li>
-	<li>Attribue aux voleuses humaines l'animation de voleuse humaine (à moins qu'elles aient déjà reçu l'animation de <acronym title="NdT : female Curst townie">citoyenne de Maudith</acronym>).</li>
-	<li>Attribue aux ninjas et assassins humains l'animation de ninja humain (à moins qu'ils aient déjà reçu l'animation de Voleur de l'ombre ou de <acronym title="NdT : male Curst townie">citoyen de Maudith</acronym>).</li>
-	<li>Attribue aux vampires hommes l'animation de vampire de Moinesse.</li>
-</ul>
 
+- Attribue aux barbares humains l'animation de barbare homme.
+- Attribue aux druidesses humaine l'animation de druidesse.
+- Attribue aux guerrières humaines l'animation de guerrière humaine.
+- Attribue aux magiciennes elfes l'animation de magicienne elfe.
+- Attribue aux magiciennes humaines l'animation de magicienne humaine.
+- Attribue aux voleuses humaines l'animation de voleuse humaine (à moins qu'elles aient déjà reçu l'animation de citoyenne de Maudith [<em>NdT : female Curst townie</em>].
+- Attribue aux ninjas et assassins humains l'animation de ninja humain (à moins qu'ils aient déjà reçu l'animation de Voleur de l'ombre ou de citoyen de Maudith[<em>NdT : male Curst townie</em>].
+- Attribue aux vampires hommes l'animation de vampire de Moinesse.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="8000" id="8000"></a><strong>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym><br />
-8000.</strong> 25 % des créatures concernées.<br />
-<strong>8010.</strong> 50 % des créatures concernées.<br />
-<strong>8020.</strong> 75 % des créatures concernées.<br />
-<strong>8030.</strong> La plupart des créatures concernées.<br />
+<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25 % des créatures concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50 % des créatures concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75 % des créatures concernées.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** La plupart des créatures concernées.<br />
 <em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.</li>
-	<li>La dernière option est intitulée « la plupart » plutôt que « toutes » car certaines créatures sont exclues des modifications.</li>
-	<li>Cela inclue les créatures utilisant des cimeterres, des katanas ou autre chose d'autre qu'un bouclier dans leur deuxième main (ou dotées de ces compétences), puisque <acronym title="Baldur's Gate">BG1</acronym> ne dispose pas de ces animations.</li>
-	<li><strong>À utiliser avec précaution</strong> avec des <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym> recrutables : si ce composant ne traitera pas les personnages compétents en style de combat a deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.</li>
-</ul>
 
+- Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
+- La dernière option est intitulée « la plupart » plutôt que « toutes » car certaines créatures sont exclues des modifications.
+- Cela inclue les créatures utilisant des cimeterres, des katanas ou autre chose d'autre qu'un bouclier dans leur deuxième main (ou dotées de ces compétences), puisque BG1 ne dispose pas de ces animations.
+- :warning: **À utiliser avec précaution** avec des PNJs recrutables : si ce composant ne traitera pas les personnages compétents en style de combat a deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9000" id="9000"></a><strong>9000. Correction des références des créatures dans les cartes</strong><br />
-<em><span style="margin-left: 44px;">Installé par défaut.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.</li>
-</ul>
+<a name="9000" id="9000"></a>&#10173; **|9000] Correction des références des créatures dans les cartes**<br />
+###### <em>Installé par défaut.</em>
 
+- Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9500" id="9500"></a><strong>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym><br />
-9500.</strong> Demander confirmation pour chaque <acronym title="Personnage Joueur [NdT : traduction de PC, ou Player Character]">PJ</acronym> exporté.<br />
-<strong>9510.</strong> Demander confirmation pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> posant problème.<br />
-<strong>9520.</strong> Modifier tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> sans demander confirmation.<br />
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] Animations de personnages de BG1 pour les PJs**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Demander confirmation pour chaque PJ exporté.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Demander confirmation pour les PJs posant problème.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Modifier tous les PJs sans demander confirmation.<br />
 <em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.</li>
-	<li>La deuxième option modifie tous les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym>, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.</li>
-	<li>Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.</li>
-	<li><strong>À utiliser avec précaution</strong> : n'essayez pas de porter deux armes, sinon le jeu crashera probablement.</li>
-</ul>
 
+- Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
+- La deuxième option modifie tous les PJs, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.
+- Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.
+- :warning: **À utiliser avec précaution** : n'essayez pas de porter deux armes, sinon le jeu crashera probablement.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9600" id="9600"></a><strong>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> dans les parties sauvegardées<br />
-9600.</strong> Demander confirmation pour chaque personnage.<br />
-<strong>9610.</strong> Demander confirmation pour les personnages posant problème.<br />
-<strong>9620.</strong> Modifier tous les personnages sans demander confirmation.<br />
+<a name="9600" id="9600"></a>&#10173; **|9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Demander confirmation pour chaque personnage.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Demander confirmation pour les personnages posant problème.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Modifier tous les personnages sans demander confirmation.<br />
 <em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>Mêmes remarques que pour le composant précédent.</li>
-	<li>Vous devrez décider de patcher ou non chaque partie sauvegardée (et le personnage qu'elle contient, si vous avez choisi l'une des options de confirmation).</li>
-	<li><strong>Faites une copie de vos parties sauvegardées</strong> avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.</li>
-</ul>
 
+- Mêmes remarques que pour le composant précédent.
+- Vous devrez décider de patcher ou non chaque partie sauvegardée (et le personnage qu'elle contient, si vous avez choisi l'une des options de confirmation).
+- :warning: **Faites une copie de vos parties sauvegardées**avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9900" id="9900"></a><strong>Correction des animations dans les parties sauvegardées<br />
-9900.</strong> Corriger uniquement les animations _LOW.<br />
-<strong>9910.</strong> Corriger toutes les animations que <acronym title="Infinity Animations">IA</acronym> a modifiées.
-<ul style="margin-top: -1%;margin-left: 4%;">
-	<li>La première option empêche les crashs du jeu dus au déplacement des slots d'animation _LOW.</li>
-	<li>La seconde option fait la même chose, et modifie aussi dans vos parties sauvegardées toutes les animations qui ont été modifiées.</li>
-	<li>Vous devrez décider de patcher ou non chaque partie sauvegardée.</li>
-	<li>Si vous avez commencé une nouvelle partie après avoir installé ce mod, alors ce composant n'est pas nécessaire (à moins que vous ne commenciez dans la section <acronym title="Baldur's Gate II">BG2</acronym> de <acronym title="Baldur's Gate Trilogy">BGT</acronym>).</li>
-	<li><strong>Faites une copie de vos parties sauvegardées</strong> avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.</li>
-</ul>
+<a name="9900" id="9900"></a>&#10173; **|9900-9910] Correction des animations dans les parties sauvegardées**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Corriger uniquement les animations LOW.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Corriger toutes les animations que IA a modifiées.
+
+- La première option empêche les crashs du jeu dus au déplacement des slots d'animation _LOW.
+- La seconde option fait la même chose, et modifie aussi dans vos parties sauvegardées toutes les animations qui ont été modifiées.
+- Vous devrez décider de patcher ou non chaque partie sauvegardée.
+- Si vous avez commencé une nouvelle partie après avoir installé ce mod, alors ce composant n'est pas nécessaire (à moins que vous ne commenciez dans la section BG2 de BGT.
+- warning: **Faites une copie de vos parties sauvegardées** avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 
@@ -850,14 +815,14 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 - Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes)
 - Added night hags to the "Distinctive Fiends" component
 - Added ghoul queens to the "Distinctive Undead" component
-- Added white-haired Ellesime to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component
-- Added lagoon creature to the "More <acronym title="Icewind Dale II">IWD2</acronym> Animations" component
-- Deprecated tieflings from the cambion/alu-fiend components in favor of the <acronym title="Planescape: Torment">PS:T</acronym> animation component
+- Added white-haired Ellesime to the "More IWD2 Animations" component
+- Added lagoon creature to the "More IWD2 Animations" component
+- Deprecated tieflings from the cambion/alu-fiend components in favor of the PS:T animation component
 - Corrected skeleton warriors appearing as verbeegs glitch
-- Added Amel animation to <acronym title="Neverwinter Nights">NWN</acronym> component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
+- Added Amel animation to NWN component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
 - Added Humanoid Animation Fixes component
 - Added Moinesse's Avatars component
-- Added More <acronym title="Planescape: Torment">PS:T</acronym> Animations component
+- Added More PS:T Animations component
 - Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games component
 - Added saved game animation fixing component
 - Traified the entire freaking mod by hand for translators (thanks for nothing, <acronym title="Weimer Dialogue Utility">WeiDU</acronym>! &#128541;)
