@@ -15,7 +15,7 @@
 
 **Auteure :** Erephine  
 **Site internet du mod :** <a href="http://www.spellholdstudios.net/ie/infinityanimations">Spellhold Studios</a>  
-**Forum du mod :** <a href="http://www.shsforums.net/forum/594-infinity-animations/>Infinity Animations</a>  
+**Forum du mod :** <a href="http://www.shsforums.net/forum/594-infinity-animations/">Infinity Animations</a>  
 
 ## 
 
@@ -68,7 +68,7 @@ Infinity Animations est conçu pour fonctionner sur la plupart des jeux Infinity
 
 - La série des Éditions Améliorées (Enhanced Editions) publiées par Beamdog, Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE), Icewind Dale: Enhanced Edition (IWDEE), ainsi que l'extension de BGEE, Siege of Dragonspear (SoD). Toutes les Éditions Améliorées comprennent leurs extensions originales (ainsi, IWDEE comprend Heart of Winter et Trials - HoW - of the Luremaster - TotLM).
 - Le jeu original Baldur's Gate II avec son extension Trône de Bhaal (Throne of Bhaal : ToB). **Assurez-vous que vous avez bien installé le patch 26498 pour le Trône de Bhaal.**Si nécessaire, vérifiez le fichier Readme relatif au patch dans votre répertoire de jeu et sur le site internet de <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a>.
-- Les mods de conversion basés sur ToB : <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a>, <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) et <a href="https://github.com/K4thos/EET/releases"><strong>Enhanced Edition Trilogy</a> (EET).
+- Les mods de conversion basés sur ToB : <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a>, <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) et <a href="https://github.com/K4thos/EET/releases">Enhanced Edition Trilogy</a> (EET).
 
 Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum, s'il vous plaît.</a>
 

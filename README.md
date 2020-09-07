@@ -15,7 +15,7 @@
 
 **Author:** Erephine  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/infinityanimations">Spellhold Studios</a>  
-**Mod forum:** <a href="http://www.shsforums.net/forum/594-infinity-animations/>Infinity Animations</a>  
+**Mod forum:** <a href="http://www.shsforums.net/forum/594-infinity-animations/">Infinity Animations</a>  
 
 ## 
 
@@ -70,7 +70,7 @@ Infinity Animations is designed to work on most Infinity Engine games. This incl
 
 - The series of Enhanced Editions published by Beamdog, which at present includes Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE) and Icewind Dale: Enhanced Edition (IWDEE). The BGEE Siege of Dragonspear expansion (SoD) is supported as well. All of the Enhanced Edition games include the original expansion packs, e.g. IWDEE includes Heart of Winter (HoW) and Trials of the Luremaster (TotLM)..
 - The original Baldur's Gate II (BG2, or just SoA) with the Throne of Bhaal (ToB) expansion. **Make sure you have Throne of Bhaal patched to version 26498.** Check the ReadMe files related to your patch in your game folder and the <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a> website if necessary.
-- The conversion projects based on ToB: <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) and <a href="https://github.com/K4thos/EET/releases"><strong>Enhanced Edition Trilogy</a> (EET).
+- The conversion projects based on ToB: <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) and <a href="https://github.com/K4thos/EET/releases">Enhanced Edition Trilogy</a> (EET).
 
 This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
 
@@ -351,7 +351,7 @@ Here is a chart listing the options related to the installation process:</br></b
 
 The installer includes the following components. The number of each is the component *`DESIGNATED`* number which gives it a fixed install position, lets other components detect it and allows automated installers to specify component choices.
 
-><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a>(main component) <em>&nbsp;&nbsp;&nbsp;[main component]</em></span></br>
+><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a> <em>&nbsp;&nbsp;&nbsp;[main component]</em></span></br>
 ><span style="margin-left: 50px;"><a href="#25">[25] Humanoid Animation Fixes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#50">[50] Distinctive Genies</a></span></br>
 ><span style="margin-left: 50px;"><a href="#100">[100] Distinctive Fiends</a></span></br>
