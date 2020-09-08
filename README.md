@@ -24,7 +24,7 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE and EET<h3>
 
 ## 
 
-[Read the mod's readme](https://spellholdstudios.github.io/readmes/1pp/documentation/infinityanimations-readme-english.html)
+[Read the mod's readme](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-english.html)
 
 [Download the mod at Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
 
@@ -96,7 +96,7 @@ Modders who wish to make their mods compatible with IA are strongly recommended 
 
 *__Disable any antivirus__ or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.*
 
-You can extract files from the archive using <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
+You can extract files from the archive using <a href="http://www.7-zip.org/download.html">7zip</a>, <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p></br>
@@ -114,7 +114,7 @@ You should end up with a bunch of .bam files and no sub-folders in your &#x1F4C1
 
 #### Special Note for Siege of Dragonspear from Steam/GOG</h3>
 
-Good Old Games (GOG) and Steam both package the additional content for Siege of Dragonspear in a method that <acronym title="Weimer Dialogue Utility">WeiDU</acronym>, the tool used to install this mod, cannot access. You must run a program called <a href="https://github.com/Argent77/A7-DlcMerger/releases/latest">DLC Merger</a> on your SoD installation before you can install this or any other WeiDU-based mod.
+Good Old Games (GOG) and Steam both package the additional content for Siege of Dragonspear in a method that WeiDU, the tool used to install this mod, cannot access. You must run a program called <a href="https://github.com/Argent77/A7-DlcMerger/releases/latest">DLC Merger</a> on your SoD installation before you can install this or any other WeiDU-based mod.
 
 ## 
 
@@ -378,13 +378,13 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br>
 
 
-####### All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
+###### All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
 <div align="right"><a href="#top">Back to top</a></div>
 
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
-###### <em>Requires ToB v26498</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Requires ToB v26498</em><br><br>
 
 - Checks mod files
 - ToB only: Checks .exe validity, backs up and patches the .exe
@@ -442,7 +442,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -455,7 +455,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -530,7 +530,7 @@ The installer includes the following components. The number of each is the compo
 <a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
-###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
 
 - Uses all svirfneblin variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -660,7 +660,7 @@ The installer includes the following components. The number of each is the compo
 ## 
 
 <a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**
-###### <em>Installed by default</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Installed by default</em><br><br>
 
 - Corrects changed creature animations in area files for easier reference
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -748,8 +748,7 @@ The installer includes the following components. The number of each is the compo
 
 #### Copyrights Information
 
-###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img align="left" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> 
-This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.
+###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img align="left" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.
 ###### All copyrights and trademarks are the property of their respective owners.
 <div align="right"><a href="#top">Back to top</a></div>
 

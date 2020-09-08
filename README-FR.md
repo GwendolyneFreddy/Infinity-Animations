@@ -7,7 +7,7 @@
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
 
-<h3>Un mod de Spellhold Studios pour les jeux Baldur's Gate II:ToB (original et EE),
+<h3>Un mod de Spellhold Studios pour les jeux Baldur's Gate II:ToB (original et EE),<br>
 Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 
 </div><br />
@@ -23,9 +23,9 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 
 ## 
 
-[Read the mod's readme](https://spellholdstudios.github.io/readmes/1pp/documentation/infinityanimations-readme-french.html)
+[Lisez-moi du mod](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-french.html)
 
-[Download the mod at Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
+[Téléchargez le mod à Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
 
 ## 
 
@@ -72,7 +72,7 @@ Infinity Animations est conçu pour fonctionner sur la plupart des jeux Infinity
 
 Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum, s'il vous plaît.</a>
 
-Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing ». [*NdT : archivage avec Generalized biffing*]
+Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
 
 Les moddeurs souhaitant rendre leurs mods compatibles avec IA sont fortement invités à lire le document <a href="">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
 
@@ -192,7 +192,7 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
-		<td><ins><ins>IA Content - BG2 Restores</ins><br><br>
+		<td><ins>IA Content - BG2 Restores</ins><br><br>
 		- Contenu : femme araignée statique (MSPL), gobelin d'élite avec arc (MGO4), gobelin d'élite avec hache (MGO3), liche (MLIC), liche noire (MLER), marilith (MTAN), myconide bleu (MMY2), orog (MNO1), orog d'élite (MNO2), orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
 		- Il s'agit du contenu nécessaire pour restaurer les slots d'animation de BG2 écrasés par certains mods. Il est uniquement nécessaire pour une mega installation comprenant les mods suivants : BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere et RPG KitsPack.<br><br>
 		<em>Installation automatique seulement si nécessaire [par défaut]</em></td>
@@ -200,7 +200,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_ee_restore**<br><br>
 		</td>
-		<td><ins>IA Content - Base EE Content (nouveau)<br><br>
+		<td><ins>IA Content - Base EE Content (nouveau)</ins><br><br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
@@ -235,7 +235,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(uniquement pour ToB)</td>
-		<td>IA Content - EE games new Animations ported to ToB (nouveau)</ins><br><br>
+		<td><ins>IA Content - EE games new Animations ported to ToB (nouveau)</ins><br><br>
 		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -284,7 +284,7 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
-		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
+		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron</ins><br><br>
 		- Contenu : modrone alternatif, animations de NWN portées par WoRm (Amel, basilic, bebilith, hamatula, osyluth, diantrefosse, épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses [150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
@@ -376,13 +376,13 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span>
 
 
-####### Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
+###### Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
-###### <em>Nécessite le patch ToB v26498.</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Nécessite le patch ToB v26498.</em><br><br>
 
 - Vérifie la présence des fichiers nécessaires.
 - ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.
@@ -528,7 +528,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 <a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.
-###### <em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
 
 - Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -698,7 +698,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 - La seconde option fait la même chose, et modifie aussi dans vos parties sauvegardées toutes les animations qui ont été modifiées.
 - Vous devrez décider de patcher ou non chaque partie sauvegardée.
 - Si vous avez commencé une nouvelle partie après avoir installé ce mod, alors ce composant n'est pas nécessaire (à moins que vous ne commenciez dans la section BG2 de BGT.
-- warning: **Faites une copie de vos parties sauvegardées** avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.
+- :warning: **Faites une copie de vos parties sauvegardées** avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 
@@ -722,7 +722,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 - L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
 - Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
 - <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : ...
-- a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_fuctions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
+- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_fuctions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
 - Moddeurs : <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
 - Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>.
 - Spécial : <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> pour la relecture de la documentation et sa contribution à la conversion des animations de EE pour ToB.
