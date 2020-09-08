@@ -288,7 +288,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
 		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron</ins><br><br>
 		- Content: Alternate Modron, WoRm's NWN ports (Amel, Basilisk, Bebilith, Hamatula, Osyluth, Pit Fiend, Scarecrow, Vedred). Includes all relevant creature sounds and tables.<br>
-		- Needed for Distinctive Fiends [100], Pit Fiends {150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
+		- Needed for Distinctive Fiends [100], Pit Fiends [150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -384,8 +384,8 @@ All components require the main component (they need to since it's the one that 
 
 ------------------------
 
-<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**<br />
-###### <em>Requires ToB v26498</em>
+<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
+###### <em>Requires ToB v26498</em><br>
 
 - Checks mod files
 - ToB only: Checks .exe validity, backs up and patches the .exe
@@ -398,7 +398,7 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="25" id="25"></a>&#10173; **[25] Humanoid Animation Fixes**<br />
+<a name="25" id="25"></a>&#10173; **[25] Humanoid Animation Fixes**<br><br>
 
 - Male human fighters get the fighter instead of cleric animation
 - Male elf fighters get the fighter instead of cleric animation
@@ -417,17 +417,14 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="50" id="50"></a>&#10173; **[50] Distinctive Genies**<br />
-<em><span style="margin-left: 22px;">Requires IA_Fiends&#95;Genies.rar</span></em>
+<a name="50" id="50"></a>&#10173; **[50] Distinctive Genies**<br><br>
 
 - Uses djinn, efreet, dao, jann and marid animations where sensible
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="100" id="100"></a>&#10173; **[100] Distinctive Fiends**<br />
-<em><span style="margin-left: 34px;">Requires IA_Fiends&#95;Genies.rar, IA&#95;IWD.rar and IA&#95;PST&#95;Abishai.rar<br></span>
-<span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar only if certain mods are installed</span></em>
+<a name="100" id="100"></a>&#10173; **[100] Distinctive Fiends**<br><br>
 
 - Nabassus get a green-grey tanar'ri animation
 - Chromatic Demon gets a somewhat more colourful base animation
@@ -443,42 +440,40 @@ All components require the main component (they need to since it's the one that 
 - Succubi get the NWN succubus animation
 - Maurezhi get a dark ghoulish animation
 - Glabrezu get the proper glabrezu animation
+&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="150" id="150"></a>&#10173; **[150-175] Pit Fiends**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br />
-<em><span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar</span></em>
+<a name="150" id="150"></a>&#10173; **[150-175] Pit Fiends**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br><br>
 
 - Choice of subcomponent (or none); "some" = roughly half, randomly selected
+&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="210" id="210"></a>&#10173; **[210-230] Cambions get Isair Animation**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br />
-<em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
+<a name="210" id="210"></a>&#10173; **[210-230] Cambions get Isair Animation**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="260" id="260"></a>&#10173; **[260-280] Alu-Fiends get Madae Animation**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br />
-<em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
+<a name="260" id="260"></a>&#10173; **[260-280] Alu-Fiends get Madae Animation**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="400" id="400"></a>&#10173; **[400] Distinctive Undead**<br />
-<em><span style="margin-left: 34px;">Requires IA&#95;Base&#95;Anims.rar, IA&#95;IWD.rar and Shadows&#95;harpy&#95;frostgiant.zip</span></em>
+<a name="400" id="400"></a>&#10173; **[400] Distinctive Undead**<br><br>
 
 - Banshees get the wailing virgin animation
 - Floating skulls get the demilich animation
@@ -507,41 +502,37 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="410" id="410"></a>&#10173; **[410-415-420] Skeleton Warriors**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Wight Barrow animation<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br />
-<em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
+<a name="410" id="410"></a>&#10173; **[410-415-420] Skeleton Warriors**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Wight Barrow animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br><br>
 
 - Assigns the chosen animation to all skeleton warriors
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="450" id="450"></a>&#10173; **[450-455-460] Seer Animation**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Some beggars and slaves<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br />
-<em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
+<a name="450" id="450"></a>&#10173; **[450-455-460] Seer Animation**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Some beggars and slaves<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds<br />
-<em><span style="margin-left: 34px;">Requires IA_IWD&#95;Svirfneblin.rar</span></em><br />
-###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em>
+<a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
+###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em><br>
 
 - Uses all svirfneblin variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="500" id="500"></a>&#10173; **[500] More Base Animations**<br />
-<em><span style="margin-left: 34px;">Requires IA_Base&#95;Anims.rar</span></em>
+<a name="500" id="500"></a>&#10173; **[500] More Base Animations**<br><br>
 
 - Histachii get the IWD histachii animation
 - Lizardman warriors get the lizardman elite animation (brown)
@@ -553,8 +544,7 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="550" id="550"></a>&#10173; **[550] More Icewind Dale Animations**<br />
-<em><span style="margin-left: 34px;">Requires IA_IWD.rar</span></em>
+<a name="550" id="550"></a>&#10173; **[550] More Icewind Dale Animations**<br><br>
 
 - Animated Plates get small animated plate animations
 - Archdruids get the IWD Arundel animation
@@ -570,8 +560,7 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="600" id="600"></a>&#10173; **[600] More Icewind Dale II Animations**<br />
-<em><span style="margin-left: 34px;">Requires IA_BGII&#95;IWDII.rar</span></em>
+<a name="600" id="600"></a>&#10173; **[600] More Icewind Dale II Animations**<br><br>
 
 - Greater fire giants and firbolgs get the fire giant variant animation
 - Variant goblins (worgriders, leaders, browns, greens, elites)
@@ -587,8 +576,7 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="650" id="650"></a>&#10173; **[650] More Neverwinter Nights Animations**<br />
-<em><span style="margin-left: 34px;">Requires IA_NWN&#95;01&#95;Modron.rar</span></em>
+<a name="650" id="650"></a>&#10173; **[650] More Neverwinter Nights Animations**<br><br>
 
 - Scythe-wielders (in NTotSC) get the NWN Amel animation
 - Bombardier beetle (in Big Picture) gets the NWN animation
@@ -601,12 +589,11 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="710" id="710"></a>&#10173; **[710-720-730-740] More Planescape: Torment Animations**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br />
-<em><span style="margin-left: 34px;">Requires IA_PST&#95;Paletted.rar</span></em>
+<a name="710" id="710"></a>&#10173; **[710-720-730-740] More Planescape: Torment Animations**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br><br>
 
 - Female human thieves get the female Curst townie animation
 - Male human thieves get the male Curst townie animation
@@ -635,12 +622,11 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Moinesse's Avatars for IA**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br />
-<em><span style="margin-left: 44px;">Requires Moinesse_edits&#95;IAised.rar</span></em>
+<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Moinesse's Avatars for IA**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br><br>
 
 - Male human barbarians get the male barbarian animation
 - Female human druids get the female druid animation
@@ -654,12 +640,11 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] BG1 Character Animations for NPCs**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25% of relevant creatures<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50% of relevant creatures<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br />
-<em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
+<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] BG1 Character Animations for NPCs**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br><br>
 
 - Uses the original Baldur's Gate character animations as specified
 - The last option is "most" instead of "all" because certain creatures are excluded
@@ -669,19 +654,18 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**<br />
-###### <em>Installed by default</em>
+<a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**<br>
+###### <em>Installed by default</em><br>
 
 - Corrects changed creature animations in area files for easier reference
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for PCs**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br />
-<em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for PCs**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br><br>
 
 - Uses the original Baldur's Gate character animations as specified
 - The second option patches all PCs but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot
@@ -691,11 +675,10 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="9600" id="9600"></a>&#10173; **[9600-9610-9620] BG1 Character Animations for Saved Games**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Prompt for each character<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br />
-<em><span style="margin-left: 44px;">Requires IA_Base&#95;Anims.rar</span></em>
+<a name="9600" id="9600"></a>&#10173; **[9600-9610-9620] BG1 Character Animations for Saved Games**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Prompt for each character<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br><br>
 
 - Same notes as above
 - You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)
@@ -704,9 +687,9 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Game Animation Fixer**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed
+<a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Game Animation Fixer**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed<br><br>
 
 - The first option prevents games from crashing due to moved _LOW animations
 - The second option does the above and also patches any changed animations into your saved games
@@ -721,33 +704,47 @@ All components require the main component (they need to since it's the one that 
 
 ## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
-#### Author: <a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a>
+&#9755; For support or questions, please visit the <a href="http://www.shsforums.net/forum/594-infinity-animations">mod forum</a>.
 
+## 
+
+**Author:** <a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a>  
+**WeiDU coding:** <a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a>, revised by <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>  
+**Support:** <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>
+
+## 
 
 #### Special Acknowledgements to:
 
-- <acronym title="Weimer Dialogue Utility">WeiDU</acronym> coding: <a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a>.
-- Assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- Hosting: <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> (<a href="http://www.shsforums.net">Forums</a>).
-- etc.
+- <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).
+- Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: ..
+- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his `FIND_FREE_ANIM_SLOT` WeiDU function (*a7_functions.tpa* library) to automatically install new animation slots in EE games.
+- Modders: <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.
+- French translation: <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>.
+- Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading French translation and for his contribution with fixing a few missing EE animations.
 
+## 
 
-#### Programs/tools used in creation
+#### Programs/tools used in creation (among others)
 
-- <a href="http://www.weidu.org/%7Ethebigg/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by Wes Weimer, the bigg and Wisp
-- <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintained by igi and lynx
-- <a href="http://forums.pocketplane.net/index.php/topic,25153.msg314249.html#msg314249">Near Infinity</a> by Jon Olav Hauglid, FredSRichardson and Argent77
-- <a href="http://www.gibberlings3.net/tools/dltcep.php"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> by Avenger
-- <a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg
-- <a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> by Jan Goyvaerts
-- <a href="http://www.pspad.com/en/">PSPad</a> by Jan Fiala
-- <a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the spellcheck plug-in
-- <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> by Argent77
+- <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU</a> by Wes Weimer, the bigg and Wisp.
+- <a href="https://gibberlings3.github.io/iesdp/">IESDP</a>, maintained by igi and lynx.
+- <a href="https://github.com/Argent77/NearInfinity/releases">Near Infinity</a>, by Jon Olav Hauglid, FredSRichardson, and Argent77.
+- <a href="https://www.gibberlings3.net/mods/tools/dltcep/">DLTCEP</a>, by Avenger.
+- <a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg.
+- <a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the spellcheck plug-in.
+- <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> by Argent77.
+- <a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> by Jan Goyvaerts.
+- <a href="http://www.pspad.com/en/">PSPad</a> by Jan Fiala</a>.
+- <a href="http://www.bulkrenameutility.co.uk/">Bulk Rename Utility</a>, by TGRMN Software.
 
+## 
 
 #### Copyrights Information
 
-###### This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.
+###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> 
+This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.
 ###### All copyrights and trademarks are the property of their respective owners.
 <div align="right"><a href="#top">Back to top</a></div>
 
@@ -757,130 +754,176 @@ All components require the main component (they need to since it's the one that 
 
 ## <a name="versions" id="versions"></a>Versions History
 
-##### Version 6 - Month day, 2019
+##### Version 6.0.0 &nbsp;(September nn, 2020)
 
-- Major updates:
-    - Modified animations namespaces, **now compatible with non-Western code pages** (got rid of the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected) &#128521;
-	- From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize their installation, please read this <a href="#config"> chapter</a>.
-	- New IA Content (EE games new animations ported to ToB): Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
-- Integrated all code and BWP Fixpack fixes:
+&#9755; <ins>a. Major updates</ins>
+  - Modified animations namespaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
+  - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
+  - New IA Content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
+  - Integrated IA modders' content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals), small snake, small snake green and small snake red (Gwendolyne).
+  - Native compatibility with Enhanced Editions games:
+    - Restored missing bam content in EE games: Abishais (black, green, red, white), Animated plates, Arundel, Barbarian shaman (club, hammer, staff), Barbarian warriors (brown, red, tan), Barbarian Icasaracht, Beetles (boring, fire, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chicken (brown, white), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragons BG2 (black, red, silver), Dragon red juvenile, Dragon white (and young), Driders (female, male), Drowned dead, Elemental earth, Elemental (fire, water, water small), Feyr (and greater), Ghast greater, Ghost, Ghoul greater, Giant fire 2, Giant fire IWD, Giant frost, Giant fomorian, Giant hill, Giant verbeeg, Glabrezu, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Golem mini, Hag (annis, night), Halfdragon (black, red), Harpy, Hephernaan, Histachii, Hook horror, Isair, Kegs (1, 2, 3), Kuo-toa (and large), Lemure, Lich white, Lizard man (and elite, king), Madae, Malarite, Marilith, Marilith (IWD), Megalocentipede, Mkhiins, Orc axe undead, Orc shaman undead, Orog shaman, Planetar, Planetar fallen, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Svirfneblins (pale and dark, with/without axe), Trolls (ice, scrag, snow), Tundra yeti, Tunnel worm, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, gray, green, yellow), Will o wisp (and small), Worg IWD, Yuan-ti halfbreed, Zombie (blue, yellow).
+    - Restored missing palettes content in EE games: Abishai blue, Black pudding, Boar wild, Bugbear shaman, Crusader soldier, Dog gray, Dragons BG2, Dragon green IWD, Dragon green juvenile, Dragons young (green, silver), Drowned dead red, Efreeti noble, Elemental fire small purple, Ettin ghost, Fiends (blue, green, red), Gibberling brood, Goblin worg (elite, shaman), Hags (green, sea), Hakeashar, Halfdragon green, Hephernaan, Maurezhi, Myrlochar, Nishruu, Red wizard, Sailors (green, red, dark), Snake water, Spider water, Troll spectral, Wyrmling albino, Wyvern white, Wyvern white big, Yochlol.
+    - Restored missing wav content in EE games: Abishai, Barbarians, Beetles (boring, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragon silver, Dragon white (and young), Driders (female, male), Drowned dead, Elemental (fire, water), Feyr (and greater), Ghast greater, Ghost, Giant fomorian, Giant frost, Giant verbeeg, Glabrezu, Goblins, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Hag night, Harpy, Halfdragon black, Histachii, Hook horror, Isair, Kegs, Kuo-toa, Lemure, Lich black, Lizard man king, Madae, Malarite, Minotaur, Mummy, Orc axe undead, Planetar, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Shrieker, Trolls (blue, ice, scrag, snow), Tundra yeti, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, green, yellow), Wyrmling albino, Yochlol, Yuan-tis (and halfbreed), Zombie yellow.
+    - Restored missing ini files in EE games: Abishais (black, green, red, blue), Belhifet, Belhifet priest, Black pudding, Boar wild, Bonebat, Bugbear (and captain, shaman), Chimera, Crusader soldier, Dog gray, Dragon green IWD, Dragons juvenile (green, red), Dragons young (green, silver), Drider female, Drowned dead red, Elemental water small, Ettin ghost, Feyr greater, Giant fomorian, Giant hill, Gibberling brood, Goblin shaman, Goblins worg (elite, shaman, captain), Hags (annis, green, night, sea), Halfdragon (black, green, red), Hephernaan, Hook horror, Isair, Kegs (1, 2, 3), Madae, Malarite, Megalocentipede, Mkhiins, Myrlochar, Orcs undead (axe, shaman), Orog shaman, Sailors (red, dark), Shenrical, Snake water, Spider water, Troll spectral, Tunnel worm, Werebadger, Wererat, Will o wisp (and small), Worg, Wyrmling albino, Yuan-ti halfbreed.
+    - Giant Hill animation: updated EE bam files that were missing pixels (Gwendolyne).
+    - TODO... to be completed.
+  - Integrated all code and BWP Fixpack fixes:
     - Main component: <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-	- More Planescape: Torment Animations component [710-720-760-740]: <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
-	- Scattered into various components: <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a>.
-- IA Shadows_Harpy_Frostgiant content: Fixed alternate murky shadows folders names and 2da files that were inverted (small = 3bt / large = 3bu), then fixed t-anisnd.tpa for consistency.
-- Integrated all BWP Fixpack graphic fixes (thanks to their authors!):
+    - More Planescape: Torment Animations component [710-720-760-740]: <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+    - Scattered into various components: <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a>.
+  - Integrated all BWP Fixpack graphic fixes (thanks to their authors!):
     - IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a> and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.
-	- IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a>.
-	- IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a>
-	- IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.
-	- NWN_Misc_I content: Gwendolyne's <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">Bovine axe thing fix</a>.
-- Added missing casting animations (sp and ca bam files, with weapons variants when needed):
-	- IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.
-	- IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
-	- IA IWD content: Animated Plate small bronze/dark/green, Barbarian warrior tan/red/brown, Creeping Doom, Drowned Dead, Elemental Earth/Fire/Water, Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
-	- IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
-- Specific components fixes:
-	- Main component: integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
-	- Updated Distinctive Fiends component [100]: removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "<em>Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way"</em>).
-	- Distinctive Undead [400], Skeleton Warriors [410-415-420] and More PsT Animations [710-720-760-740] components: integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
-	- Fixed Seer animations component [450-455]: "<em>Some beggars and slaves</em>" and "<em>Some beggars</em>" sub-components creatures listings were inverted. &#128541;
-	- Svirfneblin Animations component [480-490]: added t-svi variable used in a single routine for its two sub-components.
-	- Moinesse's Avatars for IA component [7000-7010-7020-7030]: integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
-	- Fixed Area Creature References component [9000] : in some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
-	- Components Saved Game Animation Fixer [9900-9910] and BG1 Character Animations for Saved Games [9600-9610-9620] should not crash if \save or \mpsave folders do not exist.
-- Split code into separate components for more comfortable readability.
-- Moved components tpa files into new "components" folder and kept functions and macros in "lib" folder
-- Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
-- Code commented as much as possible.
-- Coding simplification:
-    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as DECOMPILE_BCS_TO_BAF and DECOMPILE_DLG_TO_D).
-    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s ps_recursive_copy.tpa library, a WeiDU action function that will recursively search into a parent directory, then copying files to a destination directory.
+    - IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a>.
+    - IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a>.
+    - IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.
+    - NWN_Misc_I content: Gwendolyne's <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">Bovine axe thing fix</a>.
+    - IA_Wh_Dr_Wyv_LoP content: Gwendolyne's Dragon white and PsT Lady of Pain optimized bam files (removed duplicated frames, 43,3 Mo ==> 18,7 Mo and 17 Mo ==> 2,37 Mo).
+  - IA Shadows_Harpy_Frostgiant content: Fixed alternate murky shadows folders names and 2da files that were inverted (small = 3bt / large = 3bu), then fixed *t-anisnd.tpa* for consistency.
+  - Added missing casting animations (sp and ca bam files, with weapons variants when needed):
+    - IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.
+    - IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
+    - IA IWD content: Animated Plate small bronze/dark/green, Barbarian warrior tan/red/brown, Creeping Doom, Drowned Dead, Elemental Earth/Fire/Water, Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
+    - IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
+
+&#9755; <ins>b. General overhaul and re-looking</ins>
+  - Added *infinityanimations.ini* metadata file to support AL|EN's "Project Infinity".
+  - Renamed *setup-infinityanimations.tp2* -> *infinityanimations.tp2* to support AL|EN's "Project Infinity".
+  - Replaced `AUTHOR` keyword with `SUPPORT`.
+  - TODO Added missing `REQUIRE_PREDICATE` conditions to avoid installing components in inaccurate games or if required components are not installed.
+  - Added components `LABELS`.
+  - Added "*always.tpa*" library.
+  - Installation options have been moved into *infinityanimations-config-default.ini* file. If you want to modify them, please read this <a href="#config">chapter</a>.
+  - ...
+  - Split code into separate components libraries for more comfortable readability and maintenance. :wink:
+  - Moved components tpa files into new "*components*" sub-folder and kept functions and macros in "*lib*" folder.
+  - Commented code as much as possible.
+  - Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
+  - ...
+  - Coding simplification:
+    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D`).
+    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory.
     - Minor fixes...
-- Renamed setup-infinityanimations.tp2 -> infinityanimations.tp2 to support AL|EN's "Project Infinity".
-- Added infinityanimations.ini metadata file to support AL|EN's "Project Infinity".
-- Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
-- Updated readme (IA now supports translated readmes, new animation pictures...).
-- Added French translation (Gwendolyne).
-- Traification. Feel free to provide me with translations. I will include them as soon as possible.
-- Updated <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer to v246.
+  - ...
+  - Re-formated, updated (new animation pictures...) and renamed readme files to "*infinityanimations-readme-%LANGUAGE%.html*" (Infinity Animations now supports translated readmes).
+  - Added French translation (Gwendolyne).
+  - New traification. Feel free to provide me with translations. I will include them as soon as possible.
+  - ...
+  - Lower cased files.
+  - Updated WeiDU installer to v246.
+  - Uploaded mod to official Spellhold Studios GitHub mirror account.
+  - ...
+  - Replaced `GAME_IS` conditions with variables checks to speed up install time.
+  - Reorganized folder architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
+  - Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
+
+&#9755; <ins>c. Components specific changes and fixes</ins>
+  - [0] Infinity Animations (main component) ()
+    - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
+    - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+
+  - [100] Distinctive Fiends component ()
+    - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
+
+  - [400] Distinctive Undead, [410-415-420] Skeleton Warriors and [710-720-760-740] More PsT Animations components ()
+    - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
+
+  - [450-455] Seer animations component ()
+    - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
+
+  - [480-490] Svirfneblin Animations component ()
+    - Added t-svi variable used in a single routine for its two sub-components.
+
+  - [710-720-760-740] More Planescape: Torment Animations ()
+    - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+
+  - [7000-7010-7020-7030] Moinesse's Avatars for IA component ()
+    - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
+
+  - [9000] Fix Area Creature References component ()
+    - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
+
+  - [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
+    - Both components should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing!).
 
 ## 
 
-##### WeiDU Beta 5 - May 12, 2010
+##### Version Beta 5 &nbsp;(May 12, 2010)
 
-- Changed the .exe patch so that it forces a code page change and reboots if a non-Western code page is detected
-- Updated the .exe patch so that it recognises <acronym title="Baldur's Gate">BG1</acronym> thief avatars
-- Cloned missing animation tables from the unmodded game
-- Added other missing animation tables to base content folder
-- Adding missing minotaur and water weird sounds
-- Disabled problematic stacked animations from chitin.key
-- Added creature sounds where relevant (major update here)
-- Fixed a <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">minor READ_BYTE glitch</a> in creature patching
-- Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes)
-- Added night hags to the "Distinctive Fiends" component
-- Added ghoul queens to the "Distinctive Undead" component
-- Added white-haired Ellesime to the "More IWD2 Animations" component
-- Added lagoon creature to the "More IWD2 Animations" component
-- Deprecated tieflings from the cambion/alu-fiend components in favor of the PS:T animation component
-- Corrected skeleton warriors appearing as verbeegs glitch
-- Added Amel animation to NWN component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
-- Added Humanoid Animation Fixes component
-- Added Moinesse's Avatars component
-- Added More PS:T Animations component
-- Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games component
-- Added saved game animation fixing component
-- Traified the entire freaking mod by hand for translators (thanks for nothing, <acronym title="Weimer Dialogue Utility">WeiDU</acronym>! &#128541;)
-
-## 
-
-##### WeiDU Beta 4 - February 7, 2010
-
-- Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Non-Player Characters">NPCs</acronym> component
-- Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for <acronym title="Player Characters">PCs</acronym> component
-- Changed fiend patching to accommodate scripting
+- Changed the .exe patch so that it forces a code page change and reboots if a non-Western code page is detected.
+- Updated the .exe patch so that it recognises BG1 thief avatars.
+- Cloned missing animation tables from the unmodded game.
+- Added other missing animation tables to base :file_folder: /content folder.
+- Adding missing minotaur and water weird sounds.
+- Disabled problematic stacked animations from chitin.key.
+- Added creature sounds where relevant (major update here).
+- Fixed a <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">minor `READ_BYTE` glitch</a> in creature patching.
+- Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes).
+- Added night hags to the "*Distinctive Fiends*" component.
+- Added ghoul queens to the "*Distinctive Undead*" component.
+- Added white-haired Ellesime to the "*More IWD2 Animations*" component.
+- Added lagoon creature to the "*More IWD2 Animations*" component.
+- Deprecated tieflings from the cambion/alu-fiend components in favor of the "*More PS:T Animations*" component.
+- Corrected skeleton warriors appearing as verbeegs glitch.
+- Added Amel animation to the "*More NWN Animations*" component (if NTotSC is installed).
+- Added '*Humanoid Animation Fixes*" component.
+- Added "*Moinesse's Avatars for IA*" component.
+- Added "*More PS:T Animations*" component.
+- Added "*BG1 Character Animations for Saved Games*" component.
+- Added "*Saved Game Animation Fixer*" component.
+- Traified the entire freaking mod by hand for translators (thanks for nothing, WeiDU! &#128541;)
 
 ## 
 
-##### WeiDU Beta 3 - February 1, 2010
+##### Version Beta 4 &nbsp;(February 7, 2010)
 
-- Fixed _LOW animation corrections causing areas crashing on load
-- Fixed scripts and dialogues that Polymorph to _LOW animations
-- Fixed code glitch preventing installation of optional components
-- Added option to install sounds in svirfneblin component
-- Added component to fix area creature references
-- Added revised salamander sound tables (MSAL and MSA2 slots)
-- Enhanced compatibility with <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a>
-- Enhanced creature animation patches for fiends and orc shamans
+- Added "*BG1 Character Animations for NPCs*" component.
+- Added "*BG1 Character Animations for PCs*" component.
+- Changed fiend patching to accommodate scripting.
 
 ## 
 
-##### WeiDU Beta 2 - January 23, 2010
+##### ersion Beta 3 &nbsp;(February 1, 2010)
 
-- Added installer support for non-ANSI system locales
-
-## 
-
-##### WeiDU Beta 1 - January 11, 2010
-
-- First <acronym title="Weimer Dialogue Utility">WeiDU</acronym> release
-- All affected mod and vanilla creatures patched
-- Optional components added
-
-## 
-
-##### (r.10010043)
-
-- Fixed a bug with Icewind Dale animation slots in Baldur's Gate II
+- Fixed _LOW animation corrections causing areas crashing on load.
+- Fixed scripts and dialogues that Polymorph to _LOW animations.
+- Fixed code glitch preventing installation of optional components.
+- Added option to install sounds in "*Svirfneblin Animations*" component.
+- Added "*Fix Area Creature References*".
+- Added revised salamander sound tables (MSAL and MSA2 slots).
+- Enhanced compatibility with <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a>.
+- Enhanced creature animation patches for fiends and orc shamans.
 
 ## 
 
-##### (r.09102252 update)
+##### Version Beta 2 &nbsp;(January 23, 2010)
 
-- Updated documentation and Reference Picker
+- Added installer support for non-ANSI system locales.
 
 ## 
 
-##### (r.09102252)
+##### Version WeiDU Beta 1 &nbsp;(January 11, 2010)
 
-- Initial release
+- First WeiDU release.
+- All affected mod and vanilla creatures patched.
+- Optional components added.
+
+## 
+
+##### Version r.10010043
+
+- Fixed a bug with Icewind Dale animation slots in Baldur's Gate II.
+
+## 
+
+##### Version r.09102252 (update)
+
+- Updated documentation and Reference Picker.
+- Added alternate stylesheet. &#128521;.
+
+## 
+
+##### Version r.09102252
+
+- Initial release.
 <div align="right"><a href="#top">Back to top</a></div>

@@ -286,7 +286,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
 		<td><ins>IA Content - WoRm's NWN Ports and Alternate Modron<br><br>
 		- Contenu : modrone alternatif, animations de NWN portées par WoRm (Amel, basilic, bebilith, hamatula, osyluth, diantrefosse, épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
-		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses {150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
+		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses [150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
 	<tr>
@@ -381,8 +381,8 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ------------------------
 
-<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**<br />
-###### <em>Nécessite le patch ToB v26498.</em>
+<a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
+###### <em>Nécessite le patch ToB v26498.</em><br>
 
 - Vérifie la présence des fichiers nécessaires.
 - ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.
@@ -395,7 +395,7 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 			
-<a name="25" id="25"></a>&#10173; **[25] Correction des animations des humanoïdes**<br />
+<a name="25" id="25"></a>&#10173; **[25] Correction des animations des humanoïdes**<br><br>
 
 - Attribue aux guerriers humains l'animation de guerrier plutôt que celle de prêtre.
 - Attribue aux guerriers elfes l'animation de guerrier plutôt que celle de prêtre.
@@ -414,17 +414,14 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="50" id="50"></a>&#10173; **[50] Génies différenciés**<br />
-<em><span style="margin-left: 22px;">Nécessite l'archive IA_Fiends&#95;Genies.rar.</span></em>
+<a name="50" id="50"></a>&#10173; **[50] Génies différenciés**<br><br>
 
 - Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="100" id="100"></a>&#10173; **[100] Démons différenciés**<br />
-<em><span style="margin-left: 34px;">Nécessite les archives IA_Fiends&#95;Genies.rar, IA&#95;IWD.rar et IA&#95;PST&#95;Abishai.rar.<br></span>
-<span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar seulement si certains mods sont installés.</span></em>
+<a name="100" id="100"></a>&#10173; **[100] Démons différenciés**<br><br>
 
 - Attribue aux nabassus une animation de tanar'ri vert-gris.
 - Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].
@@ -440,45 +437,43 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 - Attribue aux succubes l'animation de succube de NWN.
 - Attribue aux maurezhis l'animation de maurezhi (une goule sombre).
 - Attribue aux glabrezus la bonne animation de glabrezu.
+&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="150" id="150"></a>&#10173; **[150-175] Diantrefosses**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.n<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar.</span></em>
+<a name="150" id="150"></a>&#10173; **[150-175] Diantrefosses**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
 
 - Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
+&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="210" id="210"></a>&#10173; **[210-230] Animation d'Isair pour les cambions**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
+<a name="210" id="210"></a>&#10173; **[210-230] Animation d'Isair pour les cambions**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br><br>
 
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="260" id="260"></a>&#10173; **[260-280] Animation de Madae pour les alu-démons**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
+<a name="260" id="260"></a>&#10173; **[260-280] Animation de Madae pour les alu-démons**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons<br><br>
 
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="400" id="400"></a>&#10173; **[400] Morts-vivants différenciés**<br />
-<em><span style="margin-left: 34px;">Nécessite les archives IA&#95;Base&#95;Anims.rar, IA&#95;IWD.rar et Shadows&#95;harpy&#95;frostgiant.zip.</span></em>
+<a name="400" id="400"></a>&#10173; **[400] Morts-vivants différenciés**<br><br>
 
--Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
--Attribue aux crânes flottants l'animation de demi-liche.
+- Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
+- Attribue aux crânes flottants l'animation de demi-liche.
 - Attribue aux blêmes majeurs l'animation de blême majeure d'IWD.
 - Attribue aux fantômes classiques l'animation de fantôme d'IWD.
 - Attribue aux goules majeures l'animation de goule majeure d'IWD.
@@ -504,11 +499,10 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="410" id="410"></a>&#10173; **[410-415-420] Combattants squelettes**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Leur attribuer l'animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>].<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
+<a name="410" id="410"></a>&#10173; **[410-415-420] Combattants squelettes**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Leur attribuer l'animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br>
+&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br><br>
 
 - Attribue l'animation sélectionnée à tous les combattants squelettes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -718,33 +712,46 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## <a name="credits" id="credits"></a>Crédits et remerciements
 
-#### Auteure : <a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a>
+&#9755; Pour toute question ou demande d'assistance, veuillez consulter le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum du mod</a>.
 
+## 
 
-#### Special Acknowledgements to
+**Auteure:** <a href="http://www.shsforums.net/user/2954-erephine/">Erephine</a>  
+**Code WeiDU :** <a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a>, revisé par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>  
+**Maintenance :** <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>
 
-- Codage <acronym title="Weimer Dialogue Utility">WeiDU</acronym> : <a href="http://www.shsforums.net/user/5803-miloch/">Miloch</a>.
-- Assistance : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- Hébergement : <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> (<a href="http://www.shsforums.net">Forums</a>).
-- etc.
+## 
 
+#### Remerciements particuliers à :
+
+- L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
+- Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : ...
+- a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_fuctions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
+- Moddeurs : <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
+- Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>.
+- Spécial : <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> pour la relecture de la documentation et sa contribution à la conversion des animations de EE pour ToB.
+
+## 
 
 #### Logiciels et outils utilisés pour la création de ce mod
 
-- <a href="http://www.weidu.org/%7Ethebigg/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> de Wes Weimer, the bigg et Wisp
-- <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintenu par igi et lynx
-- <a href="http://forums.pocketplane.net/index.php/topic,25153.msg314249.html#msg314249">Near Infinity</a> de Jon Olav Hauglid, FredSRichardson et Argent77
-- <a href="http://www.gibberlings3.net/tools/dltcep.php"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> de Avenger
-- <a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> de Glenn Flansburg
-- <a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> de Jan Goyvaerts
-- <a href="http://www.pspad.com/en/">PSPad</a> de Jan Fiala
-- <a href="http://notepad-plus-plus.org/">Notepad++</a> par l'équipe de Notepad++, Don Ho ; et le plug-in de correction orthographique
-- <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> de Argent77
+- <a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> de Wes Weimer, the bigg et Wisp.
+- <a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a> maintenu par igi et lynx.
+- <a href="https://github.com/Argent77/NearInfinity/releases">Near Infinity</a> de Jon Olav Hauglid, FredSRichardson et Argent77.
+- <a href="https://www.gibberlings3.net/mods/tools/dltcep/"><acronym title="Dragonlance Total Conversion Editor Pro">DLTCEP</acronym></a> de Avenger.
+- <a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> de Glenn Flansburg.
+- <a href="http://notepad-plus-plus.org/">Notepad++</a> par l'équipe de Notepad++, Don Ho; et le plug-in de correction orthographique.
+- <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters</a> de Argent77.
+- <a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> de Jan Goyvaerts.
+- <a href="http://www.pspad.com/en/">PSPad</a> de Jan Fiala.
+- <a href="http://www.bulkrenameutility.co.uk/">Bulk Rename Utility</a>, par TGRMN Software.
 
+## 
 
-#### Copyrights
+#### Informations sur les droits d'auteur
 
-###### Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
+###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
 ###### Tous les copyrights et marques déposées sont la propriété de leurs propriétaires respectifs.
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
@@ -754,123 +761,176 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## <a name="versions" id="versions"></a>Historique des versions
 
-##### Version 6 : jour mois 2019
+##### Version 6.0.0 &nbsp;(nn septembre 2020)
 
-- Principales mises à jour :
-    - Modification du code des animations pour les rendre compatibles avec les code pages non occidentaux (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). &#128521;
-	- Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
-	- Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, ùarin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
-- Intégration des correctifs de code et des animations du BWP Fixpack :
+&#9755; <ins>a.Principales mises à jour</ins>
+  - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). :wink:
+  - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
+  - Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
+  - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : Poulet marron (Jarl), Wolfhound de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
+  - Compatibilité native avec les jeux Enhanced :
+    - Restauration des fichiers bam d'animation manquants : abishais (blanc, noir, rouge, vert), armures animées (bronze/sombre/verte), Arundel, barbares shaman (avec marteau, bâton, gourdin), barbares guerriers (bleu, rouge, marron), barbare Icasaracht, scarabées (bombardier, scolyte, de feu, rhinocéros), belhifet, belhifet prêtre, sanglier arctique, vargouille, gobelours, capitaine gobelours, poule (blanche, marron), chimère, cornugon, fatalité rampante, cyclope, tréant, Deva monadic fallen, dragons de BG2 (noir, rouge, d'argent), dragons juvéniles (rouge, vert), dragon blanc (IWD et jeune), driders (femelle, mâle), mort noyé, élémentaire (de terre, de feu, d'eau, d'eau petit), freyeur ( normale et grande), fantôme, blême majeur, goule majeure, géant du feu 2, géant du feu IWD, géant du givre, géant fomorian, géant des collines, géant verbeeg, glabrezu, gobelins (capitaine, shaman, chevaucheur de worg, capitaine chevaucheur de worg), gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), golem de glace, golem de fer de IWD, golem minuscule, guenaudes (annis, nocturne), demi-dragons (noire, rouge), harpie, hephernaan, histachii, crochorreur, Isair, kegs, kuo-toa (et grand), lémure, liche blanche, homme lézard (et d'élite, roi), madae, malarite, marilith, marilith (IWD), mégalo-mille-pattes, orque mort-vivant avec hache, orque mort-vivant chaman, orog chaman, planaire, planaire déchu, rémorhaz, sahuagin IWD (et grand), pauvre hère, ombre (petite, grande), shenrical, svirfneblins (pâle, foncé, avec et sans hache), trolls (d'eau douce, des glaces, des neiges), yeti, ver de tunnels, ombre des roches (ancienne, vodyanoi), Wailing virgin, esprit des eaux, blaireau-garou, rat-garou, nécrophages (gris, vert, jaune, des tertres), will o wisp (et petit), worg (IWD), yuan-ti demi-sang, zombi (bleu, jaune).
+    - Restauration des fichiers de palettes manquants : abishai bleu, pouding noir, sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragons de BG2, dragon vert (IWD), dragon vert juvénile, dragons jeunes (vert, d'argent), mort noyé rouge, efrit noble, petit élémentaire de feu pourpre, ettin fantôme, démons (bleu, rouge, vert), Gibberling brood, gobelins chevaucheurs de worg (d'élite, chaman), guenaudes (verte, des mers), hakeashar, demi-dragon vert, hephernaan, maurezhi, myrlochar, nishruu, magicien rouge, marins (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, troll spectral, grande wiverne albinos, wiverne blanche, wiverne majeure blanche, yochlol.
+    - Restauration des fichiers wav manquants : abishai, barbares, scarabées (bombardier, scolyte, rhinocéros), belhifet, belhifet prêtre, sanglier arctique, vargouille, gobelours, capitaine gobelours, chimère, cornugon, fatalité rampante, cyclope, tréant, Deva monadic fallen, dragon d'argent, dragon blanc (IWD et jeune), driders (femelle, mâle), mort noyé, élémentaire (de feu, d'eau), freyeur (normale et grande), blême majeur, fantôme, géant fomorian, géant du givre, géant verbeeg, glabrezu, gobelins, gobelins (capitaine, chaman, chevaucheur de worg, capitaine chevaucheur de worg), golem de glace, golem de fer de IWD, guenaude nocturne, harpie, demi-dragon noire, histachii, crochorreur, isair, kegs, kuo-toa, lémure, liche noire, homme lézard roi, madae, malarite, minotaure, momie, orque mort-vivant avec hache, planaire, rémorhaz, sahuagin IWD (et grand), pauvre hère, ombre (petite, grande), shenrical, Shrieker, trolls (bleu, d'eau douce, des glaces, des neiges), yeti, ombre des roches (ancienne, vodyanoi), Wailing virgin, esprit des eaux, blaireau-garou, rat-garou, nécrophages (vert, jaune, des tertres), grande wiverne albinos, yochlol, yuan-tis (et demi-sang), zombi jaune.
+    - Restauration des fichiers ini manquants : abishais (bleu, noir, rouge, vert), belhifet, belhifet prêtre, pouding noir, sanglier sauvage, vargouille, gobelours, capitaine gobelours, gobelours chaman, chimère, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent), drider femelle, mort noyé rouge, petit élémentaire d'eau, ettin fantôme, freyeur grande, géant fomorian, géant des collines, Gibberling brood, gobelin chaman, gobelins chevaucheurs de worg (d'élite, chaman, capitaine), gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), guenaudes (annis, nocturne, verte, des mers), demi-dragons (noir, rouge, vert), hephernaan, crochorreur, Isair, kegs, madae, malarite, mégalo-mille-pattes, myrlochar, orque mort-vivant avec hache, (axe, shaman), orog chaman, marins (aux habits sombres, rouges), shenrical, serpent aquatique, araignée aquatique, troll spectral, ver de tunnels, blaireau-garou, rat-garou, will o wisp (et petit), worg, grande wiverne albinos, yuan-ti demi-sang.
+    - Animation du géant des collines : correction des fichiers bam dont certains pixels manquaient (Gwendolyne).
+    - TODO... to be completed.
+  - Intégration des correctifs de code du BWP Fixpack :
     - Composant principal : <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-	- Composant « Plus d'animations de More Planescape: Torment » [710-720-760-740] : <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, améliorée par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
-	- Réparti dans plusieurs composants : <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a>.
-- Archive IA Shadows_Harpy_Frostgiant : Correction des noms des répertoires et des fichiers 2da des animations alternatives de petite et de grande ombre qui étaient interverties (petite = 3bt / grande = 3bu), et correction du fichier t-anisnd.tpa qui intervertissait les deux entrées.
-- Intégration des correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) :
+    - Composant « Plus d'animations de More Planescape: Torment » [710-720-760-740] : <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, améliorée par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+    - Réparti dans plusieurs composants : <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a>.
+  - Intégration des correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) :
     - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
-	- Archive IA_BGII_IWDII : Correctif par Gwendolyne de l'<a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">animation de mort du petit élémentaire d'eau d'IWD2</a>.
+    - Archive IA_BGII_IWDII : Correctif par Gwendolyne de l'<a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">animation de mort du petit élémentaire d'eau d'IWD2</a>.
     - Archive IA_IWD : Correctif par Miloch des <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">sahuagins portant une arbalète qui faisaient crasher le jeu en marchant</a>.
     - Archive IA_NWN_01_modron : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">basilic de NWN</a>.
-	- Archive NWN_Misc_I : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">l'espèce de chose bovine</a>.
-- Ajout des animations manquantes de lancement de sort (fichiers bam ca et sp, avec les armes quand nécessaire) :
-	- Archive IA base_anims: scarabées (bombardier, scolyte, de feu, rhinocéros), cyclope, ettin, fantôme, blême majeur, goule majeure, gobelins (avec hache, avec arc, d'élite avec hache, d'élite avec arc), golem de glace, Histachii, minotaure, momie, orque (mêlée, archer, d'élite, archer d'élite), orog, orog d'élite, chef orog, salamandre (du feu, du givre), ombre (petite, grande), squelette démon, combattant squelette, troll (bleu, des glaces, des neiges), esprit des eaux, yuan-ti, yuan-ti d'élite, zombi (bleu, jaune).
-	- Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg
-	- Archive IA IWD : petites armures animées (bronze/sombre/verte), barbare guerrier (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
-	- Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
-- Corrections de composants :
-	- Composant principal : <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>, correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
-	- Mise à jour du composant « Démons différenciés [100] : suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : « <em>Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way</em> »).
-	- Composants « Morts-vivants différenciés » [400], « Combattants squelettes » [410-415-420] et « Plus d'animations de More Planescape: Torment » [710-720-760-740] : intégration du <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">patch glowcheck de Turambar</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
-	- Correction du composant « Animation de pauvre hère » [450-455] : les listes de créatures à modifier des sous-composants « <em>Pour certains mendiants et esclaves</em>) » et « <em>Pour certains mendiants</em>) » étaient interverties. &#128541;
-	- Composant « Animations de svirneblins » [480-490] : utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
-	- Composant « Avatars de Moinesse pour IA » [7000-7010-7020-7030] : intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
-	- Composant « Correction des références des créatures dans les cartes » [9000] : dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
-	- Les composants « Correction des animations dans les parties sauvegardées » [9900-9910] et « Animations de personnages de BG1 dans les parties sauvegardées » [9600-9610-9620] ne devraient plus planter l'installation si les répertoires \save ou \mpsave n'existent pas.
-- Découpage du code en composants distincts pour offrir une meilleure lisibilité.
-- Déplacement des fichiers tpa (code des composants) dans le nouveau répertoire « components » et conservation des fonctions et des macros dans le répertoire « lib ».
-- Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
-- Ajout de commentaires dans les fichiers de code chaque fois que possible.
-- Simplification du code :
-    - Utilisation de nouvelles fonctions de <acronym title="Weimer Dialogue Utility">WeiDU</acronym> (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme DECOMPILE_BCS_TO_BAF et DECOMPILE_DLG_TO_D).
-    - Utilisation de ps_recursive_copy.tpa, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
+    - Archive NWN_Misc_I : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">l'espèce de chose bovine</a>.
+    - Archive IA_Wh_Dr_Wyv_LoP : Correctif par Gwendolyne de l'animation de dragon blanc et de la Dame de Douleur de Pst (suppression des images dupliquées pour alléger les fichiers : 43,3 Mo ==> 18,7 Mo et 17 Mo ==> 2,37 Mo).
+  - Archive IA Shadows_Harpy_Frostgiant : Correction des noms des répertoires et des fichiers 2da des animations alternatives de petite et de grande ombre qui étaient interverties (petite = 3bt / grande = 3bu), et correction du fichier *t-anisnd.tpa* qui intervertissait les deux entrées.
+  - Ajout des animations manquantes de lancement de sort (fichiers bam ca et sp, avec les armes quand nécessaire) :
+    - Archive IA base_anims: scarabées (bombardier, scolyte, de feu, rhinocéros), cyclope, ettin, fantôme, blême majeur, goule majeure, gobelins (avec hache, avec arc, d'élite avec hache, d'élite avec arc), golem de glace, histachii, minotaure, momie, orque (mêlée, archer, d'élite, archer d'élite), orog, orog d'élite, chef orog, salamandre (du feu, du givre), ombre (petite, grande), squelette démon, combattant squelette, trolls (bleu, des glaces, des neiges), esprit des eaux, yuan-ti, yuan-ti d'élite, zombi (bleu, jaune).
+    - Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg.
+    - Archive IA IWD : petites armures animées (bronze/sombre/verte), barbares guerriers (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
+    - Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
+
+&#9755; <ins>b. Refonte générale</ins>
+  - Ajout du fichier de meta-données *infinityanimations.ini*pour intégration dans le projet « Project Infinity » d'AL|EN.
+  - Fichier *setup-infinityanimations.tp2* renommé *infinityanimations.tp2* pour une meilleure intégration dans le projet « Project Infinity » d'AL|EN.
+  - Remplacement du mot-clé `AUTHOR` par `SUPPORT`.
+  - TODO Added missing `REQUIRE_PREDICATE` conditions to avoid installing components in inaccurate games or if required components are not installed.
+  - Attribution à chaque component d'un `LABEL`.
+  - Ajout de la librairie "*always.tpa*".
+  - Les options de configuration d'installation ont été externalisés dans le fichier *infinityanimations-config-default.ini*. Si vous souhaitez les modifier, veuillez consulter ce <a href="#config">chapitre</a>.
+  - ...
+  - Découpage du code en composants distincts pour offrir une meilleure lecture et faciliter sa maintenance. &#128521; :wink:
+  - Déplacement des fichiers tpa d'installation des composants dans le nouveau répertoire « *components* » et conservation des librairies de fonctions et de macros dans le répertoire « *lib* ».
+  - Ajout de commentaires dans les fichiers de code chaque fois que possible.
+  - Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
+  - ...
+  - Simplification du code :
+    - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D`).
+    - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
     - Corrections mineures...
-- Fichier setup-infinityanimations.tp2 renommé infinityanimations.tp2 pour une meilleure intégration dans le projet « Project Infinity » d'AL|EN.
-- Ajout du fichier de meta-données infinityanimations.ini pour intégration dans le projet « Project Infinity » d'AL|EN.
-- Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
-- Mise à jour du readme (IA prend désormais en compte la documentation traduite, ajout de nouvelles illustrations d'animations...).
-- Ajout de la traduction française (Gwendolyne).
-- Traification.
-- Mise à jour de <acronym title="Weimer Dialogue Utility">WeiDU</acronym> (v246).
+  - ...
+  - Re-formatage, mise à jour (ajout de nouvelles illustrations d'animations...) et changement du nom des fichiers de documentation en « *infinityanimations-readme-%LANGUAGE%.html* » (Infinity Animations prend désormais en compte la documentation traduite).
+  - Ajout de la traduction française (Gwendolyne).
+  - Nouvelle traification du mod.
+  - ...
+  - Passage en minuscules des noms de fichiers.
+  - Mise à jour de WeiDU (v246).
+  - Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.
+  - ...
+  - Replaced `GAME_IS` conditions with variables checks to speed up install time.
+  - Reorganized folder architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
+  - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
 
+&#9755; <ins>c. Modifications relatives à chaque composant</ins>
+  - [0] Infinity Animations (composant principal) ()
+    - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>, correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
+    - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
 
-##### WeiDU Beta 5: 12 May 2010
+  - [100] Démons différenciés ()
+    - Suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : «&nbsp;*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way* »).
 
-- Changed the .exe patch so that it forces a code page change and reboots if a non-Western code page is detected
-- Updated the .exe patch so that it recognises <acronym title="Baldur's Gate">BG1</acronym> thief avatars
-- Cloned missing animation tables from the unmodded game
-- Added other missing animation tables to base content folder
-- Adding missing minotaur and water weird sounds
-- Disabled problematic stacked animations from chitin.key
-- Added creature sounds where relevant (major update here)
-- Fixed a <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">minor READ_BYTE glitch</a> in creature patching
-- Made it certain so that subcomponents can't be installed if the main component is not installed (to prevent crashes)
-- Added night hags to the "Distinctive Fiends" component
-- Added ghoul queens to the "Distinctive Undead" component
-- Added white-haired Ellesime to the "More IWD2 Animations" component
-- Added lagoon creature to the "More IWD2 Animations" component
-- Deprecated tieflings from the cambion/alu-fiend components in favor of the PS:T animation component
-- Corrected skeleton warriors appearing as verbeegs glitch
-- Added Amel animation to NWN component (if <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> is installed)
-- Added Humanoid Animation Fixes component
-- Added Moinesse's Avatars component
-- Added More PS:T Animations component
-- Added <acronym title="Baldur's Gate">BG1</acronym> Character Animations for Saved Games component
-- Added saved game animation fixing component
-- Traified the entire freaking mod by hand for translators (thanks for nothing, <acronym title="Weimer Dialogue Utility">WeiDU</acronym>! &#128541;)
+  - [400] Morts-vivants différenciés, [410-415-420] Combattants squelettes et [710-720-760-740] Plus d'animations de Planescape: Torment ()
+    - Intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
 
+  - [450-455] Animation de pauvre hère ()
+    - Fix: Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *Pour certains mendiants* » étaient interverties. &#128541;
 
-##### WeiDU Beta 4 : 7 février 2010
+  - [480-490] Animations de svirneblins ()
+    - Utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
 
-- Ajout du composant « Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym> ».
-- Ajout du composant « Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters]">PJs</acronym> ».
+  - [710-720-760-740] Plus d'animations de Planescape: Torment ()
+    - Intégration du correctif <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, amélioré par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+
+  - [7000-7010-7020-7030] Avatars de Moinesse pour IA ()
+    - Intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
+
+  - [9000] Correction des références des créatures dans les cartes ()
+    - Dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
+
+  - [9900-9910] Correction des animations dans les parties sauvegardées et [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
+    - Ces deux composants ne devraient plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
+
+## 
+
+##### Version Beta 5 &nbsp;(12 mai 2010)
+
+- Modification du patch de l'exécutable afin qu'il modifie le code page et redémarre l'ordinateur s'il détecte un code page non occidental.
+- Mise à jour du patch de l'exécutable pour qu'il reconnaisse les avatars de voleur de BG1.
+- Clonage des fichiers d'attribution de sons existants [*NdT : fichiers 2da*] pour créer ceux qui manquent.
+- Ajout des autres fichiers d'attribution de sons manquants dans le répertoire :file_folder: /content.
+- Ajout des sons manquants du minotaure et de l'esprit des eaux.
+- Suppression de l'empilage des mêmes animations dans le fichier chitin.key, qui posait problème.
+- Affectation aux créatures de leurs jeux de sons lorsque c'est approprié (mise à jour importante).
+- Correction d'un <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">dysfonctionnement mineur de la commande `READ_BYTE`</a> dans les patches de créatures.
+- Ajout d'un contrôle interdisant l'installation des sous-composants si le composant principal n'est pas installé (pour empêcher des crashes).
+- Ajout des sorcières de la nuit</acronym> [<em>NdT : ou guenaudes nocturnes selon les traductions de night hags</em>] dans le composant « *Démons différenciés* ».
+- Ajout de l'animation de la reine goule au composant « *Morts-vivants différenciés* ».
+- Ajout de l'animation Ellesime avec des cheveux blancs au composant « *Plus d'animations d'IWD2* ».
+- Ajout de l'animation créature des lagons au composant « *Plus d'animations d'IWD2* ».
+- Déplacement du traitement des tieffelins des composants « cambions » et « alu-démons » dans le composant « *Plus d'animations de PS:T* ».
+- Correction du petit bogue qui faisait apparaître les combattants squelettes sous la forme de verbeegs.
+- Ajout de l'animation d'Amel au composant « *Plus d'animations de NWN* » (si NTotSC est installé).
+- Ajout du composant « *Correction des animations des humanoïdes* ».
+- Ajout du composant « *Avatars de Moinesse pour IA* ».
+- Ajout du composant « *Plus d'animations de PS:T* ».
+- Ajout du composant « *Animations de personnages de BG1 dans les parties sauvegardées* ».
+- Ajout du composant « *Correction des animations dans les parties sauvegardées* ».
+- Traification manuelle de ce foutu mod pour faciliter le travail des traducteurs (de rien, WeiDU! &#128541;)
+
+## 
+
+##### Version Beta 4 &nbsp;(7 février 2010)
+
+- Ajout du composant « *Animations de personnages de BG1 pour les PNJs* ».
+- Ajout du composant « *Animations de personnages de BG1 pour les PJs* ».
 - Modification de la procédure de modification des démons.
 
+## 
 
-##### WeiDU Beta 3 : 1er février 2010
+##### Version Beta 3 &nbsp;(1er février 2010)
  
 - Correction des bugs d'animations _LOW qui causaient des crashs de zones au chargement.
-- Correction des scripts et des dialogues qui <acronym title="Polymorph">métamorphosent</acronym> en créatures utilisant des animations _LOW.
+- Correction des scripts et des dialogues qui métamorphosent en créatures utilisant des animations _LOW.
 - Correction d'un dysfonctionnement du code qui empêchait l'installation de composants optionnels.
-- Ajout de l'option d'installation des sons dans le composant « Animations de Svirfneblin ».
-- Ajout du composant « Correction des références des créatures dans les cartes ».
+- Ajout de l'option d'installation des sons dans le composant « *Animations de svirfneblins* ».
+- Ajout du composant « *Correction des références des créatures dans les cartes* ».
 - Ajout des fichiers révisés d'attribution de sons des salamandres (slots MSAL et MSA2).
 - Amélioration de la compatibilité avec <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a>.
 - Amélioration des procédures de modification de créatures pour les démons et les orques chamans.
 
+## 
 
-##### WeiDU Beta 2 : 23 janvier 2010
+##### Version Beta 2 &nbsp;(23 janvier 2010)
  
 - Ajout de la prise en charge des systèmes non ANSI par la procédure d'installation.
 
+## 
 
-##### >WeiDU Beta 1 : 11 janvier 2010
+##### Version WeiDU Beta 1 &nbsp;(11 janvier 2010)
 
-- Première sortie en version <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.
+- Première sortie en version WeiDU.
 - Toutes les créatures du jeu et des mods affectées par IA sont modifiées.
 - Ajout des composants optionnels.
 
+## 
 
-##### (r.10010043)
+##### Version r.10010043
 
 - Correction d'un bogue affectant les slots d'animation d'Icewind Dale dans Baldur's Gate II.
 
+## 
 
-##### (mise à jour de la version r.09102252)
+##### Mise à jour de la version r.09102252
 
 - Mise à jour de la documentation et du Reference Picker.
 - Ajout d'une feuille de style alternative. &#128521;
 
+## 
 
-##### (r.09102252)
+##### Version r.09102252
 
 - Sortie initiale.
 <div align="right"><a href="#top">Retour en haut de page</a></div>
