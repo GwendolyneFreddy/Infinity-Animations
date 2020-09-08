@@ -7,8 +7,8 @@
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
 
-<h3>Un mod de Spellhold Studios pour les jeux Infinity Engine<h3>
-### Un mod de Spellhold Studios pour Baldur's Gate II:ToB, Baldur's Gate Trilogy et Tutu
+<h3>Un mod de Spellhold Studios pour les jeux Baldur's Gate II:ToB (original et EE),
+Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 
 </div><br />
 
@@ -30,7 +30,7 @@
 ## 
 
 <div align="center">
-<a href="#intro">Présentation</a> &#x2B25; <a href="#compat">Compatibilité</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#components">Composants</a> &#x2B25; <a href="#101">Détail des composants</a> &#x2B25; &#x2B25; <a href="#anims">Animations</a> <a href="#credits">Remerciements</a> &#x2B25; <a href="#version">Historique des versions</a></br>
+<a href="#intro">Présentation</a> &#x2B25; <a href="#compat">Compatibilité</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#components">Composants</a> &#x2B25; <a href="#0">Détail des composants</a> &#x2B25; &#x2B25; <a href="#anims">Animations</a> <a href="#credits">Remerciements</a> &#x2B25; <a href="#version">Historique des versions</a></br>
 </div>
 
 
@@ -135,9 +135,9 @@ Pour réinstaller, désinstaller ou changer certains composants, lancez **`setup
 
 #### Mac OS X
 
-Malheureusement, ce mod n'est pour l'instant pas compatible avec le système d'exploitation OS X car certains de ses composants modifiant l'exécutable ne fonctionnent pas sur OS X. Si vous souhaitez vous en charger, veuillez manifester votre intérêt sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (Si vous disposez de compétences techniques, étudier l'exécutable du jeu et de ce patch dans un éditeur pourrait vous être utile.)
+:warning: Malheureusement, ce mod n'est pour l'instant pas compatible avec le système d'exploitation OS X car certains de ses composants modifiant l'exécutable ne fonctionnent pas sur OS X. Si vous souhaitez vous en charger, veuillez manifester votre intérêt sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (Si vous disposez de compétences techniques, étudier l'exécutable du jeu et de ce patch dans un éditeur pourrait vous être utile.)
 
-Cependant, comme les jeux EE ne nécessitent pas un patch de leur exécutable pour bénéficier des composants de Infinity Animations, ce dernier peut y être installé sur un système d'exploitation Mac.
+&#128541; Cependant, comme les jeux EE ne nécessitent pas un patch de leur exécutable pour bénéficier des composants de Infinity Animations, ce dernier peut y être installé sur un système d'exploitation Mac.
 
 Infinity Animations pour EE et Mac OS X est livré avec WeiDU et est diffusé dans la même archive compressée.
 
@@ -373,16 +373,16 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] Animations de personnages de BG1 pour les PJs</a></span></br>
 
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span></br></br>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span>
 
 
-Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
+####### Tous les composants nécessitent le composant principal, car c'est lui qui installe le nouveau contenu. Tous les autres composants sont optionnels. Notez aussi qu'aucun composant n'affecte les  PNJs recrutables, un point qu'il est préférable de laisser à la discrétion de chaque moddeur. Par conséquent, si un composant prétend affecter toutes les femmes Tieffelin, en aucune façon il ne modifiera l'apparence des PNJs Amber et Fade.</br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
-###### <em>Nécessite le patch ToB v26498.</em><br>
+###### <em>Nécessite le patch ToB v26498.</em><br><br>
 
 - Vérifie la présence des fichiers nécessaires.
 - ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.
@@ -437,6 +437,9 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 - Attribue aux succubes l'animation de succube de NWN.
 - Attribue aux maurezhis l'animation de maurezhi (une goule sombre).
 - Attribue aux glabrezus la bonne animation de glabrezu.
+
+&nbsp;
+
 &#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -447,14 +450,17 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 &nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
 
 - Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
+
+&nbsp;
+
 &#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
 <a name="210" id="210"></a>&#10173; **[210-230] Animation d'Isair pour les cambions**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br><br>
 
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -462,8 +468,8 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 ## 
 
 <a name="260" id="260"></a>&#10173; **[260-280] Animation de Madae pour les alu-démons**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons<br><br>
 
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -500,39 +506,36 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 ## 
 
 <a name="410" id="410"></a>&#10173; **[410-415-420] Combattants squelettes**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Leur attribuer l'animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Leur attribuer l'animation de nécrophage des tertres [<em>NdT : Wight Barrow</em>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br><br>
 
 - Attribue l'animation sélectionnée à tous les combattants squelettes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="450" id="450"></a>&#10173; **[450-455-460] Animation de pauvre hère**[<em>NdT : seer en anglais</em>].<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Pour certains mendiants et esclaves.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Pour certains mendiants.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Pour certains esclaves.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
+<a name="450" id="450"></a>&#10173; **[450-455-460] Animation de pauvre hère**[<em>NdT : seer en anglais</em>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Pour certains mendiants et esclaves.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Pour certains mendiants.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Pour certains esclaves.<br><br>
 
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD&#95;Svirfneblin.rar.</span></em><br />
-###### <em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em>
+<a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.
+###### <em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
 
 - Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="500" id="500"></a>&#10173; **[500] Plus d'animations de base**<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
+<a name="500" id="500"></a>&#10173; **[500] Plus d'animations de base**<br><br>
 
 - Attribue aux histachii l'animation d'histachii d'IWD.
 - Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
@@ -544,8 +547,7 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="550" id="550"></a>&#10173; **[550] Plus d'animations d'Icewind Dale**<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_IWD.rar.</span></em>
+<a name="550" id="550"></a>&#10173; **[550] Plus d'animations d'Icewind Dale**<br><br>
 
 - Attribue aux armures animées les animations de petites armures animées d'IWD [<em>NdT : animated plate</em>].
 - Attribue aux Archidruides l'animation d'Arundel d'IWD.
@@ -561,8 +563,7 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="600" id="600"></a>&#10173; **[600] Plus d'animations d'Icewind Dale II**<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_BGII&#95;IWDII.rar.</span></em>
+<a name="600" id="600"></a>&#10173; **[600] Plus d'animations d'Icewind Dale II**<br><br>
 
 - Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.
 - Attribue des animations différenciées aux gobelins (chevaucheurs de worg, leaders, marrons, verts, d'élite).
@@ -578,8 +579,7 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="650" id="650"></a>&#10173; **[650] Plus d'animations de Neverwinter Nights**<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_NWN&#95;01&#95;Modron.rar.</span></em>
+<a name="650" id="650"></a>&#10173; **[650] Plus d'animations de Neverwinter Nights**<br><br>
 
 - Attribue aux porteurs de faux (dans NTotSC) l'animation de Amel de NWN.
 - Attribue aux scarabées bombardiers (dans Big Picture) l'animation de NWN.
@@ -592,12 +592,11 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="710" id="710"></a>&#10173; **[710-720-730-740] Plus d'animations de Planescape: Torment**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Toutes les créatures non-recrutables concernées.<br />
-<em><span style="margin-left: 34px;">Nécessite l'archive IA_PST&#95;Paletted.rar.</span></em>
+<a name="710" id="710"></a>&#10173; **[710-720-730-740] Plus d'animations de Planescape: Torment**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Toutes les créatures non-recrutables concernées.<br><br>
 
 - Attribue aux voleuses humaines l'animation de citoyenne de Maudith [<em>NdT : female Curst townie</em>].
 - Attribue aux voleurs humains l'animation de citoyen de Maudith [<em>NdT : male Curst townie</em>].
@@ -626,12 +625,11 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Avatars de Moinesse pour IA**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75 % des créatures non-recrutables concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Toutes les créatures non-recrutables concernées.<br />
-<em><span style="margin-left: 44px;">Nécessite l'archive Moinesse_edits&#95;IAised.rar.</span></em>
+<a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Avatars de Moinesse pour IA**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75 % des créatures non-recrutables concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Toutes les créatures non-recrutables concernées.<br><br>
 
 - Attribue aux barbares humains l'animation de barbare homme.
 - Attribue aux druidesses humaine l'animation de druidesse.
@@ -645,12 +643,11 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25 % des créatures concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50 % des créatures concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75 % des créatures concernées.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** La plupart des créatures concernées.<br />
-<em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
+<a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25 % des créatures concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50 % des créatures concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75 % des créatures concernées.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** La plupart des créatures concernées.<br><br>
 
 - Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
 - La dernière option est intitulée « la plupart » plutôt que « toutes » car certaines créatures sont exclues des modifications.
@@ -660,19 +657,18 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="9000" id="9000"></a>&#10173; **|9000] Correction des références des créatures dans les cartes**<br />
-###### <em>Installé par défaut.</em>
+<a name="9000" id="9000"></a>&#10173; **|9000] Correction des références des créatures dans les cartes**
+###### <em>Installé par défaut.</em><br><br>
 
 - Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
-<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] Animations de personnages de BG1 pour les PJs**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Demander confirmation pour chaque PJ exporté.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Demander confirmation pour les PJs posant problème.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Modifier tous les PJs sans demander confirmation.<br />
-<em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] Animations de personnages de BG1 pour les PJs**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Demander confirmation pour chaque PJ exporté.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Demander confirmation pour les PJs posant problème.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Modifier tous les PJs sans demander confirmation.<br><br>
 
 - Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
 - La deuxième option modifie tous les PJs, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.
@@ -682,11 +678,10 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="9600" id="9600"></a>&#10173; **|9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Demander confirmation pour chaque personnage.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Demander confirmation pour les personnages posant problème.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Modifier tous les personnages sans demander confirmation.<br />
-<em><span style="margin-left: 44px;">Nécessite l'archive IA_Base&#95;Anims.rar.</span></em>
+<a name="9600" id="9600"></a>&#10173; **|9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Demander confirmation pour chaque personnage.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Demander confirmation pour les personnages posant problème.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Modifier tous les personnages sans demander confirmation.<br><br>
 
 - Mêmes remarques que pour le composant précédent.
 - Vous devrez décider de patcher ou non chaque partie sauvegardée (et le personnage qu'elle contient, si vous avez choisi l'une des options de confirmation).
@@ -695,9 +690,9 @@ Tous les composants nécessitent le composant principal, car c'est lui qui insta
 
 ## 
 
-<a name="9900" id="9900"></a>&#10173; **|9900-9910] Correction des animations dans les parties sauvegardées**<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Corriger uniquement les animations LOW.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Corriger toutes les animations que IA a modifiées.
+<a name="9900" id="9900"></a>&#10173; **|9900-9910] Correction des animations dans les parties sauvegardées**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Corriger uniquement les animations LOW.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Corriger toutes les animations que IA a modifiées.<br><br>
 
 - La première option empêche les crashs du jeu dus au déplacement des slots d'animation _LOW.
 - La seconde option fait la même chose, et modifie aussi dans vos parties sauvegardées toutes les animations qui ont été modifiées.

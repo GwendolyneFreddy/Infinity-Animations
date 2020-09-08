@@ -7,8 +7,9 @@
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
 
-<h3>A Spellhold Studios mod for Infinity Engine games<h3>
-### A Spellhold Studios mod for Baldur's Gate II:ToB, Baldur's Gate Trilogy and Tutu, BG:EE, SoD, BG2:EE, IWD:EE and EET
+<h3>A Spellhold Studios mod for Baldur's Gate II:ToB (original and EE games),<br>
+Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE and EET<h3>
+
 
 </div><br />
 
@@ -30,9 +31,7 @@
 ## 
 
 <div align="center">
-<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; 
-<a href="#components">Components</a> &#x2B25; <a href="#101">Mod Details</a> &#x2B25; 
-<a href="#anims">Animations</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#version">Version History</a></br>
+<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#components">Components</a> &#x2B25; <a href="#0">Mod Details</a> &#x2B25; <a href="#anims">Animations</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#version">Version History</a></br>
 </div>
 
 
@@ -76,7 +75,7 @@ This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. How
 
 Install it after most other mods, particularly those that add creatures or animations, but before any final "biffing" routines.
 
-Modders who wish to make their mods compatible with IA are strongly recommended to read the <a href=">Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
+Modders who wish to make their mods compatible with IA are strongly recommended to read the <a href="">Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
 
 >Although it is not required for the 1pp mod to function properly, TOB players are strongly recommended to download and install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 
@@ -137,9 +136,9 @@ Run **`setup-infinityanimations.exe`** in your game folder to reinstall, un-inst
 
 #### Mac OS X
 
-Unfortunately, this mod is not currently fully compatible with OS X because a few components patching exe file do not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
+:warning: Unfortunately, this mod is not currently fully compatible with OS X because a few components patching exe file do not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
 
-However, since EE games don't need to be patched to benefit from Infinity Animations, it can be installed on Mac OS X EE games.
+&#128541; However, since EE games don't need to be patched to benefit from Infinity Animations, it can be installed on Mac OS X EE games.
 
 Infinity Animations for EE for Mac OS X is distributed in the same compressed archive and includes a WeiDU installer.
 
@@ -376,16 +375,16 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] BG1 Character Animations for PCs</a></span></br>
 
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] BG1 Character Animations for Saved Games</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br></br>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br>
 
 
-All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
+####### All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
 <div align="right"><a href="#top">Back to top</a></div>
 
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
-###### <em>Requires ToB v26498</em><br>
+###### <em>Requires ToB v26498</em><br><br>
 
 - Checks mod files
 - ToB only: Checks .exe validity, backs up and patches the .exe
@@ -440,24 +439,30 @@ All components require the main component (they need to since it's the one that 
 - Succubi get the NWN succubus animation
 - Maurezhi get a dark ghoulish animation
 - Glabrezu get the proper glabrezu animation
+
+&nbsp;
+
 &#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
 <a name="150" id="150"></a>&#10173; **[150-175] Pit Fiends**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br><br>
 
 - Choice of subcomponent (or none); "some" = roughly half, randomly selected
+
+&nbsp;
+
 &#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
 <a name="210" id="210"></a>&#10173; **[210-230] Cambions get Isair Animation**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -465,8 +470,8 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="260" id="260"></a>&#10173; **[260-280] Alu-Fiends get Madae Animation**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -503,9 +508,9 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="410" id="410"></a>&#10173; **[410-415-420] Skeleton Warriors**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Wight Barrow animation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[410]** Wight Barrow animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br><br>
 
 - Assigns the chosen animation to all skeleton warriors
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -513,9 +518,9 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="450" id="450"></a>&#10173; **[450-455-460] Seer Animation**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Some beggars and slaves<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[450]** Some beggars and slaves<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br><br>
 
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -523,9 +528,9 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
-###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
+###### <em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
 
 - Uses all svirfneblin variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -590,10 +595,10 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="710" id="710"></a>&#10173; **[710-720-730-740] More Planescape: Torment Animations**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[710]** 25% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[720]** 50% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br><br>
 
 - Female human thieves get the female Curst townie animation
 - Male human thieves get the male Curst townie animation
@@ -623,10 +628,10 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="7000" id="7000"></a>&#10173; **[7000-7010-7020-7030] Moinesse's Avatars for IA**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7000]** 25% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7010]** 50% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br><br>
 
 - Male human barbarians get the male barbarian animation
 - Female human druids get the female druid animation
@@ -641,10 +646,10 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="8000" id="8000"></a>&#10173; **[8000-8010-8020-8030] BG1 Character Animations for NPCs**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25% of relevant creatures<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50% of relevant creatures<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8000]** 25% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8010]** 50% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br><br>
 
 - Uses the original Baldur's Gate character animations as specified
 - The last option is "most" instead of "all" because certain creatures are excluded
@@ -654,8 +659,8 @@ All components require the main component (they need to since it's the one that 
 
 ## 
 
-<a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**<br>
-###### <em>Installed by default</em><br>
+<a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**
+###### <em>Installed by default</em><br><br>
 
 - Corrects changed creature animations in area files for easier reference
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -663,9 +668,9 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for PCs**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br><br>
 
 - Uses the original Baldur's Gate character animations as specified
 - The second option patches all PCs but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot
@@ -676,9 +681,9 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="9600" id="9600"></a>&#10173; **[9600-9610-9620] BG1 Character Animations for Saved Games**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Prompt for each character<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9600]** Prompt for each character<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br><br>
 
 - Same notes as above
 - You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)
@@ -688,8 +693,8 @@ All components require the main component (they need to since it's the one that 
 ## 
 
 <a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Game Animation Fixer**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed<br><br>
 
 - The first option prevents games from crashing due to moved _LOW animations
 - The second option does the above and also patches any changed animations into your saved games
@@ -743,7 +748,7 @@ All components require the main component (they need to since it's the one that 
 
 #### Copyrights Information
 
-###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> 
+###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img align="left" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> 
 This work (including all code and documentation) is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. You are free to share (copy, distribute and transmit) and to remix (adapt) this work, except for commercial purposes. See the <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a> for more details. Please post any changes or updates at the mod's <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>.
 ###### All copyrights and trademarks are the property of their respective owners.
 <div align="right"><a href="#top">Back to top</a></div>
