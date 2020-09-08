@@ -382,7 +382,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
-###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Nécessite le patch ToB v26498.</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Nécessite le patch ToB v26498.</em><br><br>
 
 - Vérifie la présence des fichiers nécessaires.
 - ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.

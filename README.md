@@ -384,7 +384,7 @@ The installer includes the following components. The number of each is the compo
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
-###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Requires ToB v26498</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Requires ToB v26498</em><br><br>
 
 - Checks mod files
 - ToB only: Checks .exe validity, backs up and patches the .exe
@@ -442,7 +442,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -455,7 +455,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -530,7 +530,7 @@ The installer includes the following components. The number of each is the compo
 <a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
-###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
 
 - Uses all svirfneblin variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -660,7 +660,7 @@ The installer includes the following components. The number of each is the compo
 ## 
 
 <a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**
-###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Installed by default</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Installed by default</em><br><br>
 
 - Corrects changed creature animations in area files for easier reference
 <div align="right"><a href="#components">Back to components list</a></div>
