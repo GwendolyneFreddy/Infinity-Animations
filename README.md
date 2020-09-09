@@ -53,7 +53,7 @@ Finally, this mod contains optional components that implement many new animation
 - Restores Baldur's Gate I character animations
 - Improves paperdoll support for existing animations
 - Adds custom game animations for characters and creatures (including dragons)
-- Allows use of many different animation *types* (some never before seen in the games
+- Allows use of many different animation *types* (some never before seen in the games)
 - Resolves the problems of animation stacking, slot and naming conflicts
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
@@ -442,7 +442,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -455,7 +455,7 @@ The installer includes the following components. The number of each is the compo
 
 &nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">See more</a></br>
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -723,7 +723,7 @@ The installer includes the following components. The number of each is the compo
 
 - <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).
 - Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: ..
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: ...
 - <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his `FIND_FREE_ANIM_SLOT` WeiDU function (*a7_functions.tpa* library) to automatically install new animation slots in EE games.
 - Modders: <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.
 - French translation: <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>.
@@ -788,7 +788,9 @@ The installer includes the following components. The number of each is the compo
     - IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.
     - IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
     - IA IWD content: Animated Plate small bronze/dark/green, Barbarian warrior tan/red/brown, Creeping Doom, Drowned Dead, Elemental Earth/Fire/Water, Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
+    - Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
     - IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
+<br><br>
 
 &#9755; <ins>b. General overhaul and re-looking</ins>
   - Added *infinityanimations.ini* metadata file to support AL|EN's "Project Infinity".
@@ -805,8 +807,10 @@ The installer includes the following components. The number of each is the compo
   - Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
   - ...
   - Coding simplification:
-    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D`).
+    - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
     - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory.
+    - Replaced specific "*%tsx%*" ia variables with more compatible "*%tutu%_scriptx%*" variables.
+    - Externalized lists of creatures to be patched into arrays for easier maintenance.
     - Minor fixes...
   - ...
   - Re-formated, updated (new animation pictures...) and renamed readme files to "*infinityanimations-readme-%LANGUAGE%.html*" (Infinity Animations now supports translated readmes).
@@ -819,19 +823,21 @@ The installer includes the following components. The number of each is the compo
   - ...
   - Replaced `GAME_IS` conditions with variables checks to speed up install time.
   - Reorganized folder architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
-  - Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
+
+ <br>
 
 &#9755; <ins>c. Components specific changes and fixes</ins>
-  - [0] Infinity Animations (main component) ()
+  - [0] Infinity Animations (main component) (t-main.tpa, ia_restore_bg2_animations.tpa, )
     - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
+    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
     - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-
-  - [100] Distinctive Fiends component ()
+  - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
+    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).
+    - Externalized lists of creatures to be patched into arrays (build in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.
+  - [100] Distinctive Fiends ()
     - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
-
   - [400] Distinctive Undead, [410-415-420] Skeleton Warriors and [710-720-760-740] More PsT Animations components ()
     - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
-
   - [450-455] Seer animations component ()
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
 

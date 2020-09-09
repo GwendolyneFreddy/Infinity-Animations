@@ -440,20 +440,20 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 &nbsp;
 
-&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">Illustrations</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
 
 <a name="150" id="150"></a>&#10173; **[150-175] Diantrefosses**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
 
 - Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
 
 &nbsp;
 
-&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">Illustrations</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&&#9755; <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-screenshots.html#150">Illustrations</a></br>
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -528,7 +528,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 <a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.
-###### &nbsp;&nbsp;&nbsp;&nbsp;<em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
 
 - Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -658,7 +658,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ## 
 
 <a name="9000" id="9000"></a>&#10173; **|9000] Correction des références des créatures dans les cartes**
-###### <em>Installé par défaut.</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Installé par défaut.</em><br><br>
 
 - Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -746,7 +746,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 #### Informations sur les droits d'auteur
 
-###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
+###### <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img align="left" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a> Ce travail (y compris l'intégralité du code et de la documentation) est déposé sous la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-Noncommercial 3.0 Unported License</a>. Vous êtes libre de partager (copier, distribuer et transmettre) et de modifier (adapter) ce travail, sauf à des fins commerciales. Pour plus de détails, consultez la licence <a href="http://creativecommons.org/licenses/by-nc/3.0/legalcode">Creative Commons Public License</a>. Veuillez informer les auteurs de tout changement ou toute mise à jour du mod sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a> du mod.
 ###### Tous les copyrights et marques déposées sont la propriété de leurs propriétaires respectifs.
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
@@ -803,7 +803,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
   - Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
   - ...
   - Simplification du code :
-    - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D`).
+    - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
     - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
     - Corrections mineures...
   - ...
