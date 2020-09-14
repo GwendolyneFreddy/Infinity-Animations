@@ -397,6 +397,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 			
 <a name="25" id="25"></a>&#10173; **[25] Correction des animations des humanoïdes**<br><br>
 
+Ce composant rétablit les slots d'animation adéquats de certaines créatures humanoïdes :
 - Attribue aux guerriers humains l'animation de guerrier plutôt que celle de prêtre.
 - Attribue aux guerriers elfes l'animation de guerrier plutôt que celle de prêtre.
 - Attribue aux guerriers petites-personnes l'animation de guerrier plutôt que celle de prêtre.
@@ -416,6 +417,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 <a name="50" id="50"></a>&#10173; **[50] Génies différenciés**<br><br>
 
+Ce composant assigne aux génies des animations différenciées :
 - Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -423,6 +425,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 <a name="100" id="100"></a>&#10173; **[100] Démons différenciés**<br><br>
 
+Ce composant assigne aux démons soit leur bonne animation, soit des animations différenciées :
 - Attribue aux nabassus une animation de tanar'ri vert-gris.
 - Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].
 - Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de NWN.
@@ -449,6 +452,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
 
+Ce composant assigne aux diantrefosses l'animation de NWN :
 - Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
 
 &nbsp;
@@ -462,6 +466,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br><br>
 
+Ce composant assigne aux cambions l'animation d'Isair :
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -471,6 +476,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons<br><br>
 
+Ce composant assigne aux alu-démons l'animation de Madae :
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -478,6 +484,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 <a name="400" id="400"></a>&#10173; **[400] Morts-vivants différenciés**<br><br>
 
+Ce composant assigne aux morts_vivants des animations différenciées :
 - Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
 - Attribue aux crânes flottants l'animation de demi-liche.
 - Attribue aux blêmes majeurs l'animation de blême majeure d'IWD.
@@ -487,7 +494,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 - Attribue aux liches majeures l'animation de liche blanche d'IWD.
 - Attribue aux apparitions l'animation de créature brumeuse [<em>NdT : mist creature</em>].
 - Attribue aux revenants l'animation de revenant.
-- Attribue aux démombres et aux ombre démoniaques l'animation d'ombre.
+- Attribue aux démombres et aux ombres démoniaques l'animation d'ombre.
 - Attribue aux âmes en peine l'animation de grande ombre d'IWD.
 - Attribue aux spectres l'animation alternative de grande ombre d'IWD [<em>NdT : large shadow alternate MURKY</em>].
 - Attribue aux ombres l'animation de petite ombre d'IWD.
@@ -510,7 +517,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Leur attribuer l'animation de squelette normal [<em>NdT : jaune</em>].<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Leur attribuer l'animation de combattant squelette.<br><br>
 
-- Attribue l'animation sélectionnée à tous les combattants squelettes.
+Ce composant attribue l'animation sélectionnée à tous les combattants squelettes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -520,6 +527,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Pour certains mendiants.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Pour certains esclaves.<br><br>
 
+Ce composant attribue l'animation de pauvre hère (IWD) à certains mendiants et esclaves.
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -530,7 +538,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
 
-- Attribue toutes les différentes animations de svirfneblin aux gnomes des profondeurs de l'Ombreterre.
+Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes des profondeurs de l'Ombreterre.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -805,6 +813,8 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
   - Simplification du code :
     - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
     - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
+    - Remplacement des variables "*%tsx%*" spécifiques à ia par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods.
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables [*NdT : arrays*] pour faciliter leur mise à jour.
     - Corrections mineures...
   - ...
   - Re-formatage, mise à jour (ajout de nouvelles illustrations d'animations...) et changement du nom des fichiers de documentation en « *infinityanimations-readme-%LANGUAGE%.html* » (Infinity Animations prend désormais en compte la documentation traduite).

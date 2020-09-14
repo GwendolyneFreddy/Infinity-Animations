@@ -1,0 +1,269 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *                         A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E   G E N I E S   C O M P O N E N T   ( 50 )                         *
+ *                                                                                                                                                         *
+ *                 Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-genie.tpa WeiDU routine.                  *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_daos                     :   LISTS vanilla and modded Dao creatures needing to be patched.                                        => line #  33   *
+ *                                    LISTE les créatures Dao du jeu et de mods nécessitant d'être modifiées.                                              *
+ *  - GW_daos_legs                :   LISTS vanilla and modded Daos with legs creatures needing to be patched.                             => line #  58   *
+ *                                    LISTE les créatures Dao avec jambes du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_djinnis                  :   LISTS vanilla and modded Djinnis creatures needing to be patched.                                    => line #  78   *
+ *                                    LISTE les créatures génies du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_efreeti                  :   LISTS vanilla and modded Efreeti creatures needing to be patched.                                    => line # 142   *
+ *                                    LISTE les créatures efrits du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_efreeti_legs             :   LISTS vanilla and modded Efreeti with legs creatures needing to be patched.                          => line # 165   *
+ *                                    LISTE les créatures efrits avec jambes du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_janni                    :   LISTS vanilla and modded Janni creatures needing to be patched.                                      => line # 201   *
+ *                                    LISTE les créatures janni du jeu et de mods nécessitant d'être modifiées.                                            *
+ *  - GW_janni_legs               :   LISTS vanilla and modded Janni with legs creatures needing to be patched.                            => line # 219   *
+ *                                    LISTE les créatures Janni avec jambes du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_marids                   :   LISTS vanilla and modded Marids creatures needing to be patched.                                     => line # 237   *
+ *                                    LISTE les créatures marids du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_marids_legs              :   LISTS vanilla and modded Marids with legs creatures needing to be patched.                           => line # 254   *
+ *                                    LISTE les créatures marids avec jambes du jeu et de mods nécessitant d'être modifiées.                               *
+ * ======================================================================================================================================================= */
+
+/* =============================================================================== *
+ *  ARRAY GW_daos : LISTS vanilla and modded Dao creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------- *
+ *  Daos get the dao animation.                                                    *
+ * =============================================================================== */
+
+ACTION_CLEAR_ARRAY GW_daos
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_daos BEGIN
+
+// BG2
+// ---
+ddguard5                => 1	// Guardian
+gendao01                => 1	// Dao
+genie1	                => 1	// Genie
+trgeni02                => 1	// Taquee
+trgeni03                => 1	// Faafirah
+
+// BP
+// --
+genietrv                => 1	// Genie
+
+END
+
+
+/* ============================================================================================== *
+ *  ARRAY GW_daos_legs : LISTS vanilla and modded Dao with Legs creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------- *
+ *  Daos with legs get the dao_legs animation.                                                    *
+ * ============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_daos_legs
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_daos_legs BEGIN
+
+// BG2
+// ---
+genie02	                => 1	// Genie
+kgenie1	                => 1	// id.
+kgenie2	                => 1	// id.
+trgeni01                => 1	// Khan Zahraa
+
+END
+
+
+/* ======================================================================================= *
+ *  ARRAY GW_daos_legs : LISTS vanilla and modded Djinni creatures needing to be patched.  *
+ * ======================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_djinnis
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_djinnis BEGIN
+
+// BG2
+// ---
+aataqah	                => 1	// Aataqah
+dagenie	                => 1	// Dola Fadoon
+ddguard2                => 1	// Guardian
+ddguard3                => 1	// Guardian
+gendji01                => 1	// Djinni
+gendjn01                => 1	// Noble Djinni
+djinnisu                => 1	// Djinni
+genie03	                => 1	// Genie
+idjinni	                => 1	// id.
+ppdjinn	                => 1	// id.
+ppdjinn2                => 1	// Noble Djinni
+sumdjinn                => 1	// Djinni
+wish01	                => 1	// id.
+wish02	                => 1	// id.
+
+// Fade
+// ----
+e3invis                 => 1	// ???
+
+// Ribald's Genie
+// --------------
+drgenie	                => 1	// Ribald's Genie
+
+// RoT
+entdjin	                => 1	// Djinni
+entdjin3                => 1	// id.
+pladjin	                => 1	// Holy Guardian
+
+// Saerileth
+// ---------
+nshdbud                 => 1	// D'aqilar
+
+// Stratagems
+// ----------
+dw#wish1                => 1	// Djinni
+dw#wish2                => 1	// id.
+dw#wish3                => 1	// id.
+dw#wish4                => 1	// id.
+
+// TDD
+// ---
+caligen3                => 1	// Noble Djinni
+
+// UB
+// --
+u!kgen	                => 1	// Genie
+
+// Unknown mods
+// ------------
+fwsw1h12                => 1	// 
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_efreeti : LISTS vanilla and modded Efreeti creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Efreetis get the efreeti animation.                                                   *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_efreeti
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_efreeti BEGIN
+
+// BG2
+// ---
+ddguard6                => 1	// Guardian
+hellgen	                => 1	// Enslaved Genie
+sumefree                => 1	// Efreeti
+
+// TDD
+// ---
+genogeni                => 1	// Genie
+
+END
+
+
+/* ===================================================================================================== *
+ *  ARRAY GW_efreeti_legs : LISTS vanilla and modded Efreeti with legs creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Efreetis with legs get the efreeti_legs animation.                                                   *
+ * ===================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_efreeti_legs
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_efreeti_legs BEGIN
+
+// BG2
+// ---
+efreetsu                => 1	// Efreeti
+genefn01                => 1	// Noble Efreeti
+genefr01                => 1	// Efreeti
+obsfir01                => 1	// Noble Efreeti
+
+// RoT
+// ---
+uleffy	                => 1	// Efreeti
+
+// TDD
+// ---
+caligen1                => 1	// Noble Efreeti
+caligen2                => 1	// Efreeti
+salam01	                => 1	// Pasha Salam
+salam02	                => 1	// id.
+salam03	                => 1	// id.
+salam04	                => 1	// id.
+salam05	                => 1	// id.
+salam06	                => 1	// id.
+djincre
+
+END
+
+
+/* ================================================================================== *
+ *  ARRAY GW_janni : LISTS vanilla and modded Janni creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------- *
+ *  Jannis get the janni animation.                                                   *
+ * ================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_janni
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_janni BEGIN
+
+// BG2
+// ---
+ddguard1                => 1	// Guardian
+genie01	                => 1	// Genie
+
+END
+
+
+/* ================================================================================================= *
+ *  NOTE unused for the moment (v6.0.0) since it contains one single ref.                            *
+ *  ARRAY GW_janni_legs : LISTS vanilla and modded Janni with legs creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Jannis with legs get the janni_legs animation.                                                   *
+ * ================================================================================================= *
+
+ACTION_CLEAR_ARRAY GW_janniçlegs
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_GW_efreeti_legs BEGIN
+
+// TDD
+// ---
+gencali1                => 1	// Genie
+
+END*/
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_marids : LISTS vanilla and modded Marids creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Marids get the marid animation.                                                     *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_marids
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_marids BEGIN
+
+// BG2
+// ---
+ddguard4                => 1	// Guardian
+genie04	                => 1	// Genie
+
+END
+
+/* =================================================================================================== *
+ *  NOTE unused for the moment (v6.0.0) since it contains one single ref.                              *
+ *  ARRAY GW_marids_legs : LISTS vanilla and modded Marids with legs creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Marids with legs get the marid_legs animation.                                                     *
+ * =================================================================================================== *
+
+ACTION_CLEAR_ARRAY GW_marids_legs
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_marids_legs BEGIN
+
+// TDD
+// ---
+gencali2                => 1	// Genie
+
+END*/
+

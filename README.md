@@ -399,6 +399,7 @@ The installer includes the following components. The number of each is the compo
 
 <a name="25" id="25"></a>&#10173; **[25] Humanoid Animation Fixes**<br><br>
 
+This component fixes humanoid creature files that have wrong animation slots:
 - Male human fighters get the fighter instead of cleric animation
 - Male elf fighters get the fighter instead of cleric animation
 - Male halfling fighters get the fighter instead of cleric animation
@@ -418,6 +419,7 @@ The installer includes the following components. The number of each is the compo
 
 <a name="50" id="50"></a>&#10173; **[50] Distinctive Genies**<br><br>
 
+This component assigns genies distinctive animations:
 - Uses djinn, efreet, dao, jann and marid animations where sensible
 <div align="right"><a href="#components">Back to components list</a></div>
 
@@ -425,6 +427,7 @@ The installer includes the following components. The number of each is the compo
 
 <a name="100" id="100"></a>&#10173; **[100] Distinctive Fiends**<br><br>
 
+This component assigns fiends creatures either their proper animation or new animations:
 - Nabassus get a green-grey tanar'ri animation
 - Chromatic Demon gets a somewhat more colourful base animation
 - Bebiliths (Longer Road and Drizzt Saga only) get the NWN animation
@@ -451,6 +454,7 @@ The installer includes the following components. The number of each is the compo
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[150]** All get the NWN animation<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Some get the NWN animation<br><br>
 
+This component assigns Pit Fiends creatures the NWN animation:
 - Choice of subcomponent (or none); "some" = roughly half, randomly selected
 
 &nbsp;
@@ -461,18 +465,20 @@ The installer includes the following components. The number of each is the compo
 ## 
 
 <a name="210" id="210"></a>&#10173; **[210-230] Cambions get Isair Animation**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All cambions<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some cambions<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** All Cambions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Some Cambions<br><br>
 
+This component assigns Cambions creatures the Isair animation:
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
 <a name="260" id="260"></a>&#10173; **[260-280] Alu-Fiends get Madae Animation**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All alu-fiends<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some alu-fiends<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** All Alu-Fiends<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Some Alu-Fiends<br><br>
 
+This component assigns Alu-Fiends creatures the Madae animation:
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
@@ -480,6 +486,7 @@ The installer includes the following components. The number of each is the compo
 
 <a name="400" id="400"></a>&#10173; **[400] Distinctive Undead**<br><br>
 
+This component assigns undead creatures distinctive animations:
 - Banshees get the wailing virgin animation
 - Floating skulls get the demilich animation
 - Greater ghasts get the IWD greater ghast animation
@@ -512,7 +519,7 @@ The installer includes the following components. The number of each is the compo
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[415]** Skeleton animation<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[420]** Skeleton warrior animation<br><br>
 
-- Assigns the chosen animation to all skeleton warriors
+This component assigns the chosen animation to all skeleton warriors.
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -522,17 +529,18 @@ The installer includes the following components. The number of each is the compo
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[455]** Some beggars<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[460]** Some slaves<br><br>
 
+This component assigns the IWD Seer animation to some beggars and slaves.
 - Same logic as Pit Fiends component
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
-<a name="480" id="480"></a>&#10173; **[480-490] Svirneblin Animations**<br>
+<a name="480" id="480"></a>&#10173; **[480-490] Svirneblins Animations**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
 
-- Uses all svirfneblin variants for Underdark deep gnomes
+This component assigns all IWD svirfneblins animations variants for Underdark deep gnomes
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -833,24 +841,41 @@ The installer includes the following components. The number of each is the compo
     - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
   - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).
-    - Externalized lists of creatures to be patched into arrays (build in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.
-  - [100] Distinctive Fiends ()
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
+  - [50] Distinctive Genies (t-genie.tpa)
+     - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_genies_arrays.tph*" library) for easier maintenance.
+  - [100] Distinctive Fiends (t-fiend.tpa)
     - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
-  - [400] Distinctive Undead, [410-415-420] Skeleton Warriors and [710-720-760-740] More PsT Animations components ()
+    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (one maurezhi was not patched).
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_fiends_arrays.tph*" library) for easier maintenance.
+  - [150-175] Pit Fiends (t-pit_fiend.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
+  - [210-230] Cambions get Isair Animation (t-cambion.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_cambions_arrays.tph*" library) for easier maintenance.
+  - [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_alu_fiends_arrays.tph*" library) for easier maintenance.
+  - [400] Distinctive Undead (t-undead.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_undeads_arrays.tph*" library) for easier maintenance.
+    - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red (ghastsu is a skeleton, not a ghast).
+  - [410-415-420] Skeleton Warriors (t-skelwa.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
     - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
-  - [450-455] Seer animations component ()
+ - [450-455] Seer animations (t-seer.tpa)
+    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
-
-  - [480-490] Svirfneblin Animations component ()
-    - Added t-svi variable used in a single routine for its two sub-components.
+ les créatures suivantes ont été déplacées de la liste mendiants à la liste esclaves
+  - [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
+    - Added "*%t-svi%*" variable used in a single routine for both sub-components.
+    - Fixed soundset clips typos (a few were misspelled *t_sva* and *t_svn* instead of *t-sva* and *t-svn*).
 
   - [710-720-760-740] More Planescape: Torment Animations ()
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+    - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
 
-  - [7000-7010-7020-7030] Moinesse's Avatars for IA component ()
+  - [7000-7010-7020-7030] Moinesse's Avatars for IA ()
     - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
 
-  - [9000] Fix Area Creature References component ()
+  - [9000] Fix Area Creature References ()
     - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
 
   - [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
