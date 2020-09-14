@@ -1,0 +1,486 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *                   A R R A Y S    ( T A B L E S )    :    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 25 )                   *
+ *                                                                                                                                                         *
+ *                 Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-fiend.tpa WeiDU routine.                  *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_nabassus                 :   LISTS vanilla and modded Nabassus creatures needing to be patched.                                   => line #  43   *
+ *                                    LISTE les créatures nabassus du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_bebiliths                :   LISTS modded Bebiliths creatures needing to be patched.                                              => line # 115   *
+ *                                    LISTE les créatures bebiliths de mods nécessitant d'être modifiées.                                                  *
+ *  - GW_bone_fiends              :   LISTS vanilla and modded Bone Fiendss creatures needing to be patched.                               => line # 137   *
+ *                                    LISTE les créatures démons d'os du jeu et de mods nécessitant d'être modifiées.                                      *
+ *  - GW_gelugons                 :   LISTS vanilla and modded Gelugons creatures needing to be patched.                                   => line # 164   *
+ *                                    LISTE les créatures gélugons du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_mariliths_dark           :   LISTS vanilla and modded Mariliths creatures needing to be patched.                                  => line # 198   *
+ *                                    LISTE les créatures mariliths du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - hags_night                  :   LISTS vanilla and modded Night Hags creatures needing to be patched.                                 => line # 227   *
+ *                                    LISTE les créatures Sorcières de la nuit du jeu et de mods nécessitant d'être modifiées.                             *
+ *  - GW_yochlols                 :   LISTS vanilla and modded Yochlols creatures needing to be patched.                                   => line # 248   *
+ *                                    LISTE les créatures yochlols du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_abishais_silver          :   LISTS vanilla and modded Silver Abishais creatures needing to be patched.                            => line # 277   *
+ *                                    LISTE les créatures abishais d'argent du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_abishais_green           :   LISTS vanilla and modded Green Abishais creatures needing to be patched.                             => line # 295   *
+ *                                    LISTE les créatures abishais vertes du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_abishais_red             :   LISTS vanilla and modded Red Abishais creatures needing to be patched.                               => line # 321   *
+ *                                    LISTE les créatures abishais rouges du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_erinyes                  :   LISTS vanilla and modded Erinyes creatures needing to be patched.                                    => line # 360   *
+ *                                    LISTE les créatures erinyes du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_succubi                  :   LISTS vanilla and modded Succubi creatures needing to be patched.                                    => line # 391   *
+ *                                    LISTE les créatures succubes du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_maurezhi                 :   LISTS vanilla and modded Maurezhi creatures needing to be patched.                                   => line # 430   *
+ *                                    LISTE les créatures maurezhi du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_glabrezus                :   LISTS vanilla and modded Glabrezus creatures needing to be patched.                                  => line # 449   *
+ *                                    LISTE les créatures glabrezus du jeu et de mods nécessitant d'être modifiées.                                        *
+ * ======================================================================================================================================================= */
+
+/* ======================================================================================== *
+ *  ARRAY GW_nabassus : LISTS vanilla and modded Nabassus creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Nabassus get the fiend_green animation (green-gray tanar'ri).                           *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_nabassus
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_nabassus BEGIN
+
+// BG
+// --
+"%tutu_var%tanar"       => 1	// Aec'Letec
+
+// BG2
+// ---
+abydem01                => 1	// Tanar'ri
+demnab01                => 1	// Nabassu
+demnab02                => 1	// id.
+demnabsu                => 1	// id.
+enddem04                => 1	// id.
+enddem05                => 1	// id.
+obsdem01                => 1	// Lea'liyl
+obsdem05                => 1	// Nabassu
+pmaster	                => 1	// Master of Thralls
+ppnab01	                => 1	// Nabassu
+ppnab02	                => 1	// id.
+ppnab03	                => 1	// id.
+rumar02	                => 1	// id.
+tanari01                => 1	// Tanar'ri
+udnaba	                => 1	// Nabassu
+
+// BP
+// --
+finnabas                => 1	// Nabassu
+
+// Drizzt Saga
+// -----------
+f_demdrg                => 1	// Greater Tanari
+
+// Kim NPC
+// -------
+barbe2	                => 1	// Greenbeard 
+barbe3	                => 1	// id.
+
+// Refinements
+// -----------
+tg#dem2	                => 1	// Nabassu
+
+// RoT
+// ---
+caddem13                => 1	// Nabassu
+caddem5	                => 1	// id.
+
+// Stratagems
+// ----------
+dw#nabsu                => 1	// Nabassu
+
+// TDD
+// ---
+demnabr1                => 1	// Nabassu
+demnabr2                => 1	// id.
+
+// Unknown mods
+// ------------
+esp04                   => 1	// 
+z#gnab01                => 1	// 
+z#gnabas                => 1	// 
+
+END
+
+
+/* ============================================================================== *
+ *  ARRAY GW_bebiliths : LISTS modded Bebiliths creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------ *
+ *  Bebiliths get the bebilith_nwn animation.                                     *
+ * ============================================================================== */
+
+ACTION_CLEAR_ARRAY GW_bebiliths
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_bebiliths BEGIN
+
+// Drizzt Saga
+// -----------
+f_demspi                => 1	// Demonic Astral Spider
+
+// Unknown mods
+// ------------
+abaia                   => 1	// 
+abaia2                  => 1	// 
+
+END
+
+
+/* ============================================================================================== *
+ *  ARRAY GW_bone_fiends : LISTS vanilla and modded Bone Fiends creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------- *
+ *  Bone Fiends get the osyluth_nwn animation.                                                    *
+ * ============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_bone_fiends
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_bone_fiends BEGIN
+
+// BG2
+// ---
+dbonef01                => 1	// Bone Fiend
+gorbat5	                => 1	// id.
+melsum02                => 1	// id.
+
+// SoS
+// ---
+cbgrbone                => 1	// Greater Bone Fiend
+
+// Wheels of Prophecy - Stratagems
+// -------------------------------
+dw#vibon                 => 1	// Bone Fiend
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_gelugons : LISTS vanilla and modded Gelugons creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Gelugons get the salamander_frost animation.                                            *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_gelugons
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_gelugons BEGIN
+
+// BG2
+// ---
+gordem2	                => 1	// Velithuu
+
+// Atweaks
+// -------
+rr#hgel	                => 1	// Gelugon
+rr#sgelu	            => 1	// id.
+
+// BP Does not seem to be installed???
+// --
+gelugeon	            => 1	// 
+
+// TDD
+// ---
+gelugon1                => 1	// Gelugon
+
+// Unknown mods
+// ------------
+demgelsu	            => 1	// 
+
+END
+
+
+/* =============================================================================================== *
+ *  ARRAY GW_mariliths_dark : LISTS vanilla and modded Mariliths creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------- *
+ *  Some mariliths get the marilith_dark animation.                                                *
+ * =============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_mariliths_dark
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_mariliths_dark BEGIN
+
+// RoT
+// ---
+garmari1                => 1	// Marilith Lord
+garmari2                => 1	// id.
+godmari1                => 1	// id.
+
+// Planar Sphere
+// -------------
+psmari1	                => 1	// Marilith
+psmari2	                => 1	// id.
+psmarile                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_2spe2	                => 1	// Marilith
+
+END
+
+
+/* ============================================================================================ *
+ *  ARRAY GW_hags_night : LISTS vanilla and modded Night Hags creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Night Hags get the hag_night animation.                                                     *
+ * ============================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_hags_night
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_hags_night BEGIN
+
+// Planar Sphere
+// -------------
+pshag	                => 1	// Night Hag
+
+// TDD
+// ---
+nighthag                => 1	// Night Hag
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_yochlols : LISTS vanilla and modded Yochlols creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Yochlols get a darkened otyugh animation (except those in drow form).                   *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_yochlols
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_yochlols BEGIN
+
+// BG2
+// ---
+yochlo01                => 1	// Yochlol
+
+// TDD
+// ---
+yachol	                => 1	// Yochlol
+
+// Viconia Friendship
+// ------------------
+i#vyoch	                => 1	// Yochlol
+
+// Fishing for Trouble
+// -------------------
+ysdemon fft ???
+
+END
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_abishais_silver : LISTS vanilla and modded Silver Abishais creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Silver Abishais get the abishai_white animation.                                                      *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_abishais_silver
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_abishais_silver BEGIN
+
+// TDD
+// ---
+wardabi1                => 1	// Silver Abishai
+wardabi2                => 1	// id.
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_abishais_green : LISTS vanilla and modded Green Abishais creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Green Abishais get the abishai_green animation.                                                     *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_abishais_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_abishais_green BEGIN
+
+// BP Does not seem to be installed
+// --
+babi                    => 1	// Green Abishai 
+
+// RoT
+// ---
+remorhaz                => 1	// Abishai
+
+// TDD
+// ---
+duegabis                => 1	// Green Abishai Guardian
+grenabi1                => 1	// Green Abishai
+
+END
+
+
+/* ================================================================================================ *
+ *  ARRAY GW_abishais_red : LISTS vanilla and modded Red Abishais creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Red Abishais get the abishai_red animation.                                                     *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_abishais_red
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_abishais_red BEGIN
+
+// BG2
+// ---
+abisred1                => 1	// Abishai
+demabi01                => 1	// id.
+
+// BP
+// --
+rabi                    => 1	// Does not seem to be installed
+redabi01                => 1	// Red Abishai
+
+// Planar Sphere
+// -------------
+psbaat02                => 1	// Baatezu
+psbaat2a                => 1	// id.
+
+// RoT
+// ---
+abishai1                => 1	// Abishai
+godabis1                => 1	// Abishai Almu'd
+godabis2                => 1	// Abishai Mala'nid
+remorle	                => 1	// Abishai Leader
+
+// Saerileth
+// ---------
+nsabish                 => 1	// Abishai
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_erinyes : LISTS vanilla and modded Erinyes creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Erinyes get wings and the fighter_female_elf animation.                               *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_erinyes
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_erinyes BEGIN
+
+// BG2
+// ---
+deriny01                => 1	// Erinyes
+gorbat2	                => 1	// id.
+gorwom02                => 1	// The Huntress
+
+// Ascension & BP
+// --------------
+jumjum                  => 1	// Il-Khan Medusa & Lashar'ra
+
+// Planar Sphere
+// -------------
+psbaat03                => 1	// Baatezu Stalker
+
+END
+
+/* Other Erinyes get the thief_female_elf (TDD)
+// --------------------------------------------
+wardtief                => 1	// Erinyes */
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_succubi : LISTS vanilla and modded Succubi creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Succubi get the succubus_nwn animation.                                               *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_succubi
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_succubi BEGIN
+
+// BG2
+// ---
+demsuc01                => 1	// Succubus
+gorsuc01                => 1	// id.
+gortan2	                => 1	// id.
+gorwom01                => 1	// Nalmissra
+
+// Ascension
+// ---------
+finsucc                 => 1	// Succubus
+
+// Planar Sphere
+// -------------
+pstana02                => 1	// Tanar'ri Stalker
+pstana2a                => 1	// id.
+
+// Saerileth
+// ---------
+nssuc01                 => 1	// Delilah
+nssuc02                 => 1	// Succubus
+
+// Unknown mods
+// ------------
+sd_hrzr2                => 1	// 
+yugsuc01                => 1	// 
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_maurezhi : LISTS vanilla and modded Maurezhi creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Maurezhi get the maurezhi animation.                                                    *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_maurezhi
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_maurezhi BEGIN
+
+// BG2
+// ---
+demmau01                => 1	// Maurezhi
+gortan6	                => 1	// id.
+obsdem04                => 1	// id.
+
+END
+
+
+/* ========================================================================================= *
+ *  ARRAY GW_glabrezus : LISTS vanilla and modded Glabrezu creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------- *
+ *  Glabrezus get the proper animation (instead of balor or cornugon).                       *
+ * ========================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_glabrezus
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_glabrezus BEGIN
+
+// BG2
+// ---
+demgla01                => 1	// Glabrezu
+demglab	                => 1	// id.
+demglab2                => 1	// id.
+demglasu                => 1	// id.
+enddem01                => 1	// id.
+enddem02                => 1	// id.
+jondem01                => 1	// id.
+jondem03                => 1	// id.
+jondem05                => 1	// id.
+
+// BP Does not seem to be installed
+// --
+gglab                => 1	// 
+
+// Tactics
+// -------
+ily5	                => 1	// Neophyte Glabrezu
+
+// TDD
+// ---
+eastdem1                => 1	// Glabrezu
+eastdem3                => 1	// id.
+eastdem5                => 1	// id.
+eastdem6                => 1	// id.
+eastdem8                => 1	// id.
+
+END

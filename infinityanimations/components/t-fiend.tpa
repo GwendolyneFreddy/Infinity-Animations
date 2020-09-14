@@ -1,6 +1,42 @@
-/* ================================================== *
- *  INFINITY ANIMATIONS : Distinctive Fiends routine  *
- * ================================================== */
+/* ============================================================================================================================================================ *
+ *  v 6.0.0                                                                                                                                                     *
+ *                                              D I S T I N C T I V E   F I E N D S   C O M P O N E N T   ( 1 0 0 )                                             *
+ *                                                                                                                                                              *
+ * ============================================================================================================================================================ *
+ *  This component assigns fiends creatures either their proper animation or new animations.                                                                    *
+ * ============================================================================================================================================================ *
+ *  change-log:                                                                                                                                                 *
+ *  -----------                                                                                                                                                 *
+ *      - Externalized lists of creatures to be patched into arrays (build in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
+ *      - Replaced specific %tsu% ia variables with more compatible %tutu_var% variables.                                                                       *
+ *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#42).                                                                                 *
+ *      - Integrated Lollorian's patch to correct loops: one maurezhi was not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).  *
+ *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                       *
+ *      - Rewrote animation ID patching to solve EE games compatibility:                                                                                        *
+          replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                     *
+ * ============================================================================================================================================================ */
+
+/* ---------------------------------------------------------- *
+ *                    CREATURES                         line  *
+ * ---------------------------------------------------------- *
+ *  Nabassus get the green-gray tanar'ri animation    #   66  *
+ *  Chromatic Demon (makes him somewhat chromatic)    #  115  *
+ *  Bebiliths get the bebilith_nwn animation          #  138  *
+ *  Bone Fiends get the osyluth_nwn animation         #  165  *
+ *  Gelugons get the salamander_frost animation       #  194  *
+ *  Some Mariliths get the marilith_dark animation    #  229  *
+ *  Night Hags get the hag_night animation            #  261  *
+ *  Yochlols get a darkened otyugh animation          #  321  *
+ *  Silver Abishais get the abishai_white animation   #  354  *
+ *  Manes get the drowned_dead animation              #  386  *
+ *  Green Abishais get the abishai_green animation    #  399  *
+ *  Red Abishais get the abishai_red animation        #  432  *
+ *  Erinyes get wings and elf animations              #  465  *
+ *  Succubi get the succubus_nwn animation            #  596  *
+ *  Kirinhale gets the succubus_nwn animation         #  637  *
+ *  Maurezhi get the maurezhi animation               #  658  *
+ *  Glabrezus get the proper animation                #  694  *
+ * ---------------------------------------------------------- */
 
 SILENT
 /* DEPRECATED as of SCSII v13: "Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way"
@@ -20,39 +56,48 @@ ACTION_IF FILE_EXISTS_IN_GAME ~dw#nabsu.cre~ BEGIN
 END
 */
 
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_fiends_arrays.tph~
+
+
 /* ================================================ *
  *  Nabassus get the green-gray tanar'ri animation  *
  * ================================================ */
-ACTION_FOR_EACH nb IN ~abydem01~ ~barbe2~ ~barbe3~ ~caddem13~ ~caddem5~ ~demnab01~ ~demnab02~ ~demnabr1~ ~demnabr2~ ~demnabsu~ ~dw#nabsu~ ~enddem04~ ~enddem05~ ~esp04~ ~f_demdrg~ ~finnabas~ ~obsdem01~ ~obsdem05~ ~pmaster~ ~ppnab01~ ~ppnab02~ ~ppnab03~ ~rumar02~ ~%tsu%tanar~ ~tanari01~ ~tg#dem2~ ~udnaba~ ~z#gnab01~ ~z#gnabas~ BEGIN
+ACTION_PHP_EACH GW_nabassus AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~FIEND_GREEN~) // classical 0x1001 - EE 0x1103
-				WRITE_BYTE 0x2d 36						// Minor color (LIGHT_DIRTY_YELLOW)
-				WRITE_BYTE 0x2e 20						// Major color (DARK_MOLDY_GREEN)
-				WRITE_BYTE 0x2f 20						// Skin color
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~FIEND_GREEN~) // original 0x1001 - EE 0x1103
+				WRITE_BYTE 0x2d 36      // Minor color (LIGHT_DIRTY_YELLOW)
+				WRITE_BYTE 0x2e 20      // Major color (DARK_MOLDY_GREEN)
+				WRITE_BYTE 0x2f 20      // Skin color
 				PATCH_IF BYTE_AT 0x234 < 13 BEGIN
-					WRITE_BYTE 0x234 13					// Level 1
+					WRITE_BYTE 0x234 13 // Level 1
 				END
-				WRITE_BYTE 0x237 1						// Sex (male)
-				WRITE_BYTE 0x271 255					// General (monster)
-				WRITE_BYTE 0x272 121					// Race (fiend)
-				WRITE_BYTE 0x273 160					// Class (tanar'ri)
-				READ_BYTE 0x275 gd						// Gender
-				PATCH_IF (gd != 6) AND (gd != 9) BEGIN	// If not summoned
-					WRITE_BYTE 0x275 1					// male
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 160    // Class (tanar'ri)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
 				END
-				WRITE_BYTE 0x27b 51						// Alignment (chaotic evil by definition)
+				WRITE_BYTE 0x27b 51     // Alignment (chaotic evil by definition)
 				LPF DELETE_CRE_EFFECT
-					INT_VAR opcode_to_delete = 51		// Strong-dark by RGB
+					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
-				SAY INITIAL_MEETING @506				// Who disturbs me? [T-NAB04]
-				SAY MORALE @507							// Rawrr! [T-NAB03]
-				SAY UNHAPPY_BREAKING @507				// Rawrr! [T-NAB03]
-				SAY BATTLE_CRY1 @508					// I will rend your soul! [T-NAB05]
-				SAY BATTLE_CRY2 @509					// Your pain shall be eternal! [T-NAB06]
+				SAY INITIAL_MEETING @10101  // Who disturbs me? [t-nab04]
+				SAY MORALE @507             // Rawrr! [t-nab03]
+				SAY UNHAPPY_BREAKING @10102 // Rawrr! [t-nab03]
+				SAY BATTLE_CRY1 @10103      // I will rend your soul! [t-nab05]
+				SAY BATTLE_CRY2 @10104      // Your pain shall be eternal! [t-nab06]
 				WRITE_LONG BATTLE_CRY3 (0 - 1)
 				WRITE_LONG BATTLE_CRY4 (0 - 1)
 				WRITE_LONG BATTLE_CRY5 (0 - 1)
@@ -60,165 +105,194 @@ ACTION_FOR_EACH nb IN ~abydem01~ ~barbe2~ ~barbe3~ ~caddem13~ ~caddem5~ ~demnab0
 				WRITE_LONG ATTACK2 (0 - 1)
 				WRITE_LONG DAMAGE (0 - 1)
 				WRITE_LONG DYING (0 - 1)
-				SAY SELECT_COMMON1 @507					// Rawrr! [T-NAB03]
-				SAY SELECT_COMMON2 @506					// Who disturbs me? [T-NAB04]
+				SAY SELECT_COMMON1 @10102   // Rawrr! [t-nab03]
+				SAY SELECT_COMMON2 @10101   // Who disturbs me? [t-nab04]
 				WRITE_LONG SELECT_COMMON3 (0 - 1)
 			END
 		BUT_ONLY
-	END
-END
 
-/* ================================================ *
- *  Chromatic Demon (makes him somewhat chromatic)  *
- * ================================================ */
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_nabassus
+
+
+/* ============================================================================== *
+ *  Chromatic Demon gets the fiend_blue animation (makes him somewhat chromatic)  *
+ * ============================================================================== */
 COPY_EXISTING ~gorchr.cre~ ~override~
 	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 	PATCH_IF valid BEGIN
 		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~FIEND_BLUE~) // classical 0x1002 - EE 0x1102
-		WRITE_BYTE 0x2d 50		// Minor color (DARK_YELLOW)
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~FIEND_BLUE~) // original 0x1002 - EE 0x1102
+		WRITE_BYTE 0x2d 50      // Minor color (DARK_YELLOW)
 		WRITE_BYTE 0x2e 58		// Major color (DARK_BLUE)
-		WRITE_BYTE 0x2f 58		// Skin color
-		WRITE_BYTE 0x275 1		// Gender (male)
-		WRITE_BYTE 0x273 160	// Class (tanar'ri)
+		WRITE_BYTE 0x2f 58      // Skin color
+		WRITE_BYTE 0x275 1      // Gender (male)
+		WRITE_BYTE 0x273 160    // Class (tanar'ri)
 	END
 BUT_ONLY
+
 
 /* ========================================== *
  *  Bebiliths get the bebilith_nwn animation  *
  * ========================================== */
-ACTION_FOR_EACH nb IN ~abaia~ ~abaia2~ ~f_demspi~ BEGIN
+ACTION_PHP_EACH GW_bebiliths AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5032 // Animation ID (bebilith_nwn)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BEBILITH_NWN~) // classical 0x5032 - EE none for the moment
-				READ_BYTE 0x237 sx		// Sex
-				PATCH_IF sx > 4 BEGIN	// If invalid
-					WRITE_BYTE 0x237 2	// female
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BEBILITH_NWN~) // original 0x5032 - EE depends on installation
+				READ_BYTE  0x237 sx     // Sex
+				// If invalid
+				PATCH_IF sx > 4 BEGIN
+					WRITE_BYTE 0x237 2  // female
 				END
-				WRITE_BYTE 0x271 255	// General (monster)
+				WRITE_BYTE 0x271 255    // General (monster)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_bebiliths
+
 
 /* =========================================== *
  *  Bone Fiends get the osyluth_nwn animation  *
  * =========================================== */
-ACTION_FOR_EACH nb IN ~cbgrbone~ ~dbonef01~ ~dw#vibon~ ~gorbat5~ ~melsum02~ BEGIN
+ACTION_PHP_EACH GW_bone_fiends AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5271 // Animation ID (osyluth_nwn)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~OSYLUTH_NWN~) // classical 0x5271 - EE none for the moment
-				WRITE_BYTE 0x2d 83		// Minor color (DARK_BLUISH_GRAY)
-				WRITE_BYTE 0x2e 28		// Major color (BLUISH_SILVER)
-				WRITE_BYTE 0x2f 28		// Skin color
-				WRITE_BYTE 0x272 121	// Race (fiend)
-				WRITE_BYTE 0x273 179	// Class (devil)
-				WRITE_BYTE 0x275 4		// Gender (neither)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~OSYLUTH_NWN~) // original 0x5271 - EE depends on installation
+				WRITE_BYTE 0x2d 83      // Minor color (DARK_BLUISH_GRAY)
+				WRITE_BYTE 0x2e 28      // Major color (BLUISH_SILVER)
+				WRITE_BYTE 0x2f 28      // Skin color
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 179    // Class (devil)
+				WRITE_BYTE 0x275 4      // Gender (neither)
 				LPF DELETE_CRE_EFFECT
 					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_bone_fiends
+
 
 /* ============================================= *
  *  Gelugons get the salamander_frost animation  *
  * ============================================= */
-ACTION_FOR_EACH nb IN ~demgelsu~ ~gelugeon~ ~gelugon1~ ~gordem2~ ~rr#hgel~ ~rr#sgelu~ BEGIN
+ACTION_PHP_EACH GW_gelugons AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~ // These CREs need fixing because of hosed slots
-			WRITE_SHORT 0x28 0xe910					// Animation ID (salamander_frost)
-			WRITE_BYTE 0x2f 57						// Skin color (LIGHT_BLUE)
-			WRITE_BYTE 0x237 1						// Sex (male)
-			WRITE_BYTE 0x271 255					// General (monster)
-			READ_BYTE 0x275 gd						// Gender
-			PATCH_IF (gd != 6) AND (gd != 9) BEGIN	// If not summoned
-				WRITE_BYTE 0x275 1					// male
+			WRITE_SHORT 0x28 0xe910 // Animation ID (salamander_frost)
+			WRITE_BYTE 0x2f 57      // Skin color (LIGHT_BLUE)
+			WRITE_BYTE 0x237 1      // Sex (male)
+			WRITE_BYTE 0x271 255    // General (monster)
+			READ_BYTE  0x275 gd     // Gender
+			// If not summoned
+			PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+				WRITE_BYTE 0x275 1      // male
 			END
-			SAY BATTLE_CRY1 ~~ [T-GEL01A]
-			SAY BATTLE_CRY2 ~~ [T-GEL01B]
-			SAY BATTLE_CRY3 ~~ [T-GEL01C]
-			SAY ATTACK1 ~~ [T-GEL03]
-			SAY DAMAGE ~~ [T-GEL07]
-			SAY DYING ~~ [T-GEL09]
-			SAY SELECT_COMMON1 ~~ [T-GEL02A]
-			SAY SELECT_COMMON2 ~~ [T-GEL02B]
-			SAY SELECT_COMMON3 ~~ [T-GEL02C]
+			SAY BATTLE_CRY1 ~~ [t-gel01a]
+			SAY BATTLE_CRY2 ~~ [t-gel01b]
+			SAY BATTLE_CRY3 ~~ [t-gel01c]
+			SAY ATTACK1 ~~ [t-gel03]
+			SAY DAMAGE ~~ [t-gel07]
+			SAY DYING ~~ [t-gel09]
+			SAY SELECT_COMMON1 ~~ [t-gel02a]
+			SAY SELECT_COMMON2 ~~ [t-gel02b]
+			SAY SELECT_COMMON3 ~~ [t-gel02c]
 		BUT_ONLY
-	END
-END
 
-/* ========================================== *
- *  Gelugons get the marilith_dark animation  *
- * ========================================== */
-ACTION_FOR_EACH nb IN ~garmari1~ ~garmari2~ ~godmari1~ ~psmari1~ ~psmari2~ ~psmarile~ ~z_2spe2~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_gelugon
+
+
+/* ================================================ *
+ *  Some mariliths get the marilith_dark animation  *
+ * ================================================ */
+ACTION_PHP_EACH GW_mariliths_dark AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_SHORT 0x28 0x5052		// Animation ID (marilith_dark)
-//			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH_DARK~) // classical 0x5052 - EE none for the moment
-			WRITE_BYTE 0x2d 56			// Minor color (DARK_TURQUOISE)
-			WRITE_BYTE 0x2e 63			// Major color (LIGHT_GRAY)
-			WRITE_BYTE 0x2f 63			// Skin color
-			WRITE_BYTE 0x237 2			// Sex (female)
-			WRITE_BYTE 0x271 255		// General (monster)
-			WRITE_BYTE 0x275 2			// Gender (female)
-			SAY MORALE #61765			// No! Nooo! I must be away! [UNEARF08]
-			SAY UNHAPPY_BREAKING #61765	// No, no, I must be away! [UNEARF08]
-			SAY BATTLE_CRY1 #61761		// I shall enjoy gutting you like the dog you are... [UNEARF04]
-			SAY BATTLE_CRY2 #61760		// Death will only be the beginning for you... [UNEARF03]
-			SAY BATTLE_CRY3 #61762		// Now the time has come for you to pay... [UNEARF05]
-			SAY SELECT_COMMON1 #61758	// Your death lies here, fool! [UNEARF01]
-			SAY SELECT_COMMON2 #61759	// This is your end, I assure you. [UNEARF02]
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH_DARK~) // original 0x5052 - EE depends on installation
+			WRITE_BYTE 0x2d 56          // Minor color (DARK_TURQUOISE)
+			WRITE_BYTE 0x2e 63          // Major color (LIGHT_GRAY)
+			WRITE_BYTE 0x2f 63          // Skin color
+			WRITE_BYTE 0x237 2          // Sex (female)
+			WRITE_BYTE 0x271 255        // General (monster)
+			WRITE_BYTE 0x275 2          // Gender (female)
+			SAY MORALE #61765           // No! Nooo! I must be away! [UNEARF08]
+			SAY UNHAPPY_BREAKING #61765 // No, no, I must be away! [UNEARF08]
+			SAY BATTLE_CRY1 #61761      // I shall enjoy gutting you like the dog you are... [UNEARF04]
+			SAY BATTLE_CRY2 #61760      // Death will only be the beginning for you... [UNEARF03]
+			SAY BATTLE_CRY3 #61762      // Now the time has come for you to pay... [UNEARF05]
+			SAY SELECT_COMMON1 #61758   // Your death lies here, fool! [UNEARF01]
+			SAY SELECT_COMMON2 #61759   // This is your end, I assure you. [UNEARF02]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_mariliths_dark
+
 
 /* ======================================== *
  *  Night Hags get the hag_night animation  *
  * ======================================== */
-ACTION_FOR_EACH nb IN ~nighthag~ ~pshag~ BEGIN
+ACTION_PHP_EACH GW_hags_night AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3akg1.bam~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HAG_NIGHT~) // classical 0x5b0a - EE 0x7f5c
-				WRITE_BYTE 0x2d 43			// Minor color (DARK_BEIGE)
-				WRITE_BYTE 0x2e 65			// Major color (REALLY_DARK_GRAY)
-				WRITE_BYTE 0x2f 18			// Skin color (BLUE)
-				WRITE_BYTE 0x32 64			// Hair color (DARK_GRAY)
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x271 255		// General (monster)
-				WRITE_BYTE 0x275 2			// Gender (female)
-				WRITE_BYTE 0x272 121		// Race (fiend)
-				WRITE_BYTE 0x27b 35			// Alignment (neutral evil by definition)
-				SAY INITIAL_MEETING @510	// Well... hello, my pretty! [T-HAG01]
-				SAY MORALE ~~ [T-HAG66B]
-				SAY UNHAPPY_BREAKING ~~ [T-HAG66B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HAG_NIGHT~) // original 0x5b0a - EE 0x7f5c
+				WRITE_BYTE 0x2d 43      // Minor color (DARK_BEIGE)
+				WRITE_BYTE 0x2e 65      // Major color (REALLY_DARK_GRAY)
+				WRITE_BYTE 0x2f 18      // Skin color (BLUE)
+				WRITE_BYTE 0x32 64      // Hair color (DARK_GRAY)
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 255    // General (monster)
+				WRITE_BYTE 0x275 2      // Gender (female)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x27b 35     // Alignment (neutral evil by definition)
+				SAY INITIAL_MEETING @10110 // Well... hello, my pretty! [t-hag01]
+				SAY MORALE ~~ [t-hag66b]
+				SAY UNHAPPY_BREAKING ~~ [t-hag66b]
 				WRITE_LONG LEADER (0 - 1)
 				WRITE_LONG TIRED (0 - 1)
 				WRITE_LONG BORED (0 - 1)
-				SAY BATTLE_CRY1 @511		// Your bones and blood will blanket my garden. [T-HAG77]
-				SAY BATTLE_CRY2 ~~ [T-HAG66C]
+				SAY BATTLE_CRY1 @10111     // Your bones and blood will blanket my garden. [t-hag77]
+				SAY BATTLE_CRY2 ~~ [t-hag66c]
 				WRITE_LONG BATTLE_CRY3 (0 - 1)
-				SAY ATTACK1 ~~ [T-HAG06A]
-				SAY DAMAGE ~~ [T-HAG66A]
-				SAY DYING @512				// Off with ye. Dead I am. [T-HAG90A]
+				SAY ATTACK1 ~~ [t-hag06a]
+				SAY DAMAGE ~~ [t-hag66a]
+				SAY DYING @10112           // Off with ye. Dead I am. [t-hag90a]
 				WRITE_LONG HURT (0 - 1)
-				SAY SELECT_COMMON1 @513		// Do not push me! [T-HAG13]
-				SAY SELECT_COMMON2 ~~ [T-HAG06B]
+				SAY SELECT_COMMON1 @10113  // Do not push me! [t-hag13]
+				SAY SELECT_COMMON2 ~~ [t-hag06b]
 				WRITE_LONG SELECT_COMMON3 (0 - 1)
 				WRITE_LONG SELECT_ACTION1 (0 - 1)
 				WRITE_LONG SELECT_ACTION2 (0 - 1)
@@ -231,65 +305,82 @@ ACTION_FOR_EACH nb IN ~nighthag~ ~pshag~ BEGIN
 				WRITE_LONG INVENTORY_FULL (0 - 1)
 				WRITE_LONG PICKED_POCKET (0 - 1)
 				WRITE_LONG HIDDEN_IN_SHADOWS (0 - 1)
-				SAY SPELL_DISRUPTED ~~ [T-HAG66B]
+				SAY SPELL_DISRUPTED ~~ [t-hag66b]
 				WRITE_LONG SET_A_TRAP (0 - 1)
 				WRITE_LONG EXISTANCE5 (0 - 1)
 			END
 		BUT_ONLY
-	END
-END
 
-/* ==================================================================================== *
- *  Yochlols: Assigns yochlols a darkened otyugh animation (except those in drow form)  *
- * ==================================================================================== */
-ACTION_FOR_EACH nb IN ~i#vyoch~ ~yachol~ ~yochlo01~ ~ysdemon~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY hags_night
+
+
+/* ====================================================================== *
+ *  Yochlols get a darkened otyugh animation (except those in drow form)  *
+ * ====================================================================== */
+ACTION_PHP_EACH GW_yochlols AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~YOCHLOL~) // classical 0x5fdd - EE 0x7f43
-				WRITE_BYTE 0x2d 60		// Minor color (DARK_PURPLE)
-				WRITE_BYTE 0x2e 41		// Major color (MEDIUM_BROWN)
-				WRITE_BYTE 0x2f 41		// Skin color
-				WRITE_BYTE 0x237 2		// Sex (female)
-				WRITE_BYTE 0x271 255	// General (monster)
-				READ_BYTE 0x275 gd		// Gender
-				PATCH_IF (gd != 6) AND (gd != 9) BEGIN // If not summoned
-					WRITE_BYTE 0x275 2	// female
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~YOCHLOL~) // original 0x5fdd - EE 0x7f43
+				WRITE_BYTE 0x2d 60      // Minor color (DARK_PURPLE)
+				WRITE_BYTE 0x2e 41      // Major color (MEDIUM_BROWN)
+				WRITE_BYTE 0x2f 41      // Skin color
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
 				END
-				WRITE_BYTE 0x272 121	// Race (fiend)
-				WRITE_BYTE 0x273 160	// Class (tanar'ri)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 160    // Class (tanar'ri)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_yochlols
+
 
 /* ================================================= *
  *  Silver Abishais get the abishai_white animation  *
  * ================================================= */
-ACTION_FOR_EACH nb IN ~wardabi1~ ~wardabi2~ BEGIN
+ACTION_PHP_EACH GW_abishais_silver AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_WHITE~) // classical 0x5249 - EE 0xe28b
-				WRITE_BYTE 0x2d 79		// Minor color (LIGHT_SILVER)
-				WRITE_BYTE 0x2e 105		// Major color (OFF_WHITE)
-				WRITE_BYTE 0x2f 105		// Skin color
-				SAY BATTLE_CRY1 ~~ [T-ABI01A]
-				SAY BATTLE_CRY2 ~~ [T-ABI02A]
-				SAY BATTLE_CRY3 ~~ [T-ABI08A]
-				SAY ATTACK1 ~~ [T-ABI03A]
-				SAY DAMAGE ~~ [T-ABI07A]
-				SAY DYING ~~ [T-ABI09A]
-				SAY SELECT_COMMON1 ~~ [T-ABI01A]
-				SAY SELECT_COMMON2 ~~ [T-ABI02A]
-				SAY SELECT_COMMON3 ~~ [T-ABI04A]
-				SAY SPELL_DISRUPTED ~~ [T-ABI10A]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_WHITE~) // original 0x5249 - EE 0xe28b
+				WRITE_BYTE 0x2d 79  // Minor color (LIGHT_SILVER)
+				WRITE_BYTE 0x2e 105 // Major color (OFF_WHITE)
+				WRITE_BYTE 0x2f 105 // Skin color
+				SAY BATTLE_CRY1 ~~ [t-abi01a]
+				SAY BATTLE_CRY2 ~~ [t-abi02a]
+				SAY BATTLE_CRY3 ~~ [t-abi08a]
+				SAY ATTACK1 ~~ [t-abi03a]
+				SAY DAMAGE ~~ [t-abi07a]
+				SAY DYING ~~ [t-abi09a]
+				SAY SELECT_COMMON1 ~~ [t-abi01a]
+				SAY SELECT_COMMON2 ~~ [t-abi02a]
+				SAY SELECT_COMMON3 ~~ [t-abi04a]
+				SAY SPELL_DISRUPTED ~~ [t-abi10a]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_abishais_silver
+
 
 /* ====================================== *
  *  Manes get the drowned_dead animation  *
@@ -297,284 +388,327 @@ END
 COPY_EXISTING ~mane.cre~ ~override~
               ~obsdem02.cre~ ~override~
 	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DROWNED_DEAD~) // classical 0x5286 - EE 0xe25f
-		WRITE_BYTE 0x272 121	// Race (fiend)
-		WRITE_BYTE 0x273 160	// Class (tanar'ri)
+		WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DROWNED_DEAD~) // original 0x5286 - EE 0xe25f
+		WRITE_BYTE 0x272 121 // Race (fiend)
+		WRITE_BYTE 0x273 160 // Class (tanar'ri)
 	END
 BUT_ONLY
+
 
 /* ================================================ *
  *  Green Abishais get the abishai_green animation  *
  * ================================================ */
-ACTION_FOR_EACH nb IN ~babi~ ~duegabis~ ~grenabi1~ ~remorhaz~ BEGIN
+ACTION_PHP_EACH GW_abishais_green AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_GREEN~) // classical 0x5b05 - EE 0x7f59
-				WRITE_BYTE 0x2d 51		// Minor color (DARK_OLIVE_GREEN)
-				WRITE_BYTE 0x2e 54		// Major color (DARK_GREEN)
-				WRITE_BYTE 0x2f 54		// Skin color
-				SAY BATTLE_CRY1 ~~ [T-ABI01]
-				SAY BATTLE_CRY2 ~~ [T-ABI02]
-				SAY ATTACK1 ~~ [T-ABI03]
-				SAY DAMAGE ~~ [T-ABI06]
-				SAY DYING ~~ [T-ABI05]
-				SAY SELECT_COMMON1 ~~ [T-ABI01]
-				SAY SELECT_COMMON2 ~~ [T-ABI02]
-				SAY SPELL_DISRUPTED ~~ [T-ABI04]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_GREEN~) // original 0x5b05 - EE 0x7f59
+				WRITE_BYTE 0x2d 51  // Minor color (DARK_OLIVE_GREEN)
+				WRITE_BYTE 0x2e 54  // Major color (DARK_GREEN)
+				WRITE_BYTE 0x2f 54  // Skin color
+				SAY BATTLE_CRY1 ~~ [t-abi01]
+				SAY BATTLE_CRY2 ~~ [t-abi02]
+				SAY ATTACK1 ~~ [t-abi03]
+				SAY DAMAGE ~~ [t-abi06]
+				SAY DYING ~~ [t-abi05]
+				SAY SELECT_COMMON1 ~~ [t-abi01]
+				SAY SELECT_COMMON2 ~~ [t-abi02]
+				SAY SPELL_DISRUPTED ~~ [t-abi04]
 				LPF DELETE_CRE_EFFECT
 					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_abishais_green
+
 
 /* ============================================ *
  *  Red Abishais get the abishai_red animation  *
  * ============================================ */
-ACTION_FOR_EACH nb IN ~abishai1~ ~abisred1~ ~demabi01~ ~godabis1~ ~godabis2~ ~nsabish~ ~psbaat02~ ~psbaat2a~ ~rabi~ ~redabi01~ ~remorle~ BEGIN
+ACTION_PHP_EACH GW_abishais_red AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_RED~) // classical 0x5b06 - EE 0x7f5a
-				WRITE_BYTE 0x2d 51		// Minor color (DARK_OLIVE_GREEN)
-				WRITE_BYTE 0x2e 46		// Major color (RED)
-				WRITE_BYTE 0x2f 46		// Skin color
-				SAY BATTLE_CRY1 ~~ [T-ABI01]
-				SAY BATTLE_CRY2 ~~ [T-ABI02]
-				SAY ATTACK1 ~~ [T-ABI04]
-				SAY DAMAGE ~~ [T-ABI07]
-				SAY DYING ~~ [T-ABI08]
-				SAY SELECT_COMMON1 ~~ [T-ABI01]
-				SAY SELECT_COMMON2 ~~ [T-ABI02]
-				SAY SPELL_DISRUPTED ~~ [T-ABI03]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_RED~) // original 0x5b06 - EE 0x7f5a
+				WRITE_BYTE 0x2d 51  // Minor color (DARK_OLIVE_GREEN)
+				WRITE_BYTE 0x2e 46  // Major color (RED)
+				WRITE_BYTE 0x2f 46  // Skin color
+				SAY BATTLE_CRY1 ~~ [t-abi01]
+				SAY BATTLE_CRY2 ~~ [t-abi02]
+				SAY ATTACK1 ~~ [t-abi04]
+				SAY DAMAGE ~~ [t-abi07]
+				SAY DYING ~~ [t-abi08]
+				SAY SELECT_COMMON1 ~~ [t-abi01]
+				SAY SELECT_COMMON2 ~~ [t-abi02]
+				SAY SPELL_DISRUPTED ~~ [t-abi03]
 				LPF DELETE_CRE_EFFECT
 					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_abishais_red
+
 
 /* ====================================== *
  *  Erinyes get wings and elf animations  *
  * ====================================== */
+
+// Install wings
+// -------------
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~wings01.itm~ BEGIN
+
 	COPY ~infinityanimations/wings~ ~override~
 
 	COPY ~infinityanimations/items/wings01.itm~ ~override~
-		SAY NAME1 @514 // Wings
-		SAY NAME2 @514
-		SAY UNIDENTIFIED_DESC @515 // These soft and feathered wings seem to be fashioned in a celestial design.
-		SAY DESC @515
+		SAY NAME1 @10121 // ~Wings~
+		SAY NAME2 @10121
+		SAY UNIDENTIFIED_DESC @10122
+		SAY DESC @10122
+
 END
 
 // Erinyes get the fighter_female_elf animation
 // --------------------------------------------
-ACTION_FOR_EACH nb IN ~deriny01~ ~gorbat2~ ~gorwom02~ ~jumjum~ ~psbaat03~ BEGIN
+ACTION_PHP_EACH GW_erinyes AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x6111			// Animation ID (fighter_female_elf)
-				WRITE_BYTE 0x2f 113				// Skin color (FOG)
-				WRITE_BYTE 0x32 0				// Hair color (RUST-TINTED_BLACK)
+				WRITE_SHORT 0x28 0x6111 // Animation ID (fighter_female_elf)
+				WRITE_BYTE 0x2f 113     // Skin color (FOG)
+				WRITE_BYTE 0x32 0       // Hair color (RUST-TINTED_BLACK)
 				REPLACE_CRE_ITEM ~wings01~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~
-				WRITE_BYTE 0x237 2				// Sex (female)
-				WRITE_BYTE 0x275 2				// Gender (female)
-				WRITE_BYTE 0x272 121			// Race (fiend)
-				READ_BYTE 0x273 cs				// Class
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x275 2      // Gender (female)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				READ_BYTE  0x273 cs     // Class
 				PATCH_IF cs > 20 BEGIN
-					WRITE_BYTE 0x273 179		//devil
+					WRITE_BYTE 0x273 179 //devil
 				END
-				WRITE_BYTE 0x27b 19				// Alignment (lawful evil by definition)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
 				PATCH_IF SLONG_AT INITIAL_MEETING < 1 BEGIN
-					SAY INITIAL_MEETING @516	// Well hello there. [T-ERI02A]
+					SAY INITIAL_MEETING @10123  // Well hello there. [t-eri02a]
 				END
 				PATCH_IF SLONG_AT MORALE < 1 BEGIN
-					SAY MORALE @517				// Farewell for now. [T-ERI06]
+					SAY MORALE @10124           // Farewell for now. [t-eri06]
 				END
 				PATCH_IF SLONG_AT UNHAPPY_BREAKING < 1 BEGIN
-					SAY UNHAPPY_BREAKING @517	// Farewell for now. [T-ERI06]
+					SAY UNHAPPY_BREAKING @10124 // Farewell for now. [t-eri06]
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 @518		// On your knees! [T-ERI01A]
-					SAY BATTLE_CRY2 @519		// You are mine! [T-ERI01B]
-					SAY BATTLE_CRY3 @520		// Rrrauugh! [T-ERI01C]
-					SAY BATTLE_CRY4 @521		// You tempt pain that you have never dreamed of. [T-ERI01D]
-					SAY BATTLE_CRY5 @522		// Rend their flesh! They will not need it. [T-ERI01E]
+					SAY BATTLE_CRY1 @10125      // On your knees! [t-eri01a]
+					SAY BATTLE_CRY2 @10126      // You are mine! [t-eri01b]
+					SAY BATTLE_CRY3 @10127      // Rrrauugh! [t-eri01c]
+					SAY BATTLE_CRY4 @10128      // You tempt pain that you have never dreamed of. [t-eri01d]
+					SAY BATTLE_CRY5 @10129      // Rend their flesh! They will not need it. [t-eri01e]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-ERI03]
+					SAY ATTACK1 ~~ [t-eri03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-ERI07]
+					SAY DAMAGE ~~ [t-eri07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-ERI09]
+					SAY DYING ~~ [t-eri09]
 				END
 				PATCH_IF SLONG_AT HURT < 1 BEGIN
-					SAY HURT @523				// You want to heal me. You must. [T-ERI10]
+					SAY HURT @10130             // You want to heal me. You must. [t-eri10]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 @516		// Well hello there. [T-ERI02A]
-					SAY SELECT_COMMON2 @524		// I need to speak with you. Come here. [T-ERI02B]
-					SAY SELECT_COMMON3 @525		// Come to my side. Help me here. [T-ERI02C]
-					SAY SELECT_COMMON4 @526		// Oh, yes. [T-ERI02D]
-					SAY SELECT_COMMON5 @527		// Ha! Ha-ha-ha... [T-ERI02E]
+					SAY SELECT_COMMON1 @10123   // Well hello there. [t-eri02a]
+					SAY SELECT_COMMON2 @10131   // I need to speak with you. Come here. [t-eri02b]
+					SAY SELECT_COMMON3 @10132   // Come to my side. Help me here. [t-eri02c]
+					SAY SELECT_COMMON4 @10133   // Oh, yes. [t-eri02d]
+					SAY SELECT_COMMON5 @10134   // Ha! Ha-ha-ha... [t-eri02e]
 				END
 				PATCH_IF SLONG_AT CRITICAL_HIT < 1 BEGIN
-					SAY CRITICAL_HIT @528		// Oh, that is very nice. [T-ERI05]
+					SAY CRITICAL_HIT @10135     // Oh, that is very nice. [t-eri05]
 				END
 				PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
-					SAY CRITICAL_MISS @529		// No. No. [T-ERI08]
+					SAY CRITICAL_MISS @10136    // No. No. [t-eri08]
 				END
 				PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
-					SAY SPELL_DISRUPTED ~~ [T-ERI04]
+					SAY SPELL_DISRUPTED ~~ [t-eri04]
 				END
 			END
 		BUT_ONLY
-	END
-END
 
-// Other Erinyes get the thief_female_elf
-// --------------------------------------
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_erinyes
+
+// Other Erinyes get the thief_female_elf animation (TDD)
+// ------------------------------------------------------
 ACTION_IF FILE_EXISTS_IN_GAME ~wardtief.cre~ BEGIN
+
 	COPY_EXISTING ~wardtief.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_SHORT 0x28 0x6311							// Animation ID (thief_female_elf)
+			WRITE_SHORT 0x28 0x6311 // Animation ID (thief_female_elf)
 			REPLACE_CRE_ITEM ~wings01~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~
-			WRITE_BYTE 0x272 121							// Race (fiend)
-			FOR (s1 = 0xa4 ; s1 < 0x1d0 ; s1 += 4) BEGIN	// Clear soundset (is not Imoen)
+			WRITE_BYTE 0x272 121    // Race (fiend)
+			// Clear soundset (is not Imoen)
+			FOR (s1 = 0xa4 ; s1 < 0x1d0 ; s1 += 4) BEGIN
 				WRITE_LONG s1 (0 - 1)
 			END
-			SAY INITIAL_MEETING @516						// Well hello there. [T-ERI02A]
-			SAY MORALE @517									// Farewell for now. [T-ERI06]
-			SAY UNHAPPY_BREAKING @517						// Farewell for now. [T-ERI06]
-			SAY BATTLE_CRY1 @518							// On your knees! [T-ERI01A]
-			SAY BATTLE_CRY2 @519							// You are mine! [T-ERI01B]
-			SAY BATTLE_CRY3 @520							// Rrrauugh!~ [T-ERI01C]
-			SAY BATTLE_CRY4 @521							// You tempt pain that you have never dreamed of. [T-ERI01D]
-			SAY BATTLE_CRY5 @522							// Rend their flesh! They will not need it. [T-ERI01E]
-			SAY ATTACK1 ~~ [T-ERI03]
-			SAY DAMAGE ~~ [T-ERI07]
-			SAY DYING ~~ [T-ERI09]
-			SAY HURT @523									// You want to heal me. You must. [T-ERI10]
-			SAY SELECT_COMMON1 @516							// Well hello there. [T-ERI02A]
-			SAY SELECT_COMMON2 @524							// I need to speak with you. Come here. [T-ERI02B]
-			SAY SELECT_COMMON3 @525							// Come to my side. Help me here. [T-ERI02C]
-			SAY SELECT_COMMON4 @526							// Oh, yes. [T-ERI02D]
-			SAY SELECT_COMMON5 @527							// Ha! Ha-ha-ha... [T-ERI02E]
-			SAY CRITICAL_HIT @528							// Oh, that is very nice. [T-ERI05]
-			SAY CRITICAL_MISS @529							// No. No. [T-ERI08]
-			SAY SPELL_DISRUPTED ~~ [T-ERI04]
+			SAY INITIAL_MEETING @10123  // Well hello there. [t-eri02a]
+			SAY MORALE @10124           // Farewell for now. [t-eri06]
+			SAY UNHAPPY_BREAKING @10124 // Farewell for now. [t-eri06]
+			SAY BATTLE_CRY1 @10125      // On your knees! [t-eri01a]
+			SAY BATTLE_CRY2 @10126      // You are mine! [t-eri01b]
+			SAY BATTLE_CRY3 @10127      // Rrrauugh!~ [t-eri01c]
+			SAY BATTLE_CRY4 @10128      // You tempt pain that you have never dreamed of. [t-eri01d]
+			SAY BATTLE_CRY5 @10129      // Rend their flesh! They will not need it. [t-eri01e]
+			SAY ATTACK1 ~~ [t-eri03]
+			SAY DAMAGE ~~ [t-eri07]
+			SAY DYING ~~ [t-eri09]
+			SAY HURT @10130             // You want to heal me. You must. [t-eri10]
+			SAY SELECT_COMMON1 @10123   // Well hello there. [t-eri02a]
+			SAY SELECT_COMMON2 @10131   // I need to speak with you. Come here. [t-eri02b]
+			SAY SELECT_COMMON3 @10132   // Come to my side. Help me here. [t-eri02c]
+			SAY SELECT_COMMON4 @10133   // Oh, yes. [t-eri02d]
+			SAY SELECT_COMMON5 @10134   // Ha! Ha-ha-ha... [t-eri02e]
+			SAY CRITICAL_HIT @10135     // Oh, that is very nice. [t-eri05]
+			SAY CRITICAL_MISS @10136    // No. No. [t-eri08]
+			SAY SPELL_DISRUPTED ~~ [t-eri04]
 		END
 	BUT_ONLY
+
 END
+
 
 /* ======================================== *
  *  Succubi get the succubus_nwn animation  *
  * ======================================== */
-ACTION_FOR_EACH nb IN ~demsuc01~ ~finsucc~ ~gorsuc01~ ~gortan2~ ~gorwom01~ ~nssuc01~ ~nssuc02~ ~pstana02~ ~pstana2a~ ~sd_hrzr2~ ~yugsuc01~ BEGIN
+ACTION_PHP_EACH GW_succubi AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5290			// Animation ID (succubus_nwn)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SUCCUBUS_NWN~) // classical 0x5290 - EE none for the moment
-				WRITE_BYTE 0x237 2				// Sex (female)
-				WRITE_BYTE 0x275 2				// Gender (female)
-				WRITE_BYTE 0x272 121			// Race (fiend)
-				READ_BYTE 0x273 cs				// Class
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SUCCUBUS_NWN~) // original 0x5290 - EE depends on installation
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x275 2      // Gender (female)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				READ_BYTE  0x273 cs     // Class
 				PATCH_IF cs > 20 BEGIN
-					WRITE_BYTE 0x273 160		// tanar'ri
+					WRITE_BYTE 0x273 160 // tanar'ri
 				END
 				PATCH_IF SLONG_AT INITIAL_MEETING < 1 BEGIN
-					SAY INITIAL_MEETING @530	// Yes? [T-SUC02]
+					SAY INITIAL_MEETING @10140 // Yes? [t-suc02]
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 @531		// Your death shall be beautiful! [T-SUC01A]
-					SAY BATTLE_CRY2 @532		// Your soul shall be mine! [T-SUC01B]
+					SAY BATTLE_CRY1 @10141    // Your death shall be beautiful! [t-suc01a]
+					SAY BATTLE_CRY2 @10142    // Your soul shall be mine! [t-suc01b]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-SUC09]
+					SAY DYING ~~ [t-suc09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 @530		// Yes? [T-SUC02]
+					SAY SELECT_COMMON1 @10140 // Yes? [t-suc02]
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_succubi
+
 
 /* =========================================== *
  *  Kirinhale gets the succubus_nwn animation  *
  * =========================================== */
-ACTION_IF FILE_EXISTS_IN_GAME ~%tsu%kirinh.cre~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~%tutu_var%kirinh.cre~ BEGIN
+
 	COPY_EXISTING ~%tsu%kirinh.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_SHORT 0x28 0x5290 // Animation ID (succubus_nwn)
-//			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SUCCUBUS_NWN~) // classical 0x5290 - EE none for the moment
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SUCCUBUS_NWN~) // original 0x5290 - EE depends on installation
 			PATCH_IF BYTE_AT 0x234 < 6 BEGIN
-			WRITE_BYTE 0x234 6		// Level 1 (was 0)
+			WRITE_BYTE 0x234 6   // Level 1 (was 0)
 			END
-			WRITE_BYTE 0x237 2		// Sex (female)
-			WRITE_BYTE 0x23e 25		// Charisma (was 30)
-			WRITE_BYTE 0x275 2		// Gender (female)
-			WRITE_BYTE 0x272 121	// Race (fiend)
+			WRITE_BYTE 0x237 2   // Sex (female)
+			WRITE_BYTE 0x23e 25  // Charisma (was 30)
+			WRITE_BYTE 0x275 2   // Gender (female)
+			WRITE_BYTE 0x272 121 // Race (fiend)
 		END
 	BUT_ONLY
+
 END
+
 
 /* ===================================== *
  *  Maurezhi get the maurezhi animation  *
  * ===================================== */
-ACTION_FOR_EACH nb IN ~demmau01~ ~gortan6~ ~obsdem04~ BEGIN
+ACTION_PHP_EACH GW_maurezhi AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MAUREZHI~) // classical 0x547a - EE 0x7601
-				WRITE_BYTE 0x2d 107		// Minor color (KHAKI_GRAY)
-				WRITE_BYTE 0x2e 62		// Major color (DARK_LAVENDER)
-				WRITE_BYTE 0x2f 62		// Skin color
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MAUREZHI~) // original 0x547a - EE 0x7601
+				WRITE_BYTE 0x2d 107 // Minor color (KHAKI_GRAY)
+				WRITE_BYTE 0x2e 62  // Major color (DARK_LAVENDER)
+				WRITE_BYTE 0x2f 62  // Skin color
 				LPF DELETE_CRE_EFFECT
 					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
-				SAY INITIAL_MEETING #61750	// This place will be your tomb! [UNEARM01]
-				SAY MORALE #61757			// No! I must flee! [UNEARM08]
-				SAY UNHAPPY_BREAKING #61757	// No, I must flee! [UNEARM08]
-				SAY BATTLE_CRY1 #61752		// You'll suffer before you die, I promise. [UNEARM03]
-				SAY BATTLE_CRY2 #61754		// I will be pleased to carve out your heart! [UNEARM05]
-				SAY DAMAGE #61755			// [UNEARM06]
-				SAY DYING #61756			// [UNEARM07]
-				SAY SELECT_COMMON1 #61750	// This place will be your tomb! [UNEARM01]
-				SAY SELECT_COMMON2 #61751	// You should not have come to this place! [UNEARM02]
+				SAY INITIAL_MEETING #61750  // This place will be your tomb! [UNEARM01]
+				SAY MORALE #61757           // No! I must flee! [UNEARM08]
+				SAY UNHAPPY_BREAKING #61757 // No, I must flee! [UNEARM08]
+				SAY BATTLE_CRY1 #61752      // You'll suffer before you die, I promise. [UNEARM03]
+				SAY BATTLE_CRY2 #61754      // I will be pleased to carve out your heart! [UNEARM05]
+				SAY DAMAGE #61755           // [UNEARM06]
+				SAY DYING #61756            // [UNEARM07]
+				SAY SELECT_COMMON1 #61750   // This place will be your tomb! [UNEARM01]
+				SAY SELECT_COMMON2 #61751   // You should not have come to this place! [UNEARM02]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_maurezhi
+
 
 /* ===================================================================== *
  *  Assigns glabrezus the proper animation instead of balor or cornugon  *
  * ===================================================================== */
-ACTION_FOR_EACH nb IN ~demgla01~ ~demglab~ ~demglab2~ ~demglasu~ ~eastdem1~ ~eastdem3~ ~eastdem5~ ~eastdem6~ ~eastdem8~ ~enddem01~ ~enddem02~ ~gglab~ ~ily5~ ~jondem01~ ~jondem03~ ~jondem05~ BEGIN
+ACTION_PHP_EACH GW_glabrezus AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN // Glabrezus
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
-			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~	// These CREs need fixing because of hosed slots
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GLABREZU~)		// classical 0xe0f1 - EE 0xe0f1 (0xed19 in IWD2)
-			WRITE_BYTE 0x237 1		// Sex (male)
-			WRITE_BYTE 0x271 255	// General (monster)
-			READ_BYTE 0x275 gd		// Gender
-			PATCH_IF (gd != 6) AND (gd != 9) BEGIN // If not summoned
-				WRITE_BYTE 0x275 1	// male
+			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~ // These CREs need fixing because of hosed slots
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GLABREZU~) // original 0xe0f1 - EE 0xe0f1 (0xed19 in IWD2)
+			WRITE_BYTE 0x237 1      // Sex (male)
+			WRITE_BYTE 0x271 255    // General (monster)
+			READ_BYTE  0x275 gd     // Gender
+			// If not summoned
+			PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+				WRITE_BYTE 0x275 1  // male
 			END
 		BUT_ONLY
 	END
-END
 
-VERBOSE
+END
+ACTION_CLEAR_ARRAY GW_glabrezus
