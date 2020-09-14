@@ -1,0 +1,116 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                     A R R A Y S    ( T A B L E S )    :    S K E L E T O N   W A R R I O R S   C O M P O N E N T   ( 400-415-420 )                     *
+ *                                                                                                                                                        *
+ *                 Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-skelwa.tpa WeiDU routine.                *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+ * ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_skeleton_warriors        :   LISTS vanilla and modded Skeleton Warriors creatures needing to be patched.                        => line #   17   *
+ *                                    LISTE les créatures combattants squelettes du jeu et de mods nécessitant d'être modifiées.                          *
+ * ====================================================================================================================================================== */
+
+/* ========================================================================================================== *
+ *  ARRAY GW_skeleton_warriors : LISTS vanilla and modded Skeleton Warriors creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------- *
+ *  Skeleton Warriors get the chosen animation.                                                               *
+ * ========================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_skeleton_warriors
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_warriors BEGIN
+
+// BG
+// --
+"%tutu_var%skelwa"      => 1	// Skeleton Warrior
+"%tutu_scripts%kelwa02" => 1	// id.
+"%tutu_scripts%kelwa03" => 1	// id.
+
+// BG2
+// ---
+ar18skel                => 1	// Skeleton Warrior
+ceskel01                => 1	// id.
+endske01                => 1	// id.
+endske02                => 1	// id.
+endske03                => 1	// id.
+endske04                => 1	// id.
+firmon02                => 1	// id.
+golbon01                => 1	// id.
+grskel1                 => 1	// id.
+grskel2                 => 1	// id.
+grtomb01                => 1	// id.
+hgskl02                 => 1	// Skeleton Assassin
+hgskl04                 => 1	// Skeleton Warrior
+nevm2                   => 1	// id.
+riftcr02                => 1	// id.
+rskel02                 => 1	// id.
+sahskel                 => 1	// id.
+shbones                 => 1	// id.
+skelwa01                => 1	// id.
+skelwasu                => 1	// id.
+suundead                => 1	// id.
+tanskw1                 => 1	// id.
+
+// BGT
+// ---
+bgskel02                => 1	// Skeleton Warrior
+bgskel03                => 1	// id.
+bgskelwa                => 1	// id. _skelwa
+
+// Ajantis for BG2
+// ---------------
+c#ajske2                => 1	// Skeleton Warrior
+
+// BP
+// --
+bpduehi                 => 1	// Skeleton Warrior
+
+// DSotSC
+// ------
+skellord                => 1	// Skeleton Lord
+
+// Neh'taniel
+// ----------
+sk#ssp2                 => 1	// Sarie Spawn
+
+// Refinements
+// -----------
+tg#dud1                 => 1	// Skeleton Warrior
+tg#dud2                 => 1	// id.
+
+// RoT
+// ---
+ranske7                 => 1	// Skeleton Warrior
+ranske9                 => 1	// id.
+skelwa04                => 1	// id.
+
+// Stratagems
+// ----------
+dw#angsk                => 1	// Skeleton Warrior
+dw#diask                => 1	// id.
+dw#semsk                => 1	// id.
+
+// TDD
+// ---
+skelwax2                => 1	// Skeleton Warrior
+skelwax3                => 1	// id.
+
+// The Vault
+// ---------
+jc_ske01                => 1	// Skeleton Guard
+jc_ske02                => 1	// id.
+
+// Unknown mods
+// ------------
+cmske03                 => 1	// 
+cmske04                 => 1	// 
+cmskel01                => 1	// 
+cmskel02                => 1	// 
+fhlskl1                 => 1	// 
+fhlskl2                 => 1	// 
+krshadsk                => 1	// 
+
+END

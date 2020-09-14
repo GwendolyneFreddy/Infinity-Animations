@@ -862,7 +862,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
     - Zombie Lords get the wight_yellow animation: removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it.
   - [410-415-420] Skeleton Warriors (t-skelwa.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
-    - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
+    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
  - [450-455] Seer animations (t-seer.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
