@@ -7,8 +7,8 @@
  * ================================================================================================================================================================================== *
  *  change-log:                                                                                                                                                                       *
  *  -----------                                                                                                                                                                       *
- *      - Externalized lists of creatures to be patched into arrays (build in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                        *
- *      - Replaced specific %tsx% ia variables with more compatible %tutu%_scriptx% variables.                                                                                        *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                        *
+ *      - Replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables.                                                                                         *
  *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).                     *
  *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                             *
  * ================================================================================================================================================================================== */

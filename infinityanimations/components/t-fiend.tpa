@@ -7,7 +7,7 @@
  * ============================================================================================================================================================ *
  *  change-log:                                                                                                                                                 *
  *  -----------                                                                                                                                                 *
- *      - Externalized lists of creatures to be patched into arrays (build in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
  *      - Replaced specific %tsu% ia variables with more compatible %tutu_var% variables.                                                                       *
  *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#42).                                                                                 *
  *      - Integrated Lollorian's patch to correct loops: one maurezhi was not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).  *

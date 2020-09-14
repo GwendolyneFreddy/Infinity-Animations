@@ -1,6 +1,6 @@
 /* ======================================================================================================================================================= *
  *  v 6.0.0                                                                                                                                                *
- *                   A R R A Y S    ( T A B L E S )    :    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 25 )                   *
+ *                   A R R A Y S    ( T A B L E S )    :    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 2 5 )                  *
  *                                                                                                                                                         *
  *             Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-humanoid_fixes.tpa WeiDU routine.             *
  *                                                                                                                                                         *
@@ -11,12 +11,12 @@
  * -----------------------------------                                                                                                                     *
  *  - GW_male_human_fighters      :   LISTS vanilla and modded Male Human Fighters creatures needing to be patched.                        => line #  37   *
  *                                    LISTE les créatures guerriers humains du jeu et de mods nécessitant d'être modifiées.                                *
- *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures (Pit Fiends, Gelugons) needing to be patched.   => line # 216   *
+ *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures needing to be patched.                          => line # 216   *
  *                                    LISTE les créatures guerriers elfes du jeu et de mods nécessitant d'être modifiées.                                  *
  *  - GW_male_halfling_fighters   :   LISTS vanilla and modded Male Halfling Fighters creatures needing to be patched.                     => line # 245   *
- *                                    LISTE les créatures fyerruers halfelins du jeu et de mods nécessitant d'être modifiées.                              *
+ *                                    LISTE les créatures guerriers halfelins du jeu et de mods nécessitant d'être modifiées.                              *
  *  - GW_female_human_fighters    :   LISTS vanilla and modded Female Human Fighters creatures needing to be patched.                      => line # 277   *
- *                                    LISTE les créatures guerrières humains du jeu et de mods nécessitant d'être modifiées.                               *
+ *                                    LISTE les créatures guerrières humaines du jeu et de mods nécessitant d'être modifiées.                              *
  *  - GW_male_human_mages         :   LISTS vanilla and modded Male Human Mages creatures needing to be patched.                           => line # 304   *
  *                                    LISTE les créatures mages humains du jeu et de mods nécessitant d'être modifiées.                                    *
  *  - GW_male_elf_mages           :   LISTS vanilla and modded Male Elf Mages creatures needing to be patched.                             => line # 335   *

@@ -837,31 +837,34 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 &#9755; <ins>c. Components specific changes and fixes</ins>
   - [0] Infinity Animations (main component) (t-main.tpa, ia_restore_bg2_animations.tpa, )
     - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
-    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
     - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
   - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
   - [50] Distinctive Genies (t-genie.tpa)
-     - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_genies_arrays.tph*" library) for easier maintenance.
+     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_genies_arrays.tph*" library) for easier maintenance.
   - [100] Distinctive Fiends (t-fiend.tpa)
     - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (one maurezhi was not patched).
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_fiends_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_fiends_arrays.tph*" library) for easier maintenance.
   - [150-175] Pit Fiends (t-pit_fiend.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
   - [210-230] Cambions get Isair Animation (t-cambion.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_cambions_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_cambions_arrays.tph*" library) for easier maintenance.
   - [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_alu_fiends_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_alu_fiends_arrays.tph*" library) for easier maintenance.
   - [400] Distinctive Undead (t-undead.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_undeads_arrays.tph*" library) for easier maintenance.
-    - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red (ghastsu is a skeleton, not a ghast).
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_undeads_arrays.tph*" library) for easier maintenance.
+    - Tutu variables: replaced "*%tsz%*" that did not exist with "*%tutu_scriptz%*" (*GW_zombies array*).
+    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
+    - *GW_ghasts array*: integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red (Ghasts get the ghast animation: removed ghastsu which is a skeleton, not a ghast).
+    - Zombie Lords get the wight_yellow animation: removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it.
   - [410-415-420] Skeleton Warriors (t-skelwa.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
     - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
  - [450-455] Seer animations (t-seer.tpa)
-    - Externalized lists of creatures to be patched into arrays (build in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
  les créatures suivantes ont été déplacées de la liste mendiants à la liste esclaves
   - [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
