@@ -862,8 +862,9 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie *gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
     - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
     - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *our certains mendiants* » étaient interverties. &#128541;
-  - [480-490] Animations de svirneblins (t-svirfneblin.tpa)
-    - Utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
+- [480-490] Animations de svirneblins (t-svirfneblin.tpa)
+    - Utilisation d'une nouvelle variable "*%t-svi%*" dans une routine unique pour les deux sous-composants.
+    - Correction de noms de fichiers sons mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
 
 
 

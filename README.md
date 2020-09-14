@@ -867,9 +867,9 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
     - A few creatures have been moved from the beggars to the slaves array (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
-   - [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
+- [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
     - Added "*%t-svi%*" variable used in a single routine for both sub-components.
-    - Fixed soundset clips typos (a few were misspelled *t_sva* and *t_svn* instead of *t-sva* and *t-svn*).
+    - Fixed soundset clips typos (a few were misspelled "*t_sva*" and "*t_svn*" instead of "*t-sva*" and "*t-svn*").
 
   - [710-720-760-740] More Planescape: Torment Animations ()
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
