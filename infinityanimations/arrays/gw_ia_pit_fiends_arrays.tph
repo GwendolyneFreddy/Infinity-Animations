@@ -1,0 +1,82 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *                A R R A Y S    ( T A B L E S )    :    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 150-175 )                 *
+ *                                                                                                                                                         *
+ *                Array to patch vanilla and modded creature files (animation slots, sound clips...) used by t-pit_fiend.tpa WeiDU routine.                *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_pit_fiends               :   LISTS vanilla and modded Pit Fiends creatures needing to be patched.                                 => line #  17   *
+ *                                    LISTE les créatures diantrefosses du jeu et de mods nécessitant d'être modifiées.                                    *
+ * ======================================================================================================================================================= */
+
+/* ============================================================================================ *
+ *  ARRAY GW_pit_fiends : LISTS vanilla and modded Pit Fiends creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Pit Fiends get the NWN animation.                                                           *
+ * ============================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_pit_fiends
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_pit_fiends BEGIN
+
+// BG2
+// ---
+dempit	                => 1	// Pit Fiend
+dempit01                => 1	// id.
+dempitsu                => 1	// id.
+telpit1	                => 1	// id.
+telpit2	                => 1	// id.
+
+// BP does not seem to be installed
+// --
+rempitsu                => 1	// 
+
+// Imnesvale
+// ---------
+dubnd11                 => 1	// Pit Demon
+
+// Planar Sphere
+// -------------
+psbaatl	                => 1	// Baatezu Leader
+
+// Refinements
+// -----------
+tg#dem1	                => 1	// Pit Fiend
+
+// RoT
+// ---
+caddem11                => 1	// Pit Fiend
+caddem18                => 1	// Carethron
+caddem25                => 1	// id.
+caddem3	                => 1	// Pit Fiend
+heldem3	                => 1	// id.
+heldem4	                => 1	// id.
+heldem5	                => 1	// Crec'tur
+
+// Stratagems
+// ----------
+dw#bazpf                => 1	// Pit Fiend
+dw#pitsu                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_whel1	                => 1	// Infernal guard
+z_whel2	                => 1	// id.
+z_whel3	                => 1	// id.
+z_whel4	                => 1	// id.
+
+// TDD
+// ---
+dempitr1                => 1	// Pit Fiend
+dempitr2                => 1	// id.
+
+// Unknown mods
+// ------------
+z#gpit01                => 1	// 
+z#gpitfd                => 1	// 
+
+END
