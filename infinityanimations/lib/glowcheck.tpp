@@ -2,11 +2,13 @@
 
 sz = SOURCE_SIZE	// begin glowcheck
 PATCH_IF ("%sz%" > "0x2d3") BEGIN
+
 	PATCH_IF SHORT_AT 0x28 = 0x6403 BEGIN  // skeleton
 		SET glow=1
 	END ELSE BEGIN
 		SET glow=0
 	END
+
 	READ_LONG 0x2bc itemsoffset
 	READ_LONG 0x2b8 itemslot
 	READ_LONG 0x2c0 items

@@ -1,0 +1,1074 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                        A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E   U N D E A D   C O M P O N E N T   ( 400 )                        *
+ *                                                                                                                                                        *
+ *                 Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-undead.tpa WeiDU routine.                *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+ * ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_banshees                 :   LISTS vanilla and modded Banshees creatures needing to be patched.                                 => line #   71   *
+ *                                    LISTE les créatures banshees du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_skulls                   :   LISTS vanilla and modded Skulls creatures needing to be patched.                                   => line #  110   *
+ *                                    LISTE les créatures crânes flottants du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_ghoul_queens             :   LISTS vanilla and modded Ghoul Queens creatures needing to be patched.                             => line #  131   *
+ *                                    LISTE les créatures Reines des goules du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_ghasts                   :   LISTS vanilla and modded Ghasts creatures needing to be patched.                                   => line #  153   *
+ *                                    LISTE les créatures blêmes du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_greater_ghasts           :   LISTS vanilla and modded Greater Ghasts creatures needing to be patched.                           => line #  183   *
+ *                                    LISTE les créatures blêmes majeurs du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_ghosts                   :   LISTS vanilla and modded Ghosts creatures needing to be patched.                                   => line #  218   *
+ *                                    LISTE les créatures fantômes classiques du jeu et de mods nécessitant d'être modifiées.                             *
+ *  - GW_ghouls                   :   LISTS vanilla and modded Ghouls creatures needing to be patched.                                   => line #  251   *
+ *                                    LISTE les créatures goules du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_ghoul_greater            :   LISTS vanilla and modded Greater Ghouls creatures needing to be patched.                           => line #  281   *
+ *                                    LISTE les créatures goules majeures du jeu et de mods nécessitant d'être modifiées.                                 *
+ *  - GW_liches                   :   LISTS vanilla and modded Liches creatures needing to be patched.                                   => line #  305   *
+ *                                    LISTE les créatures liches du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_liches_white             :   LISTS vanilla and modded Greater Liches creatures needing to be patched.                           => line #  381   *
+ *                                    LISTE les créatures liches majeures du jeu et de mods nécessitant d'être modifiées.                                 *
+ *  - GW_mist_creature            :   LISTS vanilla and modded Mist Apparitions creatures needing to be patched.                         => line #  448   *
+ *                                    LISTE les créatures apparition du jeu et de mods nécessitant d'être modifiées.                                      *
+ *  - GW_revenants                :   LISTS vanilla and modded Revenant creatures needing to be patched.                                 => line #  484   *
+ *                                    LISTE les créatures revenants du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_shadow_fiends            :   LISTS vanilla and modded Shadow Fiends creatures needing to be patched.                            => line #  512   *
+ *                                    LISTE les créatures démombres et ombres démoniaques du jeu et de mods nécessitant d'être modifiées.                 *
+ *  - GW_wraiths                  :   LISTS vanilla and modded Wraiths creatures needing to be patched.                                  => line #  562   *
+ *                                    LISTE les créatures âmes en peine du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_spectres                 :   LISTS vanilla and modded Spectres creatures needing to be patched.                                 => line #  594   *
+ *                                    LISTE les créatures spectres du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_shadows                  :   LISTS vanilla and modded Shadows creatures needing to be patched.                                  => line #  629   *
+ *                                    LISTE les créatures ombres du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_shadows_small_murky      :   LISTS some vanilla and modded Shadows creatures needing to be patched.                             => line #  681   *
+ *                                    LISTE certaines créatures ombres du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_skeleton_monster         :   LISTS vanilla and modded Large Skeletons creatures needing to be patched.                          => line #  738   *
+ *                                    LISTE les créatures squelettes majeurs du jeu et de mods nécessitant d'être modifiées.                              *
+ *  - GW_skeleton_fiend           :   LISTS vanilla and modded Moon Horrors creatures needing to be patched.                             => line #  774   *
+ *                                    LISTE les créatures horreurs lunaires du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_vampire_female           :   LISTS vanilla and modded Female Vampires creatures needing to be patched.                          => line #  792   *
+ *                                    LISTE les créatures vampires femmes du jeu et de mods nécessitant d'être modifiées.                                 *
+ *  - GW_wight_gray               :   LISTS vanilla and modded Wights creatures needing to be patched.                                   => line #  813   *
+ *                                    LISTE les créatures nécrophages du jeu et de mods nécessitant d'être modifiées.                                     *
+ *  - GW_wight_green              :   LISTS vanilla and modded Green Zombies creatures needing to be patched.                            => line #  834   *
+ *                                    LISTE les créatures zombis vert du jeu et de mods nécessitant d'être modifiées.                                     *
+ *  - GW_wight_yellow             :   LISTS vanilla and modded Zombie Lords creatures needing to be patched.                             => line #  855   *
+ *                                    LISTE les créatures seigneurs zombi du jeu et de mods nécessitant d'être modifiées.                                 *
+ *  - GW_wight_barrow             :   LISTS vanilla and modded Undead knights and similar creatures needing to be patched.               => line #  896   *
+ *                                    LISTE les créatures chevaliers morts-vivants et assimilés du jeu et de mods nécessitant d'être modifiées.           *
+ *  - GW_zombies                  :   LISTS vanilla and modded Zombies creatures needing to be patched.                                  => line #  951   *
+ *                                    LISTE les créatures zombis du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_zombie_yellow            :   LISTS vanilla and modded Greater zombies creatures needing to be patched.                          => line #  997   *
+ *                                    LISTE les créatures zombis majeurs du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_zombie_blue              :   LISTS vanilla and modded Lacedons creatures needing to be patched.                                 => line # 1033   *
+ *                                    LISTE les créatures lacédons du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_zombie_sea               :   LISTS vanilla and modded Sea Zombies creatures needing to be patched.                              => line # 1052   *
+ *                                    LISTE les créatures zombis des mers du jeu et de mods nécessitant d'être modifiées.                                 *
+ * ====================================================================================================================================================== */
+
+/* ======================================================================================== *
+ *  ARRAY GW_banshees : LISTS vanilla and modded Banshees creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Banshees get the wailing_virgin animation.                                               *
+ * ========================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_banshees
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_banshees BEGIN
+
+// BG2
+// ---
+banshe01                => 1	// Banshee
+firmon01                => 1	// id.
+telwrai                 => 1	// Demon Wraith
+
+// DSotSC
+// ------
+dsbanshe                => 1	// Banshee
+
+// Drizzt Saga
+// -----------
+f_wailin                => 1	// Wailing Death
+
+// Planar Sphere
+// -------------
+psfea                   => 1	// Fear
+
+// TDD
+// ---
+banshee1                => 1	// Banshee
+
+// Unknown mods
+// ------------
+jerlia                  => 1	// 
+
+END
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_skulls : LISTS vanilla and modded skulls creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Skulls get the demilich animation.                                                  *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_skulls
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skulls BEGIN
+
+// BG2
+// ---
+hlskull                 => 1	// Golden Skull
+
+// Drizzt Saga
+// -----------
+f_stongl                => 1	// Demonic Scull
+
+END
+
+
+/* ================================================================================================ *
+ *  ARRAY GW_ghoul_queens : LISTS vanilla and modded Ghoul Queens creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Ghoul Queens get the ghoul_queen animation.                                                     *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_ghoul_queens
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghoul_queens BEGIN
+
+// BG2
+// ---
+bhghoul4                => 1	// Ghast
+xghast2                 => 1	// id.
+
+// Neh'taniel
+// ----------
+sk#ssp3                 => 1	// Sarie Spawn
+
+END
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_ghasts : LISTS vanilla and modded Ghasts creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Ghasts get the ghast animation.                                                     *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ghasts
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghasts BEGIN
+
+// BG
+// --
+"%tutu_var%ghast"       => 1	// Ghast
+"%tutu_var%ghastd"      => 1	// id.
+"%tutu_var%ghasts"      => 1	// id.
+"%tutu_var%grael"       => 1	// Grael
+"%tutu_var%sewerf3"     => 1	// Sewerfolk
+
+// BG2
+// ---
+bhghoul2	            => 1	// Ghast
+ghast01                 => 1	// id.
+gmayor                  => 1	// Theshal
+gron                    => 1	// id.
+nevm3                   => 1	// Ghast
+xghast1                 => 1	// id.
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_greater_ghasts : LISTS vanilla and modded Greater Ghasts creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Greater Ghasts get the ghast_greater (IWD) animation.                                               *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_greater_ghasts
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_greater_ghasts BEGIN
+
+// BG2
+// ---
+ghastf01                => 1	// Fell Ghast
+ghastgsu                => 1	// Greater Ghast
+theshal                 => 1	// Theshal
+
+// BP
+// --
+bpghast                 => 1	// Greater Ghast
+
+// Bonehill
+// --------
+sghastgr                => 1	// Greater Ghast
+
+// Quest Pack
+// ----------
+besamen                 => 1	// Besamen
+
+// Neh'taniel
+// ----------
+sk#algol                => 1	// Algol
+
+END
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_ghosts : LISTS vanilla and modded Ghosts creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Ghosts get the ghost (IWD) animation.                                               *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ghosts
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghosts BEGIN
+
+// BG2
+// ---
+sarspir                 => 1	// Prison Spirit
+
+// CtB
+// ---
+cbselims                => 1	// Selim Sivad
+cbspkded                => 1	// Spirit
+
+// Planar Sphere
+// -------------
+psminvo                 => 1	// Invocation
+
+// Unknown mods
+// ------------
+cmhaun01                => 1	// 
+cmhaun02                => 1	// 
+demresd                 => 1	// 
+mtghost                 => 1	// 
+
+END
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_ghouls : LISTS vanilla and modded Ghouls creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Ghouls get the ghoul animation.                                                     *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ghouls
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghouls BEGIN
+
+// BG
+// --
+"%tutu_var%ghoul"       => 1	// Ghoul
+"%tutu_var%korax"       => 1	// Korax the Ghoul
+
+// BG2
+// ---
+bhghoul1                => 1	// Ghoul
+ghoul01                 => 1	// id.
+ghoulsu                 => 1	// id.
+gtcit1                  => 1	// id.
+gtcit2                  => 1	// id.
+
+// BP
+// --
+bodakmd                 => 1	// Ghoul
+
+END
+
+
+/* =================================================================================================== *
+ *  ARRAY GW_ghoul_greater : LISTS vanilla and modded Greater Ghouls creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Greater Ghouls get the ghoul_greater (IWD) animation.                                              *
+ * =================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ghoul_greater
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghoul_greater BEGIN
+
+// BG
+// --
+"%tutu_scriptg%houllor" => 1	// Greater Ghoul
+
+// BG2
+// ---
+ghogr01                 => 1	// Greater Ghoul
+gholor01                => 1	// Ghoul Lord
+lester                  => 1	// Uncle Lester
+riftcr01                => 1	// Greater Ghoul
+
+END
+
+
+/* ==================================================================================== *
+ *  ARRAY GW_liches : LISTS vanilla and modded Liches creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------ *
+ *  Liches get the lich animation.                                                      *
+ * ==================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_liches
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_liches BEGIN
+
+// BG2
+// ---
+amlich01                => 1	// Vongoethe
+bhcrypt                 => 1	// Crypt King
+cedelich                => 1	// Deril Lich
+celich                  => 1	// Lagole Gon
+firlch01                => 1	// Fire Lich
+gorlic01                => 1	// Azamantes
+gorpri1                 => 1	// Priest
+grvlch01                => 1	// Lich
+hlkang                  => 1	// Kangaxx the Lich
+hllich                  => 1	// Elemental Lich
+hlshade                 => 1	// Shade Lich
+hlshang                 => 1	// Shangalar
+jarlich                 => 1	// Deirex
+lichel01                => 1	// Elemental Lich
+senlich                 => 1	// Odamaron
+
+// BP
+krlich2                 => 1	// Lich
+
+// CtB
+// ---
+cbc8ctl2                => 1	// Cult Lich
+cbc8ctl3                => 1	// id.
+cbc8ctzl                => 1	// Zannaster the Lich
+
+// Drizzt Saga
+// -----------
+f_lich                  => 1	// Kangaxx the Lich
+
+// Edwin Romance
+// -------------
+banco                   => 1	// Banco
+
+// NEJ
+// ---
+larrel                  => 1	// Larrel
+larrel2                 => 1	// Larrel‘s Sending
+mytos                   => 1	// Mytos
+
+// Planar Sphere
+// -------------
+psvecna                 => 1	// Vecna's Shade
+
+// RoT
+// ---
+bhelal                  => 1	// Bhelal
+frdeath                 => 1	// Galangar
+garlich1                => 1	// Elemental Lich
+garlich2                => 1	// id.
+godlich1                => 1	// Greater Lich
+godlich2                => 1	// Elemental Lich
+lichguar                => 1	// Guardian Lich
+
+// Quest Pack
+// ----------
+d0lich01                => 1	// Nazariel
+
+// Unknown mods
+// ------------
+va#lich                 => 1	// 
+
+END
+
+
+/* ================================================================================================== *
+ *  ARRAY GW_liches_white : LISTS vanilla and modded Greater Liches creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------- *
+ *  Greater Liches get the lich_white (IWD) animation.                                                *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_liches_white
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_liches_white BEGIN
+
+// BG2
+// ---
+dpmon02                 => 1	// Lich
+nevaziah                => 1	// Nevaziah
+shadeld                 => 1	// Shade Lord
+
+// DSotSC
+// ------
+dslich                  => 1	// The Dark One
+dslich1                 => 1	// id.
+dslich2                 => 1	// id.
+dslich3                 => 1	// id.
+
+// Quest Pack
+// ----------
+d0lich02                => 1	// Nazariel
+
+// BP
+archlich                => 1	// Lich
+
+// Dungeon Crawl
+// -------------
+o#srax                  => 1	// Sraxsuth
+
+// Neh'taniel
+// ----------
+sk#vidu                 => 1	// Viduan
+
+// NEJ
+// ---
+tunelich                => 1	// Shade Lich
+
+// Stratagems
+// ----------
+dw#lich1                => 1	// Lich
+dw#lich2                => 1	// id.
+dw#lich3                => 1	// id.
+dw#lich4                => 1	// id.
+
+// TDD
+// ---
+pklich1                 => 1	// Beghael
+pksum1                  => 1	// Lich 
+pksum2                  => 1	// id.
+pksum3                  => 1	// id.
+travmage                => 1	// Calimport Archmage
+
+// Unknown mods
+// ------------
+b#lich01                => 1	// 
+b#lich02                => 1	// 
+hlayskel                => 1	// 
+macgskmg                => 1	// 
+
+END
+
+
+/* ===================================================================================================== *
+ *  ARRAY GW_mist_creature : LISTS vanilla and modded Mist Apparitions creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Mist Apparitions get the mist_creature animation.                                                    *
+ * ===================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_mist_creature
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_mist_creature BEGIN
+
+// BG2
+// ---
+mistwa01                => 1	// Wandering Horror
+
+// Refinements
+// -----------
+tg#spir                 => 1	// Ancestral Spirit
+
+// RoT
+// ---
+cultmo8                 => 1	// Wandering Horror
+iwdmist3                => 1	// id.
+undapp                  => 1	// Undead Apparition
+
+// TDD
+// ---
+pkghost1                => 1	// Ghostly Apparition
+pkghost2                => 1	// id.
+
+// Unknown mods
+// ------------
+tadream                 => 1	// 
+
+END
+
+
+/* ========================================================================================= *
+ *  ARRAY GW_revenants : LISTS vanilla and modded Revenant creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------- *
+ *  Revenants get the revenant animation.                                                    *
+ * ========================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_revenants
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_revenants BEGIN
+
+// BG
+// --
+"%tutu_var%fearm"       => 1	// Fear
+"%tutu_var%revent"      => 1	// Revenant
+
+// BG2
+// ---
+firmon04                => 1	// Revenant
+grreven                 => 1	// id.
+reven01                 => 1	// id.
+
+// Bonehill
+// --------
+srevnnt                 => 1	// Revenant
+
+END
+
+
+/* ================================================================================================== *
+ *  ARRAY GW_shadow_fiends : LISTS vanilla and modded Shadow Fiends creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------- *
+ *  Shadow Fiends get the shadow animation.                                                           *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_shadow_fiends
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_shadow_fiends BEGIN
+
+// BG2
+// ---
+hgwra02                 => 1	// Devil Shade
+hgwra03                 => 1	// id.
+sdshadfi                => 1	// Shadow Fiend
+sewsha01                => 1	// id.
+sewsha02                => 1	// id.
+shadfi01                => 1	// id.
+
+// Amber
+// -----
+m#ymmurd                => 1	// Black Soul
+
+// Drizzt Saga
+// -----------
+f_shfien                => 1	// Shadow Fiend
+
+// Neh'taniel
+// ----------
+sk#ssp1                 => 1	// Sarie Spawn
+
+// Planar Sphere
+// -------------
+psgnight                => 1	// Greater Nightmare
+psnight                 => 1	// Nightmare
+psnisum                 => 1	// id.
+
+// RoT
+// ---
+minodar1                => 1	// Minion of Darkness
+minodar2                => 1	// id.
+
+// TDD
+// ---
+ddplota5                => 1	// Monster
+shadfx1                 => 1	// Shadow Fiend
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_wraiths : LISTS vanilla and modded Wraiths creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Wraiths get the shadow_large (IWD) animation.                                         *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_wraiths
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wraiths BEGIN
+
+// BG2
+// ---
+firwra01                => 1	// Greater Wraith
+hgmis01                 => 1	// Vampiric Wraith
+rngsha02                => 1	// Shadow Patrick
+rngsha04                => 1	// Shadow Jailor
+telslav                 => 1	// Slave Wraith
+wraith01                => 1	// Wraith
+wraithsu                => 1	// id.
+wrashi01                => 1	// Shimmering Wraith
+
+// Bonehill
+// --------
+bhwraith                => 1	// Wraith
+
+// CtB
+// ---
+cbmalr6a                => 1	// Wraith
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_spectres : LISTS vanilla and modded Spectres creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Spectres get the shadow_large_murky (IWD) animation.                                    *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_spectres
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_spectres BEGIN
+
+// BG2
+// ---
+sahspc01                => 1	// Specter
+spectr01                => 1	// id.
+
+// CtB
+// ---
+cbmalr6b                => 1	// Specter
+
+// RoT
+// ---
+caddem22                => 1	// Hand of Evil
+godhate                 => 1	// Hate
+
+// TDD
+// ---
+pkghost4                => 1	// Shadow Spectre
+
+// Unknown mods
+// ------------
+demspec                 => 1	// 
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_shadows : LISTS vanilla and modded Shadows creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Shadows get the shadow_small (IWD) animation.                                         *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_shadows
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_shadows BEGIN
+
+// BG2
+// ---
+rngsha                  => 1	// Shadow
+rngsha01                => 1	// id.
+rngsha03                => 1	// id.
+sdshadow                => 1	// id.
+sewsha03                => 1	// id.
+uhcreat                 => 1	// id.
+
+// RoT
+// ---
+myshdw01                => 1	// Shadow
+myshdw02                => 1	// id.
+myshdw03                => 1	// id.
+myshdw04                => 1	// id.
+myshdw05                => 1	// id.
+myshdw06                => 1	// id.
+myshdw07                => 1	// id.
+myshdw08                => 1	// id.
+myshdw09                => 1	// id.
+myshdw10                => 1	// id.
+
+// Song and Silence
+// ----------------
+a#sdsha2                => 1	// Shadow
+a#sdsha3                => 1	// id.
+a#sdsha4                => 1	// id.
+
+// TDD
+// ---
+specx1                  => 1	// Shadow
+
+// Unknown mods
+// ------------
+krshadm                 => 1	// 
+krshadow                => 1	// 
+shadesm2                => 1	// 
+shadesm3                => 1	// 
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_shadows_small_murky : LISTS some vanilla and modded Shadows creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Some Shadows get the shadow_small_murky animation.                                                     *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_shadows_small_murky
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_shadows_small_murky BEGIN
+
+// BG2
+// ---
+elearb01                => 1	// Apparition
+elearb02                => 1	// id.
+elearb03                => 1	// id.
+elearb04                => 1	// id.
+elearb05                => 1	// id.
+elearb06                => 1	// id.
+elearb07                => 1	// id.
+elearb08                => 1	// id.
+elearb09                => 1	// id.
+elearb10                => 1	// id.
+elearb11                => 1	// id.
+kshadow                 => 1	// Shadow
+
+// BP
+// --
+lshadfi                 => 1	// Shadow
+lshadow                 => 1	// id.
+
+// RoT
+// ---
+monkss19                => 1	// Monk's Spirit
+monkss2                 => 1	// id.
+monkss20                => 1	// id.
+monkss21                => 1	// id.
+monkss25                => 1	// id.
+monkss3                 => 1	// id.
+monkss4                 => 1	// id.
+monkss5                 => 1	// id.
+monkss6                 => 1	// id.
+monkss7                 => 1	// id.
+monkss8                 => 1	// id.
+
+// Song and Silence
+// ----------------
+a#sdsha1                => 1	// Shadow
+
+// Unknown mods
+// ------------
+shadesm1                => 1	// 
+va#shdgl                => 1	// 
+z#gaunt                 => 1	// 
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_skeleton_monster : LISTS vanilla and modded Large Skeletons creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Large Skeletons get the skeleton_monster animation.                                                    *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_skeleton_monster
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_monster BEGIN
+
+// BG2
+// ---
+hgskl01                 => 1	// Skeleton Cleric
+rskel03                 => 1	// Skeleton
+uddoor07                => 1	// id.
+
+// BP
+// --
+bpskelar                => 1	// Skeleton Archer
+
+// RoT
+// ---
+gholske1                => 1	// Gholim's Skeleton
+
+// ToDG
+// ----
+0xuddg                  => 1	// Skeleton
+
+// Unknown mods
+// ------------
+cmapocal                => 1	// 
+lk#xsk1                 => 1	// 
+
+END
+
+
+/* ================================================================================================== *
+ *  ARRAY GW_skeleton_fiend : LISTS vanilla and modded Moon Horrors creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------- *
+ *  Moon Horrors get the skeleton_fiend animation.                                                    *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_skeleton_fiend
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_fiend BEGIN
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05grs1                => 1	// Moon Horror
+bw05grs2                => 1	// id.
+
+END
+
+
+/* ===================================================================================================== *
+ *  ARRAY GW_vampire_female : LISTS vanilla and modded Female Vampires creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Female Vampires get the vampire_female animation.                                                    *
+ * ===================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_vampire_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_vampire_female BEGIN
+
+// BG2
+// ---
+hlshyr                  => 1	// Shyressa
+
+// SoS
+// ---
+cblolth3                => 1	// Lolth
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_wight_gray : LISTS vanilla and modded Wights creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Wights get the wight_gray animation.                                                    *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_wight_gray
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wight_gray BEGIN
+
+// BG2
+// ---
+nevm1                   => 1	// Wight
+
+// NEJ
+// ---
+wighcold                => 1	// Cold Wight
+
+END
+
+
+/* ================================================================================================ *
+ *  ARRAY GW_wight_green : LISTS vanilla and modded Green Zombies creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Green Zombies get the wight_green animation.                                                    *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_wight_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wight_green BEGIN
+
+// BG2
+// ---
+zombie01                => 1	// Zombie
+
+// Quest Pack
+// ----------
+d0monty2                => 1	//  Zombie
+
+END
+
+
+/* ================================================================================================ *
+ *  ARRAY GW_wight_yellow : LISTS vanilla and modded Zombie Lords creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Zombie Lords get the wight_yellow animation.                                                    *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_wight_yellow
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wight_yellow BEGIN
+
+// BG2
+// ---
+kelzomb                 => 1	// Zombie
+rzomb01                 => 1	// id.
+zombju01                => 1	// id.
+zomblo01                => 1	// Zombie Lord
+
+// DSotSC & Bonehill
+// -----------------
+szombl01                => 1	// Zombie Lord
+
+// NTotSC
+// ------
+ntzombju                => 1	// Zombie
+
+// TS
+// --
+gzombie                 => 1	// Greater Zombie
+
+// TDD
+// ---
+zombsexx                => 1	// Zombie
+zombx1                  => 1	// id.
+
+// Unknown mods
+// ------------
+xszomb1                 => 1	// 
+
+END
+
+
+/* ============================================================================================================== *
+ *  ARRAY GW_wight_barrow : LISTS vanilla and modded Undead knights and similar creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------------- *
+ *  Undead knights and similar get the wight_barrow animation.                                                    *
+ * ============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_wight_barrow
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wight_barrow BEGIN
+
+// BG
+// --
+"%tutu_scriptk%nightsk" => 1	// Undead Knight
+//"%tutu_var%ichary"      => 1	// Icharyd
+
+// BG2
+// ---
+trskind1                => 1	// Rejiek Hidesman
+trskind2                => 1	// Darsidian Moor
+
+// BP
+// --
+skelbadx                => 1	// Hoarax
+
+// CtB
+// ---
+cbzomb02                => 1	// Dread Warrior
+cbzombd2                => 1	// id.
+
+// NEJ
+// ---
+zombigu1                => 1	// Zombie Guard
+zombigua                => 1	// id.
+
+// TDD
+// ---
+dreadx                  => 1	// Dread Warrior
+mintskel                => 1	// Minto
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05skw1                => 1	// Undead Knight
+bw05skw2                => 1	// Publius Dawnbringer
+
+// TotDG
+// -----
+0xyhdg                  => 1	// Gray Victim
+
+// Unknown mods
+// ------------
+decre#04                => 1	// 
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_zombies : LISTS vanilla and modded Zombies creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Zombies get the zombie animation.                                                     *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_zombies
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_zombies BEGIN
+
+// BG
+// --
+"%tutu_var%ghorak"      => 1	// Ghorak
+"%tutu_var%zombie"      => 1	// Zombie
+"%tutu_scriptz%ombie_a" => 1	// id.
+"%tutu_scriptz%ombie_b" => 1	// id.
+"%tutu_scriptz%ombie_c" => 1	// id.
+"%tutu_scriptz%ombie_d" => 1	// id.
+"%tutu_scriptz%ombie_e" => 1	// id.
+"%tutu_var%zombieb"     => 1	// id.
+"%tutu_var%zombiew"     => 1	// id.
+
+// BG1 NPC
+// -------
+x#garz01                => 1	// Zombie
+x#garz02                => 1	// id.
+x#garz03                => 1	// id.
+x#garz04                => 1	// id.
+
+// BGQE
+// ----
+c#q06002                => 1	// Zombie
+
+// Saerileth
+// ---------
+nszomb02                => 1	// Zombie
+nszomb04                => 1	// id.
+nszomb06                => 1	// id.
+nszomb07                => 1	// id.
+nszomb08                => 1	// id.
+nszomb09                => 1	// id.
+nszomb10                => 1	// id.
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_zombie_yellow : LISTS vanilla and modded Greater zombies creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Greater zombies get the zombie_yellow (IWD) animation.                                              *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_zombie_yellow
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_zombie_yellow BEGIN
+
+// BG
+// --
+"%tutu_var%sewerf2"     => 1	// Sewerfolk
+
+// BG2
+// ---
+bhghoul3                => 1	// Zombie
+bhghoul5                => 1	// id.
+gtcit3                  => 1	// id.
+gtcit4                  => 1	// id.
+gtcit5                  => 1	// id.
+nevm5                   => 1	// id.
+
+// NTotSC
+// ------
+ntzombie                => 1	// Zombie
+
+// Saerileth
+// ---------
+nszomb01                => 1	// Zombie Waiter
+nszomb03                => 1	// id.
+nszomb05                => 1	// id.
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_zombie_blue : LISTS vanilla and modded Lacedons creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Lacedons get the zombie_blue (IWD) animation.                                              *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_zombie_blue
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY zombie_blue BEGIN
+
+// BG2
+// ---
+lacedo01                => 1	// Lacedon
+lacedo02                => 1	// Greater Lacedon
+sahlace                 => 1	// Lacedon
+
+END
+
+
+/* ============================================================================================= *
+ *  ARRAY GW_zombie_sea : LISTS vanilla and modded Sea Zombies creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------- *
+ *  Sea Zombies get the zombie_blue (IWD) animation.                                             *
+ * ============================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_zombie_sea
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_zombie_sea BEGIN
+
+// BG2
+// ---
+sahzom01                => 1	// Sea Zombie Lord
+sahzomb                 => 1	// Sea Zombie
+zombse01                => 1	// id.
+
+// Unknown mods
+// ------------
+va#zom01                => 1	// 
+va#zom02                => 1	// 
+va#zom03                => 1	// 
+va#zomgl                => 1	// 
+
+END
