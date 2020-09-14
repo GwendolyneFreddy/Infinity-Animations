@@ -1,39 +1,61 @@
 # Windows image file caches
+# =========================
 Thumbs.db
 ehthumbs.db
 
 # Folder config file
+# ==================
 Desktop.ini
 
 # Recycle Bin used on file shares
+# ===============================
 $RECYCLE.BIN/
 
-
-*.csv
-*.7z
-*.rar
-*.zip
-/infinityanimations/animpatch
-
-z_*.*
-
 # Windows Installer files
+# =======================
 
 # Windows shortcuts
+# =================
 *.lnk
 
-# =========================
+# =======================
 # Operating System Files
-# =========================
+# =======================
 
 # OSX
-# =========================
+# ===
 
 .DS_Store
 .AppleDouble
 .LSOverride
 
 # Thumbnails
+# ==========
 ._*
 
 
+# =================
+# ignore all files
+# =================
+*.bak
+*.bat
+*.csv
+# *.7z
+*.rar
+*.zip
+# *.exe
+# dev_notes.txt
+z_*.*
+# todo*.*
+
+
+# ========================================
+# ignore all files in any directory named
+# ========================================
+# legacy/
+backup/
+z_BatLoaAnimation-master/
+z_ModResource_BeeAnimation-master/
+z_UlbsAnimationPack-master/
+
+/infinityanimations/animpatch
