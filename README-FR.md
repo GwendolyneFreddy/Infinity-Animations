@@ -830,21 +830,45 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
   - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
-  - [0] Infinity Animations (composant principal) ()
+- [0] Infinity Animations (composant principal) (t-main.tpa, ia_restore_bg2_animations.tpa, )
     - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>, correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
     - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-
-  - [100] Démons différenciés ()
+    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
+- [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.
+    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les elfes magiciens n'étaient pas patchés).
+- [50] Genies différenciés (t-genie.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_genies_arrays.tph*") pour faciliter leur mise à jour.
+- [100] Démons différenciés (t-fiend.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_fiends_arrays.tph*") pour faciliter leur mise à jour.
     - Suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : «&nbsp;*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way* »).
+    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (un maurezhi n'était pas patché).
+- [150-175] Diantrefosses (t-pit_fiend.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_pit_fiends_arrays.tph*") pour faciliter leur mise à jour.
+- [210-230] Cambions get Isair Animation (t-cambion.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_cambions_arrays.tph*") pour faciliter leur mise à jour.
+- [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_alu_fiends_arrays.tph*") pour faciliter leur mise à jour.
+- [400] Morts-vivants différenciés (t-undead.tpa)				[710-720-760-740] Plus d'animations de Planescape: Torment ()
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_undead_arrays.tph*") pour faciliter leur mise à jour.
+    - Variables tutu : remplacement de la variable "*%tsz%*" n'existait pas par la variable "*%tutu_scriptz%*" (array *GW_zombies*).
+    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
+    - Array *GW_ghasts* : integration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations modifiées de briller en rouge (Attribuer aux blêmes l'animation ghast : suppression du fichier ghastsu qui est un squelette, et non une blême).
+    - Attribuer aux zombis majeurs l'animation de zombi jaune d'IWD : suppression de la correction des noms du fichier gzombie.cre (*Zombi majeur<*) déjà corrigée par le mod TS à partir de la version 6..
+- [410-415-420] Combattants squelettes (t-skelwa.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_skelwa_arrays.tph*") pour faciliter leur mise à jour.
+    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
+- [450-455] Animation de pauvre hère (t-seer.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie *gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
+    - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
+    - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *our certains mendiants* » étaient interverties. &#128541;
+  - [480-490] Animations de svirneblins (t-svirfneblin.tpa)
+    - Utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
 
-  - [400] Morts-vivants différenciés, [410-415-420] Combattants squelettes et [710-720-760-740] Plus d'animations de Planescape: Torment ()
+
+
     - Intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
 
-  - [450-455] Animation de pauvre hère ()
-    - Fix: Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *Pour certains mendiants* » étaient interverties. &#128541;
-
-  - [480-490] Animations de svirneblins ()
-    - Utilisation de la nouvelle variable t-svi dans une routine unique pour les deux sous-composants.
 
   - [710-720-760-740] Plus d'animations de Planescape: Torment ()
     - Intégration du correctif <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, amélioré par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.

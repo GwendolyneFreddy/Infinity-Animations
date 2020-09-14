@@ -1,0 +1,363 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *                         A R R A Y S    ( T A B L E S )    :    S E E R   A N I M A T I O N   C O M P O N E N T   ( 450-455-460 )                        *
+ *                                                                                                                                                         *
+ *                  Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-seer.tpa WeiDU routine.                  *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_seers_beggars            :   LISTS vanilla and modded Beggars creatures needing to be patched.                                    => line #  21   *
+ *                                    LISTE les créatures mendiants du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_seers_slaves             :   LISTS vanilla and modded Slaves creatures needing to be patched.                                     => line # 127   *
+ *                                    LISTE les créatures esclaves du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_seers                    :   LISTS vanilla and modded Beggars and Slaves creatures needing to be patched.                         => line # 214   *
+ *                                    LISTE les créatures mendiants et esclaves du jeu et de mods nécessitant d'être modifiées.                            *
+ * ======================================================================================================================================================= */
+
+/* ================================================================================================ *
+ *  ARRAY GW_seer_beggars : LISTS vanilla and modded Beggars creatures needing to be patched.       *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Some Beggars get the seer animation (components (450 and 455).                                  *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Change-log: the following creatures have been moved from the beggars array to the slaves array  *
+ *    (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).    *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_seer_beggars
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_seer_beggars BEGIN
+
+// BG
+// --
+"%tutu_scriptb%egbax_a" => 1	// Beggar
+"%tutu_scriptb%egbax_b" => 1	// id.
+"%tutu_scriptb%egbax_c" => 1	// id.
+"%tutu_scriptb%egbax_d" => 1	// id.
+"%tutu_var%beggba"      => 1	// id.
+"%tutu_var%beggbax"     => 1	// id.
+"%tutu_var%beggna"      => 1	// id.
+"%tutu_var%portal"      => 1	// Portalbendarwinden
+"%tutu_var%priilmu"     => 1	// Priest of Ilmater
+
+// BG2
+// ---
+amman04                 => 1	// Commoner
+arnman01                => 1	// Prisoner
+arnman02                => 1	// id.
+bbegg1                  => 1	// Beggar
+beggar1                 => 1	// id.
+beggar2                 => 1	// id.
+dbeggar                 => 1	// id.
+dbeggar2                => 1	// id.
+dmstore                 => 1	// id.
+drpar2                  => 1	// id.
+drpar3                  => 1	// id.
+drpar4                  => 1	// id.
+drpar5                  => 1	// id.
+drpar6                  => 1	// id.
+gbegg01                 => 1	// id
+gphil01                 => 1	// Philosopher
+ilbegg01                => 1	// Beggar
+kpfarm04                => 1	// Citizen
+lout                    => 1	// Vittorio
+maeguy01                => 1	// Kamuzu
+murdbegg                => 1	// Rampah
+pirbob01                => 1	// Capt'n Bob Holmes
+riftm02                 => 1	// Diseased One
+sassar                  => 1	// Sassar
+sethle                  => 1	// Sethle
+/*slslav01                => 1	// Slave
+udilsla1                => 1	// id.
+udilsla1                => 1	// Slave
+udilsla3                => 1	// id.
+udslv02                 => 1	// id.
+udvicti2                => 1	// id.
+udvicti3                => 1	// id.
+udvicti4                => 1	// id.
+udvictim                => 1	// id.*/
+
+// Bone Hill
+// ---------
+bhpriska                => 1	// Priska
+
+// CtB
+// ---
+cb3566p1                => 1	// Beggar
+cbhld0ma                => 1	// id.
+
+// NEJ
+// ---
+hermit                  => 1	// Hermit
+
+// NTotSC
+// ------
+ntutor                  => 1	// Utor
+ntutor1                 => 1	// Utor
+
+// Planar Sphere
+// -------------
+pspeas1                 => 1	// Peasant
+
+// Quest Pack
+// ----------
+j#im8grd                => 1	// Carrack
+
+// RoT
+// ---
+antti                   => 1	// Antti Halme
+arenab1                 => 1	// Beggar
+arlaxbe1                => 1	// id.
+
+// SoS
+// ---
+cb4270dw                => 1	// Dishwasher
+
+// TDD
+// ---
+ddvagabo                => 1	// Wimblie
+pkagalb                 => 1	// Agal
+
+END
+
+
+/* ================================================================================================ *
+ *  ARRAY GW_seer_slaves : LISTS vanilla and modded Slaves creatures needing to be patched.         *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Some Slaves get the seer animation (components (450 and 460).                                   *
+ * ------------------------------------------------------------------------------------------------ *
+ *  Change-log: the following creatures have been moved from the beggars array to the slaves array  *
+ *    (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).    *
+ * ================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_seer_slaves
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_seer_slaves BEGIN
+
+// BG
+// --
+"%tutu_var%beldin"      => 1	// Miner Beldin
+"%tutu_var%bob"         => 1	// Miner Bob
+"%tutu_var%cantic"      => 1	// Canticle
+"%tutu_var%cory"        => 1	// Miner Cory
+"%tutu_var%dilak"       => 1	// Miner Dilak
+"%tutu_var%dink"        => 1	// Miner Dink
+"%tutu_var%faber"       => 1	// Faber
+"%tutu_var%gord"        => 1	// Miner Gord
+"%tutu_var%jamie"       => 1	// Jamie
+"%tutu_var%kylee"       => 1	// Miner Kylee
+"%tutu_var%lesley"      => 1	// Miner Lesley
+"%tutu_var%marvin"      => 1	// Miner Marvin
+"%tutu_var%minec2"      => 1	// Miner
+"%tutu_var%minec3"      => 1	// id.
+"%tutu_var%minec4"      => 1	// id.
+"%tutu_var%minec5"      => 1	// id.
+"%tutu_var%minerc"      => 1	// id.
+"%tutu_var%minern"      => 1	// id.
+"%tutu_var%phaers"      => 1	// Phaersis
+"%tutu_var%prison"      => 1	// Prisoner
+"%tutu_var%ruffie"      => 1	// Miner Ruffie
+"%tutu_var%shvert"      => 1	// Shvertszche
+"%tutu_var%slave"       => 1	// Slave
+"%tutu_var%slave4"      => 1	// id.
+"%tutu_var%slave5"      => 1	// id.
+"%tutu_var%slave6"      => 1	// id.
+"%tutu_scripts%lavfree" => 1	// id.
+"%tutu_scripts%lavlead" => 1	// Rill
+"%tutu_scripts%lavtell" => 1	// Slave
+"%tutu_var%tipian"      => 1	// Tipian
+
+// BG2
+// ---
+andars                  => 1	// Andersson
+pris02                  => 1	// Prisoner
+sarpris2                => 1	// Vinke
+sewerm                  => 1	// Quallo
+sewerm1                 => 1	// id.
+slslav01                => 1	// Slave
+udilsla1                => 1	// id.
+udilsla1                => 1	// id.
+udilsla3                => 1	// id.
+udslv02                 => 1	// id.
+udvicti2                => 1	// id.
+udvicti3                => 1	// id.
+udvicti4                => 1	// id.
+udvictim                => 1	// id.
+
+// NTotSC
+// ------
+ntslavex                => 1	// Fisherman
+
+// Tower of Deception
+// ------------------
+va#prisn                => 1	// Prisoner
+
+// TDD
+// ---
+deadman4                => 1	// Bird
+
+// Unknown mods
+// ------------
+acqxmin1                => 1	// 
+acqxmin2                => 1	// 
+acqxmin3                => 1	// 
+acqxmin4                => 1	// 
+acqxmin5                => 1	// 
+acqxmine                => 1	// 
+
+END
+
+
+/* ============================================================================================== *
+ *  ARRAY GW_sees : LISTS vanilla and modded Beggars and Slaves creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------- *
+ *  Some Beggars and Slaves get the seer animation (component (450).                              *
+ * ============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_seer_beggars
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_seer_beggars BEGIN
+
+// BG
+// --
+"%tutu_scriptb%egbax_a" => 1	// Beggar
+"%tutu_scriptb%egbax_b" => 1	// id.
+"%tutu_scriptb%egbax_c" => 1	// id.
+"%tutu_scriptb%egbax_d" => 1	// id.
+"%tutu_var%beggba"      => 1	// id.
+"%tutu_var%beggbax"     => 1	// id.
+"%tutu_var%beggna"      => 1	// id.
+"%tutu_var%portal"      => 1	// Portalbendarwinden
+"%tutu_var%priilmu"     => 1	// Priest of Ilmater
+
+"%tutu_var%beldin"      => 1	// Miner Beldin
+"%tutu_var%bob"         => 1	// Miner Bob
+"%tutu_var%cantic"      => 1	// Canticle
+"%tutu_var%cory"        => 1	// Miner Cory
+"%tutu_var%dilak"       => 1	// Miner Dilak
+"%tutu_var%dink"        => 1	// Miner Dink
+"%tutu_var%faber"       => 1	// Faber
+"%tutu_var%gord"        => 1	// Miner Gord
+"%tutu_var%jamie"       => 1	// Jamie
+"%tutu_var%kylee"       => 1	// Miner Kylee
+"%tutu_var%lesley"      => 1	// Miner Lesley
+"%tutu_var%marvin"      => 1	// Miner Marvin
+"%tutu_var%minec2"      => 1	// Miner
+"%tutu_var%minec3"      => 1	// id.
+"%tutu_var%minec4"      => 1	// id.
+"%tutu_var%minec5"      => 1	// id.
+"%tutu_var%minerc"      => 1	// id.
+"%tutu_var%minern"      => 1	// id.
+"%tutu_var%phaers"      => 1	// Phaersis
+"%tutu_var%prison"      => 1	// Prisoner
+"%tutu_var%ruffie"      => 1	// Miner Ruffie
+"%tutu_var%shvert"      => 1	// Shvertszche
+"%tutu_var%slave"       => 1	// Slave et 2 3 ???
+"%tutu_var%slave4"      => 1	// id.
+"%tutu_var%slave5"      => 1	// id.
+"%tutu_var%slave6"      => 1	// id.
+"%tutu_scripts%lavfree" => 1	// id.
+"%tutu_scripts%lavlead" => 1	// Rill
+"%tutu_scripts%lavtell" => 1	// Slave
+"%tutu_var%tipian"      => 1	// Tipian
+
+// BG2
+// ---
+amman04                 => 1	// Commoner
+andars                  => 1	// Andersson
+arnman01                => 1	// Prisoner
+arnman02                => 1	// id.
+bbegg1                  => 1	// Beggar
+beggar1                 => 1	// id.
+beggar2                 => 1	// id.
+dbeggar                 => 1	// id.
+dbeggar2                => 1	// id.
+dmstore                 => 1	// id.
+drpar2                  => 1	// id.
+drpar3                  => 1	// id.
+drpar4                  => 1	// id.
+drpar5                  => 1	// id.
+drpar6                  => 1	// id.
+gbegg01                 => 1	// id
+gphil01                 => 1	// Philosopher
+ilbegg01                => 1	// Beggar
+kpfarm04                => 1	// Citizen
+lout                    => 1	// Vittorio
+maeguy01                => 1	// Kamuzu
+murdbegg                => 1	// Rampah
+pirbob01                => 1	// Capt'n Bob Holmes
+riftm02                 => 1	// Diseased One
+sassar                  => 1	// Sassar
+sethle                  => 1	// Sethle
+slslav01                => 1	// Slave
+udilsla1                => 1	// id.
+udilsla3                => 1	// id.
+udslv02                 => 1	// id.
+udvicti2                => 1	// id.
+udvicti3                => 1	// id.
+udvicti4                => 1	// id.
+udvictim                => 1	// id.
+pris02                  => 1	// Prisoner
+sarpris2                => 1	// Vinke
+sewerm                  => 1	// Quallo
+sewerm1                 => 1	// id.
+
+// Bonehill
+// --------
+bhpriska                => 1	// Priska
+
+// CtB
+// ---
+cb3566p1                => 1	// Beggar
+cbhld0ma                => 1	// id.
+
+// NEJ
+// ---
+hermit                  => 1	// Hermit
+
+// NTotSC
+// ------
+ntslavex                => 1	// Fisherman
+ntutor                  => 1	// Utor
+ntutor1                 => 1	// Utor
+
+// Planar Sphere
+// -------------
+pspeas1                 => 1	// Peasant
+
+// Quest Pack
+// ----------
+j#im8grd                => 1	// Carrack
+
+// RoT
+// ---
+antti                   => 1	// Antti Halme
+arenab1                 => 1	// Beggar
+arlaxbe1                => 1	// id.
+
+// SoS
+// ---
+cb4270dw                => 1	// Dishwasher
+
+// TDD
+// ---
+ddvagabo                => 1	// Wimblie
+pkagalb                 => 1	// Agal
+deadman4                => 1	// Bird
+
+// Tower of Deception
+// ------------------
+va#prisn                => 1	// Prisoner
+
+// Unknown mods
+// ------------
+acqxmin1                => 1	// 
+acqxmin2                => 1	// 
+acqxmin3                => 1	// 
+acqxmin4                => 1	// 
+acqxmin5                => 1	// 
+acqxmine                => 1	// 
+
+END

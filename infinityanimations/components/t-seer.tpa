@@ -1,18 +1,31 @@
-/* ==================================== *
- *  INFINITY ANIMATIONS : Seer routine  *
- * ==================================== */
+/* =================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                            *
+ *                                             S E E R   A N I M A T I O N   C O M P O N E N T   ( 4 5 0 - 4 5 5 - 4 6 0 )                                             *
+ *                                                                                                                                                                     *
+ * =================================================================================================================================================================== *
+ *  This component assigns the IWD Seer animation to some beggars and slaves.                                                                                          *
+ * =================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                        *
+ *  -----------                                                                                                                                                        *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_seers_arrays.tph library) for easier maintenance.                                  *
+ *      - slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4 and udvictim creatures have been moved from the beggars to the slaves array.   *
+ *      - Fix: "Some beggars and slaves" and "Some beggars" sub-components creatures listings were inverted.                                                           *
+ *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                              *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 0x528a with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~)           *
+ * =================================================================================================================================================================== */
 
 SILENT
 
 COPY_EXISTING ~%nb%.cre~ ~override~
+
 	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 	PATCH_IF valid BEGIN
 		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-		PATCH_IF rgs = 1 BEGIN
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~) // classical 0x528a - EE 0xe255
-			READ_BYTE 0x237 sx		// Sex
+		PATCH_IF rgs = 1 BEGIN // 50%
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~) // original 0x528a - EE 0xe255
+			READ_BYTE  0x237 sx    // Sex
 			PATCH_IF sx = 0 BEGIN
-				WRITE_BYTE 0x237 1	// male
+				WRITE_BYTE 0x237 1 // male
 			END
 		END
 	END
