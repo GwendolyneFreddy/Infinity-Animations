@@ -877,6 +877,8 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Compatibilité avec BG:EE : ajout de la condition `IF_EXISTS` après `COPY_EXISTING` pour éviter un échec de l'installation.
 - [600] Plus d'animations d'Icewind Dale II (t-iwd2anims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd2_anim_arrays.tph*") pour faciliter leur mise à jour.
+- [650] Plus d'animations de Neverwinter Nights (t-nwnanims.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_nwn_anim_arrays.tph*") pour faciliter leur mise à jour.
 
 
 

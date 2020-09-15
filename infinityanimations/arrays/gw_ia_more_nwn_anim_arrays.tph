@@ -1,0 +1,175 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                       A R R A Y S    ( T A B L E S )    :    M O R E   N W N   A N I M A T I O N S   C O M P O N E N T   ( 650 )                       *
+ *                                                                                                                                                        *
+ *                Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-nwnanims.tpa WeiDU routine.               *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+ * ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_amel_pc_nwn              :   LISTS Scythe Wielders (in NTotSC) creatures needing to be patched.                                 => line #   29   *
+ *                                    LISTE les porteurs de faux (dans NTotSC) nécessitant d'être modifiés.                                               *
+ *  - GW_beetle_bombardier_nwn    :   LISTS modded Bombardier Beetle creatures needing to be patched.                                    => line #   47   *
+ *                                    LISTE les scarabées bombardiers de mods nécessitant d'être modifiés.                                                *
+ *  - GW_basilisk_nwn             :   LISTS vanilla and modded Greater Basilisks creatures needing to be patched.                        => line #   65   *
+ *                                    LISTE les créatures basilics majeurs du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_modron_round             :   LISTS vanilla and modded Modrons creatures needing to be patched.                                  => line #   89   *
+ *                                    LISTE les créatures modrones du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_displacer_beast          :   LISTS vmodded Displacer Beasts creatures needing to be patched.                                    => line #  110   *
+ *                                    LISTE les créatures bêtes éclipsantes de mods nécessitant d'être modifiées.                                         *
+ *  - GW_giant_fire_female        :   LISTS vanilla and modded Fire Giant Females needing to be patched.                                 => line #  131   *
+ *                                    LISTE les créatures géantes du feu du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_giant_frost_female       :   LISTS modded Frost Giant Females needing to be patched.                                            => line #  157   *
+ *                                    LISTE les créatures géantes du givre de mods nécessitant d'être modifiées.                                          *
+ * ====================================================================================================================================================== */
+
+/* =========================================================================================== *
+ *  ARRAY GW_amel_pc_nwn : LISTS Scythe Wielders (in NTotSC) creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Scythe Wielders get the amel_pc_nwn animation.                                             *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_amel_pc_nwn
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_amel_pc_nwn BEGIN
+
+// NTotSC
+// ------
+ntdraagi                => 1	// Brother Draagis
+nthaebal                => 1	// Haeball
+
+END
+
+
+/* ================================================================================================== *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                            *
+ *  ARRAY GW_beetle_bombardier_nwn : LISTS modded Bombardier Beetle creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------- *
+ *  Bombardier Beetle get the beetle_bombardier_nwn animation.                                        *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_beetle_bombardier_nwn
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_beetle_bombardier_nwn BEGIN
+
+// NEJ and KKit
+// ------------
+beetbomb                => 1	// Bombardier beetle
+
+END
+
+
+/* ===================================================================================================== *
+ *  ARRAY GW_basilisk_nwn : LISTS vanilla and modded Greater Basilisks creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Greater Basilisks get the basilisk_nwn animation.                                                    *
+ * ===================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_basilisk_nwn
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_basilisk_nwn BEGIN
+
+// BG
+// --
+"%tutu_var%basilg"      => 1	// Greater Basilisk
+"%tutu_scriptb%asilmut" => 1	// id.
+"%tutu_scriptb%asilnad" => 1	// id.
+
+// BG2
+// ---
+basgrt01                => 1	// Greater Basilisk
+basilgsu                => 1	// id.
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_modron_round : LISTS vanilla and modded Modrons creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Modrons get the modron_round animation.                                                    *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_modron_round
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_modron_round BEGIN
+
+// BG2
+// ---
+obsmod01                => 1	// Modron
+
+// Planar Sphere
+// -------------
+psmodron                => 1	// Modron
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_displacer_beast : LISTS modded Displacer Beasts creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Displacer Beasts (AjocMod) get the displacer_beast animation.                              *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_displacer_beast
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_displacer_beast BEGIN
+
+// AjocMod
+// -------
+agdisp11                => 1	// Displacer Beast
+agdisp12                => 1	// id.
+agdisp13                => 1	// id.
+agdispl1                => 1	// id.
+agdispl2                => 1	// id.
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_giant_fire_female : LISTS vanilla and modded Fire Giant Females needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Fire Giant Females get the giant_fire_female animation.                                          *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_giant_fire_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire_female BEGIN
+
+// BG2
+// ---
+giantf01                => 1	// Fire Giant
+gorfirg                 => 1	// id.
+hgmag02                 => 1	// Fire Giant Mage
+sarfaki2                => 1	// Fire Giant
+yscara03                => 1	// id.
+ysfire02                => 1	// id.
+
+// RoT
+// ---
+ggiantf2                => 1	// Greater Fire Giant
+
+END
+
+
+/* ======================================================================================= *
+ *  ARRAY GW_giant_frost_female : LISTS modded Frost Giant Females needing to be patched.  *
+ * --------------------------------------------------------------------------------------- *
+ *  Frost Giant Females get the giant_frost_female animation.                              *
+ * ======================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_giant_frost_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_frost_female BEGIN
+
+// RoT
+// ---
+brefr2                  => 1	// Frost Giant
+frostgi                 => 1	// id.
+
+// TDD
+// ---
+hillfro2                => 1	// Frost Giant
+
+END

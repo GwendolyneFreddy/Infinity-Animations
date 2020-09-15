@@ -883,6 +883,8 @@ This component assigns some creatures distinctive Moinesse's animations:
     - BG:EE compatibility: added `IF_EXISTS` after `COPY_EXISTING` to avoid installation failure.
 - [600] More Icewind Dale II Animations (t-iwd2anims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd2_anim_arrays.tph*" library) for easier maintenance.
+- [650] More Neverwinter Nights Animations (t-nwnanims.tpa)
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_nwn_anim_arrays.tph*" library) for easier maintenance.
 
   - [710-720-760-740] More Planescape: Torment Animations ()
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
