@@ -24,31 +24,31 @@
  *  - GW_barbarian_warrior_brown  :   LISTS modded Brown Barbarians creatures needing to be patched.                                     => line #  227   *
  *                                    LISTE les créatures barbares marrons de mods nécessitant d'être modifiées.                                          *
  *  - GW_barbarian_shaman_club    :   LISTS modded Barbarian Shaman with club creatures needing to be patched.                           => line #  252   *
- *                                    LISTE les chaman barbares avec gourdin de mods nécessitant d'être modifiées.                                        *
+ *                                    LISTE les chaman barbares avec gourdin de mods nécessitant d'être modifiés.                                         *
  *  - GW_barbarian_shaman_hammer  :   LISTS modded Barbarian Shaman with hammer creatures needing to be patched.                         => line #  270   *
- *                                    LISTE les chaman barbares avec marteau de mods nécessitant d'être modifiées.                                        *
+ *                                    LISTE les chaman barbares avec marteau de mods nécessitant d'être modifiés.                                         *
  *  - GW_barbarian_shaman_staff   :   LISTS modded Barbarian Shaman with staff creatures needing to be patched.                          => line #  292   *
- *                                    LISTE les chaman barbares avec bâton de mods nécessitant d'être modifiées.                                          *
+ *                                    LISTE les chaman barbares avec bâton de mods nécessitant d'être modifiés.                                           *
  *  - GW_elemental_air_small      :   LISTS modded Air Elementals Small creatures needing to be patched.                                 => line #  310   *
- *                                    LISTE les petits élémentaires de l'air de mods nécessitant d'être modifiées.                                        *
+ *                                    LISTE les petits élémentaires de l'air de mods nécessitant d'être modifiés.                                         *
  *  - GW_elemental_earth          :   LISTS vanilla and modded Earth Elementals creatures needing to be patched.                         => line #  331   *
  *                                    LISTE les créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                           *
  *  - GW_elemental_earth_iwd      :   LISTS some vanilla and modded Earth Elementals creatures needing to be patched.                    => line #  381   *
  *                                    LISTE certaines créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                     *
  *  - GW_elemental_earth_small    :   LISTS vanilla and modded Small Earth Elementals creatures needing to be patched.                   => line #  409   *
- *                                    LISTE les petits élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                              *
+ *                                    LISTE les petits élémentaires de terre du jeu et de mods nécessitant d'être modifiés.                               *
  *  - GW_elemental_fire           :   LISTS vanilla and modded Fire Elementals creatures needing to be patched.                          => line #  430   *
  *                                    LISTE les créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                             *
  *  - GW_elemental_fire_iwd       :   LISTS some vanilla and modded Fire Elementals creatures needing to be patched.                     => line #  495   *
  *                                    LISTE certaines créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                       *
  *  - elemental_fire_small        :   LISTS some vanilla and modded mall Fire Elementals creatures needing to be patched.                => line #  528   *
- *                                    LISTE les petits élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                                *
+ *                                    LISTE les petits élémentaires de feu du jeu et de mods nécessitant d'être modifiés.                                 *
  *  - GW_elemental_water          :   LISTS vanilla and modded Water Elementals creatures needing to be patched.                         => line #  556   *
  *                                    LISTE les créatures élémentaires de l'eau du jeu et de mods nécessitant d'être modifiées.                           *
  *  - GW_water_weird              :   LISTS vanilla and modded Water Weirds creatures needing to be patched.                             => line #  584   *
  *                                    LISTE les monstruosités de l'eau du jeu et de mods nécessitant d'être modifiées.                                    *
  *  - GW_giant_fire_iwd           :   LISTS some vanilla and modded Fire Giants creatures needing to be patched.                         => line #  602   *
- *                                    LISTE certains géants du feu du jeu et de mods nécessitant d'être modifiées.                                        *
+ *                                    LISTE certains géants du feu du jeu et de mods nécessitant d'être modifiés.                                         *
  *  - GW_golem_clay               :   LISTS vanilla and modded Rock Golem creatures needing to be patched.                               => line #  630   *
  *                                    LISTE les créatures golems de pierre du jeu et de mods nécessitant d'être modifiées.                                *
  *  - GW_golem_iron               :   LISTS vanilla and modded Adamantite golems creatures needing to be patched.                        => line #  648   *
@@ -60,9 +60,9 @@
  *  - GW_sahuagin_iwd             :   LISTS vanilla and modded Sahuagin Priestesses creatures needing to be patched.                     => line #  793   *
  *                                    LISTE les prêtresses sahuagins du jeu et de mods nécessitant d'être modifiées.                                      *
  *  - GW_sahuagin_large_iwd       :   LISTS vanilla and modded Sahuagins chiefs creatures needing to be patched.                         => line #  816   *
- *                                    LISTE les chefs sahuagins du jeu et de mods nécessitant d'être modifiées.                                           *
+ *                                    LISTE les chefs sahuagins du jeu et de mods nécessitant d'être modifiés.                                            *
  *  - GW_sahuagin_large           :   LISTS vanilla and modded Sahuagins royal guards creatures needing to be patched.                   => line #  848   *
- *                                    LISTE les gardes royaux sahuagins du jeu et de mods nécessitant d'être modifiées.                                   *
+ *                                    LISTE les gardes royaux sahuagins du jeu et de mods nécessitant d'être modifiés.                                    *
  * ====================================================================================================================================================== */
 
 /* ================================================================================================================== *

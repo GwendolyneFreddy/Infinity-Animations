@@ -7,7 +7,7 @@
  * ======================================================================================================================================================================== *
  *  change-log:                                                                                                                                                             *
  *  -----------                                                                                                                                                             *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_undeads_arrays.tph library) for easier maintenance.                                     *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_undead_arrays.tph library) for easier maintenance.                                      *
  *      - Integrated patch that prevent Skeletons with modified animations to glow red ( http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498 ) [Ghasts     *
  *        get the ghast animation: ghastsu is a skeleton, not a ghast) and glowcheck.tpp ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).        *
  *      - Tutu variables: replaced "%tsz%" that did not exist with "%tutu_scriptz%" (GW_zombies array).                                                                     *
@@ -696,8 +696,8 @@ ACTION_PHP_EACH GW_wight_yellow AS nb => correct BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 /* DEPRECATED as of v6.0.0: Useless as of TS v6 and later: typo has been fixed
 				PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~gzombie~ = 1) BEGIN
-					SAY 0x8 @546        // Greater Zombie (fix botched strref)
-					SAY 0xc @546        // Greater Zombie
+					SAY 0x8 @10401      // Greater Zombie (fix botched strref)
+					SAY 0xc @10401
 				END*/
 				WRITE_LONG 0x28 0xec20  // Animation ID (wight_yellow)
 				WRITE_BYTE 0x237 1      // Sex (male)

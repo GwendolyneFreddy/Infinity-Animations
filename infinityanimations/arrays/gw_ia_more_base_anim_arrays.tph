@@ -12,7 +12,7 @@
  *  - GW_histachii                :   LISTS vanilla and modded Histachii creatures needing to be patched.                                => line #   37   *
  *                                    LISTE les créatures histachii du jeu et de mods nécessitant d'être modifiées.                                       *
  *  - GW_lizardmen_brown          :   LISTS vanilla and modded Brown Lizardmen creatures needing to be patched.                          => line #   62   *
- *                                    LISTE les guerriers hommes-lézards du jeu et de mods nécessitant d'être modifiées.                                  *
+ *                                    LISTE les guerriers hommes-lézards du jeu et de mods nécessitant d'être modifiés.                                   *
  *  - GW_lizardmen_green          :   LISTS vanilla and modded Lizardman Shamans creatures needing to be patched.                        => line #   98   *
  *                                    LISTE les créatures chaman hommes-lézards du jeu et de mods nécessitant d'être modifiées.                           *
  *  - GW_lizardmen_kings          :   LISTS vanilla and modded Lizardman chiefs creatures needing to be patched.                         => line #  133   *
@@ -24,7 +24,7 @@
  *  - GW_troll_ice                :   LISTS vanilla and modded Ice Troll creatures needing to be patched.                                => line #  310   *
  *                                    LISTE les créatures trolls des glaces du jeu et de mods nécessitant d'être modifiées.                               *
  *  - GW_troll_small              :   LISTS vanilla and modded Small Troll creatures needing to be patched.                              => line #  344   *
- *                                    LISTE les petits trolls du jeu et de mods nécessitant d'être modifiées.                                             *
+ *                                    LISTE les petits trolls du jeu et de mods nécessitant d'être modifiés.                                              *
  *  - GW_troll_snow               :   LISTS vanilla and modded Snow Troll creatures needing to be patched.                               => line #  377   *
  *                                    LISTE les créatures trolls des neiges du jeu et de mods nécessitant d'être modifiées.                               *
  *  - GW_lumber_hulk              :   LISTS vanilla and modded Umber Hulk creatures needing to be patched.                               => line #  404   *

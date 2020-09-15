@@ -34,7 +34,7 @@ SILENT
 /* ============================== *
  *  Loads creatures lists arrays  *
  * ============================== */
-INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_base_anims_arrays.tph~
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_base_anim_arrays.tph~
 
 
 /* ======================================= *
