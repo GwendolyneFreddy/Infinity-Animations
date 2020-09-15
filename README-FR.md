@@ -872,6 +872,11 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Correction de noms de fichiers sons mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
 - [500] Plus d'animations de base (t-baseanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_base_anim_arrays.tph*") pour faciliter leur mise à jour.
+- [550] Plus d'animations d'Icewind Dale (t-iwdanims.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Compatibilité avec BG:EE : ajout de la condition `IF_EXISTS` après `COPY_EXISTING` pour éviter un échec de l'installation.
+- [600] Plus d'animations d'Icewind Dale II (t-iwd2anims.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd2_anim_arrays.tph*") pour faciliter leur mise à jour.
 
 
 

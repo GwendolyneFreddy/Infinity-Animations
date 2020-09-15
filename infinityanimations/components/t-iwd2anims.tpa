@@ -1,483 +1,631 @@
-/* =============================================================== *
- *  INFINITY ANIMATIONS : More Icewind Dale II Animations routine  *
- * =============================================================== */
+/* ====================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                               *
+ *                                                 M O R E   I W D 2   A N I M A T I O N S   C O M P O N E N T   ( 6 0 0 )                                                *
+ *                                                                                                                                                                        *
+ * ====================================================================================================================================================================== *
+ *  This component assigns assigns some creatures distinctive IWD2 animations.                                                                                            *
+ * ====================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                           *
+ *  -----------                                                                                                                                                           *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_iwd2_anim_arrays.tph library) for easier maintenance.                            *
+ *      - Replaced WRITE_LONG 0x28 with WRITE_LONG 0x28.                                                                                                                  *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
+ *        whenever relevant.                                                                                                                                              *
+ * ====================================================================================================================================================================== */
+
+/* ----------------------------------------------------------------------------------- *
+ *                            CREATURES                                          line  *
+ * ----------------------------------------------------------------------------------- *
+ *  Fire Giants get the giant_fire animation                                   #   49  *
+ *  Greater fire giants and firbolgs get the giant_fire_2 animation            #   79  *
+ *  Goblin Worgriders get the goblin_worg animation                            #  108  *
+ *  Goblin Worgrider Captain gets the goblin_worg_captain animation            #  142  *
+ *  Goblin Leaders get the goblin_captain animation                            #  170  *
+ *  Green Goblins Elite with Axe get the goblinelite_axe_green animation       #  201  *
+ *  Green Goblins Elite with Bow get the goblinelite_bow_green animation       #  232  *
+ *  Green Goblins with Axe get the goblin_axe_green animation                  #  269  *
+ *  Green Goblins with Bow get the goblin_bow_green animation                  #  305  *
+ *  Goblins Elite with Axe get the goblin_elite_axe animation                  #  341  *
+ *  Goblins Elite with Bow get the goblin_elite_bow animation                  #  362  *
+ *  Hook Horrors get the hook_horror animation                                 #  383  *
+ *  Shadow Druids get the malarite animation                                   #  418  *
+ *  Ellesime Clones get the ellesime_white animation                           #  471  *
+ *  Poison Mists get the lagoon_creature animation                             #  496  *
+ *  Death Tyrants get the death_tyrant animation                               #  521  *
+ *  Wererat gets the wererat animation                                         #  544  *
+ *  Worgs get the worg (iwd) animation                                         #  569  *
+ *  Yuan-Ti Halfbreeds get the yuan-ti_half animation                          #  601  *
+ * ----------------------------------------------------------------------------------- */
 
 SILENT
+
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_iwd2_anim_arrays.tph~
+
 
 /* ========================================== *
  *  Fire Giants get the giant_fire animation  *
  * ========================================== */
-ACTION_FOR_EACH nb IN ~bhfgiant~ ~cultmo9~ ~finyaga~ ~giafir01~ ~giantf01~ ~giantfr~ ~hgmag01~ ~hgmag02~ ~hgwar01~ ~sumgia~ ~yaga01~ ~yagaspir~ ~ysguar01~ BEGIN
+ACTION_PHP_EACH GW_giant_fire AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x7f3e					// Animation ID (giant_fire)
-				WRITE_BYTE 0x237 1						// Sex (male)
-				WRITE_BYTE 0x271 5						// General (gianthumanoid)
-				WRITE_BYTE 0x272 142					// Race (giant)
-				READ_BYTE 0x275 gd						// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
-					WRITE_BYTE 0x275 1					// Gender (male)
+				WRITE_LONG 0x28 0x7f3e  // Animation ID (giant_fire)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 5      // General (gianthumanoid)
+				WRITE_BYTE 0x272 142    // Race (giant)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
 				END
-				WRITE_BYTE 0x27b 19						// Alignment (lawful evil by definition)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_giant_fire
+
 
 /* ================================================================= *
- *  Greater fire giants and firbolgs get the giant_fire_2 animation  *
+ *  Greater Fire Giants and firbolgs get the giant_fire_2 animation  *
  * ================================================================= */
-ACTION_FOR_EACH nb IN ~cb4300gt~ ~firbolg~ ~ggiantf1~ ~ggiantf2~ ~ggiantf3~ ~ggiantfr~ ~tsjgiant~ BEGIN
+ACTION_PHP_EACH GW_giant_fire_2 AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_2~) // classical 0x5c01 - EE 0x7f47
-				WRITE_BYTE 0x237 1						// Sex (male)
-				WRITE_BYTE 0x271 5						// General (gianthumanoid)
-				READ_BYTE 0x275 gd						// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) BEGIN	// If not summoned or illusionary
-					WRITE_BYTE 0x275 1					// Gender (male)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_2~) // original 0x5c01 - EE 0x7f47
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 5      // General (gianthumanoid)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
 				END
-				WRITE_BYTE 0x27b 19						// Alignment (lawful evil by definition)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_giant_fire_2
+
 
 /* ================================================= *
  *  Goblin Worgriders get the goblin_worg animation  *
  * ================================================= */
-ACTION_FOR_EACH nb IN ~arengo11~ ~arengo12~ ~fshorde3~ BEGIN
+ACTION_PHP_EACH GW_goblin_worg AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_WORG~) // classical 0x5018 - EE 0xe272
-				SAY INITIAL_MEETING ~~ [T-GBW08A]
-				SAY MORALE ~~ [T-GBW09A]
-				SAY UNHAPPY_BREAKING ~~ [T-GBW09A]
-				SAY BATTLE_CRY1 ~~ [T-GBW01A]
-				SAY BATTLE_CRY2 ~~ [T-GBW02A]
-				SAY BATTLE_CRY3 ~~ [T-GBW04A]
-				SAY ATTACK1 ~~ [T-GBW03A]
-				SAY DAMAGE ~~ [T-GBW07A]
-				SAY DYING ~~ [T-GBW10A]
-				SAY SELECT_COMMON1 ~~ [T-GBW01A]
-				SAY SELECT_COMMON2 ~~ [T-GBW02A]
-				SAY SELECT_COMMON3 ~~ [T-GBW04B]
-				SAY CRITICAL_MISS ~~ [T-GBW03B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_WORG~) // original 0x5018 - EE 0xe272
+				SAY INITIAL_MEETING ~~ [t-gbw08a]
+				SAY MORALE ~~ [t-gbw09a]
+				SAY UNHAPPY_BREAKING ~~ [t-gbw09a]
+				SAY BATTLE_CRY1 ~~ [t-gbw01a]
+				SAY BATTLE_CRY2 ~~ [t-gbw02a]
+				SAY BATTLE_CRY3 ~~ [t-gbw04a]
+				SAY ATTACK1 ~~ [t-gbw03a]
+				SAY DAMAGE ~~ [t-gbw07a]
+				SAY DYING ~~ [t-gbw10a]
+				SAY SELECT_COMMON1 ~~ [t-gbw01a]
+				SAY SELECT_COMMON2 ~~ [t-gbw02a]
+				SAY SELECT_COMMON3 ~~ [t-gbw04b]
+				SAY CRITICAL_MISS ~~ [t-gbw03b]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_goblin_worg
+
 
 /* ================================================================= *
  *  Goblin Worgrider Captain gets the goblin_worg_captain animation  *
  * ================================================================= */
 ACTION_IF FILE_EXISTS_IN_GAME ~goblinsp.cre~ BEGIN
+
 	COPY_EXISTING ~goblinsp.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_WORG_CAPTAIN~) // classical 0x5019 - EE 0xe273
-			SAY INITIAL_MEETING ~~ [T-GCW08A]
-			SAY MORALE ~~ [T-GCW09A]
-			SAY UNHAPPY_BREAKING ~~ [T-GCW09A]
-			SAY BATTLE_CRY1 ~~ [T-GCW01A]
-			SAY BATTLE_CRY2 ~~ [T-GCW02A]
-			SAY BATTLE_CRY3 ~~ [T-GCW04A]
-			SAY ATTACK1 ~~ [T-GCW03A]
-			SAY DAMAGE ~~ [T-GCW07A]
-			SAY DYING ~~ [T-GCW10A]
-			SAY SELECT_COMMON1 ~~ [T-GCW01A]
-			SAY SELECT_COMMON2 ~~ [T-GCW02A]
-			SAY SELECT_COMMON3 ~~ [T-GCW04B]
-			SAY CRITICAL_MISS ~~ [T-GCW03B]
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_WORG_CAPTAIN~) // original 0x5019 - EE 0xe273
+			SAY INITIAL_MEETING ~~ [t-gcw08a]
+			SAY MORALE ~~ [t-gcw09a]
+			SAY UNHAPPY_BREAKING ~~ [t-gcw09a]
+			SAY BATTLE_CRY1 ~~ [t-gcw01a]
+			SAY BATTLE_CRY2 ~~ [t-gcw02a]
+			SAY BATTLE_CRY3 ~~ [t-gcw04a]
+			SAY ATTACK1 ~~ [t-gcw03a]
+			SAY DAMAGE ~~ [t-gcw07a]
+			SAY DYING ~~ [t-gcw10a]
+			SAY SELECT_COMMON1 ~~ [t-gcw01a]
+			SAY SELECT_COMMON2 ~~ [t-gcw02a]
+			SAY SELECT_COMMON3 ~~ [t-gcw04b]
+			SAY CRITICAL_MISS ~~ [t-gcw03b]
 		END
 	BUT_ONLY
+
 END
+ACTION_CLEAR_ARRAY GW_goblin_worg_captain
+
 
 /* ================================================= *
  *  Goblin Leaders get the goblin_captain animation  *
  * ================================================= */
-ACTION_FOR_EACH nb IN ~dsgobchf~ ~icgob04~ ~iwdgob2~ ~iwdgob3~ ~lhgobc1~ BEGIN
+ACTION_PHP_EACH GW_goblin_captain AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_CAPTAIN~) // classical 0x5252 - EE 0xe270
-				SAY INITIAL_MEETING ~~ [T-GBC08A]
-				SAY MORALE ~~ [T-GBC09A]
-				SAY UNHAPPY_BREAKING ~~ [T-GBC09A]
-				SAY BATTLE_CRY1 ~~ [T-GBC01A]
-				SAY BATTLE_CRY2 ~~ [T-GBC03B]
-				SAY ATTACK1 ~~ [T-GBC03A]
-				SAY DAMAGE ~~ [T-GBC07A]
-				SAY DYING ~~ [T-GBC10A]
-				SAY SELECT_COMMON1 ~~ [T-GBC02A]
-				SAY SELECT_COMMON2 ~~ [T-GBC04B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_CAPTAIN~) // original 0x5252 - EE 0xe270
+				SAY INITIAL_MEETING ~~ [t-gbc08a]
+				SAY MORALE ~~ [t-gbc09a]
+				SAY UNHAPPY_BREAKING ~~ [t-gbc09a]
+				SAY BATTLE_CRY1 ~~ [t-gbc01a]
+				SAY BATTLE_CRY2 ~~ [t-gbc03b]
+				SAY ATTACK1 ~~ [t-gbc03a]
+				SAY DAMAGE ~~ [t-gbc07a]
+				SAY DYING ~~ [t-gbc10a]
+				SAY SELECT_COMMON1 ~~ [t-gbc02a]
+				SAY SELECT_COMMON2 ~~ [t-gbc04b]
 			END
 		BUT_ONLY
-	END
-END
 
-/* ================================================================= *
- *  Goblins Elite Green Axe get the goblinelite_axe_green animation  *
- * ================================================================= */
-ACTION_FOR_EACH nb IN ~arenago9~ ~arengo10~ ~f_gobele~ ~fshorde1~ ~tupung~ ~tupungcs~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_goblin_captain
+
+
+/* ====================================================================== *
+ *  Green Goblins Elite with Axe get the goblinelite_axe_green animation  *
+ * ====================================================================== */
+ACTION_PHP_EACH GW_goblinelite_axe_green AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~ // These CREs need fixing because of hosed slots
-			WRITE_SHORT 0x28 0x5253 // Animation ID (goblinelite_axe_green)
-//			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLINELITE_AXE_GREEN~) // classical 0x5253 - EE non for the moment
-			SAY INITIAL_MEETING ~~ [T-GIX07A]
-			SAY MORALE ~~ [T-GIX09A]
-			SAY UNHAPPY_BREAKING ~~ [T-GIX09A]
-			SAY BATTLE_CRY1 ~~ [T-GIX01C]
-			SAY BATTLE_CRY2 ~~ [T-GIX04A]
-			SAY BATTLE_CRY3 ~~ [T-GIX04E]
-			SAY ATTACK1 ~~ [T-GIX04B]
-			SAY DAMAGE ~~ [T-GIX07B]
-			SAY DYING ~~ [T-GIX09B]
-			SAY SELECT_COMMON1 ~~ [T-GIX02B]
-			SAY SELECT_COMMON2 ~~ [T-GIX04C]
-			SAY SELECT_COMMON3 ~~ [T-GIX11B]
-			SAY CRITICAL_MISS ~~ [T-GIX04D]
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLINELITE_AXE_GREEN~) // original 0x5253 - EE depends on installation
+			SAY INITIAL_MEETING ~~ [t-gix07a]
+			SAY MORALE ~~ [t-gix09a]
+			SAY UNHAPPY_BREAKING ~~ [t-gix09a]
+			SAY BATTLE_CRY1 ~~ [t-gix01c]
+			SAY BATTLE_CRY2 ~~ [t-gix04a]
+			SAY BATTLE_CRY3 ~~ [t-gix04E]
+			SAY ATTACK1 ~~ [t-gix04b]
+			SAY DAMAGE ~~ [t-gix07b]
+			SAY DYING ~~ [t-gix09b]
+			SAY SELECT_COMMON1 ~~ [t-gix02b]
+			SAY SELECT_COMMON2 ~~ [t-gix04c]
+			SAY SELECT_COMMON3 ~~ [t-gix11b]
+			SAY CRITICAL_MISS ~~ [t-gix04d]
 		BUT_ONLY
-	END
-END
 
-/* ================================================================= *
- *  Goblins Elite Green Bow get the goblinelite_bow_green animation  *
- * ================================================================= */
-ACTION_FOR_EACH nb IN ~arengo14~ ~d0qpsy04~ ~elehob01~ ~gpsimb~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_goblinelite_axe_green
+
+
+/* ====================================================================== *
+ *  Green Goblins Elite with Bow get the goblinelite_bow_green animation  *
+ * ====================================================================== */
+ACTION_PHP_EACH GW_goblinelite_bow_green AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5254 // Animation ID (goblinelite_bow_green)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLINELITE_BOW_GREEN~) // classical 0x5254 - EE non for the moment
-				SAY INITIAL_MEETING ~~ [T-GEB08A]
-				SAY MORALE ~~ [T-GEB10B]
-				SAY UNHAPPY_BREAKING ~~ [T-GEB10B]
-				SAY BATTLE_CRY1 ~~ [T-GEB02A]
-				SAY BATTLE_CRY2 ~~ [T-GEB02C]
-				SAY BATTLE_CRY3 ~~ [T-GEB06A]
-				SAY BATTLE_CRY4 ~~ [T-GEB06B]
-				SAY ATTACK1 ~~ [T-GEB03A]
-				SAY DAMAGE ~~ [T-GEB08B]
-				SAY DYING ~~ [T-GEB10A]
-				SAY SELECT_COMMON1 ~~ [T-GEB01A]
-				SAY SELECT_COMMON2 ~~ [T-GEB01B]
-				SAY SELECT_COMMON3 ~~ [T-GEB03B]
-				SAY SELECT_COMMON4 ~~ [T-GEB06C]
-				SAY CRITICAL_MISS ~~ [T-GEB03C]
-				SAY SPELL_DISRUPTED ~~ [T-GEB07B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLINELITE_BOW_GREEN~) // original 0x5254 - EE depends on installation
+				SAY INITIAL_MEETING ~~ [t-geb08a]
+				SAY MORALE ~~ [t-geb10b]
+				SAY UNHAPPY_BREAKING ~~ [t-geb10b]
+				SAY BATTLE_CRY1 ~~ [t-geb02a]
+				SAY BATTLE_CRY2 ~~ [t-geb02c]
+				SAY BATTLE_CRY3 ~~ [t-geb06a]
+				SAY BATTLE_CRY4 ~~ [t-geb06b]
+				SAY ATTACK1 ~~ [t-geb03a]
+				SAY DAMAGE ~~ [t-geb08b]
+				SAY DYING ~~ [t-geb10a]
+				SAY SELECT_COMMON1 ~~ [t-geb01a]
+				SAY SELECT_COMMON2 ~~ [t-geb01b]
+				SAY SELECT_COMMON3 ~~ [t-geb03b]
+				SAY SELECT_COMMON4 ~~ [t-geb06c]
+				SAY CRITICAL_MISS ~~ [t-geb03c]
+				SAY SPELL_DISRUPTED ~~ [t-geb07b]
 			END
 		BUT_ONLY
-	END
-END
 
-/* ====================================================== *
- *  Goblins Axe Green get the goblin_axe_green animation  *
- * ====================================================== */
-ACTION_FOR_EACH nb IN ~icgob05~ ~arenago7~ ~arenago8~ ~fsgobl~ ~iwdgob4~ ~arengo15~ ~dw#rnlg3~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_goblinelite_bow_green
+
+
+/* =========================================================== *
+ *  Green Goblins with Axe get the goblin_axe_green animation  *
+ * =========================================================== */
+ACTION_PHP_EACH GW_goblin_axe_green AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5258 // Animation ID (goblin_axe_green)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_AXE_GREEN~) // classical 0x5258 - EE non for the moment
-				SAY INITIAL_MEETING ~~ [T-GBX08A]
-				SAY MORALE ~~ [T-GBX10A]
-				SAY UNHAPPY_BREAKING ~~ [T-GBX10A]
-				SAY BATTLE_CRY1 ~~ [T-GBX01A]
-				SAY BATTLE_CRY2 ~~ [T-GBX01B]
-				SAY BATTLE_CRY3 ~~ [T-GBX04A]
-				SAY BATTLE_CRY4 ~~ [T-GBX04C]
-				SAY ATTACK1 ~~ [T-GBX03A]
-				SAY DAMAGE ~~ [T-GBX08B]
-				SAY DYING ~~ [T-GBX10B]
-				SAY SELECT_COMMON1 ~~ [T-GBX02A]
-				SAY SELECT_COMMON2 ~~ [T-GBX02B]
-				SAY SELECT_COMMON3 ~~ [T-GBX04B]
-				SAY SELECT_COMMON4 ~~ [T-GBX04D]
-				SAY CRITICAL_MISS ~~ [T-GBX03B]
-				SAY SPELL_DISRUPTED ~~ [T-GBX03C]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_AXE_GREEN~) // original 0x5258 - EE depends on installation
+				SAY INITIAL_MEETING ~~ [t-gbx08a]
+				SAY MORALE ~~ [t-gbx10a]
+				SAY UNHAPPY_BREAKING ~~ [t-gbx10a]
+				SAY BATTLE_CRY1 ~~ [t-gbx01a]
+				SAY BATTLE_CRY2 ~~ [t-gbx01b]
+				SAY BATTLE_CRY3 ~~ [t-gbx04a]
+				SAY BATTLE_CRY4 ~~ [t-gbx04c]
+				SAY ATTACK1 ~~ [t-gbx03a]
+				SAY DAMAGE ~~ [t-gbx08b]
+				SAY DYING ~~ [t-gbx10b]
+				SAY SELECT_COMMON1 ~~ [t-gbx02a]
+				SAY SELECT_COMMON2 ~~ [t-gbx02b]
+				SAY SELECT_COMMON3 ~~ [t-gbx04b]
+				SAY SELECT_COMMON4 ~~ [t-gbx04d]
+				SAY CRITICAL_MISS ~~ [t-gbx03b]
+				SAY SPELL_DISRUPTED ~~ [t-gbx03c]
 			END
 		BUT_ONLY
+
 	END
 END
+ACTION_CLEAR_ARRAY GW_goblin_axe_green
 
-/* ====================================================== *
- *  Goblins Bow Green get the goblin_bow_green animation  *
- * ====================================================== */
-ACTION_FOR_EACH nb IN ~icgob02~ ~iwdgob1~ ~o!gobl~ ~ysgp03~ BEGIN
+
+/* =========================================================== *
+ *  Green Goblins with Bow get the goblin_bow_green animation  *
+ * =========================================================== */
+ACTION_PHP_EACH GW_goblin_bow_green AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5259 // Animation ID (goblin_bow_green)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_BOW_GREEN~) // classical 0x5259 - EE non for the moment
-				SAY INITIAL_MEETING ~~ [T-GBB07A]
-				SAY MORALE ~~ [T-GBB09B]
-				SAY UNHAPPY_BREAKING ~~ [T-GBB09B]
-				SAY BATTLE_CRY1 ~~ [T-GBB01A]
-				SAY BATTLE_CRY2 ~~ [T-GBB01B]
-				SAY BATTLE_CRY3 ~~ [T-GBB06A]
-				SAY BATTLE_CRY4 ~~ [T-GBB06B]
-				SAY ATTACK1 ~~ [T-GBB03A]
-				SAY DAMAGE ~~ [T-GBB07B]
-				SAY DYING ~~ [T-GBB09A]
-				SAY SELECT_COMMON1 ~~ [T-GBB02A]
-				SAY SELECT_COMMON2 ~~ [T-GBB02B]
-				SAY SELECT_COMMON3 ~~ [T-GBB03B]
-				SAY SELECT_COMMON4 ~~ [T-GBB06C]
-				SAY CRITICAL_MISS ~~ [T-GBB03C]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOBLIN_BOW_GREEN~) // original 0x5259 - EE depends on installation
+				SAY INITIAL_MEETING ~~ [t-gbb07a]
+				SAY MORALE ~~ [t-gbb09b]
+				SAY UNHAPPY_BREAKING ~~ [t-gbb09b]
+				SAY BATTLE_CRY1 ~~ [t-gbb01a]
+				SAY BATTLE_CRY2 ~~ [t-gbb01b]
+				SAY BATTLE_CRY3 ~~ [t-gbb06a]
+				SAY BATTLE_CRY4 ~~ [t-gbb06b]
+				SAY ATTACK1 ~~ [t-gbb03a]
+				SAY DAMAGE ~~ [t-gbb07b]
+				SAY DYING ~~ [t-gbb09a]
+				SAY SELECT_COMMON1 ~~ [t-gbb02a]
+				SAY SELECT_COMMON2 ~~ [t-gbb02b]
+				SAY SELECT_COMMON3 ~~ [t-gbb03b]
+				SAY SELECT_COMMON4 ~~ [t-gbb06c]
+				SAY CRITICAL_MISS ~~ [t-gbb03c]
 			END
 		BUT_ONLY
-	END
-END
 
-/* ====================================================== *
- *  Goblins Elite Axe get the goblin_elite_axe animation  *
- * ====================================================== */
-ACTION_FOR_EACH nb IN ~arenago3~ ~arenago4~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_goblin_bow_green
+
+
+/* =========================================================== *
+ *  Goblins Elite with Axe get the goblin_elite_axe animation  *
+ * =========================================================== */
+ACTION_PHP_EACH GW_goblin_elite_axe AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0xe420 // Animation ID (goblin_elite_axe)
+				WRITE_LONG 0x28 0xe420 // Animation ID (goblin_elite_axe)
 			END
 		BUT_ONLY
-	END
-END
 
-/* ====================================================== *
- *  Goblin Elite Bows get the goblin_elite_bow animation  *
- * ====================================================== */
-ACTION_FOR_EACH nb IN ~arengo13~ ~dw#rnlg2~ BEGIN
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_goblin_elite_axe
+
+
+/* =========================================================== *
+ *  Goblins Elite with Bow get the goblin_elite_bow animation  *
+ * =========================================================== */
+ACTION_PHP_EACH GW_goblin_elite_bow AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0xe430 // Animation ID (goblin_elite_bow)
+				WRITE_LONG 0x28 0xe430 // Animation ID (goblin_elite_bow)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_goblin_elite_bow
+
 
 /* ============================================ *
  *  Hook Horrors get the hook_horror animation  *
  * ============================================ */
-ACTION_FOR_EACH nb IN ~hook1~ ~hook4~ BEGIN
+ACTION_PHP_EACH GW_hook_horror AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HOOK_HORROR~) // classical 0x525a - EE 0xe274
-				WRITE_BYTE 0x237 1		// Sex (male)
-				WRITE_BYTE 0x272 130	// Race (umberhulk)
-				WRITE_BYTE 0x273 168	// Class (umberhulk)
-				SAY INITIAL_MEETING ~~ [T-HOO07A]
-				SAY MORALE ~~ [T-HOO09A]
-				SAY UNHAPPY_BREAKING ~~ [T-HOO09A]
-				SAY BATTLE_CRY1 ~~ [T-HOO01A]
-				SAY BATTLE_CRY2 ~~ [T-HOO02A]
-				SAY ATTACK1 ~~ [T-HOO04B]
-				SAY DAMAGE ~~ [T-HOO08A]
-				SAY DYING ~~ [T-HOO10A]
-				SAY SELECT_COMMON1 ~~ [T-HOO03A]
-				SAY SELECT_COMMON2 ~~ [T-HOO03B]
-				SAY CRITICAL_MISS ~~ [T-HOO04A]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HOOK_HORROR~) // original 0x525a - EE 0xe274
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x272 130    // Race (umberhulk)
+				WRITE_BYTE 0x273 168    // Class (umberhulk)
+				SAY INITIAL_MEETING ~~ [t-hoo07a]
+				SAY MORALE ~~ [t-hoo09a]
+				SAY UNHAPPY_BREAKING ~~ [t-hoo09a]
+				SAY BATTLE_CRY1 ~~ [t-hoo01a]
+				SAY BATTLE_CRY2 ~~ [t-hoo02a]
+				SAY ATTACK1 ~~ [t-hoo04b]
+				SAY DAMAGE ~~ [t-hoo08a]
+				SAY DYING ~~ [t-hoo10a]
+				SAY SELECT_COMMON1 ~~ [t-hoo03a]
+				SAY SELECT_COMMON2 ~~ [t-hoo03b]
+				SAY CRITICAL_MISS ~~ [t-hoo04a]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_hook_horror
+
 
 /* ========================================== *
  *  Shadow Druids get the malarite animation  *
  * ========================================== */
-ACTION_FOR_EACH nb IN ~aghermit~ ~b#knit04~ ~bhtelli1~ ~bhtellis~ ~bpdru10a~ ~bpdru8a~ ~bpdru8b~ ~bpdru8ba~ ~catura~ ~cbmalr6~ ~cefgt01~ ~cefgt02~ ~cefgt04~ ~cmlstr2~ ~dgdru01~ ~dgdru02~ ~%tsu%izefia~ ~mdruide~ ~%tsu%takiyah~ ~tdr10a~ ~tdr10b~ ~tdr6a~ ~tdr8a~ ~tdr8b~ ~vicg2~ ~x#shdr6~ ~x#shdr6a~ ~x#shdr6b~ ~x#shdr8a~ ~x#shdr8b~ BEGIN
+ACTION_PHP_EACH GW_malarite AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MALARITE~) // classical 0x5244 - EE 0xe278
-				WRITE_BYTE 0x237 1		// Sex (male)
-				READ_BYTE 0x272 rc		// Race
-				PATCH_IF rc = 143 BEGIN // If orc
-					WRITE_BYTE 0x272 3	// half-elf (fix for aghermit)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MALARITE~) // original 0x5244 - EE 0xe278
+				WRITE_BYTE 0x237 1      // Sex (male)
+				READ_BYTE  0x272 rc     // Race
+				// If orc
+				PATCH_IF rc = 143 BEGIN
+					WRITE_BYTE 0x272 3  // half-elf (fix for aghermit)
 				END
-				READ_BYTE 0x273 cs		// Class
-				PATCH_IF cs = 3 BEGIN	// If cleric
+				READ_BYTE  0x273 cs     // Class
+				// If cleric
+				PATCH_IF cs = 3 BEGIN
 					WRITE_BYTE 0x273 11 // druid (fix Tutu druids)
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-MAL01A]
-					SAY BATTLE_CRY2 ~~ [T-MAL01B]
-					SAY BATTLE_CRY3 ~~ [T-MAL02A]
-					SAY BATTLE_CRY4 ~~ [T-MAL02B]
+					SAY BATTLE_CRY1 ~~ [t-mal01a]
+					SAY BATTLE_CRY2 ~~ [t-mal01b]
+					SAY BATTLE_CRY3 ~~ [t-mal02a]
+					SAY BATTLE_CRY4 ~~ [t-mal02b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-MAL03B]
+					SAY ATTACK1 ~~ [t-mal03b]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-MAL07B]
+					SAY DAMAGE ~~ [t-mal07b]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-MAL09C]
+					SAY DYING ~~ [t-mal09c]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-MAL01A]
-					SAY SELECT_COMMON2 ~~ [T-MAL01B]
-					SAY SELECT_COMMON3 ~~ [T-MAL02A]
-					SAY SELECT_COMMON4 ~~ [T-MAL02B]
+					SAY SELECT_COMMON1 ~~ [t-mal01a]
+					SAY SELECT_COMMON2 ~~ [t-mal01b]
+					SAY SELECT_COMMON3 ~~ [t-mal02a]
+					SAY SELECT_COMMON4 ~~ [t-mal02b]
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_malarite
+
 
 /* ================================================== *
  *  Ellesime Clones get the ellesime_white animation  *
  * ================================================== */
-ACTION_FOR_EACH nb IN ~clone01~ ~clone1~ ~drelle~ ~drelle2~ ~o#clone~ ~psmysend~ ~x#elles~ BEGIN
+ACTION_PHP_EACH GW_ellesime_white AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELLESIME_WHITE~)		// classical 0x5b00 - EE 0x7f44
-				PATCH_IF (BYTE_AT 0x273 = 114) OR (BYTE_AT 0x273 = 255) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 3											// Class (cleric)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELLESIME_WHITE~) // original 0x5b00 - EE 0x7f44
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 114) OR (BYTE_AT 0x273 = 255) BEGIN
+					WRITE_BYTE 0x273 3  // Class (cleric)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_ellesime_white
+
 
 /* ================================================ *
  *  Poison Mists get the lagoon_creature animation  *
  * ================================================ */
-ACTION_FOR_EACH nb IN ~cultmo8~ ~iwdmist3~ ~iwdmist4~ ~iwdmist8~ ~gormistp~ ~hgmis02~ ~mistpo01~ BEGIN
+ACTION_PHP_EACH GW_lagoon_creature AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~LAGOON_CREATURE~) // classical 0x5b01 - EE 0x7f45
-				PATCH_IF (BYTE_AT 0x237 != 2) BEGIN	// If not female
-					WRITE_BYTE 0x237 1				// Sex (male)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~LAGOON_CREATURE~) // original 0x5b01 - EE 0x7f45
+				// If not female
+				PATCH_IF (BYTE_AT 0x237 != 2) BEGIN
+					WRITE_BYTE 0x237 1  // Sex (male)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_lagoon_creature
+
 
 /* ============================================== *
  *  Death Tyrants get the death_tyrant animation  *
  * ============================================== */
-ACTION_FOR_EACH nb IN ~behund01~ ~demtyra~ ~melsum03~ ~tyrorb~ ~xsbehold~ BEGIN
+ACTION_PHP_EACH GW_death_tyrant AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DEATH_TYRANT~) // classical 0x5c00 - EE 0x7f46
-				WRITE_BYTE 0x271 4		// General (undead)
-				WRITE_BYTE 0x275 4		// Gender (neither)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DEATH_TYRANT~) // original 0x5c00 - EE 0x7f46
+				WRITE_BYTE 0x271 4  // General (undead)
+				WRITE_BYTE 0x275 4  // Gender (neither)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_death_tyrant
+
 
 /* ==================================== *
  *  Wererat gets the wererat animation  *
  * ==================================== */
 ACTION_IF FILE_EXISTS_IN_GAME ~caliwolf.cre~ BEGIN
+
 	COPY_EXISTING ~caliwolf.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WERERAT~) // classical 0x5247 - EE 0xe27e
-			SAY INITIAL_MEETING ~~ [T-WRA04A]
-			SAY MORALE ~~ [T-WRA08A]
-			SAY UNHAPPY_BREAKING ~~ [T-WRA08A]
-			SAY BATTLE_CRY1 ~~ [T-WRA01A]
-			SAY BATTLE_CRY2 ~~ [T-WRA02A]
-			SAY ATTACK1 ~~ [T-WRA03A]
-			SAY DAMAGE ~~ [T-WRA07A]
-			SAY DYING ~~ [T-WRA09A]
-			SAY SELECT_COMMON1 ~~ [T-WRA01A]
-			SAY SELECT_COMMON2 ~~ [T-WRA02A]
-			SAY SELECT_COMMON3 ~~ [T-WRA04B]
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WERERAT~) // original 0x5247 - EE 0xe27e
+			SAY INITIAL_MEETING ~~ [t-wra04a]
+			SAY MORALE ~~ [t-wra08a]
+			SAY UNHAPPY_BREAKING ~~ [t-wra08a]
+			SAY BATTLE_CRY1 ~~ [t-wra01a]
+			SAY BATTLE_CRY2 ~~ [t-wra02a]
+			SAY ATTACK1 ~~ [t-wra03a]
+			SAY DAMAGE ~~ [t-wra07a]
+			SAY DYING ~~ [t-wra09a]
+			SAY SELECT_COMMON1 ~~ [t-wra01a]
+			SAY SELECT_COMMON2 ~~ [t-wra02a]
+			SAY SELECT_COMMON3 ~~ [t-wra04b]
 		END
 	BUT_ONLY
+
 END
 
+
 /* ==================================== *
- *  Worgs get the worg (iwd) animation  *
+ *  Worgs get the worg (IWD) animation  *
  * ==================================== */
-ACTION_FOR_EACH nb IN ~wolfwo01~ ~%tsu%worg~ ~%tsu%worgar~ ~worgsu~ BEGIN
+ACTION_PHP_EACH GW_worg AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WORG~) // classical 0x5262 - EE 0xe280
-				SAY INITIAL_MEETING ~~ [T-WOR04A]
-				SAY MORALE ~~ [T-WOR07A]
-				SAY UNHAPPY_BREAKING ~~ [T-WOR07A]
-				SAY BATTLE_CRY1 ~~ [T-WOR01A]
-				SAY BATTLE_CRY2 ~~ [T-WOR03B]
-				SAY BATTLE_CRY3 ~~ [T-WOR10A]
-				SAY ATTACK1 ~~ [T-WOR03A]
-				SAY DAMAGE ~~ [T-WOR08A]
-				SAY DYING ~~ [T-WOR09A]
-				SAY SELECT_COMMON1 ~~ [T-WOR02A]
-				SAY SELECT_COMMON2 ~~ [T-WOR04B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~WORG~) // original 0x5262 - EE 0xe280
+				SAY INITIAL_MEETING ~~ [t-wor04a]
+				SAY MORALE ~~ [t-wor07a]
+				SAY UNHAPPY_BREAKING ~~ [t-wor07a]
+				SAY BATTLE_CRY1 ~~ [t-wor01a]
+				SAY BATTLE_CRY2 ~~ [t-wor03b]
+				SAY BATTLE_CRY3 ~~ [t-wor10a]
+				SAY ATTACK1 ~~ [t-wor03a]
+				SAY DAMAGE ~~ [t-wor08a]
+				SAY DYING ~~ [t-wor09a]
+				SAY SELECT_COMMON1 ~~ [t-wor02a]
+				SAY SELECT_COMMON2 ~~ [t-wor04b]
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_worg
+
 
 /* =================================================== *
  *  Yuan-Ti Halfbreeds get the yuan-ti_half animation  *
  * =================================================== */
-ACTION_FOR_EACH nb IN ~eldathh~ ~eldathyf~ BEGIN
+ACTION_PHP_EACH GW_yuan-ti_half AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~YUAN-TI_HALF~) // classical 0x5248 - EE 0xe281
-				SAY INITIAL_MEETING ~~ [T-YHB04A]
-				SAY MORALE ~~ [T-YHB08A]
-				SAY UNHAPPY_BREAKING ~~ [T-YHB08A]
-				SAY BATTLE_CRY1 ~~ [T-YHB01A]
-				SAY BATTLE_CRY2 ~~ [T-YHB01B]
-				SAY BATTLE_CRY3 ~~ [T-YHB02A]
-				SAY BATTLE_CRY4 ~~ [T-YHB08B]
-				SAY ATTACK1 ~~ [T-YHB03A]
-				SAY DAMAGE ~~ [T-YHB07A]
-				SAY DYING ~~ [T-YHB09A]
-				SAY SELECT_COMMON1 ~~ [T-YHB03B]
-				SAY SELECT_COMMON2 ~~ [T-YHB04B]
-				SAY SELECT_COMMON3 ~~ [T-YHB07B]
-				SAY CRITICAL_MISS ~~ [T-YHB10A]
-				SAY SPELL_DISRUPTED ~~ [T-YHB10B]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~YUAN-TI_HALF~) // original 0x5248 - EE 0xe281
+				SAY INITIAL_MEETING ~~ [t-yhb04a]
+				SAY MORALE ~~ [t-yhb08a]
+				SAY UNHAPPY_BREAKING ~~ [t-yhb08a]
+				SAY BATTLE_CRY1 ~~ [t-yhb01a]
+				SAY BATTLE_CRY2 ~~ [t-yhb01b]
+				SAY BATTLE_CRY3 ~~ [t-yhb02a]
+				SAY BATTLE_CRY4 ~~ [t-yhb08b]
+				SAY ATTACK1 ~~ [t-yhb03a]
+				SAY DAMAGE ~~ [t-yhb07a]
+				SAY DYING ~~ [t-yhb09a]
+				SAY SELECT_COMMON1 ~~ [t-yhb03b]
+				SAY SELECT_COMMON2 ~~ [t-yhb04b]
+				SAY SELECT_COMMON3 ~~ [t-yhb07b]
+				SAY CRITICAL_MISS ~~ [t-yhb10a]
+				SAY SPELL_DISRUPTED ~~ [t-yhb10b]
 			END
 		BUT_ONLY
-	END
-END
 
-VERBOSE
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_yuan-ti_half

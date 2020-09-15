@@ -1,0 +1,576 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                    A R R A Y S    ( T A B L E S )    :    M O R E    I W D 2    A N I M A T I O N S    C O M P O N E N T   ( 600 )                     *
+ *                                                                                                                                                        *
+ *               Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-iwd2anims.tpa WeiDU routine.               *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+/* ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_giant_fire               :   LISTS vanilla and modded Fire Giants needing to be patched.                                        => line #   53   *
+ *                                    LISTE les créatures Géants du feu du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_giant_fire_2             :   LISTS vanilla and modded Greater fire giants needing to be patched.                                => line #   94   *
+ *                                    LISTE les créatures géants du feu majeurs et firbolgs du jeu et de mods nécessitant d'être modifiées.               *
+ *  - GW_goblin_worg              :   LISTS vanilla and modded Goblin Worgriders needing to be patched.                                  => line #  126   *
+ *                                    LISTE les gobelins chevaucheurs de worg du jeu et de mods nécessitant d'être modifiés.                              *
+ *  - GW_goblin_worg_captain      :   LISTS vanilla and modded Goblin Worgrider Captains needing to be patched.                          => line #  148   *
+ *                                    LISTE les capitaines gobelins chevaucheurs de worg du jeu et de mods nécessitant d'être modifiés.                   *
+ *  - GW_goblin_captain           :   LISTS vanilla and modded Goblin Leaders needing to be patched.                                     => line #  165   *
+ *                                    LISTE les chefs gobelins du jeu et de mods nécessitant d'être modifiés.                                             *
+ *  - GW_goblinelite_axe_green    :   LISTS vanilla and modded Green Goblins Elite with Axe needing to be patched.                       => line #  195   *
+ *                                    LISTE les gobelins d'élite vert avec hache du jeu et de mods nécessitant d'être modifiés.                           *
+ *  - GW_goblinelite_bow_green    :   LISTS vanilla and modded Green Goblins Elite with Bow needing to be patched.                       => line #  226   *
+ *                                    LISTE les gobelins d'élite vert avec arc du jeu et de mods nécessitant d'être modifiés.                             *
+ *  - GW_goblin_axe_green         :   LISTS vanilla and modded Green Goblins with Axe needing to be patched.                             => line #  252   *
+ *                                    LISTE les gobelins vert avec hache du jeu et de mods nécessitant d'être modifiés.                                   *
+ *  - GW_goblin_bow_green         :   LISTS vanilla and modded Green Goblins with Bow needing to be patched.                             => line #  283   *
+ *                                    LISTE les gobelins vert avec arc du jeu et de mods nécessitant d'être modifiés.                                     *
+ *  - GW_goblin_elite_axe         :   LISTS vanilla and modded Goblins Elite with Axe needing to be patched.                             => line #  309   *
+ *                                    LISTE les gobelins d'élite avec hache du jeu et de mods nécessitant d'être modifiés.                                *
+ *  - GW_goblin_elite_bow         :   LISTS vanilla and modded Goblins Elite with Bow needing to be patched.                             => line #  327   *
+ *                                    LISTE les gobelins d'élite avec arc du jeu et de mods nécessitant d'être modifiés.                                  *
+ *  - GW_hook_horror              :   LISTS vanilla and modded Hook Horrors creatures needing to be patched.                             => line #  348   *
+ *                                    LISTE les créatures crochorreurs du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_malarite                 :   LISTS vanilla and modded Shadow Druids needing to be patched.                                      => line #  366   *
+ *                                    LISTE les druides de l'Ombre du jeu et de mods nécessitant d'être modifiés.                                         *
+ *  - GW_ellesime_white           :   LISTS vanilla and modded Ellesime Clones needing to be patched.                                    => line #  436   *
+ *                                    LISTE les clones d'Ellesime du jeu et de mods nécessitant d'être modifiés.                                          *
+ *  - GW_lagoon_creature          :   LISTS vanilla and modded Poison Mists creatures needing to be patched.                             => line #  468   *
+ *                                    LISTE les créatures brumes empoisonnées du jeu et de mods nécessitant d'être modifiées.                             *
+ *  - GW_death_tyrant             :   LISTS vanilla and modded Death Tyrants creatures needing to be patched.                            => line #  494   *
+ *                                    LISTE les créatures tyramorts du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_wererat                  :   LISTS vanilla and modded Wererat creatures needing to be patched.                                  => line #  521   *
+ *                                    LISTE les créatures rats-garous du jeu et de mods nécessitant d'être modifiées.                                     *
+ *  - GW_worg                     :   LISTS vanilla and modded Worgs creatures needing to be patched.                                    => line #  539   *
+ *                                    LISTE les créatures worgs du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_yuan-ti_half             :   LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.                       => line #  562   *
+ *                                    LISTE les créatures Yuan-ti demi-sang du jeu et de mods nécessitant d'être modifiées.                               *
+ * ====================================================================================================================================================== */
+
+/* ================================================================================ *
+ *  ARRAY giant_fire : LISTS vanilla and modded Fire Giants needing to be patched.  *
+ * -------------------------------------------------------------------------------- *
+ *  Fire Giants get the giant_fire animation.                                       *
+ * ================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_giant_fire
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire BEGIN
+
+// BG2
+// ---
+giafir01                => 1	// Fire Giant
+giantf01                => 1	// id.
+hgmag01                 => 1	// Fire Giant Mage
+hgmag02                 => 1	// id.
+hgwar01                 => 1	// Fire Giant
+yaga01                  => 1	// Yaga-Shura
+yagaspir                => 1	// id.
+ysguar01                => 1	// Fire Giant
+
+// Ascension & BP
+// --------------
+finyaga                 => 1	// Yaga-Shura
+
+// Bonehill
+// --------
+bhfgiant                => 1	// Fire Giant
+
+// RoT
+// ---
+giantfr                 => 1	// Greater Fire Giant
+cultmo9                 => 1	// Fire Giant
+
+// Unknown mods
+// ------------
+sumgia                  => 1	// 
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_giant_fire_2 : LISTS vanilla and modded Greater fire giants creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Greater fire giants and firbolgs get the giant_fire_2 animation.                                       *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY giant_fire_2
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY giant_fire_2 BEGIN
+
+// Heart of the Wood
+// -----------------
+firbolg                 => 1	// Firbolg
+
+// RoT
+// ---
+ggiantf1                => 1	// Greater Fire Giant
+ggiantf2                => 1	// id.
+ggiantf3                => 1	// id.
+ggiantfr                => 1	// id.
+
+// SoS
+// ---
+cb4300gt                => 1	// Bandit Giant
+
+// Unknown mods
+// ------------
+tsjgiant                => 1	// 
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_goblin_worg : LISTS vanilla and modded Goblin Worgriders creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Goblin Worgriders get the goblin_worg animation.                                                    *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_worg
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_worg BEGIN
+
+// BG2
+// ---
+fshorde3                => 1	// Goblin
+
+// RoT
+// ---
+arengo11                => 1	// Goblin
+arengo12                => 1	// id.
+
+END
+
+
+/* ========================================================================================================= *
+ *  ARRAY GW_goblin_worg_captain : LISTS vanilla and modded Goblin Worgrider Captain needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------- *
+ *  Goblin Worgrider Captain gets the goblin_worg_captain animation.                                         *
+ * ========================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_goblin_worg_captain
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_worg_captain BEGIN
+
+// NEJ
+// ---
+goblinsp                => 1	// Crazy Goblin Marshal
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY GW_goblin_captain : LISTS vanilla and modded Goblin Leaders needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Goblin Leaders get the goblin_captain animation.                                          *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_captain
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_captain BEGIN
+
+// BG2
+// ---
+icgob04                 => 1	// Goblin Captain
+
+// DSotSC
+// ------
+dsgobchf                => 1	// Goblin Chief
+
+// RoT
+// ---
+iwdgob2                 => 1	// Goblin Captain
+iwdgob3                 => 1	// Goblin Leader
+
+// Unknown mods
+// ------------
+lhgobc1                 => 1	// Epic Endeavors
+
+END
+
+
+/* =============================================================================================================== *
+ *  ARRAY GW_goblinelite_axe_green : LISTS vanilla and modded Green Goblins Elite with Axe needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------------- *
+ *  Green Goblins Elite with Axe get the goblinelite_axe_green animation.                                          *
+ * =============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblinelite_axe_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblinelite_axe_green BEGIN
+
+// BG2
+// ---
+fshorde1                => 1	// Goblin
+
+// Drizzt Saga
+// -----------
+f_gobele                => 1	// Goblin Elite
+
+// NEJ
+// ---
+tupung                  => 1	// Pung
+tupungcs                => 1	// ???
+
+// RoT
+// ---
+arenago9                => 1	// Goblin
+arengo10                => 1	// id.
+
+END
+
+
+/* =============================================================================================================== *
+ *  ARRAY GW_goblinelite_bow_green : LISTS vanilla and modded Green Goblins Elite with Bow needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------------- *
+ *  Green Goblins Elite with Bow get the goblinelite_bow_green animation.                                          *
+ * =============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblinelite_bow_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblinelite_bow_green BEGIN
+
+// BG2
+// ---
+elehob01                => 1	// Goblin Commando
+gpsimb                  => 1	// Simbja
+
+// Quest Pack
+// ----------
+d0qpsy04                => 1	// Sythillisian Soldier
+
+// RoT
+// ---
+arengo14                => 1	// Goblin
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_goblin_axe_green : LISTS vanilla and modded Green Goblins with Axe needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Green Goblins with Axe get the goblin_axe_green animation.                                          *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_axe_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_axe_green BEGIN
+
+// BG2
+// ---
+fsgobl                  => 1	// Goblin
+
+// NEJ
+icgob05                 => 1	// Goblin
+
+// Stratagems
+// ----------
+dw#rnlg3                => 1	// Goblin
+
+// RoT
+// ---
+arenago7                => 1	// Goblin
+arenago8                => 1	// id.
+arengo15                => 1	// id.
+iwdgob4                 => 1	// id.
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_goblin_bow_green : LISTS vanilla and modded Green Goblins with Bow needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Green Goblins with Bow get the goblin_bow_green animation.                                          *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_bow_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_bow_green BEGIN
+
+// BG2
+// ---
+icgob02                 => 1	// Goblin
+ysgp03                  => 1	// Tibbit
+
+// RoT
+// ---
+iwdgob1                 => 1	// Goblin
+
+// Unknown mods
+// ------------
+o!gobl                  => 1	// BoM Item Pack Jerry
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_goblin_elite_axe : LISTS vanilla and modded Goblins Elite with Axe needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Goblins Elite with Axe get the goblin_elite_axe animation.                                          *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_elite_axe
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_elite_axe BEGIN
+
+// RoT
+// ---
+arenago3                => 1	// Goblin
+arenago4                => 1	// id.
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_goblin_elite_bow : LISTS vanilla and modded Goblins Elite with Bow needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Goblins Elite with Bow get the goblin_elite_bow animation.                                          *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_goblin_elite_bow
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_elite_bow BEGIN
+
+// RoT
+// ---
+arengo13                => 1	// Goblin
+
+// Stratagems
+// ----------
+dw#rnlg2                => 1	// Goblin
+
+END
+
+
+/* =============================================================================================== *
+ *  ARRAY GW_hook_horror : LISTS vanilla and modded Hook Horrors creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------- *
+ *  Hook Horrors get the hook_horror animation.                                                    *
+ * =============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_hook_horror
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_hook_horror BEGIN
+
+// RoT
+// ---
+hook1                   => 1	// Hook Horror
+hook4                   => 1	// id.
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_malarite : LISTS vanilla and modded Shadow Druids needing to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Shadow Druids get the malarite animation.                                          *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_malarite
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_malarite BEGIN
+
+// BG
+// --
+"%tutu_var%izefia"      => 1	// Izefia
+"%tutu_var%takiyah"     => 1	// Takiyah
+
+// BG2
+// ---
+cefgt01                 => 1	// Adherent
+cefgt02                 => 1	// Shadow Druid
+cefgt04                 => 1	// id.
+dgdru01                 => 1	// Druid
+tdr10a                  => 1	// Kyland Lind
+tdr10b                  => 1	// Shadow Druid
+tdr6a                   => 1	// id.
+tdr8a                   => 1	// id.
+tdr8b                   => 1	// id.
+vicg2                   => 1	// Fanatic
+
+// BGT
+// ---
+catura                  => 1	// Caturak
+
+// AjocMod
+// -------
+aghermit                => 1	// Hermit
+
+// BG1 NPC
+// -------
+x#shdr6                 => 1	// Druid of Cloakwood
+x#shdr6a                => 1	// id.
+x#shdr6b                => 1	// id.
+x#shdr8a                => 1	// id.
+x#shdr8b                => 1	// id.
+
+// Bonehill
+// --------
+bhtelli1                => 1	// Unknown Attacker
+bhtellis                => 1	// Tellish
+
+// BP
+// --
+bpdru10a                => 1	// Shadow Druid
+bpdru8a                 => 1	// id
+bpdru8b                 => 1	// id
+bpdru8ba                => 1	// id
+dgdru02                 => 1	// Druid
+
+// CtB
+// ---
+cbmalr6                 => 1	// Druid Bodyguard
+
+// Unknown mods
+// ------------
+b#knit04                => 1	// 
+cmlstr2                 => 1	// 
+mdruide                 => 1	// 
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_ellesime_white : LISTS vanilla and modded Ellesime Clones needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Ellesime Clones get the ellesime_white animation.                                          *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ellesime_white
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ellesime_white BEGIN
+
+// BG2
+// ---
+clone01                 => 1	// Escaped Clone
+clone1                  => 1	// id.
+drelle                  => 1	// Dream Vision
+drelle2                 => 1	// id.
+
+// BG1 NPC
+// -------
+x#elles                 => 1	// Queen Ellesime
+
+// Planar Sphere
+// -------------
+psmysend                => 1	// Mystra
+
+// Xan NPC for BG2
+// ---------------
+o#clone                 => 1	// Guardian Clone
+
+END
+
+
+/* =================================================================================================== *
+ *  ARRAY GW_lagoon_creature : LISTS vanilla and modded Poison Mists creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Poison Mists get the lagoon_creature animation.                                                    *
+ * =================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_lagoon_creature
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_lagoon_creature BEGIN
+
+// BG2
+// ---
+gormistp                => 1	// Poison Mist
+hgmis02                 => 1	// Swamp Horror
+mistpo01                => 1	// Poison Mist
+
+// RoT
+// ---
+cultmo8                 => 1	// Wandering Horror
+iwdmist3                => 1	// id.
+iwdmist4                => 1	// Poison Mist
+iwdmist8                => 1	// id.
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_death_tyrant : LISTS vanilla and modded Death Tyrants creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Death Tyrants get the death_tyrant animation.                                                    *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_death_tyrant
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_death_tyrant BEGIN
+
+// BG2
+// ---
+behund01                => 1	// Death Tyrant
+melsum03                => 1	// id.
+
+// BP
+// --
+tyrorb                  => 1	// Death Tyrant
+
+// Unknown mods
+// ------------
+demtyra                 => 1	// 
+xsbehold                => 1	// 
+
+END
+
+
+/* ======================================================================================= *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                 *
+ *  ARRAY GW_wererat : LISTS vanilla and modded Wererats creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------- *
+ *  Wererat gets the wererat animation.                                                    *
+ * ======================================================================================= *
+
+ACTION_CLEAR_ARRAY GW_wererat
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_wererat BEGIN
+
+// TDD
+// ---
+caliwolf                => 1	// Wererat
+
+END*/
+
+
+/* ================================================================================= *
+ *  ARRAY GW_worg : LISTS vanilla and modded Worgs creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------- *
+ *  Worgs get the worg (iwd) animation.                                              *
+ * ================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_worg
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_worg BEGIN
+
+// BG
+// --
+"%tutu_var%worg"        => 1	// Worg
+"%tutu_var%worgar"      => 1	// id.
+
+// BG2
+// ---
+wolfwo01                => 1	// Worg
+worgsu                  => 1	// id.
+
+END
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_yuan-ti_half : LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Yuan-Ti Halfbreeds get the yuan-ti_half animation.                                                    *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_yuan-ti_half
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_yuan-ti_half BEGIN
+
+// NEJ
+// ---
+eldathh                 => 1	// Sharra the Healer
+eldathyf                => 1	// Eldathyn
+
+END
