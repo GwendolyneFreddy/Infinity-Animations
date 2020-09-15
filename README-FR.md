@@ -417,7 +417,7 @@ Ce composant rétablit les slots d'animation adéquats de certaines créatures h
 
 <a name="50" id="50"></a>&#10173; **[50] Génies différenciés**<br><br>
 
-Ce composant assigne aux génies des animations différenciées :
+Ce composant attribue aux génies des animations différenciées :
 - Utilise les animations de djinn, d'efrit, de dao, de jann et de marid lorsqu'elles sont pertinentes.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -425,7 +425,7 @@ Ce composant assigne aux génies des animations différenciées :
 
 <a name="100" id="100"></a>&#10173; **[100] Démons différenciés**<br><br>
 
-Ce composant assigne aux démons soit leur bonne animation, soit des animations différenciées :
+Ce composant attribue aux démons soit leur bonne animation, soit des animations différenciées :
 - Attribue aux nabassus une animation de tanar'ri vert-gris.
 - Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].
 - Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de NWN.
@@ -452,7 +452,7 @@ Ce composant assigne aux démons soit leur bonne animation, soit des animations 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[150]** Attribuer à tous l'animation de NWN.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[175]** Attribuer à certains l'animation de NWN.<br><br>
 
-Ce composant assigne aux diantrefosses l'animation de NWN :
+Ce composant attribue aux diantrefosses l'animation de NWN :
 - Choisir un sous-composant (ou aucun). « Certains » = environ la moitié, déterminés aléatoirement.
 
 &nbsp;
@@ -466,7 +466,7 @@ Ce composant assigne aux diantrefosses l'animation de NWN :
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[210]** Pour tous les cambions.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[230]** Pour certains cambions.<br><br>
 
-Ce composant assigne aux cambions l'animation d'Isair :
+Ce composant attribue aux cambions l'animation d'Isair :
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -476,7 +476,7 @@ Ce composant assigne aux cambions l'animation d'Isair :
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[260]** Pour toutes les alu-démons.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[280]** Pour certaines alu-démons<br><br>
 
-Ce composant assigne aux alu-démons l'animation de Madae :
+Ce composant attribue aux alu-démons l'animation de Madae :
 - Même principe que celui du composant Diantrefosses.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
@@ -484,7 +484,7 @@ Ce composant assigne aux alu-démons l'animation de Madae :
 
 <a name="400" id="400"></a>&#10173; **[400] Morts-vivants différenciés**<br><br>
 
-Ce composant assigne aux morts_vivants des animations différenciées :
+Ce composant attribue aux morts_vivants des animations différenciées :
 - Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
 - Attribue aux crânes flottants l'animation de demi-liche.
 - Attribue aux blêmes majeurs l'animation de blême majeure d'IWD.
@@ -545,6 +545,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 
 <a name="500" id="500"></a>&#10173; **[500] Plus d'animations de base**<br><br>
 
+Ce composant attribue à certaines créatures des animations basiques différenciées :
 - Attribue aux histachii l'animation d'histachii d'IWD.
 - Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
 - Attribue au chaman homme-lézard l'animation d'homme-lézard vert.
@@ -557,6 +558,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 
 <a name="550" id="550"></a>&#10173; **[550] Plus d'animations d'Icewind Dale**<br><br>
 
+Ce composant attribue à certaines créatures des animations d'IWD différenciées :
 - Attribue aux armures animées les animations de petites armures animées d'IWD [<em>NdT : animated plate</em>].
 - Attribue aux Archidruides l'animation d'Arundel d'IWD.
 - Attribue aux barbares leur animation appropriée (marron, rouge, brun et chaman).
@@ -573,6 +575,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 
 <a name="600" id="600"></a>&#10173; **[600] Plus d'animations d'Icewind Dale II**<br><br>
 
+Ce composant attribue à certaines créatures des animations d'IWD1 différenciées :
 - Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.
 - Attribue des animations différenciées aux gobelins (chevaucheurs de worg, leaders, marrons, verts, d'élite).
 - Attribue aux crochorreurs l'animation de crochorreur.
@@ -589,6 +592,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 
 <a name="650" id="650"></a>&#10173; **[650] Plus d'animations de Neverwinter Nights**<br><br>
 
+Ce composant attribue à certaines créatures des animations de NWN différenciées :
 - Attribue aux porteurs de faux (dans NTotSC) l'animation de Amel de NWN.
 - Attribue aux scarabées bombardiers (dans Big Picture) l'animation de NWN.
 - Attribue aux basilics majeurs l'animation de basilic de NWN.
@@ -606,6 +610,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75 % des créatures non-recrutables concernées.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Toutes les créatures non-recrutables concernées.<br><br>
 
+Ce composant attribue à certaines créatures des animations de PsT différenciées :
 - Attribue aux voleuses humaines l'animation de citoyenne de Maudith [<em>NdT : female Curst townie</em>].
 - Attribue aux voleurs humains l'animation de citoyen de Maudith [<em>NdT : male Curst townie</em>].
 - Attribue aux femmes moines l'animation de femme-poussière [<em>NdT : female Dustman</em>].
@@ -859,12 +864,14 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_skelwa_arrays.tph*") pour faciliter leur mise à jour.
     - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
 - [450-455] Animation de pauvre hère (t-seer.tpa)
-    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie *gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
     - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
     - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *our certains mendiants* » étaient interverties. &#128541;
 - [480-490] Animations de svirneblins (t-svirfneblin.tpa)
     - Utilisation d'une nouvelle variable "*%t-svi%*" dans une routine unique pour les deux sous-composants.
     - Correction de noms de fichiers sons mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
+- [500] Plus d'animations de base (t-baseanims.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_base_anim_arrays.tph*") pour faciliter leur mise à jour.
 
 
 

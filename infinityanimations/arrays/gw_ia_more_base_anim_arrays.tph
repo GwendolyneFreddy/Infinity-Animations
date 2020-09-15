@@ -1,0 +1,466 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                      A R R A Y S    ( T A B L E S )    :    M O R E   B A S E   A N I M A T I O N S   C O M P O N E N T   ( 500 )                      *
+ *                                                                                                                                                        *
+ *               Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-baseanims.tpa WeiDU routine.               *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+ * ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_histachii                :   LISTS vanilla and modded Histachii creatures needing to be patched.                                => line #   37   *
+ *                                    LISTE les créatures histachii du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_lizardmen_brown          :   LISTS vanilla and modded Brown Lizardmen creatures needing to be patched.                          => line #   62   *
+ *                                    LISTE les guerriers hommes-lézards du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_lizardmen_green          :   LISTS vanilla and modded Lizardman Shamans creatures needing to be patched.                        => line #   98   *
+ *                                    LISTE les créatures chaman hommes-lézards du jeu et de mods nécessitant d'être modifiées.                           *
+ *  - GW_lizardmen_kings          :   LISTS vanilla and modded Lizardman chiefs creatures needing to be patched.                         => line #  133   *
+ *                                    LISTE les créatures chefs hommes-lézards du jeu et de mods nécessitant d'être modifiées.                            *
+ *  - GW_trolls                   :   LISTS vanilla and modded Troll creatures needing to be patched.                                    => line #  162   *
+ *                                    LISTE les créatures trolls du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_troll_blue               :   LISTS vanilla and modded Blue Troll creatures needing to be patched.                               => line #  260   *
+ *                                    LISTE les créatures trolls bleus du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_troll_ice                :   LISTS vanilla and modded Ice Troll creatures needing to be patched.                                => line #  310   *
+ *                                    LISTE les créatures trolls des glaces du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_troll_small              :   LISTS vanilla and modded Small Troll creatures needing to be patched.                              => line #  344   *
+ *                                    LISTE les petits trolls du jeu et de mods nécessitant d'être modifiées.                                             *
+ *  - GW_troll_snow               :   LISTS vanilla and modded Snow Troll creatures needing to be patched.                               => line #  377   *
+ *                                    LISTE les créatures trolls des neiges du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_lumber_hulk              :   LISTS vanilla and modded Umber Hulk creatures needing to be patched.                               => line #  404   *
+ *                                    LISTE les créatures ombres des roches du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_umber_hulk_elder         :   LISTS vanilla and modded Elder Umber Hulk creatures needing to be patched.                         => line #  443   *
+ *                                    LISTE les créatures ombres des roches anciennes du jeu et de mods nécessitant d'être modifiées.                     *
+ * ====================================================================================================================================================== */
+
+/* ========================================================================================== *
+ *  ARRAY GW_histachii : LISTS vanilla and modded Histachii creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Histachii get the histachii animation.                                                    *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_histachii
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_histachii BEGIN
+
+// NEJ
+// -----
+histach1                => 1	// Histachii
+histach2                => 1	// id.
+histach3                => 1	// id.
+histach4                => 1	// id.
+histach5                => 1	// id.
+histach6                => 1	// id.
+histach7                => 1	// id.
+histach8                => 1	// id.
+histachi                => 1	// id.
+
+END
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_lizardmen_brown : LISTS vanilla and modded Lizardmen Brown creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Brown Lizardmen get the lizard_man_elite (brown) animation.                                           *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_lizardmen_brown
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY lizardmen_brown BEGIN
+
+// BG2
+// ---
+bazliz03                => 1	// Lizard Man
+icliz01                 => 1	// id.
+
+// Bonehill
+// --------
+bhlizgrd                => 1	// Lizardman
+
+// BP
+// --
+bplizgrd                => 1	// Lizard Man
+bplizman                => 1	// id.
+
+// NEJ
+// ---
+icliz03                 => 1	// Lizard Man (and BP)
+icliz04                 => 1	// id.
+icliz05                 => 1	// id.
+icliz06                 => 1	// id.
+icliz07                 => 1	// id.
+lizdead                 => 1	// id.
+
+END
+
+
+/* ======================================================================================================== *
+ *  ARRAY GW_lizardmen_green : LISTS vanilla and modded Lizardman Shamans creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------- *
+ *  Lizardman Shamans get the lizard_man (green) animation.                                                 *
+ * ======================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_lizardmen_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_lizardmen_green BEGIN
+
+// BG2
+// ---
+bazliz01                => 1	// Lizard Man Shaman
+bazliz02                => 1	// id.
+
+// Bonehill
+// --------
+bhlizsha                => 1	// Lizardman Shaman
+
+// BP
+// --
+bplizsha                => 1	// Lizard Shaman
+
+// Stratagems
+// ----------
+dw#lzsh1                => 1	// Lizard Man Shaman
+dw#lzsh2                => 1	// id.
+
+// Unknown mods
+// ------------
+va#lizrd                => 1	// 
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_lizardmen_kings : LISTS vanilla and modded Lizardman chiefs creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Lizardman chiefs get the lizard_king animation.                                                        *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_lizardmen_kings
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_lizardmen_kings BEGIN
+
+// BG2
+// ---
+bazliz04                => 1	// Lizard Man Captain
+
+// Bonehill
+// --------
+bhlizkng                => 1	// Lizardman King
+
+// BP
+// --
+bplizkng                => 1	// Lizard King
+
+// NEJ
+// ---
+lizking                 => 1	// Lizardman King
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_trolls : LISTS vanilla and modded Troll creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Trolls get the troll animation.                                                    *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_trolls
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_trolls BEGIN
+
+// BG2
+// ---
+chaltrol                => 1	// Giant Troll
+datroll                 => 1	// Troll
+dgtrol01                => 1	// id.
+dgtrol02                => 1	// id.
+drshnl01                => 1	// Nilthiri
+drshnl02                => 1	// id.
+eletro01                => 1	// Troll
+eletro02                => 1	// Troll Shaman
+firamb03                => 1	// Troll
+firamb05                => 1	// id.
+firtrl01                => 1	// Troll Cook
+grae                    => 1	// Grae
+hgtrl01                 => 1	// Fire Troll
+hgtrl02                 => 1	// id.
+kptrol01                => 1	// Troll
+kptrol02                => 1	// id.
+kptrol03                => 1	// id.
+kptrol04                => 1	// id.
+kptrol05                => 1	// id.
+plytroll                => 1	// Troll
+shtroll                 => 1	// Troll
+sutroll                 => 1	// id.
+torgal                  => 1	// Torgal
+trolde01                => 1	// Desert Troll
+trolde02                => 1	// id.
+trolfr01                => 1	// Freshwater Troll ???
+trolgi01                => 1	// Giant Troll
+trolgi02                => 1	// id.
+troll01                 => 1	// Troll
+troll02                 => 1	// id.
+trollens                => 1	// Giant Troll
+troluo01                => 1	// Troll
+
+// BG2 Fixpack & BG2:EE
+// --------------------
+cdtroll1                => 1	// Troll
+cdtroll2                => 1	// id.
+drshnl11                => 1	// Nilthiri (BG2:EE)
+drshnl21                => 1	// id.
+eletro03                => 1	// Troll
+kptrol13                => 1	// id.
+kptrol23                => 1	// id.
+sutroll2                => 1	// id.
+torgal2                 => 1	// Torgal
+torgal3                 => 1	// id.
+
+// BP TODO not in the right section???
+// --
+bptrol01                => 1	// Troll
+bptrsi01                => 1	// Spirit Troll
+bptrsn01                => 1	// Snow Troll
+
+// EMaD
+// ----
+clfteg                  => 1	// Tegenk
+clftrl                  => 1	// Troll
+
+// RoT
+// ---
+godtrol1                => 1	// Desert Troll
+godtrol2                => 1	// id.
+mygtrol                 => 1	// Greater Giant Troll
+
+// SoS
+// ---
+cb351tgd                => 1	// Troll
+
+// Stratagems
+// ----------
+dw#trlde                => 1	// Desert Troll
+dw#trlgi                => 1	// Giant Troll
+dw#trlhg                => 1	// Fire Troll
+
+// TDD
+// ---
+ddtroll1                => 1	// Troll
+ddtroll2                => 1	// id.
+quadtol1                => 1	// Giant Troll
+
+// Unknown mods
+// ------------
+r#troll                 => 1	// 
+
+END
+
+
+/* ============================================================================================ *
+ *  ARRAY GW_troll_blue : LISTS vanilla and modded Blue Troll creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Blue Trolls get the troll_blue animation.                                                   *
+ * ============================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_troll_blue
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_troll_blue BEGIN
+
+// BG2
+// ---
+daspitro                => 1	// Spirit Troll
+pptroll1                => 1	// id.
+pptroll2                => 1	// id. EE
+rogtro01                => 1	// Sea Troll
+rogtro02                => 1	// id.
+trolsi01                => 1	// Spirit Troll
+trolsi02                => 1	// id.
+trolsp01                => 1	// Spectral Troll
+trolsp02                => 1	// id.
+
+// BP
+// --
+bptrsp01                => 1	// Spectral Troll
+
+// Heart of the Wood
+// -----------------
+trolfo02                => 1	// Forest Troll
+trolfosu                => 1	// id.
+
+// NEJ
+// ---
+trolca01                => 1	// Cave Troll
+trolca02                => 1	// id.
+
+// RoT
+// ---
+godtrol3                => 1	// Spirit Troll
+godtrol4                => 1	// id.
+
+// Stratagems
+// ----------
+dw#trlse                => 1	// Sea Troll
+dw#trlsi                => 1	// Spirit Troll
+dw#trlsp                => 1	// Spectral Troll
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY GW_troll_ice : LISTS vanilla and modded Ice Troll creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Ice Trolls get the troll_ice animation.                                                   *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_troll_ice
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_troll_ice BEGIN
+
+// BG2
+// ---
+trolic01                => 1	// Ice Troll
+trolic02                => 1	// id.
+
+// BP
+// --
+icetrlx2                => 1	// ??
+icetrlz2                => 1	// ??
+trolicd2                => 1	// Rotted Ice Troll
+
+// Stratagems
+// ----------
+dw#trlic                => 1	// Ice Troll
+
+// TDD
+// ---
+icetrolx                => 1	// Ice Troll
+icetrolz                => 1	// id.
+trolicdd                => 1	// Rotted Ice Troll
+
+END
+
+
+/* =============================================================================================== *
+ *  ARRAY GW_troll_small : LISTS vanilla and modded Small Trolls creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------- *
+ *  Small Trolls get the troll_small animation.                                                    *
+ * =============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_troll_small
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_troll_small BEGIN
+
+// BG2
+// ---
+glbear                  => 1	// Troll
+kptrol06                => 1	// Ice Troll
+trolfr02                => 1	// Freshwater Troll
+troll03                 => 1	// Troll
+trollsm2                => 1	// id.
+
+// Stratagems
+// ----------
+dw#trl01                => 1	// Troll
+dw#trlfr                => 1	// Freshwater Troll
+dw#trlsm                => 1	// Troll
+
+// UB (NOTE: seem to be removed)
+// --
+wwtrol1                 => 1	// Troll
+wwtrol2                 => 1	// id.
+wwtrol3                 => 1	// id.
+
+END
+
+
+/* ============================================================================================= *
+ *  ARRAY GW_troll_snow : LISTS vanilla and modded Snow Trolls creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------- *
+ *  Snow Trolls get the troll_snow animation.                                                    *
+ * ============================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_troll_snow
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_troll_snow BEGIN
+
+// BG2
+// ---
+obsice01                => 1	// Snow Troll
+obsice11                => 1	// id. EE
+trolic03                => 1	// Blizzard Troll
+trolic04                => 1	// id.
+trolsn01                => 1	// Snow Troll
+trolsn02                => 1	// id.
+
+// Stratagems
+// ----------
+dw#trlbl                => 1	// Blizzard Troll
+dw#trlsn                => 1	// Snow Troll
+
+END
+
+
+/* ============================================================================================= *
+ *  ARRAY GW_umber_hulk : LISTS vanilla and modded Umber Hulks creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------- *
+ *  Umber Hulks get the umber_hulk animation.                                                    *
+ * ============================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_umber_hulk
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_umber_hulk BEGIN
+
+// BG2
+// ---
+amumber                 => 1	// Umber Hulk
+daumber                 => 1	// id.
+kpumb01                 => 1	// id.
+udill02                 => 1	// id.
+udumb02                 => 1	// id.
+udumber                 => 1	// id.
+umbhul01                => 1	// id.
+
+// BP
+// --
+bpumber                 => 1	// Umber Hulk
+
+// RoT
+// ---
+holyumb                 => 1	// Umber Hulk
+
+// TDD
+// ---
+umbcali1                => 1	// Umber Hulk
+umbcali2                => 1	// id.
+umbcali3                => 1	// id.
+umbcali4                => 1	// id.
+umbcali5                => 1	// id.
+
+END
+
+
+/* ========================================================================================================= *
+ *  ARRAY GW_umber_hulk_elder : LISTS vanilla and modded Elder Umber Hulks creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------- *
+ *  Elder Umber Hulks get the umber_hulk_elder (IWD) animation.                                              *
+ * ========================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_umber_hulk_elder
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_umber_hulk_elder BEGIN
+
+// BG2
+// ---
+ppumb02                 => 1	// Umber Hulk
+umbhul02                => 1	// Umber Hulk Elder
+
+// RoT
+// ---
+choyol                  => 1	// Choyol
+chuyol                  => 1	// Chu'yol
+
+// Unknown mods
+// ------------
+r#umber                 => 1	// 
+
+END

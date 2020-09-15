@@ -540,13 +540,14 @@ This component assigns the IWD Seer animation to some beggars and slaves.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
 
-This component assigns all IWD svirfneblins animations variants for Underdark deep gnomes
+This component assigns all IWD svirfneblins animations variants for Underdark deep gnomes.
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
 
 <a name="500" id="500"></a>&#10173; **[500] More Base Animations**<br><br>
 
+This component assigns some creatures distinctive basic animations:
 - Histachii get the IWD histachii animation
 - Lizardman warriors get the lizardman elite animation (brown)
 - Lizardman shamans get the lizardman animation (green)
@@ -559,6 +560,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 
 <a name="550" id="550"></a>&#10173; **[550] More Icewind Dale Animations**<br><br>
 
+This component assigns some creatures distinctive IWD animations:
 - Animated Plates get small animated plate animations
 - Archdruids get the IWD Arundel animation
 - Variant barbarians (brown, red, tan and shamans)
@@ -575,6 +577,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 
 <a name="600" id="600"></a>&#10173; **[600] More Icewind Dale II Animations**<br><br>
 
+This component assigns some creatures distinctive IWD2 animations:
 - Greater fire giants and firbolgs get the fire giant variant animation
 - Variant goblins (worgriders, leaders, browns, greens, elites)
 - Hook horrors get the hook horror animation
@@ -591,6 +594,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 
 <a name="650" id="650"></a>&#10173; **[650] More Neverwinter Nights Animations**<br><br>
 
+This component assigns some creatures distinctive NWN animations:
 - Scythe-wielders (in NTotSC) get the NWN Amel animation
 - Bombardier beetle (in Big Picture) gets the NWN animation
 - Greater basilisks get the NWN basilisk animation
@@ -608,6 +612,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[730]** 75% of relevant non-joinables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[740]** Most relevant non-joinables<br><br>
 
+This component assigns some creatures distinctive PsT animations:
 - Female human thieves get the female Curst townie animation
 - Male human thieves get the male Curst townie animation
 - Female monks get the female Dustman animation
@@ -641,6 +646,7 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75% of relevant non-joinables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Most relevant non-joinables<br><br>
 
+This component assigns some creatures distinctive Moinesse's animations:
 - Male human barbarians get the male barbarian animation
 - Female human druids get the female druid animation
 - Female human fighters get the female human fighter animation
@@ -870,6 +876,8 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 - [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
     - Added "*%t-svi%*" variable used in a single routine for both sub-components.
     - Fixed soundset clips typos (a few were misspelled "*t_sva*" and "*t_svn*" instead of "*t-sva*" and "*t-svn*").
+- [500] More Base Animations (t-baseanims.tpa)
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_base_anim_arrays.tph*" library) for easier maintenance.
 
   - [710-720-760-740] More Planescape: Torment Animations ()
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
