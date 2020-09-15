@@ -1,0 +1,868 @@
+/* ====================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                               *
+ *                      A R R A Y S    ( T A B L E S )    :    M O R E    I W D    A N I M A T I O N S    C O M P O N E N T   ( 550 )                     *
+ *                                                                                                                                                        *
+ *                Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-iwdanims.tpa WeiDU routine.               *
+ *                                                                                                                                                        *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
+ *                                                                                                                                                        *
+ * ====================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
+ * -----------------------------------                                                                                                                    *
+ *  - GW_animated_plate_bronze    :   LISTS vanilla and modded Animated Plate Bronze creatures needing to be patched.                    => line #   69   *
+ *                                    LISTE les créatures armures animées de bronze du jeu et de mods nécessitant d'être modifiées.                       *
+ *  - GW_animated_plate_dark      :   LISTS modded Animated Plate Dark creatures needing to be patched.                                  => line #   91   *
+ *                                    LISTE les créatures armures animées sombres de mods nécessitant d'être modifiées.                                   *
+ *  - animated_plate_green        :   LISTS modded Animated Plate Green creatures needing to be patched.                                 => line #  112   *
+ *                                    LISTE les créatures armures animées vertes de mods nécessitant d'être modifiées.                                    *
+ *  - GW_arundel                  :   LISTS vanilla and modded Archdruids creatures needing to be patched.                               => line #  130   *
+ *                                    LISTE les créatures archidruides du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_barbarian_warrior_tan    :   LISTS vanilla and modded Tan Barbarians creatures needing to be patched.                           => line #  178   *
+ *                                    LISTE les créatures barbares du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_barbarian_warrior_red    :   LISTS modded Red Barbarians creatures needing to be patched.                                       => line #  202   *
+ *                                    LISTE les créatures barbares rouges de mods nécessitant d'être modifiées.                                           *
+ *  - GW_barbarian_warrior_brown  :   LISTS modded Brown Barbarians creatures needing to be patched.                                     => line #  227   *
+ *                                    LISTE les créatures barbares marrons de mods nécessitant d'être modifiées.                                          *
+ *  - GW_barbarian_shaman_club    :   LISTS modded Barbarian Shaman with club creatures needing to be patched.                           => line #  252   *
+ *                                    LISTE les chaman barbares avec gourdin de mods nécessitant d'être modifiées.                                        *
+ *  - GW_barbarian_shaman_hammer  :   LISTS modded Barbarian Shaman with hammer creatures needing to be patched.                         => line #  270   *
+ *                                    LISTE les chaman barbares avec marteau de mods nécessitant d'être modifiées.                                        *
+ *  - GW_barbarian_shaman_staff   :   LISTS modded Barbarian Shaman with staff creatures needing to be patched.                          => line #  292   *
+ *                                    LISTE les chaman barbares avec bâton de mods nécessitant d'être modifiées.                                          *
+ *  - GW_elemental_air_small      :   LISTS modded Air Elementals Small creatures needing to be patched.                                 => line #  310   *
+ *                                    LISTE les petits élémentaires de l'air de mods nécessitant d'être modifiées.                                        *
+ *  - GW_elemental_earth          :   LISTS vanilla and modded Earth Elementals creatures needing to be patched.                         => line #  331   *
+ *                                    LISTE les créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                           *
+ *  - GW_elemental_earth_iwd      :   LISTS some vanilla and modded Earth Elementals creatures needing to be patched.                    => line #  381   *
+ *                                    LISTE certaines créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                     *
+ *  - GW_elemental_earth_small    :   LISTS vanilla and modded Small Earth Elementals creatures needing to be patched.                   => line #  409   *
+ *                                    LISTE les petits élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                              *
+ *  - GW_elemental_fire           :   LISTS vanilla and modded Fire Elementals creatures needing to be patched.                          => line #  430   *
+ *                                    LISTE les créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                             *
+ *  - GW_elemental_fire_iwd       :   LISTS some vanilla and modded Fire Elementals creatures needing to be patched.                     => line #  495   *
+ *                                    LISTE certaines créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                       *
+ *  - elemental_fire_small        :   LISTS some vanilla and modded mall Fire Elementals creatures needing to be patched.                => line #  528   *
+ *                                    LISTE les petits élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_elemental_water          :   LISTS vanilla and modded Water Elementals creatures needing to be patched.                         => line #  556   *
+ *                                    LISTE les créatures élémentaires de l'eau du jeu et de mods nécessitant d'être modifiées.                           *
+ *  - GW_water_weird              :   LISTS vanilla and modded Water Weirds creatures needing to be patched.                             => line #  584   *
+ *                                    LISTE les monstruosités de l'eau du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_giant_fire_iwd           :   LISTS some vanilla and modded Fire Giants creatures needing to be patched.                         => line #  602   *
+ *                                    LISTE certains géants du feu du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_golem_clay               :   LISTS vanilla and modded Rock Golem creatures needing to be patched.                               => line #  630   *
+ *                                    LISTE les créatures golems de pierre du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_golem_iron               :   LISTS vanilla and modded Adamantite golems creatures needing to be patched.                        => line #  648   *
+ *                                    LISTE les créatures golems d'adamantine du jeu et de mods nécessitant d'être modifiées.                             *
+ *  - golem_iron_iwd              :   LISTS vanilla and modded Iron Golems creatures needing to be patched.                              => line #  688   *
+ *                                    LISTE les créatures golems de fer du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_sahuagins                :   LISTS vanilla and modded Sahuagins and similar creatures needing to be patched.                    => line #  736   *
+ *                                    LISTE les créatures sahuagins du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_sahuagin_iwd             :   LISTS vanilla and modded Sahuagin Priestesses creatures needing to be patched.                     => line #  793   *
+ *                                    LISTE les prêtresses sahuagins du jeu et de mods nécessitant d'être modifiées.                                      *
+ *  - GW_sahuagin_large_iwd       :   LISTS vanilla and modded Sahuagins chiefs creatures needing to be patched.                         => line #  816   *
+ *                                    LISTE les chefs sahuagins du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_sahuagin_large           :   LISTS vanilla and modded Sahuagins royal guards creatures needing to be patched.                   => line #  848   *
+ *                                    LISTE les gardes royaux sahuagins du jeu et de mods nécessitant d'être modifiées.                                   *
+ * ====================================================================================================================================================== */
+
+/* ================================================================================================================== *
+ *  ARRAY GW_animated_plate_bronze : LISTS vanilla and modded Animated Plate Bronze creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------------ *
+ *  Animated Plate Bronze get the animated_plate_bronze_small animation.                                              *
+ * ================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_animated_plate_bronze
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_animated_plate_bronze BEGIN
+
+// BG2
+// ---
+gorgua04                => 1	// Guardian Spirit
+gorgua05                => 1	// id.
+
+// BP
+// --
+walkarm2                => 1	// Animated Plate
+
+END
+
+
+/* ================================================================================================== *
+ *  ARRAY GW_animated_plate_dark : LISTS modded Animated Plate Dark creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------- *
+ *  Animated Plate Dark get the animated_plate_dark_small animation.                                  *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_animated_plate_dark
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_animated_plate_dark BEGIN
+
+// Drizzt Saga
+// -----------
+f_demwar                => 1	// Demonic Guardian
+
+// Planar Sphere
+// -------------
+pspnight                => 1	// Planar Knight
+
+END
+
+
+/* ==================================================================================================== *
+ *  ARRAY GW_animated_plate_green : LISTS modded Animated Plate Green creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------- *
+ *  Animated Plate Green get the animated_plate_green_small animation.                                  *
+ * ==================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_animated_plate_green
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_animated_plate_green BEGIN
+
+// BP
+// --
+walkarm1                => 1	// Animated Plate
+walkarm3                => 1	// id.
+
+END
+
+
+/* ========================================================================================= *
+ *  ARRAY GW_arundel : LISTS vanilla and modded Archdruids creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------- *
+ *  Archdruids get the arundel animation.                                                    *
+ * ========================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_arundel
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_arundel BEGIN
+
+// BG
+// --
+"%tutu_var%amaran"      => 1	// Amarande
+"%tutu_var%seniya"      => 1	// Seniyad
+
+// BG2
+// ---
+cechal02                => 1	// Master Verthan
+cechalle                => 1	// id.
+cedruid1                => 1	// Pauden
+cedruid2                => 1	// Dalok
+gdruid                  => 1	// Druid
+trevil03                => 1	// Master Verthan
+
+// BG1 NPC
+// -------
+x#andart                => 1	// Andarthe
+
+// CtB
+// ---
+cbarkslv                => 1	// Arkaneus Silvermane
+
+// DSotSC
+// ------
+dsarchdr                => 1	// The Arch Druid
+
+// Imnesvale
+// ---------
+dubnd7                  => 1	// Druid
+
+// NEJ
+// ---
+arundel                 => 1	// Arundel
+arundeld                => 1	// id.
+
+END
+
+
+/* =========================================================================================================== *
+ *  ARRAY GW_barbarian_warrior_tan : LISTS vanilla and modded Tan Barbarians creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------------- *
+ *  Tan Barbarians get the barbarian_warrior_tan animation.                                                    *
+ * =========================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_barbarian_warrior_tan
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_warrior_tan BEGIN
+
+// BG2
+// ---
+bazpat02                => 1	// Nanoc the Barbarian
+
+// RoT
+// ---
+barbar1                 => 1	// Barbarian
+barbar2                 => 1	// id.
+barbar3                 => 1	// id.
+barbar4                 => 1	// id.
+
+END
+
+
+/* =============================================================================================== *
+ *  ARRAY GW_barbarian_warrior_red : LISTS modded Red Barbarians creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------- *
+ *  Red Barbarians get the barbarian_warrior_red animation.                                        *
+ * =============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_barbarian_warrior_red
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_warrior_red BEGIN
+
+// TDD
+// ---
+barb1                   => 1	// Barbarian Tribesman
+barb2                   => 1	// id.
+barbgrd                 => 1	// id.
+barbgrd2                => 1	// id.
+barbmess                => 1	// id.
+
+// Unknown mods
+// ------------
+tzshok01                => 1	// 
+
+END
+
+
+/* =================================================================================================== *
+ *  ARRAY GW_barbarian_warrior_brown : LISTS modded Brown Barbarians creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Brown Barbarians get the barbarian_warrior_brown animation.                                        *
+ * =================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_barbarian_warrior_brown
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_warrior_brown BEGIN
+
+// RoT
+// ---
+ulgarth                 => 1	// Ulgarth
+
+// TDD
+// ---
+barb3                   => 1	// Ornamus
+barb4                   => 1	// id.
+barbgood                => 1	// Barbarian Armsman
+barborn                 => 1	// Ornamus
+bargood                 => 1	// Barbarian Armsman
+
+END
+
+
+/* =========================================================================================================== *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                                     *
+ *  ARRAY GW_barbarian_shaman_club : LISTS modded Barbarian Shaman with club creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------------- *
+ *  Barbarian Shaman with club gets the barbarian_shaman_club animation.                                       *
+ * =========================================================================================================== *
+
+ACTION_CLEAR_ARRAY GW_barbarian_shaman_club
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_shaman_club BEGIN
+
+// TDD
+// ---
+barheal                 => 1	// Barbarian Healer
+
+END*/
+
+
+/* =============================================================================================================== *
+ *  ARRAY GW_barbarian_shaman_hammer : LISTS modded Barbarian Shaman with hammer creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------------- *
+ *  Barbarian Shaman with hammer get the barbarian_shaman_hammer animation.                                        *
+ * =============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_barbarian_shaman_hammer
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_shaman_hammer BEGIN
+
+// RoT
+// ---
+beogorn                 => 1	// Beogorn
+
+// TDD
+// ---
+barbkin2                => 1	// King Heafnall
+barbking                => 1	// id.
+
+END
+
+
+/* ============================================================================================================= *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                                       *
+ *  ARRAY GW_barbarian_shaman_staff : LISTS modded Barbarian Shaman with staff creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------- *
+ *  Barbarian Shaman with staff gets the barbarian_shaman_staff animation.                                       *
+ * ============================================================================================================= *
+
+ACTION_CLEAR_ARRAY GW_barbarian_shaman_staff
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_barbarian_shaman_staff BEGIN
+
+// TDD
+// ---
+barbheal                => 1	// Barbarian Healer
+
+END*/
+
+
+/* =================================================================================================== *
+ *  ARRAY GW_elemental_air_small : LISTS modded small Air Elementals creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Air Elementals Small get the elemental_air_small animation.                                        *
+ * =================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_elemental_air_small
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_air_small BEGIN
+
+// Refinements
+// -----------
+li#whir                 => 1	// Whirlwind
+
+// Unknown mods
+// ------------
+wm_vortx                => 1	// 
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_elemental_earth : LISTS vanilla and modded Earth Elementals creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Earth Elementals get the elemental_earth animation.                                                    *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_elemental_earth
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_earth BEGIN
+
+// BG2
+// ---
+druear01                => 1	// Earth Elemental
+elearg01                => 1	// Greater Earth Elemental
+elearpr2                => 1	// Earth Elemental
+elearpr3                => 1	// id.
+elearsu                 => 1	// id.
+elearsu3                => 1	// id.
+elearsu4                => 1	// id.
+elemogre                => 1	// Ogremoch
+elemsunn                => 1	// Sunnis
+mdearth                 => 1	// Earth Elemental
+mdearth2                => 1	// id.
+swaear01                => 1	// id.
+swaear02                => 1	// id.
+udelde                  => 1	// Greater Earth Elemental
+
+// Refinements
+// -----------
+ca#sear2                => 1	// Earth Elemental
+ca#sear3                => 1	// Greater Earth Elemental
+
+// RoT
+// ---
+godele2                 => 1	// Earth Elemental Prince
+
+// TDD
+// ---
+elecali1                => 1	// Greater Earth Elemental
+elecali3                => 1	// id.
+elecali5                => 1	// id.
+
+// Unknown mods
+// ------------
+b#chrear                => 1	// 
+esp01                   => 1	// 
+
+END
+
+
+/* ================================================================================================================ *
+ *  ARRAY GW_elemental_earth_iwd : LISTS some vanilla and modded Earth Elementals creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------------- *
+ *  Some Earth Elementals get the IWD elemental_earth animation.                                                    *
+ * ================================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_elemental_earth_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_earth_iwd BEGIN
+
+// BG2
+// ---
+elear01                 => 1	// Earth Elemental
+elearpr                 => 1	// id.
+elearsu1                => 1	// id.
+elearsu2                => 1	// id.
+elearsuw                => 1	// id.
+shearth                 => 1	// id.
+suearth                 => 1	// id.
+udearth                 => 1	// id.
+
+// Refinements
+// -----------
+ca#sear1                => 1	// Earth Elemental
+
+END
+
+
+/* =================================================================================================================== *
+ *  ARRAY GW_elemental_earth_small : LISTS vanilla and modded Small Earth Elementals creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------------- *
+ *  Small Earth Elementals get the elemental_earth_small animation.                                                    *
+ * =================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_elemental_earth_small
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_earth_small BEGIN
+
+// BG2
+// ---
+elearl01                => 1	// Earth Elemental
+eleeel01                => 1	// Lesser Earth Elemental
+kearth                  => 1	// Earth Elemental
+mekear01                => 1	// Lesser Earth Elemental
+sumelear                => 1	// id.
+
+END
+
+
+/* ===================================================================================================== *
+ *  ARRAY GW_elemental_fire : LISTS vanilla and modded Fire Elementals creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Fire Elementals get the elemental_fire animation.                                                    *
+ * ===================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_elemental_fire
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_fire BEGIN
+
+// BG2
+// ---
+c6drowgo                => 1	// Fire Elemental
+ddguard7                => 1	// Guardian
+drufir01                => 1	// Fire Elemental
+elemimix                => 1	// Imix
+elemzaam                => 1	// Zaaman Rul
+elfir                   => 1	// Fire Elemental
+elfir01                 => 1	// id.
+elfirg01                => 1	// Greater Fire Elemental
+gorfir01                => 1	// id.
+gorfir02                => 1	// id.
+gorfir03                => 1	// id.
+gorfir04                => 1	// id.
+obsfir06                => 1	// id.
+suelew1                 => 1	// id.
+suelew2                 => 1	// id.
+sufire                  => 1	// Fire Elemental
+telelfir                => 1	// Greater Fire Elemental
+udeldf                  => 1	// id.
+udfire                  => 1	// Fire Elemental
+yscara04                => 1	// Greater Fire Elemental
+
+// Neh'taniel
+// ----------
+sk#fform                => 1	// Fire Wraith
+
+// Planar Sphere
+// -------------
+pschaos                 => 1	// Servant of Chaos
+psmaele                 => 1	// Magic Elemental
+
+// Refinements
+// -----------
+ca#zfir3                => 1	// Greater Fire Elemental
+tg#did5                 => 1	// id.
+
+// RoT
+// ---
+godele3                 => 1	// Fire Elemental Prince
+
+// TDD
+// ---
+acidele1                => 1	// Acid Elemental
+elecali2                => 1	// Greater Fire Elemental
+elecali4                => 1	// id.
+lightele                => 1	// Lightening Elemental
+
+// Unknown mods
+// ------------
+b#chrfir                => 1	// 
+
+END
+
+
+/* ============================================================================================================== *
+ *  ARRAY GW_elemental_fire_iwd : LISTS some vanilla and modded Fire Elementals creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------------- *
+ *  Some Fire Elementals get the IWD elemental_fire animation.                                                    *
+ * ============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_elemental_fire_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_fire_iwd BEGIN
+
+// BG2
+// ---
+deckfele                => 1	// Fire Elemental
+elfirpr2                => 1	// id.
+elfirpr3                => 1	// id.
+elfirsu                 => 1	// id.
+elfirsu3                => 1	// id.
+elfirsu4                => 1	// id.
+swafir01                => 1	// id.
+swafir02                => 1	// id.
+
+// Refinements
+// -----------
+ca#zfir2                => 1	// Fire Elemental
+
+// TDD
+// ---
+lavaele                 => 1	// Lava Elemental
+lavaele1                => 1	// id.
+
+END
+
+
+/* ================================================================================================================= *
+ *  ARRAY GW_elemental_fire_small : LISTS vanilla and modded small Fire Elementals creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------------------- *
+ *  Small Fire Elementals get the elemental_fire_small animation.                                                    *
+ * ================================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_elemental_fire_small
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_fire_small BEGIN
+
+// BG2
+// ---
+elefel01                => 1	// Lesser Fire Elemental
+elfirl01                => 1	// id.
+elfirpr                 => 1	// Fire Elemental
+elfirsu1                => 1	// id.
+elfirsu2                => 1	// id.
+elfirsuw                => 1	// id.
+shfire                  => 1	// id.
+sumelfir                => 1	// Lesser Fire Elemental
+
+// Refinements
+// -----------
+ca#zfir1                => 1	// Fire Elemental
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_elemental_water : LISTS vanilla and modded Water Elementals creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Water Elementals get the IWD elemental_water animation.                                                *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_elemental_water
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_water BEGIN
+
+// BG2
+// ---
+elwatg01                => 1	// Greater Water Elemental
+
+// NEJ & TS
+// --------
+elemwag                 => 1	// Water Elemental - Greater Water Elemental
+
+// Refinements
+// -----------
+li#druwa                => 1	// Greater Water Elemental
+tg#benh                 => 1	// Ben-Hadar
+tg#wel2                 => 1	// Water Elemental
+tg#wel3                 => 1	// Greater Water Elemental
+
+END
+
+
+/* ===================================================================================================== *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                               *
+ *  ARRAY GW_water_weird : LISTS vanilla and modded Water Water Weirds creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------------------- *
+ *  Olhydra gets the water_weird animation.                                                              *
+ * ===================================================================================================== *
+
+ACTION_CLEAR_ARRAY GW_water_weird
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_water_weird BEGIN
+
+// BG2
+// ---
+elemhydr                => 1	// Olhydra
+
+END*/
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_giant_fire_iwd : LISTS some vanilla and modded Fire Giants creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Some Fire Giants get the IWD giant_fire animation.                                                    *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_giant_fire_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire_iwd BEGIN
+
+// BG2
+// ---
+gorfirg                 => 1	// Fire Giant
+hgber01                 => 1	// Berenn
+hgwar02                 => 1	// Elite Fire Giant
+yscara03                => 1	// Fire Giant
+ysfire01                => 1	// id.
+ysfire02                => 1	// id.
+ysg2                    => 1	// id.
+yssold10                => 1	// id.
+
+// Unknown mods
+// ------------
+sorkyst                 => 1	// 
+
+END
+
+
+/* ============================================================================================ *
+ *  NOTE: unused for the moment (v6.0.0) since it contains one single ref.                      *
+ *  ARRAY GW_golem_clay : LISTS vanilla and modded Rock Golem creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Rock Golem gets the golem_clay animation.                                                   *
+ * ============================================================================================ *
+
+ACTION_CLEAR_ARRAY GW_golem_clay
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_golem_clay BEGIN
+
+// TDD
+// ---
+rockgol1                => 1	// Rock Golem
+
+END*/
+
+
+/* =================================================================================================== *
+ *  ARRAY GW_golem_iron : LISTS vanilla and modded Adamantite golems creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------- *
+ *  Adamantite golems get the golem_iron animation.                                                    *
+ * =================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_golem_iron
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_golem_iron BEGIN
+
+// BG2
+// ---
+golada01                => 1	// Adamantite Golem
+golkill2                => 1	// id.
+gordeckb                => 1	// id.
+
+// RoT
+// ---
+garsaph1                => 1	// Sapphire Golem
+garsaph2                => 1	// id.
+gholim                  => 1	// Gholim
+godgol1                 => 1	// Adamantite Golem
+godgol2                 => 1	// id.
+golsaph1                => 1	// Sapphire Golem
+golsaph2                => 1	// id.
+golsaph3                => 1	// id.
+
+// Tactics & BP
+// ------------
+ritgol0                 => 1	// Unit Zero
+ritgol1                 => 1	// Unit One
+ritgol2                 => 1	// Unit Two
+
+// Unknown mods
+// ------------
+z#gadama                => 1	// 
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_golem_iron_iwd : LISTS vanilla and modded Iron Golems creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Iron Golems get the IWD golem_iron animation.                                                    *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_golem_iron_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_golem_iron_iwd BEGIN
+
+// BG2
+// ---
+goliro01                => 1	// Iron Golem
+gorgrd01                => 1	// Guardian Golem
+gorgrd02                => 1	// id.
+gorsta08                => 1	// Statue
+kpgol04                 => 1	// Iron Golem
+shiron                  => 1	// id.
+tomegol4                => 1	// Juggernaut Golem
+
+// BP
+// --
+kpgol07                 => 1	// Iron Golem
+
+// CtB
+// ---
+cbgorgrd                => 1	// Guardian Golem
+cbgorgre                => 1	// Iron Golem
+
+// RoT
+// ---
+gartopz1                => 1	// Topaz Golem
+gartopz2                => 1	// id.
+godgol3                 => 1	// Diamond Golem
+godgol4                 => 1	// id.
+godgol5                 => 1	// id.
+godgol6                 => 1	// id.
+godruby                 => 1	// Ruby Golem
+golruby1                => 1	// Lesser Ruby Golem
+yacasas                 => 1	// Yac'as'as
+
+// TDD
+// ---
+irontomb                => 1	// Tomb Guardian
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY GW_sahuagins : LISTS vanilla and modded Sahuagins creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Sahuagins get the sahuagin animation.                                                     *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_sahuagins
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_sahuagins BEGIN
+
+// BG2
+// ---
+chevil04                => 1	// Sahuagin
+elesah01                => 1	// Sahuagin Baron
+elesah02                => 1	// id.
+obssah01                => 1	// id.
+obssah03                => 1	// Sahuagin Baronial Guard
+obssah04                => 1	// Sahuagin
+obssah05                => 1	// id.
+ppsaha                  => 1	// id.
+ppsahale                => 1	// Sahuagin Baron
+sahamb01                => 1	// Rebel
+sahamb02                => 1	// id.
+sahamb03                => 1	// id.
+sahamb04                => 1	// Sahuagin
+sahamb05                => 1	// id.
+sahamb06                => 1	// id.
+sahbar01                => 1	// Sahuagin Baronial Guard
+sahchf01                => 1	// Sahuagin Chieftain
+sahchf02                => 1	// id.
+sahramb1                => 1	// Rebel
+sahramb2                => 1	// id.
+sahramb4                => 1	// id.
+sahramb5                => 1	// id.
+sahrar01                => 1	// id.
+sahrgr03                => 1	// id.
+sahrnt01                => 1	// id.
+sahsss01                => 1	// id.
+sahsss02                => 1	// id.
+sahsss03                => 1	// id.
+sahuag01                => 1	// Sahuagin
+
+// BG1 NPC
+// -------
+x#saha01                => 1	// Sahuagin Chieftain
+x#saha02                => 1	// Sahuagin
+
+// BP
+// --
+bpsahugi                => 1	// Sahuagin
+sahspy01                => 1	// Rebel
+sahspy02                => 1	// id.
+sahspy04                => 1	// Sahuagin
+
+END
+
+
+/* ======================================================================================================== *
+ *  ARRAY GW_sahuagin_iwd : LISTS vanilla and modded Sahuagin Priestesses creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------- *
+ *  Sahuagin Priestesses get the IWD sahuagin animation.                                                    *
+ * ======================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_sahuagin_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_sahuagin_iwd BEGIN
+
+// BG2
+// ---
+obssah02                => 1	// Sahuagin Priestess
+sahpr1                  => 1	// Royal High Priestess Senityili
+sahpr3                  => 1	// High Priestess Tlyysixxous
+sahpr4                  => 1	// Senior Priestess Sallinithyl
+sahpr5                  => 1	// Priestess of Sekolah
+sahpri02                => 1	// Royal High Priestess
+sahramb3                => 1	// Priestess
+
+END
+
+
+/* ========================================================================================================== *
+ *  ARRAY GW_sahuagin_large_iwd : LISTS vanilla and modded Sahuagins chiefs creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------- *
+ *  Sahuagins chiefs (Large) get the IWD sahuagin_large animation.                                            *
+ * ========================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_sahuagin_large_iwd
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_sahuagin_large_iwd BEGIN
+
+// BG2
+// ---
+sahbar02                => 1	// Sahuagin Baron
+sahbar03                => 1	// Baron Thelokassyil
+sahcapt0                => 1	// Captain Alyittyl
+sahcapt1                => 1	// id.
+sahcpt02                => 1	// Captain Feerlattiys
+sahkin01                => 1	// Sahuagin King
+sahkng01                => 1	// King Ixilthetocal
+sahkng02                => 1	// id.
+sahpri01                => 1	// Sahuagin Prince
+sahreb02                => 1	// Prince Villynaty
+sahryl01                => 1	// Sahuagin Royal Guard
+udsaha                  => 1	// Sahuagin Prince
+
+// RoT
+// ---
+guareye6                => 1	// Guardian of the Eye
+
+END
+
+
+/* ============================================================================================================ *
+ *  ARRAY GW_sahuagin_large : LISTS vanilla and modded Sahuagins royal guards creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------ *
+ *  Sahuagins royal guards get the sahuagin_large animation.                                                    *
+ * ============================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_sahuagin_large
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_sahuagin_large BEGIN
+
+// BG2
+// ---
+sahcpt01                => 1	// Captain Alyittyl
+sahextra                => 1	// Sahuagin Royal Guard
+sahgrd01                => 1	// id.
+sahgrd02                => 1	// id.
+sahgrd03                => 1	// id.
+sahpr2                  => 1	// Prince Villynaty
+sahrgr01                => 1	// Rebel
+sahrgr02                => 1	// id.
+
+END
