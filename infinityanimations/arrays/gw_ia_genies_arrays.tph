@@ -99,18 +99,22 @@ sumdjinn                => 1	// Djinni
 wish01	                => 1	// id.
 wish02	                => 1	// id.
 
-// Fade
-// ----
+// Fade NPC
+// --------
 e3invis                 => 1	// ???
-
-// Ribald's Genie
-// --------------
-drgenie	                => 1	// Ribald's Genie
 
 // RoT
 entdjin	                => 1	// Djinni
 entdjin3                => 1	// id.
 pladjin	                => 1	// Holy Guardian
+
+// Revised Forgotten Wars Item Pack
+// --------------------------------
+fwsw1h12                => 1	// Aataqah
+
+// Ribald's Genie
+// --------------
+drgenie	                => 1	// Ribald's Genie
 
 // Saerileth
 // ---------
@@ -129,11 +133,7 @@ caligen3                => 1	// Noble Djinni
 
 // UB
 // --
-u!kgen	                => 1	// Genie
-
-// Unknown mods
-// ------------
-fwsw1h12                => 1	// 
+"u!kgen"                => 1	// Genie
 
 END
 

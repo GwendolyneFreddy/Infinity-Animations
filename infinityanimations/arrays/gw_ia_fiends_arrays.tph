@@ -11,31 +11,31 @@
  * -----------------------------------                                                                                                                     *
  *  - GW_nabassus                 :   LISTS vanilla and modded Nabassus creatures needing to be patched.                                   => line #  43   *
  *                                    LISTE les créatures nabassus du jeu et de mods nécessitant d'être modifiées.                                         *
- *  - GW_bebiliths                :   LISTS modded Bebiliths creatures needing to be patched.                                              => line # 115   *
+ *  - GW_bebiliths                :   LISTS modded Bebiliths creatures needing to be patched.                                              => line # 118   *
  *                                    LISTE les créatures bebiliths de mods nécessitant d'être modifiées.                                                  *
- *  - GW_bone_fiends              :   LISTS vanilla and modded Bone Fiendss creatures needing to be patched.                               => line # 137   *
+ *  - GW_bone_fiends              :   LISTS vanilla and modded Bone Fiendss creatures needing to be patched.                               => line # 140   *
  *                                    LISTE les créatures démons d'os du jeu et de mods nécessitant d'être modifiées.                                      *
- *  - GW_gelugons                 :   LISTS vanilla and modded Gelugons creatures needing to be patched.                                   => line # 164   *
+ *  - GW_gelugons                 :   LISTS vanilla and modded Gelugons creatures needing to be patched.                                   => line # 167   *
  *                                    LISTE les créatures gélugons du jeu et de mods nécessitant d'être modifiées.                                         *
- *  - GW_mariliths_dark           :   LISTS vanilla and modded Mariliths creatures needing to be patched.                                  => line # 198   *
+ *  - GW_mariliths_dark           :   LISTS vanilla and modded Mariliths creatures needing to be patched.                                  => line # 201   *
  *                                    LISTE les créatures mariliths du jeu et de mods nécessitant d'être modifiées.                                        *
- *  - hags_night                  :   LISTS vanilla and modded Night Hags creatures needing to be patched.                                 => line # 227   *
+ *  - hags_night                  :   LISTS vanilla and modded Night Hags creatures needing to be patched.                                 => line # 230   *
  *                                    LISTE les créatures Sorcières de la nuit du jeu et de mods nécessitant d'être modifiées.                             *
- *  - GW_yochlols                 :   LISTS vanilla and modded Yochlols creatures needing to be patched.                                   => line # 248   *
+ *  - GW_yochlols                 :   LISTS vanilla and modded Yochlols creatures needing to be patched.                                   => line # 251   *
  *                                    LISTE les créatures yochlols du jeu et de mods nécessitant d'être modifiées.                                         *
- *  - GW_abishais_silver          :   LISTS vanilla and modded Silver Abishais creatures needing to be patched.                            => line # 277   *
+ *  - GW_abishais_silver          :   LISTS vanilla and modded Silver Abishais creatures needing to be patched.                            => line # 280   *
  *                                    LISTE les créatures abishais d'argent du jeu et de mods nécessitant d'être modifiées.                                *
- *  - GW_abishais_green           :   LISTS vanilla and modded Green Abishais creatures needing to be patched.                             => line # 295   *
+ *  - GW_abishais_green           :   LISTS vanilla and modded Green Abishais creatures needing to be patched.                             => line # 298   *
  *                                    LISTE les créatures abishais vertes du jeu et de mods nécessitant d'être modifiées.                                  *
- *  - GW_abishais_red             :   LISTS vanilla and modded Red Abishais creatures needing to be patched.                               => line # 321   *
+ *  - GW_abishais_red             :   LISTS vanilla and modded Red Abishais creatures needing to be patched.                               => line # 324   *
  *                                    LISTE les créatures abishais rouges du jeu et de mods nécessitant d'être modifiées.                                  *
- *  - GW_erinyes                  :   LISTS vanilla and modded Erinyes creatures needing to be patched.                                    => line # 360   *
+ *  - GW_erinyes                  :   LISTS vanilla and modded Erinyes creatures needing to be patched.                                    => line # 363   *
  *                                    LISTE les créatures erinyes du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_succubi                  :   LISTS vanilla and modded Succubi creatures needing to be patched.                                    => line # 391   *
+ *  - GW_succubi                  :   LISTS vanilla and modded Succubi creatures needing to be patched.                                    => line # 394   *
  *                                    LISTE les créatures succubes du jeu et de mods nécessitant d'être modifiées.                                         *
- *  - GW_maurezhi                 :   LISTS vanilla and modded Maurezhi creatures needing to be patched.                                   => line # 430   *
+ *  - GW_maurezhi                 :   LISTS vanilla and modded Maurezhi creatures needing to be patched.                                   => line # 436   *
  *                                    LISTE les créatures maurezhi du jeu et de mods nécessitant d'être modifiées.                                         *
- *  - GW_glabrezus                :   LISTS vanilla and modded Glabrezus creatures needing to be patched.                                  => line # 449   *
+ *  - GW_glabrezus                :   LISTS vanilla and modded Glabrezus creatures needing to be patched.                                  => line # 455   *
  *                                    LISTE les créatures glabrezus du jeu et de mods nécessitant d'être modifiées.                                        *
  * ======================================================================================================================================================= */
 
@@ -79,6 +79,10 @@ finnabas                => 1	// Nabassu
 // -----------
 f_demdrg                => 1	// Greater Tanari
 
+// Improved Volcano! Pack
+// ----------------------
+esp04                   => 1	// Nabassu
+
 // Kim NPC
 // -------
 barbe2	                => 1	// Greenbeard 
@@ -93,6 +97,11 @@ tg#dem2	                => 1	// Nabassu
 caddem13                => 1	// Nabassu
 caddem5	                => 1	// id.
 
+// Spellhold Gauntlet
+// ------------------
+z#gnab01                => 1	// Nabassu
+z#gnabas                => 1	// id.
+
 // Stratagems
 // ----------
 dw#nabsu                => 1	// Nabassu
@@ -101,12 +110,6 @@ dw#nabsu                => 1	// Nabassu
 // ---
 demnabr1                => 1	// Nabassu
 demnabr2                => 1	// id.
-
-// Unknown mods
-// ------------
-esp04                   => 1	// 
-z#gnab01                => 1	// 
-z#gnabas                => 1	// 
 
 END
 
@@ -125,10 +128,10 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_bebiliths BEGIN
 // -----------
 f_demspi                => 1	// Demonic Astral Spider
 
-// Unknown mods
-// ------------
-abaia                   => 1	// 
-abaia2                  => 1	// 
+// Longer Road
+// -----------
+abaia                   => 1	// Abaia
+abaia2                  => 1	// id.
 
 END
 
@@ -155,7 +158,7 @@ cbgrbone                => 1	// Greater Bone Fiend
 
 // Wheels of Prophecy - Stratagems
 // -------------------------------
-dw#vibon                 => 1	// Bone Fiend
+dw#vibon                => 1	// Bone Fiend
 
 END
 
@@ -179,17 +182,17 @@ gordem2	                => 1	// Velithuu
 rr#hgel	                => 1	// Gelugon
 rr#sgelu	            => 1	// id.
 
-// BP Does not seem to be installed???
+// BP
 // --
-gelugeon	            => 1	// 
+gelugeon	            => 1	// Does not seem to be installed
+
+// Improved Summons
+// ----------------
+demgelsu                => 1	// Gelugon
 
 // TDD
 // ---
 gelugon1                => 1	// Gelugon
-
-// Unknown mods
-// ------------
-demgelsu	            => 1	// 
 
 END
 
@@ -266,9 +269,9 @@ yachol	                => 1	// Yochlol
 // ------------------
 i#vyoch	                => 1	// Yochlol
 
-// Fishing for Trouble
-// -------------------
-ysdemon fft ???
+// Yasraena NPC
+// ------------
+ysdemon	                => 1	// Greater Yochlol
 
 END
 
@@ -301,9 +304,9 @@ ACTION_CLEAR_ARRAY GW_abishais_green
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_abishais_green BEGIN
 
-// BP Does not seem to be installed
+// BP
 // --
-babi                    => 1	// Green Abishai 
+babi                    => 1	// Green Abishai ==> Does not seem to be installed
 
 // RoT
 // ---
@@ -408,6 +411,10 @@ gorwom01                => 1	// Nalmissra
 // ---------
 finsucc                 => 1	// Succubus
 
+// Longer Road
+// -----------
+yugsuc01                => 1	// Succubus
+
 // Planar Sphere
 // -------------
 pstana02                => 1	// Tanar'ri Stalker
@@ -421,7 +428,6 @@ nssuc02                 => 1	// Succubus
 // Unknown mods
 // ------------
 sd_hrzr2                => 1	// 
-yugsuc01                => 1	// 
 
 END
 
@@ -467,9 +473,9 @@ jondem01                => 1	// id.
 jondem03                => 1	// id.
 jondem05                => 1	// id.
 
-// BP Does not seem to be installed
+// BP
 // --
-gglab                => 1	// 
+gglab                => 1	// Does not seem to be installed
 
 // Tactics
 // -------

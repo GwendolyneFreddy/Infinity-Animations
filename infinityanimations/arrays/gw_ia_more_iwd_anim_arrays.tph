@@ -33,35 +33,35 @@
  *                                    LISTE les petits élémentaires de l'air de mods nécessitant d'être modifiés.                                         *
  *  - GW_elemental_earth          :   LISTS vanilla and modded Earth Elementals creatures needing to be patched.                         => line #  331   *
  *                                    LISTE les créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                           *
- *  - GW_elemental_earth_iwd      :   LISTS some vanilla and modded Earth Elementals creatures needing to be patched.                    => line #  381   *
+ *  - GW_elemental_earth_iwd      :   LISTS some vanilla and modded Earth Elementals creatures needing to be patched.                    => line #  384   *
  *                                    LISTE certaines créatures élémentaires de terre du jeu et de mods nécessitant d'être modifiées.                     *
- *  - GW_elemental_earth_small    :   LISTS vanilla and modded Small Earth Elementals creatures needing to be patched.                   => line #  409   *
+ *  - GW_elemental_earth_small    :   LISTS vanilla and modded Small Earth Elementals creatures needing to be patched.                   => line #  412   *
  *                                    LISTE les petits élémentaires de terre du jeu et de mods nécessitant d'être modifiés.                               *
- *  - GW_elemental_fire           :   LISTS vanilla and modded Fire Elementals creatures needing to be patched.                          => line #  430   *
+ *  - GW_elemental_fire           :   LISTS vanilla and modded Fire Elementals creatures needing to be patched.                          => line #  433   *
  *                                    LISTE les créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                             *
- *  - GW_elemental_fire_iwd       :   LISTS some vanilla and modded Fire Elementals creatures needing to be patched.                     => line #  495   *
+ *  - GW_elemental_fire_iwd       :   LISTS some vanilla and modded Fire Elementals creatures needing to be patched.                     => line #  498   *
  *                                    LISTE certaines créatures élémentaires de feu du jeu et de mods nécessitant d'être modifiées.                       *
- *  - elemental_fire_small        :   LISTS some vanilla and modded mall Fire Elementals creatures needing to be patched.                => line #  528   *
+ *  - elemental_fire_small        :   LISTS some vanilla and modded mall Fire Elementals creatures needing to be patched.                => line #  531   *
  *                                    LISTE les petits élémentaires de feu du jeu et de mods nécessitant d'être modifiés.                                 *
- *  - GW_elemental_water          :   LISTS vanilla and modded Water Elementals creatures needing to be patched.                         => line #  556   *
+ *  - GW_elemental_water          :   LISTS vanilla and modded Water Elementals creatures needing to be patched.                         => line #  559   *
  *                                    LISTE les créatures élémentaires de l'eau du jeu et de mods nécessitant d'être modifiées.                           *
- *  - GW_water_weird              :   LISTS vanilla and modded Water Weirds creatures needing to be patched.                             => line #  584   *
+ *  - GW_water_weird              :   LISTS vanilla and modded Water Weirds creatures needing to be patched.                             => line #  587   *
  *                                    LISTE les monstruosités de l'eau du jeu et de mods nécessitant d'être modifiées.                                    *
- *  - GW_giant_fire_iwd           :   LISTS some vanilla and modded Fire Giants creatures needing to be patched.                         => line #  602   *
+ *  - GW_giant_fire_iwd           :   LISTS some vanilla and modded Fire Giants creatures needing to be patched.                         => line #  605   *
  *                                    LISTE certains géants du feu du jeu et de mods nécessitant d'être modifiés.                                         *
- *  - GW_golem_clay               :   LISTS vanilla and modded Rock Golem creatures needing to be patched.                               => line #  630   *
+ *  - GW_golem_clay               :   LISTS vanilla and modded Rock Golem creatures needing to be patched.                               => line #  633   *
  *                                    LISTE les créatures golems de pierre du jeu et de mods nécessitant d'être modifiées.                                *
- *  - GW_golem_iron               :   LISTS vanilla and modded Adamantite golems creatures needing to be patched.                        => line #  648   *
+ *  - GW_golem_iron               :   LISTS vanilla and modded Adamantite golems creatures needing to be patched.                        => line #  651   *
  *                                    LISTE les créatures golems d'adamantine du jeu et de mods nécessitant d'être modifiées.                             *
- *  - golem_iron_iwd              :   LISTS vanilla and modded Iron Golems creatures needing to be patched.                              => line #  688   *
+ *  - golem_iron_iwd              :   LISTS vanilla and modded Iron Golems creatures needing to be patched.                              => line #  691   *
  *                                    LISTE les créatures golems de fer du jeu et de mods nécessitant d'être modifiées.                                   *
- *  - GW_sahuagins                :   LISTS vanilla and modded Sahuagins and similar creatures needing to be patched.                    => line #  736   *
+ *  - GW_sahuagins                :   LISTS vanilla and modded Sahuagins and similar creatures needing to be patched.                    => line #  739   *
  *                                    LISTE les créatures sahuagins du jeu et de mods nécessitant d'être modifiées.                                       *
- *  - GW_sahuagin_iwd             :   LISTS vanilla and modded Sahuagin Priestesses creatures needing to be patched.                     => line #  793   *
+ *  - GW_sahuagin_iwd             :   LISTS vanilla and modded Sahuagin Priestesses creatures needing to be patched.                     => line #  796   *
  *                                    LISTE les prêtresses sahuagins du jeu et de mods nécessitant d'être modifiées.                                      *
- *  - GW_sahuagin_large_iwd       :   LISTS vanilla and modded Sahuagins chiefs creatures needing to be patched.                         => line #  816   *
+ *  - GW_sahuagin_large_iwd       :   LISTS vanilla and modded Sahuagins chiefs creatures needing to be patched.                         => line #  819   *
  *                                    LISTE les chefs sahuagins du jeu et de mods nécessitant d'être modifiés.                                            *
- *  - GW_sahuagin_large           :   LISTS vanilla and modded Sahuagins royal guards creatures needing to be patched.                   => line #  848   *
+ *  - GW_sahuagin_large           :   LISTS vanilla and modded Sahuagins royal guards creatures needing to be patched.                   => line #  851   *
  *                                    LISTE les gardes royaux sahuagins du jeu et de mods nécessitant d'être modifiés.                                    *
  * ====================================================================================================================================================== */
 
@@ -216,9 +216,9 @@ barbgrd                 => 1	// id.
 barbgrd2                => 1	// id.
 barbmess                => 1	// id.
 
-// Unknown mods
-// ------------
-tzshok01                => 1	// 
+// The Magnificient Magic Store
+// ----------------------------
+tzshok01                => 1	// Ardol
 
 END
 
@@ -320,9 +320,9 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_elemental_air_small BEGIN
 // -----------
 li#whir                 => 1	// Whirlwind
 
-// Unknown mods
-// ------------
-wm_vortx                => 1	// 
+// Wild Mage Additions
+// -------------------
+wm_vortx                => 1	// Vortex
 
 END
 
@@ -354,6 +354,14 @@ swaear01                => 1	// id.
 swaear02                => 1	// id.
 udelde                  => 1	// Greater Earth Elemental
 
+// Improved Volcano! Pack
+// ----------------------
+esp01                   => 1	// Earth Elemental
+
+// Improved Battles
+// ----------------
+b#chrear                => 1	// Follower of Sand
+
 // Refinements
 // -----------
 ca#sear2                => 1	// Earth Elemental
@@ -368,11 +376,6 @@ godele2                 => 1	// Earth Elemental Prince
 elecali1                => 1	// Greater Earth Elemental
 elecali3                => 1	// id.
 elecali5                => 1	// id.
-
-// Unknown mods
-// ------------
-b#chrear                => 1	// 
-esp01                   => 1	// 
 
 END
 
@@ -459,6 +462,10 @@ udeldf                  => 1	// id.
 udfire                  => 1	// Fire Elemental
 yscara04                => 1	// Greater Fire Elemental
 
+// Improved Battles
+// ----------------
+b#chrfir                => 1	// Follower of Flame
+
 // Neh'taniel
 // ----------
 sk#fform                => 1	// Fire Wraith
@@ -483,10 +490,6 @@ acidele1                => 1	// Acid Elemental
 elecali2                => 1	// Greater Fire Elemental
 elecali4                => 1	// id.
 lightele                => 1	// Lightening Elemental
-
-// Unknown mods
-// ------------
-b#chrfir                => 1	// 
 
 END
 
@@ -619,9 +622,9 @@ ysfire02                => 1	// id.
 ysg2                    => 1	// id.
 yssold10                => 1	// id.
 
-// Unknown mods
-// ------------
-sorkyst                 => 1	// 
+// Tsujatha Romance
+// ----------------
+sorkyst                 => 1	// Sorkyst
 
 END
 
@@ -671,15 +674,15 @@ golsaph1                => 1	// Sapphire Golem
 golsaph2                => 1	// id.
 golsaph3                => 1	// id.
 
+// Spellhold Gauntlet
+// ------------------
+z#gadama                => 1	// Adamantite Golem
+
 // Tactics & BP
 // ------------
 ritgol0                 => 1	// Unit Zero
 ritgol1                 => 1	// Unit One
 ritgol2                 => 1	// Unit Two
-
-// Unknown mods
-// ------------
-z#gadama                => 1	// 
 
 END
 

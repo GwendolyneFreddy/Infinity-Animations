@@ -10,27 +10,27 @@
  *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
  * -----------------------------------                                                                                                                     *
  *  - GW_male_human_fighters      :   LISTS vanilla and modded Male Human Fighters creatures needing to be patched.                        => line #  37   *
- *                                    LISTE les créatures guerriers humains du jeu et de mods nécessitant d'être modifiées.                                *
- *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures needing to be patched.                          => line # 216   *
- *                                    LISTE les créatures guerriers elfes du jeu et de mods nécessitant d'être modifiées.                                  *
- *  - GW_male_halfling_fighters   :   LISTS vanilla and modded Male Halfling Fighters creatures needing to be patched.                     => line # 245   *
- *                                    LISTE les créatures guerriers halfelins du jeu et de mods nécessitant d'être modifiées.                              *
- *  - GW_female_human_fighters    :   LISTS vanilla and modded Female Human Fighters creatures needing to be patched.                      => line # 277   *
- *                                    LISTE les créatures guerrières humaines du jeu et de mods nécessitant d'être modifiées.                              *
- *  - GW_male_human_mages         :   LISTS vanilla and modded Male Human Mages creatures needing to be patched.                           => line # 304   *
- *                                    LISTE les créatures mages humains du jeu et de mods nécessitant d'être modifiées.                                    *
- *  - GW_male_elf_mages           :   LISTS vanilla and modded Male Elf Mages creatures needing to be patched.                             => line # 335   *
- *                                    LISTE les créatures mages elfes du jeu et de mods nécessitant d'être modifiées.                                      *
- *  - GW_male_human_monks         :   LISTS vanilla and modded Male Human Monks creatures needing to be patched.                           => line # 363   *
- *                                    LISTE les créatures moines du jeu et de mods nécessitant d'être modifiées.                                           *
- *  - GW_male_human_pirates       :   LISTS vanilla and modded Male Human Pirates creatures needing to be patched.                         => line # 398   *
- *                                    LISTE les créatures pirates hommes du jeu et de mods nécessitant d'être modifiées.                                   *
- *  - GW_male_sailors             :   LISTS vanilla and modded Male Sailors creatures needing to be patched.                               => line # 458   *
- *                                    LISTE les créatures marins du jeu et de mods nécessitant d'être modifiées.                                           *
- *  - GW_amniab_soldiers          :   LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.                            => line # 485   *
- *                                    LISTE les créatures soldats amniens du jeu et de mods nécessitant d'être modifiées.                                  *
- *  - GW_shadow_thieves           :   LISTS vanilla and modded Male human Shadow Thieves creatures needing to be patched.                  => line # 534   *
- *                                    LISTE les créatures Voleurs de l'Ombre humains du jeu et de mods nécessitant d'être modifiées.                       *
+ *                                    LISTE les guerriers humains du jeu et de mods nécessitant d'être modifiés.                                           *
+ *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures needing to be patched.                          => line # 234   *
+ *                                    LISTE les guerriers elfes du jeu et de mods nécessitant d'être modifiés.                                             *
+ *  - GW_male_halfling_fighters   :   LISTS vanilla and modded Male Halfling Fighters creatures needing to be patched.                     => line # 266   *
+ *                                    LISTE les guerriers halfelins du jeu et de mods nécessitant d'être modifiés.                                         *
+ *  - GW_female_human_fighters    :   LISTS vanilla and modded Female Human Fighters creatures needing to be patched.                      => line # 298   *
+ *                                    LISTE les guerrières humaines du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_male_human_mages         :   LISTS vanilla and modded Male Human Mages creatures needing to be patched.                           => line # 325   *
+ *                                    LISTE les mages humains du jeu et de mods nécessitant d'être modifiés.                                               *
+ *  - GW_male_elf_mages           :   LISTS vanilla and modded Male Elf Mages creatures needing to be patched.                             => line # 356   *
+ *                                    LISTE les mages elfes du jeu et de mods nécessitant d'être modifiés.                                                 *
+ *  - GW_male_human_monks         :   LISTS vanilla and modded Male Human Monks creatures needing to be patched.                           => line # 384   *
+ *                                    LISTE les moines du jeu et de mods nécessitant d'être modifiés.                                                      *
+ *  - GW_male_human_pirates       :   LISTS vanilla and modded Male Human Pirates creatures needing to be patched.                         => line # 419   *
+ *                                    LISTE les pirates hommes du jeu et de mods nécessitant d'être modifiés.                                              *
+ *  - GW_male_sailors             :   LISTS vanilla and modded Male Sailors creatures needing to be patched.                               => line # 479   *
+ *                                    LISTE les marins du jeu et de mods nécessitant d'être modifiés.                                                      *
+ *  - GW_amniab_soldiers          :   LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.                            => line # 506   *
+ *                                    LISTE les soldats amniens du jeu et de mods nécessitant d'être modifiés.                                             *
+ *  - GW_shadow_thieves           :   LISTS vanilla and modded Male human Shadow Thieves creatures needing to be patched.                  => line # 555   *
+ *                                    LISTE les Voleurs de l'Ombre humains du jeu et de mods nécessitant d'être modifiés.                                  *
  * ======================================================================================================================================================= */
 
 /* =============================================================================================================== *
@@ -151,6 +151,22 @@ cbnrtlu1                => 1	// Luskanite War Captain
 cbpheoix                => 1	// Phoenix Guard
 deadb05                 => 1	// Adventurer
 
+// Edwin Romance
+// -------------
+terl02                  => 1	// Terl
+
+// Er'vonyrah - The Sovereign's Song
+// ---------------------------------
+crgor05                 => 1	// Ranov Havonis
+
+// Improved Volcano! Pack
+// ----------------------
+zodesak                 => 1	// Zodezak
+
+// Nathaniel NPC
+// -------------
+fhterl                  => 1	// Terl
+
 // NTotSC
 // ------
 nteldod                 => 1	// Eldod
@@ -193,21 +209,23 @@ bw05ffde                => 1	// Flaming Fist Deserter
 bw05ffwr                => 1	// Flaming Fist Mercenary
 bw05fist                => 1	// Commander "Greyfist"
 
+// The Luxley Family
+// -----------------
+fhlkav                  => 1	// Kavyn
+
+// The Undying
+// -----------
+cmsora1                 => 1	// Soran Fighter
+cmsora2                 => 1	// id.
+
+// Uldar NPC
+// ---------
+uldgua1                 => 1	// Bouncer
+uldgua2                 => 1	// id.
+
 // UB BG1
 // ------
 ubflam5                 => 1	// Flaming Fist Mercenary
-
-// Unknown mods
-// ------------
-cmsora1                 => 1	// 
-cmsora2                 => 1	// 
-crgor05                 => 1	// 
-fhlkav                  => 1	// 
-fhterl                  => 1	// 
-terl02                  => 1	// 
-uldgua1                 => 1	// 
-uldgua2                 => 1	// 
-zodesak                 => 1	// 
 
 END
 
@@ -232,11 +250,14 @@ udslv01                 => 1	// Slave
 // ---
 cbsbmd74                => 1	// Voron Lashir
 
-// Unknown mods
+// Tales of Anegh
+// --------------
+z_2elsa2                => 1	// Elsas Eladamri
+z_2elsas                => 1	// id.
+
+// Yasraena NPC
 // ------------
-ysnethr                 => 1	// 
-z_2elsa2                => 1	// 
-z_2elsas                => 1	// 
+ysnethr                 => 1	// Nethrin
 
 END
 
@@ -352,9 +373,9 @@ dreself3                => 1	// id.
 dreself5                => 1	// id.
 dreself7                => 1	// id.
 
-// Unknown mods
-// ------------
-z_2bibli                => 1	// 
+// Tales of Anegh
+// --------------
+z_2bibli                => 1	// Magicus Bibliopola
 
 END
 
@@ -583,6 +604,12 @@ vvshad8                 => 1	// id.
 ambsthf0                => 1	// Shadow Thief
 ambthif2                => 1	// id.
 
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#arch1                 => 1	// Shadow Thief
+z#arch2                 => 1	// id.
+z#archbv                => 1	// id.
+
 // BP
 // --
 bpsthef3                => 1	// Shadow Thief
@@ -591,6 +618,10 @@ bpthief2                => 1	// id.
 // Chloe
 // -----
 shadcr1                 => 1	// Shadow Thief
+
+// Malthis, the swashbuckler!
+// --------------------------
+mfeind1                 => 1	// Shadow Thief
 
 // Ninde NPC
 // ---------
@@ -603,12 +634,8 @@ dockhlp2                => 1	// id.
 zprize2                 => 1	// id.
 zprize3                 => 1	// id.
 
-// Unknown mods
-// ------------
-aj#sth                  => 1	// 
-mfeind1                 => 1	// 
-z#arch1                 => 1	// 
-z#arch2                 => 1	// 
-z#archbv                => 1	// 
+// Zalnoya and the Shadow Thieves
+// ------------------------------
+aj#sth                  => 1	// Shadow Thief
 
 END

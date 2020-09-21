@@ -35,17 +35,17 @@
  *                                    LISTE les créatures crochorreurs du jeu et de mods nécessitant d'être modifiées.                                    *
  *  - GW_malarite                 :   LISTS vanilla and modded Shadow Druids needing to be patched.                                      => line #  366   *
  *                                    LISTE les druides de l'Ombre du jeu et de mods nécessitant d'être modifiés.                                         *
- *  - GW_ellesime_white           :   LISTS vanilla and modded Ellesime Clones needing to be patched.                                    => line #  436   *
+ *  - GW_ellesime_white           :   LISTS vanilla and modded Ellesime Clones needing to be patched.                                    => line #  442   *
  *                                    LISTE les clones d'Ellesime du jeu et de mods nécessitant d'être modifiés.                                          *
- *  - GW_lagoon_creature          :   LISTS vanilla and modded Poison Mists creatures needing to be patched.                             => line #  468   *
+ *  - GW_lagoon_creature          :   LISTS vanilla and modded Poison Mists creatures needing to be patched.                             => line #  474   *
  *                                    LISTE les créatures brumes empoisonnées du jeu et de mods nécessitant d'être modifiées.                             *
- *  - GW_death_tyrant             :   LISTS vanilla and modded Death Tyrants creatures needing to be patched.                            => line #  494   *
+ *  - GW_death_tyrant             :   LISTS vanilla and modded Death Tyrants creatures needing to be patched.                            => line #  500   *
  *                                    LISTE les créatures tyramorts du jeu et de mods nécessitant d'être modifiées.                                       *
- *  - GW_wererat                  :   LISTS vanilla and modded Wererat creatures needing to be patched.                                  => line #  521   *
+ *  - GW_wererat                  :   LISTS vanilla and modded Wererat creatures needing to be patched.                                  => line #  530   *
  *                                    LISTE les créatures rats-garous du jeu et de mods nécessitant d'être modifiées.                                     *
- *  - GW_worg                     :   LISTS vanilla and modded Worgs creatures needing to be patched.                                    => line #  539   *
+ *  - GW_worg                     :   LISTS vanilla and modded Worgs creatures needing to be patched.                                    => line #  548   *
  *                                    LISTE les créatures worgs du jeu et de mods nécessitant d'être modifiées.                                           *
- *  - GW_yuan-ti_half             :   LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.                       => line #  562   *
+ *  - GW_yuan-ti_half             :   LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.                       => line #  571   *
  *                                    LISTE les créatures Yuan-ti demi-sang du jeu et de mods nécessitant d'être modifiées.                               *
  * ====================================================================================================================================================== */
 
@@ -78,14 +78,14 @@ finyaga                 => 1	// Yaga-Shura
 // --------
 bhfgiant                => 1	// Fire Giant
 
+// Improved Volcano! Pack
+// ----------------------
+sumgia                  => 1	// Fire Giant
+
 // RoT
 // ---
 giantfr                 => 1	// Greater Fire Giant
 cultmo9                 => 1	// Fire Giant
-
-// Unknown mods
-// ------------
-sumgia                  => 1	// 
 
 END
 
@@ -115,9 +115,9 @@ ggiantfr                => 1	// id.
 // ---
 cb4300gt                => 1	// Bandit Giant
 
-// Unknown mods
-// ------------
-tsjgiant                => 1	// 
+// Tsujatha Romance
+// ----------------
+tsjgiant                => 1	// Sorkyst's Giant
 
 END
 
@@ -179,14 +179,14 @@ icgob04                 => 1	// Goblin Captain
 // ------
 dsgobchf                => 1	// Goblin Chief
 
+// Epic Endeavors
+// --------------
+lhgobc1                 => 1	// Goblin Captain
+
 // RoT
 // ---
 iwdgob2                 => 1	// Goblin Captain
 iwdgob3                 => 1	// Goblin Leader
-
-// Unknown mods
-// ------------
-lhgobc1                 => 1	// Epic Endeavors
 
 END
 
@@ -294,13 +294,13 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_goblin_bow_green BEGIN
 icgob02                 => 1	// Goblin
 ysgp03                  => 1	// Tibbit
 
+// Boards O' Magick Item Pack
+// --------------------------
+"o!gobl"                => 1	// Jerry
+
 // RoT
 // ---
 iwdgob1                 => 1	// Goblin
-
-// Unknown mods
-// ------------
-o!gobl                  => 1	// BoM Item Pack Jerry
 
 END
 
@@ -423,11 +423,17 @@ dgdru02                 => 1	// Druid
 // ---
 cbmalr6                 => 1	// Druid Bodyguard
 
-// Unknown mods
-// ------------
-b#knit04                => 1	// 
-cmlstr2                 => 1	// 
-mdruide                 => 1	// 
+// Food and Herbal Mod
+// -------------------
+cmlstr2                 => 1	// Shadow Druid
+
+// Improved Battles
+// ----------------
+b#knit04                => 1	// Bodarch
+
+// Malthis, the swashbuckler!
+// --------------------------
+mdruide                 => 1	// Shadow Druid
 
 END
 
@@ -509,10 +515,13 @@ melsum03                => 1	// id.
 // --
 tyrorb                  => 1	// Death Tyrant
 
-// Unknown mods
-// ------------
-demtyra                 => 1	// 
-xsbehold                => 1	// 
+// Domains of Dread
+// ----------------
+demtyra                 => 1	// Death Tyrant
+
+// Exnem
+// -----
+xsbehold                => 1	// Death Tyrant
 
 END
 

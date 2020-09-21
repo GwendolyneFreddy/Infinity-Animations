@@ -21,49 +21,49 @@
  *                                    LISTE les créatures blêmes majeurs du jeu et de mods nécessitant d'être modifiées.                                  *
  *  - GW_ghosts                   :   LISTS vanilla and modded Ghosts creatures needing to be patched.                                   => line #  218   *
  *                                    LISTE les créatures fantômes classiques du jeu et de mods nécessitant d'être modifiées.                             *
- *  - GW_ghouls                   :   LISTS vanilla and modded Ghouls creatures needing to be patched.                                   => line #  251   *
+ *  - GW_ghouls                   :   LISTS vanilla and modded Ghouls creatures needing to be patched.                                   => line #  257   *
  *                                    LISTE les créatures goules du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_ghoul_greater            :   LISTS vanilla and modded Greater Ghouls creatures needing to be patched.                           => line #  281   *
+ *  - GW_ghoul_greater            :   LISTS vanilla and modded Greater Ghouls creatures needing to be patched.                           => line #  287   *
  *                                    LISTE les créatures goules majeures du jeu et de mods nécessitant d'être modifiées.                                 *
- *  - GW_liches                   :   LISTS vanilla and modded Liches creatures needing to be patched.                                   => line #  305   *
+ *  - GW_liches                   :   LISTS vanilla and modded Liches creatures needing to be patched.                                   => line #  311   *
  *                                    LISTE les créatures liches du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_liches_white             :   LISTS vanilla and modded Greater Liches creatures needing to be patched.                           => line #  381   *
+ *  - GW_liches_white             :   LISTS vanilla and modded Greater Liches creatures needing to be patched.                           => line #  388   *
  *                                    LISTE les créatures liches majeures du jeu et de mods nécessitant d'être modifiées.                                 *
- *  - GW_mist_creature            :   LISTS vanilla and modded Mist Apparitions creatures needing to be patched.                         => line #  448   *
+ *  - GW_mist_creature            :   LISTS vanilla and modded Mist Apparitions creatures needing to be patched.                         => line #  462   *
  *                                    LISTE les créatures apparition du jeu et de mods nécessitant d'être modifiées.                                      *
- *  - GW_revenants                :   LISTS vanilla and modded Revenant creatures needing to be patched.                                 => line #  484   *
+ *  - GW_revenants                :   LISTS vanilla and modded Revenant creatures needing to be patched.                                 => line #  498   *
  *                                    LISTE les créatures revenants du jeu et de mods nécessitant d'être modifiées.                                       *
- *  - GW_shadow_fiends            :   LISTS vanilla and modded Shadow Fiends creatures needing to be patched.                            => line #  512   *
+ *  - GW_shadow_fiends            :   LISTS vanilla and modded Shadow Fiends creatures needing to be patched.                            => line #  526   *
  *                                    LISTE les créatures démombres et ombres démoniaques du jeu et de mods nécessitant d'être modifiées.                 *
- *  - GW_wraiths                  :   LISTS vanilla and modded Wraiths creatures needing to be patched.                                  => line #  562   *
+ *  - GW_wraiths                  :   LISTS vanilla and modded Wraiths creatures needing to be patched.                                  => line #  576   *
  *                                    LISTE les créatures âmes en peine du jeu et de mods nécessitant d'être modifiées.                                   *
- *  - GW_spectres                 :   LISTS vanilla and modded Spectres creatures needing to be patched.                                 => line #  594   *
+ *  - GW_spectres                 :   LISTS vanilla and modded Spectres creatures needing to be patched.                                 => line #  608   *
  *                                    LISTE les créatures spectres du jeu et de mods nécessitant d'être modifiées.                                        *
- *  - GW_shadows                  :   LISTS vanilla and modded Shadows creatures needing to be patched.                                  => line #  629   *
+ *  - GW_shadows                  :   LISTS vanilla and modded Shadows creatures needing to be patched.                                  => line #  643   *
  *                                    LISTE les créatures ombres du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_shadows_small_murky      :   LISTS some vanilla and modded Shadows creatures needing to be patched.                             => line #  681   *
+ *  - GW_shadows_small_murky      :   LISTS some vanilla and modded Shadows creatures needing to be patched.                             => line #  698   *
  *                                    LISTE certaines créatures ombres du jeu et de mods nécessitant d'être modifiées.                                    *
- *  - GW_skeleton_monster         :   LISTS vanilla and modded Large Skeletons creatures needing to be patched.                          => line #  738   *
+ *  - GW_skeleton_monster         :   LISTS vanilla and modded Large Skeletons creatures needing to be patched.                          => line #  761   *
  *                                    LISTE les créatures squelettes majeurs du jeu et de mods nécessitant d'être modifiées.                              *
- *  - GW_skeleton_fiend           :   LISTS vanilla and modded Moon Horrors creatures needing to be patched.                             => line #  774   *
+ *  - GW_skeleton_fiend           :   LISTS vanilla and modded Moon Horrors creatures needing to be patched.                             => line #  800   *
  *                                    LISTE les créatures horreurs lunaires du jeu et de mods nécessitant d'être modifiées.                               *
- *  - GW_vampire_female           :   LISTS vanilla and modded Female Vampires creatures needing to be patched.                          => line #  792   *
+ *  - GW_vampire_female           :   LISTS vanilla and modded Female Vampires creatures needing to be patched.                          => line #  818   *
  *                                    LISTE les créatures vampires femmes du jeu et de mods nécessitant d'être modifiées.                                 *
- *  - GW_wight_gray               :   LISTS vanilla and modded Wights creatures needing to be patched.                                   => line #  813   *
+ *  - GW_wight_gray               :   LISTS vanilla and modded Wights creatures needing to be patched.                                   => line #  839   *
  *                                    LISTE les créatures nécrophages du jeu et de mods nécessitant d'être modifiées.                                     *
- *  - GW_wight_green              :   LISTS vanilla and modded Green Zombies creatures needing to be patched.                            => line #  834   *
+ *  - GW_wight_green              :   LISTS vanilla and modded Green Zombies creatures needing to be patched.                            => line #  860   *
  *                                    LISTE les créatures zombis vert du jeu et de mods nécessitant d'être modifiées.                                     *
- *  - GW_wight_yellow             :   LISTS vanilla and modded Zombie Lords creatures needing to be patched.                             => line #  855   *
+ *  - GW_wight_yellow             :   LISTS vanilla and modded Zombie Lords creatures needing to be patched.                             => line #  881   *
  *                                    LISTE les créatures seigneurs zombi du jeu et de mods nécessitant d'être modifiées.                                 *
- *  - GW_wight_barrow             :   LISTS vanilla and modded Undead knights and similar creatures needing to be patched.               => line #  896   *
+ *  - GW_wight_barrow             :   LISTS vanilla and modded Undead knights and similar creatures needing to be patched.               => line #  922   *
  *                                    LISTE les créatures chevaliers morts-vivants et assimilés du jeu et de mods nécessitant d'être modifiées.           *
- *  - GW_zombies                  :   LISTS vanilla and modded Zombies creatures needing to be patched.                                  => line #  951   *
+ *  - GW_zombies                  :   LISTS vanilla and modded Zombies creatures needing to be patched.                                  => line #  977   *
  *                                    LISTE les créatures zombis du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_zombie_yellow            :   LISTS vanilla and modded Greater zombies creatures needing to be patched.                          => line #  997   *
+ *  - GW_zombie_yellow            :   LISTS vanilla and modded Greater zombies creatures needing to be patched.                          => line # 1023   *
  *                                    LISTE les créatures zombis majeurs du jeu et de mods nécessitant d'être modifiées.                                  *
- *  - GW_zombie_blue              :   LISTS vanilla and modded Lacedons creatures needing to be patched.                                 => line # 1033   *
+ *  - GW_zombie_blue              :   LISTS vanilla and modded Lacedons creatures needing to be patched.                                 => line # 1059   *
  *                                    LISTE les créatures lacédons du jeu et de mods nécessitant d'être modifiées.                                        *
- *  - GW_zombie_sea               :   LISTS vanilla and modded Sea Zombies creatures needing to be patched.                              => line # 1052   *
+ *  - GW_zombie_sea               :   LISTS vanilla and modded Sea Zombies creatures needing to be patched.                              => line # 1078   *
  *                                    LISTE les créatures zombis des mers du jeu et de mods nécessitant d'être modifiées.                                 *
  * ====================================================================================================================================================== */
 
@@ -91,6 +91,10 @@ dsbanshe                => 1	// Banshee
 // -----------
 f_wailin                => 1	// Wailing Death
 
+// Kiara-Zaiya
+// -----------
+jerlia                  => 1	// Jerlia
+
 // Planar Sphere
 // -------------
 psfea                   => 1	// Fear
@@ -98,10 +102,6 @@ psfea                   => 1	// Fear
 // TDD
 // ---
 banshee1                => 1	// Banshee
-
-// Unknown mods
-// ------------
-jerlia                  => 1	// 
 
 END
 
@@ -203,13 +203,13 @@ bpghast                 => 1	// Greater Ghast
 // --------
 sghastgr                => 1	// Greater Ghast
 
-// Quest Pack
-// ----------
-besamen                 => 1	// Besamen
-
 // Neh'taniel
 // ----------
 sk#algol                => 1	// Algol
+
+// Quest Pack
+// ----------
+besamen                 => 1	// Besamen
 
 END
 
@@ -233,16 +233,22 @@ sarspir                 => 1	// Prison Spirit
 cbselims                => 1	// Selim Sivad
 cbspkded                => 1	// Spirit
 
+// Domains of Dread
+// ----------------
+demresd                 => 1	// Resident
+
+// Ghost
+// -----
+mtghost                 => 1	// Ghost
+
 // Planar Sphere
 // -------------
 psminvo                 => 1	// Invocation
 
-// Unknown mods
-// ------------
-cmhaun01                => 1	// 
-cmhaun02                => 1	// 
-demresd                 => 1	// 
-mtghost                 => 1	// 
+// The Undying
+// -----------
+cmhaun01                => 1	// Haunt
+cmhaun02                => 1	// id.
 
 END
 
@@ -329,7 +335,8 @@ jarlich                 => 1	// Deirex
 lichel01                => 1	// Elemental Lich
 senlich                 => 1	// Odamaron
 
-// BP
+// BP and Deeper Shadows of Amn
+// ----------------------------
 krlich2                 => 1	// Lich
 
 // CtB
@@ -356,6 +363,10 @@ mytos                   => 1	// Mytos
 // -------------
 psvecna                 => 1	// Vecna's Shade
 
+// Quest Pack
+// ----------
+d0lich01                => 1	// Nazariel
+
 // RoT
 // ---
 bhelal                  => 1	// Bhelal
@@ -366,13 +377,9 @@ godlich1                => 1	// Greater Lich
 godlich2                => 1	// Elemental Lich
 lichguar                => 1	// Guardian Lich
 
-// Quest Pack
-// ----------
-d0lich01                => 1	// Nazariel
-
-// Unknown mods
-// ------------
-va#lich                 => 1	// 
+// Tower of Deception
+// ------------------
+va#lich                 => 1	// Servant
 
 END
 
@@ -393,6 +400,10 @@ dpmon02                 => 1	// Lich
 nevaziah                => 1	// Nevaziah
 shadeld                 => 1	// Shade Lord
 
+// BP
+// --
+archlich                => 1	// Lich
+
 // DSotSC
 // ------
 dslich                  => 1	// The Dark One
@@ -400,16 +411,22 @@ dslich1                 => 1	// id.
 dslich2                 => 1	// id.
 dslich3                 => 1	// id.
 
-// Quest Pack
-// ----------
-d0lich02                => 1	// Nazariel
-
-// BP
-archlich                => 1	// Lich
-
 // Dungeon Crawl
 // -------------
 o#srax                  => 1	// Sraxsuth
+
+// Hard times
+// ----------
+macgskmg                => 1	// Greater Skeleton Mage
+
+// Improved Battles
+// ----------------
+b#lich01                => 1	// Lich
+b#lich02                => 1	// id.
+
+// Lester NPC
+// ----------
+hlayskel                => 1	// Hlayster
 
 // Neh'taniel
 // ----------
@@ -418,6 +435,10 @@ sk#vidu                 => 1	// Viduan
 // NEJ
 // ---
 tunelich                => 1	// Shade Lich
+
+// Quest Pack
+// ----------
+d0lich02                => 1	// Nazariel
 
 // Stratagems
 // ----------
@@ -433,13 +454,6 @@ pksum1                  => 1	// Lich
 pksum2                  => 1	// id.
 pksum3                  => 1	// id.
 travmage                => 1	// Calimport Archmage
-
-// Unknown mods
-// ------------
-b#lich01                => 1	// 
-b#lich02                => 1	// 
-hlayskel                => 1	// 
-macgskmg                => 1	// 
 
 END
 
@@ -468,14 +482,14 @@ cultmo8                 => 1	// Wandering Horror
 iwdmist3                => 1	// id.
 undapp                  => 1	// Undead Apparition
 
+// Tashia NPC
+// ----------
+tadream                 => 1	// an apparition
+
 // TDD
 // ---
 pkghost1                => 1	// Ghostly Apparition
 pkghost2                => 1	// id.
-
-// Unknown mods
-// ------------
-tadream                 => 1	// 
 
 END
 
@@ -609,6 +623,10 @@ spectr01                => 1	// id.
 // ---
 cbmalr6b                => 1	// Specter
 
+// Domains of Dread
+// ----------------
+demspec                 => 1	// Spectre
+
 // RoT
 // ---
 caddem22                => 1	// Hand of Evil
@@ -617,10 +635,6 @@ godhate                 => 1	// Hate
 // TDD
 // ---
 pkghost4                => 1	// Shadow Spectre
-
-// Unknown mods
-// ------------
-demspec                 => 1	// 
 
 END
 
@@ -644,6 +658,16 @@ sdshadow                => 1	// id.
 sewsha03                => 1	// id.
 uhcreat                 => 1	// id.
 
+// Arcane-Divine Spell Pack
+// ------------------------
+shadesm2                => 1	// Shadow
+shadesm3                => 1	// id.
+
+// Deeper Shadows of Amn
+// ---------------------
+krshadm                 => 1	// Shadow
+krshadow                => 1	// id.
+
 // RoT
 // ---
 myshdw01                => 1	// Shadow
@@ -666,13 +690,6 @@ a#sdsha4                => 1	// id.
 // TDD
 // ---
 specx1                  => 1	// Shadow
-
-// Unknown mods
-// ------------
-krshadm                 => 1	// 
-krshadow                => 1	// 
-shadesm2                => 1	// 
-shadesm3                => 1	// 
 
 END
 
@@ -702,6 +719,10 @@ elearb10                => 1	// id.
 elearb11                => 1	// id.
 kshadow                 => 1	// Shadow
 
+// Arcane-Divine Spell Pack
+// ------------------------
+shadesm1                => 1	// Shadow
+
 // BP
 // --
 lshadfi                 => 1	// Shadow
@@ -725,11 +746,13 @@ monkss8                 => 1	// id.
 // ----------------
 a#sdsha1                => 1	// Shadow
 
-// Unknown mods
-// ------------
-shadesm1                => 1	// 
-va#shdgl                => 1	// 
-z#gaunt                 => 1	// 
+// Spellhold Gauntlet
+// ------------------
+z#gaunt                 => 1	// Apparition
+
+// Tower of Deception
+// ------------------
+va#shdgl                => 1	// Shadow
 
 END
 
@@ -758,13 +781,16 @@ bpskelar                => 1	// Skeleton Archer
 // ---
 gholske1                => 1	// Gholim's Skeleton
 
+// The Undying
+// -----------
+cmapocal                => 1	// Burning Dead Archer
+
 // ToDG
 // ----
 0xuddg                  => 1	// Skeleton
 
 // Unknown mods
 // ------------
-cmapocal                => 1	// 
 lk#xsk1                 => 1	// 
 
 END
@@ -872,6 +898,10 @@ zomblo01                => 1	// Zombie Lord
 // -----------------
 szombl01                => 1	// Zombie Lord
 
+// Exnem
+// -----
+xszomb1                 => 1	// Zombie Lord
+
 // NTotSC
 // ------
 ntzombju                => 1	// Zombie
@@ -884,10 +914,6 @@ gzombie                 => 1	// Greater Zombie
 // ---
 zombsexx                => 1	// Zombie
 zombx1                  => 1	// id.
-
-// Unknown mods
-// ------------
-xszomb1                 => 1	// 
 
 END
 
@@ -921,6 +947,10 @@ skelbadx                => 1	// Hoarax
 cbzomb02                => 1	// Dread Warrior
 cbzombd2                => 1	// id.
 
+// Freedom's Reign of Virtue
+// -------------------------
+decre#04                => 1	// BaneDead
+
 // NEJ
 // ---
 zombigu1                => 1	// Zombie Guard
@@ -939,10 +969,6 @@ bw05skw2                => 1	// Publius Dawnbringer
 // TotDG
 // -----
 0xyhdg                  => 1	// Gray Victim
-
-// Unknown mods
-// ------------
-decre#04                => 1	// 
 
 END
 
@@ -1064,11 +1090,11 @@ sahzom01                => 1	// Sea Zombie Lord
 sahzomb                 => 1	// Sea Zombie
 zombse01                => 1	// id.
 
-// Unknown mods
-// ------------
-va#zom01                => 1	// 
-va#zom02                => 1	// 
-va#zom03                => 1	// 
-va#zomgl                => 1	// 
+// Tower of Deception
+// ------------------
+va#zom01                => 1	// Sea Zombie
+va#zom02                => 1	// id.
+va#zom03                => 1	// id.
+va#zomgl                => 1	// id.
 
 END

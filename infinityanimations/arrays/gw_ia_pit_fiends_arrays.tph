@@ -31,9 +31,9 @@ dempitsu                => 1	// id.
 telpit1	                => 1	// id.
 telpit2	                => 1	// id.
 
-// BP does not seem to be installed
+// BP
 // --
-rempitsu                => 1	// 
+rempitsu                => 1	// Pit Fiend ==> Does not seem to be installed
 
 // Imnesvale
 // ---------
@@ -57,6 +57,11 @@ heldem3	                => 1	// id.
 heldem4	                => 1	// id.
 heldem5	                => 1	// Crec'tur
 
+// Spellhold Gauntlet
+// ------------------
+z#gpit01                => 1	// Pit Fiend
+z#gpitfd                => 1	// id.
+
 // Stratagems
 // ----------
 dw#bazpf                => 1	// Pit Fiend
@@ -73,10 +78,5 @@ z_whel4	                => 1	// id.
 // ---
 dempitr1                => 1	// Pit Fiend
 dempitr2                => 1	// id.
-
-// Unknown mods
-// ------------
-z#gpit01                => 1	// 
-z#gpitfd                => 1	// 
 
 END

@@ -122,9 +122,9 @@ bplizsha                => 1	// Lizard Shaman
 dw#lzsh1                => 1	// Lizard Man Shaman
 dw#lzsh2                => 1	// id.
 
-// Unknown mods
-// ------------
-va#lizrd                => 1	// 
+// Tower of Deception
+// ------------------
+va#lizrd                => 1	// Lizard Man Shaman
 
 END
 
@@ -227,6 +227,10 @@ bptrsn01                => 1	// Snow Troll
 clfteg                  => 1	// Tegenk
 clftrl                  => 1	// Troll
 
+// Improved Asylum
+// ---------------
+r#troll                 => 1	// Troll
+
 // RoT
 // ---
 godtrol1                => 1	// Desert Troll
@@ -248,10 +252,6 @@ dw#trlhg                => 1	// Fire Troll
 ddtroll1                => 1	// Troll
 ddtroll2                => 1	// id.
 quadtol1                => 1	// Giant Troll
-
-// Unknown mods
-// ------------
-r#troll                 => 1	// 
 
 END
 
@@ -364,7 +364,7 @@ dw#trl01                => 1	// Troll
 dw#trlfr                => 1	// Freshwater Troll
 dw#trlsm                => 1	// Troll
 
-// UB (NOTE: seem to be removed)
+// UB (NOTE: seem to have been removed)
 // --
 wwtrol1                 => 1	// Troll
 wwtrol2                 => 1	// id.
@@ -454,13 +454,13 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_umber_hulk_elder BEGIN
 ppumb02                 => 1	// Umber Hulk
 umbhul02                => 1	// Umber Hulk Elder
 
+// Improved Asylum
+// ---------------
+r#umber                 => 1	// Noble Umber Hulk
+
 // RoT
 // ---
 choyol                  => 1	// Choyol
 chuyol                  => 1	// Chu'yol
-
-// Unknown mods
-// ------------
-r#umber                 => 1	// 
 
 END

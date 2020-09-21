@@ -68,9 +68,20 @@ c#ajske2                => 1	// Skeleton Warrior
 // --
 bpduehi                 => 1	// Skeleton Warrior
 
+// Dark Horizons
+// -------------
+cmske03                 => 1	// Skeleton
+cmske04                 => 1	// id.
+cmskel01                => 1	// Skeleton Warrior
+cmskel02                => 1	// id.
+
 // DSotSC
 // ------
 skellord                => 1	// Skeleton Lord
+
+// Deeper Shadows of Amn
+// ---------------------
+krshadsk                => 1	// Shadow (but Skeleton Warrior anim ID)
 
 // Neh'taniel
 // ----------
@@ -98,19 +109,14 @@ dw#semsk                => 1	// id.
 skelwax2                => 1	// Skeleton Warrior
 skelwax3                => 1	// id.
 
+// The Luxley Family
+// -----------------
+fhlskl1                 => 1	// Skeleton Warrior
+fhlskl2                 => 1	// id.
+
 // The Vault
 // ---------
 jc_ske01                => 1	// Skeleton Guard
 jc_ske02                => 1	// id.
-
-// Unknown mods
-// ------------
-cmske03                 => 1	// 
-cmske04                 => 1	// 
-cmskel01                => 1	// 
-cmskel02                => 1	// 
-fhlskl1                 => 1	// 
-fhlskl2                 => 1	// 
-krshadsk                => 1	// 
 
 END
