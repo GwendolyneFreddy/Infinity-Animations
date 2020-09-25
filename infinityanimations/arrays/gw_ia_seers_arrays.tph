@@ -79,8 +79,8 @@ udvicti3                => 1	// id.
 udvicti4                => 1	// id.
 udvictim                => 1	// id.*/
 
-// Bone Hill
-// ---------
+// Bonehill
+// --------
 bhpriska                => 1	// Priska
 
 // CtB
@@ -231,7 +231,6 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_seer_beggars BEGIN
 "%tutu_var%beggna"      => 1	// id.
 "%tutu_var%portal"      => 1	// Portalbendarwinden
 "%tutu_var%priilmu"     => 1	// Priest of Ilmater
-
 "%tutu_var%beldin"      => 1	// Miner Beldin
 "%tutu_var%bob"         => 1	// Miner Bob
 "%tutu_var%cantic"      => 1	// Canticle

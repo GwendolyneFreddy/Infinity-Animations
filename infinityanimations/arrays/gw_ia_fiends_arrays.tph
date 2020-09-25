@@ -425,9 +425,9 @@ pstana2a                => 1	// id.
 nssuc01                 => 1	// Delilah
 nssuc02                 => 1	// Succubus
 
-// Unknown mods
-// ------------
-sd_hrzr2                => 1	// 
+// Shed's Mods
+// -----------
+sd_hrzr2                => 1	// Cenobite
 
 END
 

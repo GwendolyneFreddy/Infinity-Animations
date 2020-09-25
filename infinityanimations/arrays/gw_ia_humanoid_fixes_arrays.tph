@@ -83,13 +83,13 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_male_human_fighters BEGIN
 "%tutu_var%flamwiz"     => 1	// Flaming Fist Battle Wizard
 "%tutu_var%guard"       => 1	// Guard
 "%tutu_var%jonavi"      => 1	// Jonavin
+"%tutu_var%kent"        => 1	// Kent
 "%tutu_var%leaggu1"     => 1	// Merchants' League Counting House Guard
 "%tutu_var%leaggu7"     => 1	// id.
 "%tutu_var%phoenix"     => 1	// Phoenix Guard
+"%tutu_var%sailned"     => 1	// Sailor Ned
 "%tutu_var%sorrel"      => 1	// Sorrel
 "%tutu_var%watchm"      => 1	// Flaming Fist Mercenary
-kent                    => 1	// Kent
-sailned                 => 1	// Sailor Ned
 
 // BG2
 // ---
@@ -565,7 +565,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_shadow_thieves BEGIN
 // ---
 arnfgt01                => 1	// Shadow Thief
 arnfgt02                => 1	// id.
-//TODO arnfgt04
+//TODO arnfgt04 ???
 arnman09                => 1	// id.
 arntra05                => 1	// id.
 arntra06                => 1	// id.
@@ -579,11 +579,11 @@ cushad5                 => 1	// id.
 dassin                  => 1	// id.
 dsthief                 => 1	// id.
 flyfgt01                => 1	// id.
-//TODO flyfgt02 & flyfgt03
+//TODO flyfgt02 & flyfgt03 ???
 mookft01                => 1	// id.
 ppshad01                => 1	// id.
 repthf1                 => 1	// id.
-//TODO repthf12
+//TODO repthf12 ???
 shadth01                => 1	// id.
 stass1                  => 1	// id.
 stolethf                => 1	// id.

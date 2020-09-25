@@ -10,7 +10,7 @@
  *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
  * -----------------------------------                                                                                                                    *
  *  - GW_skeleton_warriors        :   LISTS vanilla and modded Skeleton Warriors creatures needing to be patched.                        => line #   17   *
- *                                    LISTE les créatures combattants squelettes du jeu et de mods nécessitant d'être modifiées.                          *
+ *                                    LISTE les créatures combattants squelettes du jeu et de mods nécessitant d'être modifiés.                           *
  * ====================================================================================================================================================== */
 
 /* ========================================================================================================== *
@@ -25,9 +25,9 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_warriors BEGIN
 
 // BG
 // --
-"%tutu_var%skelwa"      => 1	// Skeleton Warrior
-"%tutu_scripts%kelwa02" => 1	// id.
-"%tutu_scripts%kelwa03" => 1	// id.
+"%tutu_var%skelwa%var_eet%"      => 1	// Skeleton Warrior
+"%tutu_scripts%kelwa02"          => 1	// id.
+"%tutu_scripts%kelwa03"          => 1	// id.
 
 // BG2
 // ---
@@ -54,8 +54,8 @@ skelwasu                => 1	// id.
 suundead                => 1	// id.
 tanskw1                 => 1	// id.
 
-// BGT
-// ---
+// BGT and EET
+// -----------
 bgskel02                => 1	// Skeleton Warrior
 bgskel03                => 1	// id.
 bgskelwa                => 1	// id. _skelwa

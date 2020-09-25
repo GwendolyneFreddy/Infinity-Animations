@@ -632,7 +632,7 @@ This component assigns some creatures distinctive PsT animations:
 - Female tieflings get the female tiefling animation
 - Male tieflings get the male tiefling animation
 - Male human mages get the townie wizard animation
-- Female human nobles get the female upper-class townie animation
+- Female human nobles get the female upper-class townie or the aasimar female animation
 - Male human nobles get the male upper-class townie animation
 - Some zombies get the female zombie animation
 - Some zombies get the male zombie animation
@@ -885,13 +885,17 @@ This component assigns some creatures distinctive Moinesse's animations:
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd2_anim_arrays.tph*" library) for easier maintenance.
 - [650] More Neverwinter Nights Animations (t-nwnanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_nwn_anim_arrays.tph*" library) for easier maintenance.
-
-  - [710-720-760-740] More Planescape: Torment Animations ()
+- [710-720-760-740] More Planescape: Torment Animations (t-pstanims.tpa)
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_pst_anim_arrays.tph*" library) for easier maintenance.
+    - Tutu variables: added missing tutu variables for BG1 UB (bart8, bart9, edie, ennahe, erlinh, feldan, galkin, hersch, memnis, mercha, mtob4, mtob5, read4, serwen, travel, volose, wilton) and BG:EE/Tutu (gretek). Added new variables to avoid overwriting BG and BG2 files having the same names.
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
+    - Externalized random seed in a new library ("*gw_random.tpp*").
 
-  - [7000-7010-7020-7030] Moinesse's Avatars for IA ()
+  - [7000-7010-7020-7030] Moinesse's Avatars for IA (t-moines.tpa)
+    - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_moinesse_anim_arrays.tph*" library) for easier maintenance.
     - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
+    - Externalized random seed in a new library ("*gw_random.tpp*").
 
   - [9000] Fix Area Creature References ()
     - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.

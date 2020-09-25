@@ -630,7 +630,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 - Attribue aux femmes tieffelins l'animation de femme tieffelin.
 - Attribue aux hommes tieffelins l'animation d'homme tieffelin.
 - Attribue aux magiciens humains l'animation de magicien citoyen [<em>NdT : townie wizard</em>].
-- Attribue aux femmes nobles humaines l'animation de citoyenne des classes supérieures [<em>NdT : female upper-class townie</em>].
+- Attribue aux femmes nobles humaines l'animation de citoyenne des classes supérieures [<em>NdT : female upper-class townie</em>] ou de femme aasimar.
 - Attribue aux hommes nobles humains l'animation de citoyen des classes supérieures [<em>NdT : male upper-class townie</em>].
 - Attribue à certains zombis l'animation de femme zombi.
 - Attribue à certains zombis l'animation d'homme zombi.
@@ -854,7 +854,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_cambions_arrays.tph*") pour faciliter leur mise à jour.
 - [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_alu_fiends_arrays.tph*") pour faciliter leur mise à jour.
-- [400] Morts-vivants différenciés (t-undead.tpa)				[710-720-760-740] Plus d'animations de Planescape: Torment ()
+- [400] Morts-vivants différenciés (t-undead.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_undead_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : remplacement de la variable "*%tsz%*" n'existait pas par la variable "*%tutu_scriptz%*" (array *GW_zombies*).
     - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
@@ -879,17 +879,17 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd2_anim_arrays.tph*") pour faciliter leur mise à jour.
 - [650] Plus d'animations de Neverwinter Nights (t-nwnanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_nwn_anim_arrays.tph*") pour faciliter leur mise à jour.
-
-
-
-    - Intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
-
-
-  - [710-720-760-740] Plus d'animations de Planescape: Torment ()
+- [710-720-760-740] Plus d'animations de Planescape: Torment (t-pstanims.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_pst_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Variables tutu : ajout des variables manquantes pour BG1 UB (bart8, bart9, edie, ennahe, erlinh, feldan, galkin, hersch, memnis, mercha, mtob4, mtob5, read4, serwen, travel, volose, wilton) et BG:EE/Tutu (gretek). Ajout de nouvelles variables pour éviter d'écraser des fichiers de BG et de BG2 ayant le même nom.
     - Intégration du correctif <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, amélioré par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
+    - Intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
+    - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
 
-  - [7000-7010-7020-7030] Avatars de Moinesse pour IA ()
+  - [7000-7010-7020-7030] Avatars de Moinesse pour IA (t-moines.tpa)
+    - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_moinesse_anim_arrays.tph*") pour faciliter leur mise à jour.
     - Intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
+    - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
 
   - [9000] Correction des références des créatures dans les cartes ()
     - Dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
