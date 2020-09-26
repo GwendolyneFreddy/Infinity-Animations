@@ -9,33 +9,32 @@
  *  -----------                                                                                                                                                 *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
  *      - Replaced specific %tsu% ia variables with more compatible %tutu_var% variables.                                                                       *
- *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#42).                                                                                 *
+ *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#41).                                                                                 *
  *      - Integrated Lollorian's patch to correct loops: one maurezhi was not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).  *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                       *
  *      - Rewrote animation ID patching to solve EE games compatibility:                                                                                        *
-          replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                     *
+ *        replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                    *
  * ============================================================================================================================================================ */
 
 /* ---------------------------------------------------------- *
  *                    CREATURES                         line  *
  * ---------------------------------------------------------- *
- *  Nabassus get the green-gray tanar'ri animation    #   66  *
- *  Chromatic Demon (makes him somewhat chromatic)    #  115  *
- *  Bebiliths get the bebilith_nwn animation          #  138  *
- *  Bone Fiends get the osyluth_nwn animation         #  165  *
- *  Gelugons get the salamander_frost animation       #  194  *
- *  Some Mariliths get the marilith_dark animation    #  229  *
- *  Night Hags get the hag_night animation            #  261  *
- *  Yochlols get a darkened otyugh animation          #  321  *
- *  Silver Abishais get the abishai_white animation   #  354  *
- *  Manes get the drowned_dead animation              #  386  *
- *  Green Abishais get the abishai_green animation    #  399  *
- *  Red Abishais get the abishai_red animation        #  432  *
- *  Erinyes get wings and elf animations              #  465  *
- *  Succubi get the succubus_nwn animation            #  596  *
- *  Kirinhale gets the succubus_nwn animation         #  637  *
- *  Maurezhi get the maurezhi animation               #  658  *
- *  Glabrezus get the proper animation                #  694  *
+ *  Nabassus get the green-gray tanar'ri animation    #   65  *
+ *  Chromatic Demon (makes him somewhat chromatic)    #  120  *
+ *  Bebiliths get the bebilith_nwn animation          #  137  *
+ *  Bone Fiends get the osyluth_nwn animation         #  164  *
+ *  Gelugons get the salamander_frost animation       #  193  *
+ *  Some Mariliths get the marilith_dark animation    #  228  *
+ *  Night Hags get the hag_night animation            #  260  *
+ *  Yochlols get a darkened otyugh animation          #  320  *
+ *  Silver Abishais get the abishai_white animation   #  353  *
+ *  Manes get the drowned_dead animation              #  385  *
+ *  Green Abishais get the abishai_green animation    #  398  *
+ *  Red Abishais get the abishai_red animation        #  431  *
+ *  Erinyes get wings and elf animations              #  464  *
+ *  Succubi get the succubus_nwn animation            #  595  *
+ *  Kirinhale gets the succubus_nwn animation         #  636  *
+ *  Maurezhi get the maurezhi animation               #  657  *
+ *  Glabrezus get the proper animation                #  693  *
  * ---------------------------------------------------------- */
 
 SILENT
@@ -638,7 +637,7 @@ ACTION_CLEAR_ARRAY GW_succubi
  * =========================================== */
 ACTION_IF FILE_EXISTS_IN_GAME ~%tutu_var%kirinh.cre~ BEGIN
 
-	COPY_EXISTING ~%tsu%kirinh.cre~ ~override~
+	COPY_EXISTING ~%tutu_var%kirinh.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
 			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SUCCUBUS_NWN~) // original 0x5290 - EE depends on installation
 			PATCH_IF BYTE_AT 0x234 < 6 BEGIN
