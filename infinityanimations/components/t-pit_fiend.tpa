@@ -8,14 +8,14 @@
  *  change-log:                                                                                                                             *
  *  -----------                                                                                                                             *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_pit_fiends_arrays.tph library) for easier maintenance.  *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                   *
  *      - Rewrote animation ID patching to solve EE games compatibility:                                                                    *
-          replaced WRITE_LONG 0x28 0x5035 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~PIT_FIEND_NWN~).                                     *
+          replaced WRITE_SHORT 0x28 0x5035 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~PIT_FIEND_NWN~).                                    *
  * ======================================================================================================================================== */
 
 SILENT
 
 COPY_EXISTING ~%nb%.cre~ ~override~
+
 	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
 		PATCH_IF rgp = 1 BEGIN
 			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~PIT_FIEND_NWN~) // original 0x5035 - EE depends on installation
@@ -27,6 +27,7 @@ COPY_EXISTING ~%nb%.cre~ ~override~
 			END
 		END
 	END
+
 BUT_ONLY
 
 VERBOSE
