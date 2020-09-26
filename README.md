@@ -676,7 +676,7 @@ This component assigns some creatures distinctive Moinesse's animations:
 <a name="9000" id="9000"></a>&#10173; **[9000] Fix Area Creature References**
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Installed by default</em><br><br>
 
-- Corrects changed creature animations in area files for easier reference
+This component corrects changed creature animations in area files for easier reference.
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -847,6 +847,7 @@ This component assigns some creatures distinctive Moinesse's animations:
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
+    - Tutu variables: added missing tutu variable for BG kent and sailned files ("*GW_male_human_fighters*" array).
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).
 - [50] Distinctive Genies (t-genie.tpa)
      - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_genies_arrays.tph*" library) for easier maintenance.

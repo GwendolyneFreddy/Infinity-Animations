@@ -8,7 +8,7 @@
  *  change-log:                                                                                                                                                                       *
  *  -----------                                                                                                                                                                       *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                        *
- *      - Replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables.                                                                                         *
+ *      - Tutu variables: replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables and added missing tutu variable for BG1 kent and sailned files.          *
  *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).                     *
  *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                             *
  * ================================================================================================================================================================================== */
@@ -221,7 +221,7 @@ END
 // Crewmate
 ACTION_IF FILE_EXISTS_IN_GAME ~%tutu_var%crew2.cre~ BEGIN 
 
-	COPY_EXISTING ~%tsu%crew2.cre~ ~override~
+	COPY_EXISTING ~%tutu_var%crew2.cre~ ~override~
 		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 		PATCH_IF valid BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
