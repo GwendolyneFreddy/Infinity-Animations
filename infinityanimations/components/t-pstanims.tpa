@@ -65,7 +65,7 @@ SILENT
 /* ============================================================ *
  *  Female Human Thieves get the townie_curst_female animation  *
  * ============================================================ */
-ACTION_PHP_EACH GW_townie_curst_female_male AS nb => correct BEGIN
+ACTION_PHP_EACH GW_townie_curst_female AS nb => correct BEGIN
 
 	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
