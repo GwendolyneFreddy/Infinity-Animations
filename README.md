@@ -859,8 +859,10 @@ This component corrects changed creature animations in area files for easier ref
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
 - [210-230] Cambions get Isair Animation (t-cambion.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_cambions_arrays.tph*" library) for easier maintenance.
+    - Removed old versions lines of code that were also patching Male Tieflings, deprecated since a long time.
 - [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_alu_fiends_arrays.tph*" library) for easier maintenance.
+    - Removed old versions lines of code that were also patching Female Tieflings, deprecated since a long time.
 - [400] Distinctive Undead (t-undead.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_undead_arrays.tph*" library) for easier maintenance.
     - Tutu variables: replaced "*%tsz%*" that did not exist with "*%tutu_scriptz%*" (*GW_zombies* array).

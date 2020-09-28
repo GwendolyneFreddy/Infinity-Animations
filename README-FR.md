@@ -853,8 +853,10 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_pit_fiends_arrays.tph*") pour faciliter leur mise à jour.
 - [210-230] Cambions get Isair Animation (t-cambion.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_cambions_arrays.tph*") pour faciliter leur mise à jour.
+    - Suppression de la partie du code des anciennes versions modifiant aussi les hommes tieffelins, obsolète depuis longtemps.
 - [260-280] Alu-Fiends get Madae Animation (t-alu_fiend.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_alu_fiends_arrays.tph*") pour faciliter leur mise à jour.
+    - Suppression de la partie du code des anciennes versions modifiant aussi les femmes tieffelins, obsolète depuis longtemps.
 - [400] Morts-vivants différenciés (t-undead.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_undead_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : remplacement de la variable "*%tsz%*" n'existait pas par la variable "*%tutu_scriptz%*" (array *GW_zombies*).

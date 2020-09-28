@@ -1,0 +1,73 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *            A R R A Y S    ( T A B L E S )    :    C A M B I O N S   G E T   I S A I R   A N I M A T I O N   C O M P O N E N T   ( 210-230 )             *
+ *                                                                                                                                                         *
+ *                Array to patch vanilla and modded creature files (animation slots, sound clips...) used by t-cambion.tpa WeiDU routine.                  *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_cambions                 :   LISTS vanilla and modded Cambions creatures needing to be patched.                                   => line #  17   *
+ *                                    LISTE les créatures cambions du jeu et de mods nécessitant d'être modifiées.                                         *
+ * ======================================================================================================================================================= */
+
+/* ======================================================================================== *
+ *  ARRAY GW_cambions : LISTS vanilla and modded Cambions creatures needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Cambions get the Isair animation.                                                       *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_cambions
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_cambions BEGIN
+
+// BG2
+// ---
+cambion1                => 1	// Cambion
+cambion2                => 1	// id.
+demlord	                => 1	// Lesser Demon Lord ???
+demosum4                => 1	// Cambion
+gorcamb	                => 1	// Aesgareth
+idemon01                => 1	// Cambion
+idemon02                => 1	// id.
+illcamb	                => 1	// id.
+illcamb2                => 1	// id.
+kdemon01                => 1	// id.
+telcam1	                => 1	// id.
+uddemon	                => 1	// Lesser Demon Lord ???
+
+// Ascension
+// ---------
+fincamb2	            => 1	// Cambion
+
+// BP
+// --
+bpdemon1	            => 1	// Cambion ==> Does not seem to be installed
+
+// Kiara-Zaiya
+// -----------
+kz#dmlrd	            => 1	// Lesser Demon Lord
+
+// NTotSC
+// ------
+ntroach                 => 1	// Lesser Tanar'ri
+
+// Refinements
+// -----------
+tg#did1	                => 1	// Lesser Demon Lord ???
+tg#did2	                => 1	// id.
+
+// RoT
+// ---
+garmari3	            => 1	// Cambion Lord
+garmari4	            => 1	// id.
+godmari2	            => 1	// id.
+
+// Saerileth
+// ---------
+nscamb01	            => 1	// Cambion
+nscamb03	            => 1	// id.
+
+END
