@@ -11,43 +11,42 @@
  *      - Integrated patch that prevent Skeletons with modified animations to glow red ( http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498 ) [Ghasts     *
  *        get the ghast animation: ghastsu is a skeleton, not a ghast) and glowcheck.tpp ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).        *
  *      - Tutu variables: replaced "%tsz%" that did not exist with "%tutu_scriptz%" (GW_zombies array).                                                                     *
- *      - Removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it (#697).                                                               *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                   *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)     *
+ *      - Removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it (#696).                                                               *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)    *
  *        whenever relevant.                                                                                                                                                *
  * ======================================================================================================================================================================== */
 
 /* ------------------------------------------------------------------ *
  *                    CREATURES                                 line  *
  * ------------------------------------------------------------------ *
- *  Banshees get the wailing_virgin animation                 #   62  *
- *  Skulls get the demilich animation                         #   92  *
- *  Ghoul Queens get the ghoul_queen animation                #  120  *
- *  Ghasts get the ghast animation                            #  158  *
- *  Greater Ghasts get the ghast_greater (IWD) animation      #  186  *
- *  Ghosts get the ghost (IWD) animation                      #  214  *
- *  Ghouls get the ghoul animation                            #  257  *
- *  Greater ghouls get the ghoul_greater (IWD) animation      #  281  *
- *  Liches get the lich animation                             #  303  *
- *  Greater Liches get the lich_white (IWD) animation         #  328  *
- *  Mist Apparitions get the mist_creature animation          #  353  *
- *  Revenants get the revenant animation                      #  396  *
- *  Shadow Fiends get the shadow animation                    #  418  *
- *  Wraiths get the shadow_large (IWD) animation              #  447  *
- *  Spectres get the shadow_large_murky (IWD) animation       #  480  *
- *  Shadows get the shadow_small (IWD) animation              #  513  *
- *  Some Shadows get the shadow_small_murky animation         #  536  *
- *  Large Skeletons get the skeleton_monster animation        #  560  *
- *  Moon Horrors get the skeleton_fiend animation             #  595  *
- *  Female Vampires get the vampire_female animation          #  617  *
- *  Wights get the wight_gray animation                       #  640  *
- *  Green Zombies get the wight_green animation               #  663  *
- *  Zombie Lords get the wight_yellow animation               #  687  *
- *  Barrow Wights get the wight_barrow animation              #  717  *
- *  Zombies get the zombie animation                          #  741  *
- *  Yellow Zombies get the zombie_yellow (IWD) animation      #  769  *
- *  Lacedons get the zombie_blue (IWD) animation              #  793  *
- *  Sea Zombies get the zombie_blue (IWD) animation           #  814  *
+ *  Banshees get the wailing_virgin animation                 #   61  *
+ *  Skulls get the demilich animation                         #   91  *
+ *  Ghoul Queens get the ghoul_queen animation                #  119  *
+ *  Ghasts get the ghast animation                            #  157  *
+ *  Greater Ghasts get the ghast_greater (IWD) animation      #  185  *
+ *  Ghosts get the ghost (IWD) animation                      #  213  *
+ *  Ghouls get the ghoul animation                            #  256  *
+ *  Greater ghouls get the ghoul_greater (IWD) animation      #  280  *
+ *  Liches get the lich animation                             #  302  *
+ *  Greater Liches get the lich_white (IWD) animation         #  327  *
+ *  Mist Apparitions get the mist_creature animation          #  352  *
+ *  Revenants get the revenant animation                      #  395  *
+ *  Shadow Fiends get the shadow animation                    #  417  *
+ *  Wraiths get the shadow_large (IWD) animation              #  446  *
+ *  Spectres get the shadow_large_murky (IWD) animation       #  479  *
+ *  Shadows get the shadow_small (IWD) animation              #  512  *
+ *  Some Shadows get the shadow_small_murky animation         #  535  *
+ *  Large Skeletons get the skeleton_monster animation        #  559  *
+ *  Moon Horrors get the skeleton_fiend animation             #  594  *
+ *  Female Vampires get the vampire_female animation          #  616  *
+ *  Wights get the wight_gray animation                       #  639  *
+ *  Green Zombies get the wight_green animation               #  662  *
+ *  Zombie Lords get the wight_yellow animation               #  686  *
+ *  Barrow Wights get the wight_barrow animation              #  716  *
+ *  Zombies get the zombie animation                          #  740  *
+ *  Yellow Zombies get the zombie_yellow (IWD) animation      #  768  *
+ *  Lacedons get the zombie_blue (IWD) animation              #  792  *
+ *  Sea Zombies get the zombie_blue (IWD) animation           #  813  *
  * ------------------------------------------------------------------ */
 
 SILENT
