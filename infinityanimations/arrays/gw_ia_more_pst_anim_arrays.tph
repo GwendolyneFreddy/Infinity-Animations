@@ -1,0 +1,5084 @@
+/* ============================================================================================================================================================ *
+ *  v 6.0.0                                                                                                                                                     *
+ *                         A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E   U N D E A D   C O M P O N E N T   ( 400 )                             *
+ *                                                                                                                                                              *
+ *                    Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-undead.tpa WeiDU routine.                   *
+ *                                                                                                                                                              *
+ *                        Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                        *
+ *                                                                                                                                                              *
+ * ============================================================================================================================================================ *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                           *
+ * -----------------------------------                                                                                                                          *
+ *  - GW_townie_curst_female        :   LISTS vanilla and modded Female Human Thieves needing to be patched.                                   => line #   63   *
+ *                                      LISTE les voleuses humaines du jeu et de mods nécessitant d'être modifiées.                                             *
+ *  - GW_townie_curst_male          :   LISTS vanilla and modded Male Human Thieves needing to be patched.                                     => line #  224   *
+ *                                      LISTE les voleurs humains du jeu et de mods nécessitant d'être modifiés.                                                *
+ *  - GW_dustman_female             :   LISTS vanilla and modded Female Monks needing to be patched.                                           => line #  709   *
+ *                                      LISTE les femmes moines du jeu et de mods nécessitant d'être modifiées.                                                 *
+ *  - GW_dustman_male               :   LISTS vanilla and modded Dustmen needing to be patched.                                                => line #  788   *
+ *                                      LISTE les hommes-poussière du jeu et de mods nécessitant d'être modifiées.                                              *
+ *  - GW_dustman_male2              :   LISTS vanilla and modded Male Monks needing to be patched.                                             => line #  815   *
+ *                                      LISTE les moines du jeu et de mods nécessitant d'être modifiés.                                                         *
+ *  - GW_ghoul_female               :   LISTS vanilla and modded Female Ghouls needing to be patched.                                          => line # 1119   *
+ *                                      LISTE les créatures femmes goules du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_ghoul_male                 :   LISTS vanilla and modded Male Ghouls needing to be patched.                                            => line # 1144   *
+ *                                      LISTE les créatures hommes goules du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_godsman                    :   LISTS vanilla and modded Male Human Smiths needing to be patched.                                      => line # 1166   *
+ *                                      LISTE les forgerons humains du jeu et de mods nécessitant d'être modifiés.                                              *
+ *  - GW_thug_large                 :   LISTS vanilla and modded Axe- and hammer-wielding bandits and mercenaries needing to be patched.       => line # 1245   *
+ *                                      LISTE les mercenaires et bandits porteurs de hache et de marteau du jeu et de mods nécessitant d'être modifiés.         *
+ *  - GW_thug                       :   LISTS vanilla and modded Sword- and dagger-wielding bandits and mercenaries needing to be patched.     => line # 1388   *
+ *                                      LISTE les mercenaires et bandits porteurs d'épée et de dague du jeu et de mods nécessitant d'être modifiés.             *
+ *  - GW_townie_lower_class_female  :   LISTS vanilla and modded Female Human Peasants needing to be patched.                                  => line # 1633   *
+ *                                      LISTE les roturières humaines du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_townie_lower_class_male    :   LISTS vanilla and modded Male Human Peasants needing to be patched.                                    => line # 2049   *
+ *                                      LISTE les roturiers humains du jeu et de mods nécessitant d'être modifiées.                                             *
+ *  - GW_merchant                   :   LISTS vanilla and modded Male Human Merchants needing to be patched.                                   => line # 2696   *
+ *                                      LISTE les marchands humains du jeu et de mods nécessitant d'être modifiés.                                              *
+ *  - GW_midwife                    :   LISTS vanilla and modded Female Human Merchants needing to be patched.                                 => line # 3053   *
+ *                                      LISTE les marchandes humaines du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_harlot                     :   LISTS vanilla and modded Harlots needing to be patched.                                                => line # 3235   *
+ *                                      LISTE les prostituées du jeu et de mods nécessitant d'être modifiées.                                                   *
+ *  - GW_skeleton_priest            :   LISTS vanilla and modded Skeleton Mages needing to be patched.                                         => line # 3485   *
+ *                                      LISTE les créatures mages squelettes du jeu et de mods nécessitant d'être modifiées.                                    *
+ *  - GW_skeleton_worker            :   LISTS vanilla and modded Skeletons needing to be patched.                                              => line # 3510   *
+ *                                      LISTE les créatures squelettes du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_tiefling_female            :   LISTS vanilla and modded Female Tieflings needing to be patched.                                       => line # 3638   *
+ *                                      LISTE les créatures femmes tieffelins du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_tiefling_male              :   LISTS vanilla and modded Male Tieflings needing to be patched.                                         => line # 3677   *
+ *                                      LISTE les créatures hommes tieffelins du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_townie_wizard              :   LISTS vanilla and modded Male Human Mages needing to be patched.                                       => line # 3716   *
+ *                                      LISTE les magiciens humains du jeu et de mods nécessitant d'être modifiés.                                              *
+ *  - GW_female_human_nobles        :   LISTS vanilla and modded Female Human Nobles needing to be patched.                                    => line # 4315   *
+ *                                      LISTE les femmes nobles humaines du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_townie_upper_class_male    :   LISTS vanilla and modded Male Human Nobles needing to be patched.                                      => line # 4567   *
+ *                                      LISTE les hommes nobles humains du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_zombie_female              :   LISTS vanilla and modded Female Zombies needing to be patched.                                         => line # 4981   *
+ *                                      LISTE les créatures zombi féminin du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_zombie_male                :   LISTS vanilla and modded Male Zombies needing to be patched.                                           => line # 5030   *
+ *                                      LISTE les créatures zombi masculin du jeu et de mods nécessitant d'être modifiées.                                      *
+ * ============================================================================================================================================================ */
+
+/* =============================================================================================================== *
+ *  ARRAY GW_townie_curst_female : LISTS vanilla and modded Female Human Thieves creatures needing to be patched.  *
+ * --------------------------------------------------------------------------------------------------------------- *
+ *  Female Human Thieves get the townie_curst_female animation.                                                    *
+ * =============================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_townie_curst_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_curst_female BEGIN
+
+// BG
+// --
+"%tutu_var%alyth"       => 1	// "Lady" Alyth Elendara
+"%tutu_var%blackl"      => 1	// Black Lily
+"%tutu_var%crew2"       => 1	// Crewmate
+"%tutu_var%desret"      => 1	// Desreta
+"%tutu_var%dhania"      => 1	// Dhanial
+"%tutu_var%maneir"      => 1	// Maneira
+"%tutu_var%nila"        => 1	// Nila
+"%tutu_var%silenc"      => 1	// Silence
+"%tutu_var%telka"       => 1	// Telka
+
+// BG2
+// ---
+amasana                 => 1	// Asana Haraad
+c6alyra                 => 1	// Alyra
+c6natas                 => 1	// Natas
+crothf02                => 1	// Aulava
+genth02                 => 1	// Thief
+hlketta                 => 1	// Ketta
+hlketta2                => 1	// id.
+mugger1                 => 1	// Shady Character
+repthf3                 => 1	// Shadow Thief
+shthass1                => 1	// Ama
+thief3                  => 1	// Shadow Thief
+vvdead3                 => 1	// id.
+vvshad3                 => 1	// id.
+vvshad7                 => 1	// id.
+
+// Alassa NPC
+// ----------
+d0alas25                => 1	// Alassa
+d0alassa                => 1	// id.
+
+// Angelo NPC
+// ----------
+adsuu                   => 1	// Suu
+adsuu25                 => 1	// id.
+
+// BP
+// --
+bpthief3                => 1	// Shadow Thief
+gbene01e                => 1	// Assassin
+
+// CtB
+// ---
+cbhld0w4                => 1	// Peasant
+
+// Chloe
+// -----
+abbyhucr                => 1	// Abagail
+
+// CoM Encounters
+// --------------
+ucmgth02                => 1	// Black Lilli Darkstar
+
+// Classic Adventures
+// ------------------
+tcalyth                 => 1	// Alyth
+tcduch                  => 1	// Duchess
+
+// Dark Horizons
+// -------------
+cmbou06                 => 1	// Isolde
+cmbou10                 => 1	// Zara
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5thf1                 => 1	// Myriza
+ts5thf3                 => 1	// Genja
+ts5thf5                 => 1	// Issa Kealn
+tsama1                  => 1	// Ama
+tsblackl                => 1	// Black Lily
+tssmugf                 => 1	// Rogue
+
+// Gavin for BG
+// ------------
+"b!penny"               => 1	// Penny
+
+// Homeward Bound
+// --------------
+"b!ruby"                => 1	// Captain Ruby
+
+// Kelsey NPC
+// ----------
+j#kasset                => 1	// Kassetha
+
+// Kido (The Mod for the Wicked)
+// -----------------------------
+mwkicht                 => 1	// Clara
+
+// Longer Road
+// -----------
+mirriam                 => 1	// Mirriam
+
+// The Lure of the Sirine's Call
+// -----------------------------
+j#pirat2                => 1	// Pirate
+
+// NEJ
+// ---
+vera                    => 1	// Slave
+
+// NTotSC
+// ------
+ntmariel                => 1	// Mariel
+
+// RoT
+// ---
+arlthif4                => 1	// Thief
+arlthif5                => 1	// id.
+castre6                 => 1	// Mercenary
+cultbe10                => 1	// Cult Member
+delei                   => 1	// Delei
+jenavi                  => 1	// Jenavieve
+mythif2                 => 1	// Thief
+mythif4                 => 1	// id.
+thjail2                 => 1	// id.
+zemthif5                => 1	// Delane
+zemthif9                => 1	// id.
+
+// SoS
+// ---
+cbtbgmer                => 1	// Mercurial
+cbtbgmr1                => 1	// id.
+
+// Stratagems
+// ----------
+dw#c51                  => 1	// Kaalos
+
+// TDD
+// ---
+ddcyric1                => 1	// Larala
+quadkid3                => 1	// Reno
+
+// The Luxley Family
+// -----------------
+fhlbrid                 => 1	// Brid
+fhlw1                   => 1	// Katryna
+fhlw3                   => 1	// Danica
+fhlw4                   => 1	// Erinne
+fhlw5                   => 1	// Serah
+
+// Zalnoya and the Shadow Thieves
+// ------------------------------
+aj#ass1                 => 1	// Assassin
+aj#ass3                 => 1	// id.
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_townie_curst_male : LISTS vanilla and modded Male Human Thieves needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Male Human Thieves get the townie_curst_male animation.                                          *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_townie_curst_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_curst_male BEGIN
+
+// BG
+// --
+"%tutu_var%alanbl"               => 1	// Alan Blackblade
+"%tutu_var%alatos"               => 1	// Alatos "Ravenscar" Thuibuld
+"%tutu_var%denkod"               => 1	// Denkod
+"%tutu_var%erdane"               => 1	// Erdane
+"%tutu_var%garan"                => 1	// Garan
+"%tutu_var%gregor"               => 1	// Gregor
+"%tutu_var%husam"                => 1	// Husam
+"%tutu_var%husam2"               => 1	// id.
+"%tutu_var%kestor"               => 1	// Kestor
+"%tutu_var%kolvar"               => 1	// Kolvar
+"%tutu_var%lothan"               => 1	// Lothander
+"%tutu_var%meakin"               => 1	// Meakin
+"%tutu_var%mersil"               => 1	// Faltis
+"%tutu_var%mersil2"              => 1	// Glayde
+"%tutu_var%mersil3"              => 1	// Tessilan
+"%tutu_var%meym"                 => 1	// Meym
+"%tutu_var%mrshade"              => 1	// Mr. Shade
+"%tutu_var%naaman"               => 1	// Naaman
+"%tutu_var%narlen"               => 1	// Narlen Darkwalk
+"%tutu_var%niklos"               => 1	// Niklos
+"%tutu_var%nimbul"               => 1	// Nimbul
+"%tutu_var%nortua"               => 1	// Nortuary
+"%tutu_var%rededg"               => 1	// Rededge
+"%tutu_var%riggilo"              => 1	// Riggilo
+"%tutu_var%sath"                 => 1	// Sath
+"%tutu_var%shadow"               => 1	// Shadow Thief
+"%tutu_scriptbg%shank%eet_var%"  => 1	// Shank
+"%tutu_var%smuggl"               => 1	// Smuggler
+"%tutu_var%taxek"                => 1	// Taxek
+"%tutu_var%thaldo"               => 1	// Thaldorn
+"%tutu_var%thief"                => 1	// Rogue
+"%tutu_var%thiefg"               => 1	// id.
+"%tutu_var%thiefm"               => 1	// id.
+"%tutu_var%vitiare"              => 1	// Vitiare
+
+// BG2
+// ---
+c6mess                  => 1	// Shadow Thief
+c6yean                  => 1	// Yeanasha
+amsmug01                => 1	// Smuggler
+amsmug02                => 1	// id.
+antenos                 => 1	// Antenos
+ar18thif                => 1	// Thief
+aran                    => 1	// Aran Linvail
+aran02                  => 1	// id.
+arkanisg                => 1	// Arkanis Gath
+arnfgt01                => 1	// Shadow Thief
+arnfgt02                => 1	// id.
+arnman03                => 1	// Cuchul
+arnman09                => 1	// Shadow Thief
+arnman10                => 1	// Trainee
+arntra03                => 1	// id.
+arntra04                => 1	// id.
+arntra05                => 1	// id.
+arnwar03                => 1	// Shadow Thief
+arnwar04                => 1	// id.
+arnwar08                => 1	// Tizzak
+bdturm02                => 1	// Turmish Thief
+chgood08                => 1	// Aran Linvail
+crothf01                => 1	// Tiro
+csgayl                  => 1	// Assassin
+csthief1                => 1	// id.
+csthief2                => 1	// id.
+cushad2                 => 1	// Shadow Thief
+cushad3                 => 1	// id.
+cushad5                 => 1	// id.
+dassin                  => 1	// id.
+dedsmug                 => 1	// Smuggler
+del                     => 1	// Del
+dellow                  => 1	// id.
+deshar                  => 1	// Ferric Ironblade
+dmark1                  => 1	// Fovem
+dsthief                 => 1	// Shadow Thief
+embarl                  => 1	// Embarl
+ffcust01                => 1	// Ercias
+flyfgt01                => 1	// Shadow Thief
+gaelan                  => 1	// Gaelan Bayle
+gaelan2                 => 1	// id.
+gaylan                  => 1	// Gaylan Bael
+genth01                 => 1	// Thief
+gentmg01                => 1	// id.
+gorsta07                => 1	// Statue
+gpthief1                => 1	// Damien
+habib                   => 1	// Habib
+habib2                  => 1	// id.
+hlassa                  => 1	// Assassin
+irethf03                => 1	// id.
+ishadmt1                => 1	// id.
+ishclo01                => 1	// id.
+ishthf01                => 1	// id.
+ishthf03                => 1	// id.
+jaerto3                 => 1	// Tamile
+kaysmg03                => 1	// Smuggler
+korscroo                => 1	// Scrooloose
+lellyn                  => 1	// Shadow Thief
+maevar                  => 1	// Mae'Var
+mookft01                => 1	// Shadow Thief
+mugger3                 => 1	// Shady Character
+pace                    => 1	// Pace
+pirexe01                => 1	// Executioner
+pirpir05                => 1	// Chremy
+plass03                 => 1	// Assassin
+plass04                 => 1	// id.
+pparan2                 => 1	// Aran Linvail
+ppduel2                 => 1	// Dirbish the Black
+ppduelc                 => 1	// Duel Coordinator
+ppmur                   => 1	// Murderer
+ppshad01                => 1	// Shadow Thief
+rethie01                => 1	// Slaver
+rethie02                => 1	// id.
+rethie03                => 1	// id.
+"%roger_bg2%"           => 1	// Roger the Fence
+sarbha01                => 1	// Alexander Ralisar
+sarthf01                => 1	// Hectan
+sevpat05                => 1	// Brennan Risling
+shadth01                => 1	// Shadow Thief
+shadth02                => 1	// Rogue
+"%shank_bg2%"           => 1	// Shank
+shth03                  => 1	// Kretor
+shthdr01                => 1	// Brannel
+shthlt01                => 1	// Jariel
+shthlt02                => 1	// Lathan
+shthstor                => 1	// Rattell
+spmugg                  => 1	// Mugger
+spmugg2                 => 1	// Ruffian Captain
+stdeath                 => 1	// Arkanis Gath
+stein                   => 1	// Stein
+tanadv06                => 1	// Dunbar the Fifth
+tanthf01                 => 1	// Rune Assassin
+thief2                  => 1	// Shadow Thief
+thief5                  => 1	// Gorvin
+travin                  => 1	// Travin
+trthf01                 => 1	// Itona
+trthf02                 => 1	// Kish
+udtrap05                => 1	// Gont of Riatavin
+vakg03                  => 1	// Thief
+vvarkan                 => 1	// Arkanis Gath
+vvcat                   => 1	// Shadow Thief
+vvdead1                 => 1	// id.
+vvdead2                 => 1	// id.
+vvshad1                 => 1	// id.
+vvshad11                => 1	// id.
+vvshad12                => 1	// id.
+vvshad4                 => 1	// id.
+vvshad5                 => 1	// id.
+vvshad6                 => 1	// id.
+vvshad8                 => 1	// id.
+yarin                   => 1	// Yarin
+
+// BGT
+// ---
+ambmaevr                => 1	// Mae'Var
+ambsthf0                => 1	// Shadow Thief
+ambthif2                => 1	// id.
+
+// Alternatives
+// ------------
+"b!vhelon"              => 1	// Vhellon
+"b!wael"                => 1	// Wael
+"b!wael2"               => 1	// id
+
+// Angelo NPC
+// ----------
+adblack                 => 1	// Blackthorne
+adginpac                => 1	// Ginpachi
+
+// Assassinations
+// --------------
+o#crgoon                => 1	// Assassin
+o#crkern                => 1	// Kern
+
+// AzenMOD
+// -------
+jc_assn                 => 1	// Time Assassin
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#arch1                 => 1	// Shadow Thief
+z#arch2                 => 1	// id.
+z#archbv                => 1	// id.
+z#assabv                => 1	// Assassin
+z#assas1                => 1	// id.
+z#assas2                => 1	// id.
+z#assas3                => 1	// id.
+z#seid16                => 1	// Seida
+
+// BG1 NPC
+// -------
+x#karris                => 1	// Karris
+
+// BG1 UB
+// ------
+"%tutu_var%memnis"      => 1	// Meym
+
+// BGQE
+// ----
+c#q01004                => 1	// Tulbor
+
+// Bonehill
+// --------
+bhbasmar                => 1	// Basmar
+bhgelliu                => 1	// Gellius
+bhguild1                => 1	// Assassin Apprentice
+bhsangst                => 1	// Sangster
+bhthief                 => 1	// Rogue
+bhvolcfr                => 1	// Volcifar
+
+// BP
+// --
+bpsthef3                => 1	// Shadow Thief
+bpthief2                => 1	// id.
+gbene02e                => 1	// Bounty Hunter
+
+// CtB
+// ---
+cbp2act6                => 1	// Donado
+cbp4act2                => 1	// Samuel
+cbshdrun                => 1	// Shadow Thief
+
+// CoM Encounters
+// --------------
+ucmgth01                => 1	// Callendous
+
+// Classic Adventures
+// ------------------
+tcdetrak                => 1	// Detrak
+tcfinnoc                => 1	// Finnock
+tc1600m2                => 1	// Merchant
+tcned                   => 1	// Ned Shankshaft
+tcned01                 => 1	// id.
+tcned02                 => 1	// id.
+tcpace                  => 1	// Pace
+tcslthf1                => 1	// Slaver
+tcslthf2                => 1	// id.
+tcstein                 => 1	// Stein
+tcsturm                 => 1	// Sturm Bucholtz
+tcturn                  => 1	// Turmish Thief
+
+// Chloe
+// -----
+man1cr                  => 1	// Extremely ugly man
+man2cr                  => 1	// Scruffy-looking man
+shadcr1                 => 1	// Shadow Thief
+
+// Dark Horizons
+// -------------
+cm03a514                => 1	// Quintus the Quick
+cmbou05                 => 1	// Necardian
+cmbou07                 => 1	// Mendas
+cmbou08                 => 1	// Garret
+cmbou09                 => 1	// Allister
+cmsec11                 => 1	// Section Operative
+cmsec13                 => 1	// id.
+
+// Dungeon Crawl
+// ------------
+o#castor                => 1	// Castor
+o#grudin                => 1	// Grudin
+o#smug                  => 1	// Fren
+
+// Edwin Romance
+// -------------
+er_calld                => 1	// Dekaras
+er_love1                => 1	// id.
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5thf2                 => 1	// Keltar
+ts5thf4                 => 1	// Gelt Foldum
+ts5thf6                 => 1	// Hawrath
+tssmugb                 => 1	// Rogue
+tssmugm                 => 1	// id.
+
+// FfR
+// ---
+ysoengus                => 1	// Oengus
+
+// Freedom's Reign of Virtue
+// -------------------------
+desto#01                => 1	// Elric Dartsman
+
+// G3 Anniversary
+// --------------
+g3grim                  => 1	// Kalen Grimm
+g3scam                  => 1	// Scam
+
+// Hessa NPC
+// ---------
+suthess1                => 1	// Flunky
+
+// Improved Anvil
+// --------------
+"s!rune2"               => 1	// Master Assassin
+"s!runef2"              => 1	// id.
+"s!slassa"              => 1	// Assassin
+"s!tanthf"              => 1	// Elite Rune Assassin
+
+// Improved Battles
+// ----------------
+b#roen05                => 1	// Roenall Fighter-Thief
+
+// Jan's Extended Quest
+// --------------------
+e_jhmai1                => 1	// Henchman
+e_jhmai2                => 1	// id.
+
+// Kiara-Zaiya
+// -----------
+prax                    => 1	// Prax
+
+// Kelsey NPC
+// ----------
+j#morrid                => 1	// Morridhan
+
+// Malthis, the swashbuckler!
+// --------------------------
+mfeind1                 => 1	// Shadow Thief
+
+// NEJ
+// ---
+govbud                  => 1	// Bud
+govdude                 => 1	// Dude
+hoodman                 => 1	// Hooded Man
+kilhelp1                => 1	// Killian
+kilhelp2                => 1	// id.
+kilhelp3                => 1	// id.
+killian                 => 1	// id.
+vulthief                => 1	// Vulova Assassin
+
+// Nikita NPC ==> Do not seem to be installed
+// ----------
+cmniks1                 => 1	// Thief
+cmniks2                 => 1	// id.
+cmniks3                 => 1	// id.
+
+// NTotSC
+// ------
+ntlegian                => 1	// Legion
+ntrededg                => 1	// Rededge
+
+// Quest Pack
+// ----------
+d0arbku2                => 1	// Shadow Thief
+d0msngr                 => 1	// Shadow Thief
+d0night2                => 1	// Night Masks Assassin
+d0nightk                => 1	// Larell
+d0qpwiw2                => 1	// Wilbur
+d0qpwiwi                => 1	// id.
+j#im8thg                => 1	// Shadow thief
+
+// Raziel NPC
+// ----------
+raziel                  => 1	// Raziel
+
+// RoT
+// ---
+arlthif1                => 1	// Thief
+arlthif2                => 1	// id.
+bryne                   => 1	// Bryne
+cain                    => 1	// Cain
+cultbe13                => 1	// Minor Member
+cultbe17                => 1	// id.
+mycutt1                 => 1	// Desperado
+olmmess                 => 1	// Messenger
+olmspy                  => 1	// Olmar's Spy
+talavan5                => 1	// Talavan's Spy
+talmess                 => 1	// Messenger
+thjail1                 => 1	// Thief
+tresham1                => 1	// Tresham
+zemthif1                => 1	// Thief
+zemthif2                => 1	// id.
+zemthif3                => 1	// id.
+
+// Rogue Rebalancing
+// -----------------
+rr#aran2                => 1	// Aran Linvail
+rr#saw08                => 1	// Tizzak
+rr#sfl01                => 1	// Shadow Thief
+rr#sfl03                => 1	// Assassin
+rr#sti01                => 1	// Shadow Thief
+rr#vend                 => 1	// Venduris
+rr#vend2                => 1	// id.
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_jon                  => 1	// Jonathan
+
+// Saerileth
+// ---------
+nscom002                => 1	// Shady Hive Character
+nsprey03                => 1	// Dick
+
+// SoS
+// ---
+cb4280st                => 1	// Erdane
+cbgaelan                => 1	// Gaelan Bayle
+cbshthif                => 1	// Roger the Fence
+
+// Stratagems
+// ----------
+dw#c52                  => 1	// Kaalos
+
+// Tales of Anegh
+// --------------
+z_bergf                 => 1	// Mountain guide Anton
+z_bergf2                => 1	// id.
+
+// Taim NPC
+// --------
+taim                    => 1	// Taim
+
+// The Black Rose Part 1: Market Prices
+// ------------------------------------
+bw11cre3                => 1	// Shengerd the Forger
+
+// TDD
+// ---
+ddassa01                => 1	// Assassin of Cyric
+ddblbl01                => 1	// Black Blade Assassin
+dockhlp1                => 1	// Shadow Thief
+dockhlp2                => 1	// id.
+kalvassa                => 1	// Kalvassa
+pirebd16                => 1	// Raurivyl Ornshield
+pirebd17                => 1	// Bahija Fair
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05brma                => 1	// Black-Robed Man
+bw05eros                => 1	// Eros
+bw05thie                => 1	// Thief
+
+// The Vault
+// ---------
+jc_thf02                => 1	// Mysterious Man
+jc_thf03                => 1	// Thief
+jc_thf04                => 1	// Nandin
+
+// TS
+// --
+otako                   => 1	// Otako Hashimoto
+pparan                  => 1	// Aran Linvail
+vparan                  => 1	// id.
+
+// TS25 MiniMod
+// ------------
+tz25_#l1                => 1	// ?? (in Japanese)
+tz25_#lo                => 1	// id.
+tz25__am                => 1	// id.
+tz25__g1                => 1	// id.
+tz25__g2                => 1	// id.
+tz25__gx                => 1	// id.
+tz25__mg                => 1	// id.
+tz25nnth                => 1	// id.
+tz25nnve                => 1	// id.
+tz25nnvf                => 1	// id.
+
+// Xan for BG2
+// -----------
+o#azag                  => 1	// Azag
+o#botan                 => 1	// Botan
+
+// Zalnoya and the Shadow Thieves
+// ------------------------------
+aj#ass2                 => 1	// Assassin
+aj#sth                  => 1	// Shadow Thief
+
+// Unknown mods
+// ------------
+acvit                   => 1	// 
+
+END
+
+
+/* ======================================================================================== *
+ *  ARRAY GW_dustman_female : LISTS vanilla and modded Female Monks needing to be patched.  *
+ * ---------------------------------------------------------------------------------------- *
+ *  Female Monks get the dustman_female animation.                                          *
+ * ======================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_dustman_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_dustman_female BEGIN
+
+// BG
+// --
+"%tutu_var%pallon"      => 1	// Pallonia
+
+// BG2
+// ---
+ammgrd02                => 1	// Monk
+ammonk05                => 1	// id.
+ammonk08                => 1	// id.
+drshsp01                => 1	// Spirit of the Grove
+
+// Angelo NPC
+// ----------
+adkaede                 => 1	// Lady Kaede
+
+// Ascension
+// ---------
+balelit2                => 1	// Monk
+
+// BG1 NPC
+// -------
+x#xzfsp1                => 1	// Forest Spirit
+
+// CtB
+// ---
+cbavrvlf                => 1	// Angry Villager
+
+// Dungeon Crawl
+// -------------
+o#bea                   => 1	// Beatrice
+
+// Planar Sphere
+// -------------
+psbelle                 => 1	// Belle
+
+// RoT
+// ---
+graghaf1                => 1	// Female Gragha
+graghaf2                => 1	// id.
+graghaf3                => 1	// id.
+graghaf4                => 1	// id.
+graghaf5                => 1	// id.
+graghaf6                => 1	// id.
+graghaq                 => 1	// Gragha Queen
+
+// SoS
+// ---
+cb304trb                => 1	// Triel Villager
+
+// The Luxley Family
+// -----------------
+fhlros                  => 1	// Rosanna
+
+// The Stone of Askavar
+// --------------------
+cileen                  => 1	// Cileen
+
+// TS
+// --
+deadkef                 => 1	// Dead
+nmonk                   => 1	// Nakanishi Acolyte
+
+// Wheels of Prophecy
+// ------------------
+dw#wrmo2                => 1	// Monk
+
+END
+
+
+/* ================================================================================= *
+ *  ARRAY GW_dustman_male : LISTS vanilla and modded Dustmen needing to be patched.  *
+ * --------------------------------------------------------------------------------- *
+ *  Dustmen get the dustman_male animation.                                          *
+ * ================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_dustman_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_dustman_male BEGIN
+
+// Saerileth
+// ---------
+nsdust01                => 1	// Dustman
+nsdust02                => 1	// id.
+nsdust03                => 1	// id.
+nsdust04                => 1	// id.
+nsdust05                => 1	// id.
+nsdust06                => 1	// id.
+nsdust07                => 1	// id.
+
+// SoS
+// ---
+cbshpp25                => 1	// Undertaker
+
+END
+
+
+/* ===================================================================================== *
+ *  ARRAY GW_dustman_male2 : LISTS vanilla and modded Male Monks needing to be patched.  *
+ * ------------------------------------------------------------------------------------- *
+ *  Male Monks get the dustman_male animation.                                           *
+ * ===================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_dustman_male2
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_dustman_male2 BEGIN
+
+// BG
+// --
+"%tutu_var%bendal"      => 1	// Bendalis
+"%tutu_var%cultd1"      => 1	// Cult Guard
+"%tutu_var%cultd2"      => 1	// id.
+"%tutu_var%cultd3"      => 1	// id.
+"%tutu_var%cultd4"      => 1	// id.
+"%tutu_var%cultd5"      => 1	// id.
+"%tutu_var%cultd6"      => 1	// id.
+"%tutu_var%galile"      => 1	// Galileus
+"%tutu_var%jessup"      => 1	// Jessup
+"%tutu_var%karan"       => 1	// Karan
+"%tutu_var%karan1"      => 1	// id.
+"%tutu_var%karan3"      => 1	// id.
+"%tutu_var%monktu1"     => 1	// Tutor
+"%tutu_scriptm%onktu10" => 1	// id.
+"%tutu_scriptm%onktu11" => 1	// id.
+"%tutu_scriptm%onktu12" => 1	// id.
+"%tutu_scriptm%onktu13" => 1	// id.
+"%tutu_scriptm%onktu14" => 1	// id.
+"%tutu_var%monktu2"     => 1	// id.
+"%tutu_var%monktu3"     => 1	// id.
+"%tutu_var%monktu4"     => 1	// id.
+"%tutu_var%monktu5"     => 1	// id.
+"%tutu_var%monktu7"     => 1	// id.
+"%tutu_var%monktu8"     => 1	// id.
+"%tutu_var%monktu9"     => 1	// id.
+"%tutu_var%parda"       => 1	// Parda
+"%tutu_var%parda1"      => 1	// id.
+"%tutu_var%parda3"      => 1	// id.
+"%tutu_var%piato"       => 1	// Piato
+"%tutu_var%read2"       => 1	// Reader
+"%tutu_var%read3"       => 1	// id.
+"%tutu_var%shista"      => 1	// Shistal
+"%tutu_var%tethto"      => 1	// Tethtoril
+"%tutu_var%tethto2"     => 1	// id.
+"%tutu_var%tethto3"     => 1	// id.
+
+// BG2
+// ---
+25spell                 => 1	// Lazarus Librarus
+ammgrd01                => 1	// Monk
+ammgrd03                => 1	// id.
+ammgrd05                => 1	// id.
+ammlegs                 => 1	// id.
+ammonk01                => 1	// id.
+ammonk02                => 1	// id.
+ammonk03                => 1	// id.
+ammonk04                => 1	// id.
+ammonk06                => 1	// id.
+ammonk07                => 1	// id.
+balelite                => 1	// id.
+bazmonk                 => 1	// id.
+bdcoun01                => 1	// Council Member
+cutamgrd                => 1	// Monk
+cutbalth                => 1	// Balthazar
+cutgrd01                => 1	// Monk
+cutgrd02                => 1	// id.
+cutgrd03                => 1	// id.
+cutgrd04                => 1	// id.
+dcowl1                  => 1	// Rayic Gethras
+doghma                  => 1	// Priest of Oghma
+ecolt                   => 1	// Monk
+killmonk                => 1	// Monk
+mgteos01                => 1	// Teos
+monk                    => 1	// Monk
+monkd2                  => 1	// id.
+monkde                  => 1	// id.
+monken                  => 1	// id.
+monktu6                 => 1	// Tutor (also in BG but not in tutu)
+monktu15                => 1	// Tutor 
+monktu16                => 1	// id.
+monktu17                => 1	// id.
+monktu18                => 1	// id.
+monktu19                => 1	// id.
+monktu20                => 1	// id. (also in BG but not in tutu)
+oghmonk1                => 1	// Moine
+parmonk                 => 1	// Mahar
+ppireni1                => 1	// Coordinator
+ralej                   => 1	// Rayic Gethras
+riftm01                 => 1	// Diseased One
+
+// Ascalon's Breagar
+// -----------------
+acoghma1                => 1	// Schriftgelehrter Oghmas
+
+// Ascension
+// ---------
+balelit1                => 1	// Monk
+balelit3                => 1	// id.
+balelit4                => 1	// id.
+dw#monme                => 1	// id.
+dw#wrmo1                => 1	// id.
+dw#wrmo3                => 1	// id.
+dw#wrmo4                => 1	// id.
+
+// BG1 UB
+// ------
+"%tutu_var%feldan"      => 1	// Feldane
+"%tutu_var%read4"       => 1	// Reader
+
+// CtB
+// ---
+cbavrvlm                => 1	// Angry Villager
+cbreader                => 1	// Reader
+cbtaxcol                => 1	// Tax Collector
+cbtettch                => 1	// Tethtoril
+
+// Classic Adventures
+// ------------------
+tcman2                  => 1	// Monk
+tcmilerj                => 1	// Brother Milerjoi
+tcquern                 => 1	// Quern
+tcurqua                 => 1	// Urquant
+
+// CoM Encounters
+// --------------
+ucmgcl03                => 1	// Shikoku
+
+// de'Arnise Romance
+// -----------------
+pgnalaly                => 1	// Alynder
+
+// Domains of Dread
+// ----------------
+dementy                 => 1	// Utterly Insane Person
+
+// Dungeon Crawl
+// -------------
+o#quagis                => 1	// Quagis
+
+// Improved Battles
+// ----------------
+b#knit06                => 1	// Edrin
+
+// Kelsey NPC
+// ----------
+j#pura                  => 1	// Pura Parteth
+
+// A Mod for the Orderly
+// ---------------------
+clfrieng                => 1	// Rieng
+
+// Neh'taniel
+// ----------
+sk#hera                 => 1	// Heratic
+
+// NEJ
+// ---
+acoldead                => 1	// Acolyte
+acolpois                => 1	// id.
+acolyte                 => 1	// id.
+acolyted                => 1	// id.
+tucoord                 => 1	// Cario De‘Vince
+
+// NTotSC
+// ------
+ntaschma                => 1	// Brother Aschmaan
+ntblhcu1                => 1	// Black Hand Cultist
+ntblhcul                => 1	// id.
+nthasdar                => 1	// Brother Hasdar
+ntmonkd2                => 1	// Monk
+ntmonkde                => 1	// id.
+ntordol                 => 1	// Ordolath
+ntreedri                => 1	// Reedrig
+
+// Planar Sphere
+// -------------
+psexam                  => 1	// Examiner
+pssplit1                => 1	// Test Dummy
+pssplit2                => 1	// Teos
+pssplit3                => 1	// Apprentice
+pssplit4                => 1	// Tutor
+psteos                  => 1	// Teos
+pstutor1                => 1	// Tutor
+pstutor2                => 1	// id.
+pstutor3                => 1	// id.
+pstutor4                => 1	// id.
+pstutor6                => 1	// id.
+pstutor7                => 1	// id.
+psweil                  => 1	// Wielter
+
+// A Quest in the service of Oghma
+// -------------------------------
+ththot                  => 1	// Thot
+
+// RoT
+// ---
+fgragha                 => 1	// Male Gragha
+garserv4                => 1	// Servant of the Eye
+godadv3                 => 1	// Possessed Monk
+gragham1                => 1	// Male Gragha
+gragham2                => 1	// id.
+gragham3                => 1	// Gragha
+gragham4                => 1	// id.
+gragham5                => 1	// id.
+monkss13                => 1	// Monk
+monkss14                => 1	// id.
+monkss15                => 1	// id.
+monkss16                => 1	// id.
+monkss17                => 1	// id.
+monkss18                => 1	// id.
+tapio2                  => 1	// Tapio Perkiomaki
+
+// Roar - a taciturn monk
+// ----------------------
+m#roar8                 => 1	// Roar
+
+// SoS
+// ---
+cb304tra                => 1	// Triel Villager
+cbchant1                => 1	// Chauntean Pastor
+cbchant2                => 1	// id.
+cbsbin70                => 1	// Oscar Kerlin
+cbtriel0                => 1	// Triel Villager
+cbtriel1                => 1	// id.
+cbtriel2                => 1	// id.
+cbtriel3                => 1	// id.
+cbtriel4                => 1	// id.
+cbtriel5                => 1	// id.
+cbtriel6                => 1	// id.
+cbtriel7                => 1	// id.
+cbtriel8                => 1	// id.
+cbtriel9                => 1	// id.
+
+// The Vault
+// ---------
+jc_vs1                  => 1	// Vault Sentry
+jc_vs2                  => 1	// id.
+
+// TDD
+// ---
+3303prst                => 1	// Studying Monk
+baurian                 => 1	// Baurian Arathor
+baurian2                => 1	// id.
+caliheal                => 1	// Monk
+candx01                 => 1	// Brother Masoj
+candx02                 => 1	// Brother Haunnas
+candx03                 => 1	// Brother Entris
+candx04                 => 1	// Brother Canidez
+candx05                 => 1	// Brother Eviane
+candx06                 => 1	// Brother Thael
+candx07                 => 1	// Brother Alden
+mykakol                 => 1	// Tutor
+psion1                  => 1	// Psion
+psion2                  => 1	// id.
+psion3                  => 1	// Andragore
+psion4                  => 1	// id.
+
+// The Luxley Family
+// -----------------
+fhlluc                  => 1	// Lucas
+fhlquen                 => 1	// Quennell
+fhlsim                  => 1	// Simeon
+
+// The Quest for the Holy Hand Grenade
+// -----------------------------------
+hfmaynar                => 1	// Brother Maynard
+hfmonk                  => 1	// Monk
+
+// The Stone of Askavar
+// --------------------
+hanwen                  => 1	// Hanwen
+rondan                  => 1	// Rondan
+
+// TS
+// --
+deadkem                 => 1	// Dead
+hhealer                 => 1	// Hasuno
+
+// TS25 MiniMod
+// ------------
+tz25nnde                => 1	// ?? (in Japanese)
+tz25nnor                => 1	// id.
+
+// ToB Revisited
+// -------------
+burach                  => 1	// Bhaalspawn
+
+// Uldar NPC
+// ---------
+jarall                  => 1	// Jarall
+
+// Wheels of Prophecy
+// ------------------
+dw#cutbd                => 1	// Balthazar
+
+// Unknown mods
+// ------------
+wb_bag                  => 1	
+
+END
+
+
+/* ======================================================================================= *
+ *  ARRAY GW_ghoul_female : LISTS vanilla and modded Female Ghouls needing to be patched.  *
+ * --------------------------------------------------------------------------------------- *
+ *  Some Female Ghouls get the ghoul_female animation.                                     *
+ * ======================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_ghoul_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghoul_female BEGIN
+
+// BG2
+// ---
+gtcit2                  => 1	// Ghoul
+
+// BP
+// --
+bodakmd                 => 1	// Ghoul
+
+// NEJ
+// ---
+delrysia                => 1	// Delrysia
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_ghoul_male : LISTS vanilla and modded Male Ghouls needing to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Some Male Ghouls get the ghoul_male animation.                                     *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ghoul_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ghoul_male BEGIN
+
+// BG
+// --
+"%tutu_var%korax"       => 1	// Korax the Ghoul
+
+// BG2
+// ---
+bhghoul1                => 1	// Ghoul
+gtcit1                  => 1	// Ghoul
+
+END
+
+
+/* ====================================================================================== *
+ *  ARRAY GW_godsman : LISTS vanilla and modded Male Human Smiths needing to be patched.  *
+ * -------------------------------------------------------------------------------------- *
+ *  Male Human Smiths get the godsman animation.                                          *
+ * ====================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_godsman
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_godsman BEGIN
+
+// BG
+// --
+"%tutu_var%smith"       => 1	// Smith
+"%tutu_var%taerom"      => 1	// Taerom Fuiruim
+
+// BG2
+// ---
+gorch                   => 1	// Gorch
+merchant                => 1	// Bel Dalemark
+"%shop04_bg2%"          => 1	// Enge
+"%shop07_bg2%"          => 1	// Storekeep
+thumb                   => 1	// The Thumb
+trcar04                 => 1	// Caravan Merchant
+trmer04                 => 1	// Blacksmith
+uhmer03                 => 1	// Beherant Diir
+
+// Ascalon's Breagar
+// -----------------
+actaerom                => 1	// Taerom
+
+// Bonehill
+// --------
+bhalton                 => 1	// Alton
+
+// CtB
+// ---
+cbhlvlnt                => 1	// Valiant
+
+// Dark Horizons
+// -------------
+cmmerc03                => 1	// Merchant
+
+// FfT
+// ---
+ysblksto                => 1	// Havren Holdsmith
+
+// NEJ
+// ---
+conlan                  => 1	// Conlan
+
+// RoT
+// ---
+arlaxm1                 => 1	// Merchant
+arlaxm2                 => 1	// id.
+osgil                   => 1	// Osgil
+
+// Realm of the Bhaalspawn Armor Set
+// ---------------------------------
+rbarmor                 => 1	// William Jyssev
+
+// SoS
+// ---
+cbshpp03                => 1	// Butcher
+
+// TDD
+// ---
+3314sth1                => 1	// Brother Eviane
+3314sth2                => 1	// Brother Thael
+calshop1                => 1	// Trader
+dd0334sh                => 1	// Smithy
+eastforg                => 1	// Blacksmith
+
+// Under-Represented Items from Icewind Dale 2
+// ------------
+u#conlan                => 1	// Conlan
+
+END
+
+
+/* ======================================================================================================================== *
+ *  ARRAY GW_thug_large : LISTS vanilla and modded Axe- and hammer-wielding bandits and mercenaries needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------------------ *
+ *  Axe- and hammer-wielding bandits and mercenaries get the thug_large animation.                                          *
+ * ======================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_thug_large
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_thug_large BEGIN
+
+// BG
+// --
+"%tutu_var%raiken"      => 1	// Raiken
+"%tutu_var%taugos"      => 1	// Taurgosz Khosann
+
+// BG2
+// ---
+arnfgt04                => 1	// Shadow Thief
+cohrvale                => 1	// Cohrvale
+druff1                  => 1	// Ruffian
+rethug01                => 1	// Thug
+rufpal1                 => 1	// Ruffian
+rufpal2                 => 1	// id.
+spmugg2                 => 1	// Ruffian Captain
+sargrd11                => 1	// Fighter
+pirexe01                => 1	// Executioner
+
+// BGT
+// ---
+"%tutu_var%gretek"     => 1	// Gretek (also available in BG:EE and tutu)
+
+// AjocMod
+// -------
+agbandle                => 1	// Bandit Leader
+
+// Angelo NPC
+// ----------
+adasg1                  => 1	// Thug
+adasg2                  => 1	// id
+
+// Classic Adventures
+// ------------------
+tcbandi1                => 1	// Bandit Captain
+
+// Chloe
+// -----
+submancr                => 1	// Slaver Subcommander
+
+// FfT
+// ---
+ysblgrd                 => 1	// Mercenary Guard
+
+// Quest Pack
+// ----------
+d0thug                  => 1	// Thug
+d0thug2                 => 1	// id.
+d0thug3                 => 1	// id.
+
+// Haendlermod (in German)
+// -----------------------
+nq#rbad1                => 1	// Thug
+nq#rbad2                => 1	// id.
+nq#rbad4                => 1	// id.
+
+// RoT
+// ---
+arenar1                 => 1	// Ruffian
+arenar2                 => 1	// id.
+
+// SoS
+// ---
+cb230bla                => 1	// Squad Leader
+cb230blb                => 1	// id.
+cb230blc                => 1	// id.
+cb230bld                => 1	// id.
+cb232ld1                => 1	// id.
+cb232ld2                => 1	// id.
+cb307sl1                => 1	// id.
+cb307sl2                => 1	// id.
+cbcutat0                => 1	// Bandit
+cbcutat1                => 1	// id.
+cbcutat2                => 1	// id.
+cbcutat3                => 1	// id.
+cbcutat4                => 1	// id.
+cbcutat5                => 1	// id.
+cbcutat6                => 1	// id.
+cbcutat7                => 1	// id.
+cbcutat8                => 1	// id.
+cbcutat9                => 1	// id.
+cbcutata                => 1	// id.
+cbcutatb                => 1	// id.
+cbcutatc                => 1	// id.
+cbcutatd                => 1	// id.
+cbhbso02                => 1	// id.
+cbhbso03                => 1	// id.
+cbhbso04                => 1	// id.
+cbhbso05                => 1	// id.
+cbhbso06                => 1	// id.
+cbhbso07                => 1	// id.
+cbhbso08                => 1	// id.
+cbhbso09                => 1	// id.
+cbhbso10                => 1	// id.
+cbhbso12                => 1	// id.
+cbhbso13                => 1	// id.
+cbhbso14                => 1	// id.
+cbhbso15                => 1	// id.
+cbhbso16                => 1	// id.
+cbhbso17                => 1	// id.
+cbhbso18                => 1	// id.
+cbhbso19                => 1	// id.
+cbhbso20                => 1	// id.
+cbrtrbda                => 1	// Squad Leader
+cbrtrbdb                => 1	// id.
+cbrtrbdc                => 1	// id.
+cbrtrbdd                => 1	// id.
+cbrtrbde                => 1	// id.
+cbrtrbdf                => 1	// id.
+cbrtrbdg                => 1	// id.
+cbrtrbdh                => 1	// id.
+cbrtrbdi                => 1	// id.
+cbrtrbdj                => 1	// id.
+cbrtrbdk                => 1	// id.
+
+// Stratagems
+// ----------
+dw#rnlr5                => 1	// Bandit (reband05)
+
+// Tales of Anagh
+// --------------
+z_mahan                 => 1	// Mahan
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05bl01                => 1	// Bandit Leader
+bw05bl02                => 1	// id.
+
+// UB
+// --
+wwdelag                 => 1	// Delag
+
+END
+
+
+/* ==================================================================================================================== *
+ *  ARRAY GW_thug : LISTS vanilla and modded Sword- and dagger-wielding bandits and mercenaries needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------------------- *
+ *  Sword- and dagger-wielding bandits and mercenaries get the thug animation.                                          *
+ * ==================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_thug
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_thug BEGIN
+
+// BG
+// --
+"%tutu_var%bandcap"              => 1	// Bandit
+"%tutu_var%bandcr"               => 1	// id.
+"%tutu_var%bandic"               => 1	// Deke
+"%tutu_var%bandit"               => 1	// id.
+"%tutu_var%bandita"              => 1	// Bandit
+"%tutu_var%banditc"              => 1	// id.
+"%tutu_scriptb%anditcy"          => 1	// Ruffian
+"%tutu_scriptbg%carbos%eet_var%" => 1	// Carbos
+"%tutu_var%credus"               => 1	// Credus
+"%tutu_var%flamang"              => 1	// Mercenary
+"%tutu_var%knott"                => 1	// Knott
+"%tutu_var%teven"                => 1	// Teven
+
+// BG2
+// ---
+arnwar02                => 1	// Shadow Thief
+bdturm04                => 1	// Turmish Thug
+"%carbos_bg2%"          => 1	// Carbos
+genthf01                => 1	// Thug
+reband01                => 1	// Bandit
+reband02                => 1	// id.
+reband03                => 1	// id.
+repthf2                 => 1	// Shadow Thief
+rethug03                => 1	// Thug
+rethug04                => 1	// id.
+spmugg3                 => 1	// id.
+stguard1                => 1	// Shadow Thief
+stguard2                => 1	// id.
+stguard3                => 1	// id.
+tantug01                => 1	// Thug
+tantug03                => 1	// id.
+vakfgt01                => 1	// id.
+vakthf01                => 1	// Thug
+spmugg                  => 1	// Mugger
+
+// AjocMod
+// -------
+agband01                => 1	// Bandit
+agband02                => 1	// id.
+
+// Ariena NPC (The Mod for the Wicked)
+// -----------------------------------
+mwbohu1                 => 1	// Mercenary
+mwbohu2                 => 1	// id.
+mwbohu3                 => 1	// id.
+mwbohu4                 => 1	// id.
+mwbohu5                 => 1	// id.
+
+// Assassinations
+// --------------
+o#crstg1                => 1	// Thug
+o#crstg2                => 1	// id.
+
+// Auren Aseph for BG2:ToB
+// -----------------------
+grunt1                  => 1	// 96
+grunt2                  => 1	// id.
+grunt3                  => 1	// id.
+
+// Bonehill
+// --------
+bhbandt1                => 1	// Bandit
+bhbandt3                => 1	// Hand Bandit Leader
+bhsharg1                => 1	// Mercenary
+
+// BP
+// --
+gbband1a                => 1	// Bandit
+gbband1b                => 1	// id.
+tantugn1                => 1	// Thug
+
+// CtB
+// ---
+cbeledi3                => 1	// Bodyguard
+cbmalr2                 => 1	// id.
+cbmalr5                 => 1	// id.
+
+// Classic Adventures
+// ------------------
+spmugg1                 => 1	// Thug
+
+// FfT
+// ---
+yschbnd                 => 1	// Bandit
+
+// Haendlermod (in German)
+// -----------------------
+nq#rbad5                => 1	// Thug
+
+// NEJ
+// ---
+bandit2                 => 1	// Bandit
+
+// NTotSC
+// ------
+ntbrigan                => 1	// Brigand
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_carl1                => 1	// Thug
+re_carl2                => 1	// id.
+
+// RoT
+// ---
+castre4                 => 1	// Mercenary
+castre5                 => 1	// id.
+mythug                  => 1	// Trained Thug
+
+// Rogue Rebalancing
+// -----------------
+rr#saw02                => 1	// Shadow Thief Thug
+
+// Rose NPC
+// --------
+k-rmer1                 => 1	// Mercenary
+
+// SoS
+// ---
+cb230baa                => 1	// Squad Bandit
+cb230bas                => 1	// id.
+cb230bba                => 1	// id.
+cb230bbs                => 1	// id.
+cb230bca                => 1	// id.
+cb230bcs                => 1	// id.
+cb230bda                => 1	// id.
+cb230bds                => 1	// id.
+cb232bd1                => 1	// id.
+cb232bd2                => 1	// id.
+cb232bd3                => 1	// id.
+cb232bd4                => 1	// id.
+cb232bd5                => 1	// id.
+cb232bda                => 1	// id.
+cb232bdb                => 1	// id.
+cb232bdc                => 1	// id.
+cb232bdd                => 1	// id.
+cb232bde                => 1	// id.
+cb232rna                => 1	// Bandit
+cb430sce                => 1	// id.
+cb430scf                => 1	// id.
+cbrdptbd                => 1	// id.
+cbrtbda1                => 1	// id.
+cbrtbda3                => 1	// id.
+cbrtbdb1                => 1	// id.
+cbrtbdb3                => 1	// id.
+cbrtbdc1                => 1	// id.
+cbrtbdc3                => 1	// id.
+cbrtbdd1                => 1	// id.
+cbrtbdd3                => 1	// id.
+cbrtbde1                => 1	// id.
+cbrtbde3                => 1	// id.
+cbrtbdg1                => 1	// id.
+cbrtbdg3                => 1	// id.
+cbrtbdh1                => 1	// id.
+cbrtbdh3                => 1	// id.
+cbrtbdi1                => 1	// id.
+cbrtbdi3                => 1	// id.
+cbrtbdj1                => 1	// id.
+cbrtbdj3                => 1	// id.
+cbrtbdk1                => 1	// id.
+cbrtbdk3                => 1	// id.
+cbsdso01                => 1	// id.
+cbsdso02                => 1	// id.
+cbsdso03                => 1	// id.
+cbsdso04                => 1	// id.
+cbsdso05                => 1	// id.
+cbsdso06                => 1	// id.
+cbsdso07                => 1	// id.
+cbsdso08                => 1	// id.
+cbsdso09                => 1	// id.
+cbsdso10                => 1	// id.
+cbsdso11                => 1	// id.
+cbsdso12                => 1	// id.
+cbsdso21                => 1	// id.
+cbsdso22                => 1	// id.
+cbsdso23                => 1	// id.
+cbsdso24                => 1	// id.
+cbsdso25                => 1	// id.
+cbsdso26                => 1	// id.
+cbsdso27                => 1	// id.
+cbsdso28                => 1	// id.
+cbsdso29                => 1	// id.
+cbsdso30                => 1	// id.
+cbsdso31                => 1	// id.
+cbsdso32                => 1	// id.
+cbsdso41                => 1	// id.
+cbsdso42                => 1	// id.
+cbsdso43                => 1	// id.
+cbsdso44                => 1	// id.
+cbsdso45                => 1	// id.
+cbsdso46                => 1	// id.
+cbsdso47                => 1	// id.
+cbsdso48                => 1	// id.
+cbsdso49                => 1	// id.
+cbsdso50                => 1	// id.
+cbsdso51                => 1	// id.
+cbsdso52                => 1	// id.
+cbspyban                => 1	// id.
+
+// Stratagems
+// ----------
+dw#refg1                => 1	// Bandit (reband03)
+dw#rnlr1                => 1	// id. reband01
+dw#rnlr2                => 1	// id. (reband02)
+dw#rnlr3                => 1	// id. (reband03)
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05ba01                => 1	// Grey Clan Bandit
+bw05ba03                => 1	// id.
+bw05ba05                => 1	// id.
+bw05ba06                => 1	// id.
+bw05ba07                => 1	// id.
+bw05baat                => 1	// id.
+bw05bach                => 1	// id.
+bw05barp                => 1	// id.
+
+// The Undying
+// -----------
+cmcorma2                => 1	// Cormak Thug
+
+// Unknown mods
+// ------------
+acguard2                => 1	// 
+
+// BG1 NPC ???
+// -------
+x#bandk1                => 1	// Caravan Bandit ~%tutu_var%bandit.cre~ does not seem to be installed...
+x#bandk2                => 1	// 
+x#bandk3                => 1	// 
+
+END
+
+
+/* ============================================================================================================ *
+ *  ARRAY GW_townie_lower_class_female : LISTS vanilla and modded Female Human Peasants needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------ *
+ *  Female Human Peasants get the townie_lower_class_female animation.                                          *
+ * ============================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_townie_lower_class_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_lower_class_female BEGIN
+
+// BG
+// --
+"%tutu_scriptbg%ftown2%eet_var%" => 1	// Commoner
+"%tutu_scriptbg%ftown3%eet_var%" => 1	// id.
+"%tutu_scriptbg%ftown4%eet_var%" => 1	// id.
+"%tutu_var%ardrou"               => 1	// Ardrouine
+"%tutu_var%fcook2"               => 1	// Cook
+"%tutu_var%fcook3"               => 1	// id.
+"%tutu_var%fecook"               => 1	// id.
+"%tutu_var%friwen"               => 1	// Serving Wench
+"%tutu_var%ftobe2"               => 1	// Commoner
+"%tutu_var%ftobe3"               => 1	// id.
+"%tutu_var%ftobe4"               => 1	// id.
+"%tutu_var%ftobe5"               => 1	// id.
+"%tutu_var%ftobe6"               => 1	// id.
+"%tutu_var%ftobe7"               => 1	// id.
+"%tutu_var%ftobe8"               => 1	// id.
+"%tutu_var%ftobe9"               => 1	// id.
+"%tutu_var%ftowb5"               => 1	// id.
+"%tutu_var%ftowb6"               => 1	// id.
+"%tutu_var%ftowb7"               => 1	// id.
+"%tutu_var%ftowba"               => 1	// id.
+"%tutu_scriptf%towba_a"          => 1	// id.
+"%ftowba_b%"                     => 1	// id.
+"%tutu_scriptf%towba_c"          => 1	// id.
+"%ftowba_d%"                     => 1	// id.
+"%ftowba_e%"                     => 1	// id.
+"%tutu_var%ftowbax"              => 1	// id.
+"%ftowbe_a%"                     => 1	// id.
+"%ftowbe_b%"                     => 1	// id.
+"%ftowbe_c%"                     => 1	// id.
+"%ftowbe_d%"                     => 1	// id.
+"%ftowbe_e%"                     => 1	// id.
+"%tutu_var%ftowbex"              => 1	// id.
+"%tutu_var%ftowfr"               => 1	// id.
+"%ftowfr_b%"                     => 1	// id.
+"%tutu_scriptf%towfr_d"          => 1	// id.
+"%ftowfr_e%"                     => 1	// id.
+"%tutu_var%ftowna"               => 1	// id.
+"%ftowna_a%"                     => 1	// id.
+"%ftowna_b%"                     => 1	// id.
+"%tutu_scriptf%towna_e"          => 1	// id.
+"%tutu_var%ftowub"               => 1	// id.
+"%ftowub_a%"                     => 1	// id.
+"%ftowub_b%"                     => 1	// id.
+"%ftowub_c%"                     => 1	// id.
+"%ftowub_d%"                     => 1	// id.
+"%ftowub_e%"                     => 1	// id.
+"%tutu_var%ftowubx"              => 1	// id.
+"%ftwbax_a%"                     => 1	// id.
+"%ftwbax_b%"                     => 1	// id.
+"%ftwbax_c%"                     => 1	// id.
+"%ftwbax_d%"                     => 1	// id.
+"%ftwbax_e%"                     => 1	// id.
+"%tutu_var%karp"                 => 1	// Karp
+"%tutu_var%kryla"                => 1	// Kryla
+"%tutu_var%lantan"               => 1	// Lantanara
+"%tutu_var%maple"                => 1	// Maple Willow Aspen
+"%tutu_var%nessie"               => 1	// Nessie
+"%tutu_var%sanadal"              => 1	// Sanadal Gwist
+"%tutu_var%therel"               => 1	// Therella
+"%tutu_var%vivien"               => 1	// Vivienne
+
+// BG2
+// ---
+amcust01                => 1	// Commoner
+amfem01                 => 1	// id.
+amfem03                 => 1	// id.
+amintw01                => 1	// id.
+bdact01                 => 1	// Wynn
+bdact03                 => 1	// Jenna
+bdaud02                 => 1	// Peasant
+becky                   => 1	// Becky
+beggar3                 => 1	// Beggar
+bftown1                 => 1	// Commoner
+bftown2                 => 1	// Commoner
+cenanny                 => 1	// Nanny
+chore                   => 1	// Chore
+clmom                   => 1	// Miranda
+copcust2                => 1	// Commoner
+csheck1                 => 1	// Heckler
+daslave5                => 1	// Slave
+deltow02                => 1	// Patron
+dftown1                 => 1	// Commoner
+dftown2                 => 1	// id.
+diane                   => 1	// Diane
+dpfemale                => 1	// Peasant
+dpstat01                => 1	// Eliya
+ffcrowd4                => 1	// Commoner
+ffcust03                => 1	// Tavern Patron
+food                    => 1	// Food
+ftown1                  => 1	// Commoner
+"%ftown2_bg2%"          => 1	// id.
+"%ftown4_bg2%"          => 1	// id.
+ftown5                  => 1	// id.
+ftown6                  => 1	// id.
+ftown7                  => 1	// Tavern Patron
+gemfar01                => 1	// Enna Hendrick
+gftown01                => 1	// Commoner
+kftown02                => 1	// Hannah
+kpfarm02                => 1	// Citizen
+kpmaid01                => 1	// Chanelle the Maid
+kpmaid02                => 1	// Talira the Maid
+life05                  => 1	// Commoner
+life06                  => 1	// id.
+mourner2                => 1	// Mourner
+mumfig01                => 1	// Commoner
+peony                   => 1	// Peony
+pirmur10                => 1	// Claire
+postul5                 => 1	// Peasant
+pris01                  => 1	// Prisoner
+rerak03                 => 1	// Traveler
+riftw01                 => 1	// Diseased One
+sarfem02                => 1	// Peasant
+sarfem03                => 1	// id.
+sarfem04                => 1	// id.
+sarwai01                => 1	// Waitress
+slumf1                  => 1	// Commoner
+trcut03                 => 1	// Peasant
+trftow01                => 1	// Trissa
+trftow03                => 1	// Peasant
+trgyp02                 => 1	// Kveroslava
+trskin05                => 1	// Jenia
+uhfarm03                => 1	// Margie
+uhfem02                 => 1	// Johanna
+victown2                => 1	// Commoner
+vvstand3                => 1	// Peasant
+wwench                  => 1	// Rebecca
+yspeas03                => 1	// Peasant
+
+// Amber
+// -----
+m#ygswen                => 1	// Serving Girl
+
+// Angelo NPC
+// ----------
+adtobbar                => 1	// Maid
+
+// Ariena NPC (The Mod for the Wicked)
+// -----------------------------------
+mwandia                 => 1	// Andia
+
+// Assassinations
+// --------------
+o#crwom3                => 1	// Crying Woman
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#adyl                  => 1	// Adylin
+
+// BG1 UB
+// ------
+"%tutu_var%edie"        => 1	// Edie
+"%tutu_var%ennahe"      => 1	// Enna Hendrik
+
+// BGQE
+// ----
+c#q01001                => 1	// Alanna
+c#q03011                => 1	// Tina
+c#q05002                => 1	// Onlooker
+c#q05006                => 1	// Luisa's Mother
+c#q05007                => 1	// Nanny
+c#q06001                => 1	// Leila
+c#q07002                => 1	// Viola
+
+// Bonehill
+// --------
+bhcomf01                => 1	// Commoner
+bhcomf02                => 1	// id.
+bhrelba                 => 1	// Relba
+
+// CtB
+// ---
+cb596se7                => 1	// Commoner
+cbffcrw4                => 1	// Commoner
+cbhld002                => 1	// Peasant
+cbhld0w1                => 1	// id.
+cbhld0w2                => 1	// id.
+cbhld0w3                => 1	// id.
+cbhld0w6                => 1	// id.
+
+// Classic Adventures
+// ------------------
+dead3                   => 1	// Adventurer
+tc1603f2                => 1	// Peasant
+tcfarm03                => 1	// Margie
+tcmmwom1                => 1	// Commoner
+tcmmwom3                => 1	// Trissa
+tcpbpf2                 => 1	// Peasant
+tcselfp2                => 1	// Commoner
+tcserva2                => 1	// Servant
+tcsfc01                 => 1	// Peasant
+tctinke2                => 1	// Zappora
+tcwgwom2                => 1	// Quella
+tcwgwom3                => 1	// id.
+tcwoman1                => 1	// Commoner
+tcwoman2                => 1	// id.
+tcwoman3                => 1	// id.
+tcwoman4                => 1	// id.
+
+// de'Arnise Romance
+// -----------------
+pgnalteo                => 1	// Teodora
+
+// DSotSC
+// ------
+dsmaid                  => 1	// Cook
+
+// Emad
+// ----
+clfcer                  => 1	// Cerese
+clifrz                  => 1	// Rizza
+
+// Expanded Thief Stronghold
+// -------------------------
+tspick7                 => 1	// Peasant
+
+// Fading Promise
+// --------------
+"b!selma"               => 1	// Selma
+
+// FfT
+// ---
+ysapopf                 => 1	// Commoner
+yschcom1                => 1	// id.
+yschcom2                => 1	// id.
+ysfhslp                 => 1	// Commoner
+ysgensto                => 1	// Old Mother Dorwen
+ystw_a                  => 1	// Commoner
+ystw_b                  => 1	// id.
+ystw_c                  => 1	// id.
+ystw_d                  => 1	// id.
+ystw_e                  => 1	// id.
+ystwwa                  => 1	// id.
+ystwwb                  => 1	// id.
+ystwwc                  => 1	// id.
+ystwwd                  => 1	// id.
+ystwwe                  => 1	// id.
+yswmn2r                 => 1	// Fishwife
+yswmn4r                 => 1	// id.
+yswoman2                => 1	// Commoner
+yswoman4                => 1	// id.
+
+// Gavin BG2
+// ---------
+"b!clmom"               => 1	// Miranda
+"b!herb02"              => 1	// Goody Clara
+"b!herb03"              => 1	// Goody Vera
+"b!herb05"              => 1	// Goody Marli
+"b!herb07"              => 1	// Goody Alma
+
+// Improved Anvil
+// --------------
+"s!gypsy"               => 1	// Marvella
+
+// Innershade (Colours of Infinity)
+// --------------------------------
+9xcomm6                 => 1	// Commoner
+9xolady                 => 1	// Barbara
+
+// Keto NPC
+// --------
+pgcrowdc                => 1	// Peasant
+pgcrowdg                => 1	// id.
+pgkmom                  => 1	// Grainne
+pgpru                   => 1	// Prudence
+
+// NEJ
+// ---
+amelia                  => 1	// Amelia
+deadvilf                => 1	// Captive Villager
+egeques2                => 1	// Captive Villager
+fcapvil                 => 1	// id.
+lysan                   => 1	// Lysan
+slavedf1                => 1	// Dead Slave
+slavedf2                => 1	// id.
+slavef3                 => 1	// Slave
+slavef4                 => 1	// id.
+slavef5                 => 1	// id.
+slavef6                 => 1	// id.
+slavef7                 => 1	// id.
+townief1                => 1	// Townsperson
+townief2                => 1	// id.
+townief3                => 1	// id.
+townief4                => 1	// id.
+townief5                => 1	// id.
+
+// NTotSC
+// ------
+ntabigai                => 1	// Maid
+ntwinorm                => 1	// Winorma
+
+// Quest Pack
+// ----------
+baisera                 => 1	// Baisera
+d0ftown2                => 1	// Commoner
+d0poor                  => 1	// Moiya
+d0qpmom                 => 1	// Sidhe
+j#im8wif                => 1	// Lillian
+
+// RoT
+// ---
+arenaa2                 => 1	// Audience
+arenaa3                 => 1	// id.
+arenac2                 => 1	// Commoner
+arlaxc2                 => 1	// id.
+arlaxc5                 => 1	// id.
+arlaxp2                 => 1	// Peasant
+arlaxp5                 => 1	// id.
+brevil4                 => 1	// Villager
+brevil5                 => 1	// id.
+brevil6                 => 1	// id.
+cultsa18                => 1	// Woman
+cultsa19                => 1	// id.
+cultsa20                => 1	// id.
+cultsa23                => 1	// Sacrifice
+cultsa24                => 1	// id.
+cultsac2                => 1	// id.
+cultsac3                => 1	// id.
+fvill1                  => 1	// Villager
+fvill2                  => 1	// id.
+fvill3                  => 1	// id.
+marliss                 => 1	// Marliss
+pcdw                    => 1	// Peasant
+pcdw2                   => 1	// id.
+selden                  => 1	// Selden
+slavew1                 => 1	// Slave
+slavew2                 => 1	// id.
+
+// Saerileth
+// ---------
+nsflower                => 1	// Hana
+
+// Severian de Demerya
+// -------------------
+"#sfarm03"              => 1	// Margie
+"#sfem02"               => 1	// Johanna
+"#smfar01"              => 1	// Enna Hendrick
+"#smichel"              => 1	// La Mère Michèle
+
+// SoS
+// ---
+cb232fm3                => 1	// Adventurer
+cb270ccd                => 1	// Soubar Villager
+cb270pt1                => 1	// id.
+cb304sva                => 1	// id.
+cb304svb                => 1	// id.
+cb304svc                => 1	// id.
+cbsbtvrd                => 1	// Soubar Villager
+cbsbtvrk                => 1	// id.
+cbsbvilb                => 1	// id.
+cbsbvile                => 1	// id.
+cbsbvilh                => 1	// id.
+cbsbvlib                => 1	// id.
+cbsbvlie                => 1	// id.
+cbsbvlih                => 1	// id.
+cbsbvliu                => 1	// id.
+cbsbvlix                => 1	// id.
+cbsobann                => 1	// id.
+
+// TDD
+// ---
+3306pes                 => 1	// House Wife
+bgcom1                  => 1	// Commoner
+bgwit1                  => 1	// id.
+calicom1                => 1	// id.
+calipes1                => 1	// Street Beggar
+ddlarala                => 1	// Larala
+ddsheina                => 1	// Sheina
+ddwman01                => 1	// Woman
+ddwman02                => 1	// id.
+dinanmum                => 1	// Johanna
+dinmum2                 => 1	// id.
+lady3301                => 1	// House Wife
+pknobw1                 => 1	// Faith
+pknobw2                 => 1	// Dillarin
+priscali                => 1	// Prisoner
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05feli                => 1	// Felicia
+bw05lucy                => 1	// Lucy
+
+// The Jerry Zinger Show
+// ---------------------
+jzcount                 => 1	// Receptionist
+jzcrwdf1                => 1	// Audience
+
+// The Luxley Family
+// -----------------
+fhlmw                   => 1	// Katya
+
+// TS
+// --
+cdmaid1                 => 1	// Captive Woman
+cdmaid2                 => 1	// id.
+
+// TS25 MiniMod
+// ------------
+tz25__j2                => 1	// ?? (in Japanese)
+"tz25_!cf"              => 1	// id.
+"tz25_!mz"              => 1	// id.*/
+
+END
+
+
+/* ======================================================================================================== *
+ *  ARRAY GW_townie_lower_class_male : LISTS vanilla and modded Male Human Peasants needing to be patched.  *
+ * -------------------------------------------------------------------------------------------------------- *
+ *  Male Human Peasants get the townie_lower_class_male animation.                                          *
+ * ======================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_townie_lower_class_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_lower_class_male BEGIN
+
+// BG
+// --
+"%tutu_var%andout"               => 1	// Andout
+"%tutu_var%binkos"               => 1	// Binkos
+"%tutu_var%bip"                  => 1	// Servant
+"%tutu_var%borin"                => 1	// Borinole Mann
+"%tutu_var%brenna"               => 1	// Brennan Risling
+"%tutu_var%cauter"               => 1	// Cauternus
+"%tutu_var%charle"               => 1	// Charleston Nib
+"%tutu_var%chelan"               => 1	// Chelan
+"%tutu_var%connol"               => 1	// Connoly Finn
+"%tutu_var%dead"                 => 1	// Miner
+"%tutu_var%dead1"                => 1	// id.
+"%tutu_var%dillar"               => 1	// Dillar
+"%tutu_var%drunk"                => 1	// Drunk
+"%tutu_var%farm"                 => 1	// Farmer
+"%tutu_var%farm3"                => 1	// id.
+"%tutu_var%farm4"                => 1	// id.
+"%tutu_var%farmbr"               => 1	// Farmer Brun
+"%tutu_var%farmer"               => 1	// Farmer
+"%tutu_var%galken"               => 1	// 
+"%tutu_var%garden"               => 1	// Gardener
+"%tutu_var%golinv"               => 1	// Golin Vend
+"%tutu_var%hecito"               => 1	// Hecito
+"%tutu_var%hephis"               => 1	// Hephis
+"%tutu_var%hulrik"               => 1	// Hulrik
+"%tutu_var%jebado"               => 1	// Jebadoh
+"%tutu_var%jopi"                 => 1	// Jopi
+"%tutu_var%kerrac"               => 1	// Kerrachus
+"%tutu_var%keshee"               => 1	// Kesheel
+"%tutu_var%kissiq"               => 1	// Kissiq
+"%tutu_var%lachlu"               => 1	// Lachluger
+"%tutu_var%lestor"               => 1	// Lestor
+"%tutu_var%mcook"                => 1	// Cook
+"%tutu_var%mcook2"               => 1	// id.
+"%tutu_var%mcook3"               => 1	// id.
+"%tutu_var%mcook4"               => 1	// id.
+"%tutu_var%mcook5"               => 1	// id.
+"%tutu_var%mick"                 => 1	// Mick Feelie
+"%tutu_var%mtbe10"               => 1	// Butler
+"%tutu_var%mtbe11"               => 1	// Mr. Colquetle
+"%tutu_var%mtbe2"                => 1	// Commoner
+"%tutu_var%mtbe3"                => 1	// id.
+"%tutu_var%mtbe4"                => 1	// id.
+"%tutu_var%mtbe5"                => 1	// id.
+"%tutu_var%mtbe6"                => 1	// id.
+"%tutu_var%mtbe7"                => 1	// id.
+"%tutu_var%mtbe8"                => 1	// id.
+"%tutu_var%mtbe9"                => 1	// Alain
+"%tutu_var%mtob2"                => 1	// Commoner
+"%tutu_var%mtob3"                => 1	// id.
+"%tutu_var%mtob6"                => 1	// id.
+"%tutu_var%mtob7"                => 1	// id.
+"%tutu_var%mtob8"                => 1	// id.
+"%tutu_var%mtob9"                => 1	// id.
+"%tutu_var%mtowba"               => 1	// id.
+"%mtowba_a%"                     => 1	// id.
+"%tutu_scriptm%towba_b"          => 1	// id.
+"%mtowba_c%"                     => 1	// id.
+"%tutu_scriptm%towba_d"          => 1	// id.
+"%tutu_scriptm%towba_e"          => 1	// id.
+"%tutu_var%mtowbax"              => 1	// id.
+"%tutu_var%mtowbe"               => 1	// id.
+"%tutu_scriptm%towbe_a"          => 1	// id.
+"%tutu_scriptm%towbe_b"          => 1	// id.
+"%tutu_scriptm%towbe_c"          => 1	// id.
+"%tutu_scriptm%towbe_d"          => 1	// id.
+"%tutu_scriptm%towbe_e"          => 1	// id.
+"%tutu_var%mtowbex"              => 1	// id.
+"%tutu_var%mtowf2"               => 1	// id.
+"%tutu_var%mtowfr"               => 1	// id.
+"%tutu_scriptm%towfr_a"          => 1	// id.
+"%tutu_scriptm%towfr_b"          => 1	// id.
+"%tutu_scriptm%towfr_c"          => 1	// id.
+"%mtowfr_d%"                     => 1	// id.
+"%tutu_scriptm%towfr_e"          => 1	// id.
+"%tutu_scriptbg%mtown2%eet_var%" => 1	// id.
+"%tutu_scriptbg%mtown3%eet_var%" => 1	// id.
+"%tutu_scriptbg%mtown4%eet_var%" => 1	// id.
+"%tutu_var%mtowna"               => 1	// id.
+"%tutu_scriptm%towna_a"          => 1	// id.
+"%tutu_scriptm%towna_b"          => 1	// id.
+"%tutu_scriptm%towna_c"          => 1	// id.
+"%tutu_scriptm%towna_d"          => 1	// id.
+"%tutu_var%mtowub"               => 1	// id.
+"%tutu_var%mtowubx"              => 1	// id.
+"%tutu_scriptm%twbax_a"          => 1	// id.
+"%tutu_scriptm%twbax_b"          => 1	// id.
+"%tutu_scriptm%twbax_c"          => 1	// id.
+"%tutu_scriptm%twbax_d"          => 1	// id.
+"%tutu_scriptm%twbax_e"          => 1	// id.
+"%tutu_var%mtwslim"              => 1	// id.
+"%tutu_scriptm%twslim2"          => 1	// id.
+"%tutu_scriptm%twslim3"          => 1	// id.
+"%tutu_scriptm%towub_a"          => 1	// id.
+"%tutu_scriptm%towub_b"          => 1	// id.
+"%tutu_scriptm%towub_c"          => 1	// id.
+"%tutu_scriptm%towub_d"          => 1	// id.
+"%tutu_scriptm%towub_e"          => 1	// id.
+"%tutu_var%nikola"               => 1	// Nikolai
+"%tutu_var%nivek"                => 1	// Nivek
+"%tutu_var%noober"               => 1	// Noober
+"%tutu_var%nosfer"               => 1	// Performer
+"%tutu_var%ocelli"               => 1	// Ocellis
+"%tutu_var%oogiew"               => 1	// Oogie Wisham
+"%tutu_var%pnashk"               => 1	// Performer
+"%tutu_var%raleo"                => 1	// Raleo Windspear
+"%tutu_var%rodnim"               => 1	// Rodnin
+"%tutu_scriptbg%roger%eet_var%"  => 1	// Roger
+"%tutu_var%sailnew"              => 1	// Sailor Newf
+"%tutu_var%serva2"               => 1	// Servant
+"%tutu_var%servan"               => 1	// id.
+"%tutu_var%sewerc"               => 1	// Sewer Cleaner
+"%tutu_var%shep"                 => 1	// Shep
+"%tutu_var%shopkn"               => 1	// Storekeep
+"%tutu_var%sonner"               => 1	// Sonner
+"%tutu_var%spengil"              => 1	// Spen Gil'meh
+"%tutu_var%sprat"                => 1	// Sprat
+"%tutu_var%surrey"               => 1	// Surrey
+"%tutu_var%telmen"               => 1	// Telman
+"%tutu_var%tiber"                => 1	// Tiber
+"%tutu_var%tick"                 => 1	// Tick
+"%tutu_var%torlo"                => 1	// Torlo
+"%tutu_scriptbg%towncr%eet_var%" => 1	// Town Crier
+"%tutu_scriptt%ourist1"          => 1	// Tourist
+"%tutu_scriptt%ourist2"          => 1	// id.
+"%tutu_scriptt%ourist3"          => 1	// id.
+"%tutu_var%trave2"               => 1	// Traveler
+"%tutu_var%waiter"               => 1	// Waiter
+"%tutu_var%wenric"               => 1	// Wenric
+"%tutu_var%wilco"                => 1	// Wilco
+
+// BG2
+// ---
+alphonse                => 1	// Alphonse
+amconm01                => 1	// Commoner
+amcst01                 => 1	// id.
+amintm01                => 1	// id.
+amman01                 => 1	// id.
+amman03                 => 1	// id.
+announ                  => 1	// Peasant
+bdact02                 => 1	// Ketrick
+bdact06                 => 1	// Marcus
+bdact10                 => 1	// id.
+bdaud01                 => 1	// Peasant
+bfisher1                => 1	// Fisherman
+bmtown1                 => 1	// Peasant
+bmtown2                 => 1	// id.
+bmtown3                 => 1	// id.
+bystand1                => 1	// Ler
+cebeggar                => 1	// Catis
+clerk01                 => 1	// Clerk
+csheck2                 => 1	// Heckler
+cssupp1                 => 1	// Peasant
+cssupp2                 => 1	// id.
+cssupp3                 => 1	// id.
+custom                  => 1	// id.
+daleson                 => 1	// Daleson
+dbeggar                 => 1	// Beggar
+deltow01                => 1	// Patron
+dfisher                 => 1	// Fisherman
+dmtown1                 => 1	// Peasant
+dmtown2                 => 1	// id.
+dorkus                  => 1	// Dorkus
+dpmale                  => 1	// Peasant
+dpstat02                => 1	// Petrified Man
+fetch                   => 1	// Fetch
+ffcrowd3                => 1	// Peasant
+ffcust04                => 1	// Tavern Patron
+gemjeb01                => 1	// Jeb
+genpeasm                => 1	// Peasant
+gmtown02                => 1	// Commoner
+gorf02                  => 1	// Bystander
+hervo                   => 1	// Hervo
+ilman01                 => 1	// Commoner
+kpbutl01                => 1	// Metigo the Butler
+kpfarm01                => 1	// Citizen
+kprunn01                => 1	// Keep Messenger
+kpserv01                => 1	// Servant
+madeen                  => 1	// Madeen
+messen                  => 1	// Flydian
+mourner1                => 1	// Nevin
+mtown1                  => 1	// Peasant
+"%mtown3_bg2%"          => 1	// id.
+"%mtown4_bg2%"          => 1	// id.
+"%mtown5_bg2%"          => 1	// Tavern Patron
+murtlen                 => 1	// Murtlen
+neeber                  => 1	// Neeber
+orphan2                 => 1	// Peasant
+pirfsh01                => 1	// Fisherman
+pirpir12                => 1	// Pirate Newf
+player1                 => 1	// Peasant
+postul4                 => 1	// Commoner
+ppinn01                 => 1	// Innkeeper 
+ppstor01                => 1	// Storekeep
+pptown1                 => 1	// Peasant
+pptown2                 => 1	// id.
+pptown3                 => 1	// id.
+pptown4                 => 1	// id.
+rerak04                 => 1	// Traveler
+sarman01                => 1	// Peasant
+sarman02                => 1	// id.
+sarman04                => 1	// id.
+sarpris1                => 1	// Prisoner
+scbutler                => 1	// Butler
+servant                 => 1	// Peasant
+slumm1                  => 1	// id.
+slumm2                  => 1	// id.
+slumm3                  => 1	// id.
+slvic03                 => 1	// Tourist
+spbene                  => 1	// Bene
+spphil                  => 1	// Philbert
+spsamar                 => 1	// Samar
+sptredd                 => 1	// Treddin
+stage01                 => 1	// Peasant
+tirdir                  => 1	// Tirdir
+tour01                  => 1	// Peasant
+tour1                   => 1	// Harrold
+"%towncr_bg2%"          => 1	// Peasant
+train01                 => 1	// id.
+trcut04                 => 1	// id.
+trgyp01                 => 1	// Mastav
+trmtow02                => 1	// Martur
+trskin04                => 1	// Gristor
+trtavp04                => 1	// Tavern Patron
+udilsla2                => 1	// Slave Leader
+udilsla4                => 1	// id.
+uhfarm01                => 1	// Dale the Herder
+uhfarm02                => 1	// Groos the Herder
+uhman01                 => 1	// Ander
+victown1                => 1	// Commoner
+vvstand1                => 1	// Peasant
+vvstand2                => 1	// id.
+yspeas02                => 1	// id.
+
+// Ajantis for BG2
+// ---------------
+c#ajeler                => 1	// Erenal
+
+// Alternatives
+// ------------
+"b!altmsg"              => 1	// Alten
+"b!vulbtr"              => 1	// Butler
+"b!vulcok"              => 1	// Cook
+
+// Angelo NPC
+// ----------
+adpierre                => 1	// Pierre
+
+// Assassinations
+// --------------
+o#crsim                 => 1	// Simon
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#baev                  => 1	// Baevrin
+
+// BG1 UB
+// ------
+"%tutu_var%erlinh"      => 1	// Erlin Hendrik
+"%tutu_var%galkin"      => 1	// Galkin
+"%tutu_var%mtob4"       => 1	// Commoner
+"%tutu_var%mtob5"       => 1	// id
+"%tutu_var%travel"      => 1	// Wade
+ubfarm5                 => 1	// Farmer
+"%tutu_var%wilton"      => 1	// Wilton
+
+// BGQE
+// ----
+c#q02006                => 1	// Mr. Dudley
+c#q05004                => 1	// Onlooker
+c#q05005                => 1	// id.
+c#q07004                => 1	// Mr. Kenn
+c#q07005                => 1	// Commoner
+
+// BP
+// --
+arvor                   => 1	// Celestial Fire
+
+// Bonehill
+// --------
+bhbalmar                => 1	// Balmar
+bhcomm06                => 1	// Commoner
+bhfarm                  => 1	// id.
+bhst0102                => 1	// Pheldman
+bhzahr                  => 1	// Zahrdahl
+
+// CtB
+// ---
+cb3651in                => 1	// Inkeeper
+cb596se8                => 1	// Peasant
+cbct3513                => 1	// Peasant
+cbffcrw3                => 1	// Peasant
+cbhld001                => 1	// id.
+cbhld005                => 1	// id.
+cbhld006                => 1	// id.
+cbhld007                => 1	// id.
+cbhld008                => 1	// id.
+cbhld0m1                => 1	// id.
+cbhld0m4                => 1	// id.
+cbhld0m6                => 1	// id.
+cbhld0m7                => 1	// id.
+cbhld0m8                => 1	// id.
+cbryberg                => 1	// Ryberg
+cbsfmess                => 1	// Messenger
+cbusherw                => 1	// Butler
+
+// Classic Adventures
+// ------------------
+tc1602b                 => 1	// Slave
+tc1603m2                => 1	// Peasant
+tc2000pm                => 1	// id.
+tcbart3                 => 1	// Bartender
+tcbenthi                => 1	// Benthic
+tcbutler                => 1	// Butler
+tccook3                 => 1	// Cook
+tccook5                 => 1	// id.
+tccrut                  => 1	// Crutiln
+tcfarm01                => 1	// Dale the Herder
+tcfarm02                => 1	// Groos the Herder
+tcman01                 => 1	// Ander
+tcman1                  => 1	// Peasant
+tcman4                  => 1	// id.
+tcman6                  => 1	// id.
+tcman8                  => 1	// id.
+tcmmman1                => 1	// Olix the Farmer
+tcmmman2                => 1	// Peasant
+tcmmman3                => 1	// id.
+tcmmman4                => 1	// Pellidon
+tcpbpm1                 => 1	// Peasant
+tcpbpm3                 => 1	// Virdion
+tcpbpm4                 => 1	// Kurst
+tcselmp2                => 1	// Peasant
+tcservan                => 1	// Servant
+tcslmer1                => 1	// Store Keeper
+tcsmc01                 => 1	// id.
+tcsmc03                 => 1	// id.
+tcwaiter                => 1	// Waiter
+
+// de'Arnise Romance
+// -----------------
+pgnalwiv                => 1	// Wivara
+
+// DSotSC
+// ------
+dsjeremy                => 1	// Jeremy
+dskenb                  => 1	// Ken the Baker
+dsspec                  => 1	// Spec
+dsthomic                => 1	// Thomic
+
+// Expanded Thief Stronghold
+// -------------------------
+tspick3                 => 1	// Commoner
+tspick8                 => 1	// Peasant
+
+// Finch NPC
+// ---------
+sutrask                 => 1	// Trask
+
+// FfT
+// ---
+ysapopm                 => 1	// Commoner
+yscdcook                => 1	// Water's Edge Chef
+yscell1                 => 1	// Watchguard
+yscell2                 => 1	// id.
+yscell3                 => 1	// id.
+yscell4                 => 1	// id.
+yscell5                 => 1	// id.
+yschcom4                => 1	// Peasant
+yschcom5                => 1	// id.
+yschcom6                => 1	// id.
+ysgalid                 => 1	// Apprentice Galidor
+yslkeep                 => 1	// Daalin the Light
+ysman1                  => 1	// Commoner
+ysman1r                 => 1	// id.
+ysman2                  => 1	// id.
+ysman2r                 => 1	// id.
+ysman3                  => 1	// id.
+ysman3r                 => 1	// id.
+ysman4                  => 1	// Fisherman
+ysman4r                 => 1	// id.
+ysman5                  => 1	// id.
+ysman5r                 => 1	// id.
+ysman6                  => 1	// id.
+ysman6r                 => 1	// id.
+ysmcook                 => 1	// The Silverale Hall's Master Chef
+ysmserv                 => 1	// Servant
+ysserj                  => 1	// Guard Sergeant
+ystelthe                => 1	// Telther Strongarm
+ystm_a                  => 1	// Peasant
+ystm_b                  => 1	// id.
+ystm_c                  => 1	// id.
+ystm_d                  => 1	// id.
+ystm_e                  => 1	// id.
+ystmwa                  => 1	// id.
+ystmwb                  => 1	// id.
+ystmwc                  => 1	// id.
+ystmwd                  => 1	// id.
+ystmwe                  => 1	// id.
+yswdman                 => 1	// Woodsman
+yswtchmn                => 1	// Watchman
+
+// Gavin for BG
+// ------------
+"b!darlos"              => 1	// Darlos
+"b!mesngr"              => 1	// Does not seem to be installed
+
+// Innershade (Colours of Infinity)
+// --------------------------------
+9xcomm1                 => 1	// Commoner
+9xcomm3                 => 1	// id.
+9xcomm5                 => 1	// id.
+9xdad                   => 1	// Man
+9xwc                    => 1	// Woodchopper
+
+// Keto NPC
+// --------
+ketofan1                => 1	// Tavern Patron
+pgbarry                 => 1	// Barry
+pgcrowda                => 1	// Peasant
+pgkdad                  => 1	// Myles
+
+// NEJ
+// ---
+apsel                   => 1	// Apsel
+bjorn                   => 1	// Bjorn
+churin                  => 1	// Churin
+davin                   => 1	// Davin
+deadvil                 => 1	// Captive Villager
+gareth                  => 1	// Gareth
+gerth                   => 1	// Gerth
+hermit                  => 1	// Hermit
+jhonen                  => 1	// Jhonen
+kumirek                 => 1	// Mirek
+oldjed                  => 1	// Old Jed
+towniem1                => 1	// Townsperson
+towniem2                => 1	// id.
+towniem3                => 1	// id.
+towniem4                => 1	// id.
+towniem5                => 1	// id.
+urnst                   => 1	// Urnst
+
+// Ninde NPC
+// ---------
+lk#nimes                => 1	// Messenger
+
+// NTotSC
+// ------
+ntnadali                => 1	// Nadalin
+ntpandri                => 1	// Pandris
+ntszyper                => 1	// Skipper
+
+// NPC Tweak
+// ---------
+g3osmsgr                => 1	// Keep Messenger
+
+// Planar Sphere
+// -------------
+ps900spa                => 1	// Nubber
+
+// Quest Pack
+// ----------
+d0mumfig                => 1	// Commoner
+
+// RoT
+// ---
+arenaa1                 => 1	// Audience
+arenaa4                 => 1	// id.
+arenaa5                 => 1	// id.
+arenac1                 => 1	// Commoner
+arenac3                 => 1	// Peasant
+arfrmr1                 => 1	// Farmer
+arlaxc1                 => 1	// Commoner
+arlaxc4                 => 1	// Peasant
+arlaxp1                 => 1	// id.
+arlaxp3                 => 1	// Commoner
+arlaxp4                 => 1	// Peasant
+arlaxp6                 => 1	// Commoner
+arlaxp7                 => 1	// Peasant
+arlaxp8                 => 1	// Commoner
+arlbar                  => 1	// Peasant
+aupe1                   => 1	// Audience
+aupe2                   => 1	// id.
+aupe3                   => 1	// id.
+aupe4                   => 1	// id.
+aupe5                   => 1	// id.
+brevil1                 => 1	// Villager
+brevil2                 => 1	// id.
+brevil3                 => 1	// id.
+clob                    => 1	// Clob
+cultsa13                => 1	// Man
+cultsa14                => 1	// id.
+cultsa15                => 1	// id.
+cultsa22                => 1	// Sacrifice
+cultsac1                => 1	// id.
+frmr3                   => 1	// Villager
+japhet                  => 1	// Japhet
+japhet2                 => 1	// id.
+mvill1                  => 1	// Villager
+mvill2                  => 1	// id.
+mvill3                  => 1	// id.
+mvill4                  => 1	// id.
+mvill5                  => 1	// id.
+mvill6                  => 1	// id.
+pcdm                    => 1	// Peasant
+pcdm2                   => 1	// id.
+potselca                => 1	// Potion Seller
+rob                     => 1	// Rob
+rob2                    => 1	// id.
+slavem1                 => 1	// Slave
+slavem2                 => 1	// id.
+
+// Romantic Encounters for BG2
+// ---------------------------
+"b!remsn"               => 1	// Refugee
+re_noob                 => 1	// Noober
+
+// Rose NPC
+// --------
+k-rcomm                 => 1	// Commoner
+
+// Saerileth
+// ---------
+nscom001                => 1	// Barkeep
+nsprey02                => 1	// Kenny
+
+// Sarah NPC Romance
+// -----------------
+k#loves                 => 1	// Rupert
+
+// Severian de Demerya
+// -------------------
+"#sfarm01"              => 1	// Dale the Herder
+"#sfarm02"              => 1	// Groos the Herder
+"#smjeb01"              => 1	// Jeb
+"#sman01"               => 1	// Ander
+
+// SoS
+// ---
+cb232fm2                => 1	// Adventurer
+cb270cca                => 1	// Soubar Villager
+cb270cce                => 1	// id.
+cb270pt2                => 1	// id.
+cbsbtvre                => 1	// id.
+cbsbtvrg                => 1	// id.
+cbsbtvrl                => 1	// id.
+cbsbtvrn                => 1	// id.
+cbsbtvrp                => 1	// id.
+cbsbtvrq                => 1	// id.
+cbsbvila                => 1	// id.
+cbsbvilg                => 1	// id.
+cbsbvlia                => 1	// id.
+cbsbvlig                => 1	// id.
+cbshpp01                => 1	// Taxidermist
+cbshpp02                => 1	// Soap Maker
+cbshpp04                => 1	// Wheelwright
+cbshpp05                => 1	// Fishmonger
+cbshpp06                => 1	// Perfumer
+cbshpp07                => 1	// Accountant
+cbshpp08                => 1	// Apothecary
+cbshpp09                => 1	// Baker
+cbshpp10                => 1	// Barber
+cbshpp11                => 1	// Brewer
+cbshpp12                => 1	// Chandler
+cbshpp13                => 1	// Cobbler
+cbshpp14                => 1	// Florist
+cbshpp15                => 1	// Goldsmith
+cbshpp16                => 1	// Healer
+cbshpp17                => 1	// Lapidary
+cbshpp18                => 1	// Lumber Dealer
+cbshpp19                => 1	// Mason
+cbshpp20                => 1	// Money Changer
+cbshpp21                => 1	// Potter
+cbshpp22                => 1	// Sage
+cbshpp23                => 1	// Tailor
+cbshpp24                => 1	// Tool Maker
+cbshpp26                => 1	// Woodcarver
+cbwlserv                => 1	// Servant
+
+// The Bigg Quest Pack
+// -------------------
+tb#lotr                 => 1	// Maniar
+
+// TDD
+// ---
+3305pes1                => 1	// Commoner
+3312pes1                => 1	// id.
+bgcom2                  => 1	// Peasant
+bgwit2                  => 1	// id.
+bgwit3                  => 1	// id.
+calicom2                => 1	// id.
+dd1004c1                => 1	// Commoner
+ddciti01                => 1	// Citizen
+ddfarm01                => 1	// Farmer
+ddhusban                => 1	// Larala's Husband
+ddman01                 => 1	// Man
+ddmanpea                => 1	// Manifest Peasant
+ddplota1                => 1	// Traveller
+deadman1                => 1	// Little boy
+deadman6                => 1	// id.
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05injm                => 1	// Bleeding Commoner
+
+// The Jerry Zinger Show
+// ---------------------
+jzcrwdm1                => 1	// Audience
+jzneeber                => 1	// Neeber
+jznewb                  => 1	// Newb
+
+// The Luxley Family
+// -----------------
+fhlfred                 => 1	// Commoner
+
+// The Music of the Realms
+// -----------------------
+esterry                 => 1	// Terry
+
+// TS25 MiniMod
+// ------------
+tz25nnp2                => 1	// ?? (in Japanese)
+
+// Wheels of Prophecy
+// ------------------
+dw#ampp2                => 1	// Commoner
+dw#ampp3                => 1	// id.
+
+// Unknown mods
+// ------------
+acq30002                => 1	// 
+sorced                  => 1	// dialog file in bg2...
+x#jessup                => 1	// 
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY GW_merchant : LISTS vanilla and modded Male Human Merchants needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Male Human Merchants get the merchant animation.                                          *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_merchant
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_merchant BEGIN
+
+// BG
+// --
+"%tutu_var%algern"               => 1	// Algernon
+"%tutu_var%barslim"              => 1	// Bartender
+"%tutu_var%bart10"               => 1	// id.
+"%tutu_var%bart11"               => 1	// id.
+"%tutu_var%bart12"               => 1	// id.
+"%tutu_var%bart13"               => 1	// id.
+"%tutu_var%bart14"               => 1	// id.
+"%tutu_var%bart15"               => 1	// id.
+"%tutu_var%bart16"               => 1	// id.
+"%tutu_var%bart2"                => 1	// id.
+"%tutu_var%bart3"                => 1	// id.
+"%tutu_var%bart4"                => 1	// id.
+"%tutu_var%bart5"                => 1	// id.
+"%tutu_var%bart6"                => 1	// id.
+"%tutu_var%bart7"                => 1	// id.
+"%tutu_var%desslo"               => 1	// Kolssed
+"%tutu_var%detran"               => 1	// De'Tranion
+"%tutu_var%dopmer"               => 1	// Merchant
+"%tutu_var%doppsm"               => 1	// id.
+"%tutu_var%dun"                  => 1	// Dun
+"%tutu_var%fatman"               => 1	// Commoner
+"%tutu_var%innke2"               => 1	// Winthrop
+"%tutu_var%innke3"               => 1	// Innkeeper
+"%tutu_var%innkn2"               => 1	// id.
+"%tutu_var%ironm2"               => 1	// Merchant
+"%tutu_var%ironm3"               => 1	// id.
+"%tutu_var%ironm4"               => 1	// id.
+"%tutu_var%ironme"               => 1	// id.
+"%tutu_var%lucky"                => 1	// Lucky Aello
+"%tutu_var%maltz"                => 1	// Maltz
+"%tutu_var%merch2"               => 1	// Merchant
+"%tutu_var%merch4"               => 1	// id.
+"%tutu_var%merch5"               => 1	// id.
+"%tutu_var%merch6"               => 1	// id.
+"%tutu_var%merlea"               => 1	// id.
+"%tutu_scriptbg%mtown5%eet_var%" => 1	// Commoner
+"%tutu_var%oublek"               => 1	// Oublek
+"%tutu_var%saildan"              => 1	// Sailor Dan
+"%tutu_scriptbg%shop01%eet_var%" => 1	// Storekeep
+"%tutu_scriptbg%shop03%eet_var%" => 1	// id.
+"%tutu_scriptbg%shop04%eet_var%" => 1	// id.
+"%tutu_scriptbg%shop06%eet_var%" => 1	// id.
+"%tutu_scriptbg%shop07%eet_var%" => 1	// id.
+"%tutu_scriptbg%shop08%eet_var%" => 1	// id.
+"%tutu_var%triado"               => 1	// Triadore
+"%tutu_var%winthr2"              => 1	// Winthrop
+"%tutu_var%winthr3"              => 1	// id.
+"%tutu_var%wirthi"               => 1	// Wirthing
+
+// BG2
+// ---
+aemerch                 => 1	// Merchant
+aewimer2                => 1	// id.
+ahammed                 => 1	// Servant
+ambar01                 => 1	// Zakee Rafeha
+amconm02                => 1	// Commoner
+amman02                 => 1	// id.
+ammayor                 => 1	// Omar Haraad
+bdaud03                 => 1	// Peasant
+bernard                 => 1	// Bernard
+binnkeep                => 1	// Calbor
+bmerch1                 => 1	// Qadeel
+chalsp01                => 1	// Gavid
+crobar01                => 1	// Groncaner
+dmanno                  => 1	// Announcer
+dmrest                  => 1	// Bessen
+dshop02                 => 1	// Jahaboam
+ffcust02                => 1	// Tavern Patron
+figpit                  => 1	// Storekeep
+gfigh05                 => 1	// Calahan
+gmtown01                => 1	// Commoner
+haquat                  => 1	// Quataris
+hgkar01                 => 1	// Karthis al-Hezzar
+kpfarm03                => 1	// Citizen
+kplend01                => 1	// Moneylender
+kpmerc01                => 1	// Tolmas Bendelia
+landlord                => 1	// Landlord
+marcus                  => 1	// Marcus
+mgbill01                => 1	// William "Bill" Williamson
+"%mtown2_bg2%"          => 1	// Peasant
+noble2                  => 1	// Nobleman
+pircom01                => 1	// Commoner
+pirpir09                => 1	// Pirate Jimmy
+pltax01                 => 1	// Alfons the Tax Collector
+postul2                 => 1	// Commoner
+qcirc01                 => 1	// Circus Worker
+rerak02                 => 1	// Traveler
+sarbar02                => 1	// Bartender
+sarman03                => 1	// Peasant
+sbutler                 => 1	// Commoner
+shape                   => 1	// Frennedan
+"%shop03_bg2%"          => 1	// Maheer
+"%shop05_bg2%"          => 1	// Perter
+"%shop06_bg2%"          => 1	// Hes
+shop1                   => 1	// Storekeep
+shop3                   => 1	// id.
+shop4                   => 1	// id.
+shop5                   => 1	// Perter
+shop6                   => 1	// Hes
+shop7                   => 1	// Storekeep
+shop8                   => 1	// Galoomp the Bookkeeper
+slumm4                  => 1	// Peasant
+slvic02                 => 1	// Tourist
+trinnk01                => 1	// Vyatri
+trmer01                 => 1	// Peddler
+trmtow04                => 1	// Peasant
+trmtow05                => 1	// id.
+uhinn01                 => 1	// Vincenzo the Innkeep
+uhmay01                 => 1	// Minister Lloyd
+vvhelp                  => 1	// Helpful Man
+wcust03                 => 1	// Largo
+winnkeep                => 1	// Pugney
+yscara02                => 1	// Merchant
+yspeas01                => 1	// Peasant
+
+// Alternatives
+// ------------
+"b!nador"               => 1	// Harbormaster Nador
+"b!nador2"              => 1	// id.
+
+// Amber
+// -----
+m#ygcook                => 1	// Cook
+
+// Angelo NPC
+// ----------
+admerch                 => 1	// Seline
+
+// BG1 UB
+// ------
+"%tutu_var%bart8"       => 1	// Bartender
+"%tutu_var%bart9"       => 1	// id.
+"%tutu_var%mercha"      => 1	// Merchant
+ubba0133                => 1	// Bartender
+ubmerch                 => 1	// Merchant
+ubshopge                => 1	// id.
+
+// Bonehill
+// --------
+bhabraha                => 1	// Abraham
+
+// BP
+// --
+horsesal                => 1	// Trader
+
+// CtB
+// ---
+cb596se9                => 1	// Peasant
+cbhl3627                => 1	// Shopkeeper
+cbhld003                => 1	// Peasant
+cbhld009                => 1	// id.
+cbhld0m2                => 1	// id.
+
+// Classic Adventures
+// ------------------
+tc1600m1                => 1	// Merchant
+tc1603m1                => 1	// Peasant
+tc1603m3                => 1	// Prison Leader
+tc2000au                => 1	// Slave Auctioneer
+tc2000mm                => 1	// Merchant
+tcbart1                 => 1	// Bartender
+tcbart11                => 1	// id.
+tcbart12                => 1	// id.
+tcbart2                 => 1	// id.
+tcbart7                 => 1	// id.
+tcbrewer                => 1	// Brewer
+tcchef                  => 1	// Chef
+tccook4                 => 1	// Cook
+tccrobar                => 1	// Groncaner
+tcinn01                 => 1	// Garon
+tcinn02                 => 1	// Innkeeper
+tcinn03                 => 1	// Panendithas
+tcironme                => 1	// Merchant
+tcmer07                 => 1	// Storekeep
+tcmerch2                => 1	// Ophal the Bookkeeper
+tcmerch3                => 1	// Merchant
+tcmerch4                => 1	// id.
+tcmmman5                => 1	// Peasant
+tcmmmer1                => 1	// Jahaboam
+tcselmp1                => 1	// Peasant
+tcsmm01                 => 1	// Caravan Merchant
+tcwgbart                => 1	// Bartender
+
+// Dark Horizons
+// -------------
+cmmerc02                => 1	// Quincy the Jeweler
+
+// Enhanced BG2
+// ------------
+alyoud                  => 1	// Alyoud
+
+// FfT
+// ---
+yskeldrl                => 1	// Keldral
+ysmorv                  => 1	// Morvans
+
+// Freedom's Reign of Virtue
+// -------------------------
+desto#05                => 1	// Ted Bracket
+
+// Gavin for BG2
+// -------------
+"b!herb06"              => 1	// Master Uric
+
+// Hessa NPC
+// ---------
+sumerch1                => 1	// Pasha Najwa
+
+// Houyi
+// -----
+p_houyi                 => 1	// (in Chinese)
+
+// Imnesvale
+// ---------
+dumayor                 => 1	// Minister Lloyd
+
+// Innershade (Colours of Infinity)
+// --------------------------------
+9xfood                  => 1	// Food merchant
+
+// Keto NPC
+// --------
+ketofan2                => 1	// Peasant
+pgcrowde                => 1	// Peasant
+
+// NEJ
+// ---
+egequest                => 1	// Captive Villager
+fmcapvil                => 1	// Captive Villager
+innkpr                  => 1	// Quimby
+mcapvil                 => 1	// Captive Villager
+mercbank                => 1	// Merchant Bank
+soth                    => 1	// Soth
+
+// RoT
+// ---
+arenam1                 => 1	// Olath
+arenam2                 => 1	// Veldrin
+arfrmr2                 => 1	// Farmer
+arlaxm6                 => 1	// Merchant
+brebar1                 => 1	// Barbarian
+carhead                 => 1	// Merchant
+cultsa11                => 1	// Man
+cultsa12                => 1	// id.
+cultsa21                => 1	// Sacrifice
+esath                   => 1	// Esath
+esath2                  => 1	// id.
+esath3                  => 1	// id.
+frmr1                   => 1	// Farmer
+frmr2                   => 1	// id.
+frmr4                   => 1	// id.
+geran                   => 1	// Geran
+kindast                 => 1	// Kindast
+matti                   => 1	// Hlidskialf
+maydobr                 => 1	// Mayor Dobrine
+roend                   => 1	// Roend
+scrlmer                 => 1	// Scroll Merchant
+tavekee                 => 1	// Tavern Keeper
+viinnkee                => 1	// Innkeeper
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_bync                 => 1	// Bync
+
+// Ruad
+// ----
+m#ruad                  => 1	// Ruad
+
+// Saerileth
+// ---------
+nsmrch01                => 1	// Merchant
+
+// Severian de Demerya
+// -------------------
+"#smay01"               => 1	// Minister Lloyd
+"#smer03"               => 1	// Beherant Diir
+
+// SoS
+// ---
+cb232fm1                => 1	// Adventurer
+cb270ccc                => 1	// Soubar Villager
+cb4279st                => 1	// Edward
+cbkbaker                => 1	// Ken the Baker
+cbsbin75                => 1	// Winthrop
+cbsbtvrc                => 1	// Bandit
+cbsbtvrj                => 1	// id.
+cbsbvild                => 1	// id.
+cbsbvilf                => 1	// id.
+cbsbvlid                => 1	// id.
+cbsbvlif                => 1	// id.
+cbsbvliw                => 1	// id.
+cbvinnie                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_mefiz                 => 1	// Mefiz
+
+// Tashia NPC
+// ----------
+le#shop                 => 1	// Shopkeeper
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05robe                => 1	// Robert
+
+// The Jerry Zinger Show
+// ---------------------
+jzcrwdm2                => 1	// Audience
+jzkeep                  => 1	// Barkeeper
+
+// TDD
+// ---
+3305pes2                => 1	// Commoner
+3312pes2                => 1	// id.
+3320pes                 => 1	// id.
+3334tav                 => 1	// Abe
+3336tav                 => 1	// Bellach
+calshop2                => 1	// Trader
+ddinn01                 => 1	// Innkeeper
+ddtrav03                => 1	// Traveller
+deadman2                => 1	// Little boy
+pkfatty1                => 1	// Branthor
+pkfatty2                => 1	// Dindil
+pkfatxy2                => 1	// id.
+pkstore1                => 1	// Deneron
+pkstore2                => 1	// Carval
+
+// TotDG
+// -----
+0xalcdg                 => 1	// Barney
+
+// TS25 MiniMod
+// ------------
+"tz25_!cm"              => 1	// ?? (in Japanese)
+tz25nnha                => 1	// id.
+tz25nnp1                => 1	// id.
+tz25nnqu                => 1	// id.
+
+// Unknown mods
+// ------------
+1xqtb1                  => 1	// 
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_midwife : LISTS vanilla and modded Female Human Merchants needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Female Human Merchants get the midwife animation.                                          *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_midwife
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_midwife BEGIN
+
+// BG
+// --
+"%tutu_var%emitar"      => 1	// Emissary Tar
+"%tutu_var%emitar2"     => 1	// Body of Emissary Tar
+"%tutu_var%emitar3"     => 1	// Emissary Tar
+"%tutu_var%fatwom"      => 1	// Commoner
+"%tutu_var%glanma"      => 1	// Glanmarie
+
+// BG2
+// ---
+amfem02                 => 1	// Commoner
+amintw02                => 1	// id.
+bfishw1                 => 1	// id.
+dpstat03                => 1	// Petrified Woman
+ffcook                  => 1	// Uda the Cook
+ffcrowd5                => 1	// Commoner
+"%ftown3_bg2%"          => 1	// Commoner
+gftown02                => 1	// id.
+homeless                => 1	// Homeless Woman
+kpcook01                => 1	// Olma the Cook
+pircom02                => 1	// Commoner
+pircor05                => 1	// Ellie
+pirfsh02                => 1	// Fishwife
+postul3                 => 1	// Peasant
+rerak06                 => 1	// Traveler
+sarfem01                => 1	// Peasant
+sevbar01                => 1	// Patricia
+"%shop01_bg2%"          => 1	// Mira
+shop2                   => 1	// Storekeep
+slumf2                  => 1	// Commoner
+tour2                   => 1	// Mrs. Harrold
+trftow02                => 1	// Peasant
+trftow05                => 1	// id.
+uhfem01                 => 1	// Mistress Eina
+wcust04                 => 1	// Customer
+
+// BG1 NPC
+// -------
+x#setta                 => 1	// Setta
+
+// BGQE
+// ----
+c#q02005                => 1	// Mrs. Dudley
+c#q03008                => 1	// Mrs. Blackwood
+c#q07003                => 1	// Mrs. Kenn
+
+// Bonehill
+// --------
+bhcook1                 => 1	// Cook
+
+// CtB
+// ---
+cbamlady                => 1	// Old Woman
+cbffcrw5                => 1	// Commoner
+cbhld004                => 1	// Peasant
+cbhld010                => 1	// id.
+
+// Classic Adventures
+// ------------------
+tc1106ma                => 1	// Madam Daisy
+tc1603f1                => 1	// Peasant
+tc2000ma                => 1	// Madam Rose
+tc2000pf                => 1	// Peasant
+tccook1                 => 1	// Cook
+tccook2                 => 1	// id.
+tccook6                 => 1	// Baker
+tcfem01                 => 1	// Kerowyn Hucrele
+tcmer06                 => 1	// Mira
+tcmmwom2                => 1	// Commoner
+tcpbpf1                 => 1	// Peasant
+tcpbpf3                 => 1	// Corintha
+tcselfp1                => 1	// Peasant
+tcsfc02                 => 1	// Mira
+tcwoman5                => 1	// Peasant
+
+// Fade NPC
+// --------
+e3aransm                => 1	// Mrs. Linvail
+
+// FfT
+// ---
+yswmn1r                 => 1	// Fishwife
+yswoman1                => 1	// Commoner
+
+// Gavin for BG
+// ------------
+"b!evie"                => 1	// Evie
+
+// Gavin for BG2
+// -------------
+"b!herb01"              => 1	// Goody Nell
+
+// Imnesvale
+// ---------
+duwife                  => 1	// Mistress Eina
+
+// Imoen's Romance
+// ---------------
+mrwomer                 => 1	// Alisha the Merchant
+
+// Keto NPC
+// --------
+pgcrowdb                => 1	// Peasant
+pgcrowdh                => 1	// id.
+
+// NEJ
+// ---
+ffcapvil                => 1	// Captive Villager
+slavef1                 => 1	// Slave
+slavef2                 => 1	// id.
+
+// Planar Sphere
+// -------------
+pspeas3                 => 1	// Peasant
+
+// RoT
+// ---
+arenam4                 => 1	// Merchant
+arfrmrw1                => 1	// Farmer's Wife
+arfrmrw2                => 1	// id.
+arlaxm3                 => 1	// Merchant
+breelle1                => 1	// Elle
+cultsa16                => 1	// Woman
+cultsa17                => 1	// id.
+esathw                  => 1	// Esath's Wife
+frmr5                   => 1	// Farmer's Wife
+inncoo                  => 1	// Cook
+nech                    => 1	// Nech
+olmcook                 => 1	// Cook
+speselca                => 1	// Spell Seller
+
+// Severian de Demerya
+// -------------------
+"#sfem01"               => 1	// Mistress Eina
+
+// SoS
+// ---
+cbsbin62                => 1	// Berde Cedmac
+cbsbin71                => 1	// Marie Moorland
+cbsbvilc                => 1	// Bandit
+cbsbvlic                => 1	// id.
+cbsbvliv                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_mary                  => 1	// Mary
+
+// TDD
+// ---
+dd1004c2                => 1	// Commoner
+eastbar                 => 1	// Commoner
+eastmeet                => 1	// id.
+
+// The Jerry Zinger Show
+// ---------------------
+jzcrwdf2                => 1	// Audience
+
+// TotDG
+// -----
+0xstdg                  => 1	// Silvertongue
+
+// Willie Bruce NPC
+// ----------------
+wbmum                   => 1	// Willie's Mum
+
+// Unknown mods
+// ------------
+acq30001                => 1	// 
+
+END
+
+
+/* =========================================================================== *
+ *  ARRAY GW_harlot : LISTS vanilla and modded Harlots needing to be patched.  *
+ * --------------------------------------------------------------------------- *
+ *  Harlots get the harlot animation.                                          *
+ * =========================================================================== */
+
+ACTION_CLEAR_ARRAY GW_harlot
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_harlot BEGIN
+
+// BG
+// --
+"%tutu_var%ithtyl"      => 1	// Ithtyl Calantryn
+"%tutu_scriptp%rosba_b" => 1	// Courtesan
+"%tutu_scriptp%rosba_c" => 1	// id.
+"%tutu_var%prost2"      => 1	// id.
+"%tutu_var%prost3"      => 1	// id.
+"%tutu_var%prost4"      => 1	// id.
+"%tutu_var%prost5"      => 1	// id.
+"%tutu_var%prost6"      => 1	// id.
+"%tutu_var%prost7"      => 1	// id.
+"%tutu_var%prost8"      => 1	// id.
+"%tutu_scriptp%rsbax_a" => 1	// id.
+"%tutu_scriptp%rsbax_b" => 1	// id.
+"%tutu_scriptp%rsbax_c" => 1	// id.
+"%tutu_var%quenas"      => 1	// Quenash
+"%tutu_var%sugar"       => 1	// Sugar
+
+// BG2
+// ---
+amconw01                => 1	// Commoner
+amfem04                 => 1	// id.
+amia                    => 1	// Servant
+amwenc01                => 1	// Leila
+bprost1                 => 1	// Courtesan
+bprost2                 => 1	// id.
+bubbles                 => 1	// Bubbles
+bwench                  => 1	// Elanda
+crowen01                => 1	// Gwera
+dharlot1                => 1	// Harlot
+dharlot2                => 1	// Altheia
+escort1                 => 1	// Cominda
+escort1a                => 1	// id.
+escort4                 => 1	// Virah
+malla02                 => 1	// Malla
+murdgirl                => 1	// Rose Bouquet
+pircor01                => 1	// Courtesan
+pircor02                => 1	// Ginia
+pircor04                => 1	// Courtesan
+pircor06                => 1	// id.
+qcirc02                 => 1	// Circus Worker
+sarpro01                => 1	// Harlot
+sarprovf                => 1	// Courtesan
+sbwench                 => 1	// Gracie
+trple03                 => 1	// Annalynn
+trrak01                 => 1	// Adratha
+trwen01                 => 1	// Ulma
+wench1                  => 1	// Tavern Wench
+wpwench1                => 1	// Tavern Wench
+
+// Ajantis for BG2
+// ---------------
+c#ajpros                => 1	// Courtesan
+
+// Alternatives
+// ------------
+"b!leyt"                => 1	// Leyt
+
+// Angelo NPC
+// ----------
+adimogen                => 1	//  Courtesan
+
+// Assassinations
+// --------------
+o#crgir2                => 1	// Girl
+
+// BG1 NPC
+// -------
+x#bhet                  => 1	// Bhetel
+x#madr                  => 1	// Madrina
+x#nell                  => 1	// Madam Nell
+x#sveet                 => 1	// Sveetla
+x#zizi1                 => 1	// Zizi the Lovebundle
+x#zizi2                 => 1	// id.
+x#zizi3                 => 1	// id.
+x#zizi4                 => 1	// id.
+
+// BG1 UB
+// ------
+"%tutu_var%serwen"      => 1	// Serving Wench
+"%tutu_var%volose"      => 1	// id.
+
+// Bonehill
+// --------
+bhcook2                 => 1	// Servant Girl
+bhtwen01                => 1	// Tavern Wench
+
+// CtB
+// ---
+cbmilkmd                => 1	// Clarissa
+cbp1act1                => 1	// Shandril
+cbp4act3                => 1	// Jhessail
+cbp4act4                => 1	// Elminster
+cbp4act5                => 1	// Merith
+cbp4act6                => 1	// The Simbul
+cbschook                => 1	// Melynda
+
+// Classic Adventures
+// ------------------
+tc2000h1                => 1	// Cominda
+tc2000h2                => 1	// Kerstia
+tc2000h4                => 1	// Virah
+tcdryad1                => 1	// Harlot
+tcfhaly                 => 1	// Fhalyssa
+tcharlo1                => 1	// Harlot
+tcharlo2                => 1	// Altheia
+tcserva1                => 1	// Servant
+tcwench1                => 1	// Tavern Wench
+tcwench2                => 1	// id.
+tcwench3                => 1	// id.
+tcwench4                => 1	// id.
+tcwench5                => 1	// id.
+tcwghar1                => 1	// id.
+
+// Expanded Thief Stronghold
+// -------------------------
+tspick4                 => 1	// Commoner
+tswench1                => 1	// Jancie
+
+// FfT
+// ---
+ysfserv                 => 1	// Servent
+ysharem1                => 1	// Harem Girl
+ysharem2                => 1	// id.
+yswmn3r                 => 1	// Fishwife
+yswmn6r                 => 1	// id.
+yswoman3                => 1	// Commoner
+yswoman6                => 1	// id.
+
+// Food and Herbal Mod
+// -------------------
+cmlstr3                 => 1	// Tavern Wench
+cmlstr4                 => 1	// id.
+cmlstr5                 => 1	// id.
+
+// G3 Anniversary
+// --------------
+g3maid                  => 1	// Barmaid
+
+// Haendlermod (in German)
+// -----------------------
+nq#rose                 => 1	// Rose
+
+// Hubelpot the Vegetable Merchant
+// -------------------------------
+sc#fan                  => 1	// Sweet Fanny Adams
+
+// Innershade (Colours of Infinity)
+// --------------------------------
+9xcomm4                 => 1	// Commoner
+
+// Keto NPC
+// --------
+pgfrilly                => 1	// Amyrillis
+pggmione                => 1	// Germione
+pgpoppy                 => 1	// Poppy
+
+// Lucy the Wyvern
+// ---------------
+"b!lucy"                => 1	// Lucy
+
+// RoT
+// ---
+arlaxc3                 => 1	// Courtesan
+innwen                  => 1	// Tavern Wench
+jatta                   => 1	// Jatta
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_ilona                => 1	// Ilona
+reaimi                  => 1	// Aimi
+
+// Saerileth
+// ---------
+nsharl01                => 1	// Harlot
+
+// Severian de Demerya ==> Do not seem to be installed
+// -------------------
+"#saicha"               => 1	// Aïcha
+"#sannae"               => 1	// 
+
+// SoS
+// ---
+cb4270sm                => 1	// Scullery Maid
+cbsbwt67                => 1	// Jill Ann Kross
+
+// Skie
+// ----
+1xskii1                 => 1	// Perpetua Margerita IV Sharalla
+
+// Tales of Anegh
+// --------------
+z_jung1                 => 1	// Virgin
+z_jung2                 => 1	// id.
+z_jung3                 => 1	// id.
+z_sarah                 => 1	// Sarah
+
+// TDD
+// ---
+deadman5                => 1	// Little boy
+
+// TS25 MiniMod
+// ------------
+tz25__c1                => 1	// ?? (in Japanese)
+tz25__c2                => 1	// id.
+tz25__c3                => 1	// id.
+tz25nnli                => 1	// id.
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05cou1                => 1	// Courtesan
+bw05cou2                => 1	// id.
+bw05cou3                => 1	// id.
+
+// The Jerry Zinger Show
+// ---------------------
+jzbubb                  => 1	// Bubbles
+
+// The Stone of Askavar
+// --------------------
+sally                   => 1	// Sally
+
+// Wheels of Prophecy
+// ------------------
+dw#ampp1                => 1	// Commoner
+
+// Willie Bruce NPC
+// ----------------
+wbjordan                => 1	// Jordan
+
+// Unknown mods
+// ------------
+acq30003                => 1	// 
+acq70001                => 1	// 
+acq70002                => 1	// 
+acq70003                => 1	// 
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_skeleton_priest : LISTS vanilla and modded Skeleton Mages to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Skeleton Mages get the skeleton_priest animation.                                  *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_skeleton_priest
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_priest BEGIN
+
+// BG2
+// ---
+hgskl03                 => 1	// Skeleton Mage
+
+// Hard times
+// ----------
+macgskmg                => 1	// Greater Skeleton Mage
+
+// TotDG
+// -----
+0xlorddg                => 1	// Lord of Black Dream
+
+END
+
+
+/* ============================================================================== *
+ *  ARRAY GW_skeleton_worker : LISTS vanilla and modded Skeletons to be patched.  *
+ * ------------------------------------------------------------------------------ *
+ *  Skeletons get the skeleton_worker animation.                                  *
+ * ============================================================================== */
+
+ACTION_CLEAR_ARRAY GW_skeleton_worker
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_skeleton_worker BEGIN
+
+// BG
+// --
+"%tutu_scripts%kelet_a" => 1	// Skeleton
+"%tutu_scripts%kelet_b" => 1	// id.
+"%tutu_scripts%kelpetr" => 1	// id.
+"%tutu_var%appar"       => 1	// id.
+"%tutu_var%skele2"      => 1	// id.
+
+// BG2
+// ---
+fsskel                  => 1	// Skeleton
+gpskel1                 => 1	// id.
+rskel01                 => 1	// id.
+rskel03                 => 1	// id.
+skelhp1                 => 1	// id.
+uddoor07                => 1	// id.
+
+// Ajantis for BG2
+// ---------------
+c#ajske1                => 1	// Skeleton
+c#ajsked                => 1	// id.
+
+// Bonehill
+// --------
+bhgskel                 => 1	// Skeleton
+
+// BP
+// --
+bpduelow                => 1	// Skeleton ==> Does not seem to be installed
+
+// CtB
+// ---
+cbappar1                => 1	// Skeleton
+cbundead                => 1	// Random Undead
+
+// Classic Adventures
+// ------------------
+tcskelet                => 1	// Skeleton
+
+// Planar Sphere
+// -------------
+psqsksu                 => 1	// Skeleton
+
+// RoT
+// ---
+cadskel1                => 1	// Skeleton
+cultmo7                 => 1	// Strong Skeleton
+cultsk1                 => 1	// Skeleton
+cultsk10                => 1	// id.
+cultsk11                => 1	// id.
+cultsk12                => 1	// id.
+cultsk13                => 1	// id.
+cultsk14                => 1	// id.
+cultsk15                => 1	// id.
+cultsk16                => 1	// id.
+cultsk17                => 1	// id.
+cultsk18                => 1	// id.
+cultsk19                => 1	// id.
+cultsk2                 => 1	// id.
+cultsk20                => 1	// id.
+cultsk21                => 1	// id.
+cultsk22                => 1	// id.
+cultsk23                => 1	// id.
+cultsk24                => 1	// id.
+cultsk3                 => 1	// id.
+cultsk4                 => 1	// id.
+cultsk5                 => 1	// id.
+cultsk6                 => 1	// id.
+cultsk7                 => 1	// id.
+cultsk8                 => 1	// id.
+cultsk9                 => 1	// id.
+godskel1                => 1	// Strong Skeleton
+godskel2                => 1	// id.
+godskel3                => 1	// id.
+ranske1                 => 1	// id.
+ranske2                 => 1	// id.
+ranske3                 => 1	// id.
+ranske4                 => 1	// id.
+ranske5                 => 1	// id.
+ranske6                 => 1	// id.
+ranske8                 => 1	// id.
+
+// Spell Pack
+// ----------
+lcadead1                => 1	// Skeleton
+
+// Stratagems
+// ----------
+dw#mulsk                => 1	// Skeleton
+
+// TDD
+// ---
+dragbr2                 => 1	// Skeleton
+
+// TotDG
+// -----
+0xyhdg                  => 1	// Gray Victim
+
+// The Quest for the Holy Hand Grenade
+// -----------------------------------
+hfbones                 => 1	// Skeleton
+
+// TS25 MiniMod
+// ------------
+tz25nnsk                => 1	// ?? (in Japanese)
+
+// Tyris Flare NPC
+// ---------------
+g#tfskl2                => 1	// Skeleton
+
+// Unknown mods
+// ------------
+dw#mulgh                => 1	// Stratagems ???
+lk#xsk1                 => 1	// 
+
+END
+
+
+/* ===================================================================================== *
+ *  ARRAY GW_tiefling_female : LISTS vanilla and modded Female Tieflings to be patched.  *
+ * ------------------------------------------------------------------------------------- *
+ *  Female Tieflings get the tiefling_female animation.                                  *
+ * ===================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_tiefling_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_tiefling_female BEGIN
+
+// BG2
+// ---
+bshop02                 => 1	// Storekeep (was CLERIC_FEMALE_ELF)
+gorcamb2                => 1	// Tiefling
+gorcamb3                => 1	// id.
+raelis                  => 1	// Raelis Shai
+teltief2                => 1	// id.
+teltief3                => 1	// id.
+
+// Fade NPC
+// --------
+e3eriale                => 1	// Eriale
+e3savany                => 1	// Savanya
+
+// Saerileth
+// ---------
+nstief01                => 1	// Tiefling
+
+// Silver Star NPC
+// ---------------
+d#mary                  => 1	// Mary
+
+// Thael NPC
+// ---------
+tief_as                 => 1	// Tiefling
+
+END
+
+
+/* ================================================================================= *
+ *  ARRAY GW_tiefling_male : LISTS vanilla and modded Male Tieflings to be patched.  *
+ * --------------------------------------------------------------------------------- *
+ *  Male Tieflings get the tiefling_male animation.                                  *
+ * ================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_tiefling_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_tiefling_male BEGIN
+
+// BG2
+// ---
+gorcamb4                => 1	// Tiefling
+gorcamb5                => 1	// id.
+gorgua02                => 1	// Ferrumach Rilmani
+pbhunt01                => 1	// Aawill
+teltief1                => 1	// Raelis Shai
+
+// Fade NPC
+// --------
+e3cirion                => 1	// Cirion
+e3jekhri                => 1	// Jekh'ril
+e3sume                  => 1	// Sume
+e3taeghe                => 1	// Taeghen
+e3xekral                => 1	// Xek'ral
+
+// Saerileth
+// ---------
+nstief02                => 1	// Tiefling
+
+// Thael NPC
+// ---------
+tief_w1                 => 1	// Tiefling
+tief_w2                 => 1	// id.
+zaki                    => 1	// Zaki
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_townie_wizard : LISTS vanilla and modded Male Human Mages to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Male Human Mages get the townie_wizard animation.                                  *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_townie_wizard
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_wizard BEGIN
+
+// BG
+// --
+"%tutu_var%andris"      => 1	// Andris
+"%tutu_var%brenda"      => 1	// Brendan
+"%tutu_var%chante"      => 1	// Chanter
+"%tutu_var%chante2"     => 1	// id.
+"%tutu_var%cult2"       => 1	// Cult Wizard
+"%tutu_scriptd%aerragh" => 1	// Daer'Ragh
+"%tutu_var%davaeo"      => 1	// Davaeorn
+"%tutu_var%degrod"      => 1	// Degrodel
+"%tutu_var%denak"       => 1	// Denak
+"%tutu_var%faizah"      => 1	// Statue
+"%tutu_var%gazib"       => 1	// The Great Gazib
+"%tutu_var%lendar"      => 1	// Lendarn
+"%tutu_var%marcel"      => 1	// Marcellus
+"%tutu_var%obe"         => 1	// Obe
+"%tutu_var%poghm10"     => 1	// Priest of Oghma
+"%tutu_var%poghm9"      => 1	// id.
+"%tutu_var%poghma4"     => 1	// id.
+"%tutu_var%poghma5"     => 1	// id.
+"%tutu_var%poghma7"     => 1	// id.
+"%tutu_var%ramazi"      => 1	// Ramazith
+"%tutu_var%resar"       => 1	// Resar
+"%tutu_var%rezdan"      => 1	// Rezdan
+"%tutu_var%semaj"       => 1	// Semaj
+"%tutu_scripts%handal2" => 1	// Shandalar
+"%tutu_var%stepha"      => 1	// Stephan
+"%tutu_var%sunin"       => 1	// Sunin
+"%tutu_var%tarnes"      => 1	// Tarnesh
+"%tutu_var%thalan"      => 1	// Thalantyr the Conjurer
+"%tutu_var%tranzi"      => 1	// Tranzig
+"%tutu_var%ulcast"      => 1	// Ulcaster
+"%tutu_var%ulraun"      => 1	// Ulraunt
+"%tutu_var%venkt"       => 1	// Venkt
+"%tutu_var%voieas"      => 1	// Voice of the East
+"%tutu_var%voinor"      => 1	// Voice of the North
+"%tutu_var%voisou"      => 1	// Voice of the South
+"%tutu_var%voiwes"      => 1	// Voice of the West
+"%tutu_var%winski"      => 1	// Winski Perorate
+"%tutu_var%yago"        => 1	// Yago
+"%tutu_var%zordra"      => 1	// Zordral
+"%willia%"              => 1	// Theodon
+"%william%"             => 1	// William Garst
+
+// BG2
+// ---
+alhel                   => 1	// Alhelor
+ammag01                 => 1	// Mage
+ar18mage                => 1	// id.
+arnfgt05                => 1	// Shadow Thief
+arnfgt06                => 1	// Haz
+arntra02                => 1	// Trainee
+arnwar05                => 1	// Shadow Thief
+arnwar06                => 1	// Haz
+bazeye01                => 1	// Iycanth the Mad
+bazeye02                => 1	// id.
+c6harp                  => 1	// Malchor Harpell
+cederil                 => 1	// Deril
+ch3mag01                => 1	// Shadow Thief
+chsam01                 => 1	// Semaj
+chsam02                 => 1	// id.
+clcoti01                => 1	// Cotirso
+clgijj01                => 1	// Gijjal of the House Malario
+corneil                 => 1	// Corneil
+cowled                  => 1	// Cowled Wizard
+dario                   => 1	// Dario Thet
+degard                  => 1	// Degardan
+demmag                  => 1	// Dracandros
+elders                  => 1	// Elder Sorn
+firmag01                => 1	// Conster
+genmag01                => 1	// Mage
+gereth                  => 1	// Gereth
+gorarc                  => 1	// Archivist
+gorcar                  => 1	// Carston
+gpmage1                 => 1	// N'ashtar
+gromg08                 => 1	// Karun the Black
+gromg13                 => 1	// Il-Khan Battle Mage
+hlmage                  => 1	// Mage
+hlsion                  => 1	// Sion
+jaga3                   => 1	// Nadinal
+jamage1                 => 1	// Gracien
+jamage2                 => 1	// Malacazar
+kaol                    => 1	// Kaol
+kproen03                => 1	// Roenall Guard
+lavok01                 => 1	// Lavok
+loutm02                 => 1	// Mercenary of Riatavin
+mage12a                 => 1	// Zyntris
+mage12b                 => 1	// id.
+mage12c                 => 1	// id.
+mage12d                 => 1	// id.
+mage20                  => 1	// Mage
+mage20b                 => 1	// id.
+mage20c                 => 1	// id.
+pcapt04                 => 1	// Prison Captain
+pirmur07                => 1	// Vadek
+pirsea03                => 1	// Pirate
+plmetw01                => 1	// Sorcerous Amin
+poghm3                  => 1	// Priest of Oghma
+poghm6                  => 1	// id.
+poghm8                  => 1	// id.
+poghma                  => 1	// id.
+poghma3                 => 1	// id.
+poghma6                 => 1	// id.
+poghma8                 => 1	// id.
+ppcowled                => 1	// Perth the Adept
+ppsanik                 => 1	// Sanik
+ppwanev                 => 1	// Wanev
+ppwanev2                => 1	// id.
+pthral08                => 1	// Thrall
+rethug02                => 1	// Mage
+rowena                  => 1	// Lady Elgea
+sarmag01                => 1	// Errard
+sevdru01                => 1	// Alatelo De Bonito
+sevpat02                => 1	// Sorcerous Amon
+sewyag04                => 1	// Yaga-Shura Mage
+slmage1                 => 1	// Slaver Wizard
+stmage                  => 1	// Shadow Thief
+susuneer                => 1	// Suneer
+tanwiz03                => 1	// Mage
+tanwiz1                 => 1	// Vellin Dahn
+terrece                 => 1	// Terrece
+tolger                  => 1	// Tolgerias
+tolger2                 => 1	// id.
+tolmag01                => 1	// Mage
+trcar01                 => 1	// Raafee
+trfued11                => 1	// Militia Wizard
+trgrd02                 => 1	// id.
+udvith                  => 1	// Vithal
+vakg01                  => 1	// Mage
+vakmag01                => 1	// id.
+valmag01                => 1	// id.
+valmag02                => 1	// id.
+valmag03                => 1	// id.
+vulfgt02                => 1	// Vulova Wizard Halfling ???
+wyvmag14                => 1	// Wyvern Cultist
+ysguar03                => 1	// Yaga-Shura Mage
+ysmage01                => 1	// Yaga-Shura Mage
+yssold14                => 1	// Yaga-Shura Mage
+zilmag01                => 1	// Black Reaver
+
+// Ajantis for BG2
+// ---------------
+c#ajtrae                => 1	// Malmae
+
+// Alternatives
+// ------------
+"b!zahl"                => 1	// Zahl
+
+// Angelo NPC
+// ----------
+adangma1                => 1	// Caius Blackwater
+adangma2                => 1	// Lucius Blackwater
+
+// Ariena NPC (The Mod for the Wicked)
+// -----------------------------------
+mwbohum                 => 1	// Mercenary Mage
+
+// Ascalon's Breagar
+// -----------------
+acasc                   => 1	// Ascalon
+acnecro1                => 1	// Borsk
+
+// Assassinations
+// --------------
+o#crgu72                => 1	// Mercenary
+o#crlah2                => 1	// Feenick's Bodyguard
+
+// AzenMOD
+// -------
+jc_sema                 => 1	// Semaj
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#ardel                 => 1	// Ardelios
+z#kni5                  => 1	// Knight of the Order
+
+// BG1 NPC
+// -------
+x#winski                => 1	// Winski Perorate
+x#xzgu03                => 1	// Flaming Fist Battle Wizard
+
+// BP
+// --
+horred                  => 1	// Horred the Plague
+horred2                 => 1	// id.
+kpglai02                => 1	// Mage
+mvmage                  => 1	// id.
+
+// CtB
+// ---
+cb502lbr                => 1	// Brother Dewey
+cb596tol                => 1	// Tolgerias
+cbc8ctm1                => 1	// Cult Mage
+cbc8ctm3                => 1	// id.
+cbkhelck                => 1	// Khelben
+cbp1act2                => 1	// Narm
+cbpoghm1                => 1	// Priest of Oghma
+cbpoghm2                => 1	// id.
+cbthalan                => 1	// Thalantyr
+
+// Classic Adventures
+// ------------------
+sp1101p1                => 1	// Protector
+tcalhel                 => 1	// Alhelor
+tcdrak                  => 1	// Drakkar
+tcerubad                => 1	// Erubadhron
+tckartmn                => 1	// Kartmun Runeshadow
+tclamon                 => 1	// Lamonsten the Lazy
+tclothar                => 1	// Lothar
+tcmage1                 => 1	// Mage
+tcmage2                 => 1	// id.
+tcmmcris                => 1	// Crismar
+tcmmgus                 => 1	// Brother Gus
+tcnarcil                => 1	// Narcillicus Harwilliger Neen
+tcpirat3                => 1	// Punketah
+tctudwil                => 1	// Minister Tudwill
+
+// Cliffette's History
+// -------------------
+clfhswz1                => 1	// Elderon
+clfhswz2                => 1	// Dantorl
+clfhswz3                => 1	// Rex
+clfhswz4                => 1	// Bobbin
+
+// Dark Horizons
+// -------------
+cm1803a4                => 1	// Morgan
+cmghst06                => 1	// Garrett
+cmosec04                => 1	// Oversight War Wizard
+cmosec11                => 1	// Torture Twin
+cmosec13                => 1	// Oversight War Wizard
+cmosec14                => 1	// id.
+cmsec08                 => 1	// George
+cmsec08a                => 1	// id.
+cmsec12                 => 1	// Section Operative
+cmsec12a                => 1	// Section Elite
+
+// DSotSC
+// ------
+dsmortus                => 1	// Mortius
+
+// de'Arnise Romance
+// -----------------
+pgnalgel                => 1	// Gellester
+
+// Edwin Romance
+// -------------
+redw2                   => 1	// Orlo Ravonar
+
+// Emad
+// ----
+clfmox                  => 1	// Moxen
+
+// FfT
+// ---
+ysailoth                => 1	// Ailoth Tam
+ysblrwz                 => 1	// Megred Darlesson
+yscdm1                  => 1	// Commoner
+yscdm2                  => 1	// id.
+yscdm3                  => 1	// id.
+yscdm4                  => 1	// id.
+yscddwm1                => 1	// Desert Wanderer
+yscddwm2                => 1	// id.
+yscdmer1                => 1	// Merchant
+yscdmer2                => 1	// id.
+yscdmer3                => 1	// id.
+ysfirdos                => 1	// Firdos
+ysgadil                 => 1	// Gadil
+ysgivon                 => 1	// Givon
+yskarim                 => 1	// Karim
+yskhoury                => 1	// Khoury
+ysltor                  => 1	// Lief Torman
+ysmuktar                => 1	// Mukhtar
+ysnuri                  => 1	// Nuri
+yspashan                => 1	// Pashan
+ysqadir                 => 1	// Qadir
+ysredwiz                => 1	// Red Wizard
+ystahir                 => 1	// Tahir
+ysyasar                 => 1	// Yasar
+
+// G3 Anniversary
+// --------------
+g3g1202                 => 1	// Number Two
+
+// Haendlermod (in German)
+// -----------------------
+nq#rbad6                => 1	// Krish
+
+// Improved Anvil
+// --------------
+"s!enchan"              => 1	// Enchanter
+"s!looke2"              => 1	// Diviner
+"s!looker"              => 1	// id.
+
+// Improved Asylum
+// ---------------
+r#crazy                 => 1	// Crazy Mage
+r#mage01                => 1	// Kargak the Destroyer
+r#mage02                => 1	// Lord Karadin the Cursed
+
+// Improved Battles
+// ----------------
+b#knit07                => 1	// Jonan
+b#roen04                => 1	// Roenall Arch-mage
+b#semaj                 => 1	// Semaj
+
+// Kelsey NPC
+// ----------
+fwlove6                 => 1	// Eila
+
+// Kiara-Zaiya
+// -----------
+kzjao                   => 1	// Jao
+
+// Kido (The Mod for the Wicked)
+// -----------------------------
+mwdolf                  => 1	// Dolf
+
+// Kindrek NPC
+// -----------
+prenash                 => 1	// Prenash
+
+// LavaIt! ????
+// ------
+li004                   => 1	// Mage
+
+// Mystigan
+// --------
+e_mystig                => 1	// Mystigan
+
+// NEJ
+// ---
+albion                  => 1	// Albion
+bandoth                 => 1	// Bandoth
+bartlemy                => 1	// Bartlemy
+dcai                    => 1	// Serge D‘Cai
+eldathl                 => 1	// Geelo the Librarian
+eurich                  => 1	// Eurich
+lavallin                => 1	// Lavallin
+orrick                  => 1	// Orrick the Grey
+pomab                   => 1	// Pomab
+rayvon                  => 1	// RayVon
+tuair                   => 1	// Owain
+tualert                 => 1	// Wizard Guard
+tucaius                 => 1	// Caius
+tuearth                 => 1	// Aulay
+tuezek                  => 1	// Ezekiel
+tuguard                 => 1	// Wizard Guard
+tuguard2                => 1	// id.
+tuillus                 => 1	// Hazarlich
+tujiri                  => 1	// Jiri
+tumage4                 => 1	// Mage
+tumalv                  => 1	// Malvolio
+tumatej                 => 1	// Matej
+tumord                  => 1	// Mordecai
+tuphin                  => 1	// Phineas
+tutheod                 => 1	// Theodoran
+tuvashon                => 1	// Vashon
+
+// NTotSC
+// ------
+ntsarq                  => 1	// Sar'garin Ve'xelt
+
+// Planar Sphere
+// -------------
+f03                     => 1	// Apprentice
+psadapp2                => 1	// id.
+psadapp5                => 1	// id.
+psadv05                 => 1	// Adventurer
+psadv08                 => 1	// Plane-traveling Adventurer
+psdego                  => 1	// Degrodel
+pshelm                  => 1	// Helm
+psinfer                 => 1	// Inferno
+pskhel                  => 1	// Khelben
+pslordao                => 1	// Lord Ao
+pslothan                => 1	// Lothander
+psmabju                 => 1	// Abjuration
+psmalte                 => 1	// Alteration
+psmconj                 => 1	// Conjuration
+psmdivi                 => 1	// Divination
+psmeli                  => 1	// Melicamp
+psmench                 => 1	// Enchantment
+psmillu                 => 1	// Illusion
+psmnecr                 => 1	// Necromancy
+psredw2                 => 1	// Red Wizard
+psredwiz                => 1	// id.
+pstalos                 => 1	// Talos
+pstest03                => 1	// Apprentice
+psthal                  => 1	// Thalantyr
+
+// Quest Pack
+// ----------
+d0arnlie                => 1	// Sarem
+d0debt1                 => 1	// Debt Collector
+d0guard4                => 1	// Sanctioned Wizard
+d0lorick                => 1	// Lorick
+d0qpback                => 1	// Cowled Escort
+
+// RoT
+// ---
+ahighma1                => 1	// High Mage
+ahighma2                => 1	// id.
+ahighma3                => 1	// Regean
+arenama3                => 1	// Mynor
+arenama5                => 1	// Cedar
+arlaxma1                => 1	// Mage
+arlaxma2                => 1	// id.
+arlaxma5                => 1	// id.
+arlaxma7                => 1	// id.
+arltell                 => 1	// id.
+batmage1                => 1	// Battle Mage
+breadv3                 => 1	// Adventurer
+desmage                 => 1	// Desperado Mage
+egmage2                 => 1	// Drent
+ermag2                  => 1	// Castle Mage
+ermag4                  => 1	// id.
+ferean                  => 1	// Ferean
+galryn                  => 1	// Galryn
+garserv1                => 1	// Servant of the Eye
+godadv5                 => 1	// Possessed Wizard
+godmad1                 => 1	// Madman
+godserv2                => 1	// Servant of the Eye
+henvis                  => 1	// Henvis
+ilhan                   => 1	// Ilhan
+ilhan2                  => 1	// id.
+ilhan3                  => 1	// id.
+leander                 => 1	// Leander
+melan                   => 1	// Melan
+morand2                 => 1	// Morandin
+morandin                => 1	// id.
+oenmage2                => 1	// attle Mage
+ranmarc                 => 1	// Marcus
+rannec2                 => 1	// Necromancer
+rannec3                 => 1	// Bheodin
+rannec6                 => 1	// Necromancer
+rannec7                 => 1	// id.
+rannec8                 => 1	// id.
+razor                   => 1	// Razor
+talmage3                => 1	// Battle Mage
+tenmage2                => 1	// Castle Mage
+
+// Rogue Rebalancing
+// -----------------
+rr#haz                  => 1	// Haz
+
+// Rose NPC
+// --------
+k-rmer2                 => 1	// Mercenary
+
+// Saerileth
+// ---------
+nsmage01                => 1	// Young Mage
+
+// Severian de Demerya
+// -------------------
+"#smekhr"               => 1	// Ilkar
+
+// SoS
+// ---
+cbstbuck                => 1	// Korhun Bucko
+cbtbgtod                => 1	// Adventurer Te Elle
+
+// Sheena, A Half Dragon Tale
+// --------------------------
+k#firmag                => 1	// Conster
+
+// Stratagems
+// ----------
+dw#remg4                => 1	// Zyntris
+
+// Tales of Anegh
+// --------------
+z_2her6                 => 1	// Military leader Otok
+z_2le1                  => 1	// Asant
+z_2mag1                 => 1	// Mage of the north
+z_2pbhal                => 1	// Bhaal Priest
+z_2serin                => 1	// Serinthol
+z_2smg                  => 1	// Mage of the north
+z_mage1                 => 1	// Anegh Mage
+z_mage2                 => 1	// id.
+z_mage3                 => 1	// id.
+z_nomo2                 => 1	// Nomoran
+z_nomo3                 => 1	// id.
+z_nomo4                 => 1	// id.
+z_nomo5                 => 1	// id.
+z_nomora                => 1	// id.
+z_test                  => 1	// id.
+z_winni                 => 1	// Winnibald the lunatic
+
+// TDD
+// ---
+3307wiz                 => 1	// Avrabar
+avbatt02                => 1	// Avrabar
+avrabatt                => 1	// id.
+avracut1                => 1	// id.
+darioms2                => 1	// Calimport Messenger
+dariomsg                => 1	// id.
+ddtero01                => 1	// Tero
+eastmage                => 1	// Azim
+harpatt1                => 1	// Harper
+pkloth1                 => 1	// Erolas
+pkloth2                 => 1	// id.
+qloot4                  => 1	// Laras
+riat01                  => 1	// Tolgerias
+riat02                  => 1	// id.
+riat03                  => 1	// id.
+riat04                  => 1	// id.
+riat05                  => 1	// id.
+riatjail                => 1	// Jailer
+riatmov1                => 1	// Guardian Mage
+
+// The Black Rose Part 1: Market Prices
+// ------------------------------------
+bw11cre1                => 1	// Menelaun
+bw11cre5                => 1	// id.
+bw11cre7                => 1	// id.
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05jer2                => 1	// Jeremias
+bw05reuf                => 1	// Reufasio
+bw05rud2                => 1	// Rudi "The Metaphysician"
+bw05sert                => 1	// Dervanto
+bw05terg                => 1	// Tergius
+bw05xeph                => 1	// Xephistagoras
+
+// The Luxley Family
+// -----------------
+fhldu                   => 1	// Durydil
+
+// The Quest for the Holy Hand Grenade
+// -----------------------------------
+hfpriest                => 1	// High Priest
+hftim                   => 1	// Tim the Enchanter
+
+// The Stone of Askavar
+// --------------------
+aranor                  => 1	// Aranor
+pirn                    => 1	// Pirn
+
+// TS
+// --
+hitomi                  => 1	// Hitomi Nakanishi
+
+// TS25 MiniMod
+// ------------
+tz25_#mb                => 1	// ?? (in Japanese)
+tz25_#w1                => 1	// id.
+tz25nnco                => 1	// id.
+
+// The Undying
+// -----------
+cmtus03                 => 1	// Bevlier
+cmwolf                  => 1	// Neil the Wolfmoon
+
+// The Vault
+// ---------
+
+// Tower of Deception
+// ------------------
+va#tian                 => 1	// Tian
+va#tian2                => 1	// id.
+
+// Vecna
+// -----
+aacre001                => 1	// Aleus
+aacre075                => 1	// Insane Wizard
+aacre169                => 1	// Mage
+aacre170                => 1	// id.
+aacre171                => 1	// Time Master
+
+// Willie Bruce NPC
+// ----------------
+wbrupert                => 1	// Rupert
+
+// Xan for BG2
+// -----------
+o#eligor                => 1	// Eligor
+o#vel                   => 1	// Vel
+
+// Unknown mods
+// ------------
+acq10001                => 1	// 
+acq40006                => 1	// 
+grimsto                 => 1	// 
+
+END
+
+
+/* ============================================================================================ *
+ *  ARRAY GW_female_human_nobles : LISTS vanilla and modded Female Human Nobles to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Female Human Nobles get the townie_upper_class_female or the aasimar_female animation.      *
+ * ============================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_female_human_nobles
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_female_human_nobles BEGIN
+
+// BG
+// --
+"%tutu_var%addy"        => 1	// Addy
+"%tutu_var%brilla"      => 1	// Brilla
+"%tutu_var%gyllia"      => 1	// Gyllian
+"%tutu_var%hannah"      => 1	// Lady Hannah
+"%tutu_var%kaella"      => 1	// Kaella
+"%tutu_var%lena"        => 1	// Lena
+"%tutu_var%nobw2"       => 1	// Noblewoman
+"%tutu_var%nobw3"       => 1	// id.
+"%tutu_var%nobw4"       => 1	// id.
+"%tutu_var%nobw5"       => 1	// id.
+"%tutu_var%nobw7"       => 1	// id.
+"%tutu_var%nobw8"       => 1	// Areana
+"%tutu_var%nobw9"       => 1	// Noblewoman
+"%tutu_var%nobwba"      => 1	// id.
+"%tutu_scriptn%obwba_a" => 1	// id.
+"%tutu_scriptn%obwba_d" => 1	// id.
+"%tutu_scriptn%obwba_e" => 1	// id.
+"%tutu_scriptn%owbax_a" => 1	// id.
+"%tutu_scriptn%owbax_b" => 1	// id.
+"%tutu_scriptn%owbax_c" => 1	// id.
+"%tutu_scriptn%owbax_d" => 1	// id.
+"%tutu_scriptn%owbax_e" => 1	// id.
+"%tutu_var%samant"      => 1	// Samantha
+
+// BG2
+// ---
+bdact08                 => 1	// Karenina
+bdact09                 => 1	// id.
+bdcoun02                => 1	// Courtier
+bnoble2                 => 1	// Lady Diana
+bystand2                => 1	// Lady Beth
+civil02                 => 1	// Civil Servant
+csheck3                 => 1	// Heckler
+delcia                  => 1	// Lady Delcia Caan
+delnob02                => 1	// Noblewoman
+dpstat05                => 1	// Petrified Woman
+elgea                   => 1	// Lady Elgea
+ffcrowd2                => 1	// Noblewoman
+ffcust05                => 1	// Tavern Patron
+fulady                  => 1	// Lady Tandolan of Um
+gnoblef1                => 1	// Noblewoman
+gnoblef2                => 1	// id.
+jugcol01                => 1	// Colette
+kplend02                => 1	// Moneylender
+madam                   => 1	// Madam Nin
+maria                   => 1	// Lady Maria
+mourner4                => 1	// Maggie
+noblew1                 => 1	// Noblewoman
+noblew2                 => 1	// id.
+oriana                  => 1	// Oriana
+ppgirl2                 => 1	// Cayia
+rerak05                 => 1	// Traveler
+sarcnt01                => 1	// Mirnielle Santele
+sbslum02                => 1	// Noblewoman
+scljyss                 => 1	// Lady Jysstev
+scroll01                => 1	// Lady Yuth
+surayah                 => 1	// Surayah
+tassa                   => 1	// Tassa
+trcut01                 => 1	// Noblewoman
+trnobf01                => 1	// Mistress Mera
+trnobf02                => 1	// Noblewoman
+trple02                 => 1	// Mistress Jeanne
+victown4                => 1	// Noblewoman
+wcust02                 => 1	// Debutante Alicia
+wcust05                 => 1	// Lady Lasalla
+wmart2                  => 1	// Deidre
+
+// Ajantis for BG2
+// ---------------
+c#ajeil1                => 1	// Eila Windspear
+c#ajeila                => 1	// id.
+c#ajlail                => 1	// Lady Ilvastarr
+
+// Alternatives
+// ------------
+"b!vulg1"               => 1	// Guest
+"b!vulg3"               => 1	// id.
+"b!vulg5"               => 1	// id.
+
+// Angelo NPC
+// ----------
+adoli2                  => 1	// Lady Seline
+
+// Assassinations
+// --------------
+o#crsoph                => 1	// Lady Sofia
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#nob2                  => 1	// Noblewoman
+
+// BG1 NPC
+// -------
+x#dora                  => 1	// Dora
+
+// BGQE
+// ----
+c#q04003                => 1	// Lady von Undenzieht
+c#q05003                => 1	// Onlooker
+c#q08002                => 1	// Linda
+
+// CtB
+// ---
+cb596se6                => 1	// Civil Servant
+cbffcrw2                => 1	// Noblewoman
+cbnobl2w                => 1	// id.
+cbnobl5w                => 1	// id.
+cbhl3634                => 1	// Shopkeeper
+cbhld0w7                => 1	// Peasant
+cbp2act1                => 1	// Annabella
+cbp2act3                => 1	// Putana
+cbp3act5                => 1	// Lady MacBeth
+cbp4act1                => 1	// Mabel
+cbrncwfe                => 1	// Tanya
+cbsurayw                => 1	// Surayah
+
+// Classic Adventures
+// ------------------
+tc2000mf                => 1	// Noblewoman
+tccivil2                => 1	// Civil Servant
+tcfstat                 => 1	// Statue
+tcmmnob2                => 1	// Lady Beth
+
+// Dark Horizons
+// -------------
+cmmerc06                => 1	// Ms. Godfrey
+
+// DSotSC
+// ------
+dskateri                => 1	// Katerin
+
+// Expanded Thief Stronghold
+// -------------------------
+tspick2                 => 1	// Noblewoman
+
+// FfT
+// ---
+yschnob5                => 1	// Noblewoman
+yschnob6                => 1	// id.
+yschnob7                => 1	// id.
+yselpara                => 1	// Elizabeth Pavaral
+ysnobw_a                => 1	// Noblewoman
+ysnobw_b                => 1	// id.
+ysnobw_c                => 1	// id.
+ysnobw_d                => 1	// id.
+ysnobw_e                => 1	// id.
+ysnobwwa                => 1	// id.
+ysnobwwb                => 1	// id.
+ysnobwwc                => 1	// id.
+ysnobwwd                => 1	// id.
+ysnobwwe                => 1	// id.
+yssanob1                => 1	// id.
+ystres3                 => 1	// id.
+ystres4                 => 1	// id.
+
+// G3 Anniversary
+// --------------
+g3mrsgtu                => 1	// Mrs. The Unmanned
+
+// Improved Anvil
+// --------------
+"s!lady1"               => 1	// Lady Mollymawk
+
+// Item Pack
+// ---------
+d1wmart2                => 1	// Deirdre
+
+// Keto NPC
+// --------
+pgcrowdn                => 1	// Noblewoman
+pglyrica                => 1	// Lyrica
+
+// NEJ
+// ---
+beatrice                => 1	// Duchess Beatrice Duvaine
+
+// RoT
+// ---
+ann11                   => 1	// Ann
+arlaxn2                 => 1	// Mera
+arlaxn5                 => 1	// Noble Woman
+arlaxn6                 => 1	// id.
+ncdw                    => 1	// Noble
+ncdw2                   => 1	// id.
+vinobwo                 => 1	// Noble Villager
+
+// Severian de Demerya
+// -------------------
+"#stethys"              => 1	// no name
+
+// SoS
+// ---
+cb232fm4                => 1	// Adventurer
+cb270ccf                => 1	// Soubar Villager
+cbsbtvrf                => 1	// id.
+cbsbtvrm                => 1	// id.
+cbsbwt64                => 1	// Susan Branding
+cblybuck                => 1	// Leeta Bucko
+
+// TDD
+// ---
+3316nob2                => 1	// Snobby Noble Woman
+3324nob2                => 1	// id.
+3324nob3                => 1	// id.
+bginfo2                 => 1	// Noblewoman
+bgtav1b                 => 1	// Reception Lady
+bgtavst2                => 1	// Lady Guest
+bgtavst4                => 1	// id.
+eastnob2                => 1	// Commoner
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05mar2                => 1	// Mary
+bw05mary                => 1	// id.
+
+// The Jerry Zinger Show
+// ---------------------
+jzmaria                 => 1	// Lady Maria
+
+// The Luxley Family
+// -----------------
+fhlali                  => 1	// Alyssia
+
+// TS
+// --
+cdmaid3                 => 1	// Captive Woman
+cdmaid4                 => 1	// id.
+nanny                   => 1	// Nanny
+
+// TS25 MiniMod
+// ------------
+tz25nnla                => 1	// ?? (in Japanese)
+
+// Tsujatha Romance
+// ----------------
+tsjflirt                => 1	// Lady Arlluvia
+
+END
+
+
+/* ============================================================================================== *
+ *  ARRAY GW_townie_upper_class_male : LISTS vanilla and modded Male Human Nobles to be patched.  *
+ * ---------------------------------------------------------------------------------------------- *
+ *  Male Human Nobles get the townie_upper_class_male animation.                                  *
+ * ============================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_townie_upper_class_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_townie_upper_class_male BEGIN
+
+// BG
+// --
+"%tutu_var%ashen"       => 1	// Ashen
+"%tutu_var%binky"       => 1	// Lord Binky the Buffoon
+"%tutu_var%chase"       => 1	// Chase
+"%tutu_var%feloni"      => 1	// Felonius Gist
+"%tutu_var%fenrus"      => 1	// Fenrus
+"%tutu_var%foresh"      => 1	// Lord Foreshadow
+"%tutu_var%jared"       => 1	// Jared
+"%tutu_var%mysmer"      => 1	// Merchant
+"%tutu_scriptn%obbax_a" => 1	// Nobleman
+"%tutu_scriptn%obbax_b" => 1	// id.
+"%tutu_scriptn%obbax_c" => 1	// id.
+"%tutu_scriptn%obbax_d" => 1	// id.
+"%tutu_scriptn%obbax_e" => 1	// id.
+"%tutu_var%nobl10"      => 1	// Gerard Travenhurst
+"%tutu_var%nobl11"      => 1	// Nobleman
+"%tutu_var%nobl12"      => 1	// id.
+"%tutu_var%nobl14"      => 1	// id.
+"%tutu_var%nobl2"       => 1	// id.
+"%tutu_var%nobl3"       => 1	// id.
+"%tutu_var%nobl4"       => 1	// id.
+"%tutu_var%nobl5"       => 1	// id.
+"%tutu_var%nobl6"       => 1	// id.
+"%tutu_var%nobl7"       => 1	// id.
+"%tutu_var%nobl8"       => 1	// id.
+"%tutu_var%nobl9"       => 1	// id.
+"%tutu_scriptn%oblba_a" => 1	// id.
+"%tutu_scriptn%oblba_b" => 1	// id.
+"%tutu_scriptn%oblba_c" => 1	// id.
+"%tutu_scriptn%oblba_d" => 1	// id.
+"%tutu_scriptn%oblba_e" => 1	// id.
+"%tutu_var%noblpa"      => 1	// id.
+"%tutu_var%noblpa1"     => 1	// id.
+"%tutu_var%noblpa2"     => 1	// id.
+"%tutu_var%noblpa3"     => 1	// id.
+"%tutu_var%noblpa4"     => 1	// id.
+"%tutu_var%noblpa5"     => 1	// id.
+"%tutu_var%prism"       => 1	// Prism
+"%tutu_var%regina"      => 1	// Reginald "Longtooth" Worthington III
+"%tutu_var%sirlot"      => 1	// Sir Lothtyran
+"%tutu_var%tartus"      => 1	// Tartusse
+
+// BG2
+// ---
+aewimer1                => 1	// Merchant
+amcust02                => 1	// Nobleman
+anno1                   => 1	// Announcer
+argrim                  => 1	// Lord Ketlaar Argrim
+bdact05                 => 1	// Zaren
+bdact07                 => 1	// Balmitance
+bdhigg01                => 1	// Higgold
+bnoble1                 => 1	// Lord Feveron
+burn01                  => 1	// Body
+civil01                 => 1	// Civil Servant
+civil03                 => 1	// id.
+clglin01                => 1	// Glinden
+copgreet                => 1	// Frankie
+counsec                 => 1	// Council Secretary Ewenn
+crthf03                 => 1	// Rilmi
+daslave6                => 1	// Slave
+delnob01                => 1	// Nobleman
+dpim                    => 1	// Pimlico
+farthin                 => 1	// Lord Farthington Roenall
+ffcrowd1                => 1	// Nobleman
+ffcust09                => 1	// Lord Sterk
+fulord                  => 1	// Lord Milsire Donderbeg
+gnoblem1                => 1	// Nobleman
+gnoblem2                => 1	// id.
+gphil02                 => 1	// Philosopher
+hacton                  => 1	// Acton Balthis
+hist1                   => 1	// Historian
+imnbook1                => 1	// Book Merchant
+korpim                  => 1	// Pimlico
+kpdomo01                => 1	// Majordomo
+kprang02                => 1	// Malvolio
+llarsh                  => 1	// Llarsh
+marlowe                 => 1	// Marlowe
+mourner3                => 1	// Arthur
+noble1                  => 1	// Nobleman
+noblem1                 => 1	// id.
+noblem2                 => 1	// id.
+pehllus                 => 1	// Pehllus Tanislove
+pircor03                => 1	// Courtesan
+postul6                 => 1	// Nobleman
+quint                   => 1	// Quint Roenall
+rerak01                 => 1	// Traveler
+rumar                   => 1	// Rumar
+sarbar01                => 1	// Pyrgam Aleson
+sbslum01                => 1	// Nobleman
+scqar                   => 1	// Qar Jysstev
+scsarles                => 1	// Sir Sarles
+slvic01                 => 1	// Tourist
+taxcoll                 => 1	// Tax Collector
+trax                    => 1	// Trax
+trcut02                 => 1	// Nobleman
+trmer02                 => 1	// Merchant
+trnobm01                => 1	// Sir Parick
+trnobm02                => 1	// Nobleman
+trple04                 => 1	// Customer
+trrak02                 => 1	// Saadat
+trrak03                 => 1	// Jalaal
+victown3                => 1	// Nobleman
+wcust01                 => 1	// Count Claylan
+welther                 => 1	// Welther
+"%willia_bg2%"          => 1	// Sir William of Thorpe
+wmart1                  => 1	// Joluv
+yscara01                => 1	// Merchant
+
+// Ajantis for BG2
+// ---------------
+c#ajende                => 1	// Lord Enderold
+c#ajloil                => 1	// Lord Ilvastarr
+
+// Ajoc mod
+agdeimos                => 1	// Deimos
+aggriev                 => 1	// Griever
+
+// Alternatives
+// ------------
+"b!ballus"              => 1	// Assistant Harbormaster Ballas
+"b!mal"                 => 1	// Malficus
+"b!mal2"                => 1	// id.
+"b!vulg2"               => 1	// Guest
+"b!vulg4"               => 1	// id.
+"b!vulg6"               => 1	// id.
+"b!vulova"              => 1	// Lord Vulova
+
+// Amber
+// -----
+m#rashry                => 1	// Tailor
+
+// Angelo NPC
+// ----------
+adoli1                  => 1	// Lord Feverstone
+
+// Assassinations
+// --------------
+o#crlah                 => 1	// Lahar Feenick
+o#crmel                 => 1	// Lord Melyin
+o#damir                 => 1	// Lord Damir
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#nob1                  => 1	// Nobleman
+z#nob3                  => 1	// id.
+
+// BG1 UB
+// ------
+"%tutu_var%hersch"      => 1	// Herschel
+
+// BGQE
+// ----
+c#q01002                => 1	// Eltolth
+c#q04004                => 1	// Lord von Undenzieht
+
+// The Black Rose Part 1: Market Prices
+// ------------------------------------
+bw11cre2                => 1	// Master of the Trade
+
+// CtB
+// ---
+cb596se2                => 1	// Lord Ketlaar Argrim
+cb596se5                => 1	// Civil Servant
+cbffcrw1                => 1	// Nobleman
+cbnobl1w                => 1	// id.
+cbnobl3w                => 1	// Lord Ophal
+cbnobl4w                => 1	// Nobleman
+cbp2act2                => 1	// Giovanni
+cbp3act4                => 1	// id.
+cbsbin64                => 1	// Soranzo
+cbtaxcva                => 1	// Town Crier
+t#mdomo                 => 1	// Majordomo
+
+// Classic Adventures
+// ------------------
+tc2000nm                => 1	// Slave Trader
+tcbart                  => 1	// Bart Brannagin
+tccivil1                => 1	// Civil Servant
+tccivil3                => 1	// id.
+tcderil                 => 1	// Lord Deril
+tclogan                 => 1	// Logan
+tcmer03                 => 1	// Book Merchant
+tcmmnob1                => 1	// Lord Mac
+tcwgnob1                => 1	// Virgarious
+
+// Dark Horizons
+// -------------
+cm0700a                 => 1	// Sir Winton
+cmfood1                 => 1	// Chef Martel
+cmkfc01                 => 1	// Chicken
+cmmerc04                => 1	// Merchant
+cmosec12                => 1	// Butler
+
+// DSotSC
+// ------
+dsnorby                 => 1	// Lord Norby Boozluck
+
+// Dungeon Crawl
+// -------------
+o#thadd                 => 1	// Lord Thaddeus Leoncourt
+
+// Emad
+// ----
+clfjmp                  => 1	// Lord Jumpalota
+
+// Expanded Thief Stronghold
+// -------------------------
+tspick1                 => 1	// Nobleman
+
+// FfT
+// ---
+yschnob1                => 1	// Nobleman
+yschnob2                => 1	// id.
+yschnob3                => 1	// id.
+ysnobm_a                => 1	// id.
+ysnobm_b                => 1	// id.
+ysnobm_c                => 1	// id.
+ysnobm_d                => 1	// id.
+ysnobm_e                => 1	// id.
+ysnobmwa                => 1	// id.
+ysnobmwb                => 1	// id.
+ysnobmwc                => 1	// id.
+ysnobmwd                => 1	// id.
+ysnobmwe                => 1	// id.
+yssanob2                => 1	// id.
+ystres1                 => 1	// id.
+ystres2                 => 1	// id.
+
+// Freedom's Reign of Virtue
+// -------------------------
+desto#04                => 1	// Money D. Storekeeper
+
+// G3 Anniversary
+// --------------
+g3java02                => 1	// Barister
+
+// Gavin for BG
+// ------------
+"b!gavlok"              => 1	// Master Locksmith
+"b!gustav"              => 1	// Gustav
+"b!jolun"               => 1	// Jolun
+
+// Gavin for BG2
+// -------------
+"b!herb04"              => 1	// Master Siman
+
+// Hannah NPC
+// ----------
+hanobl1                 => 1	// Baranin
+
+// Item Pack
+// ---------
+d1wmart1                => 1	// Joluv
+
+// Kelsey NPC
+// ----------
+fwbirina                => 1	// Birinar
+
+// Keto NPC
+// --------
+pgcrowdm                => 1	// keto
+pgjoules                => 1	// Sir Joules
+
+// Lester NPC
+// ----------
+lenn                    => 1	// Lenn
+
+// NTotSC
+// ------
+ntmagnad                => 1	// Magnad
+
+// Quest Pack
+// ----------
+d0lender                => 1	// Celile
+d0qppotn                => 1	// Jadarath
+
+// RoT
+// ---
+arenaa6                 => 1	// Audience
+arenaa7                 => 1	// id.
+arenam3                 => 1	// Mynor
+arenam5                 => 1	// Cedar
+arlaxm4                 => 1	// Merchant
+arlaxm5                 => 1	// id.
+arlaxn1                 => 1	// Isac
+arlaxn3                 => 1	// Noble
+arlaxn4                 => 1	// id.
+auno1                   => 1	// Audience
+auno2                   => 1	// id.
+auno3                   => 1	// id.
+auno4                   => 1	// id.
+auno5                   => 1	// id.
+biggs                   => 1	// Biggs
+caern                   => 1	// Caern
+egald1                  => 1	// Edomis Galdenburg
+egald2                  => 1	// id.
+egald3                  => 1	// id.
+laron1                  => 1	// Laron
+ncdm                    => 1	// Noble
+ncdm2                   => 1	// id.
+nohos1                  => 1	// Noble Hostage
+nohos2                  => 1	// id.
+robemer                 => 1	// rot
+staffm1                 => 1	// Staff Member
+staffm10                => 1	// id.
+staffm11                => 1	// id.
+staffm12                => 1	// id.
+staffm2                 => 1	// id.
+staffm3                 => 1	// id.
+staffm4                 => 1	// id.
+staffm5                 => 1	// id.
+staffm6                 => 1	// id.
+staffm7                 => 1	// id.
+staffm8                 => 1	// id.
+staffm9                 => 1	// id.
+vinobma                 => 1	// Noble Villager
+wealmer                 => 1	// Wealthy Merchant
+
+// Saerileth
+// ---------
+nsprey01                => 1	// Lord Reginald
+
+// Severian de Demerya
+// -------------------
+"#spinkie"              => 1	// Pinkie Tourtrompette
+
+// Skie
+// ----
+1xspr                   => 1	// Projektant
+
+// SoS
+// ---
+cbldbuck                => 1	// Lord Hammerhand Bucko
+cbwillma                => 1	// Sir William
+
+// Stratagems
+// ----------
+dw#abrop                => 1	// Merchant
+
+// TDD
+// ---
+3316nob1                => 1	// Wealthy Commoner
+3324nob1                => 1	// id.
+adadop1a                => 1	// Suspicious Noble
+alagar                  => 1	// Alagar
+aramir                  => 1	// Aramir Estel
+bginfo1                 => 1	// Nobleman
+bgtav1a                 => 1	// Doorman
+bgtavst1                => 1	// Noble Guest
+bgtavst3                => 1	// id.
+ddassi01                => 1	// Mayor's Assistant
+ddmayo01                => 1	// Mayor
+ddmerc01                => 1	// Traveller
+ddmerc02                => 1	// Merchant
+deadman3                => 1	// Little boy
+eastnob1                => 1	// Commoner
+pashtrav                => 1	// Pasha Khazun
+wardnob1                => 1	// Greeter
+
+// The Jerry Zinger Show
+// ---------------------
+jzcrwdm3                => 1	// Audience
+jzrumar                 => 1	// Rumar
+jzwilly                 => 1	// Sir William of Thorpe
+
+// ToB Revisited
+// -------------
+wgmerc01                => 1	// Merchant
+
+// TS25 MiniMod
+// ------------
+tz25_#of                => 1	// ?? (in Japanese)
+tz25nnra                => 1	// id.
+tz25nnru                => 1	// id.
+
+// The Music of the Realms
+// -----------------------
+larin                   => 1	// Larin
+
+// The Undying
+// -----------
+cmlordas                => 1	// Lord Ashram
+cmtus01                 => 1	// Edmund
+
+// Vecna
+// -----
+aacre115                => 1	// Dead Body
+
+// Victor's Improvements Pack
+// --------------------------
+erwan                   => 1	// Erwan Pistvaen
+
+// Willie Bruce NPC
+// ----------------
+wblance                 => 1	// Lance
+
+// Neh'taniel ???
+// ----------
+sk#noble                => 1	// 
+
+END
+
+
+/* ================================================================================= *
+ *  ARRAY GW_zombie_female : LISTS vanilla and modded Female Zombies to be patched.  *
+ * --------------------------------------------------------------------------------- *
+ *  Female Zombies get the zombie_female animation.                                  *
+ * ================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_zombie_female
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_zombie_female BEGIN
+
+// BG
+// --
+"%tutu_scriptz%ombie_b" => 1	// Zombie
+"%tutu_scriptz%ombie_d" => 1	// id.
+"%tutu_var%zombieb"     => 1	// id.
+"%tutu_var%zombiew"     => 1	// id.
+
+// BG2
+// ---
+bhghoul5                => 1	// Zombie
+gtcit4                  => 1	// Zombie
+gtcit5                  => 1	// id.
+zombju01                => 1	// id.
+
+// BG1 NPC
+// -------
+x#garz02                => 1	// Zombie
+x#garz04                => 1	// id.
+
+// Saerileth
+// ---------
+nszomb07                => 1	// Zombie
+nszomb08                => 1	// id.
+nszomb09                => 1	// id.
+nszomb10                => 1	// id.
+
+// Spell Pack
+// ----------
+lcadead5                => 1	// Zombie
+lcadead6                => 1	// id.
+
+// TDD
+// ---
+zombsexx                => 1	// Zombie
+zombx1                  => 1	// id.
+
+END
+
+
+/* ============================================================================= *
+ *  ARRAY GW_zombie_male : LISTS vanilla and modded Male Zombies to be patched.  *
+ * ----------------------------------------------------------------------------- *
+ *  Male Zombies get the zombie_male animation.                                  *
+ * ============================================================================= */
+
+ACTION_CLEAR_ARRAY GW_zombie_male
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_zombie_male BEGIN
+
+// BG
+// --
+"%tutu_var%ghorak"      => 1	// Ghorak
+"%tutu_scriptz%ombie_a" => 1	// Zombie
+"%tutu_scriptz%ombie_c" => 1	// id.
+"%tutu_scriptz%ombie_e" => 1	// id.
+
+// BG2
+// ---
+bhghoul3                => 1	// Zombie
+gtcit3                  => 1	// id.
+kelzomb                 => 1	// id.
+nevm5                   => 1	// id.
+rzomb01                 => 1	// id.
+
+// BG1 NPC
+// -------
+x#garz01                => 1	// Zombie
+x#garz03                => 1	// id.
+
+// BGQE
+// ----
+c#q06002                => 1	// Zombie
+
+// NTotSC
+// ------
+ntzombie                => 1	// Zombie
+ntzombju                => 1	// id.
+
+// Saerileth
+// ---------
+nszomb02                => 1	// Zombie
+nszomb04                => 1	// id.
+nszomb06                => 1	// id.
+
+// Spell Pack
+// ----------
+lcadead3                => 1	// Zombie
+lcadead4                => 1	// id.
+lcjujusu                => 1	// id.
+
+// Unknown mods
+// ------------
+accc                    => 1	// 
+
+END

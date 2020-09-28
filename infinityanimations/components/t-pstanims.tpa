@@ -1,1286 +1,1320 @@
-/* =================================================== *
- *  INFINITY ANIMATIONS : More PsT Animations routine  *
- * =================================================== */
+/* ======================================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                                *
+ *                                      M O R E   P S T   A N I M A T I O N S   C O M P O N E N T   ( 7 1 0 - 7 2 0 - 7 3 0 - 7 4 0 )                                      *
+ *                                                                                                                                                                         *
+ * ======================================================================================================================================================================= *
+ *  This component assigns assigns some creatures distinctive PST animations.                                                                                              *
+ * ======================================================================================================================================================================= *
+ *  change-log:                                                                                                                                                            *
+ *  -----------                                                                                                                                                            *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_pst_anim_arrays.tph library) for easier maintenance.                              *
+ *      - Tutu variables: added missing tutu variables for BG1 UB (bart8, bart9, edie, ennahe, erlinh, feldan, galkin, hersch, memnis, mercha, mtob4, mtob5, read4,        *
+ *        serwen, travel, volose, wilton) and BG:EE/Tutu (gretek). Added new variables to avoid overwriting BG and BG2 files having the same names.                        *
+ *      - Externalized random seed in a new library (gw_random.tpp).                                                                                                       *
+ *      - Integrated Miloch's updated t-pstanims.tpa patch, tuned by Lollorian. ( http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274 )   *
+ *      - Added glowcheck.tpp patch ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).                                                            *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~).  *
+ * ======================================================================================================================================================================= */
 
-RANDOM_SEED null // Initialize random numbers
+/* ------------------------------------------------------------------------------------------------- *
+ *                            CREATURES                                                        line  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Female Human Thieves get the townie_curst_female animation                               #   66  *
+ *  Male Human Thieves get the townie_curst_male animation                                   #  104  *
+ *  Female Monks get the dustman_female animation                                            #  169  *
+ *  Dustmen get the dustman_male animation                                                   #  211  *
+ *  Male Monks get the dustman_male animation                                                #  245  *
+ *  Some Female Ghouls get the ghoul_female animation                                        #  286  *
+ *  Some Male Ghouls get the ghoul_male animation                                            #  330  *
+ *  Male Human Smiths get the godsman animation                                              #  372  *
+ *  Axe- and hammer-wielding bandits and mercenaries get the thug_large animation            #  412  *
+ *  Sword- and dagger-wielding bandits and mercenaries get the thug animation                #  465  *
+ *  Female Human Peasants get the townie_lower_class_female animation                        #  526  *
+ *  Male Human Peasants get the townie_lower_class_male animation                            #  574  *
+ *  Male Human Merchants get the merchant animation                                          #  639  *
+ *  Female Human Merchants get the midwife animation                                         #  688  *
+ *  Harlots get the harlot animation                                                         #  733  *
+ *  Skeleton Mages get the skeleton_priest animation                                         #  778  *
+ *  Skeletons get the skeleton_worker animation                                              #  821  *
+ *  Female Tieflings get the tiefling_female animation                                       #  875  *
+ *  Male Tieflings get the tiefling_male animation                                           #  938  *
+ *  Male Human Mages get the townie_wizard animation                                         # 1016  *
+ *  Female Human Nobles get the townie_upper_class_female or the aasimar_female animation    # 1083  *
+ *  Male Human Nobles get the townie_upper_class_male animation                              # 1153  *
+ *  Female Zombies get the zombie_female animation                                           # 1202  *
+ *  Male Zombies get the zombie_male animation                                               # 1263  *
+ * ------------------------------------------------------------------------------------------------- */
 
 SILENT
+
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_pst_anim_arrays.tph~
+
+
+/* =========================== *
+ *  Initialize random numbers  *
+ * =========================== */
+ACTION_INCLUDE ~%MOD_FOLDER%/lib/gw_random.tpp~
+RANDOM_SEED null
+
+SILENT
+
 
 /* ============================================================ *
  *  Female Human Thieves get the townie_curst_female animation  *
  * ============================================================ */
-ACTION_FOR_EACH nb IN ~%tsu%alyth~ ~%tsu%blackl~ ~%tsu%crew2~ ~%tsu%desret~ ~%tsu%dhania~ ~%tsu%maneir~ ~%tsu%nila~ ~%tsu%silenc~ ~%tsu%telka~ ~abbyhucr~ ~adsuu~ ~adsuu25~ ~aj#ass1~ ~aj#ass3~ ~amasana~ ~arlthif4~ ~arlthif5~ ~b!penny~ ~b!ruby~ ~bpthief3~ ~c6alyra~ ~c6natas~ ~castre6~ ~cbhld0w4~ ~cbtbgmer~ ~cbtbgmr1~ ~cmbou06~ ~cmbou10~ ~crothf02~ ~cultbe10~ ~d0alas25~ ~d0alassa~ ~ddcyric1~ ~delei~ ~dw#c51~ ~fhlbrid~ ~fhlw1~ ~fhlw3~ ~fhlw4~ ~fhlw5~ ~gbene01e~ ~genth02~ ~hlketta~ ~hlketta2~ ~j#kasset~ ~j#pirat2~ ~jenavi~ ~mirriam~ ~mugger1~ ~mwkicht~ ~mythif2~ ~mythif4~ ~ntmariel~ ~quadkid3~ ~repthf3~ ~shthass1~ ~tcalyth~ ~tcduch~ ~thief3~ ~thjail2~ ~ts5thf1~ ~ts5thf3~ ~ts5thf5~ ~tsama1~ ~tsblackl~ ~tssmugf~ ~ucmgth02~ ~vera~ ~vvdead3~ ~vvshad3~ ~vvshad7~ ~zemthif5~ ~zemthif9~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_curst_female_male AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d4c // Animation ID (townie_curst_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_CURST_FEMALE_PST~) // classical 0x5d4c - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_CURST_FEMALE_PST~) // original 0x5d4c - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TCF01A]
-					SAY BATTLE_CRY2 ~~ [T-TCF01B]
+					SAY BATTLE_CRY1 ~~ [t-tcf01a]
+					SAY BATTLE_CRY2 ~~ [t-tcf01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TCF03]
+					SAY ATTACK1 ~~ [t-tcf03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-TCF07]
+					SAY DAMAGE ~~ [t-tcf07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-TCF09]
+					SAY DYING ~~ [t-tcf09]
 				END
 				WRITE_BYTE 0x237 2 // Sex (female)
 				WRITE_BYTE 0x275 2 // Gender (female)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_curst_female
+
 
 /* ======================================================== *
  *  Male Human Thieves get the townie_curst_male animation  *
  * ======================================================== */
-ACTION_FOR_EACH nb IN ~%tsu%alanbl~ ~%tsu%alatos~ ~%tsu%denkod~ ~%tsu%erdane~ ~%tsu%garan~ ~%tsu%gregor~ ~%tsu%husam~ ~%tsu%husam2~ ~%tsu%kestor~ ~%tsu%kolvar~ ~%tsu%lothan~ ~%tsu%meakin~ ~%tsu%mersil~ ~%tsu%mersil2~ ~%tsu%mersil3~ ~%tsu%meym~ ~%tsu%mrshade~ ~%tsu%naaman~ ~%tsu%narlen~ ~%tsu%niklos~ ~%tsu%nimbul~ ~%tsu%nortua~ ~%tsu%rededg~ ~%tsu%riggilo~ ~%tsu%sath~ ~%tsu%shadow~ ~%tbg%shank~ ~%tsu%smuggl~ ~%tsu%taxek~ ~%tsu%thaldo~ ~%tsu%thief~ ~%tsu%thiefg~ ~%tsu%thiefm~ ~%tsu%vitiare~ ~acvit~ ~adblack~ ~adginpac~ ~aj#ass2~ ~aj#sth~ ~ambmaevr~ ~ambsthf0~ ~ambthif2~ ~amsmug01~ ~amsmug02~ ~antenos~ ~ar18thif~ ~aran~ ~aran02~ ~arkanisg~ ~arlthif1~ ~arlthif2~ ~arnfgt01~ ~arnfgt02~ ~arnman03~ ~arnman09~ ~arnman10~ ~arntra03~ ~arntra04~ ~arntra05~ ~arnwar03~ ~arnwar04~ ~arnwar08~ ~b!vhelon~ ~b!wael~ ~b!wael2~ ~b#roen05~ ~bdturm02~ ~bhbasmar~ ~bhgelliu~ ~bhguild1~ ~bhsangst~ ~bhthief~ ~bhvolcfr~ ~bpsthef3~ ~bpthief2~ ~bryne~ ~bw05brma~ ~bw05eros~ ~bw05thie~ ~bw11cre3~ ~c#q01004~ ~c6mess~ ~c6yean~ ~cain~ ~cb4280st~ ~cbgaelan~ ~cbp2act6~ ~cbp4act2~ ~cbshdrun~ ~cbshthif~ ~chgood08~ ~cm03a514~ ~cmbou05~ ~cmbou07~ ~cmbou08~ ~cmbou09~ ~cmniks1~ ~cmniks2~ ~cmniks3~ ~cmsec11~ ~cmsec13~ ~crothf01~ ~csgayl~ ~csthief1~ ~csthief2~ ~cultbe13~ ~cultbe17~ ~cushad2~ ~cushad3~ ~cushad5~ ~d0arbku2~ ~d0msngr~ ~d0night2~ ~d0nightk~ ~d0qpwiw2~ ~d0qpwiwi~ ~dassin~ ~ddassa01~ ~ddblbl01~ ~dedsmug~ ~del~ ~dellow~ ~deshar~ ~desto#01~ ~dmark1~ ~dockhlp1~ ~dockhlp2~ ~dsthief~ ~dw#c52~ ~e_jhmai1~ ~e_jhmai2~ ~embarl~ ~er_calld~ ~er_love1~ ~ffcust01~ ~flyfgt01~ ~g3grim~ ~g3scam~ ~gaelan~ ~gaelan2~ ~gaylan~ ~gbene02e~ ~gentmg01~ ~genth01~ ~gorsta07~ ~govbud~ ~govdude~ ~gpthief1~ ~habib~ ~habib2~ ~hlassa~ ~hoodman~ ~irethf03~ ~ishadmt1~ ~ishclo01~ ~ishthf01~ ~ishthf03~ ~j#im8thg~ ~j#morrid~ ~jaerto3~ ~jc_assn~ ~jc_thf02~ ~jc_thf03~ ~jc_thf04~ ~kalvassa~ ~kaysmg03~ ~kilhelp1~ ~kilhelp2~ ~kilhelp3~ ~killian~ ~korscroo~ ~lellyn~ ~maevar~ ~man1cr~ ~man2cr~ ~memnis~ ~mfeind1~ ~mookft01~ ~mugger3~ ~mycutt1~ ~nscom002~ ~nsprey03~ ~ntlegian~ ~ntrededg~ ~o#azag~ ~o#botan~ ~o#castor~ ~o#crgoon~ ~o#crkern~ ~o#grudin~ ~o#smug~ ~olmmess~ ~olmspy~ ~otako~ ~pace~ ~pirebd16~ ~pirebd17~ ~pirexe01~ ~pirpir05~ ~plass03~ ~plass04~ ~pparan~ ~pparan2~ ~ppduel2~ ~ppduelc~ ~ppmur~ ~ppshad01~ ~prax~ ~raziel~ ~re_jon~ ~rethie01~ ~rethie02~ ~rethie03~ ~roger~ ~rr#aran2~ ~rr#saw08~ ~rr#sfl01~ ~rr#sfl03~ ~rr#sti01~ ~rr#vend~ ~rr#vend2~ ~s!rune2~ ~s!runef2~ ~s!slassa~ ~s!tanthf~ ~sarbha01~ ~sarthf01~ ~sevpat05~ ~shadcr1~ ~shadth01~ ~shadth02~ ~shank~ ~shth03~ ~shthdr01~ ~shthlt01~ ~shthlt02~ ~shthstor~ ~spmugg~ ~spmugg2~ ~stdeath~ ~stein~ ~suthess1~ ~taim~ ~talavan5~ ~talmess~ ~tanadv06~ ~tanthf01~ ~tc1600m2~ ~tcdetrak~ ~tcfinnoc~ ~tcned~ ~tcned01~ ~tcned02~ ~tcpace~ ~tcslthf1~ ~tcslthf2~ ~tcstein~ ~tcsturm~ ~tcturn~ ~thief2~ ~thief5~ ~thjail1~ ~travin~ ~tresham1~ ~trthf01~ ~trthf02~ ~ts5thf2~ ~ts5thf4~ ~ts5thf6~ ~tssmugb~ ~tssmugm~ ~tz25_#l1~ ~tz25_#lo~ ~tz25__am~ ~tz25__g1~ ~tz25__g2~ ~tz25__gx~ ~tz25__mg~ ~tz25nnth~ ~tz25nnve~ ~tz25nnvf~ ~ucmgth01~ ~udtrap05~ ~vakg03~ ~vparan~ ~vulthief~ ~vvarkan~ ~vvcat~ ~vvdead1~ ~vvdead2~ ~vvshad1~ ~vvshad11~ ~vvshad12~ ~vvshad4~ ~vvshad5~ ~vvshad6~ ~vvshad8~ ~x#karris~ ~yarin~ ~ysoengus~ ~z#arch1~ ~z#arch2~ ~z#archbv~ ~z#assabv~ ~z#assas1~ ~z#assas2~ ~z#assas3~ ~z#seid16~ ~z_bergf~ ~z_bergf2~ ~zemthif1~ ~zemthif2~ ~zemthif3~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_curst_male_male AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN	// If not shadow_thief
-					WRITE_SHORT 0x28 0x5d4d				// Animation ID (townie_curst_maleèpst)
-//					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE_PST~) // classical 0x5d4d - EE none for the momemt
+				// If not shadow_thief
+				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE_PST~) // original 0x5dbb - EE depends on installation
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TCM01]
-					SAY BATTLE_CRY2 ~~ [T-TCM02A]
+					SAY BATTLE_CRY1 ~~ [t-tcm01]
+					SAY BATTLE_CRY2 ~~ [t-tcm02a]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TCM03]
+					SAY ATTACK1 ~~ [t-tcm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-TCM07]
+					SAY DAMAGE ~~ [t-tcm07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-TCM09]
+					SAY DYING ~~ [t-tcm09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-TCM02A]
+					SAY SELECT_COMMON1 ~~ [t-tcm02a]
 				END
-				WRITE_BYTE 0x237 1						// Sex (male)
-				PATCH_IF (BYTE_AT 0x272 = 4) OR (BYTE_AT 0x272 > 153) BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1										// Race (human)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid race
+				PATCH_IF (BYTE_AT 0x272 = 4) OR (BYTE_AT 0x272 > 153) BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END ELSE BEGIN
-					PATCH_IF BYTE_AT 0x272 = 117 BEGIN	// If wolf
-						WRITE_BYTE 0x272 1				// Race (lycanthrope)
+					// If wolf
+					PATCH_IF BYTE_AT 0x272 = 117 BEGIN
+						WRITE_BYTE 0x272 1  // Race (lycanthrope)
 					END
 				END
-				PATCH_IF BYTE_AT 0x273 = 1 BEGIN		// If mage
-					WRITE_BYTE 0x273 13					// Class (mage-thief)
+				// If mage
+				PATCH_IF BYTE_AT 0x273 = 1 BEGIN
+					WRITE_BYTE 0x273 13  // Class (mage-thief)
 				END ELSE BEGIN
-					PATCH_IF BYTE_AT 0x273 = 143 BEGIN	// If wolf
-						WRITE_BYTE 0x273 158			// Class (wolfwere)
+					// If wolf
+					PATCH_IF BYTE_AT 0x273 = 143 BEGIN
+						WRITE_BYTE 0x273 158 // Class (wolfwere)
 					END
 				END
-				PATCH_IF BYTE_AT 0x275 != 6 BEGIN		// If not summoned
-					WRITE_BYTE 0x275 1					// Gender (male)
+				// If not summoned
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_curst_male
+
 
 /* =============================================== *
  *  Female Monks get the dustman_female animation  *
  * =============================================== */
-ACTION_FOR_EACH nb IN ~adkaede~ ~ammgrd02~ ~ammonk05~ ~ammonk08~ ~balelit2~ ~cb304trb~ ~cbavrvlf~ ~cileen~ ~deadkef~ ~drshsp01~ ~dw#wrmo2~ ~fhlros~ ~graghaf1~ ~graghaf2~ ~graghaf3~ ~graghaf4~ ~graghaf5~ ~graghaf6~ ~graghaq~ ~nmonk~ ~o#bea~ ~%tsu%pallon~ ~psbelle~ ~x#xzfsp1~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
-	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
-		COPY_EXISTING ~%nb%.cre~ ~override~
-			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
-			PATCH_IF valid BEGIN
-				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d4e // Animation ID (dustman_female_pst)
-//					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_FEMALE_PST~) // classical 0x5d4e - EE none for the momemt
-				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-DMF01]
-					SAY BATTLE_CRY2 ~~ [T-DMF02]
-				END
-				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-DMF03]
-				END
-				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-DMF07]
-				END
-				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-DMF09]
-				END
-				WRITE_BYTE 0x237 2											// Sex (female)
-				PATCH_IF (BYTE_AT 0x273 < 2) OR (BYTE_AT 0x273 > 172) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 20										// Class (monk)
-				END
-				WRITE_BYTE 0x275 2											// Gender (female)
-			END
-		BUT_ONLY
-	END
-END
+ACTION_PHP_EACH GW_dustman_female AS nb => correct BEGIN
 
-/* ============================================== *
- *  Dustman Males get the dustman_male animation  *
- * ============================================== */
-ACTION_FOR_EACH nb IN ~cbshpp25~ ~nsdust01~ ~nsdust02~ ~nsdust03~ ~nsdust04~ ~nsdust05~ ~nsdust06~ ~nsdust07~ BEGIN
-	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d4f	// Animation ID (dustman_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_MALE_PST~) // classical 0x5d4f - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_FEMALE_PST~) // original 0x5dbc - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-DMM01A]
-					SAY BATTLE_CRY2 ~~ [T-DMM01B]
+					SAY BATTLE_CRY1 ~~ [t-dmf01]
+					SAY BATTLE_CRY2 ~~ [t-dmf02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-DMM03]
+					SAY ATTACK1 ~~ [t-dmf03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-DMM07]
+					SAY DAMAGE ~~ [t-dmf07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-DMM09]
+					SAY DYING ~~ [t-dmf09]
+				END
+				WRITE_BYTE 0x237 2      // Sex (female)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 < 2) OR (BYTE_AT 0x273 > 172) BEGIN
+					WRITE_BYTE 0x273 20 // Class (monk)
+				END
+				WRITE_BYTE 0x275 2      // Gender (female)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_dustman_female
+
+
+/* ======================================== *
+ *  Dustmen get the dustman_male animation  *
+ * ======================================== */
+ACTION_PHP_EACH GW_dustman_male AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_MALE_PST~) // original 0x5dbe - EE depends on installation
+				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+					SAY BATTLE_CRY1 ~~ [t-dmm01a]
+					SAY BATTLE_CRY2 ~~ [t-dmm01b]
+				END
+				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+					SAY ATTACK1 ~~ [t-dmm03]
+				END
+				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+					SAY DAMAGE ~~ [t-dmm07]
+				END
+				PATCH_IF SLONG_AT DYING < 1 BEGIN
+					SAY DYING ~~ [t-dmm09]
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_dustman_male
+
 
 /* =========================================== *
  *  Male Monks get the dustman_male animation  *
  * =========================================== */
-ACTION_FOR_EACH nb IN ~%tsu%bendal~ ~%tsu%cultd1~ ~%tsu%cultd2~ ~%tsu%cultd3~ ~%tsu%cultd4~ ~%tsu%cultd5~ ~%tsu%cultd6~ ~%tsu%galile~ ~%tsu%jessup~ ~%tsu%karan~ ~%tsu%karan1~ ~%tsu%karan3~ ~%tsu%monktu1~ ~%tsm%onktu10~ ~%tsm%onktu11~ ~%tsm%onktu12~ ~%tsm%onktu13~ ~%tsm%onktu14~ ~%tsu%monktu2~ ~%tsu%monktu3~ ~%tsu%monktu4~ ~%tsu%monktu5~ ~monktu6~ ~%tsu%monktu7~ ~%tsu%monktu8~ ~%tsu%monktu9~ ~%tsu%parda~ ~%tsu%parda1~ ~%tsu%parda3~ ~%tsu%piato~ ~%tsu%read2~ ~%tsu%read3~ ~%tsu%shista~ ~%tsu%tethto~ ~%tsu%tethto2~ ~%tsu%tethto3~ ~25spell~ ~3303prst~ ~acoghma1~ ~acoldead~ ~acolpois~ ~acolyte~ ~acolyted~ ~ammgrd01~ ~ammgrd03~ ~ammgrd05~ ~ammlegs~ ~ammonk01~ ~ammonk02~ ~ammonk03~ ~ammonk04~ ~ammonk06~ ~ammonk07~ ~b#knit06~ ~balelit1~ ~balelit3~ ~balelit4~ ~balelite~ ~baurian~ ~baurian2~ ~bazmonk~ ~bdcoun01~ ~burach~ ~caliheal~ ~candx01~ ~candx02~ ~candx03~ ~candx04~ ~candx05~ ~candx06~ ~candx07~ ~cb304tra~ ~cbavrvlm~ ~cbchant1~ ~cbchant2~ ~cbreader~ ~cbsbin70~ ~cbtaxcol~ ~cbtettch~ ~cbtriel0~ ~cbtriel1~ ~cbtriel2~ ~cbtriel3~ ~cbtriel4~ ~cbtriel5~ ~cbtriel6~ ~cbtriel7~ ~cbtriel8~ ~cbtriel9~ ~clfrieng~ ~cutamgrd~ ~cutbalth~ ~cutgrd01~ ~cutgrd02~ ~cutgrd03~ ~cutgrd04~ ~dcowl1~ ~deadkem~ ~dementy~ ~doghma~ ~dw#cutbd~ ~dw#monme~ ~dw#wrmo1~ ~dw#wrmo3~ ~dw#wrmo4~ ~ecolt~ ~feldan~ ~fgragha~ ~fhlluc~ ~fhlquen~ ~fhlsim~ ~garserv4~ ~godadv3~ ~gragham1~ ~gragham2~ ~gragham3~ ~gragham4~ ~gragham5~ ~hanwen~ ~hfmaynar~ ~hfmonk~ ~hhealer~ ~j#pura~ ~jarall~ ~jc_vs1~ ~jc_vs2~ ~killmonk~ ~m#roar8~ ~mgteos01~ ~monk~ ~monkd2~ ~monkde~ ~monken~ ~monkss13~ ~monkss14~ ~monkss15~ ~monkss16~ ~monkss17~ ~monkss18~ ~monktu15~ ~monktu16~ ~monktu17~ ~monktu18~ ~monktu19~ ~monktu20~ ~mykakol~ ~ntaschma~ ~ntblhcu1~ ~ntblhcul~ ~nthasdar~ ~ntmonkd2~ ~ntmonkde~ ~ntordol~ ~ntreedri~ ~o#quagis~ ~oghmonk1~ ~parmonk~ ~pgnalaly~ ~ppireni1~ ~psexam~ ~psion1~ ~psion2~ ~psion3~ ~psion4~ ~pssplit1~ ~pssplit2~ ~pssplit3~ ~pssplit4~ ~psteos~ ~pstutor1~ ~pstutor2~ ~pstutor3~ ~pstutor4~ ~pstutor6~ ~pstutor7~ ~psweil~ ~ralej~ ~read4~ ~riftm01~ ~rondan~ ~sk#hera~ ~tapio2~ ~tcman2~ ~tcmilerj~ ~tcquern~ ~tcurqua~ ~ththot~ ~tucoord~ ~tz25nnde~ ~tz25nnor~ ~ucmgcl03~ ~wb_bag~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_dustman_male2 AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d4f // Animation ID (dustman_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_MALE_PST~) // classical 0x5d4f - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DUSTMAN_MALE_PST~) // original 0x5dbe - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-DMM01A]
-					SAY BATTLE_CRY2 ~~ [T-DMM01B]
+					SAY BATTLE_CRY1 ~~ [t-dmm01a]
+					SAY BATTLE_CRY2 ~~ [t-dmm01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-DMM03]
+					SAY ATTACK1 ~~ [t-dmm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-DMM07]
+					SAY DAMAGE ~~ [t-dmm07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-DMM09]
+					SAY DYING ~~ [t-dmm09]
 				END
-				WRITE_BYTE 0x237 1												// Sex (male)
-				PATCH_IF (BYTE_AT 0x273 < 20) OR (BYTE_AT 0x273 > 198) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 20											// Class (monk)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 < 20) OR (BYTE_AT 0x273 > 198) BEGIN
+					WRITE_BYTE 0x273 20 // Class (monk)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_dustman_male2
+
 
 /* =================================================== *
  *  Some Female Ghouls get the ghoul_female animation  *
  * =================================================== */
-ACTION_FOR_EACH nb IN ~bodakmd~ ~delrysia~ ~gtcit2~ BEGIN
+ACTION_PHP_EACH GW_ghoul_female AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d50 // Animation ID (ghoul_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_FEMALE_PST~) // classical 0x5d50 - EE none for the momemt
-				WRITE_BYTE 0x2d 98		// Minor color (LEAF_GREEN)
-				WRITE_BYTE 0x2e 39		// Major color (DARK_DIRT_BROWN)
-				WRITE_BYTE 0x2f 86		// Skin color (CHROME_GREEN)
-				WRITE_BYTE 0x32 79		// Hair color (LIGHT_SILVER)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_FEMALE_PST~) // original 0x5dbf - EE depends on installation
+				WRITE_BYTE 0x2d 98  // Minor color (LEAF_GREEN)
+				WRITE_BYTE 0x2e 39  // Major color (DARK_DIRT_BROWN)
+				WRITE_BYTE 0x2f 86  // Skin color (CHROME_GREEN)
+				WRITE_BYTE 0x32 79  // Hair color (LIGHT_SILVER)
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-GHF01]
-					SAY BATTLE_CRY2 ~~ [T-GHF02]
+					SAY BATTLE_CRY1 ~~ [t-ghf01]
+					SAY BATTLE_CRY2 ~~ [t-ghf02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-GHF03]
+					SAY ATTACK1 ~~ [t-ghf03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-GHF07]
+					SAY DAMAGE ~~ [t-ghf07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-GHF09]
+					SAY DYING ~~ [t-ghf09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-GHF02]
+					SAY SELECT_COMMON1 ~~ [t-ghf02]
 				END
 				WRITE_BYTE 0x237 2 // Sex (female)
 				WRITE_BYTE 0x271 4 // General (undead)
 				WRITE_BYTE 0x275 2 // Sex (female)
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_ghoul_female
+
 
 /* =============================================== *
  *  Some Male Ghouls get the ghoul_male animation  *
  * =============================================== */
-ACTION_FOR_EACH nb IN ~bhghoul1~ ~gtcit1~ ~%tsu%korax~ BEGIN
-	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN //Male Ghouls
+ACTION_PHP_EACH GW_ghoul_male AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d51 // Animation ID (ghoul_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_MALE_PST~) // classical 0x5d51 - EE none for the momemt
-				WRITE_BYTE 0x2d 107		// Minor color (KHAKI_GRAY)
-				WRITE_BYTE 0x2e 43		// Major color (DARK_BEIGE)
-				WRITE_BYTE 0x2f 7		// Skin color (LIGHT_METALLIC_GREEN)
-				WRITE_BYTE 0x32 28		// Hair color (BLUISH_SILVER)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GHOUL_MALE_PST~) // original 0x5dc0 - EE depends on installation
+				WRITE_BYTE 0x2d 107 // Minor color (KHAKI_GRAY)
+				WRITE_BYTE 0x2e 43  // Major color (DARK_BEIGE)
+				WRITE_BYTE 0x2f 7   // Skin color (LIGHT_METALLIC_GREEN)
+				WRITE_BYTE 0x32 28  // Hair color (BLUISH_SILVER)
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-GHM01]
-					SAY BATTLE_CRY2 ~~ [T-GHM02]
+					SAY BATTLE_CRY1 ~~ [t-ghm01]
+					SAY BATTLE_CRY2 ~~ [t-ghm02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-GHM03]
+					SAY ATTACK1 ~~ [t-ghm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-GHM07]
+					SAY DAMAGE ~~ [t-ghm07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-GHM09]
+					SAY DYING ~~ [t-ghm09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-GHM02]
+					SAY SELECT_COMMON1 ~~ [t-ghm02]
 				END
 				WRITE_BYTE 0x272 108 // Race (ghoul)
 		  END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_ghoul_male
+
 
 /* ============================================= *
  *  Male Human Smiths get the godsman animation  *
  * ============================================= */
-ACTION_FOR_EACH nb IN ~3314sth1~ ~3314sth2~ ~actaerom~ ~arlaxm1~ ~arlaxm2~ ~bhalton~ ~calshop1~ ~cbhlvlnt~ ~cbshpp03~ ~cmmerc03~ ~conlan~ ~dd0334sh~ ~eastforg~ ~gorch~ ~merchant~ ~osgil~ ~rbarmor~ ~shop04~ ~shop07~ ~%tsu%smith~ ~%tsu%taerom~ ~thumb~ ~trcar04~ ~trmer04~ ~u#conlan~ ~uhmer03~ ~ysblksto~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_godsman AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d53 // Animation ID (godsman_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GODSMAN_PST~) // classical 0x5d53 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GODSMAN_PST~) // original 0x5d53 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-GDM01A]
-					SAY BATTLE_CRY2 ~~ [T-GDM01B]
+					SAY BATTLE_CRY1 ~~ [t-gdm01a]
+					SAY BATTLE_CRY2 ~~ [t-gdm01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-GDM03]
+					SAY ATTACK1 ~~ [t-gdm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-GDM07]
+					SAY DAMAGE ~~ [t-gdm07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-GDM09]
+					SAY DYING ~~ [t-gdm09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-GDM02]
+					SAY SELECT_COMMON1 ~~ [t-gdm02]
 				END
 				WRITE_BYTE 0x237 1 // Sex (male)
 		  END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_godsman
+
 
 /* =============================================================================== *
  *  Axe- and hammer-wielding bandits and mercenaries get the thug_large animation  *
  * =============================================================================== */
-ACTION_FOR_EACH nb IN ~%tsu%raiken~ ~%tsu%taugos~ ~agbandle~ ~adasg1~ ~adasg2~ ~arenar1~ ~arenar2~ ~arnfgt04~ ~bw05bl01~ ~bw05bl02~ ~cb230bla~ ~cb230blb~ ~cb230blc~ ~cb230bld~ ~cb232ld1~ ~cb232ld2~ ~cb307sl1~ ~cb307sl2~ ~cbcutat0~ ~cbcutat1~ ~cbcutat2~ ~cbcutat3~ ~cbcutat4~ ~cbcutat5~ ~cbcutat6~ ~cbcutat7~ ~cbcutat8~ ~cbcutat9~ ~cbcutata~ ~cbcutatb~ ~cbcutatc~ ~cbcutatd~ ~cbhbso02~ ~cbhbso03~ ~cbhbso04~ ~cbhbso05~ ~cbhbso06~ ~cbhbso07~ ~cbhbso08~ ~cbhbso09~ ~cbhbso10~ ~cbhbso12~ ~cbhbso13~ ~cbhbso14~ ~cbhbso15~ ~cbhbso16~ ~cbhbso17~ ~cbhbso18~ ~cbhbso19~ ~cbhbso20~ ~cbrtrbda~ ~cbrtrbdb~ ~cbrtrbdc~ ~cbrtrbdd~ ~cbrtrbde~ ~cbrtrbdf~ ~cbrtrbdg~ ~cbrtrbdh~ ~cbrtrbdi~ ~cbrtrbdj~ ~cbrtrbdk~ ~cohrvale~ ~d0thug~ ~d0thug2~ ~d0thug3~ ~druff1~ ~dw#rnlr5~ ~gretek~ ~nq#rbad1~ ~nq#rbad2~ ~nq#rbad4~ ~pirexe01~ ~rethug01~ ~rufpal1~ ~rufpal2~ ~sargrd11~ ~spmugg2~ ~submancr~ ~tcbandi1~ ~wwdelag~ ~ysblgrd~ ~z_mahan~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_thug_large AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d54 // Animation ID (thug_large_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~THUG_LARGE_PST~) // classical 0x5d54 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~THUG_LARGE_PST~) // original 0x5d54 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-THL01A]
-					SAY BATTLE_CRY2 ~~ [T-THL01B]
+					SAY BATTLE_CRY1 ~~ [t-thl01a]
+					SAY BATTLE_CRY2 ~~ [t-thl01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-THL03]
+					SAY ATTACK1 ~~ [t-thl03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-THL07]
+					SAY DAMAGE ~~ [t-thl07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-THL09]
+					SAY DYING ~~ [t-thl09]
 				END
-				WRITE_BYTE 0x237 1					// Sex (male)
-				PATCH_IF BYTE_AT 0x272 > 7 BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1				// Race (human)
+				WRITE_BYTE 0x237 1  // Sex (male)
+				// If invalid race
+				PATCH_IF BYTE_AT 0x272 > 7 BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF BYTE_AT 0x273 = 8 BEGIN	// If invalid class
-					WRITE_BYTE 0x273 9				// Class (fighter_thief)
+				// If invalid class
+				PATCH_IF BYTE_AT 0x273 = 8 BEGIN
+					WRITE_BYTE 0x273 9  // Class (fighter_thief)
 				END
-				READ_LONG 0x2b8 t-io				// Items offset
-				READ_SSHORT (t-io + 0x12) t-wpn		// Weapon 1
+				READ_LONG    0x2b8 t-io         // Items offset
+				READ_SSHORT (t-io + 0x12) t-wpn // Weapon 1
 				PATCH_IF t-wpn < 0 BEGIN
-					ADD_CRE_ITEM ~%tsu%ax1h01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP // Battle Axe (animation consistency)
+					ADD_CRE_ITEM ~%tutu_var%ax1h01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP // Battle Axe (animation consistency)
 					PATCH_IF BYTE_AT 0x74 < 2 BEGIN
-						WRITE_BYTE 0x74 2			// Axe proficiency
+						WRITE_BYTE 0x74 2  // Axe proficiency
 					END
 				END
 		  END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_thug_large
+
 
 /* =========================================================================== *
  *  Sword- and dagger-wielding bandits and mercenaries get the thug animation  *
  * =========================================================================== */
-ACTION_FOR_EACH nb IN ~%tsu%bandcap~ ~%tsu%bandcr~ ~%tsu%bandic~ ~%tsu%bandit~ ~%tsu%bandita~ ~%tsu%banditc~ ~%tsb%anditcy~ ~%tbg%carbos~ ~%tsu%credus~ ~%tsu%flamang~ ~%tsu%knott~ ~%tsu%teven~ ~acguard2~ ~agband01~ ~agband02~ ~arnwar02~ ~bandit2~ ~bdturm04~ ~bhbandt1~ ~bhbandt3~ ~bhsharg1~ ~bw05ba01~ ~bw05ba03~ ~bw05ba05~ ~bw05ba06~ ~bw05ba07~ ~bw05baat~ ~bw05bach~ ~bw05barp~ ~carbos~ ~castre4~ ~castre5~ ~cb230baa~ ~cb230bas~ ~cb230bba~ ~cb230bbs~ ~cb230bca~ ~cb230bcs~ ~cb230bda~ ~cb230bds~ ~cb232bd1~ ~cb232bd2~ ~cb232bd3~ ~cb232bd4~ ~cb232bd5~ ~cb232bda~ ~cb232bdb~ ~cb232bdc~ ~cb232bdd~ ~cb232bde~ ~cb232rna~ ~cb430sce~ ~cb430scf~ ~cbeledi3~ ~cbmalr2~ ~cbmalr5~ ~cbrdptbd~ ~cbrtbda1~ ~cbrtbda3~ ~cbrtbdb1~ ~cbrtbdb3~ ~cbrtbdc1~ ~cbrtbdc3~ ~cbrtbdd1~ ~cbrtbdd3~ ~cbrtbde1~ ~cbrtbde3~ ~cbrtbdg1~ ~cbrtbdg3~ ~cbrtbdh1~ ~cbrtbdh3~ ~cbrtbdi1~ ~cbrtbdi3~ ~cbrtbdj1~ ~cbrtbdj3~ ~cbrtbdk1~ ~cbrtbdk3~ ~cbsdso01~ ~cbsdso02~ ~cbsdso03~ ~cbsdso04~ ~cbsdso05~ ~cbsdso06~ ~cbsdso07~ ~cbsdso08~ ~cbsdso09~ ~cbsdso10~ ~cbsdso11~ ~cbsdso12~ ~cbsdso21~ ~cbsdso22~ ~cbsdso23~ ~cbsdso24~ ~cbsdso25~ ~cbsdso26~ ~cbsdso27~ ~cbsdso28~ ~cbsdso29~ ~cbsdso30~ ~cbsdso31~ ~cbsdso32~ ~cbsdso41~ ~cbsdso42~ ~cbsdso43~ ~cbsdso44~ ~cbsdso45~ ~cbsdso46~ ~cbsdso47~ ~cbsdso48~ ~cbsdso49~ ~cbsdso50~ ~cbsdso51~ ~cbsdso52~ ~cbspyban~ ~cmcorma2~ ~dw#refg1~ ~dw#rnlr1~ ~dw#rnlr2~ ~dw#rnlr3~ ~gbband1a~ ~gbband1b~ ~genthf01~ ~grunt1~ ~grunt2~ ~grunt3~ ~k-rmer1~ ~mwbohu1~ ~mwbohu2~ ~mwbohu3~ ~mwbohu4~ ~mwbohu5~ ~mythug~ ~nq#rbad5~ ~ntbrigan~ ~o#crstg1~ ~o#crstg2~ ~re_carl1~ ~re_carl2~ ~reband01~ ~reband02~ ~reband03~ ~repthf2~ ~rethug03~ ~rethug04~ ~rr#saw02~ ~spmugg~ ~spmugg1~ ~spmugg3~ ~stguard1~ ~stguard2~ ~stguard3~ ~tantug01~ ~tantug03~ ~tantugn1~ ~vakfgt01~ ~vakthf01~ ~x#bandk1~ ~x#bandk2~ ~x#bandk3~ ~yschbnd~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_thug AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN // If not shadow_thief
-					WRITE_SHORT 0x28 0x5d5d // Animation ID (thug_pst)
-//					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~THUG_PST~) // classical 0x5d5d - EE none for the momemt
+				If not shadow_thief
+				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~THUG_PST~) // original 0x5d5d - EE depends on installation
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-THS01]
-					SAY BATTLE_CRY2 ~~ [T-THS02]
+					SAY BATTLE_CRY1 ~~ [t-ths01]
+					SAY BATTLE_CRY2 ~~ [t-ths02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-THS03]
+					SAY ATTACK1 ~~ [t-ths03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-THS07]
+					SAY DAMAGE ~~ [t-ths07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-THS09]
+					SAY DYING ~~ [t-ths09]
 				END
-				WRITE_BYTE 0x237 1					// Sex (male)
-				WRITE_BYTE 0x271 1					// General (humanoid)
-				PATCH_IF BYTE_AT 0x272 > 7 BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1				// Race (human)
+				WRITE_BYTE 0x237 1  // Sex (male)
+				WRITE_BYTE 0x271 1  // General (humanoid)
+				// If invalid race
+				PATCH_IF BYTE_AT 0x272 > 7 BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF BYTE_AT 0x273 = 8 BEGIN	// If invalid class
-					WRITE_BYTE 0x273 9				// Class (fighter_thief)
+				// If invalid class
+				PATCH_IF BYTE_AT 0x273 = 8 BEGIN
+					WRITE_BYTE 0x273 9  // Class (fighter_thief)
 				END
-				PATCH_IF BYTE_AT 0x275 != 6 BEGIN	// If not summoned
-					WRITE_BYTE 0x275 1				// Gender (male)
+				// If not summoned
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
 				END
-				READ_LONG 0x2b8 t-io				// Items offset
-				READ_SSHORT (t-io + 0x12) t-wpn 	// Weapon 1
+				READ_LONG    0x2b8 t-io         // Items offset
+				READ_SSHORT (t-io + 0x12) t-wpn // Weapon 1
 				PATCH_IF t-wpn < 0 BEGIN
-					ADD_CRE_ITEM ~%tsu%dagg01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP // Dagger (animation consistency)
+					ADD_CRE_ITEM ~%tutu_var%dagg01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP // Dagger (animation consistency)
 					PATCH_IF BYTE_AT 0x6f < 1 BEGIN
-						WRITE_BYTE 0x6f 1			// Small swords proficiency
+						WRITE_BYTE 0x6f 1   // Small swords proficiency
 					END
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_thug
+
 
 /* =================================================================== *
  *  Female Human Peasants get the townie_lower_class_female animation  *
  * =================================================================== */
-ACTION_FOR_EACH nb IN ~#sfarm03~ ~#sfem02~ ~#smfar01~ ~#smichel~ ~%tbg%ftown2~ ~%tbg%ftown3~ ~%tbg%ftown4~ ~%tsf%towba_a~ ~ftowba_b~ ~%tsf%towba_c~ ~ftowba_d~ ~ftowba_e~ ~ftowbe_a~ ~ftowbe_b~ ~ftowbe_c~ ~ftowbe_d~ ~ftowbe_e~ ~ftowfr_b~ ~%tsf%towfr_d~ ~ftowfr_e~ ~ftowna_a~ ~ftowna_b~ ~%tsf%towna_e~ ~ftowub_a~ ~ftowub_b~ ~ftowub_c~ ~ftowub_d~ ~ftowub_e~ ~ftwbax_a~ ~ftwbax_b~ ~ftwbax_c~ ~ftwbax_d~ ~ftwbax_e~ ~_0_ftowb~ ~_1_ftowb~ ~_10_ftwb~ ~_14_ftwb~ ~_15_ftow~ ~_17_ftwb~ ~_18_ftwb~ ~_19_ftwb~ ~_1a_ftow~ ~_1b_ftow~ ~_2_ftowb~ ~_23_ftow~ ~_24_ftow~ ~_25_ftow~ ~_26_ftow~ ~_27_ftow~ ~_3_ftowb~ ~_4_ftowb~ ~_6_ftown~ ~_7_ftown~ ~%tsu%ardrou~ ~_c_ftowf~ ~_d_ftowf~ ~%tsu%fcook2~ ~%tsu%fcook3~ ~%tsu%fecook~ ~%tsu%friwen~ ~%tsu%ftobe2~ ~%tsu%ftobe3~ ~%tsu%ftobe4~ ~%tsu%ftobe5~ ~%tsu%ftobe6~ ~%tsu%ftobe7~ ~%tsu%ftobe8~ ~%tsu%ftobe9~ ~%tsu%ftowb5~ ~%tsu%ftowb6~ ~%tsu%ftowb7~ ~%tsu%ftowba~ ~%tsu%ftowbax~ ~%tsu%ftowbex~ ~%tsu%ftowfr~ ~%tsu%ftowna~ ~%tsu%ftowub~ ~%tsu%ftowubx~ ~%tsu%karp~ ~%tsu%kryla~ ~%tsu%lantan~ ~%tsu%maple~ ~%tsu%nessie~ ~%tsu%sanadal~ ~%tsu%therel~ ~%tsu%vivien~ ~3306pes~ ~9xcomm6~ ~9xolady~ ~adtobbar~ ~amcust01~ ~amelia~ ~amfem01~ ~amfem03~ ~amintw01~ ~arenaa2~ ~arenaa3~ ~arenac2~ ~arlaxc2~ ~arlaxc5~ ~arlaxp2~ ~arlaxp5~ ~b!clmom~ ~b!herb02~ ~b!herb03~ ~b!herb05~ ~b!herb07~ ~b!selma~ ~baisera~ ~bdact01~ ~bdact03~ ~bdaud02~ ~becky~ ~beggar3~ ~bftown1~ ~bftown2~ ~bgcom1~ ~bgwit1~ ~bhcomf01~ ~bhcomf02~ ~bhrelba~ ~brevil4~ ~brevil5~ ~brevil6~ ~bw05feli~ ~bw05lucy~ ~c#q01001~ ~c#q03011~ ~c#q05002~ ~c#q05006~ ~c#q05007~ ~c#q06001~ ~c#q07002~ ~calicom1~ ~calipes1~ ~cb232fm3~ ~cb270ccd~ ~cb270pt1~ ~cb304sva~ ~cb304svb~ ~cb304svc~ ~cb596se7~ ~cbffcrw4~ ~cbhld002~ ~cbhld0w1~ ~cbhld0w2~ ~cbhld0w3~ ~cbhld0w6~ ~cbsbtvrd~ ~cbsbtvrk~ ~cbsbvilb~ ~cbsbvile~ ~cbsbvilh~ ~cbsbvlib~ ~cbsbvlie~ ~cbsbvlih~ ~cbsbvliu~ ~cbsbvlix~ ~cbsobann~ ~cdmaid1~ ~cdmaid2~ ~cenanny~ ~chore~ ~clfcer~ ~clifrz~ ~clmom~ ~copcust2~ ~csheck1~ ~cultsa18~ ~cultsa19~ ~cultsa20~ ~cultsa23~ ~cultsa24~ ~cultsac2~ ~cultsac3~ ~d0ftown2~ ~d0poor~ ~d0qpmom~ ~daslave5~ ~ddlarala~ ~ddsheina~ ~ddwman01~ ~ddwman02~ ~dead3~ ~deadvilf~ ~deltow02~ ~dftown1~ ~dftown2~ ~diane~ ~dinanmum~ ~dinmum2~ ~dpfemale~ ~dpstat01~ ~dsmaid~ ~edie~ ~egeques2~ ~ennahe~ ~fcapvil~ ~ffcrowd4~ ~ffcust03~ ~fhlmw~ ~food~ ~ftown1~ ~ftown2~ ~ftown4~ ~ftown5~ ~ftown6~ ~ftown7~ ~fvill1~ ~fvill2~ ~fvill3~ ~gemfar01~ ~gftown01~ ~j#im8wif~ ~jzcount~ ~jzcrwdf1~ ~kftown02~ ~kpfarm02~ ~kpmaid01~ ~kpmaid02~ ~lady3301~ ~life05~ ~life06~ ~lysan~ ~m#ygswen~ ~marliss~ ~mourner2~ ~mumfig01~ ~mwandia~ ~nsflower~ ~ntabigai~ ~ntwinorm~ ~o#crwom3~ ~pcdw~ ~pcdw2~ ~peony~ ~pgcrowdc~ ~pgcrowdg~ ~pgkmom~ ~pgnalteo~ ~pgpru~ ~pirmur10~ ~pknobw1~ ~pknobw2~ ~postul5~ ~pris01~ ~priscali~ ~rerak03~ ~riftw01~ ~s!gypsy~ ~sarfem02~ ~sarfem03~ ~sarfem04~ ~sarwai01~ ~selden~ ~slavedf1~ ~slavedf2~ ~slavef3~ ~slavef4~ ~slavef5~ ~slavef6~ ~slavef7~ ~slavew1~ ~slavew2~ ~slumf1~ ~tc1603f2~ ~tcfarm03~ ~tcmmwom1~ ~tcmmwom3~ ~tcpbpf2~ ~tcselfp2~ ~tcserva2~ ~tcsfc01~ ~tctinke2~ ~tcwgwom2~ ~tcwgwom3~ ~tcwoman1~ ~tcwoman2~ ~tcwoman3~ ~tcwoman4~ ~townief1~ ~townief2~ ~townief3~ ~townief4~ ~townief5~ ~trcut03~ ~trftow01~ ~trftow03~ ~trgyp02~ ~trskin05~ ~tspick7~ ~tz25__j2~ ~tz25_!cf~ ~tz25_!mz~ ~uhfarm03~ ~uhfem02~ ~victown2~ ~vvstand3~ ~wwench~ ~ysapopf~ ~yschcom1~ ~yschcom2~ ~ysfhslp~ ~ysgensto~ ~yspeas03~ ~ystw_a~ ~ystw_b~ ~ystw_c~ ~ystw_d~ ~ystw_e~ ~ystwwa~ ~ystwwb~ ~ystwwc~ ~ystwwd~ ~ystwwe~ ~yswmn2r~ ~yswmn4r~ ~yswoman2~ ~yswoman4~ ~z#adyl~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_lower_class_female AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d55 // Animation ID (townie_lower_class_femaleèpst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_LOWER_CLASS_FEMALE_PST~) // classical 0x5d55 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_LOWER_CLASS_FEMALE_PST~) // original 0x5d55 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TCF01A]
-					SAY BATTLE_CRY2 ~~ [T-TCF01B]
+					SAY BATTLE_CRY1 ~~ [t-tcf01a]
+					SAY BATTLE_CRY2 ~~ [t-tcf01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TCF03]
+					SAY ATTACK1 ~~ [t-tcf03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-TCF07]
+					SAY DAMAGE ~~ [t-tcf07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-TCF09]
+					SAY DYING ~~ [t-tcf09]
 				END
-				WRITE_BYTE 0x237 2					// Sex (female)
-				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 155									// Class (innocent)
+				WRITE_BYTE 0x237 2  // Sex (female)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN
+					WRITE_BYTE 0x273 155    // Class (innocent)
 				END
-				PATCH_IF BYTE_AT 0x273 = 125 BEGIN	// If ogre
-					WRITE_BYTE 0x273 181			// Class (orc)
+				// If ogre
+				PATCH_IF BYTE_AT 0x273 = 125 BEGIN
+					WRITE_BYTE 0x273 181    // Class (orc)
 				END
-				WRITE_BYTE 0x275 2					// Gender (female)
+				WRITE_BYTE 0x275 2          // Gender (female)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34				// Alignment (neutral)
+					WRITE_BYTE 0x27b 34     // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_lower_class_female
+
 
 /* =============================================================== *
  *  Male Human Peasants get the townie_lower_class_male animation  *
  * =============================================================== */
-ACTION_FOR_EACH nb IN ~#sfarm01~ ~#sfarm02~ ~#sman01~ ~#smjeb01~ ~%tbg%mtown2~ ~%tbg%mtown3~ ~%tbg%mtown4~ ~%tbg%roger~ ~%tbg%towncr~ ~mtowba_a~ ~%tsm%towba_b~ ~mtowba_c~ ~%tsm%towba_d~ ~%tsm%towba_e~ ~%tsm%towbe_a~ ~%tsm%towbe_b~ ~%tsm%towbe_c~ ~%tsm%towbe_d~ ~%tsm%towbe_e~ ~%tsm%towfr_a~ ~%tsm%towfr_b~ ~%tsm%towfr_c~ ~mtowfr_d~ ~%tsm%towfr_e~ ~%tsm%towna_a~ ~%tsm%towna_b~ ~%tsm%towna_c~ ~%tsm%towna_d~ ~%tsm%towub_a~ ~%tsm%towub_b~ ~%tsm%towub_c~ ~%tsm%towub_d~ ~%tsm%towub_e~ ~%tsm%twbax_a~ ~%tsm%twbax_b~ ~%tsm%twbax_c~ ~%tsm%twbax_d~ ~%tsm%twbax_e~ ~%tsm%twslim2~ ~%tsm%twslim3~ ~%tst%ourist1~ ~%tst%ourist2~ ~%tst%ourist3~ ~_11_mtow~ ~_16_mtow~ ~_a_mtowf~ ~%tsu%andout~ ~%tsu%binkos~ ~%tsu%bip~ ~%tsu%borin~ ~%tsu%brenna~ ~%tsu%cauter~ ~%tsu%charle~ ~%tsu%chelan~ ~%tsu%connol~ ~%tsu%dead~ ~%tsu%dead1~ ~%tsu%dillar~ ~%tsu%drunk~ ~%tsu%farm~ ~%tsu%farm3~ ~%tsu%farm4~ ~%tsu%farmbr~ ~%tsu%farmer~ ~%tsu%galken~ ~%tsu%garden~ ~%tsu%golinv~ ~%tsu%hecito~ ~%tsu%hephis~ ~%tsu%hulrik~ ~%tsu%jebado~ ~%tsu%jopi~ ~%tsu%kerrac~ ~%tsu%keshee~ ~%tsu%kissiq~ ~%tsu%lachlu~ ~%tsu%lestor~ ~%tsu%mcook~ ~%tsu%mcook2~ ~%tsu%mcook3~ ~%tsu%mcook4~ ~%tsu%mcook5~ ~%tsu%mick~ ~%tsu%mtbe10~ ~%tsu%mtbe11~ ~%tsu%mtbe2~ ~%tsu%mtbe3~ ~%tsu%mtbe4~ ~%tsu%mtbe5~ ~%tsu%mtbe6~ ~%tsu%mtbe7~ ~%tsu%mtbe8~ ~%tsu%mtbe9~ ~%tsu%mtowba~ ~%tsu%mtowbax~ ~%tsu%mtowbe~ ~%tsu%mtowbex~ ~%tsu%mtowf2~ ~%tsu%mtowfr~ ~%tsu%mtowna~ ~%tsu%mtowub~ ~%tsu%mtowubx~ ~%tsu%mtwslim~ ~%tsu%nikola~ ~%tsu%nivek~ ~%tsu%noober~ ~%tsu%nosfer~ ~%tsu%ocelli~ ~%tsu%oogiew~ ~%tsu%pnashk~ ~%tsu%raleo~ ~%tsu%rodnim~ ~%tsu%sailnew~ ~%tsu%serva2~ ~%tsu%servan~ ~%tsu%sewerc~ ~%tsu%shep~ ~%tsu%shopkn~ ~%tsu%sonner~ ~%tsu%spengil~ ~%tsu%sprat~ ~%tsu%surrey~ ~%tsu%telmen~ ~%tsu%tiber~ ~%tsu%tick~ ~%tsu%torlo~ ~%tsu%waiter~ ~%tsu%wenric~ ~%tsu%wilco~ ~3305pes1~ ~3312pes1~ ~9xcomm1~ ~9xcomm3~ ~9xcomm5~ ~9xdad~ ~9xwc~ ~acq30002~ ~adpierre~ ~alphonse~ ~amconm01~ ~amcst01~ ~amintm01~ ~amman01~ ~amman03~ ~announ~ ~apsel~ ~arenaa1~ ~arenaa4~ ~arenaa5~ ~arenac1~ ~arenac3~ ~arfrmr1~ ~arlaxc1~ ~arlaxc4~ ~arlaxp1~ ~arlaxp3~ ~arlaxp4~ ~arlaxp6~ ~arlaxp7~ ~arlaxp8~ ~arlbar~ ~arvor~ ~aupe1~ ~aupe2~ ~aupe3~ ~aupe4~ ~aupe5~ ~b!altmsg~ ~b!darlos~ ~b!mesngr~ ~b!remsn~ ~b!vulbtr~ ~b!vulcok~ ~bdact02~ ~bdact06~ ~bdact10~ ~bdaud01~ ~bfisher1~ ~bgcom2~ ~bgwit2~ ~bgwit3~ ~bhbalmar~ ~bhcomm06~ ~bhfarm~ ~bhst0102~ ~bhzahr~ ~bjorn~ ~bmtown1~ ~bmtown2~ ~bmtown3~ ~brevil1~ ~brevil2~ ~brevil3~ ~bw05injm~ ~bystand1~ ~c#ajeler~ ~c#q02006~ ~c#q05004~ ~c#q05005~ ~c#q07004~ ~c#q07005~ ~calicom2~ ~cb232fm2~ ~cb270cca~ ~cb270cce~ ~cb270pt2~ ~cb3651in~ ~cb596se8~ ~cbct3513~ ~cbffcrw3~ ~cbhld001~ ~cbhld005~ ~cbhld006~ ~cbhld007~ ~cbhld008~ ~cbhld0m1~ ~cbhld0m4~ ~cbhld0m6~ ~cbhld0m7~ ~cbhld0m8~ ~cbryberg~ ~cbsbtvre~ ~cbsbtvrg~ ~cbsbtvrl~ ~cbsbtvrn~ ~cbsbtvrp~ ~cbsbtvrq~ ~cbsbvila~ ~cbsbvilg~ ~cbsbvlia~ ~cbsbvlig~ ~cbsfmess~ ~cbshpp01~ ~cbshpp02~ ~cbshpp04~ ~cbshpp05~ ~cbshpp06~ ~cbshpp07~ ~cbshpp08~ ~cbshpp09~ ~cbshpp10~ ~cbshpp11~ ~cbshpp12~ ~cbshpp13~ ~cbshpp14~ ~cbshpp15~ ~cbshpp16~ ~cbshpp17~ ~cbshpp18~ ~cbshpp19~ ~cbshpp20~ ~cbshpp21~ ~cbshpp22~ ~cbshpp23~ ~cbshpp24~ ~cbshpp26~ ~cbusherw~ ~cbwlserv~ ~cebeggar~ ~churin~ ~clerk01~ ~clob~ ~csheck2~ ~cssupp1~ ~cssupp2~ ~cssupp3~ ~cultsa13~ ~cultsa14~ ~cultsa15~ ~cultsa22~ ~cultsac1~ ~custom~ ~d0mumfig~ ~daleson~ ~davin~ ~dbeggar~ ~dd1004c1~ ~ddciti01~ ~ddfarm01~ ~ddhusban~ ~ddman01~ ~ddmanpea~ ~ddplota1~ ~deadman1~ ~deadman6~ ~deadvil~ ~deltow01~ ~dfisher~ ~dmtown1~ ~dmtown2~ ~dorkus~ ~dpmale~ ~dpstat02~ ~dsjeremy~ ~dskenb~ ~dsspec~ ~dsthomic~ ~dw#ampp2~ ~dw#ampp3~ ~erlinh~ ~esterry~ ~fetch~ ~ffcrowd3~ ~ffcust04~ ~fhlfred~ ~frmr3~ ~g3osmsgr~ ~galkin~ ~gareth~ ~gemjeb01~ ~genpeasm~ ~gerth~ ~gmtown02~ ~gorf02~ ~hermit~ ~hervo~ ~ilman01~ ~japhet~ ~japhet2~ ~jhonen~ ~jzcrwdm1~ ~jzneeber~ ~jznewb~ ~k#loves~ ~ketofan1~ ~kpbutl01~ ~kpfarm01~ ~kprunn01~ ~kpserv01~ ~k-rcomm~ ~kumirek~ ~lk#nimes~ ~madeen~ ~messen~ ~mourner1~ ~%tsu%mtob2~ ~%tsu%mtob3~ ~mtob4~ ~mtob5~ ~%tsu%mtob6~ ~%tsu%mtob7~ ~%tsu%mtob8~ ~%tsu%mtob9~ ~mtown1~ ~mtown3~ ~mtown4~ ~mtown5~ ~murtlen~ ~mvill1~ ~mvill2~ ~mvill3~ ~mvill4~ ~mvill5~ ~mvill6~ ~neeber~ ~nscom001~ ~nsprey02~ ~ntnadali~ ~ntpandri~ ~ntszyper~ ~o#crsim~ ~oldjed~ ~orphan2~ ~pcdm~ ~pcdm2~ ~pgbarry~ ~pgcrowda~ ~pgkdad~ ~pgnalwiv~ ~pirfsh01~ ~pirpir12~ ~player1~ ~postul4~ ~potselca~ ~ppstor01~ ~ppinn01~ ~pptown1~ ~pptown2~ ~pptown3~ ~pptown4~ ~ps900spa~ ~re_noob~ ~rerak04~ ~rob~ ~rob2~ ~sarman01~ ~sarman02~ ~sarman04~ ~sarpris1~ ~scbutler~ ~servant~ ~slavem1~ ~slavem2~ ~slumm1~ ~slumm2~ ~slumm3~ ~slvic03~ ~sorced~ ~spbene~ ~spphil~ ~spsamar~ ~sptredd~ ~stage01~ ~sutrask~ ~tb#lotr~ ~tc1602b~ ~tc1603m2~ ~tc2000pm~ ~tcbart3~ ~tcbenthi~ ~tcbutler~ ~tccook3~ ~tccook5~ ~tccrut~ ~tcfarm01~ ~tcfarm02~ ~tcman01~ ~tcman1~ ~tcman4~ ~tcman6~ ~tcman8~ ~tcmmman1~ ~tcmmman2~ ~tcmmman3~ ~tcmmman4~ ~tcpbpm1~ ~tcpbpm3~ ~tcpbpm4~ ~tcselmp2~ ~tcservan~ ~tcslmer1~ ~tcsmc01~ ~tcsmc03~ ~tcwaiter~ ~tirdir~ ~tour01~ ~tour1~ ~towncr~ ~towniem1~ ~towniem2~ ~towniem3~ ~towniem4~ ~towniem5~ ~train01~ ~%tsu%trave2~ ~travel~ ~trcut04~ ~trgyp01~ ~trmtow02~ ~trskin04~ ~trtavp04~ ~tspick3~ ~tspick8~ ~tz25nnp2~ ~ubfarm5~ ~udilsla2~ ~udilsla4~ ~uhfarm01~ ~uhfarm02~ ~uhman01~ ~urnst~ ~victown1~ ~vvstand1~ ~vvstand2~ ~wilton~ ~x#jessup~ ~ysapopm~ ~yscdcook~ ~yscell1~ ~yscell2~ ~yscell3~ ~yscell4~ ~yscell5~ ~yschcom4~ ~yschcom5~ ~yschcom6~ ~ysgalid~ ~yslkeep~ ~ysman1~ ~ysman1r~ ~ysman2~ ~ysman2r~ ~ysman3~ ~ysman3r~ ~ysman4~ ~ysman4r~ ~ysman5~ ~ysman5r~ ~ysman6~ ~ysman6r~ ~ysmcook~ ~ysmserv~ ~yspeas02~ ~ysserj~ ~ystelthe~ ~ystm_a~ ~ystm_b~ ~ystm_c~ ~ystm_d~ ~ystm_e~ ~ystmwa~ ~ystmwb~ ~ystmwc~ ~ystmwd~ ~ystmwe~ ~yswdman~ ~yswtchmn~ ~z#baev~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_lower_class_male AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d56 // Animation ID (townie_lower_class_maleèpst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_LOWER_CLASS_MALE_PST~) // classical 0x5d56 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_LOWER_CLASS_MALE_PST~) // original 0x5d56 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TCM01]
-					SAY BATTLE_CRY2 ~~ [T-TCM02A]
+					SAY BATTLE_CRY1 ~~ [t-tcm01]
+					SAY BATTLE_CRY2 ~~ [t-tcm02a]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TCM03]
+					SAY ATTACK1 ~~ [t-tcm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-TCM07]
+					SAY DAMAGE ~~ [t-tcm07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-TCM09]
+					SAY DYING ~~ [t-tcm09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-TCM02A]
+					SAY SELECT_COMMON1 ~~ [t-tcm02a]
 				END
-				PATCH_IF BYTE_AT 0x234 = 0 BEGIN		// If invalid level
-					WRITE_BYTE 0x234 1					// Level 1
+				// If invalid level
+				PATCH_IF BYTE_AT 0x234 = 0 BEGIN
+					WRITE_BYTE 0x234 1  // Level 1
 				END
-				WRITE_BYTE 0x237 1						// Sex (male)
-				PATCH_IF (BYTE_AT 0x272 = 0) OR (BYTE_AT 0x272 > 159) BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1										// Race (human)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid race
+				PATCH_IF (BYTE_AT 0x272 = 0) OR (BYTE_AT 0x272 > 159) BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN	/// If invalid class
-					PATCH_IF ((~%nb%~ STRING_EQUAL ~%tsu%jebado~ = 1) OR (~%nb%~ STRING_EQUAL ~%tsu%noober~ = 1) OR (~%nb%~ STRING_EQUAL ~%tsu%sonner~ = 1) OR (~%nb%~ STRING_EQUAL ~%tsu%telmen~ = 1)) BEGIN
-						WRITE_BYTE 0x273 255			// Class (no_class)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN
+					PATCH_IF ((~%nb%~ STRING_EQUAL ~%tutu_var%jebado~ = 1) OR (~%nb%~ STRING_EQUAL ~%tutu_var%noober~ = 1) OR (~%nb%~ STRING_EQUAL ~%tutu_var%sonner~ = 1) OR (~%nb%~ STRING_EQUAL ~%tutu_var%telmen~ = 1)) BEGIN
+						WRITE_BYTE 0x273 255 // Class (no_class)
 					END
 				END ELSE BEGIN
-					PATCH_IF BYTE_AT 0x273 = 125 BEGIN	// If ogre
-						WRITE_BYTE 0x273 181			// Class (orc)
+					// If ogre
+					PATCH_IF BYTE_AT 0x273 = 125 BEGIN
+						WRITE_BYTE 0x273 181 // Class (orc)
 					END ELSE BEGIN
-						WRITE_BYTE 0x273 155			// Class (innocent)
+						WRITE_BYTE 0x273 155 // Class (innocent)
 					END
 				END
-				WRITE_BYTE 0x275 1						// Gender (male)
+				WRITE_BYTE 0x275 1      // Gender (male)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34					// Alignment (neutral)
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_lower_class_male
+
 
 /* ================================================= *
  *  Male Human Merchants get the merchant animation  *
  * ================================================= */
-ACTION_FOR_EACH nb IN ~%tbg%mtown5~ ~%tbg%shop01~ ~%tbg%shop03~ ~%tbg%shop04~ ~%tbg%shop06~ ~%tbg%shop07~ ~%tbg%shop08~ ~%tsu%algern~ ~%tsu%barslim~ ~%tsu%bart10~ ~%tsu%bart11~ ~%tsu%bart12~ ~%tsu%bart13~ ~%tsu%bart14~ ~%tsu%bart15~ ~%tsu%bart16~ ~%tsu%bart2~ ~%tsu%bart3~ ~%tsu%bart4~ ~%tsu%bart5~ ~%tsu%bart6~ ~%tsu%bart7~ ~%tsu%desslo~ ~%tsu%detran~ ~%tsu%dopmer~ ~%tsu%doppsm~ ~%tsu%dun~ ~%tsu%fatman~ ~%tsu%innke2~ ~%tsu%innke3~ ~%tsu%innkn2~ ~%tsu%ironm2~ ~%tsu%ironm3~ ~%tsu%ironm4~ ~%tsu%ironme~ ~%tsu%lucky~ ~%tsu%maltz~ ~%tsu%merch2~ ~%tsu%merch4~ ~%tsu%merch5~ ~%tsu%merch6~ ~%tsu%merlea~ ~%tsu%oublek~ ~%tsu%saildan~ ~%tsu%triado~ ~%tsu%winthr2~ ~%tsu%winthr3~ ~%tsu%wirthi~ ~0xalcdg~ ~1xqtb1~ ~3305pes2~ ~3312pes2~ ~3320pes~ ~3334tav~ ~3336tav~ ~9xfood~ ~admerch~ ~aemerch~ ~aewimer2~ ~ahammed~ ~alyoud~ ~ambar01~ ~amconm02~ ~amman02~ ~ammayor~ ~arenam1~ ~arenam2~ ~arfrmr2~ ~arlaxm6~ ~b!herb06~ ~b!nador~ ~b!nador2~ ~bart8~ ~bart9~ ~bdaud03~ ~bernard~ ~bhabraha~ ~binnkeep~ ~bmerch1~ ~brebar1~ ~bw05robe~ ~calshop2~ ~carhead~ ~cb232fm1~ ~cb270ccc~ ~cb4279st~ ~cb596se9~ ~cbhl3627~ ~cbhld003~ ~cbhld009~ ~cbhld0m2~ ~cbkbaker~ ~cbsbin75~ ~cbsbtvrc~ ~cbsbtvrj~ ~cbsbvild~ ~cbsbvilf~ ~cbsbvlid~ ~cbsbvlif~ ~cbsbvliw~ ~cbvinnie~ ~chalsp01~ ~cmmerc02~ ~crobar01~ ~cultsa11~ ~cultsa12~ ~cultsa21~ ~ddinn01~ ~ddtrav03~ ~deadman2~ ~desto#05~ ~dmanno~ ~dmrest~ ~dshop02~ ~dumayor~ ~egequest~ ~esath~ ~esath2~ ~esath3~ ~ffcust02~ ~figpit~ ~fmcapvil~ ~frmr1~ ~frmr2~ ~frmr4~ ~geran~ ~gfigh05~ ~gmtown01~ ~haquat~ ~hgkar01~ ~horsesal~ ~innkpr~ ~jzcrwdm2~ ~jzkeep~ ~ketofan2~ ~kindast~ ~kpfarm03~ ~kplend01~ ~kpmerc01~ ~landlord~ ~le#shop~ ~m#ruad~ ~m#ygcook~ ~marcus~ ~matti~ ~maydobr~ ~mcapvil~ ~mercbank~ ~mercha~ ~mgbill01~ ~mtown2~ ~noble2~ ~nsmrch01~ ~p_houyi~ ~pgcrowde~ ~pircom01~ ~pirpir09~ ~pkfatty1~ ~pkfatty2~ ~pkfatxy2~ ~pkstore1~ ~pkstore2~ ~pltax01~ ~postul2~ ~qcirc01~ ~re_bync~ ~rerak02~ ~roend~ ~#smay01~ ~#smer03~ ~sarbar02~ ~sarman03~ ~sbutler~ ~scrlmer~ ~shape~ ~shop03~ ~shop05~ ~shop06~ ~shop1~ ~shop3~ ~shop4~ ~shop5~ ~shop6~ ~shop7~ ~shop8~ ~slumm4~ ~slvic02~ ~soth~ ~sumerch1~ ~tavekee~ ~tc1600m1~ ~tc1603m1~ ~tc1603m3~ ~tc2000au~ ~tc2000mm~ ~tcbart1~ ~tcbart11~ ~tcbart12~ ~tcbart2~ ~tcbart7~ ~tcbrewer~ ~tcchef~ ~tccook4~ ~tccrobar~ ~tcinn01~ ~tcinn02~ ~tcinn03~ ~tcironme~ ~tcmer07~ ~tcmerch2~ ~tcmerch3~ ~tcmerch4~ ~tcmmman5~ ~tcmmmer1~ ~tcselmp1~ ~tcsmm01~ ~tcwgbart~ ~trinnk01~ ~trmer01~ ~trmtow04~ ~trmtow05~ ~tz25_!cm~ ~tz25nnha~ ~tz25nnp1~ ~tz25nnqu~ ~ubba0133~ ~ubmerch~ ~ubshopge~ ~uhinn01~ ~uhmay01~ ~viinnkee~ ~vvhelp~ ~wcust03~ ~winnkeep~ ~yscara02~ ~yskeldrl~ ~ysmorv~ ~yspeas01~ ~z_mefiz~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_merchant AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d57 // Animation ID (merchant_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MERCHANT_PST~) // classical 0x5d57 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MERCHANT_PST~) // original 0x5dc1 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-MRC01A]
-					SAY BATTLE_CRY2 ~~ [T-MRC01B]
+					SAY BATTLE_CRY1 ~~ [t-mrc01a]
+					SAY BATTLE_CRY2 ~~ [t-mrc01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-MRC03]
+					SAY ATTACK1 ~~ [t-mrc03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-MRC07]
+					SAY DAMAGE ~~ [t-mrc07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-MRC09]
+					SAY DYING ~~ [t-mrc09]
 				END
-				WRITE_BYTE 0x237 1											// Sex (male)
-				PATCH_IF (BYTE_AT 0x272 = 0) OR (BYTE_AT 0x272 > 159) BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1										// Race (human)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid race
+				PATCH_IF (BYTE_AT 0x272 = 0) OR (BYTE_AT 0x272 > 159) BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 155									// Class (innocent)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN
+					WRITE_BYTE 0x273 155   // Class (innocent)
 				END
-				WRITE_BYTE 0x275 1											// Gender (male)
+				WRITE_BYTE 0x275 1         // Gender (male)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34										// Alignment (neutral)
+					WRITE_BYTE 0x27b 34    // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_merchant
+
 
 /* ================================================== *
  *  Female Human Merchants get the midwife animation  *
  * ================================================== */
-ACTION_FOR_EACH nb IN ~#sfem01~ ~%tsu%emitar~ ~%tsu%emitar2~ ~%tsu%emitar3~ ~%tsu%fatwom~ ~%tsu%glanma~ ~0xstdg~ ~acq30001~ ~amfem02~ ~amintw02~ ~arenam4~ ~arfrmrw1~ ~arfrmrw2~ ~arlaxm3~ ~b!evie~ ~b!herb01~ ~bfishw1~ ~bhcook1~ ~breelle1~ ~c#q02005~ ~c#q03008~ ~c#q07003~ ~cbamlady~ ~cbffcrw5~ ~cbhld004~ ~cbhld010~ ~cbsbin62~ ~cbsbin71~ ~cbsbvilc~ ~cbsbvlic~ ~cbsbvliv~ ~cultsa16~ ~cultsa17~ ~dd1004c2~ ~dpstat03~ ~duwife~ ~e3aransm~ ~eastbar~ ~eastmeet~ ~esathw~ ~ffcapvil~ ~ffcook~ ~ffcrowd5~ ~frmr5~ ~ftown3~ ~gftown02~ ~homeless~ ~inncoo~ ~jzcrwdf2~ ~kpcook01~ ~mrwomer~ ~nech~ ~olmcook~ ~pgcrowdb~ ~pgcrowdh~ ~pircom02~ ~pircor05~ ~pirfsh02~ ~postul3~ ~pspeas3~ ~rerak06~ ~sarfem01~ ~sevbar01~ ~shop01~ ~shop2~ ~slavef1~ ~slavef2~ ~slumf2~ ~speselca~ ~tc1106ma~ ~tc1603f1~ ~tc2000ma~ ~tc2000pf~ ~tccook1~ ~tccook2~ ~tccook6~ ~tcfem01~ ~tcmer06~ ~tcmmwom2~ ~tcpbpf1~ ~tcpbpf3~ ~tcselfp1~ ~tcsfc02~ ~tcwoman5~ ~tour2~ ~trftow02~ ~trftow05~ ~uhfem01~ ~wbmum~ ~wcust04~ ~x#setta~ ~yswmn1r~ ~yswoman1~ ~z_mary~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_midwife AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND ((rmq > 6) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~0xstdg~ = 1)) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d58 // Animation ID (midwife_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MIDWIFE_PST~) // classical 0x5d58 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MIDWIFE_PST~) // original 0x5d58 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-MDW01A]
-					SAY BATTLE_CRY2 ~~ [T-MDW01B]
+					SAY BATTLE_CRY1 ~~ [t-mdw01a]
+					SAY BATTLE_CRY2 ~~ [t-mdw01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-MDW03]
+					SAY ATTACK1 ~~ [t-mdw03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-MDW07]
+					SAY DAMAGE ~~ [t-mdw07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-MDW09]
+					SAY DYING ~~ [t-mdw09]
 				END
-				WRITE_BYTE 0x237 2					// Sex (female)
-				PATCH_IF BYTE_AT 0x273 > 198 BEGIN	// If invalid class
-					WRITE_BYTE 0x273 155			// Class (innocent)
+				WRITE_BYTE 0x237 2  // Sex (female)
+				// If invalid class
+				PATCH_IF BYTE_AT 0x273 > 198 BEGIN
+					WRITE_BYTE 0x273 155   // Class (innocent)
 				END
-				WRITE_BYTE 0x275 2					// Gender (female)
+				WRITE_BYTE 0x275 2      // Gender (female)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34				// Alignment (neutral)
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_midwife
+
 
 /* ================================== *
  *  Harlots get the harlot animation  *
  * ================================== */
-ACTION_FOR_EACH nb IN ~#saicha~ ~#sannae~ ~%tsp%rosba_b~ ~%tsp%rosba_c~ ~%tsp%rsbax_a~ ~%tsp%rsbax_b~ ~%tsp%rsbax_c~ ~%tsu%ithtyl~ ~%tsu%prost2~ ~%tsu%prost3~ ~%tsu%prost4~ ~%tsu%prost5~ ~%tsu%prost6~ ~%tsu%prost7~ ~%tsu%prost8~ ~%tsu%quenas~ ~%tsu%sugar~ ~1xskii1~ ~9xcomm4~ ~acq30003~ ~acq70001~ ~acq70002~ ~acq70003~ ~adimogen~ ~amconw01~ ~amfem04~ ~amia~ ~amwenc01~ ~arlaxc3~ ~b!leyt~ ~b!lucy~ ~bhcook2~ ~bhtwen01~ ~bprost1~ ~bprost2~ ~bubbles~ ~bw05cou1~ ~bw05cou2~ ~bw05cou3~ ~bwench~ ~c#ajpros~ ~cb4270sm~ ~cbmilkmd~ ~cbp1act1~ ~cbp4act3~ ~cbp4act4~ ~cbp4act5~ ~cbp4act6~ ~cbsbwt67~ ~cbschook~ ~cmlstr3~ ~cmlstr4~ ~cmlstr5~ ~crowen01~ ~deadman5~ ~dharlot1~ ~dharlot2~ ~dw#ampp1~ ~escort1~ ~escort1a~ ~escort4~ ~g3maid~ ~innwen~ ~jatta~ ~jzbubb~ ~malla02~ ~murdgirl~ ~nq#rose~ ~nsharl01~ ~o#crgir2~ ~pgfrilly~ ~pggmione~ ~pgpoppy~ ~pircor01~ ~pircor02~ ~pircor04~ ~pircor06~ ~qcirc02~ ~re_ilona~ ~reaimi~ ~sally~ ~sarpro01~ ~sarprovf~ ~sbwench~ ~sc#fan~ ~serwen~ ~tc2000h1~ ~tc2000h2~ ~tc2000h4~ ~tcdryad1~ ~tcfhaly~ ~tcharlo1~ ~tcharlo2~ ~tcserva1~ ~tcwench1~ ~tcwench2~ ~tcwench3~ ~tcwench4~ ~tcwench5~ ~tcwghar1~ ~trple03~ ~trrak01~ ~trwen01~ ~tspick4~ ~tswench1~ ~tz25__c1~ ~tz25__c2~ ~tz25__c3~ ~tz25nnli~ ~volose~ ~wbjordan~ ~wench1~ ~wpwench1~ ~x#bhet~ ~x#madr~ ~x#nell~ ~x#sveet~ ~x#zizi1~ ~x#zizi2~ ~x#zizi3~ ~x#zizi4~ ~ysfserv~ ~ysharem1~ ~ysharem2~ ~yswmn3r~ ~yswmn6r~ ~yswoman3~ ~yswoman6~ ~z_jung1~ ~z_jung2~ ~z_jung3~ ~z_sarah~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_harlot AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d59 // Animation ID (harlot_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HARLOT_PST~) // classical 0x5d59 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HARLOT_PST~) // original 0x5d59 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-HLT01A]
-					SAY BATTLE_CRY2 ~~ [T-HLT01B]
+					SAY BATTLE_CRY1 ~~ [t-hlt01a]
+					SAY BATTLE_CRY2 ~~ [t-hlt01b]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-HLT03]
+					SAY ATTACK1 ~~ [t-hlt03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-HLT07]
+					SAY DAMAGE ~~ [t-hlt07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-HLT09]
+					SAY DYING ~~ [t-hlt09]
 				END
-				WRITE_BYTE 0x237 2					// Sex (female)
-				PATCH_IF BYTE_AT 0x273 > 198 BEGIN	// If invalid class
-					WRITE_BYTE 0x273 155			// Class (innocent)
+				WRITE_BYTE 0x237 2  // Sex (female)
+				// If invalid class
+				PATCH_IF BYTE_AT 0x273 > 198 BEGIN
+					WRITE_BYTE 0x273 155 // Class (innocent)
 				END
-				WRITE_BYTE 0x275 2					// Gender (female)
+				WRITE_BYTE 0x275 2      // Gender (female)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34				// Alignment (neutral)
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_harlot
+
 
 /* ================================================== *
  *  Skeleton Mages get the skeleton_priest animation  *
  * ================================================== */
-ACTION_FOR_EACH nb IN ~0xlorddg~ ~hgskl03~ ~macgskmg~ BEGIN
+ACTION_PHP_EACH GW_skeleton_priest AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d5a // Animation ID (skeleton_priest_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_PRIEST_PST~) // classical 0x5d5a - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_PRIEST_PST~) // original 0x5dc2 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-SKP01]
-					SAY BATTLE_CRY2 ~~ [T-SKP02]
+					SAY BATTLE_CRY1 ~~ [t-skp01]
+					SAY BATTLE_CRY2 ~~ [t-skp02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-SKP03]
+					SAY ATTACK1 ~~ [t-skp03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-SKP07]
+					SAY DAMAGE ~~ [t-skp07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-SKP09]
+					SAY DYING ~~ [t-skp09]
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-SKP02]
+					SAY SELECT_COMMON1 ~~ [t-skp02]
 				END
-				WRITE_BYTE 0x237 2	// Sex (female)
-				WRITE_BYTE 0x275 2	// Gender (female)
+				WRITE_BYTE 0x237 2  // Sex (female)
+				WRITE_BYTE 0x275 2  // Gender (female)
 				PATCH_INCLUDE ~infinityanimations/lib/glowcheck.tpp~
+				// Quarterstaff +1 (animation consistency)
 				REMOVE_CRE_ITEM ~_sw1h04~ ~sw1h04~
-				ADD_CRE_ITEM ~%tsu%staf02~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON~ EQUIP TWOHANDED // Quarterstaff +1 (animation consistency)
+				ADD_CRE_ITEM ~%tutu_var%staf02~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON~ EQUIP TWOHANDED
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_skeleton_priest
+
 
 /* ============================================ *
  *  Skeleton get the skeleton_worker animation  *
  * ============================================ */
-ACTION_FOR_EACH nb IN ~%tss%kelet_a~ ~%tss%kelet_b~ ~%tss%kelpetr~ ~%tsu%appar~ ~%tsu%skele2~ ~0xyhdg~ ~bhgskel~ ~bpduelow~ ~c#ajske1~ ~c#ajsked~ ~cadskel1~ ~cbappar1~ ~cbundead~ ~cultmo7~ ~cultsk1~ ~cultsk10~ ~cultsk11~ ~cultsk12~ ~cultsk13~ ~cultsk14~ ~cultsk15~ ~cultsk16~ ~cultsk17~ ~cultsk18~ ~cultsk19~ ~cultsk2~ ~cultsk20~ ~cultsk21~ ~cultsk22~ ~cultsk23~ ~cultsk24~ ~cultsk3~ ~cultsk4~ ~cultsk5~ ~cultsk6~ ~cultsk7~ ~cultsk8~ ~cultsk9~ ~dragbr2~ ~dw#mulgh~ ~dw#mulsk~ ~fsskel~ ~g#tfskl2~ ~godskel1~ ~godskel2~ ~godskel3~ ~gpskel1~ ~hfbones~ ~lcadead1~ ~lk#xsk1~ ~psqsksu~ ~ranske1~ ~ranske2~ ~ranske3~ ~ranske4~ ~ranske5~ ~ranske6~ ~ranske8~ ~rskel01~ ~rskel03~ ~skelhp1~ ~tcskelet~ ~tz25nnsk~ ~uddoor07~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_skeleton_worker AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				PATCH_IF SHORT_AT 0x28 != 0x7f07 BEGIN // If not golem
-					WRITE_SHORT 0x28 0x5d5b // Animation ID (skeleton_worker_pst)
-//					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_WORKER_PST~) // classical 0x5d5b - EE none for the momemt
+				// If not golem
+				PATCH_IF SHORT_AT 0x28 != 0x7f07 BEGIN
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_WORKER_PST~) // original 0x5d5b - EE depends on installation
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 ~~ [T-SKW01A]
-						SAY BATTLE_CRY2 ~~ [T-SKW01B]
+						SAY BATTLE_CRY1 ~~ [t-skw01a]
+						SAY BATTLE_CRY2 ~~ [t-skw01b]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-SKW03]
+						SAY ATTACK1 ~~ [t-skw03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-SKW07]
+						SAY DAMAGE ~~ [t-skw07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-SKW09]
+						SAY DYING ~~ [t-skw09]
 					END
 					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-						SAY SELECT_COMMON1 ~~ [T-SKW02A]
-						SAY SELECT_COMMON2 ~~ [T-SKW02B]
+						SAY SELECT_COMMON1 ~~ [t-skw02a]
+						SAY SELECT_COMMON2 ~~ [t-skw02b]
 					END
-					WRITE_BYTE 0x237 1				// Sex (male)
-					WRITE_BYTE 0x271 4				// General (undead)
+					WRITE_BYTE 0x237 1  // Sex (male)
+					WRITE_BYTE 0x271 4  // General (undead)
 					PATCH_INCLUDE ~infinityanimations/lib/glowcheck.tpp~
-					READ_LONG 0x2b8 t-io			// Items offset
+					READ_LONG    0x2b8 t-io         // Items offset
 					READ_SSHORT (t-io + 0x12) t-wpn // Weapon 1
 					PATCH_IF t-wpn < 0 BEGIN
-						ADD_CRE_ITEM ~%tsu%blun01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP // Club (animation consistency)
+						// Club (animation consistency)
+						ADD_CRE_ITEM ~%utu_var%blun01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
 						PATCH_IF BYTE_AT 0x72 < 2 BEGIN
-						WRITE_BYTE 0x72 2 			// Blunts proficiency
+						WRITE_BYTE 0x72 2   // Blunts proficiency
 						END
 					END
 				END
 			END
 		BUT_ONLY
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_skeleton_worker
+
 
 /* ==================================================== *
  *  Female Tieflings get the tiefling_female animation  *
  * ==================================================== */
-ACTION_FOR_EACH nb IN ~bshop02~ ~d#mary~ ~e3eriale~ ~e3savany~ ~gorcamb2~ ~gorcamb3~ ~nstief01~ ~raelis~ ~teltief2~ ~teltief3~ ~tief_as~ BEGIN
+ACTION_PHP_EACH GW_tiefling_female AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d5e // Animation ID (tiefling_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TIEFLING_FEMALE_PST~) // classical 0x5d5e - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TIEFLING_FEMALE_PST~) // original 0x5dc3 - EE depends on installation
 				rmc = RANDOM(1 4)
+				// If fiends_genies/tiefling_female soundsets not installed or 25% (Female Curst Townie soundset)
 				PATCH_IF (rmc = 4) OR (NOT FILE_EXISTS_IN_GAME ~t-tif01.wav~) BEGIN
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 ~~ [T-TCF01A]
-						SAY BATTLE_CRY2 ~~ [T-TCF01B]
+						SAY BATTLE_CRY1 ~~ [t-tcf01a]
+						SAY BATTLE_CRY2 ~~ [t-tcf01b]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-TCF03]
+						SAY ATTACK1 ~~ [t-tcf03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-TCF07]
+						SAY DAMAGE ~~ [t-tcf07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-TCF09]
+						SAY DYING ~~ [t-tcf09]
 					END
+				// If fiends_genies/tiefling_female soundsets is installed and 75%
 				END ELSE BEGIN
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 @544	// Your time in this realm is over! [T-TIF01]
+						SAY BATTLE_CRY1 @71021  // Your time in this realm is over! [t-tif01]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-TIF03]
+						SAY ATTACK1 ~~ [t-tif03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-TIF07]
+						SAY DAMAGE ~~ [t-tif07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-TIF09]
+						SAY DYING ~~ [t-tif09]
 					END
 					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-						SAY SELECT_COMMON1 @545	// Yes? I listen. [T-TIF02]
+						SAY SELECT_COMMON1 @71022   // Yes? I listen. [t-tif02]
 					END
 				END
-				WRITE_BYTE 0x237 2				// Sex (female)
-				WRITE_BYTE 0x271 1				// General (humanoid)
-				WRITE_BYTE 0x272 153			// Race (tiefling)
-				READ_BYTE 0x275 gd				// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN	// If not summoned or illusionary
-				  WRITE_BYTE 0x275 2									// female
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				WRITE_BYTE 0x272 153    // Race (tiefling) // TODO added for bshop02 (Storekeep): was CLERIC_FEMALE_ELF
+				READ_BYTE  0x275 gd	    // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN
+				  WRITE_BYTE 0x275 2    // female
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_tiefling_female
+
 
 /* ================================================ *
  *  Male Tieflings get the tiefling_male animation  *
  * ================================================ */
-ACTION_FOR_EACH nb IN ~e3cirion~ ~e3jekhri~ ~e3sume~ ~e3taeghe~ ~e3xekral~ ~gorcamb4~ ~gorcamb5~ ~gorgua02~ ~nstief02~ ~pbhunt01~ ~teltief1~ ~tief_w1~ ~tief_w2~ ~zaki~ BEGIN
+ACTION_PHP_EACH GW_tiefling_male AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d5f // Animation ID (tiefling_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TIEFLING_MALE_PST~) // classical 0x5d5f - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TIEFLING_MALE_PST~) // original 0x5dac - EE depends on installation
 				rmc = RANDOM(1 3)
+				// if fiends_genies/tiefling_male soundsets not installed or 33%
 				PATCH_IF (rmc = 3) OR (NOT FILE_EXISTS_IN_GAME ~t-tim01a.wav~) BEGIN
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 ~~ [T-TMP01A]
-						SAY BATTLE_CRY2 ~~ [T-TMP01B]
+						SAY BATTLE_CRY1 ~~ [t-tmp01a]
+						SAY BATTLE_CRY2 ~~ [t-tmp01b]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-TMP03]
+						SAY ATTACK1 ~~ [t-tmp03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-TMP07]
+						SAY DAMAGE ~~ [t-tmp07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-TMP09]
+						SAY DYING ~~ [t-tmp09]
 					END
 					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-						SAY SELECT_COMMON1 ~~ [T-TMP02]
+						SAY SELECT_COMMON1 ~~ [t-tmp02]
 					END
+				// If fiends_genies/tiefling_male soundsets is installed or 66%
 				END ELSE BEGIN
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 @533		// You cannot win this fight! [T-TIM01A]
-						SAY BATTLE_CRY2 @534		// Into the flames we leap! [T-TIM01B]
-						SAY BATTLE_CRY3 @535		// Ha ha ha ha! [T-TIM01C]
-						SAY BATTLE_CRY4 @536		// My blood calls for yours and it *will* be satisfied. [T-TIM01D]
-						SAY BATTLE_CRY5 @537		// Do you wish to die now? Because I can certainly arrange that. [T-TIM01E]
+						SAY BATTLE_CRY1 @71001  // You cannot win this fight! [t-tim01a]
+						SAY BATTLE_CRY2 @71002  // Into the flames we leap! [t-tim01b]
+						SAY BATTLE_CRY3 @71003  // Ha ha ha ha! [t-tim01c]
+						SAY BATTLE_CRY4 @71004  // My blood calls for yours and it *will* be satisfied. [t-tim01d]
+						SAY BATTLE_CRY5 @71005  // Do you wish to die now? Because I can certainly arrange that. [t-tim01e]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-TIM03]
+						SAY ATTACK1 ~~ [t-tim03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-TIM07]
+						SAY DAMAGE ~~ [t-tim07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-TIM09]
+						SAY DYING ~~ [t-tim09]
 					END
 					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-						SAY SELECT_COMMON1 @538		// Greetings. [T-TIM02A]
-						SAY SELECT_COMMON2 @539		// Yes. [T-TIM02B]
-						SAY SELECT_COMMON3 @540		// At your command. [T-TIM02C]
-						SAY SELECT_COMMON4 @541		// What do we have here? [T-TIM02D]
+						SAY SELECT_COMMON1 @71006   // Greetings. [t-tim02a]
+						SAY SELECT_COMMON2 @71007   // Yes. [t-tim02b]
+						SAY SELECT_COMMON3 @71008   // At your command. [t-tim02c]
+						SAY SELECT_COMMON4 @71009   // What do we have here? [t-tim02d]
 					END
 					PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
-						SAY CRITICAL_MISS @542		// No. [T-TIM11]
+						SAY CRITICAL_MISS @71010		// No. [t-tim11]
 					END
 					PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
-						SAY SPELL_DISRUPTED @543	// My magic did not work! [T-TIM12]
+						SAY SPELL_DISRUPTED @71011  // My magic did not work! [t-tim12]
 					END
 				END
-				WRITE_BYTE 0x237 1					// Sex (male)
-				WRITE_BYTE 0x271 1					// General (humanoid)
-				READ_BYTE 0x275 gd					// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN	// If not summoned or illusionary
-					WRITE_BYTE 0x275 1									// male
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_tiefling_male
+
 
 /* ================================================== *
  *  Male Human Mages get the townie_wizard animation  *
  * ================================================== */
-ACTION_FOR_EACH nb IN ~%tbg%willia~ ~%tsd%aerragh~ ~%tsu%andris~ ~%tsu%brenda~ ~%tsu%chante~ ~%tsu%chante2~ ~%tsu%cult2~ ~%tsu%davaeo~ ~%tsu%degrod~ ~%tsu%denak~ ~%tsu%faizah~ ~%tsu%gazib~ ~%tsu%lendar~ ~%tsu%marcel~ ~%tsu%obe~ ~%tsu%poghm10~ ~poghm3~ ~poghm6~ ~poghm8~ ~%tsu%poghm9~ ~poghma~ ~poghma3~ ~%tsu%poghma4~ ~%tsu%poghma5~ ~poghma6~ ~%tsu%poghma7~ ~poghma8~ ~%tsu%ramazi~ ~%tsu%resar~ ~%tsu%rezdan~ ~%tsu%semaj~ ~%tss%handal2~ ~%tsu%stepha~ ~%tsu%sunin~ ~%tsu%tarnes~ ~%tsu%thalan~ ~%tsu%tranzi~ ~%tsu%ulcast~ ~%tsu%ulraun~ ~%tsu%venkt~ ~%tsu%voieas~ ~%tsu%voinor~ ~%tsu%voisou~ ~%tsu%voiwes~ ~%tsu%winski~ ~%tsu%yago~ ~%tsu%zordra~ ~#smekhr~ ~3307wiz~ ~aacre001~ ~aacre075~ ~aacre169~ ~aacre170~ ~aacre171~ ~acasc~ ~acnecro1~ ~acq10001~ ~acq40006~ ~adangma1~ ~adangma2~ ~ahighma1~ ~ahighma2~ ~ahighma3~ ~albion~ ~alhel~ ~ammag01~ ~ar18mage~ ~aranor~ ~arenama3~ ~arenama5~ ~arlaxma1~ ~arlaxma2~ ~arlaxma5~ ~arlaxma7~ ~arltell~ ~arnfgt05~ ~arnfgt06~ ~arntra02~ ~arnwar05~ ~arnwar06~ ~avbatt02~ ~avrabatt~ ~avracut1~ ~b!zahl~ ~b#knit07~ ~b#knit08~ ~b#roen04~ ~b#semaj~ ~bandoth~ ~bartlemy~ ~batmage1~ ~bazeye01~ ~bazeye02~ ~breadv3~ ~bw05jer2~ ~bw05reuf~ ~bw05rud2~ ~bw05sert~ ~bw05terg~ ~bw05xeph~ ~bw11cre1~ ~bw11cre5~ ~bw11cre7~ ~c#ajtrae~ ~c6harp~ ~cb502lbr~ ~cb596tol~ ~cbc8ctm1~ ~cbc8ctm3~ ~cbkhelck~ ~cbp1act2~ ~cbpoghm1~ ~cbpoghm2~ ~cbstbuck~ ~cbtbgtod~ ~cbthalan~ ~cederil~ ~ch3mag01~ ~chsam01~ ~chsam02~ ~clcoti01~ ~clfhswz1~ ~clfhswz2~ ~clfhswz3~ ~clfhswz4~ ~clfmox~ ~clgijj01~ ~cm1803a4~ ~cmghst06~ ~cmosec04~ ~cmosec11~ ~cmosec13~ ~cmosec14~ ~cmsec08~ ~cmsec08a~ ~cmsec12~ ~cmsec12a~ ~cmtus03~ ~cmwolf~ ~corneil~ ~cowled~ ~d0arnlie~ ~d0debt1~ ~d0guard4~ ~d0lorick~ ~d0qpback~ ~dario~ ~darioms2~ ~dariomsg~ ~dcai~ ~ddtero01~ ~degard~ ~demmag~ ~desmage~ ~dsmortus~ ~dw#remg4~ ~e_mystig~ ~eastmage~ ~egmage2~ ~eldathl~ ~elders~ ~ermag2~ ~ermag4~ ~eurich~ ~f03~ ~ferean~ ~fhldu~ ~firmag01~ ~fwlove6~ ~g3g1202~ ~galryn~ ~garserv1~ ~genmag01~ ~gereth~ ~godadv5~ ~godmad1~ ~godserv2~ ~gorarc~ ~gorcar~ ~gpmage1~ ~grimsto~ ~gromg08~ ~gromg13~ ~harpatt1~ ~henvis~ ~hfpriest~ ~hftim~ ~hitomi~ ~hlmage~ ~hlsion~ ~horred~ ~horred2~ ~ilhan~ ~ilhan2~ ~ilhan3~ ~jaga3~ ~jamage1~ ~jamage2~ ~jc_sema~ ~k#firmag~ ~kaol~ ~kpglai02~ ~kproen03~ ~k-rmer2~ ~kzjao~ ~lavallin~ ~lavok01~ ~leander~ ~li004~ ~loutm02~ ~mage12a~ ~mage12b~ ~mage12c~ ~mage12d~ ~mage20~ ~mage20b~ ~mage20c~ ~melan~ ~morand2~ ~morandin~ ~mvmage~ ~mwbohum~ ~mwdolf~ ~nq#rbad6~ ~nsmage01~ ~ntsarq~ ~o#crgu72~ ~o#crlah2~ ~o#eligor~ ~o#vel~ ~oenmage2~ ~orrick~ ~pcapt04~ ~pgnalgel~ ~pirmur07~ ~pirn~ ~pirsea03~ ~pkloth1~ ~pkloth2~ ~plmetw01~ ~pomab~ ~ppcowled~ ~ppsanik~ ~ppwanev~ ~ppwanev2~ ~prenash~ ~psadapp2~ ~psadapp5~ ~psadv05~ ~psadv08~ ~psdego~ ~pshelm~ ~psinfer~ ~pskhel~ ~pslordao~ ~pslothan~ ~psmabju~ ~psmalte~ ~psmconj~ ~psmdivi~ ~psmeli~ ~psmench~ ~psmillu~ ~psmnecr~ ~psredw2~ ~psredwiz~ ~pstalos~ ~pstest03~ ~psthal~ ~pthral08~ ~qloot4~ ~r#crazy~ ~r#mage01~ ~r#mage02~ ~ranmarc~ ~rannec2~ ~rannec3~ ~rannec6~ ~rannec7~ ~rannec8~ ~rayvon~ ~razor~ ~redw2~ ~rethug02~ ~riat01~ ~riat02~ ~riat03~ ~riat04~ ~riat05~ ~riatjail~ ~riatmov1~ ~rr#haz~ ~s!enchan~ ~s!looke2~ ~s!looker~ ~sarmag01~ ~sevdru01~ ~sevpat02~ ~sewyag04~ ~slmage1~ ~sp1101p1~ ~stmage~ ~susuneer~ ~talmage3~ ~tanwiz03~ ~tanwiz1~ ~tcalhel~ ~tcdrak~ ~tcerubad~ ~tckartmn~ ~tclamon~ ~tclothar~ ~tcmage1~ ~tcmage2~ ~tcmmcris~ ~tcmmgus~ ~tcnarcil~ ~tcpirat3~ ~tctudwil~ ~tenmage2~ ~terrece~ ~tolger~ ~tolger2~ ~tolmag01~ ~trcar01~ ~trfued11~ ~trgrd02~ ~tuair~ ~tualert~ ~tucaius~ ~tuearth~ ~tuezek~ ~tuguard~ ~tuguard2~ ~tuillus~ ~tujiri~ ~tumage4~ ~tumalv~ ~tumatej~ ~tumord~ ~tuphin~ ~tutheod~ ~tuvashon~ ~tz25_#mb~ ~tz25_#w1~ ~tz25nnco~ ~udvith~ ~va#tian~ ~va#tian2~ ~vakg01~ ~vakmag01~ ~valmag01~ ~valmag02~ ~valmag03~ ~vulfgt02~ ~wbrupert~ ~%tsu%william%ts1%~ ~wyvmag14~ ~x#winski~ ~x#xzgu03~ ~ysailoth~ ~ysblrwz~ ~yscddwm1~ ~yscddwm2~ ~yscdm1~ ~yscdm2~ ~yscdm3~ ~yscdm4~ ~yscdmer1~ ~yscdmer2~ ~yscdmer3~ ~ysfirdos~ ~ysgadil~ ~ysgivon~ ~ysguar03~ ~yskarim~ ~yskhoury~ ~ysltor~ ~ysmage01~ ~ysmuktar~ ~ysnuri~ ~yspashan~ ~ysqadir~ ~ysredwiz~ ~yssold14~ ~ystahir~ ~ysyasar~ ~z#ardel~ ~z#kni5~ ~z_2her6~ ~z_2le1~ ~z_2mag1~ ~z_2pbhal~ ~z_2serin~ ~z_2smg~ ~z_mage1~ ~z_mage2~ ~z_mage3~ ~z_nomo2~ ~z_nomo3~ ~z_nomo4~ ~z_nomo5~ ~z_nomora~ ~z_test~ ~z_winni~ ~zilmag01~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_wizard AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d60 // Animation ID (townie_wizard_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_WIZARD_PST~) // classical 0x5d60 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_WIZARD_PST~) // original 0x5dad - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TWZ01]
+					SAY BATTLE_CRY1 ~~ [t-twz01]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TWZ03]
+					SAY ATTACK1 ~~ [t-twz03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
 					rmd = RANDOM(1 2)
 					PATCH_IF rmd = 1 BEGIN
-						SAY DAMAGE ~~ [T-TWZ07]
+						SAY DAMAGE ~~ [t-twz07]
 					END ELSE BEGIN
-						SAY DAMAGE ~~ [T-TWZ08]
+						SAY DAMAGE ~~ [t-twz08]
 					END
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
 					rme = RANDOM(1 2)
 					PATCH_IF rme = 1 BEGIN
-						SAY DYING ~~ [T-TWZ09]
+						SAY DYING ~~ [t-twz09]
 					END ELSE BEGIN
-						SAY DYING ~~ [T-TWZ10]
+						SAY DYING ~~ [t-twz10]
 					END
 				END
-				WRITE_BYTE 0x237 1											// Sex (male)
-				PATCH_IF BYTE_AT 0x272 = 5 BEGIN							// If invalid race
-					WRITE_BYTE 0x272 1										// Race (human)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid race
+				PATCH_IF BYTE_AT 0x272 = 5 BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN	// If invalid class
-					WRITE_BYTE 0x273 1										// Class (mage)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN
+					WRITE_BYTE 0x273 1  // Class (mage)
 				END
-				WRITE_BYTE 0x275 1											// Gender (male)
-				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN	// If invalid alignment
-					WRITE_BYTE 0x27b 34										// Alignment (neutral)
+				WRITE_BYTE 0x275 1      // Gender (male)
+				// If invalid alignment
+				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
-				READ_LONG 0x2b8 t-io										// Items offset
-				READ_SSHORT (t-io + 0x12) t-wpn								// Weapon 1
+				READ_LONG    0x2b8 t-io         // Items offset
+				READ_SSHORT (t-io + 0x12) t-wpn // Weapon 1
 				PATCH_IF t-wpn < 0 BEGIN
-					ADD_CRE_ITEM ~%tsu%staf01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP TWOHANDED // Quarterstaff (animation consistency)
+					ADD_CRE_ITEM ~%tutu_var%staf01~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP TWOHANDED // Quarterstaff (animation consistency)
 					PATCH_IF BYTE_AT 0x72 < 1 BEGIN
-						WRITE_BYTE 0x72 1									// Blunts proficiency
+						WRITE_BYTE 0x72 1   // Blunts proficiency
 					END
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_wizard
+
 
 /* ======================================================================================= *
  *  Female Human Nobles get the townie_upper_class_female or the aasimar_female animation  *
  * ======================================================================================= */
-ACTION_FOR_EACH nb IN ~#stethys~ ~%tsn%obwba_a~ ~%tsn%obwba_d~ ~%tsn%obwba_e~ ~%tsn%owbax_a~ ~%tsn%owbax_b~ ~%tsn%owbax_c~ ~%tsn%owbax_d~ ~%tsn%owbax_e~ ~%tsu%addy~ ~%tsu%brilla~ ~%tsu%gyllia~ ~%tsu%hannah~ ~%tsu%kaella~ ~%tsu%lena~ ~%tsu%nobw2~ ~%tsu%nobw3~ ~%tsu%nobw4~ ~%tsu%nobw5~ ~%tsu%nobw7~ ~%tsu%nobw8~ ~%tsu%nobw9~ ~%tsu%nobwba~ ~%tsu%samant~ ~3316nob2~ ~3324nob2~ ~3324nob3~ ~adoli2~ ~ann11~ ~arlaxn2~ ~arlaxn5~ ~arlaxn6~ ~b!vulg1~ ~b!vulg3~ ~b!vulg5~ ~bdact08~ ~bdact09~ ~bdcoun02~ ~beatrice~ ~bginfo2~ ~bgtav1b~ ~bgtavst2~ ~bgtavst4~ ~bnoble2~ ~bw05mar2~ ~bw05mary~ ~bystand2~ ~c#ajeil1~ ~c#ajeila~ ~c#ajlail~ ~c#q04003~ ~c#q05003~ ~c#q08002~ ~cb232fm4~ ~cb270ccf~ ~cb596se6~ ~cbffcrw2~ ~cbhl3634~ ~cbhld0w7~ ~cblybuck~ ~cbnobl2w~ ~cbnobl5w~ ~cbp2act1~ ~cbp2act3~ ~cbp3act5~ ~cbp4act1~ ~cbrncwfe~ ~cbsbtvrf~ ~cbsbtvrm~ ~cbsbwt64~ ~cbsurayw~ ~cdmaid3~ ~cdmaid4~ ~civil02~ ~cmmerc06~ ~csheck3~ ~d1wmart2~ ~delcia~ ~delnob02~ ~dpstat05~ ~dskateri~ ~eastnob2~ ~elgea~ ~ffcrowd2~ ~ffcust05~ ~fhlali~ ~fulady~ ~g3mrsgtu~ ~gnoblef1~ ~gnoblef2~ ~jugcol01~ ~jzmaria~ ~kplend02~ ~madam~ ~maria~ ~mourner4~ ~nanny~ ~ncdw~ ~ncdw2~ ~noblew1~ ~noblew2~ ~o#crsoph~ ~oriana~ ~pgcrowdn~ ~pglyrica~ ~ppgirl2~ ~rerak05~ ~rowena~ ~s!lady1~ ~sarcnt01~ ~sbslum02~ ~scljyss~ ~scroll01~ ~surayah~ ~tassa~ ~tc2000mf~ ~tccivil2~ ~tcfstat~ ~tcmmnob2~ ~trcut01~ ~trnobf01~ ~trnobf02~ ~trple02~ ~tsjflirt~ ~tspick2~ ~tz25nnla~ ~victown4~ ~vinobwo~ ~wcust02~ ~wcust05~ ~wmart2~ ~x#dora~ ~yschnob5~ ~yschnob6~ ~yschnob7~ ~yselpara~ ~ysnobw_a~ ~ysnobw_b~ ~ysnobw_c~ ~ysnobw_d~ ~ysnobw_e~ ~ysnobwwa~ ~ysnobwwb~ ~ysnobwwc~ ~ysnobwwd~ ~ysnobwwe~ ~yssanob1~ ~ystres3~ ~ystres4~ ~z#nob2~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_female_human_nobles AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 				rmh = RANDOM(1 2)
 				PATCH_IF rmh = 1 BEGIN
-					WRITE_SHORT 0x28 0x5d61 // Animation ID (townie_upper_class_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_UPPER_CLASS_FEMALE_PST~) // classical 0x5d61 - EE none for the momemt
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_UPPER_CLASS_FEMALE_PST~) // original 0x5dae - EE depends on installation
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 ~~ [T-TUF01]
-						SAY BATTLE_CRY2 ~~ [T-TUF02]
+						SAY BATTLE_CRY1 ~~ [t-tuf01]
+						SAY BATTLE_CRY2 ~~ [t-tuf02]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-TUF03]
+						SAY ATTACK1 ~~ [t-tuf03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-TUF07]
+						SAY DAMAGE ~~ [t-tuf07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-TUF09]
+						SAY DYING ~~ [t-tuf09]
 					END
 				END ELSE BEGIN
-					WRITE_SHORT 0x28 0x5d4a // Animation (aasimar_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~AASIMAR_FEMALE_PST~) // classical 0x5d4a - EE none for the momemt
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~AASIMAR_FEMALE_PST~) // original 0x5dba - EE depends on installation
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-						SAY BATTLE_CRY1 ~~ [T-AAS01]
-						SAY BATTLE_CRY2 ~~ [T-AAS02A]
+						SAY BATTLE_CRY1 ~~ [t-aas01]
+						SAY BATTLE_CRY2 ~~ [t-aas02a]
 					END
 					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-						SAY ATTACK1 ~~ [T-AAS03]
+						SAY ATTACK1 ~~ [t-aas03]
 					END
 					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-						SAY DAMAGE ~~ [T-AAS07]
+						SAY DAMAGE ~~ [t-aas07]
 					END
 					PATCH_IF SLONG_AT DYING < 1 BEGIN
-						SAY DYING ~~ [T-AAS09]
+						SAY DYING ~~ [t-aas09]
 					END
 					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-						SAY SELECT_COMMON1 ~~ [T-AAS02B]
+						SAY SELECT_COMMON1 ~~ [t-aas02b]
 					END
 				END
-				WRITE_BYTE 0x237 2					// Sex (female)
-				PATCH_IF BYTE_AT 0x272 = 5 BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1				// Race (human)
+				WRITE_BYTE 0x237 2      // Sex (female)
+				// If invalid race
+				PATCH_IF BYTE_AT 0x272 = 5 BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF BYTE_AT 0x273 > 198 BEGIN	// If invalid class
-					WRITE_BYTE 0x273 155			// Class (innocent)
+				// If invalid class
+				PATCH_IF BYTE_AT 0x273 > 198 BEGIN
+					WRITE_BYTE 0x273 155 // Class (innocent)
 				END
-				WRITE_BYTE 0x275 2					// Gender (female)
+				WRITE_BYTE 0x275 2      // Gender (female)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34				// Alignment (neutral)
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_female_human_nobles
+
 
 /* ============================================================= *
  *  Male Human Nobles get the townie_upper_class_male animation  *
  * ============================================================= */
-ACTION_FOR_EACH nb IN ~#spinkie~ ~%tsn%obbax_a~ ~%tsn%obbax_b~ ~%tsn%obbax_c~ ~%tsn%obbax_d~ ~%tsn%obbax_e~ ~%tsn%oblba_a~ ~%tsn%oblba_b~ ~%tsn%oblba_c~ ~%tsn%oblba_d~ ~%tsn%oblba_e~ ~%tsu%ashen~ ~%tsu%binky~ ~%tsu%chase~ ~%tsu%feloni~ ~%tsu%fenrus~ ~%tsu%foresh~ ~%tsu%jared~ ~%tsu%mysmer~ ~%tsu%nobl10~ ~%tsu%nobl11~ ~%tsu%nobl12~ ~%tsu%nobl14~ ~%tsu%nobl2~ ~%tsu%nobl3~ ~%tsu%nobl4~ ~%tsu%nobl5~ ~%tsu%nobl6~ ~%tsu%nobl7~ ~%tsu%nobl8~ ~%tsu%nobl9~ ~%tsu%noblpa~ ~%tsu%noblpa1~ ~%tsu%noblpa2~ ~%tsu%noblpa3~ ~%tsu%noblpa4~ ~%tsu%noblpa5~ ~%tsu%prism~ ~%tsu%regina~ ~%tsu%sirlot~ ~%tsu%tartus~ ~1xspr~ ~3316nob1~ ~3324nob1~ ~aacre115~ ~adadop1a~ ~adoli1~ ~aewimer1~ ~agdeimos~ ~aggriev~ ~alagar~ ~amcust02~ ~anno1~ ~aramir~ ~arenaa6~ ~arenaa7~ ~arenam3~ ~arenam5~ ~argrim~ ~arlaxm4~ ~arlaxm5~ ~arlaxn1~ ~arlaxn3~ ~arlaxn4~ ~auno1~ ~auno2~ ~auno3~ ~auno4~ ~auno5~ ~b!ballus~ ~b!gavlok~ ~b!gustav~ ~b!herb04~ ~b!jolun~ ~b!mal~ ~b!mal2~ ~b!vulg2~ ~b!vulg4~ ~b!vulg6~ ~b!vulova~ ~bdact05~ ~bdact07~ ~bdhigg01~ ~bginfo1~ ~bgtav1a~ ~bgtavst1~ ~bgtavst3~ ~biggs~ ~bnoble1~ ~burn01~ ~bw11cre2~ ~c#ajende~ ~c#ajloil~ ~c#q01002~ ~c#q04004~ ~caern~ ~cb596se2~ ~cb596se5~ ~cbffcrw1~ ~cbldbuck~ ~cbnobl1w~ ~cbnobl3w~ ~cbnobl4w~ ~cbp2act2~ ~cbp3act4~ ~cbsbin64~ ~cbtaxcva~ ~cbwillma~ ~civil01~ ~civil03~ ~clfjmp~ ~clglin01~ ~cm0700a~ ~cmfood1~ ~cmkfc01~ ~cmlordas~ ~cmmerc04~ ~cmosec12~ ~cmtus01~ ~copgreet~ ~counsec~ ~crthf03~ ~d0lender~ ~d0qppotn~ ~d1wmart1~ ~daslave6~ ~ddassi01~ ~ddmayo01~ ~ddmerc01~ ~ddmerc02~ ~deadman3~ ~delnob01~ ~desto#04~ ~dpim~ ~dsnorby~ ~dw#abrop~ ~eastnob1~ ~egald1~ ~egald2~ ~egald3~ ~erwan~ ~farthin~ ~ffcrowd1~ ~ffcust09~ ~fulord~ ~fwbirina~ ~g3java02~ ~gnoblem1~ ~gnoblem2~ ~gphil02~ ~hacton~ ~hanobl1~ ~hersch~ ~hist1~ ~imnbook1~ ~jzcrwdm3~ ~jzrumar~ ~jzwilly~ ~korpim~ ~kpdomo01~ ~kprang02~ ~larin~ ~laron1~ ~lenn~ ~llarsh~ ~m#rashry~ ~marlowe~ ~mourner3~ ~ncdm~ ~ncdm2~ ~noble1~ ~noblem1~ ~noblem2~ ~nohos1~ ~nohos2~ ~nsprey01~ ~ntmagnad~ ~o#crlah~ ~o#crmel~ ~o#damir~ ~o#thadd~ ~pashtrav~ ~pehllus~ ~pgcrowdm~ ~pgjoules~ ~pircor03~ ~postul6~ ~quint~ ~rerak01~ ~robemer~ ~rumar~ ~sarbar01~ ~sbslum01~ ~scqar~ ~scsarles~ ~sk#noble~ ~slvic01~ ~staffm1~ ~staffm10~ ~staffm11~ ~staffm12~ ~staffm2~ ~staffm3~ ~staffm4~ ~staffm5~ ~staffm6~ ~staffm7~ ~staffm8~ ~staffm9~ ~t#mdomo~ ~taxcoll~ ~tc2000nm~ ~tcbart~ ~tccivil1~ ~tccivil3~ ~tcderil~ ~tclogan~ ~tcmer03~ ~tcmmnob1~ ~tcwgnob1~ ~trax~ ~trcut02~ ~trmer02~ ~trnobm01~ ~trnobm02~ ~trple04~ ~trrak02~ ~trrak03~ ~tspick1~ ~tz25_#of~ ~tz25nnra~ ~tz25nnru~ ~victown3~ ~vinobma~ ~wardnob1~ ~wblance~ ~wcust01~ ~wealmer~ ~welther~ ~wgmerc01~ ~willia~ ~wmart1~ ~yscara01~ ~yschnob1~ ~yschnob2~ ~yschnob3~ ~ysnobm_a~ ~ysnobm_b~ ~ysnobm_c~ ~ysnobm_d~ ~ysnobm_e~ ~ysnobmwa~ ~ysnobmwb~ ~ysnobmwc~ ~ysnobmwd~ ~ysnobmwe~ ~yssanob2~ ~ystres1~ ~ystres2~ ~z#nob1~ ~z#nob3~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_townie_upper_class_male AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d62 // Animation ID (townie_upper_class_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_UPPER_CLASS_MALE_PST~) // classical 0x5d62 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_UPPER_CLASS_MALE_PST~) // original 0x5d62 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-TUM01]
-					SAY BATTLE_CRY2 ~~ [T-TUM02]
+					SAY BATTLE_CRY1 ~~ [t-tum01]
+					SAY BATTLE_CRY2 ~~ [t-tum02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-TUM03]
+					SAY ATTACK1 ~~ [t-tum03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
-					SAY DAMAGE ~~ [T-TUM07]
+					SAY DAMAGE ~~ [t-tum07]
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
-					SAY DYING ~~ [T-TUM09]
+					SAY DYING ~~ [t-tum09]
 				END
-				WRITE_BYTE 0x237 1											// Sex (male)
-				PATCH_IF (BYTE_AT 0x272 = 5) OR (BYTE_AT 0x272 > 159) BEGIN	// If invalid race
-					WRITE_BYTE 0x272 1										// Race (human)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If invalid race
+				PATCH_IF (BYTE_AT 0x272 = 5) OR (BYTE_AT 0x272 > 159) BEGIN
+					WRITE_BYTE 0x272 1  // Race (human)
 				END
-				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN	// If invalid class
-				  WRITE_BYTE 0x273 155										// Class (innocent)
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 198) BEGIN
+				  WRITE_BYTE 0x273 155  // Class (innocent)
 				END
-				WRITE_BYTE 0x275 1											// Gender (male)
+				WRITE_BYTE 0x275 1      // Gender (male)
 				PATCH_IF (BYTE_AT 0x27b < 17) OR (BYTE_AT 0x27b > 51) BEGIN
-					WRITE_BYTE 0x27b 34										// Alignment (neutral)
+					WRITE_BYTE 0x27b 34 // Alignment (neutral)
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_townie_upper_class_male
+
 
 /* ================================================ *
  *  Female Zombies get the zombie_female animation  *
  * ================================================ */
-ACTION_FOR_EACH nb IN ~bhghoul5~ ~gtcit4~ ~gtcit5~ ~lcadead5~ ~lcadead6~ ~nszomb07~ ~nszomb08~ ~nszomb09~ ~nszomb10~ ~x#garz02~ ~x#garz04~ ~%tsz%ombie_b~ ~%tsz%ombie_d~ ~%tsu%zombieb~ ~%tsu%zombiew~ ~zombju01~ ~zombsexx~ ~zombx1~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_zombie_female AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d63 // Animation ID (zombie_female_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ZOMBIE_FEMALE_PST~) // classical 0x5d63 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ZOMBIE_FEMALE_PST~) // original 0x5d63 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-ZMF01]
-					SAY BATTLE_CRY2 ~~ [T-ZMF02]
+					SAY BATTLE_CRY1 ~~ [t-zmf01]
+					SAY BATTLE_CRY2 ~~ [t-zmf02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-ZMF03]
+					SAY ATTACK1 ~~ [t-zmf03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
 					rmd = RANDOM(1 2)
 					PATCH_IF rmd = 1 BEGIN
-						SAY DAMAGE ~~ [T-ZMF07]
+						SAY DAMAGE ~~ [t-zmf07]
 					END ELSE BEGIN
-						SAY DAMAGE ~~ [T-ZMF08]
+						SAY DAMAGE ~~ [t-zmf08]
 					END
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
 					rme = RANDOM(1 2)
 					PATCH_IF rme = 1 BEGIN
-						SAY DYING ~~ [T-ZMF09]
+						SAY DYING ~~ [t-zmf09]
 					END ELSE BEGIN
-						SAY DYING ~~ [T-ZMF10]
+						SAY DYING ~~ [t-zmf10]
 					END
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-ZMF02]
+					SAY SELECT_COMMON1 ~~ [t-zmf02]
 				END
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x272 148		// Race (zombie)
-				READ_BYTE 0x273 cs			// Class
-				PATCH_IF cs != 155 BEGIN	// If not "innocent"
-					WRITE_BYTE 0x273 198	// zombie_normal
+				WRITE_BYTE 0x237 2          // Sex (female)
+				WRITE_BYTE 0x272 148        // Race (zombie)
+				READ_BYTE  0x273 cs         // Class
+				// If not "innocent"
+				PATCH_IF cs != 155 BEGIN
+					WRITE_BYTE 0x273 198    // zombie_normal
 				END
-				READ_BYTE 0x275 gd			// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN	// If not summoned or illusionary
-					WRITE_BYTE 0x275 2									// female
+				READ_BYTE  0x275 gd			// Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2      // female
 				END
 			END
 		BUT_ONLY
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_zombie_female
+
 
 /* ============================================ *
  *  Male Zombies get the zombie_male animation  *
  * ============================================ */
-ACTION_FOR_EACH nb IN ~accc~ ~bhghoul3~ ~c#q06002~ ~%tsu%ghorak~ ~gtcit3~ ~kelzomb~ ~lcadead3~ ~lcadead4~ ~lcjujusu~ ~nevm5~ ~nszomb02~ ~nszomb04~ ~nszomb06~ ~ntzombie~ ~ntzombju~ ~rzomb01~ ~x#garz01~ ~x#garz03~ ~%tsz%ombie_a~ ~%tsz%ombie_c~ ~%tsz%ombie_e~ BEGIN
-	OUTER_SET rmq = 7						// 100% chance
-	ACTION_IF rmp = 1 BEGIN
-		OUTER_SET rmq = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rmp = 2 BEGIN
-			OUTER_SET rmq = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rmp = 3 BEGIN
-				OUTER_SET rmq = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_zombie_male AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x5d64 // Animation ID (zombie_male_pst)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ZOMBIE_MALE_PST~) // classical 0x5d64 - EE none for the momemt
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ZOMBIE_MALE_PST~) // original 0x5d64 - EE depends on installation
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
-					SAY BATTLE_CRY1 ~~ [T-ZMM01]
-					SAY BATTLE_CRY2 ~~ [T-ZMM02]
+					SAY BATTLE_CRY1 ~~ [t-zmm01]
+					SAY BATTLE_CRY2 ~~ [t-zmm02]
 				END
 				PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
-					SAY ATTACK1 ~~ [T-ZMM03]
+					SAY ATTACK1 ~~ [t-zmm03]
 				END
 				PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
 					rmd = RANDOM(1 2)
 					PATCH_IF rmd = 1 BEGIN
-						SAY DAMAGE ~~ [T-ZMM07]
+						SAY DAMAGE ~~ [t-zmm07]
 					END ELSE BEGIN
-						SAY DAMAGE ~~ [T-ZMM08]
+						SAY DAMAGE ~~ [t-zmm08]
 					END
 				END
 				PATCH_IF SLONG_AT DYING < 1 BEGIN
 					rme = RANDOM(1 2)
 					PATCH_IF rme = 1 BEGIN
-						SAY DYING ~~ [T-ZMM09]
+						SAY DYING ~~ [t-zmm09]
 					END ELSE BEGIN
-						SAY DYING ~~ [T-ZMM10]
+						SAY DYING ~~ [t-zmm10]
 					END
 				END
 				PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
-					SAY SELECT_COMMON1 ~~ [T-ZMM02]
+					SAY SELECT_COMMON1 ~~ [t-zmm02]
 				END
-				WRITE_BYTE 0x237 1			// Sex (male)
-				WRITE_BYTE 0x272 148		// Race (zombie)
-				READ_BYTE 0x273 cs			// Class
-				PATCH_IF cs != 155 BEGIN	// If not "innocent"
-					WRITE_BYTE 0x273 198	// zombie_normal
+				WRITE_BYTE 0x237 1          // Sex (male)
+				WRITE_BYTE 0x272 148        // Race (zombie)
+				READ_BYTE  0x273 cs         // Class
+				// If not "innocent"
+				PATCH_IF cs != 155 BEGIN
+					WRITE_BYTE 0x273 198    // zombie_normal
 				END
-				READ_BYTE 0x275 gd			// Gender
-				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN	// If not summoned or illusionary
-					WRITE_BYTE 0x275 1									// male
+				READ_BYTE  0x275 gd	        // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1      // male
 				END
 			END
 		BUT_ONLY
-	END
-END
 
-VERBOSE
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_zombie_male
