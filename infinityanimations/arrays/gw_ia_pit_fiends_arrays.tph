@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                                *
  *                A R R A Y S    ( T A B L E S )    :    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 150-175 )                 *
  *                                                                                                                                                         *
- *                Array to patch vanilla and modded creature files (animation slots, sound clips...) used by t-pit_fiend.tpa WeiDU routine.                *
+ *                Array used to patch vanilla and modded creature files (animation slots, sound clips...) by t-pit_fiend.tpa WeiDU routine.                *
  *                                                                                                                                                         *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
  *                                                                                                                                                         *

@@ -10,8 +10,7 @@
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_seers_arrays.tph library) for easier maintenance.                                  *
  *      - slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4 and udvictim creatures have been moved from the beggars to the slaves array.   *
  *      - Fix: "Some beggars and slaves" and "Some beggars" sub-components creatures listings were inverted.                                                           *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                              *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 0x528a with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~)           *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x528a with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~).         *
  * =================================================================================================================================================================== */
 
 SILENT
@@ -29,6 +28,7 @@ COPY_EXISTING ~%nb%.cre~ ~override~
 			END
 		END
 	END
+
 BUT_ONLY
 
 VERBOSE

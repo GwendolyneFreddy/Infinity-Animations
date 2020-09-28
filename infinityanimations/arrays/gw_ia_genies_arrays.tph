@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                                *
  *                         A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E   G E N I E S   C O M P O N E N T   ( 50 )                         *
  *                                                                                                                                                         *
- *                 Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-genie.tpa WeiDU routine.                  *
+ *                 Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-genie.tpa WeiDU routine.                  *
  *                                                                                                                                                         *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
  *                                                                                                                                                         *

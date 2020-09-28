@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                                *
  *            A R R A Y S    ( T A B L E S )    :    C A M B I O N S   G E T   I S A I R   A N I M A T I O N   C O M P O N E N T   ( 210-230 )             *
  *                                                                                                                                                         *
- *                Array to patch vanilla and modded creature files (animation slots, sound clips...) used by t-cambion.tpa WeiDU routine.                  *
+ *                Array used to patch vanilla and modded creature files (animation slots, sound clips...) by t-cambion.tpa WeiDU routine.                  *
  *                                                                                                                                                         *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
  *                                                                                                                                                         *
