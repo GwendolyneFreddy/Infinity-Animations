@@ -1,0 +1,61 @@
+/* ========================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                   *
+ *            A R R A Y S    ( T A B L E S )    :    A L U - F I E N D S   G E T   M A D A E   A N I M A T I O N   C O M P O N E N T   ( 260-280 )            *
+ *                                                                                                                                                            *
+ *                  Array to patch vanilla and modded creature files (animation slots, sound clips...) used by t-alu_fiend.tpa WeiDU routine.                 *
+ *                                                                                                                                                            *
+ *                       Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                       *
+ *                                                                                                                                                            *
+ * ========================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                         *
+ * -----------------------------------                                                                                                                        *
+ *  - GW_alu_fiends               :   LISTS vanilla and modded Alu_Fiends creatures needing to be patched.                                    => line #  17   *
+ *                                    LISTE les créatures alu-démons du jeu et de mods nécessitant d'être modifiées.                                          *
+ * ========================================================================================================================================================== */
+
+/* ============================================================================================ *
+ *  ARRAY GW_alu_fiends : LISTS vanilla and modded Alu_Fiends creatures needing to be patched.  *
+ * -------------------------------------------------------------------------------------------- *
+ *  Alu-Fiends get the Madae animation.                                                         *
+ * ============================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_alu_fiends
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_alu_fiends BEGIN
+
+// BG2
+// ---
+alufie01                => 1	// Alu-Fiend
+alufie02                => 1	// id.
+goralu01                => 1	// id.
+gorwom06                => 1	// Xei Win Toh
+telalu1	                => 1	// Alu-Fiend
+telsuc1	                => 1	// id.
+
+// Ascension
+// ---------
+finaluf                 => 1	// Alu-Fiend
+
+// Exnem
+// -----
+xsdemon                 => 1	// Lesser Demon Lord
+
+// Fade NPC
+// --------
+e3demon2                => 1	// Fade-Demon
+
+// Longer Road
+// -----------
+yugalu01                => 1	// Alu-Fiend
+
+// NTotSC
+// ------
+ntindfi1                => 1	// Lesser Tanar'ri
+ntindfi2                => 1	// id.
+ntindfig                => 1	// id.
+
+// Saerileth
+// ---------
+nsaluf01                => 1	// Alu-Fiend
+
+END
