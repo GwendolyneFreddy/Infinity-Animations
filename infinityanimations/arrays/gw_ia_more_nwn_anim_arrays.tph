@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                               *
  *                       A R R A Y S    ( T A B L E S )    :    M O R E   N W N   A N I M A T I O N S   C O M P O N E N T   ( 650 )                       *
  *                                                                                                                                                        *
- *                Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-nwnanims.tpa WeiDU routine.               *
+ *                Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-nwnanims.tpa WeiDU routine.               *
  *                                                                                                                                                        *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
  *                                                                                                                                                        *
@@ -17,7 +17,7 @@
  *                                    LISTE les créatures basilics majeurs du jeu et de mods nécessitant d'être modifiées.                                *
  *  - GW_modron_round             :   LISTS vanilla and modded Modrons creatures needing to be patched.                                  => line #   89   *
  *                                    LISTE les créatures modrones du jeu et de mods nécessitant d'être modifiées.                                        *
- *  - GW_displacer_beast          :   LISTS vmodded Displacer Beasts creatures needing to be patched.                                    => line #  110   *
+ *  - GW_displacer_beast          :   LISTS modded Displacer Beasts creatures needing to be patched.                                     => line #  110   *
  *                                    LISTE les créatures bêtes éclipsantes de mods nécessitant d'être modifiées.                                         *
  *  - GW_giant_fire_female        :   LISTS vanilla and modded Fire Giant Females needing to be patched.                                 => line #  131   *
  *                                    LISTE les créatures géantes du feu du jeu et de mods nécessitant d'être modifiées.                                  *
@@ -48,7 +48,7 @@ END
  *  ARRAY GW_beetle_bombardier_nwn : LISTS modded Bombardier Beetle creatures needing to be patched.  *
  * -------------------------------------------------------------------------------------------------- *
  *  Bombardier Beetle get the beetle_bombardier_nwn animation.                                        *
- * ================================================================================================== */
+ * ================================================================================================== *
 
 ACTION_CLEAR_ARRAY GW_beetle_bombardier_nwn
 
@@ -58,7 +58,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_beetle_bombardier_nwn BEGIN
 // ------------
 beetbomb                => 1	// Bombardier beetle
 
-END
+END*/
 
 
 /* ===================================================================================================== *

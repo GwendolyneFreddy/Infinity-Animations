@@ -9,7 +9,7 @@
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_base_anim_arrays.tph library) for easier maintenance.                            *
  *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                 *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
  * ====================================================================================================================================================================== */
 
@@ -20,7 +20,7 @@
  *  Brown Lizardmen get the lizard_man_elite animation           #   65  *
  *  Lizardman Shamans get the lizard_man animation               #   89  *
  *  Lizardman chiefs get the lizard_king animation               #  115  *
- *  Trolls get the troll animation                               #  144  *
+ *  Trolls get the troll animation                               #  141  *
  *  Blue Trolls get the troll_blue animation                     #  166  *
  *  Ice Trolls get the troll_ice animation                       #  203  *
  *  Small Trolls get the troll_small animation                   #  227  *

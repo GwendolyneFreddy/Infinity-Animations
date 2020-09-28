@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                               *
  *                      A R R A Y S    ( T A B L E S )    :    M O R E   B A S E   A N I M A T I O N S   C O M P O N E N T   ( 500 )                      *
  *                                                                                                                                                        *
- *               Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-baseanims.tpa WeiDU routine.               *
+ *               Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-baseanims.tpa WeiDU routine.               *
  *                                                                                                                                                        *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
  *                                                                                                                                                        *
@@ -59,7 +59,7 @@ END
 
 
 /* ====================================================================================================== *
- *  ARRAY GW_lizardmen_brown : LISTS vanilla and modded Lizardmen Brown creatures needing to be patched.  *
+ *  ARRAY GW_lizardmen_brown : LISTS vanilla and modded Brown Lizardmen creatures needing to be patched.  *
  * ------------------------------------------------------------------------------------------------------ *
  *  Brown Lizardmen get the lizard_man_elite (brown) animation.                                           *
  * ====================================================================================================== */

@@ -8,22 +8,20 @@
  *  change-log:                                                                                                                                                           *
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_nwn_anim_arrays.tph library) for easier maintenance.                             *
- *      - Replaced WRITE_LONG 0x28 with WRITE_LONG 0x28.                                                                                                                  *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_LONG 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
  * ====================================================================================================================================================================== */
-
 
 /* ----------------------------------------------------------------------------------- *
  *                            CREATURES                                          line  *
  * ----------------------------------------------------------------------------------- *
- *  Scythe Wielders get the amel_pc_nwn animation                              #   38  *
- *  Bombardier Beetle (BP) gets the beetle_bombardier_nwn animation            #   66  *
- *  Greater Basilisks get the basilisk_nwn animation                           #   82  *
- *  Modrons get the modron_round animation                                     #  103  *
- *  Displacer Beasts (AjocMod) get the displacer_beast animation               #  131  *
- *  Fire Giant Females get the giant_fire_female animation                     #  163  *
- *  Frost Giant Females get the giant_frost_female animation                   #  188  *
+ *  Scythe Wielders get the amel_pc_nwn animation                              #   36  *
+ *  Bombardier Beetle (BP) gets the beetle_bombardier_nwn animation            #   64  *
+ *  Greater Basilisks get the basilisk_nwn animation                           #   80  *
+ *  Modrons get the modron_round animation                                     #  101  *
+ *  Displacer Beasts (AjocMod) get the displacer_beast animation               #  129  *
+ *  Fire Giant Females get the giant_fire_female animation                     #  161  *
+ *  Frost Giant Females get the giant_frost_female animation                   #  186  *
  * ----------------------------------------------------------------------------------- */
 
 SILENT
@@ -31,7 +29,7 @@ SILENT
 /* ============================== *
  *  Loads creatures lists arrays  *
  * ============================== */
-INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_iwd2_anims_arrays.tph~
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_nwn_anims_arrays.tph~
 
 
 /* =============================================== *
@@ -45,7 +43,7 @@ ACTION_PHP_EACH GW_amel_pc_nwn AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~AMEL_PC_NWN~) // classical 0x526d - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~AMEL_PC_NWN~) // original 0x526d - EE depends on installation
 				SAY INITIAL_MEETING @10651  // What do you want? [t-aml02a]
 				SAY BATTLE_CRY1 @10652      // Taste steel! [t-aml01a]
 				SAY BATTLE_CRY2 @10653      // Die as you must! [t-aml01b]
@@ -69,7 +67,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~beetbomb.cre~ BEGIN
 
 	COPY_EXISTING ~beetbomb.cre~ ~override~
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BEETLE_BOMBARDIER_NWN~) // classical 0x5291 - EE depends on installation
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BEETLE_BOMBARDIER_NWN~) // original 0x5291 - EE depends on installation
 			WRITE_BYTE 0x272 104    // Race (crawler)
 			WRITE_BYTE 0x273 108    // Class (crawler)
 		END
@@ -89,7 +87,7 @@ ACTION_PHP_EACH GW_basilisk_nwn AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BASILISK_NWN~) // classical 0x557b - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BASILISK_NWN~) // original 0x557b - EE depends on installation
 			END
 		BUT_ONLY
 
@@ -110,7 +108,7 @@ ACTION_PHP_EACH GW_modron_round AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MODRON_ROUND~) // classical 0x5b02 - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MODRON_ROUND~) // original 0x5b02 - EE depends on installation
 				SAY BATTLE_CRY1 ~~ [t-mod01a]
 				SAY BATTLE_CRY2 ~~ [t-mod01b]
 				SAY ATTACK1 ~~ [t-mod03]
@@ -138,7 +136,7 @@ ACTION_PHP_EACH GW_displacer_beast AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DISPLACER_BEAST~) // classical 0x5b07 - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DISPLACER_BEAST~) // original 0x5b07 - EE depends on installation
 				SAY BATTLE_CRY1 ~~ [t-dis01a]
 				SAY BATTLE_CRY2 ~~ [t-dis01b]
 				SAY BATTLE_CRY3 ~~ [t-dis01c]
@@ -170,7 +168,7 @@ ACTION_PHP_EACH GW_giant_fire_female AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_FEMALE~) // classical 0x5c03 - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_FEMALE~) // original 0x5c03 - EE depends on installation
 				WRITE_BYTE 0x237 2      // Sex (female)
 				WRITE_BYTE 0x271 5      // General (gianthumanoid)
 				WRITE_BYTE 0x275 2      // Gender (female)
@@ -195,7 +193,7 @@ ACTION_PHP_EACH GW_giant_frost_female AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FROST_FEMALE~) // classical 0x5c04 - EE depends on installation
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FROST_FEMALE~) // original 0x5c04 - EE depends on installation
 				WRITE_BYTE 0x237 2  // Sex (female)
 				WRITE_BYTE 0x271 5  // General (gianthumanoid)
 				WRITE_BYTE 0x275 2  // Gender (female)

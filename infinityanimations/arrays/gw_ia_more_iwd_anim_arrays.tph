@@ -2,7 +2,7 @@
  *  v 6.0.0                                                                                                                                               *
  *                      A R R A Y S    ( T A B L E S )    :    M O R E    I W D    A N I M A T I O N S    C O M P O N E N T   ( 550 )                     *
  *                                                                                                                                                        *
- *                Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-iwdanims.tpa WeiDU routine.               *
+ *                Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-iwdanims.tpa WeiDU routine.               *
  *                                                                                                                                                        *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
  *                                                                                                                                                        *
