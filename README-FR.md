@@ -888,12 +888,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Intégration du correctif <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, amélioré par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations différentes de briller en rouge.
     - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
-
-  - [7000-7010-7020-7030] Avatars de Moinesse pour IA (t-moines.tpa)
+- [7000-7010-7020-7030] Avatars de Moinesse pour IA (t-moines.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_moinesse_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Variables tutu : ajout de nouvelles variables pour éviter d'écraser des fichiers de BG et de BG2 ayant le même nom.
+    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia_townie_curst_female_pst%* " et " *%ia_townie_curst_male_pst%* " pour patcher les fichiers selon le jeu.
     - Intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
     - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
-
+- [8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs (t-bg1anims.tpa)
   - [9000] Correction des références des créatures dans les cartes ()
     - Dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
 

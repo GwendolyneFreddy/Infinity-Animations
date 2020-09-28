@@ -894,12 +894,13 @@ This component corrects changed creature animations in area files for easier ref
     - Integrated <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red.
     - Externalized random seed in a new library ("*gw_random.tpp*").
-
-  - [7000-7010-7020-7030] Moinesse's Avatars for IA (t-moines.tpa)
+- [7000-7010-7020-7030] Moinesse's Avatars for IA (t-moines.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_moinesse_anim_arrays.tph*" library) for easier maintenance.
+    - Tutu variables: added new variables to avoid overwriting BG and BG2 files having the same names.
+    - EE games compatibility: used new "*%ia_townie_curst_female_pst%*" and "*%ia_townie_curst_male_pst%*" to patch files according to the game.
     - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
     - Externalized random seed in a new library ("*gw_random.tpp*").
-
+- [8000-8010-8020-8030] G1 Animations for NPCs (t-bg1anims.tpa)
   - [9000] Fix Area Creature References ()
     - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
 

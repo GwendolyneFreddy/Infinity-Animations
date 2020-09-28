@@ -1,0 +1,1428 @@
+/* ======================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                *
+ *           A R R A Y S    ( T A B L E S )    :    M O I N E S S ' S   A V A T A R S   f o r   I A   C O M P O N E N T   ( 7000-7010-7020-7030 )          *
+ *                                                                                                                                                         *
+ *               Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) used by t-moines.tpa WeiDU routine.              *
+ *                                                                                                                                                         *
+ *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                      *
+ *                                                                                                                                                         *
+ * ======================================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                      *
+ * -----------------------------------                                                                                                                     *
+ *  - GW_moinesse_barbarian_male_human    :   LISTS vanilla and modded Male Human Barbarians needing to be patched.                       => line #   33   *
+ *                                            LISTE les barbares humains du jeu et de mods nécessitant d'être modifiés.                                    *
+ *  - GW_moinesse_druid_female_human      :   LISTS vanilla and modded Female Human Druids needing to be patched.                         => line #   77   *
+ *                                            LISTE les druidesses humaines du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_moinesse_fighter_female_human    :   LISTS vanilla and modded Female Human Fighters needing to be patched.                       => line #  120   *
+ *                                            LISTE les guerrières humaines du jeu et de mods nécessitant d'être modifiées.                                *
+ *  - GW_moinesse_mage_female_elf         :   LISTS vanilla and modded Female Elf Mages needing to be patched.                            => line #  437   *
+ *                                            LISTE les magiciennes elfes du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_moinesse_mage_female_human       :   LISTS vanilla and modded Female Human Mages needing to be patched.                          => line #  607   *
+ *                                            LISTE les magiciennes humaines du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_moinesse_thief_female_human      :   LISTS some vanilla and modded Female Human Thieves needing to be patched.                   => line #  961   *
+ *                                            LISTE les voleuses humaines du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_angelo_ninja_male_human          :   LISTS vanilla and modded Female Male Human Ninjas needing to be patched.                    => line # 1143   *
+ *                                            LISTE les ninjas humains du jeu et de mods nécessitant d'être modifiée.                                      *
+ *  - GW_moinesse_ninja_male_human        :   LISTS vanilla and modded Male Human Assassins needing to be patched.                        => line # 1163   *
+ *                                            LISTE les assassins humains du jeu et de mods nécessitant d'être modifiée.                                   *
+ *  - GW_moinesse_vampire                 :   LISTS vanilla and modded Male Vampires needing to be patched.                               => line # 1324   *
+ *                                            LISTE les vampires hommes du jeu et de mods nécessitant d'être iées.                                         *
+ * ======================================================================================================================================================= */
+
+/* ================================================================================================================ *
+ *  ARRAY GW_moinesse_barbarian_male_human : LISTS vanilla and modded Male Human Barbarians needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------------- *
+ *  Male Barbarians get the moinesse_barbarian_male_human animation.                                                *
+ * ================================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_moinesse_barbarian_male_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_barbarian_male_human BEGIN
+
+// BG2
+// ---
+berser02                => 1	// Berserk Warrior
+berser03                => 1	// id.
+bersersu	            => 1	// id.
+
+// Bonehill
+// --------
+bhberser                => 1	// Berserk Warrior
+
+// Improved Battles
+// ----------------
+b#knit03                => 1	// Bersis
+
+// RoT
+// ---
+beogorn                 => 1	// Beogorn
+ulgarth                 => 1	// Ulgarth
+
+// Revised Forgotten Wars Item Pack
+// --------------------------------
+fwmisc03                => 1	// Berserk Warrior
+
+// The Magnificient Magic Store
+// ----------------------------
+tzshok01                => 1	// Ardol
+
+// TS
+// --
+bknight                 => 1	// Berserk Warrior
+
+END
+
+
+/* ============================================================================================================ *
+ *  ARRAY GW_moinesse_druid_female_human : LISTS vanilla and modded Female Human Druids needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------ *
+ *  Female Human Druids get the moinesse_druid_female_human animation.                                          *
+ * ============================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_moinesse_druid_female_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_druid_female_human BEGIN
+
+// BG2
+// ---
+hgnya01                 => 1	// Nyalee
+pardru                  => 1	// Sorsha
+
+// BG1 NPC
+// -------
+x#mareth                => 1	// Maretha
+
+// BP
+// --
+gbene02d                => 1	// bp/gbenc/gbene02d.cre
+
+// Dark Horizons
+// -------------
+cm3a2100                => 1	// Selene
+cmdru01                 => 1	// Miranda the Witch
+
+// EMaD
+// ----
+clfnua                  => 1	// Nua
+
+// Food and Herbal Mod
+// -------------------
+cmlstr1                 => 1	// Belladonna*/
+
+// Solaufein Romance
+// -----------------
+solae5                  => 1	// Ylekilnu, Eclipse Druid
+
+END
+
+
+/* ================================================================================================================ *
+ *  ARRAY GW_moinesse_fighter_female_human : LISTS vanilla and modded Female Human Fighters needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------------- *
+ *  Female Human Fighters get the moinesse_fighter_female_human animation.                                          *
+ * ================================================================================================================ */
+
+ACTION_CLEAR_ARRAY GW_moinesse_fighter_female_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_fighter_female_human BEGIN
+
+// BG
+// --
+"%utu_var%claird"                => 1	// Clair De'Lain
+"%utu_var%crew2"                 => 1	// Crewmate
+"%utu_var%crew3"                 => 1	// id.
+"%utu_var%crew6"                 => 1	// id.
+"%utu_var%cultt3"                => 1	// Cult Assassin
+"%utu_var%gerde"                 => 1	// Gerde
+"%utu_var%joia"                  => 1	// Joia
+"%utu_var%kirian"                => 1	// Kirian
+"%utu_var%knight5"               => 1	// Ghost Knight
+"%utu_var%laurel"                => 1	// Laurel
+"%utu_var%leaggu2"               => 1	// Merchants' League Counting House Guard
+"%utu_var%leaggu3"               => 1	// id.
+"%tutu_scriptbg%sendai%var_eet%" => 1	// Sendai
+"%utu_var%tamah"                 => 1	// Statue
+
+// BG2
+// ---
+amcst03                 => 1	// Mercenary
+ammerc04                => 1	// id.
+ar18arch                => 1	// Archer
+barsail2                => 1	// Sailor
+bounha03                => 1	// Bounty Hunter
+bsailor3                => 1	// Sailor
+chtaz02                 => 1	// Tamoko
+clrani01                => 1	// Rania
+elotte                  => 1	// Squire Elotte
+ffcust06                => 1	// Belle
+garkid01                => 1	// Iltha
+gorsta05                => 1	// Statue
+gromg03                 => 1	// Il-Khan Soldier
+gromg04                 => 1	// id.
+gromg10                 => 1	// Berena Elkan
+gromg11                 => 1	// Il-Khan Soldier
+gromg12                 => 1	// id.
+heartg2                 => 1	// Knight of the Order
+hgslv01                 => 1	// Slave Woman
+illasera                => 1	// Illasera
+irlana                  => 1	// Lady Irlana
+kproen05                => 1	// Roenall Soldier
+kpsold02                => 1	// de'Arnise Guard
+kpsold03                => 1	// id.
+kpsold04                => 1	// id.
+kpsold05                => 1	// id.
+kpsold07                => 1	// id.
+latkni02                => 1	// Morning Knight
+leona                   => 1	// Leona
+loveone4                => 1	// Moira
+mgketg02                => 1	// Archer
+mourner8                => 1	// Mourner
+obssol01                => 1	// Reyna
+pirmur01                => 1	// Galvena
+plass02                 => 1	// Assassin
+ppmag01                 => 1	// Pirate Mage
+repthf3                 => 1	// Shadow Thief
+samia                   => 1	// Samia
+sarbha03                => 1	// Asmay Jahag
+scjerlia                => 1	// Jerlia the Ore Merchant
+sguard3                 => 1	// Guard
+shugho01                => 1	// Ghostly Apparition
+spjeag                  => 1	// Jeagger
+talkni02                => 1	// Storm Knight
+tanadv02                => 1	// Adventurer
+tantug02                => 1	// Thug
+trskin01                => 1	// Raissa
+vakg02                  => 1	// Archer
+worker02                => 1	// Laborer
+yarmy01                 => 1	// Fighter
+
+// Ascension
+// ---------
+finilla                 => 1	// Illasera
+
+// Assassinations
+// --------------
+o#crama                 => 1	// Amara
+
+// Auren Aseph for BG2:ToB
+// -----------------------
+arianna                 => 1	// Arianna
+arianna1                => 1	// id.
+
+// Aurora's Shoes and Boots
+// ------------------------
+agaurora                => 1	// Aurora
+
+// BG1 NPC
+// -------
+x#kaband                => 1	// Caravan Bandit Leader
+x#tqbh2                 => 1	// Leti
+
+// BG1 UB
+// ------
+ubcorian                => 1	// Corianna
+
+// BP
+// --
+gbene02b                => 1	// Berserker
+gbhrep1b                => 1	// Fighter
+ritac1                  => 1	// Ritual Theurgeon
+ritsf1                  => 1	// Chanur, Ritual Shapeshifter
+
+// Bonehill
+// --------
+bhbandt2                => 1	// Bandit
+bhfelwin                => 1	// Felwin
+bhravela                => 1	// Ravella
+
+// CtB
+// ---
+cb640ft2                => 1	// Fighter
+cb640ft3                => 1	// id.
+cb640ft5                => 1	// id.
+cbhredwn                => 1	// Marilyn Haresdown
+cbsended                => 1	// Sendai
+
+// Classic Adventures
+// ------------------
+tcfgiant                => 1	// Fenja
+tciocili                => 1	// Private Iocilin
+tclatkn2                => 1	// Morning Knight
+tcphant1                => 1	// Shield Phantom
+tcsaltca                => 1	// Saltmarsh Captain
+tcstorm                 => 1	// Lady Storm
+tctalkn2                => 1	// Storm Knight
+
+// Dark Horizons
+// -------------
+cm2300a1                => 1	// Caravan Guard
+cm330005                => 1	// Morningmaster
+cm330006                => 1	// id.
+cmnajar4                => 1	// Guard
+cmnajara                => 1	// Najara
+cmosec10                => 1	// Torture Twin
+cmsec21                 => 1	// Lillian Darkwater
+
+// Drizzt Saga
+// -----------
+f_bearfm                => 1	// Bear Tribe Woman
+f_deadwm                => 1	// Dead Woman
+
+// Edwin Romance
+// -------------
+tknight2                => 1	// Thayan Knight
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5door                 => 1	// Lt. Betta
+
+// G3 Anniversary
+// --------------
+g3moniq                 => 1	// Monique
+
+// Improved Battles
+// ----------------
+b#roen06                => 1	// Roenall Elite
+b#roen07                => 1	// id.
+b#tamoko                => 1	// Tamoko
+
+// Kelsey NPC
+// ----------
+j#falpal                => 1	// Fallen Paladin
+
+// Kido (The Mod for the Wicked)
+// -----------------------------
+mwkichw                 => 1	// Martha
+
+// Malthis, the swashbuckler!
+// -------------------------
+msold02                 => 1	// Mercenary
+msold03                 => 1	// id.
+msold04                 => 1	// id.
+msold05                 => 1	// id.
+
+// NEJ
+// ---
+cknight                 => 1	// Cristiana Knight
+niellit                 => 1	// Niellit
+xangiber                => 1	// Fighter
+
+// NTotSC
+// ------
+ntkamira                => 1	// Kamira
+ntyness                 => 1	// Yness
+
+// Planar Sphere
+// -------------
+pshelm03                => 1	// Warrior of Helm
+pskord02                => 1	// Knight of the Order
+pspal02                 => 1	// Paladin of the Radiant Heart
+pspal03                 => 1	// id.
+pspal04                 => 1	// id.
+
+// Quest Pack
+// ----------
+j#im8to2                => 1	// Torturer
+j#im8tor                => 1	// id.
+sukiss1                 => 1	// Dahlia
+
+// RoT
+// ---
+arfi24                  => 1	// Fighter
+arfi33                  => 1	// id.
+arfi41                  => 1	// id.
+aufi3                   => 1	// id.
+aufi4                   => 1	// id.
+beleth                  => 1	// Beleth
+brefi10                 => 1	// Fighter
+brefi3                  => 1	// id.
+brefi4                  => 1	// id.
+brefi7                  => 1	// Traveler
+brelamor                => 1	// Lamorine
+etta                    => 1	// Etta
+hedwar4                 => 1	// Villager
+hedwar5                 => 1	// id.
+hedwar6                 => 1	// id.
+hedwar7                 => 1	// id.
+jinna                   => 1	// Jinna
+maywife                 => 1	// Helen
+molly2                  => 1	// Molly
+sndgrl1                 => 1	// Sound Gurlie
+sndgrl2                 => 1	// id.
+wuldel1                 => 1	// Delly
+wuldel2                 => 1	// id.
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_anne                 => 1	// Anne
+
+// SoS
+// ---
+cb285ft2                => 1	// Fighter
+cb285ft3                => 1	// id.
+cb285ft5                => 1	// id.
+cb4281st                => 1	// Reyna
+cbshthef                => 1	// Sendai
+
+// Solaufein Romance
+// -----------------
+solae2                  => 1	// Nrodlek, Eclipse Anti-Paladin
+
+// TDD
+// ---
+bgctboss                => 1	// Amroch
+bgsh03                  => 1	// Soldier
+bgsh06                  => 1	// id.
+bgshbad1                => 1	// id.
+bgshbad2                => 1	// id.
+bgshbad3                => 1	// id.
+bgshbad4                => 1	// id.
+bgshbad5                => 1	// id.
+bgshbad6                => 1	// id.
+bgshboss                => 1	// Amroch
+calistel                => 1	// Store Guard
+ddcyric3                => 1	// Larala
+ddsold11                => 1	// Soldier
+dockhlp4                => 1	// Knight of the Order
+phantoma                => 1	// Shield Phantom
+psiwar2                 => 1	// Psion Warrior
+sharfit2                => 1	// Tribal Warrior
+sharfit3                => 1	// Half Quallian Warrior
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05ffa1                => 1	// Flaming Fist Elite
+bw05ffa2                => 1	// id.
+
+// The Lure of the Sirine's Call
+// -----------------------------
+j#pirat5                => 1	// Pirate
+
+// The Magnificient Magic Store
+// ----------------------------
+conjshop                => 1	// Transfer Spirit
+
+// TS
+// --
+lulu                    => 1	// Lulu Hashimoto
+sasaki                  => 1	// Sasaki Hashimoto
+
+// Turnabout
+// ---------
+d0t#alia                => 1	// Alianna
+
+// The Undying
+// -----------
+cmgabby                 => 1	// Raven
+
+// Valen NPC
+// ---------
+valenuh1                => 1	// Buffy
+valenuh2                => 1	// Faith
+valenuh3                => 1	// Kendra
+
+// Vanim NPC
+// ---------
+m#thug4                 => 1	// Egram
+m#thug4x                => 1	// id.
+
+// Unknown mods
+// ------------
+natalk9                 => 1	// 
+
+END
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_moinesse_mage_female_elf : LISTS vanilla and modded Female Elf Mages needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Female Elf Mages get the moinesse_mage_female_elf animation.                                          *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_moinesse_mage_female_elf
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_mage_female_elf BEGIN
+
+// BG
+// --
+"%tutu_var%corpse2"     => 1	// Corpse
+"%tutu_var%cythan"      => 1	// Cythandria
+"%tutu_scriptbg%queen"  => 1	// Queen
+"%tutu_var%shaldr"      => 1	// Shaldrissa
+
+// BG2
+// ---
+arnwar09                => 1	// Shadow Thief
+ffactor2                => 1	// Lunisia
+ffrecep                 => 1	// Receptionist
+flyfgt04                => 1	// Shadow Thief
+gorsta11                => 1	// Statue
+jade1                   => 1	// Lennah
+mage18z                 => 1	// Zallanora
+pcapt02                 => 1	// Prison Captain
+pthral04                => 1	// Thrall
+suendel4                => 1	// Elf Female
+tolmag02                => 1	// Mage
+uddrow19                => 1	// Drow
+uhmer01                 => 1	// Elence Fielding
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#khar16                => 1	// Khollynnus Paac
+z#mage1                 => 1	// Shadow Thief Mage
+z#mage2                 => 1	// id.
+
+// BG1 NPC
+// -------
+x#diala                 => 1	// Dialo
+x#minuw                 => 1	// Minuwiel
+x#siene                 => 1	// Siene
+
+// BP
+// --
+bpsfgtmg                => 1	// Shadow Mage
+bpsthmg1                => 1	// id.
+gbhrep1e                => 1	// Mage
+
+// CtB
+// ---
+cbeledi1                => 1	// Eleanor Ybgir
+cbem25t1                => 1	// Elven Mage
+cbem25t2                => 1	// id.
+cbem25t3                => 1	// id.
+cbybgir1                => 1	// Eleanor Ybgir
+cbmalmge                => 1	// id.
+
+// Classic Adventures
+// ------------------
+tcaquael                => 1	// Aquatic Elf
+tcmarkx1                => 1	// Elf
+tcmarkx2                => 1	// id.
+tcmdsta1                => 1	// Statue
+tcmer04                 => 1	// Elence Fielding
+tcmmgho1                => 1	// Ghost
+tcmmgho2                => 1	// Reveri
+tcmmgho3                => 1	// Rebecca
+tcmmgho4                => 1	// Regine
+tcwgwom1                => 1	// Hostess
+
+// Dark Horizons
+// -------------
+cmghst01                => 1	// Arch Mage Arias
+cmghst08                => 1	// Arch Mage Natas
+cmsec12c                => 1	// Section Operative
+cmsec12d                => 1	// id.
+
+// DSotSC
+// ------
+dsgilian                => 1	// Gillian Ghastkill
+dsjabb                  => 1	// Jabress Xaendrassa Auvryndar
+
+// EMaD
+// ----
+clfjoan                 => 1	// Joaen
+
+// G3 Anniversary
+// --------------
+g3bev                   => 1	// Lady Bev
+g3g1208                 => 1	// Number Eight
+
+// Gavin for BG
+// ------------
+"b!reed"                => 1	// Reed
+"b!valer"               => 1	// Valeria
+
+// Imnesvale
+// ---------
+dubnd2                  => 1	// Mage
+
+// Improved Asylum
+// ---------------
+r#drus01                => 1	// Drusilia
+
+// Keto NPC
+// --------
+pgalesis                => 1	// Alesis
+pgepipho                => 1	// Epiphone
+pgtewes                 => 1	// Tewes
+
+// Nathaniel NPC
+// -------------
+fhmayon                 => 1	// Mayona
+
+// Neh'taniel
+// ----------
+sk#jadis                => 1	// Jadis
+
+// NEJ
+// ---
+leinamum                => 1	// Mourwyn Katuron
+tuchail                 => 1	// Chaileun Kal-Vu’Ryi
+tuench                  => 1	// Sharia
+
+// Planar Sphere
+// -------------
+psapp06a                => 1	// Apprentice
+psapp06b                => 1	// id.
+psapp06c                => 1	// id.
+psapp06d                => 1	// id.
+psapp07a                => 1	// id.
+psapp07b                => 1	// id.
+psapp07c                => 1	// id.
+pstest01                => 1	// id.
+
+// RoT
+// ---
+arenama2                => 1	// Veldrin
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_reb                  => 1	// Rebecca
+
+// SoS
+// ---
+cbsbw272                => 1	// Challot
+
+// TDD
+// ---
+alust01                 => 1	// Alustriel
+alust02                 => 1	// id.
+alust03                 => 1	// id.
+
+// Xan for BG2
+// -----------
+o#ezara                 => 1	// Ezara
+o#nailyn                => 1	// Nailyn
+o#ruavel                => 1	// Ruavel
+o#siene                 => 1	// Siene
+
+// Unknown mods
+// ------------
+dw#queen                => 1	// ???
+
+END
+
+
+/* ========================================================================================================== *
+ *  ARRAY GW_moinesse_mage_female_human : LISTS vanilla and modded Female Human Mages needing to be patched.  *
+ * ---------------------------------------------------------------------------------------------------------- *
+ *  Female Human Mages get the moinesse_mage_female_human animation.                                          *
+ * ========================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_moinesse_mage_female_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_mage_female_human BEGIN
+
+// BG
+// --
+"%tutu_var%arkush"      => 1	// Arkushule
+"%tutu_var%bentha"      => 1	// Bentha
+"%tutu_var%brielb"      => 1	// Brielbara
+"%tutu_var%carsa"       => 1	// Carsa
+"%tutu_var%daese"       => 1	// Daese
+"%tutu_var%delorn"      => 1	// Delorna
+"%tutu_var%diana"       => 1	// Diana
+"%tutu_var%hareis"      => 1	// Hareishan
+"%tutu_var%helsha"      => 1	// Helshara
+"%tutu_var%ithmee"      => 1	// Ithmeera
+"%tutu_var%jemby"       => 1	// Jemby
+"%tutu_var%kaless"      => 1	// Kalessia
+"%tutu_var%lasala"      => 1	// Lasala
+"%tutu_var%liia"        => 1	// Liia Jannath
+"%tutu_var%natash"      => 1	// Natasha
+"%tutu_var%nemphr"      => 1	// Nemphre
+"%tutu_scriptp%heoarch" => 1	// Phoenix Guard
+"%tutu_var%phlydi"      => 1	// Phlydia
+"%tutu_var%phlydi2"     => 1	// id.
+"%tutu_var%phlydi3"     => 1	// id.
+"%tutu_var%tracea"      => 1	// Tracea Carol
+"%tutu_var%vayya"       => 1	// Vay-ya
+
+// BG2
+// ---
+bdturm03                => 1	// Turmish Sorceress
+cowenf3                 => 1	// Cowled Enforcer
+cowenf4                 => 1	// id.
+cragmoon                => 1	// Mrs. Cragmoon
+cutammag                => 1	// Mage
+daelf                   => 1	// Elven Mage
+daelf2                  => 1	// id.
+deadb02                 => 1	// Adventurer
+dgmag01                 => 1	// Mage
+fsmage01                => 1	// id.
+fsmage02                => 1	// id.
+fsmage03                => 1	// id.
+fsmage04                => 1	// id.
+gromg05                 => 1	// Il-Khan Battle Mage
+hllayen                 => 1	// Layene
+illasera                => 1	// Illasera
+irethf05                => 1	// Assassin
+ishthf02                => 1	// id.
+loveone5                => 1	// Rowyn
+magcle20                => 1	// Mage
+mage10a                 => 1	// Zyntris
+mage10b                 => 1	// id.
+mage10c                 => 1	// id.
+mage10d                 => 1	// id.
+mage11                  => 1	// id.
+mage14a                 => 1	// id.
+mage14b                 => 1	// id.
+mage14c                 => 1	// id.
+mage14m                 => 1	// id.
+mage16a                 => 1	// id.
+mage16b                 => 1	// id.
+mage16c                 => 1	// Cowled Wizard
+mage16m                 => 1	// Zyntris
+mage18a                 => 1	// Cowled Wizard
+mage18b                 => 1	// Zyntris
+mage18c                 => 1	// id.
+mage18d                 => 1	// id.
+mage18e                 => 1	// id.
+mage18y                 => 1	// id.
+mage6a                  => 1	// id.
+mage6b                  => 1	// id.
+mage6c                  => 1	// id.
+mage8a                  => 1	// id.
+mage8b                  => 1	// id.
+mage8c                  => 1	// id.
+magetest                => 1	// Mage
+mel01                   => 1	// Melissan
+meliss01                => 1	// id.
+mgappr03                => 1	// Nara
+mgkhol01                => 1	// Khollynnus Paac
+ppaph2                  => 1	// Aphril
+ppaphril                => 1	// id.
+pthral02                => 1	// Thrall
+reband04                => 1	// Bandit
+remage01                => 1	// Slaver Wizard
+remage02                => 1	// id.
+rigen02                 => 1	// Tamorlin
+rumar01                 => 1	// Umar
+sargrd06                => 1	// Mage
+shugmg01                => 1	// Vigil Knight
+tanwiz02                => 1	// Mage
+tiana                   => 1	// Tiana
+trcar02                 => 1	// Salahee
+trcut05                 => 1	// Lady Lilith Lurraxol
+trfued01                => 1	// id.
+xappren2                => 1	// Sanasha
+yaga02                  => 1	// Lieutenant Mage
+ysmage02                => 1	// Yaga-Shura Mage
+
+// Assassinations
+// --------------
+o#lynn                  => 1	// Lynn
+
+// Auren Aseph for BG2:ToB
+// -----------------------
+anna                    => 1	// Arianna
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#cw16                  => 1	// Cowled Wizard
+
+// BP
+// --
+bpdrumg1                => 1	// Mage
+gbband1d                => 1	// Bandit
+gbene02f                => 1	// Conjurer
+
+// Bonehill
+// --------
+bhandre                 => 1	// Armax
+bharmax                 => 1	// Mayor Arrness
+bhbeshka                => 1	// Beshkar
+bhholga                 => 1	// Holga
+bhlydia                 => 1	// Lydia
+bhohlatt                => 1	// Ohlatta
+bhphylli                => 1	// Phyllis
+
+// CtB
+// ---
+cb576wiz                => 1	// Mage
+cbavrvld                => 1	// Angry Villager
+cbavrvlj                => 1	// id.
+cbc8ctm2                => 1	// Cult Mage
+cblslnda                => 1	// Lawantha Silendia
+cbmystp2                => 1	// Priestess of Mystra
+cbpheoah                => 1	// Phoenix Guard
+cbphytch                => 1	// Phlydia
+cbp1act3                => 1	// Jhessail
+
+// Classic Adventures
+// ------------------
+sp1101p2                => 1	// Protector
+tcajaks                 => 1	// Ajakstu
+tcfusci                 => 1	// Fuscienne
+tclasera                => 1	// Lasera
+tclataco                => 1	// Acolyte
+tclavin                 => 1	// Lavinia
+tclovpr2                => 1	// Maiden of Pain
+tcmedus                 => 1	// Medusa
+tcporph8                => 1	// Porphyria
+tcsharwy                => 1	// Sharwyn
+tcslmg02                => 1	// Slaver Wizard
+tcspgh1                 => 1	// Lady Argenta's Ghost
+
+// Cloakwood Squares
+// -----------------
+cwstia                  => 1	// Tiana
+
+// Dark Horizons
+// -------------
+cm01a514                => 1	// Maria Darkblade
+cmmystr                 => 1	// Ratava Artsym
+cmrwiz02                => 1	// Erica
+cmsec03                 => 1	// Madeline
+
+// Edwin Romance
+// -------------
+elvira                  => 1	// Elvira
+redw3                   => 1	// Ekaterina Drosor
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5wiz                  => 1	// Militia Wizard
+
+// G3 Anniversary
+// --------------
+g3g1203                 => 1	// Number Three
+g3g1211                 => 1	// Number Eleven
+
+// Imnesvale
+// ---------
+dumaia                  => 1	// Maia
+
+// Improved Battles
+// ----------------
+b#kiswiz                => 1	// Mage
+
+// Kelsey NPC
+// ----------
+j#ceara                 => 1	// Ceara
+
+// Kiara-Zaiya
+// -----------
+c6keria                 => 1	// Keria
+
+// Kido (The Mod for the Wicked)
+// -----------------------------
+mwkichm                 => 1	// Tienna
+
+// NEJ
+// ---
+barkeep                 => 1	// Grisella
+brial                   => 1	// Brial
+egenia                  => 1	// Mother Egenia
+kharesse                => 1	// Kharesse
+laria                   => 1	// Laria
+lhillias                => 1	// Lhillias
+presio                  => 1	// Presio
+pressapp                => 1	// Presio‘s Apprentice
+tertia                  => 1	// Tertia
+tuayana                 => 1	// Ayana
+tuconj                  => 1	// Ghiala
+tufire                  => 1	// Genevra
+tumage5                 => 1	// Kirine
+tumagef                 => 1	// Mage
+tuzeira                 => 1	// Zeira
+vrielle                 => 1	// Vrielle
+
+// NTotSC
+// ------
+ntdxter                 => 1	// Sister A Little
+
+// Planar Sphere
+// -------------
+psadapp3                => 1	// Apprentice
+psadapp4                => 1	// id.
+psapp03                 => 1	// id.
+psapp05                 => 1	// id.
+psinch                  => 1	// Inchantra
+pstest04                => 1	// Apprentice
+
+// Quest Pack
+// ----------
+d0magcle                => 1	// Mage
+
+// RoT
+// ---
+alenna                  => 1	// Alenna
+batmage2                => 1	// Battle Mage
+arenama4                => 1	// Yvonne
+arlaxma3                => 1	// Mage
+arlaxma4                => 1	// id.
+eleana                  => 1	// Eleana
+eleana2                 => 1	// id.
+eleana3                 => 1	// id.
+eranda                  => 1	// Eranda
+eranda2                 => 1	// id.
+eranda3                 => 1	// id.
+ermag1                  => 1	// Castle Mage
+ermag3                  => 1	// id.
+maralda                 => 1	// Maralda
+mirlanda                => 1	// Mirlanda
+oenmage1                => 1	// Mage
+oenmage3                => 1	// Battle Mage
+olmmage                 => 1	// id.
+olmmage2                => 1	// id.
+talmage1                => 1	// Battle Mage
+talmage2                => 1	// id.
+tenmage3                => 1	// Castle Mage
+tenmage1                => 1	// Mage
+
+// Rogue Rebalancing
+// -----------------
+rr#seli                 => 1	// Selina
+
+// Romantic Encounters for BG2
+// ---------------------------
+re_chand                => 1	// Chandra
+
+// Saerileth
+// ---------
+nscom005                => 1	// Sigil Commoner
+
+// SoS
+// ---
+cb4307mg                => 1	// Alduvar Snowbrand
+cbtbgpot                => 1	// Potencius
+cbtbgpt1                => 1	// id.
+cbtbgtd1                => 1	// Te Elle
+
+// Shards of Ice
+// -------------
+kjobo                   => 1	// Kjobo Pansyflake
+
+// Stratagems
+// ----------
+dw#remg1                => 1	// Slaver Wizard
+dw#remg2                => 1	// Zyntris
+dw#remg3                => 1	// id.
+dw#rnlr4                => 1	// Bandit
+dw#thr01                => 1	// Thrall Fighter
+dw#thr02                => 1	// id.
+
+// The Bigg Quest Pack
+// -------------------
+tb#lotrw                => 1	// Cowled Enforcer
+
+// TDD
+// ---
+assagrd1                => 1	// Kalvassa Guard
+assagrd2                => 1	// id.
+dariogr1                => 1	// Assassin Mage
+dd1700wi                => 1	// Slurice
+ddmary                  => 1	// Mary Magus
+phlydia                 => 1	// Phlydia
+riatamne                => 1	// Myrin
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05lind                => 1	// High Sorceress Linda
+bw05moni                => 1	// Monica
+bw05octa                => 1	// High Sorceress Octavia
+bw05petr                => 1	// High Sorceress Petrarca
+
+// The Jerry Zinger Show
+// ---------------------
+jzcrwdf3                => 1	// Audience
+jztiana                 => 1	// Tiana
+
+// TS
+// --
+najoki                  => 1	// Najoki Nakanishi
+najokia                 => 1	// id.
+
+// UB
+// --
+wwelle                  => 1	// Eleanya
+
+// Vampire tales
+// -------------
+cmgstor1                => 1	// Ratava Sartsym
+
+// Vanim NPC
+m#timi15                => 1	// Timalia
+timi15                  => 1	// id.
+
+// Xan for BG2
+// -----------
+o#selia                 => 1	// Selia
+
+// Unknown mods
+// ------------
+queen                   => 1	// TS Queen
+
+END
+
+
+/* ========================================================================================================================================= *
+ *  ARRAY GW_moinesse_thief_female_human : LISTS some vanilla and modded Female Human Thieves needing to be patched.                         *
+ * ----------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Female Human Thieves get the moinesse_thief_female_human animation (unless they've already received the female Curst townie animation).  *
+ * ========================================================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_moinesse_thief_female_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_thief_female_human BEGIN
+
+// BG
+// --
+"%tutu_var%alyth"       => 1	// "Lady" Alyth Elendara
+"%tutu_var%blackl"      => 1	// Black Lily
+"%tutu_var%crew2"       => 1	// Crewmate
+"%tutu_var%cultt4"      => 1	// Cult Archer
+"%tutu_var%desret"      => 1	// Desreta
+"%tutu_var%dhania"      => 1	// Dhanial
+"%tutu_var%jalant"      => 1	// Jalantha Mistmyr
+"%tutu_var%krysti"      => 1	// Krystin
+"%tutu_var%maneir"      => 1	// Maneira
+"%tutu_var%nila"        => 1	// Nila
+"%tutu_var%silenc"      => 1	// Silence
+"%tutu_var%silke"       => 1	// Silke
+"%tutu_var%telka"       => 1	// Telka
+
+// BG2
+// ---
+amasana                 => 1	// Asana Haraad
+bmthief                 => 1	// Black Market Thief
+c6alyra                 => 1	// Alyra
+c6natas                 => 1	// Natas
+crothf02                => 1	// Aulava
+genth02                 => 1	// Thief
+hlketta                 => 1	// Ketta
+hlketta2                => 1	// id.
+mugger1                 => 1	// Shady Character
+rngwlf01                => 1	// Anath
+shthass1                => 1	// Ama
+thief3                  => 1	// Shadow Thief
+vvdead3                 => 1	// id.
+vvshad3                 => 1	// id.
+vvshad7                 => 1	// id.
+yaga05                  => 1	// Lieutenant Thief
+
+// Alassa NPC
+// ----------
+d0alas25                => 1	// Alassa
+d0alassa                => 1	// id.
+
+// Angelo NPC
+// ----------
+adsuu                   => 1	// Suu
+adsuu25                 => 1	// id.
+
+// BP
+// --
+bpthief3                => 1	// Shadow Thief
+gbene01e                => 1	// Assassin
+
+// CtB
+// ---
+cbhld0w4                => 1	// Peasant
+
+// Chloe
+// -----
+abbyhucr                => 1	// Abagail
+abbyvacr                => 1	// id.
+
+// CoM Encounters
+// --------------
+ucmgth02                => 1	// Black Lilli Darkstar
+
+// Classic Adventures
+// ------------------
+tcalyth                 => 1	// Alyth
+tcduch                  => 1	// Duchess
+
+// Dark Horizons
+// -------------
+cmbou06                 => 1	// Isolde
+cmbou10                 => 1	// Zara
+cmrsec02                => 1	// Nikita
+cmsec02                 => 1	// id.
+cmsec07                 => 1	// Andrea
+cmsec16                 => 1	// Section Operative
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5thf1                 => 1	// Myriza
+ts5thf3                 => 1	// Genja
+ts5thf5                 => 1	// Issa Kealn
+tsama1                  => 1	// Ama
+tsblackl                => 1	// Black Lily
+tssmugf                 => 1	// Rogue
+
+// Kelsey
+// ------
+j#kasset                => 1	// Kassetha
+
+// Kido (The Mod for the Wicked)
+// -----------------------------
+mwkicht                 => 1	// Clara
+
+// Longer Road
+// -----------
+mirriam                 => 1	// Mirriam
+
+// The Lure of the Sirine's Call
+// -----------------------------
+j#pirat2                => 1	// Pirate
+
+// NTotSC
+// ------
+ntbalen                 => 1	// Balen
+ntmariel                => 1	// Mariel
+
+// RoT
+// ---
+arlthif4                => 1	// Thief
+arlthif5                => 1	// id.
+castre6                 => 1	// Mercenary
+cultbe10                => 1	// Cult Member
+delei                   => 1	// Delei
+jenavi                  => 1	// Jenavieve
+mythif2                 => 1	// Thief
+mythif4                 => 1	// id.
+thjail2                 => 1	// id.
+zemthif5                => 1	// Delane
+zemthif9                => 1	// id.
+
+// Rupert
+// ------
+jl#rupr4                => 1	// Rupert
+
+// SoS
+// ---
+cbtbgmer                => 1	// Mercurial
+cbtbgmr1                => 1	// id.
+
+// Stratagems
+// ----------
+dw#c51                  => 1	// Kaalos
+
+// TDD
+// ---
+ddcyric1                => 1	// Larala
+quadkid3                => 1	// Reno
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05ffan                => 1	// Flaming Fist Elite
+
+// The Luxley Family
+// -----------------
+fhlbrid                 => 1	// Brid
+fhlgen                  => 1	// Genevieve
+fhlw1                   => 1	// Katryna
+fhlw3                   => 1	// Danica
+fhlw4                   => 1	// Erinne
+fhlw5                   => 1	// Serah
+
+// ToB Revisited
+// -------------
+hessa                   => 1	// Bhaalspawn
+
+// Vampire tales
+// -------------
+cmgkali2                => 1	// Lilith
+
+// Zalnoya and the Shadow Thieves
+// ------------------------------
+aj#ass1                 => 1	// Assassin
+aj#ass3                 => 1	// id.
+
+// Unknown mods
+// ------------
+elka9                   => 1	// 
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_angelo_ninja_male_human : LISTS modded Male Human Ninjas needing to be patched.         *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Male Human Ninjas get the moinesse_ninja_male_human animation (Miloch's IA Moinesse Ninja Fix).  *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_angelo_ninja_male_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_angelo_ninja_male_human BEGIN
+
+// Angelo NPC
+// ----------
+adginpac                => 1	// Ginpachi
+adnin01                 => 1	// Master Ninja
+adnin02                 => 1	// id.
+
+END
+
+
+
+/* ========================================================================================================================================================= *
+ *  ARRAY GW_moinesse_ninja_male_human : LISTS vanilla and modded Male Human Assassins needing to be patched.                                                *
+ * --------------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Male Human Assassins get the moinesse_ninja_male_human animation (unless they've already received the male Curst townie or the Shadow thief animation).  *
+ * ========================================================================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_moinesse_ninja_male_human
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_ninja_male_human BEGIN
+
+// BG
+// --
+"%tutu_scriptbg%shank%eet_var%"  => 1	// Shank
+
+// BG2
+// ---
+artemis                 => 1	// Artemis Entreri
+csgayl                  => 1	// Assassin
+csthief1                => 1	// id.
+csthief2                => 1	// id.
+gordeck5                => 1	// id.
+gordeck6                => 1	// id.
+gordeck7                => 1	// id.
+gordeck8                => 1	// id.
+gordeck9                => 1	// id.
+gordecka                => 1	// id.
+hlassa                  => 1	// id.
+irethf03                => 1	// id.
+ishadmt1                => 1	// id.
+ishclo01                => 1	// id.
+ishthf01                => 1	// id.
+ishthf03                => 1	// id.
+mvguard1                => 1	// id.
+plass03                 => 1	// id.
+plass04                 => 1	// id.
+sargrd05                => 1	// Thief
+sargrd09                => 1	// id.
+sarkis01                => 1	// Kiser Jhaeri
+sarkis02                => 1	// Fighter
+sarkis03                => 1	// id.
+sarkis04                => 1	// Kiser Jhaeri
+"%shank_bg2%"           => 1	// Shank
+stass1                  => 1	// Shadow Thief
+tanthf01                => 1	// Rune Assassin
+tobpar01                => 1	// Eler Had
+
+// Assassinations
+// --------------
+o#crgoon                => 1	// Assassin
+
+// AzenMOD
+// -------
+jc_assn                 => 1	// Time Assassin
+
+// Beyond the Law - Kova & Kiyone
+// ------------------------------
+z#assabv                => 1	// Assassin
+z#assas1                => 1	// id.
+z#assas2                => 1	// id.
+z#assas3                => 1	// id.
+
+// BP
+// --
+bpbounty                => 1	// Thief
+gbhrep1a                => 1	// Assassin
+mvguard2                => 1	// id.
+
+// Bonehill
+// --------
+bhbasmar                => 1	// Basmar
+bhgelliu                => 1	// Gellius
+bhguild1                => 1	// Assassin Apprentice
+bhlothar                => 1	// Lothar
+bhphilma                => 1	// Philmar
+bhsangst                => 1	// Sangster
+bhvolcfr                => 1	// Volcifar
+
+// CtB
+// ---
+cb35assn                => 1	// Assassin
+
+// Drizzt Saga
+// -----------
+f_artemi                => 1	// Artemis Entreri
+
+// Edwin Romance
+// -------------
+dekaras                 => 1	// Vadrak Dekaras
+dekaras1                => 1	// id.
+dekaras2                => 1	// id.
+dekaras3                => 1	// id.
+dekaras4                => 1	// id.
+er_love1                => 1	// Dekaras
+
+// Expanded Thief Stronghold
+// -------------------------
+ts5thf2                 => 1	// Keltar
+ts5thf4                 => 1	// Gelt Foldum
+ts5thf6                 => 1	// Hawrath
+
+// Hannah NPC
+// ----------
+haene04                 => 1	// Richard Black-knife
+
+// Improved Battles
+// ----------------
+b#kisthf                => 1	// Thief
+b#knit05                => 1	// Cantaray
+
+// Lester NPC
+// ----------
+kufartem                => 1	// Artemis Entreri
+
+// NEJ
+// ---
+kilhelp1                => 1	// Assassin
+kilhelp2                => 1	// id.
+kilhelp3                => 1	// id.
+vulthief                => 1	// Vulova Assassin
+
+// Quest Pack
+// ----------
+d0night2                => 1	// Night Masks Assassin
+
+// RoT
+// ---
+enter2                  => 1	// Artemis Entreri
+enteri                  => 1	// id.
+enteri2                 => 1	// id.
+enteri3c                => 1	// id.
+enteri5c                => 1	// id.
+enteri6c                => 1	// id.
+enteriss                => 1	// id.
+
+// Rogue Rebalancing
+// -----------------
+rr#vend                 => 1	// Venduris
+rr#vend2                => 1	// id.
+
+// TDD
+// ---
+adario12                => 1	// Adario Kalvaras
+artcave4                => 1	// Artemis Entreri
+artcutx1                => 1	// id.
+dariogr2                => 1	// Assassin Warrior
+dariogr3                => 1	// id.
+dariogr4                => 1	// id.
+dariogr5                => 1	// id.
+ddartem1                => 1	// Artemis Entreri
+ddassa01                => 1	// Assassin of Cyric
+ddassa02                => 1	// id.
+ddblbl01                => 1	// Black Blade Assassin
+enteri01                => 1	// Artemis Entreri
+
+// Zalnoya and the Shadow Thieves
+// ------------------------------
+aj#ass2                 => 1	// Assassin
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_moinesse_vampire : LISTS vanilla and modded Male Vampires needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Male Vampires get the moinesse_vampire animation.                                          *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_moinesse_vampire animation
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_vampire animation BEGIN
+
+// BG2
+// ---
+bodvam01                => 1	// Durst
+bodvam02                => 1	// Gellal
+c6bguard                => 1	// Guard
+c6vamp01                => 1	// Fledgling Vampire
+c6vflm01                => 1	// id.
+cohnta                  => 1	// Cohn Ta'glaen
+dpmon03                 => 1	// Vampire
+dvampfl                 => 1	// id.
+ivamp01                 => 1	// id.
+lassal                  => 1	// Lassal
+lassal02                => 1	// id.
+nevm4                   => 1	// Vampyre
+ppjoye                  => 1	// Dace Sontan
+ppjoye2                 => 1	// Dace Apparition
+sarvam02                => 1	// Vampire
+vamflm01                => 1	// Fledgling Vampire
+vampamb                 => 1	// Vampire
+vampim01                => 1	// id.
+vampire1                => 1	// Ulvaryl
+vampm01                 => 1	// Vampire - Ulvaryl
+vampym01                => 1	// Vampyre
+vvmale1                 => 1	// Vampire
+vvmale2                 => 1	// id.
+vvmale3                 => 1	// id.
+vvmale4                 => 1	// id.
+vvmale5                 => 1	// id.
+vvmale6                 => 1	// id.
+vvmale7                 => 1	// id.
+x#lassa                 => 1	// id.
+
+// CtB
+// ---
+cbgrvamp                => 1	// Vampire
+cbmastvp                => 1	// Master Vampire
+cbrncbvp                => 1	// Theo
+cbrncmvp                => 1	// Vernon
+
+// DSotSC
+// ------
+dsvampm                 => 1	// Lord Daerthmac
+
+// Domains of Dread
+// ----------------
+magvamp                 => 1	// Vampiric Mage
+
+// Exnem
+// -----
+xsvampm                 => 1	// Vampire
+
+// Kindrek NPC
+// -----------
+kkcian                  => 1	// Cian
+
+// Malthis, the swashbuckler!
+// -------------------------
+mfinal01                => 1	// Vampyre
+mfinal02                => 1	// id.
+mfinal03                => 1	// id.
+
+// RoT
+// ---
+holyvam                 => 1	// Vampire
+malvamp1                => 1	// id.
+malvamp2                => 1	// id.
+malvamp3                => 1	// id.
+guareye4                => 1	// Guardian of the Eye
+kimberg                 => 1	// Daxziz
+valesh                  => 1	// Valesh
+
+// Rogue Rebalancing
+// -----------------
+rr#vam01                => 1	// Vampire
+
+// Ruad
+// ----
+u#sw1h04                => 1	// Kraka'Tur
+
+// Spellhold Gauntlet
+// ------------------
+z#gvampm                => 1	// Vampire
+
+// Tactics and Stratagems
+// ----------------------
+impbod1                 => 1	//Hazarmaveth
+
+// TDD
+// ---
+vamq1                   => 1	// Vampyre
+
+// TS
+// --
+stonevm                 => 1	// Fledgling Vampire
+
+END

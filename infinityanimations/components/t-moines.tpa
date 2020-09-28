@@ -1,326 +1,335 @@
-/* ================================================================= *
- *  INFINITY ANIMATIONS : Moinesse's Avatars for IA routine routine  *
- * ================================================================= */
+/* ======================================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                                *
+ *                             M O I N E S S ' S   A V A T A R S   f o r   I A   C O M P O N E N T   ( 7 0 0 0 - 7 0 1 0 - 7 0 2 0 - 7 0 3 0 )                             *
+ *                                                                                                                                                                         *
+ * ======================================================================================================================================================================= *
+ *  This component assigns assigns some creatures distinctive Moinesse's animations.                                                                                       *
+ * ======================================================================================================================================================================= *
+ *  change-log:                                                                                                                                                            *
+ *  -----------                                                                                                                                                            *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_moinesse_anim_arrays.tph library) for easier maintenance.                              *
+ *      - Added new tutu variables to avoid overwriting BG and BG2 files having the same names.                                                                            *
+ *      - Externalized random seed in a new library (gw_random.tpp).                                                                                                       *
+ *      - Integrated Miloch's IA Moinesse Ninja Fix, necessary if both Infinity Animations and Angelo are installed (#219).                                                *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
+ *        and used new %ia_townie_curst_female_pst% and %ia_townie_curst_male_pst% to patch files according to the game.                                                   *
+ * ======================================================================================================================================================================= */
 
-RANDOM_SEED null // Initialize random numbers
+/* ------------------------------------------------------------------------------------------------- *
+ *                            CREATURES                                                        line  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Male Human Barbarians get the moinesse_barbarian_male_human animation                    #   52  *
+ *  Female Human Druids get the moinesse_druid_female_human animation                        #   77  *
+ *  Female Human Fighters get the moinesse_fighter_female_human animation                    #  104  *
+ *  Female Elf Mages get the moinesse_mage_female_elf animation                              #  135  *
+ *  Female Human Mages get the moinesse_mage_female_human animation                          #  162  *
+ *  Some Female Human Thieves get the moinesse_thief_female_human animation                  #  189  *
+ *  Male Human Ninjas get the moinesse_ninja_male_human animation                            #  219  *
+ *  Male Human Assassins get the moinesse_ninja_male_human animation                         #  253  *
+ *  Male Vampires get the moinesse_vampire animation                                         #  292  *
+ * ------------------------------------------------------------------------------------------------- */
 
-/* ================================================================= *
- *  Male Barbarians get the moinesse_barbarian_male_human animation  *
- * ================================================================= */
-ACTION_FOR_EACH nb IN ~b#knit03~ ~beogorn~ ~berser02~ ~berser03~ ~bersersu~ ~bhberser~ ~bknight~ ~fwmisc03~ ~tzshok01~ ~ulgarth~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+SILENT
+
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_moinesse_anim_arrays.tph~
+OUTER_SET ia_townie_curst_female_pst = IDS_OF_SYMBOL (animate ~TOWNIE_CURST_FEMALE_PST~)
+OUTER_SET ia_townie_curst_male_pst   = IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE_PST~)
+
+
+/* =========================== *
+ *  Initialize random numbers  *
+ * =========================== */
+ACTION_INCLUDE ~%MOD_FOLDER%/lib/gw_random.tpp~
+RANDOM_SEED null
+
+SILENT
+
+
+/* ======================================================================= *
+ *  Male Human Barbarians get the moinesse_barbarian_male_human animation  *
+ * ======================================================================= */
+ACTION_PHP_EACH GW_moinesse_barbarian_male_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x683d		// Animation ID (moinesse_barbarian_male_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_BARBARIAN_MALE_HUMAN~) // classical 0x683d - EE none for the moment
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_BARBARIAN_MALE_HUMAN~) // original 0x683d - EE depends on installation
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_barbarian_male_human
+
 
 /* =================================================================== *
  *  Female Human Druids get the moinesse_druid_female_human animation  *
  * =================================================================== */
-ACTION_FOR_EACH nb IN ~clfnua~ ~cm3a2100~ ~cmdru01~ ~cmlstr1~ ~gbene02d~ ~hgnya01~ ~pardru~ ~solae5~ ~x#mareth~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_druid_female_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x6845		// Animation ID (moinesse_druid_female_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_DRUID_FEMALE_HUMAN~) // classical 0x6845 - EE none for the moment
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x275 2			// Gender (female)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_DRUID_FEMALE_HUMAN~) // original 0x6845 - EE depends on installation
+				WRITE_BYTE 0x237 2  // Sex (female)
+				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_druid_female_human
+
 
 /* ======================================================================= *
  *  Female Human Fighters get the moinesse_fighter_female_human animation  *
  * ======================================================================= */
-ACTION_FOR_EACH nb IN ~agaurora~ ~amcst03~ ~ammerc04~ ~ar18arch~ ~arfi24~ ~arfi33~ ~arfi41~ ~arianna~ ~arianna1~ ~aufi3~ ~aufi4~ ~b#roen06~ ~b#roen07~ ~b#tamoko~ ~barsail2~ ~beleth~ ~bgctboss~ ~%tbg%sendai~ ~bgsh03~ ~bgsh06~ ~bgshbad1~ ~bgshbad2~ ~bgshbad3~ ~bgshbad4~ ~bgshbad5~ ~bgshbad6~ ~bgshboss~ ~bhbandt2~ ~bhravela~ ~bounha03~ ~brefi10~ ~brefi3~ ~brefi4~ ~brefi7~ ~brelamor~ ~bsailor3~ ~bw05ffa1~ ~bw05ffa2~ ~calistel~ ~cb285ft2~ ~cb285ft3~ ~cb285ft5~ ~cb4281st~ ~cb640ft2~ ~cb640ft3~ ~cb640ft5~ ~cbhredwn~ ~cbsended~ ~cbshthef~ ~chtaz02~ ~cknight~ ~%tsu%claird~ ~clrani01~ ~cm2300a1~ ~cm330005~ ~cm330006~ ~cmgabby~ ~cmnajar4~ ~cmnajara~ ~cmosec10~ ~cmsec21~ ~conjshop~ ~%tsu%crew2~ ~%tsu%crew3~ ~%tsu%crew6~ ~%tsu%cultt3~ ~d0t#alia~ ~ddcyric3~ ~ddsold11~ ~dockhlp4~ ~elotte~ ~etta~ ~f_bearfm~ ~f_deadwm~ ~ffcust06~ ~finilla~ ~g3moniq~ ~garkid01~ ~gbene02b~ ~gbhrep1b~ ~%tsu%gerde~ ~gorsta05~ ~gromg03~ ~gromg04~ ~gromg10~ ~gromg11~ ~gromg12~ ~heartg2~ ~hedwar4~ ~hedwar5~ ~hedwar6~ ~hedwar7~ ~hgslv01~ ~illasera~ ~irlana~ ~j#falpal~ ~j#im8to2~ ~j#im8tor~ ~j#pirat5~ ~jinna~ ~%tsu%joia~ ~%tsu%kirian~ ~%tsu%knight5~ ~kproen05~ ~kpsold02~ ~kpsold03~ ~kpsold04~ ~kpsold05~ ~kpsold07~ ~latkni02~ ~%tsu%laurel~ ~%tsu%leaggu2~ ~%tsu%leaggu3~ ~leona~ ~loveone4~ ~lulu~ ~m#thug4~ ~m#thug4x~ ~maywife~ ~mgketg02~ ~molly2~ ~mourner8~ ~msold02~ ~msold03~ ~msold04~ ~msold05~ ~mwkichw~ ~natalk9~ ~niellit~ ~ntkamira~ ~ntyness~ ~o#crama~ ~obssol01~ ~phantoma~ ~pirmur01~ ~plass02~ ~ppmag01~ ~pshelm03~ ~psiwar2~ ~pskord02~ ~pspal02~ ~pspal03~ ~pspal04~ ~re_anne~ ~repthf3~ ~ritac1~ ~ritsf1~ ~samia~ ~sarbha03~ ~sasaki~ ~scjerlia~ ~sguard3~ ~sharfit2~ ~sharfit3~ ~shugho01~ ~sndgrl1~ ~sndgrl2~ ~solae2~ ~spjeag~ ~sukiss1~ ~talkni02~ ~%tsu%tamah~ ~tanadv02~ ~tantug02~ ~tcfgiant~ ~tciocili~ ~tclatkn2~ ~tcphant1~ ~tcsaltca~ ~tcstorm~ ~tctalkn2~ ~tknight2~ ~trskin01~ ~ts5door~ ~ubcorian~ ~vakg02~ ~valenuh1~ ~valenuh2~ ~valenuh3~ ~worker02~ ~wuldel1~ ~wuldel2~ ~x#kaband~ ~x#tqbh2~ ~xangiber~ ~yarmy01~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_fighter_female_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x6846				// Animation ID (moinesse_fighter_female_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_BARBARIAN_MALE_HUMAN~) // classical 0x683d - EE none for the moment
-				WRITE_BYTE 0x271 1					// General (humanoid)
-				WRITE_BYTE 0x237 2					// Sex (female)
-				PATCH_IF BYTE_AT 0x275 != 6 BEGIN	// If not summoned
-					WRITE_BYTE 0x275 2				// Gender (female)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_FIGHTER_FEMALE_HUMAN~) // original 0x6846 - EE depends on installation
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				WRITE_BYTE 0x237 2      // Sex (female)
+				// If not summoned
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN
+					WRITE_BYTE 0x275 2  // Gender (female)
 				END
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_fighter_female_human
+
 
 /* ============================================================= *
  *  Female Elf Mages get the moinesse_mage_female_elf animation  *
  * ============================================================= */
-ACTION_FOR_EACH nb IN ~alust01~ ~alust02~ ~alust03~ ~arenama2~ ~arnwar09~ ~b!reed~ ~b!valer~ ~%tbg%queen~ ~bhfelwin~ ~bpsfgtmg~ ~bpsthmg1~ ~cbeledi1~ ~cbem25t1~ ~cbem25t2~ ~cbem25t3~ ~cbmalmge~ ~cbsbw272~ ~cbybgir1~ ~clfjoan~ ~cmghst01~ ~cmghst08~ ~cmsec12c~ ~cmsec12d~ ~%tsu%corpse2~ ~%tsu%cythan~ ~dsgilian~ ~dsjabb~ ~dubnd2~ ~dw#queen~ ~ffactor2~ ~ffrecep~ ~fhmayon~ ~flyfgt04~ ~g3bev~ ~g3g1208~ ~gbhrep1e~ ~gorsta11~ ~jade1~ ~leinamum~ ~mage18z~ ~o#ezara~ ~o#nailyn~ ~o#ruavel~ ~o#siene~ ~pcapt02~ ~pgalesis~ ~pgepipho~ ~pgtewes~ ~psapp06a~ ~psapp06b~ ~psapp06c~ ~psapp06d~ ~psapp07a~ ~psapp07b~ ~psapp07c~ ~pstest01~ ~pthral04~ ~r#drus01~ ~re_reb~ ~%tsu%shaldr~ ~sk#jadis~ ~suendel4~ ~tcaquael~ ~tcmarkx1~ ~tcmarkx2~ ~tcmdsta1~ ~tcmer04~ ~tcmmgho1~ ~tcmmgho2~ ~tcmmgho3~ ~tcmmgho4~ ~tcwgwom1~ ~tolmag02~ ~tuchail~ ~tuench~ ~uddrow19~ ~uhmer01~ ~x#diala~ ~x#minuw~ ~x#siene~ ~z#khar16~ ~z#mage1~ ~z#mage2~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_mage_female_elf AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x6841		// Animation ID (moinesse_mage_female_elf)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_MAGE_FEMALE_ELF~) // classical 0x6841 - EE none for the moment
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x275 2			// Gender (female)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_MAGE_FEMALE_ELF~) // original 0x6841 - EE depends on installation
+				WRITE_BYTE 0x237 2  // Sex (female)
+				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_mage_female_elf
+
 
 /* ================================================================= *
  *  Female Human Mages get the moinesse_mage_female_human animation  *
  * ================================================================= */
-ACTION_FOR_EACH nb IN ~alenna~ ~anna~ ~arenama4~ ~%tsu%arkush~ ~arlaxma3~ ~arlaxma4~ ~assagrd1~ ~assagrd2~ ~b#kiswiz~ ~barkeep~ ~batmage2~ ~bdturm03~ ~%tsu%bentha~ ~bhandre~ ~bharmax~ ~bhbeshka~ ~bhholga~ ~bhlydia~ ~bhohlatt~ ~bhphylli~ ~bpdrumg1~ ~brial~ ~%tsu%brielb~ ~bw05lind~ ~bw05moni~ ~bw05octa~ ~bw05petr~ ~c6keria~ ~%tsu%carsa~ ~cb4307mg~ ~cb576wiz~ ~cbavrvld~ ~cbavrvlj~ ~cbc8ctm2~ ~cblslnda~ ~cbmystp2~ ~cbp1act3~ ~cbpheoah~ ~cbphytch~ ~cbtbgpot~ ~cbtbgpt1~ ~cbtbgtd1~ ~cm01a514~ ~cmgstor1~ ~cmmystr~ ~cmrwiz02~ ~cmsec03~ ~cowenf3~ ~cowenf4~ ~cragmoon~ ~cutammag~ ~cwstia~ ~d0magcle~ ~daelf~ ~daelf2~ ~%tsu%daese~ ~dariogr1~ ~dd1700wi~ ~ddmary~ ~deadb02~ ~%tsu%delorn~ ~dgmag01~ ~%tsu%diana~ ~dumaia~ ~dw#remg1~ ~dw#remg2~ ~dw#remg3~ ~dw#rnlr4~ ~dw#thr01~ ~dw#thr02~ ~egenia~ ~eleana~ ~eleana2~ ~eleana3~ ~elvira~ ~eranda~ ~eranda2~ ~eranda3~ ~ermag1~ ~ermag3~ ~fsmage01~ ~fsmage02~ ~fsmage03~ ~fsmage04~ ~g3g1203~ ~g3g1211~ ~gbband1d~ ~gbene02f~ ~gromg05~ ~%tsu%hareis~ ~%tsu%helsha~ ~hllayen~ ~illasera~ ~irethf05~ ~ishthf02~ ~%tsu%ithmee~ ~j#ceara~ ~%tsu%jemby~ ~jzcrwdf3~ ~jztiana~ ~%tsu%kaless~ ~kharesse~ ~kjobo~ ~laria~ ~%tsu%lasala~ ~lhillias~ ~%tsu%liia~ ~loveone5~ ~m#timi15~ ~magcle20~ ~mage10a~ ~mage10b~ ~mage10c~ ~mage10d~ ~mage11~ ~mage14a~ ~mage14b~ ~mage14c~ ~mage14m~ ~mage16a~ ~mage16b~ ~mage16c~ ~mage16m~ ~mage18a~ ~mage18b~ ~mage18c~ ~mage18d~ ~mage18e~ ~mage18y~ ~mage6a~ ~mage6b~ ~mage6c~ ~mage8a~ ~mage8b~ ~mage8c~ ~magetest~ ~maralda~ ~mel01~ ~meliss01~ ~mgappr03~ ~mgkhol01~ ~mirlanda~ ~mwkichm~ ~najoki~ ~najokia~ ~%tsu%natash~ ~%tsu%nemphr~ ~nscom005~ ~ntdxter~ ~o#lynn~ ~o#selia~ ~oenmage1~ ~oenmage3~ ~olmmage~ ~olmmage2~ ~%tsp%heoarch~ ~%tsu%phlydi~ ~%tsu%phlydi2~ ~%tsu%phlydi3~ ~phlydia~ ~ppaph2~ ~ppaphril~ ~presio~ ~pressapp~ ~psadapp3~ ~psadapp4~ ~psapp03~ ~psapp05~ ~psinch~ ~pstest04~ ~pthral02~ ~queen~ ~re_chand~ ~reband04~ ~redw3~ ~remage01~ ~remage02~ ~riatamne~ ~rigen02~ ~rr#seli~ ~rumar01~ ~sargrd06~ ~shugmg01~ ~sp1101p2~ ~talmage1~ ~talmage2~ ~tanwiz02~ ~tb#lotrw~ ~tcajaks~ ~tcfusci~ ~tclasera~ ~tclataco~ ~tclavin~ ~tclovpr2~ ~tcmedus~ ~tcporph8~ ~tcsharwy~ ~tcslmg02~ ~tcspgh1~ ~tenmage1~ ~tenmage3~ ~tertia~ ~tiana~ ~timi15~ ~%tsu%tracea~ ~trcar02~ ~trcut05~ ~trfued01~ ~ts5wiz~ ~tuayana~ ~tuconj~ ~tufire~ ~tumage5~ ~tumagef~ ~tuzeira~ ~%tsu%vayya~ ~vrielle~ ~wwelle~ ~xappren2~ ~yaga02~ ~ysmage02~ ~z#cw16~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_mage_female_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x6847		// Animation ID (moinesse_mage_female_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_MAGE_FEMALE_HUMAN~) // classical 0x6847 - EE none for the moment
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x275 2			// Gender (female)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_MAGE_FEMALE_HUMAN~) // original 0x6847 - EE depends on installation
+				WRITE_BYTE 0x237 2  // Sex (female)
+				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_mage_female_human
+
 
 /* ======================================================================================================================================== *
  *  Female Human Thieves get the moinesse_thief_female_human animation (unless they've already received the female Curst townie animation)  *
  * ======================================================================================================================================== */
-ACTION_FOR_EACH nb IN ~%tsu%alyth~ ~%tsu%blackl~ ~%tsu%crew2~ ~%tsu%cultt4~ ~%tsu%desret~ ~%tsu%dhania~ ~%tsu%jalant~ ~%tsu%krysti~ ~%tsu%maneir~ ~%tsu%nila~ ~%tsu%silenc~ ~%tsu%silke~ ~%tsu%telka~ ~abbyhucr~ ~abbyvacr~ ~adsuu~ ~adsuu25~ ~aj#ass1~ ~aj#ass3~ ~amasana~ ~arlthif4~ ~arlthif5~ ~b!penny~ ~bmthief~ ~bpthief3~ ~bw05ffan~ ~c6alyra~ ~c6natas~ ~castre6~ ~cbhld0w4~ ~cbtbgmer~ ~cbtbgmr1~ ~cmbou06~ ~cmbou10~ ~cmgkali2~ ~cmrsec02~ ~cmsec02~ ~cmsec07~ ~cmsec16~ ~crothf02~ ~cultbe10~ ~d0alas25~ ~d0alassa~ ~ddcyric1~ ~delei~ ~dw#c51~ ~elka9~ ~fhlbrid~ ~fhlgen~ ~fhlw1~ ~fhlw3~ ~fhlw4~ ~fhlw5~ ~gbene01e~ ~genth02~ ~hessa~ ~hlketta~ ~hlketta2~ ~j#kasset~ ~j#pirat2~ ~jenavi~ ~jl#rupr4~ ~mirriam~ ~mugger1~ ~mwkicht~ ~mythif2~ ~mythif4~ ~ntbalen~ ~ntmariel~ ~quadkid3~ ~rngwlf01~ ~shthass1~ ~tcalyth~ ~tcduch~ ~thief3~ ~thjail2~ ~ts5thf1~ ~ts5thf3~ ~ts5thf5~ ~tsama1~ ~tsblackl~ ~tssmugf~ ~ucmgth02~ ~vvdead3~ ~vvshad3~ ~vvshad7~ ~yaga05~ ~zemthif5~ ~zemthif9~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_thief_female_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				PATCH_IF SHORT_AT 0x28 != 0x5d4c BEGIN // If not townie_curst_female
-					WRITE_SHORT 0x28 0x6848	// Animation ID (moinesse_thief_female_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_THIEF_FEMALE_HUMAN~) // classical 0x6848 - EE none for the moment
+				// If not townie_curst_female IDS_OF_SYMBOL (animate ~TOWNIE_CURST_FEMALE_PST~)
+				PATCH_IF LONG_AT 0x28 != ia_townie_curst_female_pst BEGIN // PATCH_IF SHORT_AT 0x28 != 0x5d4c BEGIN
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_THIEF_FEMALE_HUMAN~) // original 0x6848 - EE depends on installation
 				END
-				WRITE_BYTE 0x237 2			// Sex (female)
-				WRITE_BYTE 0x275 2			// Gender (female)
+				WRITE_BYTE 0x237 2  // Sex (female)
+				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_thief_female_human
+
 
 /* =============================================================== *
  *  Male Human Ninjas get the moinesse_ninja_male_human animation  *
  *  Miloch's IA Moinesse Ninja Fix : this fix is only necessary    *
  *  if both Infinity Animations and Angelo are installed.          *
  * =============================================================== */
-ACTION_FOR_EACH nb IN ~adginpac~ ~adnin01~ ~adnin02~ BEGIN
+ACTION_PHP_EACH GW_angelo_ninja_male_human AS nb => correct BEGIN
+
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			  PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			  PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x683e // Animation ID (moinesse_ninja_male_human)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_NINJA_MALE_HUMAN~) // classical 0x683e - EE none for the moment
-				WRITE_BYTE 0x2c 66		// Metal color (FADED_BLACK)
-				WRITE_BYTE 0x2d 66		// Minor color (FADED_BLACK)
-				WRITE_BYTE 0x2e 66		// Major color (FADED_BLACK)
-				WRITE_BYTE 0x2f 13		// Skin color (LIGHT_PINKISH_SILVER)
-				WRITE_BYTE 0x30 66		// Leather color (FADED_BLACK)
-				WRITE_BYTE 0x31 66		// Armor color (FADED_BLACK)
-				WRITE_BYTE 0x32 66		// Hair color (FADED_BLACK)
-				WRITE_BYTE 0x237 1		// Sex (male)
-				WRITE_BYTE 0x275 1		// Gender (male)
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_NINJA_MALE_HUMAN~) // original 0x683e - EE depends on installation
+				WRITE_BYTE 0x2c 66  // Metal color (FADED_BLACK)
+				WRITE_BYTE 0x2d 66  // Minor color (FADED_BLACK)
+				WRITE_BYTE 0x2e 66  // Major color (FADED_BLACK)
+				WRITE_BYTE 0x2f 13  // Skin color (LIGHT_PINKISH_SILVER)
+				WRITE_BYTE 0x30 66  // Leather color (FADED_BLACK)
+				WRITE_BYTE 0x31 66  // Armor color (FADED_BLACK)
+				WRITE_BYTE 0x32 66  // Hair color (FADED_BLACK)
+				WRITE_BYTE 0x237 1  // Sex (male)
+				WRITE_BYTE 0x275 1  // Gender (male)
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_angelo_ninja_male_human
+
 
 /* ======================================================================================================================================================== *
  *  Male Human Assassins get the moinesse_ninja_male_human animation (unless they've already received the male Curst townie or the Shadow thief animation)  *
  * ======================================================================================================================================================== */
-ACTION_FOR_EACH nb IN ~adario12~ ~aj#ass2~ ~artcave4~ ~artcutx1~ ~artemis~ ~b#kisthf~ ~b#knit05~ ~bhbasmar~ ~bhgelliu~ ~bhguild1~ ~bhlothar~ ~bhphilma~ ~bhsangst~ ~bhvolcfr~ ~bpbounty~ ~cb35assn~ ~csgayl~ ~csthief1~ ~csthief2~ ~d0night2~ ~dariogr2~ ~dariogr3~ ~dariogr4~ ~dariogr5~ ~ddartem1~ ~ddassa01~ ~ddassa02~ ~ddblbl01~ ~dekaras~ ~dekaras1~ ~dekaras2~ ~dekaras3~ ~dekaras4~ ~enter2~ ~enteri~ ~enteri01~ ~enteri2~ ~enteri3c~ ~enteri5c~ ~enteri6c~ ~enteriss~ ~er_love1~ ~f_artemi~ ~gbhrep1a~ ~gordeck5~ ~gordeck6~ ~gordeck7~ ~gordeck8~ ~gordeck9~ ~gordecka~ ~haene04~ ~hlassa~ ~irethf03~ ~ishadmt1~ ~ishclo01~ ~ishthf01~ ~ishthf03~ ~jc_assn~ ~kilhelp1~ ~kilhelp2~ ~kilhelp3~ ~kufartem~ ~mvguard1~ ~mvguard2~ ~o#crgoon~ ~plass03~ ~plass04~ ~rr#vend~ ~rr#vend2~ ~sargrd05~ ~sargrd09~ ~sarkis01~ ~sarkis02~ ~sarkis03~ ~sarkis04~ ~%tbg%shank~ ~%tsu%shank~ ~stass1~ ~tanthf01~ ~tobpar01~ ~ts5thf2~ ~ts5thf4~ ~ts5thf6~ ~vulthief~ ~z#assabv~ ~z#assas1~ ~z#assas2~ ~z#assas3~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
-	END
+ACTION_PHP_EACH GW_moinesse_ninja_male_human AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				PATCH_IF (SHORT_AT 0x28 != 0x5d4d) AND (SHORT_AT 0x28 != 0x7f36) BEGIN // If not townie_curst_male or shadow_thief
-					WRITE_SHORT 0x28 0x683e			// Animation ID (moinesse_ninja_male_human)
-//					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_NINJA_MALE_HUMAN~) // classical 0x683e - EE none for the moment
+				// If not townie_curst_male or shadow_thief IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE_PST~)
+				PATCH_IF (LONG_AT 0x28 != ia_townie_curst_male_pst) AND (LONG_AT 0x28 != 0x7f36) BEGIN //PATCH_IF (SHORT_AT 0x28 != 0x5d4d) AND (SHORT_AT 0x28 != 0x7f36) BEGIN
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_NINJA_MALE_HUMAN~)	// original 0x683e - EE depends on installation
 				END
-				WRITE_BYTE 0x2c 65					// Metal color (REALLY_DARK_GRAY)
-				WRITE_BYTE 0x2d 242					// Minor color (THIEF_MINOR-PALE_OLIVE)
-				WRITE_BYTE 0x2e 241					// Major color (THIEF_MAJOR-OLIVE)
-				WRITE_BYTE 0x2f 203					// Skin color (SKIN2-MYRTLE_GREEN)
-				WRITE_BYTE 0x30 66					// Leather color (FADED_BLACK)
-				WRITE_BYTE 0x31 64					// Armor color (DARK_GRAY)
-				WRITE_BYTE 0x237 1					// Sex (male)
-				PATCH_IF BYTE_AT 0x275 != 6 BEGIN	// If not summoned
-					WRITE_BYTE 0x275 1				// Gender (male)
+				WRITE_BYTE 0x2c 65      // Metal color (REALLY_DARK_GRAY)
+				WRITE_BYTE 0x2d 242     // Minor color (THIEF_MINOR-PALE_OLIVE)
+				WRITE_BYTE 0x2e 241     // Major color (THIEF_MAJOR-OLIVE)
+				WRITE_BYTE 0x2f 203     // Skin color (SKIN2-MYRTLE_GREEN)
+				WRITE_BYTE 0x30 66      // Leather color (FADED_BLACK)
+				WRITE_BYTE 0x31 64      // Armor color (DARK_GRAY)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				// If not summoned
+				PATCH_IF BYTE_AT 0x275 != 6 BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
 				END
 			END
 		BUT_ONLY
 		VERBOSE
-	END
-END
 
-/* ====================================================== *
- *  Moinesse Vampires get the moinesse_vampire animation  *
- * ====================================================== */
-ACTION_FOR_EACH nb IN ~bodvam01~ ~bodvam02~ ~c6bguard~ ~c6vamp01~ ~c6vflm01~ ~cbgrvamp~ ~cbmastvp~ ~cbrncbvp~ ~cbrncmvp~ ~cohnta~ ~dpmon03~ ~dsvampm~ ~dvampfl~ ~guareye4~ ~holyvam~ ~impbod1~ ~ivamp01~ ~kimberg~ ~kkcian~ ~lassal~ ~lassal02~ ~magvamp~ ~malvamp1~ ~malvamp2~ ~malvamp3~ ~mfinal01~ ~mfinal02~ ~mfinal03~ ~nevm4~ ~ppjoye~ ~ppjoye2~ ~rr#vam01~ ~sarvam02~ ~stonevm~ ~u#sw1h04~ ~valesh~ ~vamflm01~ ~vampamb~ ~vampim01~ ~vampire1~ ~vampm01~ ~vampym01~ ~vamq1~ ~vvmale1~ ~vvmale2~ ~vvmale3~ ~vvmale4~ ~vvmale5~ ~vvmale6~ ~vvmale7~ ~x#lassa~ ~xsvampm~ ~z#gvampm~ BEGIN
-	OUTER_SET rmb = 7						// 100% chance
-	ACTION_IF rma = 1 BEGIN
-		OUTER_SET rmb = RANDOM(1 8)			// 25% chance
-	END ELSE BEGIN
-		ACTION_IF rma = 2 BEGIN
-			OUTER_SET rmb = RANDOM(5 8)		// 50% chance
-		END ELSE BEGIN
-			ACTION_IF rma = 3 BEGIN
-				OUTER_SET rmb = RANDOM(6 9)	// 75% chance
-			END
-		END
 	END
+
+END
+ACTION_CLEAR_ARRAY GW_moinesse_ninja_male_human
+
+
+/* ================================================== *
+ *  Male Vampires get the moinesse_vampire animation  *
+ * ================================================== */
+ACTION_PHP_EACH GW_moinesse_vampire AS nb => correct BEGIN
+
+	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
+
 		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_SHORT 0x28 0x683f // Animation ID (moinesse_vampire)
-//				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_VAMPIRE~) // classical 0x683f - EE none for the moment
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_VAMPIRE~) // original 0x683f - EE depends on installation
 				rmv = RANDOM(0 9)
 				// Metal color
 				PATCH_IF rmv = 0 BEGIN
-					t-clr = 0								// RUST-TINTED_BLACK
+					t-clr = 0                               // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF rmv = 1 BEGIN
-						t-clr = 6							// DARK_SILVER
+						t-clr = 6                           // DARK_SILVER
 					END ELSE BEGIN
 						PATCH_IF rmv = 2 BEGIN
-							t-clr = 19						// DARK_ROSE_RED
+							t-clr = 19                      // DARK_ROSE_RED
 						END ELSE BEGIN
 							PATCH_IF rmv = 3 BEGIN
-								t-clr = 27					// GRAY
+								t-clr = 27                  // GRAY
 							END ELSE BEGIN
 								PATCH_IF rmv = 4 BEGIN
-									t-clr = 47				// PURE_DARK_RED
+									t-clr = 47              // PURE_DARK_RED
 								END ELSE BEGIN
 									PATCH_IF rmv = 5 BEGIN
-										t-clr = 65			// REALLY_DARK_GRAY
+										t-clr = 65          // REALLY_DARK_GRAY
 									END ELSE BEGIN
 										PATCH_IF (rmv = 6) OR (rmv = 7) BEGIN
-											t-clr = 66		// FADED_BLACK
+											t-clr = 66      // FADED_BLACK
 										END ELSE BEGIN
 											PATCH_IF rmv = 8 BEGIN
-												t-clr = 93	// DARK_CEMENT_GRAY
+												t-clr = 93  // DARK_CEMENT_GRAY
 											END ELSE BEGIN
-												t-clr = 110	// ASH
+												t-clr = 110 // ASH
 											END
 										END
 									END
@@ -329,37 +338,38 @@ ACTION_FOR_EACH nb IN ~bodvam01~ ~bodvam02~ ~c6bguard~ ~c6vamp01~ ~c6vflm01~ ~cb
 						END
 					END
 				END
-				WRITE_BYTE 0x2c t-clr	// Metal color
+				WRITE_BYTE 0x2c t-clr   // Metal color
+
 				// Minor color
 				rmv = RANDOM(0 9)
 				PATCH_IF rmv = 0 BEGIN
-					t-clr = 0									// RUST-TINTED_BLACK
+					t-clr = 0                                   // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF rmv = 1 BEGIN
-						t-clr = 27								// GRAY
+						t-clr = 27                              // GRAY
 					END ELSE BEGIN
 						PATCH_IF rmv = 2 BEGIN
-							t-clr = 28							// BLUISH_SILVER
+							t-clr = 28                          // BLUISH_SILVER
 						END ELSE BEGIN
 							PATCH_IF rmv = 3 BEGIN
-								t-clr = 33						// CHROME_MAGENTA
+								t-clr = 33                      // CHROME_MAGENTA
 							END ELSE BEGIN
 								PATCH_IF rmv = 4 BEGIN
-									t-clr = 46					// RED
+									t-clr = 46                  // RED
 								END ELSE BEGIN
 									PATCH_IF rmv = 5 BEGIN
-										t-clr = 47				// PURE_DARK_RED
+										t-clr = 47              // PURE_DARK_RED
 									END ELSE BEGIN
 										PATCH_IF rmv = 6 BEGIN
-											t-clr = 60			// DARK_PURPLE
+											t-clr = 60          // DARK_PURPLE
 										END ELSE BEGIN
 											PATCH_IF rmv = 7 BEGIN
-												t-clr = 63		// LIGHT_GRAY
+												t-clr = 63      // LIGHT_GRAY
 											END ELSE BEGIN
 												PATCH_IF rmv = 8 BEGIN
-													t-clr = 83	// DARK_BLUISH_GRAY
+													t-clr = 83  // DARK_BLUISH_GRAY
 												END ELSE BEGIN
-													t-clr = 101	// METALLIC_RED
+													t-clr = 101 // METALLIC_RED
 												END
 											END
 										END
@@ -369,110 +379,114 @@ ACTION_FOR_EACH nb IN ~bodvam01~ ~bodvam02~ ~c6bguard~ ~c6vamp01~ ~c6vflm01~ ~cb
 						END
 					END
 				END
-				WRITE_BYTE 0x2d t-clr	// Minor color
+				WRITE_BYTE 0x2d t-clr   // Minor color
+
 				// Major color
 				rmv = RANDOM(0 9)
 				PATCH_IF rmv = 0 BEGIN
-					t-clr = 0						// RUST-TINTED_BLACK
+					t-clr = 0                       // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF (rmv = 1) OR (rmv = 2) BEGIN
-						t-clr = 47					// PURE_DARK_RED
+						t-clr = 47                  // PURE_DARK_RED
 					END ELSE BEGIN
 						PATCH_IF rmv = 3 BEGIN
-							t-clr = 65				// REALLY_DARK_GRAY
+							t-clr = 65              // REALLY_DARK_GRAY
 						END ELSE BEGIN
 							PATCH_IF (rmv = 4) OR (rmv = 5) OR (rmv = 6) BEGIN
-								t-clr = 66			// FADED_BLACK
+								t-clr = 66          // FADED_BLACK
 							END ELSE BEGIN
 								PATCH_IF rmv = 7 BEGIN
-									t-clr = 70		// LIGHT_METALLIC_RED
+									t-clr = 70      // LIGHT_METALLIC_RED
 								END ELSE BEGIN
 									PATCH_IF rmv = 8 BEGIN
-										t-clr = 83	// DARK_BLUISH_GRAY
+										t-clr = 83  // DARK_BLUISH_GRAY
 									END ELSE BEGIN
-										t-clr = 94	// RHUBARB
+										t-clr = 94  // RHUBARB
 									END
 								END
 							END
 						END
 					END
 				END
-				WRITE_BYTE 0x2e t-clr	// Major color
+				WRITE_BYTE 0x2e t-clr   // Major color
+
 				// Skin color
 				rmv = RANDOM(0 9)
 				PATCH_IF (rmv = 0) OR (rmv = 1) BEGIN
-					t-clr = 5					// MEDIUM_SILVER
+					t-clr = 5                   // MEDIUM_SILVER
 				END ELSE BEGIN
 					PATCH_IF rmv = 2 BEGIN
-						t-clr = 14				// DARK_PURE_SILVER
+						t-clr = 14              // DARK_PURE_SILVER
 					END ELSE BEGIN
 						PATCH_IF rmv = 3 BEGIN
-							t-clr = 63			// LIGHT_GRAY
+							t-clr = 63          // LIGHT_GRAY
 						END ELSE BEGIN
 							PATCH_IF (rmv = 4) OR (rmv = 5) BEGIN
-								t-clr = 79		// LIGHT_SILVER
+								t-clr = 79      // LIGHT_SILVER
 							END ELSE BEGIN
 								PATCH_IF (rmv = 6) OR (rmv = 7) OR (rmv = 8) BEGIN
-									t-clr = 105	// OFF_WHITE
+									t-clr = 105 // OFF_WHITE
 								END ELSE BEGIN
-									t-clr = 110	// ASH
+									t-clr = 110 // ASH
 								END
 							END
 						END
 					END
 				END
-				WRITE_BYTE 0x2f t-clr	// Skin color
+				WRITE_BYTE 0x2f t-clr   // Skin color
+
 				// Leather color
 				rmv = RANDOM(0 9)
 				PATCH_IF (rmv = 0) OR (rmv = 1) BEGIN
-					t-clr = 0					// RUST-TINTED_BLACK
+					t-clr = 0                   // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF (rmv = 2) OR (rmv = 3) BEGIN
-						t-clr = 47				// PURE_DARK_RED
+						t-clr = 47              // PURE_DARK_RED
 					END ELSE BEGIN
 						PATCH_IF (rmv = 4) OR (rmv = 5) OR (rmv = 6) BEGIN
-							t-clr = 66			// FADED_BLACK
+							t-clr = 66          // FADED_BLACK
 						END ELSE BEGIN
 							PATCH_IF rmv = 7 BEGIN
-								t-clr = 70		// LIGHT_METALLIC_RED
+								t-clr = 70      // LIGHT_METALLIC_RED
 							END ELSE BEGIN
 								PATCH_IF rmv = 8 BEGIN
-									t-clr = 83	// DARK_BLUISH_GRAY
+									t-clr = 83  // DARK_BLUISH_GRAY
 								END ELSE BEGIN
-									t-clr = 94	// RHUBARB
+									t-clr = 94  // RHUBARB
 								END
 							END
 						END
 					END
 				END
-				WRITE_BYTE 0x30 t-clr	// Leather color
+				WRITE_BYTE 0x30 t-clr   // Leather color
+
 				// Armor color
 				rmv = RANDOM(0 9)
 				PATCH_IF rmv = 0 BEGIN
-					t-clr = 0								// RUST-TINTED_BLACK
+					t-clr = 0                               // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF rmv = 1 BEGIN
-						t-clr = 6							// DARK_SILVER
+						t-clr = 6                           // DARK_SILVER
 					END ELSE BEGIN
 						PATCH_IF rmv = 2 BEGIN
-							t-clr = 19						// DARK_ROSE_RED
+							t-clr = 19                      // DARK_ROSE_RED
 						END ELSE BEGIN
 							PATCH_IF rmv = 3 BEGIN
-								t-clr = 27					// GRAY
+								t-clr = 27                  // GRAY
 							END ELSE BEGIN
 								PATCH_IF rmv = 4 BEGIN
-									t-clr = 47				// PURE_DARK_RED
+									t-clr = 47              // PURE_DARK_RED
 								END ELSE BEGIN
 									PATCH_IF rmv = 5 BEGIN
-										t-clr = 65			// REALLY_DARK_GRAY
+										t-clr = 65          // REALLY_DARK_GRAY
 									END ELSE BEGIN
 										PATCH_IF (rmv = 6) OR (rmv = 7) BEGIN
-											t-clr = 66		// FADED_BLACK
+											t-clr = 66      // FADED_BLACK
 										END ELSE BEGIN
 											PATCH_IF rmv = 8 BEGIN
-												t-clr = 93	// DARK_CEMENT_GRAY
+												t-clr = 93  // DARK_CEMENT_GRAY
 											END ELSE BEGIN
-												t-clr = 110	// ASH
+												t-clr = 110  // ASH
 											END
 										END
 									END
@@ -481,44 +495,49 @@ ACTION_FOR_EACH nb IN ~bodvam01~ ~bodvam02~ ~c6bguard~ ~c6vamp01~ ~c6vflm01~ ~cb
 						END
 					END
 				END
-				WRITE_BYTE 0x31 t-clr	// Armor color
+				WRITE_BYTE 0x31 t-clr   // Armor color
+
 				// Hair color
 				rmv = RANDOM(0 9)
 				PATCH_IF (rmv = 0) OR (rmv = 1) BEGIN
-					t-clr = 0						// RUST-TINTED_BLACK
+					t-clr = 0                       // RUST-TINTED_BLACK
 				END ELSE BEGIN
 					PATCH_IF rmv = 2 BEGIN
-						t-clr = 6					// DARK_SILVER
+						t-clr = 6                   // DARK_SILVER
 					END ELSE BEGIN
 						PATCH_IF rmv = 3 BEGIN
-							t-clr = 21				// DARK_IRON_GRAY
+							t-clr = 21              // DARK_IRON_GRAY
 						END ELSE BEGIN
 							PATCH_IF rmv = 4 BEGIN
-								t-clr = 65			// REALLY_DARK_GRAY
+								t-clr = 65          // REALLY_DARK_GRAY
 							END ELSE BEGIN
 								PATCH_IF (rmv = 5) OR (rmv = 6) OR (rmv = 7) BEGIN
-									t-clr = 66		// FADED_BLACK
+									t-clr = 66      // FADED_BLACK
 								END ELSE BEGIN
 									PATCH_IF rmv = 8 BEGIN
-										t-clr = 75	// SOLID_BLACK
+										t-clr = 75  // SOLID_BLACK
 									END ELSE BEGIN
-										t-clr = 83	// DARK_BLUISH_GRAY
+										t-clr = 83  // DARK_BLUISH_GRAY
 									END
 								END
 							END
 						END
 					END
 				END
-				WRITE_BYTE 0x32 t-clr				// Hair color
-				WRITE_BYTE 0x271 4					// General (undead)
-				PATCH_IF BYTE_AT 0x272 != 126 BEGIN // If not vampyre
-					WRITE_BYTE 0x272 125			// Race (vampire)
+				WRITE_BYTE 0x32 t-clr   // Hair color
+
+				WRITE_BYTE 0x271 4      // General (undead)
+				// If not vampyre
+				PATCH_IF BYTE_AT 0x272 != 126 BEGIN
+					WRITE_BYTE 0x272 125    // Race (vampire)
 				END
-				PATCH_IF (BYTE_AT 0x273 > 20) AND (BYTE_AT 0x273 != 155) AND (BYTE_AT 0x273 != 164) BEGIN	// Fix class
-					WRITE_BYTE 0x273 163																	// Class (vampire)
+				// Fix class
+				PATCH_IF (BYTE_AT 0x273 > 20) AND (BYTE_AT 0x273 != 155) AND (BYTE_AT 0x273 != 164) BEGIN
+					WRITE_BYTE 0x273 163     // Class (vampire)
 				END
-				PATCH_IF BYTE_AT 0x237 = 2 BEGIN	// If sex = female
-					WRITE_BYTE 0x275 2				// Gender (female)
+				// If sex = female
+				PATCH_IF BYTE_AT 0x237 = 2 BEGIN
+					WRITE_BYTE 0x275 2  // Gender (female)
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
 						SAY BATTLE_CRY1 ~~ [VAMPF01]
 						SAY BATTLE_CRY2 ~~ [VAMPF02]
@@ -556,5 +575,8 @@ ACTION_FOR_EACH nb IN ~bodvam01~ ~bodvam02~ ~c6bguard~ ~c6vamp01~ ~c6vflm01~ ~cb
 			END
 		BUT_ONLY
 		VERBOSE
+
 	END
+
 END
+ACTION_CLEAR_ARRAY GW_moinesse_vampire
