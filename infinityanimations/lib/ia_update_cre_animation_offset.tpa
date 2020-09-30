@@ -1,0 +1,97 @@
+/* ================================================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                                          *
+ *                                   M A I N   C O M P O N E N T   ( T o B - E E )   :   U p d a t e   . C R E   a n i m a t i o n   o f f s e t s                                   *
+ *                                                                                                                                                                                   *
+ * ================================================================================================================================================================================= *
+ *  This part fixes any affected creatures.                                                                                                                                          *
+ * ================================================================================================================================================================================= *
+ *  change-log:                                                                                                                                                                      *
+ *  -----------                                                                                                                                                                      *
+ *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                            *
+ * ================================================================================================================================================================================= */
+
+SILENT
+
+// Mage Construct (BP)
+// -------------------
+ACTION_IF FILE_EXISTS_IN_GAME ~const01.cre~ BEGIN
+
+	COPY_EXISTING ~const01.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 0xe0f0 // Animation ID (golem_ice)
+		END
+	BUT_ONLY
+
+END
+
+// Orogs (DidDag, Orog)	TODO Orc archer ?
+// --------------------------------------
+ACTION_FOR_EACH nb IN ~firorc01~ ~orc05~ ~rorcl01~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xe700 // Animation ID (orog)
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+// Orogs elite (Mercenary, Olaf Rassmusen, Orog)
+// ---------------------------------------------
+ACTION_FOR_EACH nb IN ~ar18fig~ ~hlolaf~ ~orc06~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xe710 // Animation ID (orog_elite)
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+// Orcs Elite Melee (Flaylan, Il-Khan Soldier, Fighter, Fighter)
+// -------------------------------------------------------------
+ACTION_FOR_EACH nb IN ~firorc03~ ~sarbul04~ ~sargrd04~ ~sargrd10~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN 
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xe820 // Animation ID (orc_elite_melee)
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+// Orc Shamans (Orc priest, Orc Mage)
+// ----------------------------------
+ACTION_FOR_EACH nb IN ~orc03~ ~orc04~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xe840 // Animation ID (orc_shaman)
+			END
+		BUT_ONLY
+
+	END
+
+END
