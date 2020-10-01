@@ -818,7 +818,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Simplification du code :
     - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
     - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
-    - Remplacement des variables "*%tsx%*" spécifiques à ia par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods.
+    - Remplacement des variables "*%tsx%*" spécifiques à IA par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods.
     - Externalisation des listes de fichiers de créatures à modifier dans des tables [*NdT : arrays*] pour faciliter leur mise à jour.
     - Corrections mineures...
   - ...
@@ -831,14 +831,24 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.
   - ...
   - Replaced `GAME_IS` conditions with variables checks to speed up install time.
-  - Reorganized folder architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
+  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
   - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
-- [0] Infinity Animations (composant principal) (t-main.tpa, ia_restore_bg2_animations.tpa, )
-    - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>, correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
-    - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
+- [0] Infinity Animations (t-main.tpa, )
+   - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et facilité sa maintenance (ia_restore_bg2_animations.tpa, ia_update_cre_animation_offset.tpa, ia_correcting_creature animations.tpa). :wink:
+    - Compatibilité avec ToBEx : .
+    - Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.
+    - <ins>ia_restore_bg2_animations.tpa</ins> :
+        - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+        - Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
+    - <ins>ia_correcting_creature animations.tpa</ins> :
+        - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_correct_arrays.tph*") pour faciliter leur mise à jour.
+        - Integration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes READ_BYTE manquantes de Miloch</a>.
+        - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
+        - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.
+    - .
+    - .
 - [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : ajout des variables manquantes pour les fichiers kent and sailned de BG (array " *GW_male_human_fighters* ").
@@ -895,10 +905,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Intégration du <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">correctif de Miloch pour les ninja de Moinesse</a>, nécessaire si Infinity Animations et le mod Angelo sont installés ensemble.
     - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
 - [8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs (t-bg1anims.tpa)
-  - [9000] Correction des références des créatures dans les cartes ()
+    - Correction d'un bug plantant le jeu à cause des ailes de 1pp ne fonctionnant pas avec les animations de personnages de BG1.
+    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-new_aniamationtype_bg1%* " pour patcher les fichiers selon le jeu.
+    - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
+- [9000] Correction des références des créatures dans les cartes ()
     - Dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
 
-  - [9900-9910] Correction des animations dans les parties sauvegardées et [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
+- [9900-9910] Correction des animations dans les parties sauvegardées et [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
     - Ces deux composants ne devraient plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
 
 ## 

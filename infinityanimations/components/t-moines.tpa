@@ -3,7 +3,7 @@
  *                             M O I N E S S ' S   A V A T A R S   f o r   I A   C O M P O N E N T   ( 7 0 0 0 - 7 0 1 0 - 7 0 2 0 - 7 0 3 0 )                             *
  *                                                                                                                                                                         *
  * ======================================================================================================================================================================= *
- *  This component assigns assigns some creatures distinctive Moinesse's animations.                                                                                       *
+ *  This component assigns some creatures distinctive Moinesse's animations.                                                                                               *
  * ======================================================================================================================================================================= *
  *  change-log:                                                                                                                                                            *
  *  -----------                                                                                                                                                            *
@@ -12,7 +12,7 @@
  *      - Externalized random seed in a new library (gw_random.tpp).                                                                                                       *
  *      - Integrated Miloch's IA Moinesse Ninja Fix, necessary if both Infinity Animations and Angelo are installed (#219).                                                *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
- *        and used new %ia_townie_curst_female_pst% and %ia_townie_curst_male_pst% to patch files according to the game.                                                   *
+ *        and used new %ia_townie_curst_female_pst% and %ia_townie_curst_male_pst% variables to patch files according to the game.                                         *
  * ======================================================================================================================================================================= */
 
 /* ------------------------------------------------------------------------------------------------- *
@@ -53,7 +53,7 @@ SILENT
  * ======================================================================= */
 ACTION_PHP_EACH GW_moinesse_barbarian_male_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -78,7 +78,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_barbarian_male_human
  * =================================================================== */
 ACTION_PHP_EACH GW_moinesse_druid_female_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -105,7 +105,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_druid_female_human
  * ======================================================================= */
 ACTION_PHP_EACH GW_moinesse_fighter_female_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -136,7 +136,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_fighter_female_human
  * ============================================================= */
 ACTION_PHP_EACH GW_moinesse_mage_female_elf AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -163,7 +163,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_mage_female_elf
  * ================================================================= */
 ACTION_PHP_EACH GW_moinesse_mage_female_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -190,7 +190,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_mage_female_human
  * ======================================================================================================================================== */
 ACTION_PHP_EACH GW_moinesse_thief_female_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -254,7 +254,7 @@ ACTION_CLEAR_ARRAY GW_angelo_ninja_male_human
  * ======================================================================================================================================================== */
 ACTION_PHP_EACH GW_moinesse_ninja_male_human AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
@@ -293,7 +293,7 @@ ACTION_CLEAR_ARRAY GW_moinesse_ninja_male_human
  * ================================================== */
 ACTION_PHP_EACH GW_moinesse_vampire AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 

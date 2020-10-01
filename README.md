@@ -823,7 +823,7 @@ This component corrects changed creature animations in area files for easier ref
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
     - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory.
-    - Replaced specific "*%tsx%*" ia variables with more compatible "*%tutu%_scriptx%*" variables.
+    - Replaced specific "*%tsx%*" IA variables with more compatible "*%tutu%_scriptx%*" variables.
     - Externalized lists of creatures to be patched into arrays for easier maintenance.
     - Minor fixes...
   - ...
@@ -836,15 +836,25 @@ This component corrects changed creature animations in area files for easier ref
   - Uploaded mod to official Spellhold Studios GitHub mirror account.
   - ...
   - Replaced `GAME_IS` conditions with variables checks to speed up install time.
-  - Reorganized folder architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
+  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
 
  <br>
 
 &#9755; <ins>c. Components specific changes and fixes</ins>
-- [0] Infinity Animations (main component) (t-main.tpa, ia_restore_bg2_animations.tpa, )
-    - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>, fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
-    - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
-    - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
+- [0] Infinity Animations (t-main.tpa, )
+    - Split this huge component into smaller ones for more comfortable readability and maintenance (ia_restore_bg2_animations.tpa, ia_update_cre_animation_offset.tpa, ia_correcting_creature animations.tpa). :wink:
+    - ToBEx compatibility: .
+    - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
+    - <ins>ia_restore_bg2_animations.tpa</ins>:
+        - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
+        - Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
+    - <ins>ia_correcting_creature animations.tpa</ins>:
+        - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_correct_arrays.tph*" library) for easier maintenance.
+        - Integrated <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">Miloch's missing READ_BYTE fix</a>.
+        - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
+        - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.
+    - .
+    - .
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
     - Tutu variables: added missing tutu variable for BG kent and sailned files ("*GW_male_human_fighters*" array).
@@ -897,14 +907,17 @@ This component corrects changed creature animations in area files for easier ref
 - [7000-7010-7020-7030] Moinesse's Avatars for IA (t-moines.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_moinesse_anim_arrays.tph*" library) for easier maintenance.
     - Tutu variables: added new variables to avoid overwriting BG and BG2 files having the same names.
-    - EE games compatibility: used new "*%ia_townie_curst_female_pst%*" and "*%ia_townie_curst_male_pst%*" to patch files according to the game.
+    - EE games compatibility: used new "*%ia_townie_curst_female_pst%*" and "*%ia_townie_curst_male_pst%*" variables to patch files according to the game.
     - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
     - Externalized random seed in a new library ("*gw_random.tpp*").
 - [8000-8010-8020-8030] G1 Animations for NPCs (t-bg1anims.tpa)
-  - [9000] Fix Area Creature References ()
+    - Fixed crash due to 1pp Wings not working with BG1 L_ Animations.
+    - EE games compatibility: used new "*%ia-new_aniamationtype_bg1%*" variables to patch files according to the game.
+    - Externalized random seed in a new library ("*gw_random.tpp*").
+- [9000] Fix Area Creature References ()
     - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
 
-  - [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
+- [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
     - Both components should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing!).
 
 ## 

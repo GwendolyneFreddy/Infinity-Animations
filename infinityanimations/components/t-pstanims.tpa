@@ -3,7 +3,7 @@
  *                                      M O R E   P S T   A N I M A T I O N S   C O M P O N E N T   ( 7 1 0 - 7 2 0 - 7 3 0 - 7 4 0 )                                      *
  *                                                                                                                                                                         *
  * ======================================================================================================================================================================= *
- *  This component assigns assigns some creatures distinctive PST animations.                                                                                              *
+ *  This component assigns some creatures distinctive PST animations.                                                                                                      *
  * ======================================================================================================================================================================= *
  *  change-log:                                                                                                                                                            *
  *  -----------                                                                                                                                                            *
@@ -67,7 +67,7 @@ SILENT
  * ============================================================ */
 ACTION_PHP_EACH GW_townie_curst_female AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -105,7 +105,7 @@ ACTION_CLEAR_ARRAY GW_townie_curst_female
  * ======================================================== */
 ACTION_PHP_EACH GW_townie_curst_male_male AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -170,7 +170,7 @@ ACTION_CLEAR_ARRAY GW_townie_curst_male
  * =============================================== */
 ACTION_PHP_EACH GW_dustman_female AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -246,7 +246,7 @@ ACTION_CLEAR_ARRAY GW_dustman_male
  * =========================================== */
 ACTION_PHP_EACH GW_dustman_male2 AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -373,7 +373,7 @@ ACTION_CLEAR_ARRAY GW_ghoul_male
  * ============================================= */
 ACTION_PHP_EACH GW_godsman AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -413,7 +413,7 @@ ACTION_CLEAR_ARRAY GW_godsman
  * =============================================================================== */
 ACTION_PHP_EACH GW_thug_large AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -466,7 +466,7 @@ ACTION_CLEAR_ARRAY GW_thug_large
  * =========================================================================== */
 ACTION_PHP_EACH GW_thug AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -527,7 +527,7 @@ ACTION_CLEAR_ARRAY GW_thug
  * =================================================================== */
 ACTION_PHP_EACH GW_townie_lower_class_female AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 		COPY_EXISTING ~%nb%.cre~ ~override~
@@ -575,7 +575,7 @@ ACTION_CLEAR_ARRAY GW_townie_lower_class_female
  * =============================================================== */
 ACTION_PHP_EACH GW_townie_lower_class_male AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -640,7 +640,7 @@ ACTION_CLEAR_ARRAY GW_townie_lower_class_male
  * ================================================= */
 ACTION_PHP_EACH GW_merchant AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -689,7 +689,7 @@ ACTION_CLEAR_ARRAY GW_merchant
  * ================================================== */
 ACTION_PHP_EACH GW_midwife AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND ((rmq > 6) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~0xstdg~ = 1)) BEGIN
 
@@ -734,7 +734,7 @@ ACTION_CLEAR_ARRAY GW_midwife
  * ================================== */
 ACTION_PHP_EACH GW_harlot AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -822,7 +822,7 @@ ACTION_CLEAR_ARRAY GW_skeleton_priest
  * ============================================ */
 ACTION_PHP_EACH GW_skeleton_worker AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1017,7 +1017,7 @@ ACTION_CLEAR_ARRAY GW_tiefling_male
  * ================================================== */
 ACTION_PHP_EACH GW_townie_wizard AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1084,7 +1084,7 @@ ACTION_CLEAR_ARRAY GW_townie_wizard
  * ======================================================================================= */
 ACTION_PHP_EACH GW_female_human_nobles AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1154,7 +1154,7 @@ ACTION_CLEAR_ARRAY GW_female_human_nobles
  * ============================================================= */
 ACTION_PHP_EACH GW_townie_upper_class_male AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1203,7 +1203,7 @@ ACTION_CLEAR_ARRAY GW_townie_upper_class_male
  * ================================================ */
 ACTION_PHP_EACH GW_zombie_female AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1264,7 +1264,7 @@ ACTION_CLEAR_ARRAY GW_zombie_female
  * ============================================ */
 ACTION_PHP_EACH GW_zombie_male AS nb => correct BEGIN
 
-	LPF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
