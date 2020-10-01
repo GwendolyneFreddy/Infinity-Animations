@@ -27,7 +27,8 @@ PATCH_IF (fv = 0) BEGIN
 	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_eff_v2.tpp~
 END
 
-PATCH_IF FILE_EXISTS_IN_GAME ~fw0125.are~ BEGIN // Fix buggered Tutu refs
+// Fix buggered Tutu refs
+PATCH_IF is_tutu BEGIN // FILE_EXISTS_IN_GAME ~fw0125.are~
 	FOR (s1 = 0xa4 ; s1 < 0x234 ; s1 += 0x4) BEGIN
 		READ_LONG s1 ss // Soundslots
 		PATCH_IF ss > 10000000 BEGIN

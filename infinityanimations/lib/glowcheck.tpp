@@ -1,6 +1,7 @@
 // By Turambar	- http://www.shsforums.net/topic/45497-glowing-undead/?p=496098
 
-sz = SOURCE_SIZE	// begin glowcheck
+// begin glowcheck
+sz = SOURCE_SIZE
 PATCH_IF ("%sz%" > "0x2d3") BEGIN
 
 	PATCH_IF SHORT_AT 0x28 = 0x6403 BEGIN  // skeleton
@@ -20,24 +21,26 @@ PATCH_IF ("%sz%" > "0x2d3") BEGIN
        		READ_ASCII %lring% rname
     		PATCH_IF NOT ("%rname%" STRING_CONTAINS_REGEXP ~ring[g-n]?9~) BEGIN // immunity ring
        			PATCH_IF hasitem BEGIN
-					REMOVE_CRE_ITEM RING95	// remove duplicated rings
-					REMOVE_CRE_ITEM RING99	// remove duplicated rings
-					REMOVE_CRE_ITEM RINGG95	// remove duplicated rings
-					REMOVE_CRE_ITEM RINGN99	// remove duplicated rings
-        		END							// now, he doesn't have any more, but remembers the old one
+					REMOVE_CRE_ITEM RING95  // remove duplicated rings
+					REMOVE_CRE_ITEM RING99  // remove duplicated rings
+					REMOVE_CRE_ITEM RINGG95 // remove duplicated rings
+					REMOVE_CRE_ITEM RINGN99 // remove duplicated rings
+        		END
+				// now, he doesn't have any more, but remembers the old one
    				PATCH_IF glow BEGIN
-   					PATCH_IF ("%rname%" STRING_CONTAINS_REGEXP ~ring[g-n]?99~) BEGIN	// ring95
-   						WRITE_ASCII %lring% ~RINGG95~ #8	// change ring with glowing bg2 version
-   						SET ringg95need = 3					// need modded ring
+   					PATCH_IF ("%rname%" STRING_CONTAINS_REGEXP ~ring[g-n]?99~) BEGIN  // ring95
+   						WRITE_ASCII %lring% ~RINGG95~ #8  // change ring with glowing bg2 version
+   						SET ringg95need = 3               // need modded ring
    					END ELSE BEGIN
-   						WRITE_ASCII %lring% ~RING99~ #8		// change ring with glowing bg1 version
+   						WRITE_ASCII %lring% ~RING99~ #8   // change ring with glowing bg1 version
    					END
-   				END ELSE BEGIN								// noglow
-   					PATCH_IF ("%rname%" STRING_CONTAINS_REGEXP ~ring[g-n]?99~) BEGIN	// ring95, contains is true if not contains
-   						WRITE_ASCII %lring% ~RING95~ #8		// change ring with unglowing bg2 version
+   				END ELSE BEGIN
+					// noglow
+   					PATCH_IF ("%rname%" STRING_CONTAINS_REGEXP ~ring[g-n]?99~) BEGIN // ring95, contains is true if not contains
+   						WRITE_ASCII %lring% ~RING95~ #8   // change ring with unglowing bg2 version
    					END ELSE BEGIN
-   						WRITE_ASCII %lring% ~RINGN99~ #8	// change ring with unglowing bg1 version
-    					SET ringn99need = 3					// need modded ring
+   						WRITE_ASCII %lring% ~RINGN99~ #8  // change ring with unglowing bg1 version
+    					SET ringn99need = 3               // need modded ring
   					END
 				END
 				SET hasitem = 1

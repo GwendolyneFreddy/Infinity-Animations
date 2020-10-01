@@ -2,15 +2,15 @@ tmp_0 = 0x2d4
 tmp_1 = 0x2d4
 tmp_2 = 0x2d4
 tmp_3 = 0
-SPRINT m1 @89 // ~is corrupt~
-SPRINT m2 @90 // ~below minimum length~
-SPRINT m3 @91 // ~header misplaced~
-SPRINT m4 @92 // ~extended structures point to header~
+SPRINT m1 @1201 // ~is corrupt~
+SPRINT m2 @1202 // ~below minimum length~
+SPRINT m3 @1203 // ~header misplaced~
+SPRINT m4 @1204 // ~extended structures point to header~
 SPRINT sg ~CRE V1.0~
 valid = 1
 
 PATCH_IF ~%SOURCE_RES%~ STRING_EQUAL_CASE charbase BEGIN
-  valid = 0
+	valid = 0
 END ELSE BEGIN
 	PATCH_IF SOURCE_SIZE < 0x2d4 BEGIN	// PATCH_IF BUFFER_LENGTH < 0x2d4 BEGIN
 		valid = 0
@@ -43,4 +43,3 @@ END ELSE BEGIN
 		END
 	END
 END
-

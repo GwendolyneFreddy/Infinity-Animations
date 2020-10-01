@@ -1,14 +1,14 @@
 sz = SOURCE_SIZE
 PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 
-READ_LONG 0x2b8 so						// Slots offset
-READ_LONG 0x2bc io						// Items offset
-READ_LONG 0x2c0 ic						// Item count
-READ_SSHORT (so + 4) hn ELSE (0 - 1)	// Shield number
+READ_LONG 0x2b8 so                      // Slots offset
+READ_LONG 0x2bc io                      // Items offset
+READ_LONG 0x2c0 ic                      // Item count
+READ_SSHORT (so + 4) hn ELSE (0 - 1)    // Shield number
 
 PATCH_IF (hn > (0 - 1)) AND (hn < ic) BEGIN
-	sf = hn * 0x14 + io	// Item offset
-	READ_ASCII sf sd	// Item
+	sf = hn * 0x14 + io // Item offset
+	READ_ASCII sf sd    // Item
 	TO_LOWER sd
 	PATCH_IF NOT FILE_EXISTS_IN_GAME ~%sd%.itm~ BEGIN
 		INNER_ACTION BEGIN
@@ -27,11 +27,12 @@ END ELSE BEGIN
 	END
 END
 
-PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN	// Weapon slots
-	READ_SSHORT (so + wp) tn ELSE (0 - 1)			// Item number
+// Weapon slots
+PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
+	READ_SSHORT (so + wp) tn ELSE (0 - 1)  // Item number
 	PATCH_IF (tn > (0 - 1)) AND (tn < ic) BEGIN
-		tf = tn * 0x14 + io	// Item offset
-		READ_ASCII tf tm	// Item
+		tf = tn * 0x14 + io // Item offset
+		READ_ASCII tf tm    // Item
 		TO_LOWER tm
 		PATCH_IF NOT FILE_EXISTS_IN_GAME ~%tm%.itm~ BEGIN
 			INNER_ACTION BEGIN
@@ -122,15 +123,15 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN	// Weapon slots
 			tp = 0
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~%tm%.itm~ ~override~
-					READ_BYTE 0x18 fl	// Flags
-					READ_SHORT 0x1c tp	// Item type
+					READ_BYTE 0x18 fl   // Flags
+					READ_SHORT 0x1c tp  // Item type
 				BUT_ONLY
 			END
 			PATCH_IF ((fl BOR 0b11111101) = 0b11111111) AND (hn > (0 - 1)) AND (hn < ic) BEGIN
 				INNER_ACTION BEGIN
 					APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	%tm%	%wp%	Two-handed weapon equipped with off-hand item %sd%~
 					COPY_EXISTING ~%sd%.itm~ ~override~
-						READ_SHORT 0x1c sp	// Shield type
+						READ_SHORT 0x1c sp  // Shield type
 					BUT_ONLY
 				END
 				REMOVE_CRE_ITEM ~%sd%~
@@ -204,13 +205,14 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN	// Weapon slots
 	END
 END
 
-wc = 0 - 1	// Weapon count
-wd = 3		// Weapon decrement
+wc = 0 - 1  // Weapon count
+wd = 3      // Weapon decrement
 wf = 0
 READ_LONG 0x2b8 so // Slots offset
 READ_LONG 0x2c0 ic // Item count
-PATCH_FOR_EACH wp IN 0x18 0x16 0x14 0x12 BEGIN	// Weapon slots
-	READ_SSHORT (so + wp) tn ELSE (0 - 1)		// Item number
+// Weapon slots
+PATCH_FOR_EACH wp IN 0x18 0x16 0x14 0x12 BEGIN
+	READ_SSHORT (so + wp) tn ELSE (0 - 1)  // Item number
 	PATCH_IF (tn > (0 - 1)) AND (tn < ic) BEGIN
 		wc += 1
 		wf = (wp - 0x12) / 2
@@ -220,8 +222,8 @@ PATCH_FOR_EACH wp IN 0x18 0x16 0x14 0x12 BEGIN	// Weapon slots
 		END
 	END
 END
-READ_SSHORT (so + 0x4c) ws // Weapon selected
 
-PATCH_IF (ws > wc) OR (ws < wd) BEGIN 
+READ_SSHORT (so + 0x4c) ws // Weapon selected
+PATCH_IF (ws > wc) OR (ws < wd) BEGIN
 	WRITE_SHORT (so + 0x4c) wf
 END
