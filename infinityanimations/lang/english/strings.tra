@@ -1,29 +1,43 @@
-/* ======================================== *
- *               GAME strings               *
- * ======================================== */
-@500 = ~Yuan-ti Mage~
-@501 = ~Yuan-ti~
-@502 = ~Gnoll Captain~
-@503 = ~Hobgoblin Captain~
-@504 = ~Hobgoblin Wizard~
-@505 = ~Balor~
+/* ============================================ *
+ *                Main component                *
+ * -------------------------------------------- *
+ *  t-main.tpa traified                         *
+ * ============================================ */
+@10000 = ~Yuan-ti Mage~      // = strref #1154 (BG2)
+@10001 = ~Yuan-ti~           // = strref #1323 (BG2)
+@10002 = ~Gnoll Captain~     // = strref #2243 (BG2)
+@10003 = ~Hobgoblin Captain~ // = strref #2258 (BG2)
+@10004 = ~Hobgoblin Wizard~  // = strref #2268 (BG2)
+@10005 = ~Balor~             // = strref #8449 (BG2)
 
-// Nabassus soundset
-@506 = ~Who disturbs me?~ [T-NAB04]
-@507 = ~Rawrr!~ [T-NAB03]
-@508 = ~I will rend your soul!~ [T-NAB05]
-@509 = ~Your pain shall be eternal!~ [T-NAB06]
 
-// Night Hags soundset
-@510 = ~Well... hello, my pretty!~ [T-HAG01]
-@511 = ~Your bones and blood will blanket my garden.~ [T-HAG77]
-@512 = ~Off with ye. Dead I am.~ [T-HAG90A]
-@513 = ~Do not push me!~ [T-HAG13]
+/* =================================================== *
+ *               Distinctive Fiends (50)               *
+ * --------------------------------------------------- *
+ *  t-fiend.tpa traified                               *
+ * =================================================== */
 
-// Wings
-@514 = ~Wings~
-// Gwen fix: use the BGEE #27583 stringref for better 1pp, Infinity Animations and EE compatibility.
-@515 = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. Though not radiating a noticeable magical aura, the wings do seem to move with their bearer in a way that defies their supposed mechanism.
+// Nabassus NWN soundset
+// ---------------------
+@10101 = ~Who disturbs me?~ [t-nab04]            // = c_demon_slct.wav - #10739
+@10102 = ~Rawrr!~ [t-nab03]                      // = c_demon_atk3.wav (Polish sound clip missing replaced with English one)
+@10103 = ~I will rend your soul!~ [t-nab05]      // = c_demon_bat1.wav - #10737
+@10104 = ~Your pain shall be eternal!~ [t-nab06] // = c_demon_bat2.wav - #10738
+// sound clips without strref: t-nab01 = c_demon_atk1.wav - t-nab02 = c_demon_atk2.wav - t-nab07 = c_demon_hit1.wav - t-nab08 = c_demon_hit2.wav - t-nab09 = c_demon_dead.wav (Polish sound clips missing replaced with English ones)
+
+// Night Hags PsT soundset
+// -----------------------
+@10110 = ~Well... hello, my pretty!~ [t-hag01]                    // = rav001.wav
+@10111 = ~Your bones and blood will blanket my garden.~ [t-hag77] // = rav077.wav
+@10112 = ~Off with ye. Dead I am.~ [t-hag90a]                     // = rav090a.wav
+@10113 = ~Do not push me!~ [t-hag13]                              // = rav013.wav - French and German missing (empty sound clips!) have been replaced with English sound clip.
+// sound clips without strref: t-hag66a_b_c = rav066_b_c.wav - hag06a = swi_01a.wav - hag06b = swi_01b.wav
+
+// Erinyes get wings
+// -----------------
+@10121 = ~Wings~
+// Gwen fix: BGEE #27583 strref for better 1pp, Infinity Animations and EE compatibility. If 1pp is already translated, please copy paste @209101 and @209102 as @10121 and @10122
+@10122 = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. Though not radiating a noticeable magical aura, the wings do seem to move with their bearer in a way that defies their supposed mechanism.
 
 STATISTICS:
 
@@ -32,80 +46,127 @@ Requires:
  Wearer must be an elf
 
 Weight: 2~
-// 209_v4_wings.tph traified
 
-// Erinyes soundset
-@516 = ~Well hello there.~ [T-ERI02A]
-@517 = ~Farewell for now.~ [T-ERI06]
-@518 = ~On your knees!~ [T-ERI01A]
-@519 = ~You are mine!~ [T-ERI01B]
-@520 = ~Rrrauugh!~ [T-ERI01C]
-@521 = ~You tempt pain that you have never dreamed of.~ [T-ERI01D]
-@522 = ~Rend their flesh! They will not need it.~ [T-ERI01E]
-@523 = ~You want to heal me. You must.~ [T-ERI10]
-@524 = ~I need to speak with you. Come here.~ [T-ERI02B]
-@525 = ~Come to my side. Help me here.~ [T-ERI02C]
-@526 = ~Oh, yes.~ [T-ERI02D]
-@527 = ~Ha! Ha-ha-ha...~ [T-ERI02E]
-@528 = ~Oh, that is very nice.~ [T-ERI05]
-@529 = ~No. No.~ [T-ERI08]
+// Erinyes NWN soundset
+// --------------------
+@10123 = ~Well hello there.~ [t-eri02a]                              // = vs_nsuccf_hi.wav   - #52705
+@10124 = ~Farewell for now.~ [t-eri06]                               // = vs_nsuccf_bye.wav  - #50708
+@10125 = ~On your knees!~ [t-eri01a]                                 // = vs_nsuccf_bat1.wav - #52700
+@10126 = ~You are mine!~ [t-eri01b]                                  // = vs_nsuccf_bat2.wav - #52701
+@10127 = ~Rrrauugh!!~ [t-eri01c]                                     // = vs_nsuccf_bat3.wav - #52702
+@10128 = ~You tempt pain that you have never dreamed of.~ [t-eri01d] // = vs_nsuccf_warn.wav - #52711
+@10129 = ~Rend their flesh! They will not need it.~ [t-eri01e]       // = vs_nsuccf_attk.wav - #52699
+@10130 = ~You want to heal me. You must.~ [t-eri10]                  // = vs_nsuccf_heal.baf - #52703
+@10131 = ~I need to speak with you. Come here.~ [t-eri02b]           // = vs_nsuccf_say.wav  - #52710
+@10132 = ~Come to my side. Help me here.~ [t-eri02c]                 // = vs_nsuccf_help.baf - #52704
+@10133 = ~Oh, yes.~ [t-eri02d]                                       // = vs_nsuccf_yes.wav  - #52706
+@10134 = ~Ha! Ha-ha-ha...~ [t-eri02e]                                // = vs_nsuccf_haha.wav
+@10135 = ~Oh, that is very nice.~ [t-eri05]                          // = vs_nsuccf_vict.wav - #52709
+@10136 = ~No. No.~ [t-eri08]                                         // = vs_nsuccf_no.wav   - #52707
+// sound clips without strref: t-eri03 = vs_nsuccf_atk1.wav - t-eri04 = vs_nsuccf_atk2.wav - t-eri07.wav = vs_nsuccf_hit1.wav - t-eri09 = vs_nsuccf_dead.wav (English clip corrupted --> replaced with English one)
 
-// Succubi soundset
-@530 = ~Yes?~ [T-SUC02]
-@531 = ~Your death shall be beautiful!~ [T-SUC01A]
-@532 = ~Your soul shall be mine!~ [T-SUC01B]
+// Succubi NWN soundset
+// --------------------
+@10140 = ~Yes?~ [t-suc02]                            // = c_succubus_slct.wav - #10835
+@10141 = ~Your death shall be beautiful!~ [t-suc01a] // = c_succubus_bat1.wav - #10833
+@10142 = ~Your soul shall be mine!~ [t-suc01b]       // = c_succubus_bat2.wav - #10834
+// sound clips without strref: t-suc03 = c_succubus_atk1.wav - t-suc04 = c_succubus_atk2.wav - t-suc05 = c_succubus_atk3.wav - t-suc07 = c_succubus_hit1.wav - t-suc08 = c_succubus_hit2.wav - t-suc09 = c_succubus_dead.wav
 
-// Tieflings males soundset
-@533 = ~You cannot win this fight!~ [T-TIM01A]
-@534 = ~Into the flames we leap!~ [T-TIM01B]
-@535 = ~Ha ha ha ha!~ [T-TIM01C]
-@536 = ~My blood calls for yours and it *will* be satisfied.~ [T-TIM01D]
-@537 = ~Do you wish to die now? Because I can certainly arrange that.~ [T-TIM01E]
-@538 = ~Greetings.~ [T-TIM02A]
-@539 = ~Yes.~ [T-TIM02B]
-@540 = ~At your command.~ [T-TIM02C]
-@541 = ~What do we have here?~ [T-TIM02D]
-@542 = ~No.~ [T-TIM11]
-@543 = ~My magic did not work!~ [T-TIM12]
 
-// Tieflings females soundset
-@544 = ~Your time in this realm is over!~ [T-TIF01]
-@545 = ~Yes? I listen.~ [T-TIF02]
+/* =================================================== *
+ *               Distinctive Undead (400)              *
+ * --------------------------------------------------- *
+ *  t-undead.tpa traified                              *
+ * =================================================== */
+@10401 = ~Greater Zombie~
 
-@546 = ~Greater Zombie~
 
-// Svirfneblins soundset
-@547 = ~Yes.~ [T-SVA01B]
-@548 = ~Help! Help!~ [T-SVA03B]
-@549 = ~My powers shall obliterate you!~ [T-SVA02C]
-@550 = ~Die!~ [T_SVA02D]
-@551 = ~I am wounded! Heal me!~ [T-SVA07]
-@552 = ~Good day!~ [T-SVA01A]
-@553 = ~I really need to talk to you.~ [T-SVA01C]
-@554 = ~Ho ha ha ha!~ [T-SVA01D]
-@555 = ~You're in GREAT peril if you bother me. Just you wait!~ [T-SVA08]
-@556 = ~That's the way it's done and done!~ [T-SVA09]
-@557 = ~No...~ [T-SVA10]
-@558 = ~Come and talk a while.~ [T-SVN01C]
-@559 = ~Please help me!~ [T-SVN03B]
-@560 = ~Take that!~ [T-SVN02C]
-@561 = ~Evil fall before me!~ [T_SVN02D]
-@562 = ~I am hurt!~ [T-SVN07]
-@563 = ~Hello there.~ [T-SVN01A]
-@564 = ~Yes.~ [T-SVN01B]
-@565 = ~Oh ho ho ho!~ [T-SVN01D]
-@566 = ~You're heading for a good beating, you are!~ [T-SVN08]
-@567 = ~Well look at that!~ [T-SVN09]
-@568 = ~No...~ [T-SVN10]
-@569 = ~So long!~ [T-SVA03A]
-@570 = ~Kill that scum! Get 'em good!~ [T-SVA02A]
-@571 = ~Blood and bloody hell!~ [T_SVA02B]
-@572 = ~Farewell.~ [T-SVN03A]
-@573 = ~Get 'em!~ [T-SVN02A]
-@574 = ~I will cut you down to size!~ [T_SVN02B]
+/* =================================================== *
+ *          Svirfneblins Animations (480-490)          *
+ * --------------------------------------------------- *
+ *  t-svirfneblin.tpa traified                         *
+ * =================================================== */
+
+// Svirfneblins NWN soundsets
+// --------------------------
+@10400 = ~Yes.~ [t-sva01b]                                                  // = vs_ngnomem1_yes.wav  - #52099
+@10401 = ~Help! Help!~ [t-sva03b]                                           // = vs_ngnomem1_help.wav - #52097
+@10402 = ~My powers shall obliterate you!~ [t-sva02c]                       // = vs_ngnomem1_bat2.wav - #52094
+@10403 = ~Die!~ [t-sva02d]                                                  // = vs_ngnomem1_bat3.wav - #52095
+@10404 = ~I am wounded! Heal me!~ [t-sva07]                                 // = vs_ngnomem1_heal.wav - #52096
+@10405 = ~Good day!~ [t-sva01a]                                             // = vs_ngnomem1_hi.wav   - #52098
+@10406 = ~I really need to talk to you.~ [t-sva01c]                         // = vs_ngnomem1_say.wav  - #52103
+@10407 = ~Ho ha ha ha!~ [t-sva01d]                                          // = vs_ngnomem1_haha.wav
+@10408 = ~You're in GREAT peril if you bother me. Just you wait!~ [t-sva08] // = vs_ngnomem1_warn.wav - #52104
+@10409 = ~That's the way it's done and done!~ [t-sva09]                     // = vs_ngnomem1_vict.wav - #52102
+@10410 = ~No...~ [t-sva10]                                                  // = vs_ngnomem1_no.wav   - #52100
+
+@10411 = ~Come and talk a while.~ [t-svn01c]                                // = vs_ngnomem2_say.wav  - #52116
+@10412 = ~Please help me!~ [t-svn03b]                                       // = vs_ngnomem2_help.wav - #52110
+@10413 = ~Take that!~ [t-svn02c]                                            // = vs_ngnomem2_bat2.wav - #52107
+@10414 = ~Evil fall before me!~ [t-svn02d]                                  // = vs_ngnomem2_bat3.wav - #52108
+@10415 = ~I am hurt!~ [t-svn07]                                             // = vs_ngnomem2_heal.wav - #52109
+@10416 = ~Hello there.~ [t-svn01a]                                          // = vs_ngnomem2_hi.wav   - #52111
+@10417 = ~Yes.~ [t-svn01b]                                                  // = vs_ngnomem2_yes.wav  - #52112
+@10418 = ~Oh ho ho ho!~ [t-svn01d]                                          // = vs_ngnomem2_haha.wav
+@10419 = ~You're heading for a good beating, you are!~ [t-svn08]            // = vs_ngnomem2_warn.wav - #52117
+@10420 = ~Well look at that!~ [t-svn09]                                     // = vs_ngnomem2_vict.wav - #52115
+@10421 = ~No...~ [t-svn10]                                                  // = vs_ngnomem2_no.wav   - #52113
+
+@10422 = ~So long!~ [t-sva03a]                                              // = vs_ngnomem1_bye.wav  - #52101
+@10423 = ~Kill that scum! Get 'em good!~ [t-sva02a]                         // = vs_ngnomem1_attk.wav - #52092
+@10424 = ~Blood and bloody hell!~ [t-sva02b]                                // = vs_ngnomem1_bat1.wav - #52093
+
+@10425 = ~Farewell.~ [t-svn03a]                                             // = vs_ngnomem2_bye.wav  - #52114
+@10426 = ~Get 'em!~ [t-svn02a]                                              // = vs_ngnomem2_attk.wav - #52105
+@10427 = ~I will cut you down to size!~ [t-svn02b]                          // = vs_ngnomem2_bat1.wav - #52106
+
+// sound clips without strref: sva04a = vs_ngnomem1_atk3.wav - sva04b = vs_ngnomem1_atk1.wav - sva05a = vs_ngnomem1_hit1.wav - sva05b = vs_ngnomem1_hit3.wav - sva06a = vs_ngnomem1_dead.wav - sva06b = vs_ngnomem1_hit2.wav
+// sound clips without strref: svn04a = vs_ngnomem2_atk1.wav - svn04b = vs_ngnomem2_atk2.wav - svn05a = vs_ngnomem2_hit1.wav - svn05b = vs_ngnomem2_hit3.wav - svn06a = vs_ngnomem2_dead.wav - svn06b = vs_ngnomem2_hit2.wav
+
+
+/* =================================================== *
+ *              More NWN Animations (650)              *
+ * --------------------------------------------------- *
+ *  t-nwnanims.tpa traified                            *
+ * =================================================== */
 
 // amel_pc_nwn soundset
-@575 = ~What do you want?~ [T-AML02A]
-@576 = ~Taste steel!~ [T-AML01A]
-@577 = ~Die as you must!~ [T-AML01B]
-@578 = ~Yes?~ [T-AML02B]
+// --------------------
+@10651 = ~What do you want?~ [t-aml02a] // = vs_nrangem1_hi.wav   - #52643
+@10652 = ~Taste steel!~ [t-aml01a]      // = vs_nrangem1_bat1.wav - #52638
+@10653 = ~Die as you must!~ [t-aml01b]  // = vs_nrangem1_bat2.wav - #52639
+@10654 = ~Yes?~ [t-aml02b]              // = vs_nrangem1_yes.wav  - #52644
+// sound clips without strref: t-aml03 = vs_nrangem1_atk2.wav - t-aml04 = vs_nrangem1_atk3.wav - t-aml07 = vs_nrangem1_hit2.wav - t-aml08 = vs_nrangem1_hit3.wav - t-aml09 = vs_nrangem1_dead.wav
+
+// vedred_nwn soundset
+// -------------------
+// sound clips without strref: t-ved01a = vs_fx2fighm_bat1.wav - t-ved01b = vs_fx2fighm_bat2.wav - t-ved02b = vs_fx2fighm_hi.wav - t-ved02a = vs_fx2fighm_yes.wav - t-ved03 = vs_fx2fighm_atk2.wav - t-ved04 = vs_fx2fighm_atk3.wav - t-ved07 = vs_fx2fighm_hit1.wav - t-ved08 = vs_fx2fighm_hit3.wav - t-ved09 = vs_fx2fighm_dead.wav
+
+
+/* =================================================== *
+ *        More PsT Animations (710-720-730-740)        *
+ * --------------------------------------------------- *
+ *  t-pstanims.tpa traified                            *
+ * =================================================== */
+
+// Tieflings males NWN soundset
+// ----------------------------
+@71001 = ~You cannot win this fight!~ [t-tim01a]                                    // vs_nx2valem_bat1.wav - #101088
+@71003 = ~Into the flames we leap!~ [t-tim01b]                                      // vs_nx2valem_bat2.wav - #101089
+@71003 = ~Ha ha ha ha!~ [t-tim01c]                                                  // vs_nx2valem_bat3.wav
+@71004 = ~My blood calls for yours and it *will* be satisfied.~ [t-tim01d]          // vs_nx2valem_tant.wav - #101094
+@71005 = ~Do you wish to die now? Because I can certainly arrange that.~ [t-tim01e] // vs_nx2valem_warn.wav - #101126
+@71006 = ~Greetings.~ [t-tim02a]                                                    // vs_nx2valem_hi.wav   - #101113
+@71007 = ~Yes.~ [t-tim02b]                                                          // vs_nx2valem_yes.wav  - #101114
+@71008 = ~At your command.~ [t-tim02c]                                              // vs_nx2valem_slct.wav - #101112
+@71009 = ~What do we have here?~ [t-tim02d]                                         // vs_nx2valem_look.wav - #101102
+@71010 = ~No.~ [t-tim11]                                                            // vs_nx2valem_no.wav   - #101115
+@71011 = ~My magic did not work!~ [t-tim12]                                         // vs_nx2valem_spel.wav - #101099
+// sound clips without strref: t-tim03 = vs_nx2valem_atk1.wav - t-tim07 = vs_nx2valem_hit1.wav - t-tim09 = vs_nx2valem_dead.wav
+
+// Tieflings females NWN soundset
+// ------------------------------
+@71021 = ~Your time in this realm is over!~ [t-tif01] // = c_tiefling_bat1.wav - #10836
+@71022 = ~Yes? I listen.~ [t-tif02]                   // = c_tiefling_slct.wav - #10837
+// sound clips without strref: t-tif03 = c_tiefling_atk1.wav - t-tif07 = c_tiefling_hit1.wav - t-tif09 = c_tiefling_dead.wav
