@@ -52,10 +52,12 @@ z_*.*
 # ========================================
 # ignore all files in any directory named
 # ========================================
-# legacy/
+animpatch/
+legacy/
 backup/
 z_BatLoaAnimation-master/
 z_ModResource_BeeAnimation-master/
 z_UlbsAnimationPack-master/
+z_mwyvmtan/
 
 /infinityanimations/animpatch
