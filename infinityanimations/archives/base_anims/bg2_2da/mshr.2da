@@ -1,0 +1,41 @@
+Mshr/shrieker
+***
+                 SOUND
+ATTACK           shrie03a shrie04a
+ATTACK           2 2
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           shrie07a shrie07b
+DAMAGE           0 0
+DIE              shrie09a shrie09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ***
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     shrie03a shrie03b
+ATTACK_SLASH     2 2
+ATTACK_BACKSLASH shrie03b shrie03b
+ATTACK_BACKSLASH 2 2
+ATTACK_JAB       shrie04a shrie04b
+ATTACK_JAB       2 2
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       ***
+Battle_Cry       0
+Selection        ***
+Selection        0

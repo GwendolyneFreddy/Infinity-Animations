@@ -1,0 +1,41 @@
+Mdgu/doom_guard
+***
+                 SOUND
+ATTACK           t-dgu03a t-dgu03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-dgu07a t-dgu08b
+DAMAGE           0 0
+DIE              t-dgu10a t-dgu10b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            t-dgu05c t-dgu05d
+SHOOT            0 0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-dgu04a t-dgu04b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-dgu05a t-dgu05b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       t-dgu03c t-dgu04c
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-dgu02a t-dgu02b
+Battle_Cry       0 0
+Selection        t-dgu01a t-dgu01b
+Selection        0 0
