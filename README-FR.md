@@ -191,6 +191,15 @@ Voici le tableau des options concernées :</br></br>
 		<th>Description</th>
 	</tr>
 	<tr>
+		<td><div align="center"><strong>ia_force_soundset</strong></td>
+		<td><a name="forcelanguage" id="forcelanguage"></a><ins>Tous les contenus disposant de fichiers sons</ins> : IA installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Cependant, attribuer la valeur 1 à cette variable permet de forcer la langue par défaut de ces fichiers. Par exemple :<br><br>
+		- Vous jouez un jeu en français et avez installé IA en français ==> les fichiers sons français sont installés.<br>
+		- Vous jouez un jeu en français et avez installé IA en anglais ==> les fichiers sons français sont installés si ia_force_soundset est égale à 0.<br>
+		- Vous jouez un jeu en français et avez installé IA en anglais ==> les fichiers sons anglais sont installés si ia_force_soundset est égale à 1.<br><br>
+		<em>0 = Installer les fichiers sons dans la langue du jeu [par défaut]</em><br>
+		1 = Installer les fichiers sons dans la langue sélectionner pour installer le mod</td>
+	</tr>
+	<tr>
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
 		<td><ins>IA Content - BG2 Restores</ins><br><br>
 		- Contenu : femme araignée statique (MSPL), gobelin d'élite avec arc (MGO4), gobelin d'élite avec hache (MGO3), liche (MLIC), liche noire (MLER), marilith (MTAN), myconide bleu (MMY2), orog (MNO1), orog d'élite (MNO2), orque d'élite mêlée (MOR3). Comprend les tables des jeux de sons des créatures concernées.<br>
@@ -198,13 +207,13 @@ Voici le tableau des options concernées :</br></br>
 		<em>Installation automatique seulement si nécessaire [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center"><strong>ia_ee_restore**<br><br>
-		</td>
+		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
+		(uniquement pour les jeux EE)</td>
 		<td><ins>IA Content - Base EE Content (nouveau)</ins><br><br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
-		<em>Installation automatique [par défaut]</em></td>
+		<em>1 = Installation automatique [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
@@ -276,7 +285,7 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
-		(uniquement pour EE)</td>
+		(uniquement pour les jeux EE)</td>
 		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
 		Même contenu que le précédent, mais compatible avec les jeux EE.<br><br>
 		0 = Ne pas l'installer<br>
@@ -735,9 +744,10 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 - L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
 - Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
 - <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : ...
-- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_fuctions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
+- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_functions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
+- <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a> : merci pour avoir partagé le code de son projet de mod *Infinity Sounds* qui résout les conflits entre soundsets d'animations de créatures.
 - Moddeurs : <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
-- Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a>.
+- Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> (relecture par <a href="http://www.shsforums.net/user/16735-luren/">Luren</a>).
 - Spécial : <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> pour la relecture de la documentation et sa contribution à la conversion des animations de EE pour ToB.
 
 ## 
@@ -774,6 +784,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 &#9755; <ins>a.Principales mises à jour</ins>
   - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). :wink:
   - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
+  - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux, les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
   - Ajout d'une nouvelle catégorie de contenu (animations de EE pour ToB) : sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragon vert juvénile, dragon rouge juvénile, dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
   - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : Poulet marron (Jarl), Wolfhound de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
   - Compatibilité native avec les jeux Enhanced :
@@ -788,7 +799,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Composant « Plus d'animations de More Planescape: Torment » [710-720-760-740] : <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, améliorée par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Réparti dans plusieurs composants : <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a>.
   - Intégration des correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) :
-    - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
+    - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch, , des <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">animations de wiverne majeure et de tanar'ri</a> de Miloch, et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
     - Archive IA_BGII_IWDII : Correctif par Gwendolyne de l'<a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">animation de mort du petit élémentaire d'eau d'IWD2</a>.
     - Archive IA_IWD : Correctif par Miloch des <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">sahuagins portant une arbalète qui faisaient crasher le jeu en marchant</a>.
     - Archive IA_NWN_01_modron : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">basilic de NWN</a>.
@@ -800,6 +811,8 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg.
     - Archive IA IWD : petites armures animées (bronze/sombre/verte), barbares guerriers (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
     - Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
+    - IA installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Une <a href="#forcelanguage">variable<a> définie dans le fichier *infinityanimations-config-default.ini* permet toutefois de forcer la langue par défaut de ces fichiers.
+<br><br>
 
 &#9755; <ins>b. Refonte générale</ins>
   - Ajout du fichier de meta-données *infinityanimations.ini*pour intégration dans le projet « Project Infinity » d'AL|EN.
@@ -839,6 +852,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
    - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et facilité sa maintenance (ia_restore_bg2_animations.tpa, ia_update_cre_animation_offset.tpa, ia_correcting_creature animations.tpa). :wink:
     - Compatibilité avec ToBEx : .
     - Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.
+    - Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.
     - <ins>ia_restore_bg2_animations.tpa</ins> :
         - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
