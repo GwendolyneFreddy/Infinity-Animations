@@ -1,7 +1,8 @@
 
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Infinity-Animations?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=Anglais%20%7C%20Fran%C3%A7ais&color=limegreen)
 <a href="README.md"><img align="right" src="infinityanimations/documentation/images/uk-flag-32.png" title="English Readme"></a>
 
 
@@ -20,6 +21,13 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 ## 
 
 :warning: Readme writing in progress... Don't try to download and install this mod as it is a WIP version and its install will fail, because of missing files still in development or in beta testing
+
+[![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/Infinity-Animations?style=plastic&label=cr%C3%A9ation)](https://badges.pufler.dev)
+![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Infinity-Animations?style=plastic&label=taille)
+[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Infinity-Animations?color=cyan&style=plastic)](https://badges.pufler.dev) 
+![Maintenance](https://img.shields.io/static/v1?label=maintenu%20%3F&message=oui&color=greenlight&style=plastic)
+![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/Infinity-Animations?color=blueviolet&label=contributeurs&style=plastic)
+[![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/Infinity-Animations?size=30&padding=5&bots=true)](https://badges.pufler.dev)
 
 ## 
 
@@ -799,7 +807,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Composant « Plus d'animations de More Planescape: Torment » [710-720-760-740] : <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Mise à jour par Miloch's du fichier t-pstanims.tpa</a>, améliorée par <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Réparti dans plusieurs composants : <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a>.
   - Intégration des correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) :
-    - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch, , des <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">animations de wiverne majeure et de tanar'ri</a> de Miloch, et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
+    - Archive IA base_anims : Correctifs des <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes</a> de Miloch, des <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">animations de wiverne majeure et de tanar'ri</a> de Miloch (qui corrige un problème de plantage de longue date avec lors de la morts de tanar'ri et de wyverne blanche avec certaines cartes graphiques - principalement des cartes ATI HD, semble-t-il), et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger</a> de Polytope.
     - Archive IA_BGII_IWDII : Correctif par Gwendolyne de l'<a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">animation de mort du petit élémentaire d'eau d'IWD2</a>.
     - Archive IA_IWD : Correctif par Miloch des <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">sahuagins portant une arbalète qui faisaient crasher le jeu en marchant</a>.
     - Archive IA_NWN_01_modron : Correctif par Gwendolyne de l'animation de <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">basilic de NWN</a>.

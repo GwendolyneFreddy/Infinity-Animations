@@ -1,5 +1,6 @@
 
-![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Infinity-Animations?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/Infinity-Animations?include_prereleases&color=darkred)<a name="top" id="top"></a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
 <a href="README_FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Readme français"></a>
@@ -21,6 +22,12 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE and EET<h3>
 ## 
 
 :warning: Readme writing in progress... Don't try to download and install this mod as it is a WIP version and its install will fail, because of missing files still in development or in beta testing
+
+[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/Infinity-Animations?style=plastic)](https://badges.pufler.dev)
+![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Infinity-Animations?style=plastic)
+[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Infinity-Animations?color=cyan&style=plastic)](https://badges.pufler.dev) 
+![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
+![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/Infinity-Animations?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/Infinity-Animations?size=30&padding=5&bots=true)](https://badges.pufler.dev)
 
 ## 
 
@@ -65,11 +72,16 @@ Finally, this mod contains optional components that implement many new animation
 
 ## <a name="compat" id="compat"></a>Compatibility
 
+#### Games supported
 Infinity Animations is designed to work on most Infinity Engine games. This includes:
 
-- The series of Enhanced Editions published by Beamdog, which at present includes Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE) and Icewind Dale: Enhanced Edition (IWDEE). The BGEE Siege of Dragonspear expansion (SoD) is supported as well. All of the Enhanced Edition games include the original expansion packs, e.g. IWDEE includes Heart of Winter (HoW) and Trials of the Luremaster (TotLM)..
+- The series of Enhanced Editions published by Beamdog, which at present includes Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE) and Icewind Dale: Enhanced Edition (IWDEE). The BGEE Siege of Dragonspear expansion (SoD) is supported as well. All of the Enhanced Edition games include the original expansion packs, e.g. IWDEE includes Heart of Winter (HoW) and Trials of the Luremaster (TotLM).
 - The original Baldur's Gate II (BG2, or just SoA) with the Throne of Bhaal (ToB) expansion. **Make sure you have Throne of Bhaal patched to version 26498.** Check the ReadMe files related to your patch in your game folder and the <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a> website if necessary.
 - The conversion projects based on ToB: <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) and <a href="https://github.com/K4thos/EET/releases">Enhanced Edition Trilogy</a> (EET).
+
+## 
+
+#### Other Mods Compatibility
 
 This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
 
@@ -77,7 +89,11 @@ Install it after most other mods, particularly those that add creatures or anima
 
 Modders who wish to make their mods compatible with IA are strongly recommended to read the <a href="">Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
 
->Although it is not required for the 1pp mod to function properly, TOB players are strongly recommended to download and install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+## 
+
+#### Installation Order
+
+>Although it is not required for the 1pp mod to function properly, TOB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 
 **Start a new game** after installing this mod, or use the "Saved Game Animation Fixer" component if you're reluctant to do that.</br>
 <div align="right"><a href="#top">Back to top</a></div>
@@ -96,7 +112,7 @@ Modders who wish to make their mods compatible with IA are strongly recommended 
 
 *__Disable any antivirus__ or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.*
 
-You can extract files from the archive using <a href="http://www.7-zip.org/download.html">7zip</a>, <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
+You can extract files from the archive using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p></br>
@@ -128,7 +144,7 @@ The Enhanced Editions are actively supported games. Please note that every patch
 
 Infinity Animations for Windows is distributed as an extractable compressed archive and includes a WeiDU installer.
 
-Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*). On successful extraction, there should be a :file_folder: infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **`setup-infinityanimations.exe`** and follow the instructions on screen.
+Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*), using <a href="https://www.7-zip.org/download.htmll">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a>, or another file compression utility that handles .zip files. On successful extraction, there should be a :file_folder: infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **`setup-infinityanimations.exe`** and follow the instructions on screen.
 
 Run **`setup-infinityanimations.exe`** in your game folder to reinstall, un-install or otherwise change components.
 
@@ -168,11 +184,11 @@ In addition to the methods above for removing individual components, you can com
 
 #### <a name="config" id="config">:warning: Warning: new installation process
 
-##### As of version 6.0.0, options needed for installation are read from <a href="infinityanimations/infinityanimations-config-default.ini">infinityanimations-config-default.ini</a> file, or *infinityanimations-config-user.ini* if it exists.
+##### As of version 6.0.0, configuration options needed for installation are read from <a href="infinityanimations/infinityanimations-config-default.ini">infinityanimations-config-default.ini</a> file, or *infinityanimations-config-user.ini* if it exists.
 
-The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations :file_folder: **content** or :file_folder: **restore** subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
+The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations :file_folder: **_content_** or :file_folder: **_restore_** subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
 
-From now on, the content needed by Infinity Animations is included in the :file_folder: **archives** folder and automatically copied by the main component into your :file_folder: **override** folder. Being useless, the respective :file_folder: *content* and :file_folder: *restore* sub-folders have been removed.
+From now on, the content needed by Infinity Animations is included in the :file_folder: **_archives_** folder and automatically copied by the main component into your :file_folder: **_override_** folder. Being useless, the respective :file_folder: *content* and :file_folder: *restore* sub-folders have been removed.
 
 By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit **_infinityanimations-config-default.ini_** (found in :file_folder: infinityanimations folder) with Notepad or another text editor, then save it as **_infinityanimations-config-user.ini_**.
 
@@ -358,6 +374,8 @@ Here is a chart listing the options related to the installation process:</br></b
 ## <a name="components" id="components"></a>Components
 
 The installer includes the following components. The number of each is the component *`DESIGNATED`* number which gives it a fixed install position, lets other components detect it and allows automated installers to specify component choices.
+
+## 
 
 ><span style="margin-left: 50px;"><a href="#0">[0] Infinity Animations</a> <em>&nbsp;&nbsp;&nbsp;[main component]</em></span></br>
 
@@ -761,12 +779,12 @@ This component corrects changed creature animations in area files for easier ref
 - <a href="https://gibberlings3.github.io/iesdp/">IESDP</a>, maintained by igi and lynx.
 - <a href="https://github.com/Argent77/NearInfinity/releases">Near Infinity</a>, by Jon Olav Hauglid, FredSRichardson, and Argent77.
 - <a href="https://www.gibberlings3.net/mods/tools/dltcep/">DLTCEP</a>, by Avenger.
-- <a href="http://www.teambg.eu/?page=tools&amp;cat=32">BAM Workshop</a> by Glenn Flansburg.
+- <a href="http://www.baldursgatemods.com/forums/index.php?action=downloads;sa=view;down=68">BAM Workshop</a> by Glenn Flansburg.
 - <a href="http://notepad-plus-plus.org/">Notepad++</a> by the Notepad++ team, Don Ho, and the spellcheck plug-in.
 - <a href="http://www.shsforums.net/files/file/1048-weidu-highlighter-for-notepad/">WeiDU Notepad++ Highlighters </a> by Argent77.
 - <a href="http://www.editpadpro.com/editpadclassic.html">EditPad Classic</a> by Jan Goyvaerts.
 - <a href="http://www.pspad.com/en/">PSPad</a> by Jan Fiala</a>.
-- <a href="http://www.bulkrenameutility.co.uk/">Bulk Rename Utility</a>, by TGRMN Software.
+- <a href="https://www.bulkrenameutility.co.uk/">Bulk Rename Utility</a>, by TGRMN Software.
 
 ## 
 
@@ -780,7 +798,7 @@ This component corrects changed creature animations in area files for easier ref
 <hr>
 
 
-## <a name="versions" id="versions"></a>Versions History
+## <a name="versions" id="versions"></a>Version History
 
 ##### Version 6.0.0 &nbsp;(September nn, 2020)
 
@@ -802,7 +820,7 @@ This component corrects changed creature animations in area files for easier ref
     - More Planescape: Torment Animations component [710-720-760-740]: <a href="http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274">Miloch's updated t-pstanims.tpa</a>, tuned by <a href="http://www.shsforums.net/topic/55059-error-installing-ia-read-out-of-bounds/?p=544741">Lollorian</a>.
     - Scattered into various components: <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a>.
   - Integrated all BWP Fixpack graphic fixes (thanks to their authors!):
-    - IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a>, Miloch's <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">Wyvern/Tanar'ri Animation Fix</a> and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.
+    - IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a>, Miloch's <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">Wyvern/Tanar'ri Animation Fix</a> (that fixes a long-standing issue with crashes when killing tanar'ri and white wyverns with certain graphics cards - mainly ATI HD cards it seems) and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.
     - IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a>.
     - IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a>.
     - IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.
