@@ -1,5 +1,6 @@
-<div align="center"><h1>Mymod</h1>
+<div align="center"><h1>Infinity Animations (WIP)</h1>
 </div>
+
 
 ![Latest Release](https://img.shields.io/github/v/release/gwendolynefreddy/Infinity-Animations?include_prereleases&color=darkred&label=version)
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold&label=publi%C3%A9%20le)

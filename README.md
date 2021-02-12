@@ -3,7 +3,7 @@
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
-<a href="README_FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Readme français"></a>
+<a href="README-FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Readme français"></a>
 
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>

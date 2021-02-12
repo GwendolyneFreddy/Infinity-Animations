@@ -1,8 +1,8 @@
 
-![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Infinity-Animations?include_prereleases&color=darkred)<a name="top" id="top"> </a>
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold)
-![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=Anglais%20%7C%20Fran%C3%A7ais&color=limegreen)
+![Latest Release](https://img.shields.io/github/v/release/gwendolynefreddy/Infinity-Animations?include_prereleases&color=darkred&label=version)<a name="top" id="top"> </a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold&label=publi%C3%A9%20le)
+![Platform](https://img.shields.io/static/v1?label=plateformes&message=windows%20%7C%20linux&color=informational)
+![Language](https://img.shields.io/static/v1?label=langues&message=Anglais%20%7C%20Fran%C3%A7ais&color=limegreen)
 <a href="README.md"><img align="right" src="infinityanimations/documentation/images/uk-flag-32.png" title="English Readme"></a>
 
 
@@ -24,7 +24,7 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 
 [![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/Infinity-Animations?style=plastic&label=cr%C3%A9ation)](https://badges.pufler.dev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Infinity-Animations?style=plastic&label=taille)
-[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Infinity-Animations?color=cyan&style=plastic)](https://badges.pufler.dev) 
+[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Infinity-Animations?color=cyan&style=plastic&label=visites)](https://badges.pufler.dev)
 ![Maintenance](https://img.shields.io/static/v1?label=maintenu%20%3F&message=oui&color=greenlight&style=plastic)
 ![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/Infinity-Animations?color=blueviolet&label=contributeurs&style=plastic)
 [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/Infinity-Animations?size=30&padding=5&bots=true)](https://badges.pufler.dev)
