@@ -1326,9 +1326,9 @@ END
  *  Male Vampires get the moinesse_vampire animation.                                          *
  * =========================================================================================== */
 
-ACTION_CLEAR_ARRAY GW_moinesse_vampire animation
+ACTION_CLEAR_ARRAY GW_moinesse_vampire
 
-ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_vampire animation BEGIN
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_moinesse_vampire BEGIN
 
 // BG2
 // ---
