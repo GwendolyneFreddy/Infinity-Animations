@@ -1,0 +1,10 @@
+====================================================================================
+  CRE     (animation)                        - weapon   (ap) issue        
+====================================================================================
+DROTH    (OGRE_MAGE)                         - SW1H43   (S3) does not match S1 
+IHOBGOB  (HOBGOBLIN)                         - XVARTIL  (SS) does not match S1 BW 
+KAHRK    (OGRE_MAGE)                         - SW1H43   (S3) does not match S1 
+OGREMA03 (OGRE_MAGE)                         - SW1H44   (S3) does not match S1 
+OGREMA_D (OGRE_MAGE)                         - SW1H43   (S3) does not match S1 
+SKELSU11 (SKELETON_MONSTER)                  - SW1H02   (S0) does not match AX MC S1 S2 
+

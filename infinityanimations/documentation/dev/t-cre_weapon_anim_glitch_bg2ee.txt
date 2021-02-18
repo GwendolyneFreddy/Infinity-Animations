@@ -1,0 +1,45 @@
+====================================================================================
+  CRE     (animation)                        - weapon   (ap) issue        
+====================================================================================
+CHEVIL04 (SAHUAGIN)                          - S1-10    (  ) does not match CB SP QS 
+GOLBON01 (SKELETON_WARRIOR)                  - s3-8m3   (  ) does not match AX MC S1 S2 
+GORSTA06 (HOBGOBLIN)                         - wyvern1  (  ) does not match S1 BW 
+GORSTA06 (HOBGOBLIN)                         - wyvern2  (  ) does not match S1 BW 
+GORSTA10 (GNOLL)                             - umber01  (H6) does not match HB S1 
+GRTOMB01 (SKELETON_MONSTER)                  - sper09   (SP) does not match AX MC S1 S2 
+HGBER01  (GIANT_FIRE)                        - hgber01  (S2) does not match AX WH 
+HGMAG01  (GIANT_FIRE)                        - b1-8     (  ) does not match AX WH 
+HGMAG02  (GIANT_FIRE)                        - b1-8     (  ) does not match AX WH 
+HOBSHA01 (HOBGOBLIN)                         - BLUN04   (MC) does not match S1 BW 
+HOBWIZ01 (HOBGOBLIN)                         - BLUN04   (MC) does not match S1 BW 
+KALAH    (OGRE_MAGE)                         - SLNG01   (SL) does not match S1 
+KOBSHA01 (KOBOLD)                            - blun04   (MC) does not match BW S1 SS 
+KUOCLE20 (KUO-TOA)                           - blun33   (MC) does not match CB SL SP 
+KUOMON01 (KUO-TOA_LARGE)                     - s1-8     (  ) does not match CB SL SP 
+OHBLIZ02 (LIZARD_MAN_ELITE)                  - SPER02   (SP) does not match CL HB QS 
+OHBRAK01 (RAKSHASA)                          - DAGG24   (DD) does not match CB S1 
+OHBRAK02 (RAKSHASA)                          - SW1H76   (SC) does not match CB S1 
+OHBRAK03 (RAKSHASA)                          - SW1H22   (SC) does not match CB S1 
+OHHBOROK (YUAN-TI_ELITE)                     - SW1H44   (S3) does not match AX CL S1 
+PALKNI01 (OGRE_MAGE)                         - SW2H01   (S2) does not match S1 
+PLSHHG02 (HOBGOBLIN)                         - BLUN04   (MC) does not match S1 BW 
+PPALTK1  (KOBOLD)                            - staf01   (QS) does not match BW S1 SS 
+PPALTK2  (KOBOLD)                            - blun01   (CL) does not match BW S1 SS 
+SAHCAPT0 (SAHUAGIN)                          - S1-10    (  ) does not match CB SP QS 
+SAHKIN01 (SAHUAGIN_LARGE)                    - s1-4     (  ) does not match CB SP QS 
+SAHKNG01 (SAHUAGIN_LARGE)                    - S1-12    (  ) does not match CB SP QS 
+SAHPR4   (SAHUAGIN)                          - S1-8     (  ) does not match CB SP QS 
+SAHPRI01 (SAHUAGIN_LARGE)                    - s1-4     (  ) does not match CB SP QS 
+SAHREB02 (SAHUAGIN_LARGE)                    - S1-8     (  ) does not match CB SP QS 
+SKELSU11 (SKELETON_MONSTER)                  - SW1H02   (S0) does not match AX MC S1 S2 
+SKELWA03 (SKELETON_MONSTER)                  - BOW01    (BW) does not match AX MC S1 S2 
+SURAKW1  (RAKSHASA)                          - sw1h20   (SC) does not match CB S1 
+SURAKW2  (RAKSHASA)                          - sw1h20   (SC) does not match CB S1 
+SURAKW3  (RAKSHASA)                          - sw1h20   (SC) does not match CB S1 
+SURAKW4  (RAKSHASA)                          - sw1h20   (SC) does not match CB S1 
+SWSHAMAN (KOBOLD)                            - MISC5T   (Q3) does not match BW S1 SS 
+UDSAHA   (SAHUAGIN_LARGE)                    - S1-8     (  ) does not match CB SP QS 
+UHOGRE01 (OGRE_MAGE)                         - BLUN06   (MS) does not match S1 
+UHOGRE04 (GNOLL)                             - COMPB05  (BW) does not match HB S1 
+YSGP02   (KOBOLD)                            - sw1h44   (S3) does not match BW S1 SS 
+

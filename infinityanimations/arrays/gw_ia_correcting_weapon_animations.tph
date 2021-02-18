@@ -1,0 +1,128 @@
+/* ======================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                *
+ *               A R R A Y S    ( T A B L E S )    :    P A T C H    C R E A T U R E S    W E A P O N    A N I M A T I O N S               *
+ *                                                                                                                                         *
+ *            Array used to patch vanilla creature files (weapons slots) by ia_correcting_weapon_animations.tpa WeiDU routine.             *
+ *                                                                                                                                         *
+ *                 Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.          *
+ *                                                                                                                                         *
+ * ======================================================================================================================================= *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                      *
+ * -----------------------------------                                                                                                     *
+ *  - GW_fix_weapon_anim       :   LISTS vanilla creatures needing to be patched.                                          => line #  17   *
+ *                                 LISTE les créatures du jeu nécessitant d'être modifiées.                                                *
+ * ======================================================================================================================================= */
+
+/* =========================================================================== *
+ *  ARRAY GW_fix_weapon_anim : LISTS vanilla creatures needing to be patched.  *
+ * =========================================================================== */
+
+ACTION_CLEAR_ARRAY GW_fix_weapon_anim
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_fix_weapon_anim BEGIN
+//      Creature              Animation        slot  weapon to patch    new app => new weapon
+// ------- 0 ------------------- 1 ------------ 2 ----- 3 ----------------- 4 ------------------------------------------------------------------------------------
+
+// BG:EE, BGT and Tutu
+// -------------------
+"%tutu_var%DROTH",			OGRE_MAGE,			1,	sw1h43,					S1	=> t-kata43	// Droth               - sw1h43 (S3) does not match S1 // TODO SW1H01 dans BG (S1) mais S0 dans 1PP _comps01
+"%tutu_var%IHOBGOB",		HOBGOBLIN,			2,	"%tutu_var%xvartil",	S1	=> t-xvarti	// Hobgoblin           - xvartil (SS) does not match S1 BW not droppable dans 
+"%tutu_var%KAHRK",			OGRE_MAGE,			1,	sw1h43,					S1	=> t-kata43	// Kahrk               - sw1h43 (S3) does not match S1 // %tutu_var%SW1H04 dans BG
+"%tutu_scripto%GREMA03",	OGRE_MAGE,			1,	sw1h44,					S1	=> t-kata44	// Ogre Mage           - sw1h44 S3 does not match S1 // TODO SW1H01 dans BG (S1) mais S0 dans 1PP _comps01
+"%tutu_scripto%GREMA_D",	OGRE_MAGE,			1,	sw1h43,					S1	=> t-kata43	// Ogre Mage           - sw1h43 (S3) does not match S1 // TODO SW1H01 dans BG (S1) mais S0 dans 1PP _comps01 not dropab
+SKELSU11,					SKELETON_WARRIOR,	1,	sw1h02,					S1	=> t-sw1h02 // Skeleton Warrior    - SW1H02 (S0) does not match AX MC S1 S2
+
+// SoD
+// ---
+BDBATTUK,					HOBGOBLIN,			2,	sw1h01,					S1	=> t-sw1h01 // Battuks Softbelcher - SW1H01 (S0) does not match S1 BW
+BDCCHOB1,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // Mercenary           - SW1H01 (S0) does not match S1 BW
+BDCCHOB2,					HOBGOBLIN,			1,	ax1h01,					S1	=> t-hobax1	// Crusader Recruit    - AX1H01 (AX) does not match S1 BW
+BDCRU102,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // Mercenary           - SW1H01 (S0) does not match S1 BW
+BDCRU117,					HOBGOBLIN,			2,	dagg01,					S1	=> t-dagg01	// Mercenary           - DAGG01 (DD) does not match S1 BW
+BDCRU46,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Mercenary           - SW1H07 (SS) does not match S1 BW
+BDCRUM44,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Mercenary           - SW1H07 (SS) does not match S1 BW
+BDCRUM48,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // Mercenary           - SW1H01 (S0) does not match S1 BW
+BDCRUML7,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // id.
+BDCRUR26,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // Crusader Recruit    - SW1H01 (S0) does not match S1 BW
+BDCRUS14,					HOBGOBLIN,			2,	dagg01,					S1	=> t-dagg01	// Twelve-Fingers      - DAGG01 (DD) does not match S1 BW
+BDCRUSM5,					HOBGOBLIN,			1,	sw1h01,					S1	=> t-sw1h01 // Mercenary           - SW1H01 (S0) does not match S1 BW
+BDDSARC4,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Mercenary           - SW1H07 (SS) does not match S1 BW
+BDHOBG03,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Hobgoblin Marksman  - SW1H07 (SS) does not match S1 BW
+BDHOBG04,					HOBGOBLIN,			1,	blun04,					S1	=> t-hobb04	// Hobgoblin Priest    - BLUN04 (MC) does not match S1 BW
+BDMURS,						OGRE_MAGE,			1,	blun15,					S1	=> t-ogrb15	// Murs                - BLUN15 (MS) does not match S1
+BDMURS2,					OGRE_MAGE,			1,	blun15,					S1	=> t-ogrb15	// id.
+BDVIDYAD,					RAKSHASA,			1,	sw1h52,					S1	=> t-scim52 // Vidyadhar           - SW1H52 (SC) does not match CB S1
+BDWAVE16,					OGRE_MAGE,			1,	sw1h43,					S1	=> t-kata43 // Ogre Mage           - SW1H43 (S3) does not match S1
+BDWAVE42,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Kegleg              - SW1H07 (SS) does not match S1 BW
+BDWAVE53,					HOBGOBLIN,			2,	sw1h07,					S1	=> t-sw1h07 // Crusader            - SW1H07 (SS) does not match S1 BW
+BDCCKOB1,					KOBOLD,				1,	bow05,					BW	=> t-bow05W // Crusader Recruit    - BOW05 (BS) does not match BW SS
+BDCRU115,					KOBOLD,				1,	bow05,					BW	=> t-bow05W // Mercenary           - BOW05 (BS) does not match BW SS
+BDCRUM47,					KOBOLD,				1,	bow05,					BW	=> t-bow05W // id.
+BDCRUM47,					KOBOLD,				2,	dagg01,					SS	=> t-dag01S // Mercenary           - DAGG01 (DD) does not match BW SS
+BDFORCW1,					KOBOLD,				1,	bow06,					BW	=> t-bow06W // Mercenary           - BOW06 (BS) does not match BW SS
+BDKAMBAL,					KOBOLD,				1,	bow06,					BW	=> t-bow06W // Kåmbolder           - BOW06 (BS) does not match BW SS
+/*BDCRU02D,					HOBGOBLIN,			1,											// Crusader Recruit    - HALB01 (HB) does not match S1 BW : not patched because DEAD state
+BDOGRE05,					OGRE_MAGE,			1,											// Ogre Shaman         - BLUN01 (CL) does not match S1 : not patched because a crushing weapon may be associated with a bare hand attack. */
+
+// ToB
+// ---
+HOBGOBSU,					HOBGOBLIN,			1,	bow05,					BW	=> t-bow05  // Hobgoblin Elite     - BOW05 (BS) does not match S1 BW
+HOBGOBSU,					HOBGOBLIN,			2,	sw1h01,					S1	=> t-sw1h01 // Hobgoblin Elite     - SW1H01 (S0) does not match S1 BW
+HOBGOBSU,					HOBGOBLIN,			2,	comps01,				S1	=> t-comp01 // Hobgoblin Elite     - COMPS01 (S0) does not match S1 BW
+HOBSHA01,					HOBGOBLIN,			1,	blun04,					S1	=> t-hobb04	// Hobgoblin Shaman    - BLUN04 (MC) does not match S1 BW
+HOBWIZ01,					HOBGOBLIN,			1,	blun04,					S1	=> t-hobb04	// Hobgoblin Wizard    - id.
+//KALAH,					OGRE_MAGE,			1,	sling01,					=>          // Kalah               - SLNG01 (SL) does not match S1 : impossible to be fixed
+KUOCLE20,					KUO-TOA,			1,	blun33,					SP	=> t-blu33c // Kuo-toan Captain    - BLUN33 (MC) does not match CB SL SP
+PALKNI01,					OGRE_MAGE,			1,	sw2h01,					S1	=> t-ogr2hs	// Ogre Mage           - SW2H01 (S2) does not match S1
+PLSHHG02,					HOBGOBLIN,			1,	blun04,					S1	=> t-hobb04	// Hobgoblin Wizard    - BLUN04 (MC) does not match S1 BW
+SURAKW1,					RAKSHASA,			1,	sw1h20,					S1	=> t-scim20 // Rakshasa            - sw1h20 (SC) does not match CB S1
+SURAKW2,					RAKSHASA,			1,	sw1h20,					S1	=> t-scim20 // id.
+SURAKW3,					RAKSHASA,			1,	sw1h20,					S1	=> t-scim20 // id.
+SURAKW4,					RAKSHASA,			1,	sw1h20,					S1	=> t-scim20 // id.
+UHOGRE01,					OGRE_MAGE,			1,	blun06,					S1	=> t-ogrb06	// Madulf              - BLUN06 (MS) does not match S1
+YSGP02,						KOBOLD,				1,	sw1h44,					SS	=> t-katk44 // Merlinious          - sw1h44 (S3) does not match BW SS
+
+/*PALKNI02,					OGRE,				1,	sw2h01,					S1	=> t-ogr2hs // Ogre                - BLUN04 (MC) does not match S1 BW : not patched because useless
+PALKNI04,					OGRE,				1,	sper01,					S1	=> t-ogrspr // Ogre                - SPER01 (SP) does not match S1 BW : not patched because useless
+MUGGER4,					OGRE,				1,	blun06,					S1	=> t-ogrb06 // Ogre                - BLUN06 (MS) does not match S1 BW : not patched because useless
+SKELWA03,					SKELETON_MONSTER,	,								=>          //                     - BOW01 (BW) does not match AX MC S1 S2: impossible to be patched (no bow animation) */
+
+// BG2:EE
+// ------
+OHBLIZ02,					LIZARD_MAN_ELITE,	1,	sper02, 				QS	=> t-lizs02	// Lizard Man Elite    - SPER02 (SP) does not match CL HB QS
+OHBRAK01,					RAKSHASA,			1,	dagg24,					S1	=> t-dagg24 // Maharajah           - DAGG24 (DD) does not match CB S1
+OHBRAK02,					RAKSHASA,			1,	sw1h76,					S1	=> t-scim76 // Ruhk                - SW1H76 (SC) does not match CB S1
+OHBRAK03,					RAKSHASA,			1,	sw1h22,					S1	=> t-scim22 // Rakshasa            - SW1H22 (SC) does not match CB S1
+//OHHBOROK,					YUAN-TI_ELITE,		1,	sw1h44,					S1	=> t-kata44 // Borok-Tosst         - SW1H44 (S3) does not match AX CL S1 : Not patched because it seems to be working working
+
+// IWD:EE
+// ------
+DLICESWD,					SKELETON_MONSTER,	1,	sw1h01,					S1	=> t-sw1h01 // Iced Bones          - SW1H01 (S0) does not match AX MC S1 S2
+UNDEADLT,					SKELETON_WARRIOR,	1,	sw1h01,					S1	=> t-sw1h01 // Undead Lieutenant   - SW1H01 (S0) does not match AX MC S1 S2
+LM1HWMS,					LIZARD_MAN,			1,	mslizman,				MC	=> t-mslizm // Lizard Man          - MSLIZMAN (MS) does not match AX HB MC
+LM1HWMSY,					LIZARD_MAN,			1,	mslizman,				MC	=> t-mslizm // id.
+//      Creature              Animation        slot  weapon to patch    new app => new weapon
+// ------- 0 ------------------- 1 ------------ 2 ----- 3 ----------------- 4 ------------------------------------------------------------------------------------
+
+/* SEEMS TO BE USELESS
+DLICEHND,					SKELETON_MONSTER,	1,								=>			// Iced Bones          - b1-8m1 (  ) does not match AX MC S1 S2
+HIGHARCH,					YUAN-TI_ELITE,		1,	bowmess,					=>			// High Archer         - BOWMESS (BW) does not match AX CL S1
+LSKARMMS,					SKELETON_WARRIOR,	1,	blun06,					MC	=>			// Armored Skeleton    - BLUN06 (MS) does not match AX MC S1 S2
+MS2LIZM,					LIZARD_MAN,			,								=>			// Lizard Man          - S1-12 (  ) does not match AX HB MC
+MS3TLIZ,					LIZARD_MAN_ELITE,	,								=>			// Tough Lizard Man    - B1-12 (  ) does not match CL HB QS
+SKARMMS,					SKELETON_WARRIOR,	,	blun06,					MC	=>			// Armored Skeleton    - BLUN06 (MS) does not match AX MC S1 S2
+SS1LIZ3,					LIZARD_MAN,			,								=>			// Lizard Man          - S1-12 (  ) does not match AX HB MC
+SS1LIZ4,					LIZARD_MAN,			,								=>			// Lizard Man          - S1-12 (  ) does not match AX HB MC
+SS2LIZ5,					LIZARD_MAN_ELITE,	,								=>			// Tough Lizard Man    - B1-12 (  ) does not match CL HB QS
+SS2LIZ6,					LIZARD_MAN_ELITE,	,								=>			// Tough Lizard Man    - B1-12 (  ) does not match CL HB QS
+SS2LIZ7,					LIZARD_MAN_ELITE,	,								=>			// Tough Lizard Man    - B1-12 (  ) does not match CL HB QS
+YUAEWBO,					YUAN-TI_ELITE,		,								=>			// Yuan-ti Elite       - BOW03 (BW) does not match AX CL S1
+
+SS1gob1 // Current weapon appearance: None		P1-6		0xE400 MGO1     CGAMEANIMATIONTYPE_GOBLIN_AXE
+SS1gob2 // Current weapon appearance: None		id.
+SS1gob3 // Current weapon appearance: None		id.
+SS2gob1 // Current weapon appearance: None		s1-8		0xE420 MGO3     CGAMEANIMATIONTYPE_GOBLIN_ELITE_AXE
+SS2gob2 // Current weapon appearance: None		id.
+SS2gob3 // Current weapon appearance: None		id.
+*/
+END

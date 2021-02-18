@@ -1,0 +1,293 @@
+/* ======================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                                 *
+ *                  M A I N    C O M P O N E N T    ( T o B - E E )    :    C o r r e c t i n g    C r e a t u r e    W e a p o n s    A n i m a t i o n s                  *
+ *                                                                                                                                                                          *
+ * ======================================================================================================================================================================== *
+ *  This component patches vanilla creature files with new cloned weapons compatible with their animations.                                                                 *
+ * ======================================================================================================================================================================== */
+
+
+/* ==================================================================================================================================== *
+ *  FUNCTION check_cre_weapon : CHECKS if weapons in creature weapon slots fit the weapon animations usable by the creature animation.  *
+ * ------------------------------------------------------------------------------------------------------------------------------------ *
+ *  This functions checks if a creature needs to be patched and equipped by a cloned weapon that will be supported by its animation     *
+ *  files. If yes, it returns the weapon slot to be patched. If no, it returns 0 (by default).                                          *
+ * ------------------------------------------------------------------------------------------------------------------------------------ *
+ *   STR_VAR                                                                                                                            *
+ *      - old_item : the item reference to be checked.                                                                                  *
+ *   RET                                                                                                                                *
+ *      This function returns the "weapon slot" in which %%old_item% is equipped.                                                       *
+ * ==================================================================================================================================== */
+
+/*MAYBE USEFUL FOR AN IN-COMING NEW WAY OF PATCHING FILES. ;)
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_cre_weapon_slots BEGIN
+1 => 18
+2 => 20
+3 => 22
+4 => 24
+END
+*/
+DEFINE_PATCH_FUNCTION ~check_cre_weapon~
+    STR_VAR old_item = ~~
+    RET     weap_slot
+BEGIN
+
+	weap_slot = 0
+	READ_LONG 0x2b8 t-slots
+	READ_LONG 0x2bc t-itemoff
+	READ_LONG 0x2c0 t-itemcnt
+
+	PATCH_FOR_EACH slot_off IN ~18~ ~20~ BEGIN
+
+		PATCH_IF (weap_slot = 0) BEGIN
+			READ_SSHORT (t-slots + slot_off) t-weap_slot
+			PATCH_IF (t-weap_slot > (0 - 1)) BEGIN
+				READ_ASCII (t-weap_slot * 0x14 + t-itemoff) t-item_ref
+				TO_LOWER %t-item_ref%
+				PATCH_IF ("%t-item_ref%" STR_EQ "%old_item%") BEGIN
+					PATCH_MATCH "%slot_off%" WITH
+						18 BEGIN weap_slot = 1 END
+						20 BEGIN weap_slot = 2 END
+						22 BEGIN weap_slot = 3 END
+						DEFAULT  weap_slot = 4
+					END
+					PATCH_LOG "weapon_slot weapon%weap_slot% : item (%t-item_ref%) = old_item (%old_item%)"
+				END
+			END
+		END
+
+	END
+
+END
+
+
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_correcting_weapon_animations.tph~
+
+
+/* ============================== *
+ *  Fixes weapons type if needed  *
+ * ============================== */
+
+ACTION_PHP_EACH GW_fix_weapon_anim AS donnees => newweapon BEGIN
+
+	SILENT
+	ACTION_IF FILE_EXISTS_IN_GAME ~%donnees_0%.cre~ BEGIN
+
+		COPY_EXISTING ~%donnees_0%.cre~ ~override/%donnees_0%.cre~
+			TO_LOWER %DEST_RES%
+			// 1. Checks if primary and/or secondary weapon need to be patched.
+			// ----------------------------------------------------------------
+			
+			LPF ~check_cre_weapon~ STR_VAR old_item = EVAL "%donnees_3%" RET weap_slot END
+			PATCH_LOG "%donnees_0%.cre - weapon slot = %weap_slot% - %donnees_3%.itm => %newweapon%.itm"
+
+			// 2. A weapon may cause issue.
+			// ----------------------------
+			PATCH_IF (weap_slot > 0) BEGIN
+
+				// 3a. Clone weapon does not exist
+				// -------------------------------
+				PATCH_IF NOT FILE_EXISTS_IN_GAME ~%newweapon%.itm~ BEGIN
+
+					PATCH_LOG "%newweapon%.itm does not exist"
+					INNER_ACTION BEGIN
+						COPY_EXISTING ~%donnees_3%.itm~ ~override/%newweapon%.itm~
+							READ_ASCII 0x22 t-weap_ap (2)
+							PATCH_IF (~%t-weap_ap%~ STR_EQ ~%donnees_4%~) BEGIN
+								clone_weapon = 0
+								PATCH_LOG "%newweapon%.itm : %t-weap_ap% - %donnees_4%  ==>  no clone weapon"
+							END ELSE BEGIN
+								WRITE_ASCIIE 0x22 "%donnees_4%"
+								clone_weapon = 1
+								PATCH_LOG "%newweapon%.itm : %t-weap_ap% - %donnees_4%  ==>  clone weapon"
+							END
+						BUT_ONLY
+					END
+
+				// 3b. Clone weapon already exists.
+				// --------------------------------
+				END ELSE BEGIN
+					clone_weapon = 1
+				END
+
+				// 4. If needed, clone the problematic weapon to make the creature animation work properly.
+				// ----------------------------------------------------------------------------------------
+				PATCH_IF clone_weapon BEGIN
+					SPRINT weaponslot EVAL "WEAPON%weap_slot%"
+					ADD_CRE_ITEM ~%newweapon%~ #0 #0 #0 ~identified&unstealable&undroppable~ ~%weaponslot%~
+					PATCH_PRINT "%DEST_RES%: install clone weapon %newweapon% at slot %weaponslot%"
+					PATCH_SILENT
+				END
+
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+ACTION_CLEAR_ARRAY GW_fix_weapon_anim
+
+
+
+/* ================================================================================================================ *
+ *                                                                                                                  *
+ *  CREATES a file listing creatures needed to be equipped with cloned weapons supported by their animation files.  *
+ *                           (used during development stage, but may be useful later...)                            *
+ *                                                                                                                  *
+ * ================================================================================================================ */
+
+/* ===================================================================================================== *
+ *  FUNCTION check_cre_weapon_slot : CHECKS if weapons wielded by the creature need to be cloned.        *
+ * ----------------------------------------------------------------------------------------------------- *
+ *   STR_VAR                                                                                             *
+ *      - slot : the creature weapon slot to be checked.                                                 *
+ *      - excl : a list of weapon appearance supported by the creature animation.                        *
+ *   RET                                                                                                 *
+ *      This function returns a message that will appended to the list of creatures need to be patched.  *
+ * ===================================================================================================== *
+ 
+DEFINE_PATCH_FUNCTION ~check_cre_weapon_slot~
+    STR_VAR slot = ""
+            excl = ""
+	RET     weapon
+BEGIN
+
+	SET slot_off = (("%slot%" STR_EQ "wp1") ? 18 : 20)  
+	SPRINT weapon ""
+	// Weapon1 slot
+	READ_SSHORT (t-slots + slot_off) t-weap_slot
+	PATCH_IF (t-weap_slot > (0 - 1)) BEGIN
+		READ_ASCII (t-weap_slot * 0x14 + t-itemoff) t-weap_item ELSE ~None~
+		PATCH_IF ("%t-weap_item%" STR_CMP "None") BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~%t-weap_item%.itm~ ~override~
+					READ_ASCII 0x22 t-weap_ap (2)
+					PATCH_IF (~%excl%~ STRING_CONTAINS_REGEXP ~%t-weap_ap%~ = 1) BEGIN
+					LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%t-weap_item%" RET t-weap_item = string_new END
+						SPRINT weapon EVAL "%t-weap_item% (%t-weap_ap%) does not match %excl%"
+					END
+				BUT_ONLY IF_EXISTS
+			END
+		END
+	END
+END
+
+
+SILENT
+OUTER_SPRINT list ""
+
+<<<<<<<< .../inlined/t-cre_weapon_anim_glitch.txt
+====================================================================================
+  CRE     (animation)                        - weapon   (ap) issue
+====================================================================================
+>>>>>>>>
+
+ACTION_IF is_tutu  BEGIN OUTER_SPRINT game "tutu" END
+ACTION_IF is_bgt   BEGIN OUTER_SPRINT game "bgt" END
+ACTION_IF is_bgee  BEGIN OUTER_SPRINT game "bgee" END
+ACTION_IF is_sod   BEGIN OUTER_SPRINT game "sod" END
+ACTION_IF is_bg2ee BEGIN OUTER_SPRINT game "bg2ee" END
+ACTION_IF is_eet   BEGIN OUTER_SPRINT game "eet" END
+ACTION_IF is_tob   BEGIN OUTER_SPRINT game "tob" END
+ACTION_IF is_iwdee BEGIN OUTER_SPRINT game "iwdee" END
+
+
+COPY ~.../inlined/t-cre_weapon_anim_glitch.txt~ ~t-cre_weapon_anim_glitch_%game%.txt~
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_fix_weapon_anim BEGIN
+//  Creature	Animation			weapon app	=> new weapon
+// ---- 0 ---------- 1 --------------- 2 -- 3 --------------
+	OGRE_MAGE,			"S1"			=> 1 // 0x2200 MOGM     CGAMEANIMATIONTYPE_OGRE_MAGE
+
+	LIZARD_MAN_ELITE,	"CL HB QS"		=> 1 // 0xE500 MLIZ     CGAMEANIMATIONTYPE_LIZARD_MAN_ELITE
+	LIZARDCASTER1,		"CL HB QS"		=> 1 
+	IC_LIZARDCASTER1,	"CL HB QS"		=> 1 
+	LIZARD_MAN,			"AX HB MC"		=> 1 // 0xE510 MLI2     CGAMEANIMATIONTYPE_LIZARD_MAN
+	LIZARDMAN2,			"AX HB MC"		=> 1
+	IC_LIZARDMAN2,		"AX HB MC"		=> 1
+
+	SAHAUGIN,			"CB SP QS"		=> 1
+	SAHUAGIN,			"CB SP QS"		=> 1 // 0x7F09 MSAH     CGAMEANIMATIONTYPE_SAHUAGIN
+	SAHAUGIN_LARGE,		"CB SP QS"		=> 1
+	SAHUAGIN_LARGE,		"CB SP QS"		=> 1 // 0x7F23 MSAT     CGAMEANIMATIONTYPE_SAHAUGIN_LARGE
+
+
+	KUO-TOA,			"CB SL SP"		=> 1 // 0x7F0C MKUO     CGAMEANIMATIONTYPE_KUOTAI
+	KUOTOA,				"CB SL SP"		=> 1
+	KUOTAI,				"CB SL SP"		=> 1
+	KUO-TOA_LARGE,		"CB SL SP"		=> 1 // 0x7F28 MKUL     CGAMEANIMATIONTYPE_KUO-TOA_LARGE
+
+	FIRE_GIANT,			"AX WH"			=> 1
+	GIANT_FIRE,			"AX WH"			=> 1 // 0x7F3E MFIG     CGAMEANIMATIONTYPE_GIANT_FIRE
+	GIANT_YAGA-SHURA,	"AX WH"			=> 1 // 0x7F3F MFIG     CGAMEANIMATIONTYPE_GIANT_YAGA-SHURA
+	YAGA-SHURA,			"AX WH"			=> 1
+
+	GNOLL,				"HB S1"			=> 1 // 0x8000 MGNL     CGAMEANIMATIONTYPE_GNOLL
+	HOBGOBLIN,			"S1 BW"			=> 1 // 0x8100 MHOB     CGAMEANIMATIONTYPE_HOBGOBLIN
+	KOBOLD,				"BW SS"			=> 1 // 0x8200 MKOB     CGAMEANIMATIONTYPE_KOBOLD
+
+	SKELETON_MONSTER,	"AX MC S1 S2"	=> 1 // 0xEB00 MSKT     CGAMEANIMATIONTYPE_SKELETON_MONSTER
+	SKELETON0,			"AX MC S1 S2"	=> 1
+	IC_SKELETON0,		"AX MC S1 S2"	=> 1
+	SKELETON_WARRIOR,	"AX MC S1 S2"	=> 1 // 0xEB10 MSKA     CGAMEANIMATIONTYPE_SKELETON_WARRIOR
+	SKELETONA,			"AX MC S1 S2"	=> 1
+	IC_SKELETONA,		"AX MC S1 S2"	=> 1
+
+	RAKSHASA,			"CB S1"			=> 1 // 0x7F10 MRAK     CGAMEANIMATIONTYPE_RAKSHASA
+
+	YUAN-TI,			"AX CL S1"		=> 1 // 0xED00 MYU1     CGAMEANIMATIONTYPE_YUAN-TI
+	YUANTI,				"AX CL S1"		=> 1
+	YUAN-TI_ELITE,		"AX CL S1"		=> 1 // 0xED10 MYU2     CGAMEANIMATIONTYPE_YUAN-TI_ELITE
+	YUANTI2,			"AX CL S1"		=> 1
+	IC_YUANTI,			"AX CL S1"		=> 1
+	IC_YUANTI2,			"AX CL S1"		=> 1
+
+END
+// IWD Giant s and wh
+//WRITE_LONG 0x20 BIT11 // Set STATE_DEAD
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
+
+	READ_LONG 0x20  flags
+	READ_LONG 0x28  t-anim
+	READ_LONG 0x2b8 t-slots
+	READ_LONG 0x2bc t-itemoff
+	READ_LONG 0x2c0 t-itemcnt
+	loop = 0
+
+	PATCH_IF ((flags & BIT11) = 0) BEGIN
+
+		PHP_EACH GW_fix_weapon_anim AS anim => todo BEGIN
+
+			PATCH_IF loop = 0 BEGIN
+
+				PATCH_IF (t-anim = IDS_OF_SYMBOL (animate ~%anim_0%~)) BEGIN
+
+					loop = 1
+					PATCH_FOR_EACH slot IN wp1 wp2 BEGIN
+
+						LPF ~check_cre_weapon_slot~ STR_VAR slot excl = EVAL "%anim_1% " RET weapon END
+						PATCH_IF ("%weapon%" STR_CMP "") BEGIN
+							LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%SOURCE_RES%" RET sr = string_new END
+							LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "%anim_0%)" RET anim_slot = string_new END
+							SPRINT list "%list%%sr% (%anim_slot% - %weapon%%WNL%"
+						END
+					END
+
+				END
+
+			END
+
+		END
+
+	END
+
+BUT_ONLY
+
+PRINT "%list%"
+APPEND_OUTER ~t-cre_weapon_anim_glitch_%game%.txt~ ~%list%~
+*/
