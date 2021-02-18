@@ -1,0 +1,41 @@
+-aj /elemental_zaaman_wow
+***
+						SOUND
+ATTACK          		gfire01 nosound
+ATTACK          		2 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		gfire07 gfire08
+DAMAGE          		0 0
+DIE             		gfire09 gfire10
+DIE             		30 33
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		gfire03a gfire03b
+ATTACK_SLASH    		2 2
+ATTACK_BACKSLASH		gfire03 nosound
+ATTACK_BACKSLASH		2 0
+ATTACK_JAB      		gfire04a gfire04b
+ATTACK_JAB      		0 0
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry          	gfire01 gfire02
+Battle_Cry          	0 0
+Selection          		gfire01
+Selection          		0

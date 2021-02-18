@@ -1,0 +1,41 @@
+-ai /elemental_sunnis_wow
+***
+						SOUND
+ATTACK          		earth01 nosound nosound
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		earth06
+DAMAGE          		0
+DIE             		earth07
+DIE             		35
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		earth03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		earth04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		earth05 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE          			***
+HIDE          			0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry          	earth01 earth02
+Battle_Cry          	0 0
+Selection          		earth01
+Selection          		0
