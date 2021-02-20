@@ -6,7 +6,7 @@
  *                                                                                                                                                        *
  *                     Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                     *
  *                                                                                                                                                        *
-/* ====================================================================================================================================================== *
+ * ====================================================================================================================================================== *
  *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
  * -----------------------------------                                                                                                                    *
  *  - GW_giant_fire               :   LISTS vanilla and modded Fire Giants needing to be patched.                                        => line #   53   *

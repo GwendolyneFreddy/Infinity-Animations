@@ -23,9 +23,9 @@
  *                                            LISTE les voleuses humaines du jeu et de mods nécessitant d'être modifiées.                                  *
  *  - GW_angelo_ninja_male_human          :   LISTS vanilla and modded Female Male Human Ninjas needing to be patched.                    => line # 1143   *
  *                                            LISTE les ninjas humains du jeu et de mods nécessitant d'être modifiée.                                      *
- *  - GW_moinesse_ninja_male_human        :   LISTS vanilla and modded Male Human Assassins needing to be patched.                        => line # 1163   *
+ *  - GW_moinesse_ninja_male_human        :   LISTS vanilla and modded Male Human Assassins needing to be patched.                        => line # 1162   *
  *                                            LISTE les assassins humains du jeu et de mods nécessitant d'être modifiée.                                   *
- *  - GW_moinesse_vampire                 :   LISTS vanilla and modded Male Vampires needing to be patched.                               => line # 1324   *
+ *  - GW_moinesse_vampire                 :   LISTS vanilla and modded Male Vampires needing to be patched.                               => line # 1323   *
  *                                            LISTE les vampires hommes du jeu et de mods nécessitant d'être iées.                                         *
  * ======================================================================================================================================================= */
 
@@ -1156,7 +1156,6 @@ adnin01                 => 1	// Master Ninja
 adnin02                 => 1	// id.
 
 END
-
 
 
 /* ========================================================================================================================================================= *

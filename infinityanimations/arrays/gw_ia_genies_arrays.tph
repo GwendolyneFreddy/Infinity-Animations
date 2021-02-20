@@ -19,13 +19,13 @@
  *                                    LISTE les créatures efrits du jeu et de mods nécessitant d'être modifiées.                                           *
  *  - GW_efreeti_legs             :   LISTS vanilla and modded Efreeti with legs creatures needing to be patched.                          => line # 165   *
  *                                    LISTE les créatures efrits avec jambes du jeu et de mods nécessitant d'être modifiées.                               *
- *  - GW_janni                    :   LISTS vanilla and modded Janni creatures needing to be patched.                                      => line # 201   *
+ *  - GW_janni                    :   LISTS vanilla and modded Janni creatures needing to be patched.                                      => line # 204   *
  *                                    LISTE les créatures janni du jeu et de mods nécessitant d'être modifiées.                                            *
- *  - GW_janni_legs               :   LISTS vanilla and modded Janni with legs creatures needing to be patched.                            => line # 219   *
+ *  - GW_janni_legs               :   LISTS vanilla and modded Janni with legs creatures needing to be patched.                            => line # 222   *
  *                                    LISTE les créatures Janni avec jambes du jeu et de mods nécessitant d'être modifiées.                                *
- *  - GW_marids                   :   LISTS vanilla and modded Marids creatures needing to be patched.                                     => line # 237   *
+ *  - GW_marids                   :   LISTS vanilla and modded Marids creatures needing to be patched.                                     => line # 240   *
  *                                    LISTE les créatures marids du jeu et de mods nécessitant d'être modifiées.                                           *
- *  - GW_marids_legs              :   LISTS vanilla and modded Marids with legs creatures needing to be patched.                           => line # 254   *
+ *  - GW_marids_legs              :   LISTS vanilla and modded Marids with legs creatures needing to be patched.                           => line # 257   *
  *                                    LISTE les créatures marids avec jambes du jeu et de mods nécessitant d'être modifiées.                               *
  * ======================================================================================================================================================= */
 
@@ -192,7 +192,10 @@ salam03	                => 1	// id.
 salam04	                => 1	// id.
 salam05	                => 1	// id.
 salam06	                => 1	// id.
-djincre
+
+// Victor's Improvements Pack
+// --------------------------
+djincre                 => 1	// Izsul Baba
 
 END
 

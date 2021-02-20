@@ -20,7 +20,7 @@
 /* ================================================================================================ *
  *  ARRAY GW_seer_beggars : LISTS vanilla and modded Beggars creatures needing to be patched.       *
  * ------------------------------------------------------------------------------------------------ *
- *  Some Beggars get the seer animation (components (450 and 455).                                  *
+ *  Some Beggars get the seer animation (components 450 and 455).                                   *
  * ------------------------------------------------------------------------------------------------ *
  *  Change-log: the following creatures have been moved from the beggars array to the slaves array  *
  *    (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).    *
@@ -126,7 +126,7 @@ END
 /* ================================================================================================ *
  *  ARRAY GW_seer_slaves : LISTS vanilla and modded Slaves creatures needing to be patched.         *
  * ------------------------------------------------------------------------------------------------ *
- *  Some Slaves get the seer animation (components (450 and 460).                                   *
+ *  Some Slaves get the seer animation (components 450 and 460).                                    *
  * ------------------------------------------------------------------------------------------------ *
  *  Change-log: the following creatures have been moved from the beggars array to the slaves array  *
  *    (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).    *
@@ -213,7 +213,7 @@ END
 /* ============================================================================================== *
  *  ARRAY GW_sees : LISTS vanilla and modded Beggars and Slaves creatures needing to be patched.  *
  * ---------------------------------------------------------------------------------------------- *
- *  Some Beggars and Slaves get the seer animation (component (450).                              *
+ *  Some Beggars and Slaves get the seer animation (component 450).                               *
  * ============================================================================================== */
 
 ACTION_CLEAR_ARRAY GW_seer_beggars
