@@ -1,3 +1,12 @@
+/* ======================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                 *
+ *                                   W e i D U    F J _ C R E _ E F F _ V 2    P A T C H    R O U T I N E                                   *
+ *                                                                                                                                          *
+ * ======================================================================================================================================== *
+ *  Adapted from WeiDU FJ_CRE_VALIDITY PATCH function and usually called after FJ_CRE_VALIDITY or FJ_CRE_REINDEX patch, this routine force  *
+ *  the CRE file to use EFF V2 effects internally instead of EFF V1 (i.e. converts creatures using version 1 effects to version 2).         *
+ * ======================================================================================================================================== */
+
 PATCH_IF fv != 1 BEGIN
 	WRITE_BYTE 0x33 1
 	fv = 1
@@ -32,27 +41,27 @@ PATCH_IF fv != 1 BEGIN
 				READ_LONG  ((i1 * 0x30) + 0x28) sb      // Save bonus
 				INNER_PATCH_SAVE ~rfx~ ~%rfx%~ BEGIN
 					INSERT_BYTES ((i1 * 0x108) + 0x00) 0x110
-					WRITE_LONG   ((i1 * 0x108) + 0x10) pc
-					WRITE_LONG   ((i1 * 0x108) + 0x14) tg
-					WRITE_LONG   ((i1 * 0x108) + 0x18) pw
-					WRITE_LONG   ((i1 * 0x108) + 0x1c) p1
-					WRITE_LONG   ((i1 * 0x108) + 0x20) p2
-					WRITE_BYTE   ((i1 * 0x108) + 0x24) tm
-					WRITE_LONG   ((i1 * 0x108) + 0x28) dr
-					WRITE_SHORT  ((i1 * 0x108) + 0x2c) b1
-					WRITE_SHORT  ((i1 * 0x108) + 0x2e) b2
-					WRITE_ASCIIE ((i1 * 0x108) + 0x30) ~%rf%~
-					WRITE_LONG   ((i1 * 0x108) + 0x38) dt
-					WRITE_LONG   ((i1 * 0x108) + 0x3c) dz
-					WRITE_LONG   ((i1 * 0x108) + 0x40) st
-					WRITE_LONG   ((i1 * 0x108) + 0x44) sb
-					WRITE_BYTE   ((i1 * 0x108) + 0x5c) dp
-					WRITE_LONG   ((i1 * 0x108) + 0x80) (` 0x0)
-					WRITE_LONG   ((i1 * 0x108) + 0x84) (` 0x0)
-					WRITE_LONG   ((i1 * 0x108) + 0x88) (` 0x0)
-					WRITE_LONG   ((i1 * 0x108) + 0x8c) (` 0x0)
-					WRITE_LONG   ((i1 * 0x108) + 0xa4) (` 0x0)
-					DELETE_BYTES ((i1 * 0x108) + 0x08) 0x8
+					WRITE_LONG   ((i1 * 0x108) + 0x10) pc      // Opcode
+					WRITE_LONG   ((i1 * 0x108) + 0x14) tg      // Target
+					WRITE_LONG   ((i1 * 0x108) + 0x18) pw      // Power
+					WRITE_LONG   ((i1 * 0x108) + 0x1c) p1      // Parameter 1
+					WRITE_LONG   ((i1 * 0x108) + 0x20) p2      // Parameter 2
+					WRITE_BYTE   ((i1 * 0x108) + 0x24) tm      // Timing mode
+					WRITE_LONG   ((i1 * 0x108) + 0x28) dr      // Duration
+					WRITE_SHORT  ((i1 * 0x108) + 0x2c) b1      // Probability 1
+					WRITE_SHORT  ((i1 * 0x108) + 0x2e) b2      // Probability 2
+					WRITE_ASCIIE ((i1 * 0x108) + 0x30) ~%rf%~  // ResRef
+					WRITE_LONG   ((i1 * 0x108) + 0x38) dt      // Dice thrown
+					WRITE_LONG   ((i1 * 0x108) + 0x3c) dz      // Die size
+					WRITE_LONG   ((i1 * 0x108) + 0x40) st      // Save type
+					WRITE_LONG   ((i1 * 0x108) + 0x44) sb      // Save bonus
+					WRITE_BYTE   ((i1 * 0x108) + 0x5c) dp      // Dispellability
+					WRITE_LONG   ((i1 * 0x108) + 0x80) (`0)
+					WRITE_LONG   ((i1 * 0x108) + 0x84) (`0)
+					WRITE_LONG   ((i1 * 0x108) + 0x88) (`0)
+					WRITE_LONG   ((i1 * 0x108) + 0x8c) (`0)
+					WRITE_LONG   ((i1 * 0x108) + 0xa4) (`0)
+					DELETE_BYTES ((i1 * 0x108) + 0x08) 8
 				END
 			END
 		END

@@ -1,3 +1,12 @@
+/* =================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                            *
+ *                                       W e i D U    F J _ C R E _ R E I N D E X    P A T C H    R O U T I N E                                        *
+ *                                                                                                                                                     *
+ * =================================================================================================================================================== *
+ *  Adapted from WeiDU FJ_CRE_REINDEX PATCH function and usually called after FJ_CRE_VALIDITY patch, this routine reorders creatures with nonstandard  *
+ *  offset orders and force it to use proper order (known spells, spell memorization info, memorized spells, effects, items, item slot).               *
+ * =================================================================================================================================================== */
+
 fv = 0
 kso = 0x2d4
 ksc = 0
@@ -55,7 +64,7 @@ READ_ASCII iso is ELSE fail (0x50)
 READ_ASCII ilo il ELSE fail (0x14 * ilc)
 READ_ASCII elo el ELSE fail (elc * (0x30 + ((fv & 0x1) = 0x1 ? 0xd8 : 0)))
 
-DELETE_BYTES 0x2d4 SOURCE_SIZE - 0x2d4	// DELETE_BYTES 0x2d4 BUFFER_LENGTH - 0x2d4
+DELETE_BYTES 0x2d4 BUFFER_LENGTH - 0x2d4
 off_0 = 0x2d4
 WRITE_LONG 0x2a0 off_0
 
