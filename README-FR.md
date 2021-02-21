@@ -60,8 +60,8 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 - Améliore la prise en charge des paperdolls pour les animations existantes.
 - Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).
 - Permet d'utiliser de nombreux *types* d'animation (dont certains n'ont jamais été vus dans les jeux).
-- Harmonise les noms des animations dans tous les jeux.
-- Résout les problèmes d'empilement d'animation et les conflits de slots et de désignation des animations.
+- Résout les problèmes d'empilement d'animation et les conflits de slots, de désignation et de jeux de sons des animations de créature.
+- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE.
 - Fournit un utilitaire GUI[*NdT : interface graphique*] pour vous aider à ajouter de nouvelles animations dans le jeu.
 - Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;
 <div align="right"><a href="#top">Retour en haut de page</a></div>
@@ -72,19 +72,41 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 
 ## <a name="compat" id="compat"></a>Compatibilité
 
+#### Jeux concernés
+
 Infinity Animations est conçu pour fonctionner sur la plupart des jeux Infinity Engine, ce qui inclut :
 
-- La série des Éditions Améliorées (Enhanced Editions) publiées par Beamdog, Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE), Icewind Dale: Enhanced Edition (IWDEE), ainsi que l'extension de BGEE, Siege of Dragonspear (SoD). Toutes les Éditions Améliorées comprennent leurs extensions originales (ainsi, IWDEE comprend Heart of Winter et Trials - HoW - of the Luremaster - TotLM).
+- La série des Éditions Améliorées (Enhanced Editions) publiées par Beamdog, Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE), Icewind Dale: Enhanced Edition (IWDEE), ainsi que l'extension de BGEE, Siege of Dragonspear (SoD). Toutes les Éditions Améliorées comprennent leurs extensions originales (ainsi, IWDEE comprend Heart of Winter - HoW - et Trials of the Luremaster - TotLM).
 - Le jeu original Baldur's Gate II avec son extension Trône de Bhaal (Throne of Bhaal : ToB). **Assurez-vous que vous avez bien installé le patch 26498 pour le Trône de Bhaal.**Si nécessaire, vérifiez le fichier Readme relatif au patch dans votre répertoire de jeu et sur le site internet de <a href="http://www.bioware.com/games/throne_bhaal/support/patches/">BioWare</a>.
 - Les mods de conversion basés sur ToB : <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a>, <a href="https://www.pocketplane.net/bg1tutu/">Baldur's Gate Tutu</a> (Tutu) et <a href="https://github.com/K4thos/EET/releases">Enhanced Edition Trilogy</a> (EET).
 
-Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum, s'il vous plaît.</a>
+## 
 
-Installez-le après la plupart des autres mods, en particulier ceux qui ajoutent des créatures ou des animations, mais avant les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
+#### Compatibilité avec les autres mods
 
-Les moddeurs souhaitant rendre leurs mods compatibles avec IA sont fortement invités à lire le document <a href="">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
+Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Voici la liste de celles recensées jusqu'à présent :
+
+- mod 1
+- ...
+
+Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>, s'il vous plaît.
+
+## 
+
+#### Ordre d'installation
 
 >Bien qu'il ne soit pas requis pour faire correctement tourner Infinity Animations, nous recommandons fortement aux joueurs de ToB original de télécharger et d'installer la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> avant d'installer ce mod.</br>
+
+Dans un monde parfait, Infinity Animations devrait être installé comme un fixpack qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
+
+En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
+- Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
+- Veuillez installer Infinity Animations avant 1PP, EET_end et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
+
+
+&#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia-note-for-modders.html">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
+
+## 
 
 **Commencez une nouvelle partie** après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « Correction des animations dans les parties sauvegardées ».</br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>
@@ -97,13 +119,13 @@ Les moddeurs souhaitant rendre leurs mods compatibles avec IA sont fortement inv
 
 #### Mise en garde
 
-*Si une ancienne version de ce mod est déjà installée, il est nécessaire de la désinstaller avant d'extraire la nouvelle. Pour cela, lancez **`setup-infinityanimations.exe`**, et désinstallez tous les composants précédemment installés. Une fois la désinstallation achevée, supprimez le répertoire :file_folder: **infinityanimations** et le fichier **setup-infinityanimations.exe** (version Windows) avant d'extraire la nouvelle version du mod.*
+*Si une ancienne version de ce mod est déjà installée, il est nécessaire de la désinstaller avant d'extraire la nouvelle. Pour cela, lancez __`setup-infinityanimations.exe`__, et désinstallez tous les composants précédemment installés. Une fois la désinstallation achevée, supprimez le répertoire :file_folder: __infinityanimations__ et le fichier __setup-infinityanimations.exe__ (version Windows) avant d'extraire la nouvelle version du mod.*
 
-*Lorsque vous installez ou désinstallez, **ne fermez pas la fenêtre DOS** en cliquant sur le bouton **X** ! Au lieu de cela, appuyez sur la touche **Entrée** lorsque l'invite de commandes vous le demande.*
+*Lorsque vous installez ou désinstallez, __ne fermez pas la fenêtre DOS__ en cliquant sur le bouton __X__ ! Au lieu de cela, appuyez sur la touche __Entrée__ lorsque l'invite de commandes vous le demande.*
 
 *Par précaution, __désactivez les antivirus__ ou tout logiciel résidant en mémoire avant d'installer ce mod, ou tout autre mod. Certains (en particulier avast et Norton !) ont une fâcheuse tendance à déclarer les exécutables des mods comme des faux positifs, provoquant ainsi l'échec de la procédure d'installation.*
 
-Vous pouvez extraire les fichiers de l'archive à l'aide de <a href="http://www.7-zip.org/download.html">7zip</a>, <a href="http://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a>, ou de tout autre utilitaire de compression gérant les fichiers .zip.
+Vous pouvez extraire les fichiers de l'archive à l'aide de <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="https://zipgenius.com/">ZipGenius</a>, ou de tout autre utilitaire de compression gérant les fichiers .zip.
 
 <details><summary>Obsolète depuis la version 6.0.0</summary>
 <p></br>
@@ -121,11 +143,13 @@ Une fois l'extraction terminée, les répertoires &#x1F4C1; « content » et/ou 
 
 #### Note spéciale pour Siege of Dragonspear fourni par Steam/GOG
 
-Good Old Games (GOG) et Steam fournissent le contenu de Siege of Dragonspear dans un format que <acronym title="Weimer Dialogue Utility">WeiDU</acronym>, l'outil utilisé pour installer ce mod, ne peut pas reconnaitre. Vous devez donc lancer le programme <a href="https://github.com/Argent77/A7-DlcMerger/releases/latest">DLC Merger</a> dans votre répertoire de SoD avant d'installer ce mod, ou tout autre mod utilisant WeiDU.
+Good Old Games (GOG) et Steam fournissent le contenu de Siege of Dragonspear dans un format que WeiDU, l'outil utilisé pour installer ce mod, ne peut pas reconnaitre. Vous devez donc lancer le programme <a href="https://github.com/Argent77/A7-DlcMerger/releases/latest">DLC Merger</a> dans votre répertoire de SoD avant d'installer ce mod, ou tout autre mod utilisant WeiDU.
 
 ## 
 
 #### Note pour les jeux en Édition Améliorée (EE)
+
+Les Éditions améliorées sont des jeux que le développeur fait encore évoluer, notamment par l'ajout de capacités supplémentaires destinées à la création de mods et par l'ajout de contenus. N'oubliez pas que chaque patch de mise à jour effacera les mods que vous avez installés ! Ce mod ne fera pas exception à la règle.
 
 Si vous pouvez retarder la mise à jour du patch en plein milieu d'un partie moddée (si vous en avez la possibilité, notamment chez Beamdog et Good Old Games), n'oubliez pas que même après avoir réinstallé les mods sur un nouveau patch, vous ne pourrez peut-être pas continuer le jeu avec vos anciennes sauvegardes, en particulier à cause de noms de personnages, de lieux, etc, qui pourraient être incorrects. Pour y remédier, copiez tout le dossier du jeu dans un nouveau dossier dans lequel vous installerez vos mods, et qui ne sera pas modifié par les patches de mise à jour. Il est important que vous installiez le mod dans la version linguistique dans laquelle vous jouez. Sinon, les dialogues du mod ne s'afficheront pas et provoqueront des messages d'erreur.
 
@@ -143,9 +167,9 @@ Pour réinstaller, désinstaller ou changer certains composants, lancez **`setup
 
 #### Mac OS X
 
-:warning: Malheureusement, ce mod n'est pour l'instant pas compatible avec le système d'exploitation OS X car certains de ses composants modifiant l'exécutable ne fonctionnent pas sur OS X. Si vous souhaitez vous en charger, veuillez manifester votre intérêt sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (Si vous disposez de compétences techniques, étudier l'exécutable du jeu et de ce patch dans un éditeur pourrait vous être utile.)
+>:warning: Malheureusement, **ce mod n'est pour l'instant pas complètement compatible avec le système d'exploitation OS X** car certains de ses composants modifiant l'exécutable ne fonctionnent pas sur OS X. Si vous souhaitez vous en charger, veuillez manifester votre intérêt sur le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (Si vous disposez de compétences techniques, étudier l'exécutable du jeu et de ce patch dans un éditeur pourrait vous être utile.)
 
-&#128541; Cependant, comme les jeux EE ne nécessitent pas un patch de leur exécutable pour bénéficier des composants de Infinity Animations, ce dernier peut y être installé sur un système d'exploitation Mac.
+&#128541; **Cependant,** comme les jeux EE ne nécessitent pas un patch de leur exécutable pour bénéficier des composants de Infinity Animations, **ce dernier peut y être installé sur un système d'exploitation Mac**.
 
 Infinity Animations pour EE et Mac OS X est livré avec WeiDU et est diffusé dans la même archive compressée.
 
@@ -157,11 +181,11 @@ Vous pouvez lancer **`setup-infinityanimations.command`** dans votre répertoire
 
 #### Linux
 
-Infinity Animations for Linux est diffusé dans la même archive compressée sans l'installateur WeiDU.
+Infinity Animations pour Linux est diffusé dans la même archive compressée, mais sans l'installateur WeiDU.
 
 Extrayez le contenu du mod dans le répertoire du jeu que vous voulez modifier.
 
-Téléchargez la version la plus récente de WeiDU pour Linux sur <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU.org</a>, puis copiez weidu et weinstall to `/usr/local/bin` (créez-le s'il n'existe pas). Ouvrez ensuite un terminal et allez (**`cd`**) dans le répertoire d'installation de votre jeu, lancez **`/usr/local/bin/tolower`** et répondez « Y » aux deux questions. Vous pouvez éviter d'exécuter la seconde option (linux.ini) si vous l'avez déjà lancée une fois dans le même dossier. Pour gagner du temps, l'archive est déjà passée en minuscules, aussi il n'est pas non plus nécessaire d'exécuter la première option (passer les noms de fichiers en minuscules) si vous n'avez extrait que ce mod depuis la dernière fois que vous avez passé les noms de fichiers en minuscules. Si vous avez un doute, il vaut mieux exécuter tolower et accepter les deux options.
+Téléchargez la version la plus récente de WeiDU pour Linux sur <a href="https://github.com/WeiDUorg/weidu/releases">WeiDU.org</a>, puis copiez weidu et weinstall dans `/usr/local/bin` (créez-le s'il n'existe pas). Ouvrez ensuite un terminal et allez (**`cd`**) dans le répertoire d'installation de votre jeu, lancez **`/usr/local/bin/tolower`** et répondez « Y » aux deux questions. Vous pouvez éviter d'exécuter la seconde option (linux.ini) si vous l'avez déjà lancée une fois dans le même dossier. Pour gagner du temps, l'archive est déjà passée en minuscules, aussi il n'est pas non plus nécessaire d'exécuter la première option (passer les noms de fichiers en minuscules) si vous n'avez extrait que ce mod depuis la dernière fois que vous avez passé les noms de fichiers en minuscules. Si vous avez un doute, il vaut mieux exécuter tolower et accepter les deux options.
 
 Tapez la commande **`export PATH=$PATH:/usr/local/bin`**, puis lancez **`weinstall setup-infinityanimations`** depuis le dossier de votre jeu pour installer le mod. Exécutez ensuite **`wine bgmain.exe`** (ou **`wine baldur.exe`** pour les jeux EE) et commencez votre partie.
 
@@ -177,35 +201,35 @@ En plus des méthodes détaillées plus haut pour supprimer des composants, il e
 
 ##### Depuis la version 6.0.0, les les options de configuration nécessaires à l'installation sont lues dans le fichier <a href="infinityanimations/infinityanimations-config-default.ini">infinityanimations-config-default.ini</a> ou dans le fichier *infinityanimations-config-user.ini*, si ce dernier existe.
 
-Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous aviez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires :file_folder: **content** ou :file_folder: **restore** du répertoire :file_folder: infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
+Dans les versions précédentes, vous deviez téléchargez tout le contenu dont vous aviez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>, puis extraire les archives dans les sous-répertoires :file_folder: **_content_** ou :file_folder: **_restore_** du répertoire :file_folder: infinityanimations. Le programme d'installation vous prévenait s'il vous manquait des fichiers nécessaires. À ce moment, vous pouviez quitter le programme, télécharger le contenu manquant, l'extraire et relancer la procédure d'installation.
 
-Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire :file_folder: **archives** du mod et le composant principal le copie automatiquement dans le répertoire :file_folder: **override** de votre jeu. Le mod n'utilisant plus les sous-répertoires :file_folder: *content* et :file_folder: *restore*, ces derniers ont été supprimés.
+Dorénavant, le contenu nécessaire à l'installation de Infinity Animations est inclus dans le répertoire :file_folder: **_archives_** du mod et le composant principal le copie automatiquement dans le répertoire :file_folder: **_override_** de votre jeu. Le mod n'utilisant plus les sous-répertoires :file_folder: *content* et :file_folder: *restore*, ces derniers ont été supprimés.
 
-Par défaut, tout le contenu du répertoire archives est désormais installé. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier, avec Notepad ou un autre éditeur de texte, les options d'installation dans le fichier **_infinityanimations-config-default.ini_** (situé dans le répertoire :file_folder: infinityanimations), puis de le sauvegarder sous le nom **_infinityanimations-config-user.ini_**.
+Désormais, tout le contenu du répertoire archives est installé par défaut. Si vous souhaitez limiter le contenu à installer, il vous suffit de modifier, avec Notepad ou un autre éditeur de texte, les options d'installation dans le fichier **_infinityanimations-config-default.ini_** (situé dans le répertoire :file_folder: infinityanimations), puis de le sauvegarder sous le nom **_infinityanimations-config-user.ini_**.
 
 Chaque ligne de ce fichier comprend une option d'installation, suivie de « = », puis d'un chiffre. Tout ce que vous avez à faire, c'est modifier la valeur du chiffre. Par exemple, si vous ne souhaitez pas installer les animations de svirneblins, modifiez la valeur de la variable ia_iwd_svirfneblin en 0.
 
-Le programme d'installation lira les valeurs des variables dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations-config-user.ini contient une valeur d'option non conforme, ou si une variable est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « _standard_ »)
+Le programme d'installation lira les valeurs des options dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations-config-user.ini contient une valeur d'option non conforme, ou si une option est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « _standard_ »)
 
 Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation les installera automatiquement s'ils sont présents dans le répertoire :file_folder: archives. Sinon, il vous préviendra de leur absence. Vous pourrez alors quitter le programme, les extraire dans le répertoire du mod et relancer la procédure d'installation.<br>
-Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous préviendra de leur absence et vous demandera de les extraire avant d'installer le composant.
+Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous avertira de leur absence et vous demandera de les extraire avant d'installer le composant.
 
 Voici le tableau des options concernées :</br></br>
 
 
-<table summary="Liste des variables d'installation">
+<table summary="Liste des options d'installation">
 	<tr style="font-size: 125%; line-height: 300%;">
-		<th>Variable</th>
+		<th>Option</th>
 		<th>Description</th>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_force_soundset</strong></td>
-		<td><a name="forcelanguage" id="forcelanguage"></a><ins>Tous les contenus disposant de fichiers sons</ins> : IA installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Cependant, attribuer la valeur 1 à cette variable permet de forcer la langue par défaut de ces fichiers. Par exemple :<br><br>
-		- Vous jouez un jeu en français et avez installé IA en français ==> les fichiers sons français sont installés.<br>
-		- Vous jouez un jeu en français et avez installé IA en anglais ==> les fichiers sons français sont installés si ia_force_soundset est égale à 0.<br>
-		- Vous jouez un jeu en français et avez installé IA en anglais ==> les fichiers sons anglais sont installés si ia_force_soundset est égale à 1.<br><br>
+		<td><a name="forcelanguage" id="forcelanguage"></a><ins>Tous les contenus disposant de fichiers sons</ins> : Infinity Animations installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Cependant, attribuer la valeur 1 à cette variable permet de forcer la langue par défaut de ces fichiers. Par exemple :<br><br>
+		- Vous jouez un jeu en français et avez installé Infinity Animations en français ==> les fichiers sons français sont installés.<br>
+		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons français sont installés si l'option ia_force_soundset est égale à 0.<br>
+		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons anglais sont installés si l'option ia_force_soundset est égale à 1.<br><br>
 		<em>0 = Installer les fichiers sons dans la langue du jeu [par défaut]</em><br>
-		1 = Installer les fichiers sons dans la langue sélectionner pour installer le mod</td>
+		1 = Installer les fichiers sons dans la langue sélectionnée pour installer le mod</td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
@@ -217,7 +241,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
 		(uniquement pour les jeux EE)</td>
-		<td><ins>IA Content - Base EE Content (nouveau)</ins><br><br>
+		<td><ins>IA Content - Base EE Content</ins> (nouveau)<br><br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
@@ -226,9 +250,19 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
 		<td><ins>IA Content 001 - Base Content</ins><br><br>
-		- Contenu : animations de basilic et de tasloi, les animations manquantes de IWD référencées dans BGII (scarabée bombardier, scarabée de feu, scarabée scolyte, scarabée rhinocéros, cyclope, fantôme, blême majeur, goule majeure, histachii, homme lézard, homme lézard roi, liche blanche, nécrophage gris/vert/jaune, ombre petite/grande), ombre des roches ancienne, troll des glaces, troll des neiges, zombi bleu/jaune), les animations de personnages de BG. Comprend les tables et les jeux de sons des créatures concernées et les animations de cimeterre de BG1.<br>
-		- Nécessaire pour les composants Morts-vivants différenciés [400], Plus d'animations de base [500], Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
+		- Contenu : animations de basilic et de tasloi, les animations manquantes de IWD référencées dans BGII (scarabée bombardier, scarabée de feu, scarabée scolyte, scarabée rhinocéros, cyclope, fantôme, blême majeur, goule majeure, histachii, homme lézard, homme lézard roi, liche blanche, nécrophage gris/vert/jaune, ombre petite/grande), ombre des roches ancienne, troll des glaces, troll des neiges, zombi bleu/jaune). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- (Nouveau) Animations manquantes de lancement de sort (fichiers bam ca et sp, avec les armes quand nécessaire) : scarabées (bombardier, scolyte, de feu, rhinocéros), cyclope, ettin, fantôme, blême majeur, goule majeure, gobelins (avec hache, avec arc, d'élite avec hache, d'élite avec arc), golem de glace, histachii, minotaure, momie, orque (mêlée, archer, d'élite, archer d'élite), orog, orog d'élite, chef orog, salamandre (du feu, du givre), ombre (petite, grande), squelette démon, combattant squelette, trolls (bleu, des glaces, des neiges), esprit des eaux, yuan-ti, yuan-ti d'élite, zombi (bleu, jaune).<br>
+		- (Nouveau) Correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) : <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">Animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes de Miloch</a>, <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">animations de wiverne majeure et de tanar'ri de Miloch</a> et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger de Polytope</a>.<br>
+		- Nécessaire pour les composants Morts-vivants différenciés [400] et Plus d'animations de base [500].<br>
 		- Nécessaire pour les mods BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS et RPG KitsPack.<br><br>
+		0 = Ne pas l'installer<br>
+		<em>1 = L'installer [par défaut]</em></td>
+	</tr>
+	<tr>
+		<td><div align="center"><strong>ia_bg1_character_animations</strong></td>
+		<td><ins>IA Content - BG1 Character Animations</ins> (nouveau : extraites de IA Content 001 - Base Content<br><br>
+		- Contenu : animations de personnages de BG1. Comprend les animations de cimeterre de BG1.<br>
+		- Nécessaire pour les composants Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
@@ -252,7 +286,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(uniquement pour ToB)</td>
-		<td><ins>IA Content - EE games new Animations ported to ToB (nouveau)</ins><br><br>
+		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (nouveau)<br><br>
 		- Contenu: sanglier sauvage, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, Gibberling Brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -260,7 +294,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
-		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour erinyes, gelugon et tieffelins.<br>
+		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour démon vert (Nabassu), erinyes, gelugon, guenaude nocturne et tieffelins.<br>
 		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -285,7 +319,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
 		(uniquement pour ToB)</td>
-		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
+		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (IA compatible version)<br><br>
 		- Contenu : Barbare humain, Druidesse humaine, Guerrière humaine, Magicienne humaine, Magicienne elfe, Voleuse humaine, Ninja humain, Vampire homme.<br>
 		- Nécessaire pour le composant Avatars de Moinesse pour IA [7000-7010-7020-7030].<br><br>
 		0 = Ne pas l'installer<br>
@@ -294,7 +328,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
 		(uniquement pour les jeux EE)</td>
-		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
+		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (EE compatible version)<br><br>
 		Même contenu que le précédent, mais compatible avec les jeux EE.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -348,8 +382,8 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
-		<td><ins>IA Content - Modders resources (nouveau)</ins><br><br>
-		- Contenu : poule marron (Jarl), chien gris de jastey, mule (Kwiat_W); ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb); petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		<td><ins>IA Content - Modders resources</ins> (nouveau)<br><br>
+		- Contenu : poule marron (Jarl), chien gris de jastey, mule (Kwiat_W); ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb) ; pygargue à tête blanche (et petit), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Et bien plus encore à venir dans le futur.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -380,7 +414,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ><span style="margin-left: 50px;"><a href="#500">[500] Plus d'animations de base</a></span></br>
 ><span style="margin-left: 50px;"><a href="#550">[550] Plus d'animations d'Icewind Dale</a></span></br>
 ><span style="margin-left: 50px;"><a href="#600">[600] Plus d'animations d'Icewind Dale II</a></span></br>
-><span style="margin-left: 50px;"><a href="#650">[650] Plus d'animations dee Neverwinter Nights</a></span></br>
+><span style="margin-left: 50px;"><a href="#650">[650] Plus d'animations de Neverwinter Nights</a></span></br>
 ><span style="margin-left: 50px;"><a href="#710">[710-720-730-740] Plus d'animations de Planescape: Torment</a></span></br>
 ><span style="margin-left: 50px;"><a href="#7000">[7000-7010-7020-7030] Avatars de Moinesse pour IA</a></span></br>
 ><span style="margin-left: 50px;"><a href="#8000">[8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs</a></span></br>
@@ -399,15 +433,18 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
-###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Nécessite le patch ToB v26498.</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Jeu original : Nécessite le patch ToB v26498.</em><br><br>
 
-- Vérifie la présence des fichiers nécessaires.
-- ToB : Vérifie la validité de l'exécutable, fait une copie de sauvegarde de l'exécutable et le modifie.
-- ToB : Remplace les animations _LOW de créatures.
-- Met à jour les fichiers .ids.
-- Rétablit toutes les animations écrasées par les mods.
-- Copie les nouvelles animations (toutes celles extraites dans le répertoire :file_folder: /archives).
+- Vérifie la présence des fichiers nécessaires pour mettre à jour les megamods.
+- Seulement pour ToB original : Vérifie la validité de l'exécutable, en fait une copie de sauvegarde et le modifie.
+- Seulement pour ToB original : Remplace les animations _LOW de créatures.
+- Seulement pour ToB original : Résout les conflits de jeux de sons des animations de créatures si TobEx est installé.
+- Met à jour les fichiers .ids, .2da et .ini.
+- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE.
+- Rétablit toutes les animations écrasées par les mods et résout les problèmes d'empilement d'animations et les conflits de slots, de désignation des animations de créature.
+- Installe les nouvelles animations (toutes celles extraites dans le répertoire :file_folder: /archives).
 - Corrige toutes les créatures affectées.
+- Corrige les problèmes d'animation des armes portées par les créatures.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 

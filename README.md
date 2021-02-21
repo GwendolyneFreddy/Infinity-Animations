@@ -23,7 +23,7 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE and EET<h3>
 
 :warning: Readme writing in progress... Don't try to download and install this mod as it is a WIP version and its install will fail, because of missing files still in development or in beta testing
 
-[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/Infinity-Animations?style=plastic)](https://badges.pufler.dev)
+[![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/Infinity-Animations?style=plastic)](https://badges.pufler.dev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Infinity-Animations?style=plastic)
 [![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Infinity-Animations?color=cyan&style=plastic)](https://badges.pufler.dev) 
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
@@ -61,7 +61,8 @@ Finally, this mod contains optional components that implement many new animation
 - Improves paperdoll support for existing animations
 - Adds custom game animations for characters and creatures (including dragons)
 - Allows use of many different animation *types* (some never before seen in the games)
-- Resolves the problems of animation stacking, slot and naming conflicts
+- Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts
+- Harmonize animations names in all game to avoid conflicts with EE games
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
 <div align="right"><a href="#top">Back to top</a></div>
@@ -73,6 +74,7 @@ Finally, this mod contains optional components that implement many new animation
 ## <a name="compat" id="compat"></a>Compatibility
 
 #### Games supported
+
 Infinity Animations is designed to work on most Infinity Engine games. This includes:
 
 - The series of Enhanced Editions published by Beamdog, which at present includes Baldur's Gate: Enhanced Edition (BGEE), Baldur's Gate II: Enhanced Edition (BG2EE) and Icewind Dale: Enhanced Edition (IWDEE). The BGEE Siege of Dragonspear expansion (SoD) is supported as well. All of the Enhanced Edition games include the original expansion packs, e.g. IWDEE includes Heart of Winter (HoW) and Trials of the Luremaster (TotLM).
@@ -83,17 +85,29 @@ Infinity Animations is designed to work on most Infinity Engine games. This incl
 
 #### Other Mods Compatibility
 
-This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
+This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. Below are the ones discovered thus far:
 
-Install it after most other mods, particularly those that add creatures or animations, but before any final "biffing" routines.
+- mod 1
+- ...
 
-Modders who wish to make their mods compatible with IA are strongly recommended to read the <a href="">Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
+If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
 
 ## 
 
 #### Installation Order
 
->Although it is not required for the 1pp mod to function properly, TOB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+>Although it is not required for the 1pp mod to function properly, ToB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+
+In a perfect world, Infinity Animations would be installed as a data base that would be usable by anyone who would like to add animation entries to the game without being bogged down by issues of mod conflicts and incompatibilities. Unfortunately, since it was designed a long time after the first megamods generation that were overwriting game files, in particular to resolve animation conflicts and restore standard animations that megamods have overwritten; it needs to be installed after those megamods, at least until their authors will update them to benefit from Infinity Animations content... &#128577;
+
+While waiting for this marvelous day, here is the recommended installation order:
+- Please install Infinity Animations after ToBEx, BG2 Fixpack, EET, and mods that add creatures or animations.
+- Please install Infinity Animations before 1PP, EET_end, and any final "biffing" routines.
+
+
+&#9755; :warning: Modders who wish to make their mods compatible with Infinity Animations are strongly recommended to read the <a href="ia-note-for-modders.html">IA Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
+
+## 
 
 **Start a new game** after installing this mod, or use the "Saved Game Animation Fixer" component if you're reluctant to do that.</br>
 <div align="right"><a href="#top">Back to top</a></div>
@@ -106,23 +120,23 @@ Modders who wish to make their mods compatible with IA are strongly recommended 
 
 #### Notes
 
-*If you've previously installed the mod, remove it before extracting the new version. To do this, run **`setup-infinityanimations.exe`**, un-install all previously installed main component and delete the :file_folder: **infinityanimations** folder.*
+*If you've previously installed the mod, remove it before extracting the new version. To do this, run __`setup-infinityanimations.exe`__, un-install all previously installed components and delete the :file_folder: __infinityanimations__ folder.*
 
-*When installing or un-installing, **do not close the DOS window** by clicking on the **X** button! Instead, press the **Enter** key whenever instructed to do so.*
+*When installing or un-installing, __do not close the DOS window__ by clicking on the __X__ button! Instead, press the __Enter__ key whenever instructed to do so.*
 
 *__Disable any antivirus__ or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.*
 
-You can extract files from the archive using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a> or another file compression utility that handles .zip files.
+You can extract files from the archive using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="https://zipgenius.com/">ZipGenius</a> or another file compression utility that handles .zip files.
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p></br>
 <strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
 
-<p>Extract all archives to the &#x1F4C1; /content folder except IA_BG2_Restores.rar, which should go in the &#x1F4C1; /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
+<p>Extract all archives to the :file_folder: /content folder except IA_BG2_Restores.rar, which should go in the :file_folder: /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
 
 For WinZip, make sure the "Use folder names" box is *unselected*.
 
-You should end up with a bunch of .bam files and no sub-folders in your &#x1F4C1; "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
+You should end up with a bunch of .bam files and no sub-folders in your :file_folder: "content" and/or "restore" folders. The installer will warn you if you're missing anything you need, at which point you can exit it, download missing content, extract it and rerun the installer.
 </p>
 </details>
 
@@ -144,7 +158,7 @@ The Enhanced Editions are actively supported games. Please note that every patch
 
 Infinity Animations for Windows is distributed as an extractable compressed archive and includes a WeiDU installer.
 
-Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*), using <a href="https://www.7-zip.org/download.htmll">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, <a href="http://www.zipgenius.it/ita/?page_id=12">ZipGenius</a>, or another file compression utility that handles .zip files. On successful extraction, there should be a :file_folder: infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **`setup-infinityanimations.exe`** and follow the instructions on screen.
+Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*). On successful extraction, there should be a :file_folder: infinityanimations folder and a setup-infinityanimations.exe file in your game folder. To install, simply double-click **`setup-infinityanimations.exe`** and follow the instructions on screen.
 
 Run **`setup-infinityanimations.exe`** in your game folder to reinstall, un-install or otherwise change components.
 
@@ -152,9 +166,9 @@ Run **`setup-infinityanimations.exe`** in your game folder to reinstall, un-inst
 
 #### Mac OS X
 
-:warning: Unfortunately, this mod is not currently fully compatible with OS X because a few components patching exe file do not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
+>:warning: Unfortunately, **this mod is not currently fully compatible with OS X** because a few components patching exe file do not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
 
-&#128541; However, since EE games don't need to be patched to benefit from Infinity Animations, it can be installed on Mac OS X EE games.
+&#128541; **However,** since EE games don't need to be patched to benefit from Infinity Animations, **it can be installed on Mac OS X EE games**.
 
 Infinity Animations for EE for Mac OS X is distributed in the same compressed archive and includes a WeiDU installer.
 
@@ -190,29 +204,29 @@ The previous versions needed all required content to be downloaded from the Infi
 
 From now on, the content needed by Infinity Animations is included in the :file_folder: **_archives_** folder and automatically copied by the main component into your :file_folder: **_override_** folder. Being useless, the respective :file_folder: *content* and :file_folder: *restore* sub-folders have been removed.
 
-By default, the whole archives folder content will be installed. If you want to define your own customized installation, you have to edit **_infinityanimations-config-default.ini_** (found in :file_folder: infinityanimations folder) with Notepad or another text editor, then save it as **_infinityanimations-config-user.ini_**.
+Now, the whole archives folder content will be installed by default. If you want to define your own customized installation, you have to edit **_infinityanimations-config-default.ini_** (found in :file_folder: infinityanimations folder) with Notepad or another text editor, then save it as **_infinityanimations-config-user.ini_**.
 
-Each line consists of an installation option, then '=', then a number. The only thing you should edit is the number. For example, if you don't want to use svirneblins animations, change the ia_iwd_svirfneblin value to 0.
+Each line consists of an installation option, then '=', then a number. The only thing you should edit is the number. For example, if you don't want to install the svirneblins animations, change the ia_iwd_svirfneblin value to 0.
 
-The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation failure will be prevented by reverting it back to its default value.
+The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation failure will be prevented by reverting it back to its *default* value.
 
-If you want to install a component requiring files that you decided not to install, the installer will install them automatically if there are still in the :file_folder: archives folder. Otherwise, it will warn you. In this case, you will have to exit the installer, extract them in your mod folder, and rerun the installer.<br>
+If you want to install a component requiring files that you have decided not to install, the installer will install them automatically if there are still in the :file_folder: archives folder. Otherwise, it will warn you. In this case, you will have to exit the installer, extract them in your mod folder, and rerun the installer.<br>
 Following the above example, if you indeed wish the svirneblins get the svirneblins animations after having set ia_iwd_svirfneblin option to 0, the installer will force their installation if it finds them in :file_folder: archives folder. If not, it will warn you to extract them before installing the component.
 
 Here is a chart listing the options related to the installation process:</br></br>
 
 
-<table summary="Installation variables list">
+<table summary="Installation options list">
 	<tr style="font-size: 125%; line-height: 300%;">
-		<th>Variable</th>
+		<th>Option</th>
 		<th>Description</th>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_force_soundset</strong></td>
 		<td><a name="forcelanguage" id="forcelanguage"></a><ins>All IA Content sound clips</ins>: Infinity Animations automatically install sound clips accordingly to the game language localization. However it is possible to bypass this behaviour by setting this variable to 1. For example:<br><br>
-		- You play a French game and IA installed is installed in French ==> French soundsets are installed.<br>
-		- You play a French game and IA installed is installed in English ==> French soundsets are installed if ia_force_soundset=0.<br>
-		- You play a French game and IA installed is installed in English ==> English soundsets are installed if ia_force_soundset=1.<br><br>
+		- You play a French game and Infinity Animations is installed in French ==> French soundsets are installed.<br>
+		- You play a French game and Infinity Animations is installed in English ==> French soundsets are installed if ia_force_soundset = 0.<br>
+		- You play a French game and Infinity Animations is installed in English ==> English soundsets are installed if ia_force_soundset = 1.<br><br>
 		<em>0 = Install sound clips in the game language [default]</em><br>
 		1 = Install sound clips in the selected mod language</td>
 	</tr>
@@ -225,8 +239,8 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
-		(supports: only EE)</td>
-		<td><ins>IA Content - Base EE Content (New)</ins><br><br>
+		(EE games only)</td>
+		<td><ins>IA Content - Base EE Content</ins> (New)<br><br>
 		- Content: all missing animations that already have animation slots in Enhanced games, restored BG I character animations. Includes all relevant missing creature sounds and ini files.<br>
 		- Needed for all EE games (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Needed for all components.<br><br>
@@ -235,9 +249,19 @@ Here is a chart listing the options related to the installation process:</br></b
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
 		<td><ins>IA Content 001 - Base Content</ins><br><br>
-		- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow), restored BG I character animations. Includes all relevant creature sounds and tables and BG1 scimitars.<br>
-		- Needed for Distinctive Undead [400], More Base Animations [500], BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
+		- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow). Includes all relevant creature sounds and tables.<br>
+		- (New) missing casting animations (sp and ca bam files, with weapons variants when needed): Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Lizard man, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.<br>
+		- (New) BWP Fixpack graphic fixes (thanks to their authors!): <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">Miloch's Wyvern and Tanar'ri Animation Fix</a> and <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Polytope's better Doppelganger attack animations</a>.<br>
+		- Needed for Distinctive Undead [400] and More Base Animations [500] components.<br>
 		- Needed for BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS and RPG Kitspack mods.<br><br>
+		0 = Don't install<br>
+		<em>1 = Install [default]</em></td>
+	</tr>
+	<tr>
+		<td><div align="center"><strong>ia_bg1_character_animations</strong></td>
+		<td><ins>IA Content - BG1 Character Animations</ins> (New: extracted from IA Content 001 - Base Content)<br><br>
+		- Content: restored BG I character animations. Includes BG1 scimitars.<br>
+		- Needed for BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -253,15 +277,15 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Content: all IWD II animations that are neither in BGII (Death Tyrant, Alternate Ellesime, Alternate Fire Giant, Lagoon Creature) or IWD (Abishai White, Arctic Boar, Bugbear, Bugbear Captain, Chimera, Dark Treant, Drider male/female, Elemental Water Small, Feyr lesser/greater, Fomorian Giant, IWD II goblins, Goblin Worgrider, Goblin Worgrider Captain, Half-dragon black/red, Hook Horror, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Shenrical, Undead Orcs, Werebadger, Wererat, Worg, Yuan-Ti Halfbreed). Includes all relevant creature sounds and tables.<br>
-		- Needed for Cambion get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
+		- Needed for Cambions get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
 		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
-		(supports: only ToB)</td>
-		<td><ins>IA Content - EE games new Animations ported to ToB (New)</ins><br><br>
+		(classic games only)</td>
+		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (New)<br><br>
 		- Content: Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -269,7 +293,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	<tr>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
-		- Content: Fiend green (Nabassu), Fiend blue, Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Gelugon and Tieflings sound files.<br>
+		- Content: Fiend blue, Fiend green (Nabassu), Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul Queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Fiend green (Nabassu), Gelugon, Hag Night and Tieflings sound files.<br>
 		- Needed for Distinctive Genies [50] and Distinctive Fiends [100] components.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -293,8 +317,8 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
-		(supports: only ToB)</td>
-		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
+		(classic games only)</td>
+		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (IA compatible version)<br><br>
 		- Content: Female Elf Mage, Female Human Druid, Female Human Fighter, Female Human Mage, Female Human Thief, Male Human Barbarian, Male Human Ninja, Male Vampire.<br>
 		- Needed for Moinesse's Avatars for IA [7000-7010-7020-7030] component.<br><br>
 		0 = Don't install<br>
@@ -302,8 +326,8 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
-		(supports: only EE)</td>
-		<td><ins>IA Content - Moinesse's Avatar Edits (IA compatible version)</ins><br><br>
+		(EE games only)</td>
+		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (EE compatible version)<br><br>
 		Same content as above, but EE games compatible.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -358,7 +382,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
-		<td><ins>IA Content - Modders resources (New)</ins><br><br>
+		<td><ins>IA Content - Modders resources</ins> (New)<br><br>
 		- Content: Brow Chicken (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
 		- Plus more to come.<br><br>
 		0 = Don't install<br>
@@ -411,15 +435,18 @@ The installer includes the following components. The number of each is the compo
 ------------------------
 
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
-###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Requires ToB v26498</em><br><br>
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Classic game: Requires ToB v26498</em><br><br>
 
-- Checks mod files
-- ToB only: Checks .exe validity, backs up and patches the .exe
-- Replaces _LOW creature animations
-- Updates .ids files
-- Restores any necessary mod-overwritten animations
+- Checks megamod content
+- Classic game only: Checks .exe validity, backs up and patches the .exe
+- Classic game only: Replaces _LOW creature animations
+- Classic game only: Resolves soundsets creature animation conflicts if TobEx is installed
+- Updates .ids, .2da and .ini files
+- Harmonize animations names in all game to avoid conflicts with EE games
+- Restores any necessary previously mod-overwritten animations and resolves the problems of animation stacking, slot and naming conflicts
 - Copies new animations (any extracted to :file_folder: /archives folder)
 - Fixes any affected creatures
+- Fixes creature weapons animations issues
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
