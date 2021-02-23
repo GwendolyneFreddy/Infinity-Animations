@@ -35,7 +35,7 @@ HIDE          			***
 HIDE          			0
 SLEEP          			***
 SLEEP          			0
-Battle_Cry          	ub_b_cry nosound
+Battle_Cry          	ub_b_bcry nosound
 Battle_Cry          	0 0
 Selection          		***
 Selection          		0
