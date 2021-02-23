@@ -62,7 +62,7 @@ Finally, this mod contains optional components that implement many new animation
 - Adds custom game animations for characters and creatures (including dragons)
 - Allows use of many different animation *types* (some never before seen in the games)
 - Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts
-- Harmonize animations names in all game to avoid conflicts with EE games
+- Harmonize animations names in all games to avoid conflicts with EE games
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
 <div align="right"><a href="#top">Back to top</a></div>
@@ -286,7 +286,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(classic games only)</td>
 		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (New)<br><br>
-		- Content: Boar Wild, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
+		- Content: Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -383,7 +383,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
 		<td><ins>IA Content - Modders resources</ins> (New)<br><br>
-		- Content: Brow Chicken (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
+		- Content: Brow Chicken (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
 		- Plus more to come.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -442,7 +442,7 @@ The installer includes the following components. The number of each is the compo
 - Classic game only: Replaces _LOW creature animations
 - Classic game only: Resolves soundsets creature animation conflicts if TobEx is installed
 - Updates .ids, .2da and .ini files
-- Harmonize animations names in all game to avoid conflicts with EE games
+- Harmonize animations names in all games to avoid conflicts with EE games
 - Restores any necessary previously mod-overwritten animations and resolves the problems of animation stacking, slot and naming conflicts
 - Copies new animations (any extracted to :file_folder: /archives folder)
 - Fixes any affected creatures
@@ -830,11 +830,11 @@ This component corrects changed creature animations in area files for easier ref
 ##### Version 6.0.0 &nbsp;(September nn, 2020)
 
 &#9755; <ins>a. Major updates</ins>
-  - Modified animations namespaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
+  - Modified animations name-spaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
   - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
-  - Resolves soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
-  - New IA Content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
-  - Integrated IA modders' content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals), small snake, small snake green and small snake red (Gwendolyne).
+  - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
+  - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
+  - Added IA modders' content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
     - Restored missing bam content in EE games: Abishais (black, green, red, white), Animated plates, Arundel, Barbarian shaman (club, hammer, staff), Barbarian warriors (brown, red, tan), Barbarian Icasaracht, Beetles (boring, fire, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chicken (brown, white), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragons BG2 (black, red, silver), Dragon red juvenile, Dragon white (and young), Driders (female, male), Drowned dead, Elemental earth, Elemental (fire, water, water small), Feyr (and greater), Ghast greater, Ghost, Ghoul greater, Giant fire 2, Giant fire IWD, Giant frost, Giant fomorian, Giant hill, Giant verbeeg, Glabrezu, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Golem mini, Hag (annis, night), Halfdragon (black, red), Harpy, Hephernaan, Histachii, Hook horror, Isair, Kegs (1, 2, 3), Kuo-toa (and large), Lemure, Lich white, Lizard man (and elite, king), Madae, Malarite, Marilith, Marilith (IWD), Megalocentipede, Mkhiins, Orc axe undead, Orc shaman undead, Orog shaman, Planetar, Planetar fallen, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Svirfneblins (pale and dark, with/without axe), Trolls (ice, scrag, snow), Tundra yeti, Tunnel worm, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, gray, green, yellow), Will o wisp (and small), Worg IWD, Yuan-ti halfbreed, Zombie (blue, yellow).
     - Restored missing palettes content in EE games: Abishai blue, Black pudding, Boar wild, Bugbear shaman, Crusader soldier, Dog gray, Dragons BG2, Dragon green IWD, Dragon green juvenile, Dragons young (green, silver), Drowned dead red, Efreeti noble, Elemental fire small purple, Ettin ghost, Fiends (blue, green, red), Gibberling brood, Goblin worg (elite, shaman), Hags (green, sea), Hakeashar, Halfdragon green, Hephernaan, Maurezhi, Myrlochar, Nishruu, Red wizard, Sailors (green, red, dark), Snake water, Spider water, Troll spectral, Wyrmling albino, Wyvern white, Wyvern white big, Yochlol.
@@ -873,9 +873,10 @@ This component corrects changed creature animations in area files for easier ref
   - Installation options have been moved into *infinityanimations-config-default.ini* file. If you want to modify them, please read this <a href="#config">chapter</a>.
   - ...
   - Split code into separate components libraries for more comfortable readability and maintenance. :wink:
-  - Moved components tpa files into new "*components*" sub-folder and kept functions and macros in "*lib*" folder.
+  - Moved components tpa files into new :file_folder: "*components*" folder and kept functions and macros in "*lib*" :file_folder: folder.
   - Commented code as much as possible.
   - Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
+  - Re-format .log files entries to be more friendly readable.
   - ...
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
@@ -898,11 +899,11 @@ This component corrects changed creature animations in area files for easier ref
  <br>
 
 &#9755; <ins>c. Components specific changes and fixes</ins>
-- [0] Infinity Animations (t-main.tpa, )
-    - Split this huge component into smaller ones for more comfortable readability and maintenance (ia_restore_bg2_animations.tpa, ia_update_cre_animation_offset.tpa, ia_correcting_creature animations.tpa). :wink:
-    - ToBEx compatibility: .
+- [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
+    - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*, *ia_correcting_weapon_animations.tpa*). :wink:
+    - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
-    - No longer fix creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
+    - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - <ins>ia_restore_bg2_animations.tpa</ins>:
         - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
@@ -911,7 +912,7 @@ This component corrects changed creature animations in area files for easier ref
         - Integrated <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">Miloch's missing READ_BYTE fix</a>.
         - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
         - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.
-    - .
+    - <ins>ia_correcting_creature animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
     - .
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.

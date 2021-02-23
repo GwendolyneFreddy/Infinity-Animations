@@ -3,7 +3,7 @@
 						SOUND
 ATTACK          		ub_b_a1 ub_b_a2
 ATTACK          		0 0
-AWAKE           		ub_b_cry
+AWAKE           		ub_b_bcry
 AWAKE           		0
 CAST            		***
 CAST            		0
@@ -15,7 +15,7 @@ DIE             		ub_b_de
 DIE             		0
 HEAD_TURN       		***
 HEAD_TURN       		0
-READY           		ub_b_cry
+READY           		ub_b_bcry
 READY           		0
 SHOOT           		***
 SHOOT           		0
