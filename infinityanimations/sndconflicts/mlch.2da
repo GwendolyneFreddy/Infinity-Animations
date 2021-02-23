@@ -1,0 +1,41 @@
+MLch/lich_white
+***
+                 SOUND
+ATTACK           lerel03a lerel03b
+ATTACK           0 0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           lerel07 lerel08
+DAMAGE           0 0
+DIE              lerel09
+DIE              0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ***
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     lerel03a lerel03b
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH lerel04a lerel04b
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       lerel04a lerel04b
+ATTACK_JAB       0 0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       lerel01a lerel01b lerel11
+Battle_Cry       0 0 0
+Selection        lerel01a lerel01b lerel11
+Selection        0 0 0

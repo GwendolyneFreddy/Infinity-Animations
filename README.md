@@ -912,7 +912,8 @@ This component corrects changed creature animations in area files for easier ref
         - Integrated <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">Miloch's missing READ_BYTE fix</a>.
         - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
         - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.
-    - <ins>ia_correcting_creature animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
+        - From now on, Tanar'ri, Marilith, Minotaurs and Mind Flayers soundsets are fixed only if resolving soundsets creature animation conflicts has not been successfully installed.
+    - <ins>ia_correcting_weapon_animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
     - .
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.

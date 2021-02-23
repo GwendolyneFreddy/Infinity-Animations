@@ -1,0 +1,41 @@
+MMta/minotaur
+***
+                 SOUND
+ATTACK           ***
+ATTACK           0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           t-min07 t-min08
+DAMAGE           0 0
+DIE              t-min09 t-min10
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ***
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     t-min03 nosound
+ATTACK_SLASH     0 0
+ATTACK_BACKSLASH t-min04 nosound
+ATTACK_BACKSLASH 0 0
+ATTACK_JAB       ***
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       t-min01 t-min02
+Battle_Cry       0 0
+Selection        t-min01 t-min02 t-min11
+Selection        0 0 0

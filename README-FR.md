@@ -907,6 +907,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
         - Integration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes READ_BYTE manquantes de Miloch</a>.
         - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
         - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.
+        - Dorénavant, ne corrige les jeux de son des créatures que si la résolution des conflits entre soundsets d'animations de créatures a échoué.
     - <ins>ia_correcting_weapon_animations.tpa</ins> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équippe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).
     - .
 - [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)

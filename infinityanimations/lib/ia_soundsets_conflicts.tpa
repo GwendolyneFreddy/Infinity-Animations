@@ -1,0 +1,87 @@
+/* ================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                          *
+ *               M A I N    C O M P O N E N T    ( T o B - E E )    :    S o u n d s e t s    C o n f l i c t s    R e s o l u t i o n               *
+ *                                                                                                                                                   *
+ * ================================================================================================================================================= *
+ *  This part resolves soundsets creature animation conflicts (Courtesy of skellytz - from his Infinity Sounds project mod):                         *
+ *     - Mind Flayer (MMIN) conflicts with Minotaur (MMin).                                                                                          *
+ *     - Marilith (MTan) conflicts with Tanar'ri (MTAN).                                                                                             *
+ *     - BG2 Lich (MLIC) conflicts with IWD Lich_White (MLic - offset restored by Infinity Animations).                                              *
+ *     - BG2 Troll (MTRO) conflicts with IWD Troll Blue (MTro).                                                                                      *
+ * ------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  It patches the exe and forces Lich_White, Troll Blue, Minotaur and Marilith to use unique SND_Symbols (MLCH, MTRL, MMTA and MMAR respectively).  *
+ *  It copies old bam files to new ones, adds 2DA soundsets, restores proper sound clips extracted from IWD, and finally patches anisnd.ids.         *
+ * ================================================================================================================================================= */
+
+PRINT @22 // ~Resolving soundsets creature animation conflicts.~
+SILENT
+
+ACTION_IF NOT is_ee AND is_tobex BEGIN
+
+	COPY ~BGMain.exe~ ~BGMain.exe~
+		READ_ASCII 0x74f398 iwd_mlic (4)
+		READ_ASCII 0x74f3a0 iwd_mmin (4)
+		READ_ASCII 0x74f3b8 iwd_mtan (4)
+		READ_ASCII 0x74f3c8 iwd_mtro (4)
+		// Lich white
+		PATCH_IF (~%iwd_mlic%~ STR_EQ ~MLic~) BEGIN
+			SET 2da_fail = 0
+			WRITE_ASCII 0x74f398 ~MLch~ #4
+		END ELSE BEGIN
+			SET 2da_fail = 1
+			PATCH_FAIL @15 // ~BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
+		END
+		// Minotaur
+		PATCH_IF (~%iwd_mmin%~ STR_EQ ~MMin~) BEGIN
+			WRITE_ASCII 0x74f3a0 ~MMta~ #4
+		END
+		// Marilith
+		PATCH_IF (~%iwd_mtan%~ STR_EQ ~MTan~) BEGIN
+			WRITE_ASCII 0x74f3b8 ~MMar~ #4
+		END
+		// Troll blue
+		PATCH_IF (~%iwd_mtro%~ STR_EQ ~MTro~) BEGIN
+			WRITE_ASCII 0x74f3c8 ~MTrl~ #4
+		END
+	BUT_ONLY
+
+	ACTION_IF NOT 2da_fail BEGIN
+
+		OUTER_SET fix_soundsets_conflicts = 1
+
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY rename_bam BEGIN
+			mlic => mlch
+			mmin => mmta
+			mtan => mmar
+			mtro => mtrl
+		END
+
+		ACTION_PHP_EACH rename_bam AS oldbam => newbam BEGIN
+			ACTION_FOR_EACH action IN ~a1~ ~a2~ ~a3~ ~a4~ ~ca~ ~de~ ~gh~ ~gu~ ~sc~ ~sd~ ~sl~ ~sp~ ~tw~ ~wk~ BEGIN
+				ACTION_FOR_EACH east IN ~~ ~e~ BEGIN
+					COPY_EXISTING ~%oldbam%%action%%east%.bam~  ~override/%newbam%%action%%east%.bam~
+					IF_EXISTS
+				END
+			END
+		END
+
+		COPY ~%MOD_FOLDER%/sndconflicts/mlch.2da~  ~override~  // Lich white
+		COPY ~%MOD_FOLDER%/sndconflicts/mmar.2da~  ~override~  // Marilith
+		COPY ~%MOD_FOLDER%/sndconflicts/mtan.2da~  ~override~  // Minotaur
+		COPY ~%MOD_FOLDER%/sndconflicts/mtrl.2da~  ~override~  // Troll blue
+
+		COPY_EXISTING ~anisnd.ids~  ~override~
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE060 MLIC~  ~0xE060 MLCH~  // Lich white
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE070 MMIN~  ~0xE070 MMTA~  // Minotaur
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE0B0 MTRO~  ~0xE0B0 MTRL~  // Troll blue
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE090 MTAN~  ~0xE090 MMAR~  // Marilith
+		BUT_ONLY
+
+	END
+
+END ELSE BEGIN
+
+	COPY ~%MOD_FOLDER%/sndconflicts/mmin.2da~  ~override~ // Mind Flayer empty
+	COPY ~%MOD_FOLDER%/sndconflicts/mtan.2da~  ~override~ // Tanar'ri empty
+
+END

@@ -1,0 +1,41 @@
+MTrl/troll_blue
+***
+                 SOUND
+ATTACK           ***
+ATTACK           0
+AWAKE            ***
+AWAKE            0
+CAST             ***
+CAST             0
+CONJURE          ***
+CONJURE          0
+DAMAGE           troll07a troll07b troll08a troll08b
+DAMAGE           0 0 0 0
+DIE              troll09a troll09b
+DIE              0 0
+HEAD_TURN        ***
+HEAD_TURN        0
+READY            ***
+READY            0
+SHOOT            ***
+SHOOT            0
+TWITCH           ***
+TWITCH           0
+WALK             ***
+WALK             0
+ATTACK_SLASH     troll03a troll03b
+ATTACK_SLASH     2 2
+ATTACK_BACKSLASH troll04a troll04b
+ATTACK_BACKSLASH 2 2
+ATTACK_JAB       ***
+ATTACK_JAB       0
+EMERGE           ***
+EMERGE           0
+HIDE             ***
+HIDE             0
+SLEEP            ***
+SLEEP            0
+Battle_Cry       troll01 troll02 troll11
+Battle_Cry       0 0 0
+Selection        troll01 troll02 troll11
+Selection        0 0 0
