@@ -1,0 +1,345 @@
+0x0000 Fire Ring
+0x0001 Fire Ring, Bright
+0x0100 Chunks
+0x0200 Exploding Arm
+0x0210 Exploding Head
+0x0220 Exploding Foot
+0x0230 Exploding Torso
+0x0240 Exploding Leg
+0x0300 Smoke Puff, Large
+0x0301 Smoke Puff, Small
+0x0400 Trap, Skull
+0x0410 Trap, Glyph
+0x0500 Cloud, Travel
+0x0510 Cloud, Static
+0x0600 Storm, Travel
+0x0610 Storm, Static
+0x0700 Grease, Travel
+0x0710 Grease, Static
+0x0800 Web, Travel
+0x0810 Web, Static
+0x1000 Wyvern, Big
+0x1100 Tanar'ri
+0x1200 Dragon, Red
+0x1201 Dragon, Black
+0x1202 Dragon, Silver
+0x1203 Dragon, Green
+0x1204 Dragon, Aqua
+0x1205 Dragon, Blue
+0x1206 Dragon, Brown
+0x1207 Dragon, Multicolor
+0x1208 Dragon, Purple
+0x1300 Demogorgon
+0x2000 Sirine
+0x2100 Volo
+0x2200 Ogre Mage
+0x2300 Death Knight
+0x3000 Ankheg
+0x4000 Static Noble Man, Chair
+0x4002 Static Noble Man, Matte
+0x4010 Static Noble Woman, Chair
+0x4012 Static Noble Woman, Matte
+0x4100 Static Peasant Man, Chair
+0x4101 Static Peasant Man, Stool
+0x4102 Static Peasant Man, Matte
+0x4110 Static Peasant Woman, Chair
+0x4112 Static Peasant Woman, Matte
+0x4200 Static Human Male Cleric, Chair
+0x4300 Static Spider Woman
+0x4400 Sleeping Man, Human
+0x4410 Sleeping Woman, Human
+0x4500 Sleeping Fat Man, Human
+0x4600 Sleeping Dwarf
+0x4700 Sleeping Man, Elf
+0x4710 Sleeping Woman, Elf
+0x4800 Sleeping Man, Halfling
+0x6000 Cleric Male Human
+0x6001 Cleric Male Elf
+0x6002 Cleric Male Dwarf
+0x6003 Cleric Male Halfling
+0x6004 Cleric Male Gnome
+0x6005 Cleric Male Halforc
+0x6010 Cleric Female Human
+0x6011 Cleric Female Elf
+0x6012 Cleric Female Dwarf
+0x6013 Cleric Female Halfling
+0x6014 Cleric Female Gnome
+0x6015 Cleric Female Halforc
+0x6100 Fighter Male Human
+0x6101 Fighter Male Elf
+0x6102 Fighter Male Dwarf
+0x6103 Fighter Male Halfling
+0x6104 Fighter Male Gnome
+0x6105 Fighter Male Halforc
+0x6110 Fighter Female Human
+0x6111 Fighter Female Elf
+0x6112 Fighter Female Dwarf
+0x6113 Fighter Female Halfling
+0x6114 Fighter Female Gnome
+0x6115 Fighter Female Halforc
+0x6200 Mage Male Human
+0x6201 Mage Male Elf
+0x6202 Mage Male Dwarf
+0x6204 Mage Male Gnome
+0x6205 Mage Male Halforc
+0x6210 Mage Female Human
+0x6211 Mage Female Elf
+0x6212 Mage Female Dwarf
+0x6214 Mage Female Gnome
+0x6215 Mage Female Halforc
+0x6300 Thief Male Human
+0x6301 Thief Male Elf
+0x6302 Thief Male Dwarf
+0x6303 Thief Male Halfling
+0x6304 Thief Male Gnome
+0x6305 Thief Male Halforc
+0x6310 Thief Female Human
+0x6311 Thief Female Elf
+0x6312 Thief Female Dwarf
+0x6313 Thief Female Halfling
+0x6314 Thief Female Gnome
+0x6315 Thief Female Halforc
+0x6500 Monk Male Human
+0x6510 Monk Female Human
+0x6400 Drizzt
+0x6401 Elminster
+0x6402 Monk
+0x6403 Skeleton
+0x6404 Sarevok
+0x6405 Doom Guard
+0x6406 Doom Guard, Larger
+0x6410 Legacy Cleric Male Human
+0x6411 Legacy Cleric Female Human
+0x6412 Legacy Cleric Male Elf
+0x6413 Legacy Cleric Female Elf
+0x6414 Legacy Cleric Male Dwarf
+0x6415 Legacy Cleric Female Dwarf
+0x6416 Legacy Cleric Male Halfling
+0x6417 Legacy Cleric Female Halfling
+0x6420 Legacy Fighter Male Human
+0x6421 Legacy Fighter Female Human
+0x6422 Legacy Fighter Male Elf
+0x6423 Legacy Fighter Female Elf
+0x6424 Legacy Fighter Male Dwarf
+0x6425 Legacy Fighter Female Dwarf
+0x6426 Legacy Fighter Male Halfling
+0x6427 Legacy Fighter Female Halfling
+0x6430 Legacy Mage Male Human
+0x6431 Legacy Mage Female Human
+0x6432 Legacy Mage Male Elf
+0x6433 Legacy Mage Female Elf
+0x6434 Legacy Mage Male Dwarf
+0x6435 Legacy Mage Female Dwarf
+0x6440 Legacy Thief Male Human
+0x6441 Legacy Thief Female Human
+0x6442 Legacy Thief Male Elf
+0x6443 Legacy Thief Female Elf
+0x6444 Legacy Thief Male Dwarf
+0x6445 Legacy Thief Female Dwarf
+0x6446 Legacy Thief Male Halfling
+0x6447 Legacy Thief Female Halfling
+0x7000 Half Ogre
+0x7001 Ogrillon
+0x7100 Basilisk
+0x7101 Basilisk, Greater
+0x7200 Bear, Black
+0x7201 Bear, Brown
+0x7202 Bear, Cave
+0x7203 Bear, Polar
+0x7300 Elemental, Earth
+0x7301 Elemental, Earth Small
+0x7302 Shambling Mound
+0x7310 Elemental, Fire
+0x7311 Elemental, Fire Small
+0x7312 Elemental, Fire Purple
+0x7313 Elemental, Fire Small Purple
+0x7314 Burning Man
+0x7320 Elemental, Air
+0x7321 Elemental, Air Small
+0x7400 Dog, Wild
+0x7401 Dog, War
+0x7402 Dog, Moon
+0x7500 Doppleganger
+0x7501 Doppleganger, Greater
+0x7600 Ettercap
+0x7700 Ghoul
+0x7701 Revenant
+0x7702 Ghast
+0x7703 Shadow
+0x7800 Gibberling
+0x7900 Slime, Green
+0x7901 Slime, Olive
+0x7902 Slime, Mustard
+0x7903 Slime, Ochre
+0x7904 Gray Ooze
+0x7A00 Spider, Giant
+0x7A01 Spider, Huge
+0x7A02 Spider, Phase
+0x7A03 Spider, Sword
+0x7A04 Spider, Wraith
+0x7B00 Wolf
+0x7B01 Wolf, Worg
+0x7B02 Wolf, Dire
+0x7B03 Wolf, Winter
+0x7B04 Wolf, Vampiric
+0x7B05 Wolf, Dread
+0x7B06 Wolf, Shadow
+0x7C00 Kobold, Xvart
+0x7C01 Kobold, Tasloi
+0x7D00 Zombie
+0x7E00 Werewolf
+0x7E01 Werewolf, Greater
+0x7F00 Troll
+0x7F01 Mindflayer
+0x7F02 Beholder
+0x7F03 Imp
+0x7F04 Golem, Iron
+0x7F05 Djinni
+0x7F06 Djinni, Legs
+0x7F07 Golem, Clay
+0x7F08 Otyugh
+0x7F09 Sahuagin
+0x7F0A Greatcat, Panther
+0x7F0B Greatcat, Leopard
+0x7F0C Kuo-toa
+0x7F0D Lich
+0x7F0E Demilich
+0x7F0F Troll, Small
+0x7F10 Rakshasa
+0x7F11 Umber Hulk
+0x7F12 Vampire
+0x7F13 Snake
+0x7F14 Githyanki
+0x7F15 Beholder, Small
+0x7F16 Moose
+0x7F17 Rabbit
+0x7F18 Deer
+0x7F19 Dancing Sword
+0x7F20 Groundhog
+0x7F21 Pheasant
+0x7F22 Vampire, Female
+0x7F23 Sahuagin, Large
+0x7F24 Pirate
+0x7F27 Drow
+0x7F28 Kuo-toa, Large
+0x7F29 Drow Female
+0x7F2A Sailor Man
+0x7F2B MDK2 Max
+0x7F2C Amnian Soldier
+0x7F2D Wyvern, Familiar
+0x7F2E Raver
+0x7F2F Spider, Small
+0x7F30 Bodhi
+0x7F31 Ellesime
+0x7F32 Slayer
+0x7F33 MDK2 Kurt
+0x7F34 MDK2 Doctor
+0x7F35 Mist Creature
+0x7F36 Shadow Thief
+0x7F37 Jon Irenicus
+0x7F38 Wizard Eye
+0x7F39 Blob Mist Creature
+0x7F3A Jon Irenicus, Robed
+0x7F3B Solar
+0x7F3C Monadic Deva (Antisolar)
+0x7F3D Melissan
+0x7F3E Fire Giant
+0x7F3F Fire Giant, Yaga Shura
+0x8000 Gnoll
+0x8100 Hobgoblin
+0x8200 Kobold
+0x9000 Ogre
+0xA000 Wyvern
+0xA100 Carrion Crawler
+0xB000 Cow
+0xB100 Horse
+0xB200 Static Beggar Man
+0xB210 Static Harlot Woman
+0xB300 Static Boy
+0xB310 Static Girl
+0xB400 Static Fat Man
+0xB410 Static Fat Woman
+0xB500 Static Peasant Man
+0xB510 Static Peasant Woman
+0xB600 Static Noble Man
+0xB610 Static Noble Woman
+0xB700 Static Slave
+0xC000 Bat, Inside
+0xC100 Cat
+0xC200 Chicken
+0xC300 Rat
+0xC400 Squirrel
+0xC500 Bat, Outside
+0xC600 Beggar Man
+0xC610 Harlot Woman
+0xC700 Boy
+0xC710 Girl
+0xC800 Fat Man
+0xC810 Fat Woman
+0xC900 Peasant Man
+0xC910 Peasant Woman
+0xCA00 Noble Man
+0xCA10 Noble Woman
+0xCB00 Slave
+0xD000 Eagle
+0xD100 Seagull
+0xD200 Vulture
+0xD300 Bird
+0xD400 Bird, Inside
+0xE000 Cyclops
+0xE010 Ettin
+0xE040 Histachii
+0xE050 Lich, Black
+0xE060 Lich, White
+0xE070 Minotaur
+0xE080 Mummy
+0xE090 Marilith
+0xE0A0 Ice Troll
+0xE0B0 Blue Troll
+0xE0C0 Snow Troll
+0xE0D0 Umber Hulk Elder
+0xE0E0 Cornugon
+0xE0F0 Ice Golem
+0xE0F1 Glabrezu
+0xE0F2 Wailing Virgin
+0xE200 Beetle, Boring
+0xE210 Beetle, Fire
+0xE220 Beetle, Bombardier
+0xE230 Beetle, Rhinoceros
+0xE300 Ghost
+0xE310 Ghoul, Greater
+0xE320 Ghast, Greater
+0xE400 Goblin, Axe
+0xE410 Goblin, Bow
+0xE420 Goblin Elite, Axe
+0xE430 Goblin Elite, Bow
+0xE500 Lizard Man, Elite
+0xE510 Lizard Man
+0xE520 Lizard Man, King
+0xE600 Myconid, Red
+0xE610 Myconid, Blue
+0xE700 Orog
+0xE710 Orog, Elite
+0xE720 Orog, Chieftain
+0xE800 Orc, Melee
+0xE810 Orc, Range
+0xE820 Orc Elite, Melee
+0xE830 Orc Elite, Range
+0xE840 Orc, Shaman
+0xE900 Salamander, Fire
+0xE910 Salamander, Frost
+0xEA00 Shrieker
+0xEA10 Shadow, Small
+0xEA20 Shadow, Large
+0xEB00 Skeleton, Monster
+0xEB10 Skeleton, Warrior
+0xEB20 Skeleton, Fiend
+0xEC00 Wight, Gray
+0xEC10 Wight, Green
+0xEC20 Wight, Yellow
+0xED00 Yuan-ti
+0xED10 Yuan-ti Elite
+0xED20 Yuan-ti Priest
+0xEE00 Zombie, Yellow
+0xEE10 Zombie, Blue
+0xEF10 Water Weird

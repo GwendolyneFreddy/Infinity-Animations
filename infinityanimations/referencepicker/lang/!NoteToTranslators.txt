@@ -1,0 +1,11 @@
+Note to translators:
+
+Translations should be encoded in UTF-16 LE BOM.  UTF-8 will NOT work.
+
+Translations should be placed in <.\Path To Reference Picker\lang\> and should be named [Language].txt where [Language] is your language, e.g. English.  This file should be formatted as an INI file, and the translated strings should be placed under a Section named [Language] (again where this is YOUR language, e.g. English).  Use English.txt as an example.
+
+You tell IA Reference Picker to use a particular language by editing Config.txt.  Under the Section "Program" you will find a key "UseLang"; set the value of this key to [Language] e.g. UseLang=English would load the strings from <.\lang\English.txt>.  The strings are loaded at runtime, so if you change the language after starting IA Reference Picker, you will need to restart it for the changes to take effect.
+
+The text contains some special characters that should be left as-is:
+	*  ` (backtick) is an escape character, and causes the following character either to be interpreted literally by AHK or to give it special meaning.  For example, `n is resolved into a linefeed and `r is resolved into a carriage return.  Do not modify or translate these.
+	*  % (percent) signs are used to enclose variables that will be dereferenced just before being displayed e.g. %ID%G1.  These should not be modified or translated.
