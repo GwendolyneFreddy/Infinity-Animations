@@ -829,6 +829,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 &#9755; <ins>a.Principales mises à jour</ins>
   - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). :wink:
   - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
+  - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
   - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux (MMIN), les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
   - Ajout du nouveau pack de contenu ee_tob (animations de EE pour ToB) : sanglier sauvage, vargouille, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (vert, rouge), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure avec hache, en armure avec arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
   - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : poulet marron (Jarl), chien gris de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul) ; pygargue à tête blanche (et petit), leprechaun annah, easter egg morte, petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
@@ -886,12 +887,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Nouvelle traification du mod.
   - ...
   - Passage en minuscules des noms de fichiers.
-  - Mise à jour de WeiDU (v246).
+  - Ajout de l'utilitaire OggDec v1.9.7 et de sox v14.4.1 pour Mac.
+  - Mise à jour de WeiDU (v247).
+  - Ajout de l'archive libiconv-1.9.2-1-src.7z avec la licence iconv.
   - Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.
   - ...
   - Replaced `GAME_IS` conditions with variables checks to speed up install time.
   - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
-  - Réécriture de l'utilitaire IA Reference Picker et mise à jour de sa documentation.
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)

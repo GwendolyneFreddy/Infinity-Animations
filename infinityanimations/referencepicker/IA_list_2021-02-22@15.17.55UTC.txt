@@ -1,0 +1,1350 @@
+0x1001	4AA 	FIEND_GREEN                       	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1002	4AB 	FIEND_BLUE                        	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1003	4AC 	WYVERN_WHITE_BIG                  	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1004	4AD 	GW_SHARK_SANDBARD                 	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1005	4AE 	GW_OVERSEER_WARRIOR1              	LARGE  5 Lt  BGI MONSTER LONG 4 PART unpaletted
+0x1006	4AF 	GW_OVERSEER_WARRIOR2              	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1007	4AG 	GW_OVERSEER_WARRIOR3              	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1008	4AH 	GW_OVERSEER_CAPTAIN               	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1009	4AI 	GW_OVERSEER_NUDE                  	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x100a	4AJ 	WYRMLING_ALBINO                   	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x100b	4AK 	FIEND_RED                         	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x100c	4AL 	TUNNEL_WORM                       	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1101	4JW 	DRAGON_WHITE                      	HUGE   A Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1102	4JX 	GW_CATAPULT                       	HUGE   A Lt  BGI MONSTER LONG 4 PART unpaletted
+0x1103	4JY 	DRAGON_GREEN_IWD                  	HUGE   A Lx  BGI MONSTER LONG 4 PART unpaletted
+0x1209	XDR1	GW_TARASQUE                       	HUGE   D Dx  DRAGONS (XDR) unpaletted
+0x120a	XDR2	GW_TARASQUE_BLUE                  	HUGE   D Dx  DRAGONS (XDR) unpaletted
+0x120b	XDR3	GW_TARASQUE_GREEN                 	HUGE   D Dx  DRAGONS (XDR) unpaletted
+0x120c	XDR4	GW_TARASQUE_PURPLE                	HUGE   D Dx  DRAGONS (XDR) unpaletted
+0x120d	XDR5	GW_TARASQUE_RED                   	HUGE   D Dx  DRAGONS (XDR) unpaletted
+0x1301	-AA 	GW_DRAGON_MECHANIC                	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1302	-AB 	GW_DRAGON_BLACK_JUVENILE          	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1303	-AC 	GW_DRAGON_SILVER_JUVENILE         	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1304	-AD 	GW_MEDUSA_WOW                     	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1305	-AE 	GW_TIGER_WOW                      	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1306	-AF 	DRAGON_RED_JUVENILE               	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1307	-AG 	DRAGON_GREEN_JUVENILE             	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1308	-AH 	GIANT_HILL                        	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x1309	-AI 	ELEMENTAL_SUNNIS_WOW              	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x130a	-AJ 	ELEMENTAL_ZAAMAN_WOW              	LARGE  5 Lx  BGII SPLIT 4 PART unpaletted
+0x2001	2AA 	-----                             	NORMAL 3 Xx  BGI SIMPLE CASTER (BOW) paletted
+0x2002	2AB 	-----                             	NORMAL 3 Xx  BGI SIMPLE CASTER (BOW) paletted
+0x2101	2JW 	-----                             	NORMAL 3 Xx  BGI SIMPLE CASTER (BOW) paletted
+0x3001	4AA 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3002	4AB 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3003	4AC 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3004	4AD 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3006	4AF 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3007	4AG 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3008	4AH 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3009	4AI 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x300a	4AJ 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x300b	4AK 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x300c	4AL 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3101	4JW 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x3103	4JY 	-----                             	LARGE  5 Xx  BROKEN ANKHEG unpaletted
+0x5000	3AA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5001	3AB 	DRIDER_FEMALE                     	LARGE  5 Ix  IWD LARGE unpaletted
+0x5002	3AC 	DRIDER_MALE                       	LARGE  5 Ix  IWD LARGE unpaletted
+0x5003	3AD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5004	3AE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5005	3AF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5006	3AG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5007	3AH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5008	3AI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5009	3AJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x500a	3AK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x500b	3AL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x500c	3AM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x500d	3AN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x500e	3AO 	BUGBEAR                           	LARGE  5 It  IWD LARGE unpaletted
+0x500f	3AP 	BUGBEAR_CAPTAIN                   	LARGE  5 It  IWD LARGE unpaletted
+0x5010	3AQ 	CHIMERA                           	LARGE  5 Ix  IWD LARGE unpaletted
+0x5011	3AR 	ELEMENTAL_WATER_SMALL             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5012	3AS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5013	3AT 	FEYR_GREATER                      	LARGE  5 Ix  IWD LARGE unpaletted
+0x5014	3AU 	GIANT_FOMORIAN                    	LARGE  5 Ix  IWD LARGE unpaletted
+0x5015	3AV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5016	3AW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5017	3AX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5018	3AY 	GOBLIN_WORG                       	LARGE  5 It  IWD LARGE unpaletted
+0x5019	3AZ 	GOBLIN_WORG_CAPTAIN               	LARGE  5 It  IWD LARGE unpaletted
+0x501a	3BA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x501b	3BB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x501c	3BC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x501d	3BD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x501e	3BE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x501f	3BF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5020	3BG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5021	3BH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5022	3BI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5023	3BJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5024	3BK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5025	3BL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5026	3BM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5027	3BN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5028	3BO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5029	3BP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x502a	3BQ 	MARILITH_IWD                      	LARGE  5 Ix  IWD LARGE unpaletted
+0x502b	3BR 	GIANT_FROST                       	LARGE  5 Ix  IWD LARGE unpaletted
+0x502c	3BS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x502d	3BT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x502e	3BU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x502f	3BV 	BELHIFET                          	LARGE  5 Ix  IWD LARGE unpaletted
+0x5030	3BW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5031	3BX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5032	3BY 	BEBILITH_NWN                      	LARGE  5 Ix  IWD LARGE unpaletted
+0x5033	3BZ 	HAMATULA_NWN                      	LARGE  5 Ix  IWD LARGE unpaletted
+0x5034	3CA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5035	3CB 	PIT_FIEND_NWN                     	LARGE  5 Ix  IWD LARGE unpaletted
+0x5036	3CC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5037	3CD 	ELEMENTAL_EARTH_IWD               	LARGE  5 Ix  IWD LARGE unpaletted
+0x5038	3CE 	ELEMENTAL_FIRE_IWD                	LARGE  5 Ix  IWD LARGE unpaletted
+0x5039	3CF 	ELEMENTAL_WATER                   	LARGE  5 Ix  IWD LARGE unpaletted
+0x503a	3CG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x503b	3CH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x503c	3CI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x503d	3CJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x503e	3CK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x503f	3CL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5040	3CM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5041	3CN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5042	3CO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5043	3CP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5044	3CQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5045	3CR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5046	3CS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5047	3CT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5048	3CU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5049	3CV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x504a	3CW 	GIANT_FIRE_IWD                    	LARGE  5 Ix  IWD LARGE unpaletted
+0x504b	3CX 	GOLEM_IRON_IWD                    	LARGE  5 Ix  IWD LARGE unpaletted
+0x504c	3CY 	REMORHAZ                          	LARGE  5 Ix  IWD LARGE unpaletted
+0x504d	3CZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x504e	3DA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x504f	3DB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5050	3DC 	GIANT_VERBEEG                     	LARGE  5 Ix  IWD LARGE unpaletted
+0x5051	3DD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5052	3DE 	MARILITH_DARK                     	LARGE  5 Ix  IWD LARGE unpaletted
+0x5053	3DF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5054	3DG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5055	3DH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5056	3DI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5057	3DJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5058	3DK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5059	3DL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x505a	3DM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x505b	3DN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x505c	3DO 	GW_OVERSEER_MAGE                  	LARGE  5 Ix  IWD LARGE unpaletted
+0x505d	3DP 	GW_FROZEN_HORROR                  	LARGE  5 Ix  IWD LARGE unpaletted
+0x505e	3DQ 	GW_TROLL_AVATAR_DARKNESS          	LARGE  5 Ix  IWD LARGE unpaletted
+0x505f	3DR 	GW_TROLL_AVATAR_BLUE              	LARGE  5 It  IWD LARGE unpaletted
+0x5060	3DS 	GW_TROLL_AVATAR_GREEN             	LARGE  5 It  IWD LARGE unpaletted
+0x5061	3DT 	GW_TROLL_AVATAR_RED               	LARGE  5 It  IWD LARGE unpaletted
+0x5062	3DU 	GW_COW_BLACK_AND_WHITE            	LARGE  5 Ix  IWD LARGE unpaletted
+0x5063	3DV 	GW_COW_BROWN_AND_WHITE            	LARGE  5 Ix  IWD LARGE unpaletted
+0x5064	3DW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5065	3DX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5066	3DY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5067	3DZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5068	3EA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5069	3EB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506a	3EC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506b	3ED 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506c	3EE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506d	3EF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506e	3EG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x506f	3EH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5070	3EI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5071	3EJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5072	3EK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5073	3EL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5074	3EM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5075	3EN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5076	3EO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5077	3EP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5078	3EQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5079	3ER 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507a	3ES 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507b	3ET 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507c	3EU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507d	3EV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507e	3EW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x507f	3EX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5080	3EY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5081	3EZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5082	3FA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5083	3FB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5084	3FC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5085	3FD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5086	3FE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5087	3FF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5088	3FG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5089	3FH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508a	3FI 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508b	3FJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508c	3FK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508d	3FL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508e	3FM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x508f	3FN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5090	3FO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5091	3FP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5092	3FQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5093	3FR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5094	3FS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5095	3FT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5096	3FU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5097	3FV 	GW_JACKAL_GUARDIAN                	LARGE  5 Ix  IWD LARGE unpaletted
+0x5098	3FW 	GW_ZOMBIE_GUARDIAN                	LARGE  5 Ix  IWD LARGE unpaletted
+0x5099	3FX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509a	3FY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509b	3FZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509c	3GA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509d	3GB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509e	3GC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x509f	3GD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50a0	3GE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50a1	3GF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50a2	3GG 	GW_SAND_BEETLE_GIANT              	LARGE  5 Ix  IWD LARGE unpaletted
+0x50a3	3GH 	GW_MAGGOT_GIANT_BLUE              	LARGE  5 It  IWD LARGE unpaletted
+0x50a4	3GI 	GW_MAGGOT_GIANT_GREEN             	LARGE  5 It  IWD LARGE unpaletted
+0x50a5	3GJ 	GW_MAGGOT_GIANT_RED               	LARGE  5 It  IWD LARGE unpaletted
+0x50a6	3GK 	GW_MAGGOT_GIANT_BLACK             	LARGE  5 It  IWD LARGE unpaletted
+0x50a7	3GL 	GW_MAGGOT_GIANT_GOLDEN_BLUE       	LARGE  5 It  IWD LARGE unpaletted
+0x50a8	3GM 	GW_MAGGOT_GIANT_GOLDEN_RED        	LARGE  5 It  IWD LARGE unpaletted
+0x50a9	3GN 	GW_MAGGOT_GIANT_GOLD              	LARGE  5 It  IWD LARGE unpaletted
+0x50aa	3GO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ab	3GP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ac	3GQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ad	3GR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ae	3GS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50af	3GT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b0	3GU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b1	3GV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b2	3GW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b3	3GX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b4	3GY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b5	3GZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b6	3HA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b7	3HB 	GW_RAZOR_SPINE_GIANT              	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b8	3HC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50b9	3HD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ba	3HE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50bb	3HF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50bc	3HG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50bd	3HH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50be	3HI 	GW_FROG_DEMON_GIANT               	LARGE  5 Ix  IWD LARGE unpaletted
+0x50bf	3HJ 	GW_FROG_DEMON_GIANT_BLUE          	LARGE  5 It  IWD LARGE unpaletted
+0x50c0	3HK 	GW_FROG_DEMON_GIANT_GREEN         	LARGE  5 It  IWD LARGE unpaletted
+0x50c1	3HL 	GW_FROG_DEMON_GIANT_PURPLE        	LARGE  5 It  IWD LARGE unpaletted
+0x50c2	3HM 	GW_FROG_DEMON_GIANT_RED           	LARGE  5 It  IWD LARGE unpaletted
+0x50c3	3HN 	GW_FROG_DEMON_GIANT_YELLOW        	LARGE  5 It  IWD LARGE unpaletted
+0x50c4	3HO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50c5	3HP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50c6	3HQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50c7	3HR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50c8	3HS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50c9	3HT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ca	3HU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50cb	3HV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50cc	3HW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50cd	3HX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ce	3HY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50cf	3HZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d0	3IA 	GW_LOLTH_AVATAR                   	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d1	3IB 	GW_DEMON_ANDARIEL                 	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d2	3IC 	GW_DEMON_DIABLO                   	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d3	3ID 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d4	3IE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d5	3IF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d6	3IG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d7	3IH 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d8	3II 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50d9	3IJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50da	3IK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50db	3IL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50dc	3IM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50dd	3IN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50de	3IO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50df	3IP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e0	3IQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e1	3IR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e2	3IS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e3	3IT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e4	3IU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e5	3IV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e6	3IW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e7	3IX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e8	3IY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50e9	3IZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ea	3JA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50eb	3JB 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ec	3JC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ed	3JD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ee	3JE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ef	3JF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f0	3JG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f1	3JH 	GW_EVIL_HUT                       	LARGE  5 It  IWD LARGE unpaletted
+0x50f2	3JI 	GW_VOLCANO_CRATER                 	LARGE  5 It  IWD LARGE unpaletted
+0x50f3	3JJ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f4	3JK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f5	3JL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f6	3JM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f7	3JN 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f8	3JO 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50f9	3JP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50fa	3JQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50fb	3JR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50fc	3JS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50fd	3JT 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50fe	3JU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x50ff	3JV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5100	3JW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5101	3JX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5102	3JY 	GW_TIGER_LARGE                    	LARGE  5 Ix  IWD LARGE unpaletted
+0x5103	3JZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5104	3KA 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5105	3KB 	GW_TIGER_WHITE_LARGE              	LARGE  5 Ix  IWD LARGE unpaletted
+0x5106	3KC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5107	3KD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5108	3KE 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5109	3KF 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x510a	3KG 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x510b	3KH 	DRAGON_WHITE_YOUNG                	LARGE  5 Ix  IWD LARGE unpaletted
+0x510c	3KI 	DRAGON_GREEN_YOUNG                	LARGE  5 Ix  IWD LARGE unpaletted
+0x510d	3KJ 	DRAGON_SILVER_YOUNG               	LARGE  5 Ix  IWD LARGE unpaletted
+0x510e	3KK 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x510f	3KL 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5110	3KM 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5111	3KN 	GOBLIN_WORG_ELITE                 	LARGE  5 Ix  IWD LARGE unpaletted
+0x5112	3KO 	GOBLIN_WORG_SHAMAN                	LARGE  5 Ix  IWD LARGE unpaletted
+0x5113	3KP 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5114	3KQ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5115	3KR 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5116	3KS 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5117	3KT 	ETTIN_GHOST                       	LARGE  5 Ix  IWD LARGE unpaletted
+0x5118	3KU 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5119	3KV 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x511a	3KW 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x511b	3KX 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x511c	3KY 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x511d	3KZ 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x511e	3LA 	ELEMENTAL_ICE_WOW                 	LARGE  5 Ix  IWD LARGE unpaletted
+0x511f	3LB 	GW_BALD_EAGLE_GIANT               	LARGE  5 Ix  IWD LARGE unpaletted
+0x5120	3LC 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x5121	3LD 	-----                             	LARGE  5 Ix  IWD LARGE unpaletted
+0x523d	3AA 	TREANT_DARK                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x523e	3AB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x523f	3AC 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5240	3AD 	HALFDRAGON_BLACK                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5241	3AE 	HALFDRAGON_RED                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5242	3AF 	ISAIR                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5243	3AG 	MADAE                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5244	3AH 	MALARITE                          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5245	3AI 	SHENRICAL                         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5246	3AJ 	WEREBADGER                        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5247	3AK 	WERERAT                           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5248	3AL 	YUAN-TI_HALF                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5249	3AM 	ABISHAI_WHITE                     	NORMAL 3 It  IWD SMALL unpaletted
+0x524a	3AN 	BOAR_ARCTIC                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x524b	3AO 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x524c	3AP 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x524d	3AQ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x524e	3AR 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x524f	3AS 	FEYR                              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5250	3AT 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5251	3AU 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5252	3AV 	GOBLIN_CAPTAIN                    	NORMAL 3 It  IWD SMALL unpaletted
+0x5253	3AW 	GOBLINELITE_AXE_GREEN             	NORMAL 3 It  IWD SMALL unpaletted
+0x5254	3AX 	GOBLINELITE_BOW_GREEN             	NORMAL 3 It  IWD SMALL unpaletted
+0x5255	3AY 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5256	3AZ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5257	3BA 	GOBLIN_SHAMAN                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5258	3BB 	GOBLIN_AXE_GREEN                  	NORMAL 3 It  IWD SMALL unpaletted
+0x5259	3BC 	GOBLIN_BOW_GREEN                  	NORMAL 3 It  IWD SMALL unpaletted
+0x525a	3BD 	HOOK_HORROR                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x525b	3BE 	KEG1                              	NORMAL 3 It  IWD SMALL unpaletted
+0x525c	3BF 	KEG2                              	NORMAL 3 It  IWD SMALL unpaletted
+0x525d	3BG 	KEG3                              	NORMAL 3 It  IWD SMALL unpaletted
+0x525e	3BH 	LEMURE                            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x525f	3BI 	OROG_SHAMAN                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5260	3BJ 	ORC_SHAMAN_UNDEAD                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5261	3BK 	ORC_AXE_UNDEAD                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5262	3BL 	WORG                              	NORMAL 3 It  IWD SMALL unpaletted
+0x5263	3BM 	SVIRFNEBLIN_PALE_AXE              	NORMAL 3 It  IWD SMALL unpaletted
+0x5264	3BN 	SVIRFNEBLIN_PALE_NOAXE            	NORMAL 3 It  IWD SMALL unpaletted
+0x5265	3BO 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5266	3BP 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5267	3BQ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5268	3BR 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5269	3BS 	HARPY                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526a	3BT 	SHADOW_SMALL_MURKY                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526b	3BU 	SHADOW_LARGE_MURKY                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526c	3BV 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526d	3BW 	AMEL_PC_NWN                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526e	3BX 	VEDRED_PC_NWN                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x526f	3BY 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5270	3BZ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5271	3CA 	OSYLUTH_NWN                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5272	3CB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5273	3CC 	SCARECROW_NWN                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5274	3CD 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5275	3CE 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5276	3CF 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5277	3CG 	SAHUAGIN_IWD                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5278	3CH 	SAHUAGIN_LARGE_IWD                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5279	3CI 	ANIMATED_PLATE_BRONZE_SMALL       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527a	3CJ 	ANIMATED_PLATE_DARK_SMALL         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527b	3CK 	ANIMATED_PLATE_GREEN_SMALL        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527c	3CL 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527d	3CM 	BARBARIAN_SHAMAN_HAMMER           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527e	3CN 	BARBARIAN_SHAMAN_STAFF            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x527f	3CO 	BARBARIAN_SHAMAN_CLUB             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5280	3CP 	BARBARIAN_WARRIOR_TAN             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5281	3CQ 	BARBARIAN_WARRIOR_RED             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5282	3CR 	BARBARIAN_WARRIOR_BROWN           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5283	3CS 	BARBARIAN_ICASARACHT              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5284	3CT 	BELHIFET_PRIEST                   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5285	3CU 	CREEPING_DOOM                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5286	3CV 	DROWNED_DEAD                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5287	3CW 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5288	3CX 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5289	3CY 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528a	3CZ 	SEER                              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528b	3DA 	TUNDRA_YETI                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528c	3DB 	UMBER_HULK_VODYANOI               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528d	3DC 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528e	3DD 	WIGHT_BARROW                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x528f	3DE 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5290	3DF 	SUCCUBUS_NWN                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5291	3DG 	BEETLE_BOMBARDIER_NWN             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5292	3DH 	BOVINE_AXE_THING                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5293	3DI 	PACK_MULE_WOW                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5294	3DJ 	WEREBEAR_D2                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5295	3DK 	BEAR_GIANT_D2                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5296	3DL 	JASTEY_WOLFHOUND                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5297	3DM 	GW_HALFDRAGON_SILVER              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5298	3DN 	GW_OCTOPUS_TENTACLE               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5299	3DO 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529a	3DP 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529b	3DQ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529c	3DR 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529d	3DS 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529e	3DT 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x529f	3DU 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a0	3DV 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a1	3DW 	GW_PIG                            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a2	3DX 	GW_SHEEP                          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a3	3DY 	GW_APE_BLACK                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a4	3DZ 	GW_APE_BROWN                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a5	3EA 	GW_GARGOYLE                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a6	3EB 	BONEBAT                           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a7	3EC 	GW_AMAZON_PRIESTESS_FLAIL         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a8	3ED 	GW_AMAZON_PRIESTESS_HAMMER        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52a9	3EE 	GW_AMAZON_PRIESTESS_MACE          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52aa	3EF 	GW_PYGMY_SHAMAN                   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ab	3EG 	GW_SKELETON_ARMY1                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ac	3EH 	GW_SKELETON_ARMY1_SCYTHE          	NORMAL 3 It  IWD SMALL unpaletted
+0x52ad	3EI 	GW_SKELETON_ARMY1_ARCHER          	NORMAL 3 It  IWD SMALL unpaletted
+0x52ae	3EJ 	GW_SKELETON_ARMY1_ONE_ARMED       	NORMAL 3 It  IWD SMALL unpaletted
+0x52af	3EK 	GW_SKELETON_ARMY1_BEHEADED        	NORMAL 3 It  IWD SMALL unpaletted
+0x52b0	3EL 	GW_SKELETON_ARMY1_RIPPED_OUT      	NORMAL 3 It  IWD SMALL unpaletted
+0x52b1	3EM 	GW_SKELETON_ARMY2                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52b2	3EN 	GW_SKELETON_ARMY2_SCYTHE          	NORMAL 3 It  IWD SMALL unpaletted
+0x52b3	3EO 	GW_SKELETON_ARMY2_ARCHER          	NORMAL 3 It  IWD SMALL unpaletted
+0x52b4	3EP 	GW_SKELETON_ARMY2_ONE_ARMED       	NORMAL 3 It  IWD SMALL unpaletted
+0x52b5	3EQ 	GW_SKELETON_ARMY2_BEHEADED        	NORMAL 3 It  IWD SMALL unpaletted
+0x52b6	3ER 	GW_SKELETON_ARMY2_RIPPED_OUT      	NORMAL 3 It  IWD SMALL unpaletted
+0x52b7	3ES 	GW_SKELETON_ARMY3                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52b8	3ET 	GW_SKELETON_ARMY3_SCYTHE          	NORMAL 3 It  IWD SMALL unpaletted
+0x52b9	3EU 	GW_SKELETON_ARMY3_ARCHER          	NORMAL 3 It  IWD SMALL unpaletted
+0x52ba	3EV 	GW_SKELETON_ARMY3_ONE_ARMED       	NORMAL 3 It  IWD SMALL unpaletted
+0x52bb	3EW 	GW_SKELETON_ARMY3_BEHEADED        	NORMAL 3 It  IWD SMALL unpaletted
+0x52bc	3EX 	GW_SKELETON_ARMY3_RIPPED_OUT      	NORMAL 3 It  IWD SMALL unpaletted
+0x52bd	3EY 	GW_SKELETON_ARMY4                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52be	3EZ 	GW_SKELETON_ARMY4_SCYTHE          	NORMAL 3 It  IWD SMALL unpaletted
+0x52bf	3FA 	GW_SKELETON_ARMY4_ARCHER          	NORMAL 3 It  IWD SMALL unpaletted
+0x52c0	3FB 	GW_SKELETON_ARMY4_ONE_ARMED       	NORMAL 3 It  IWD SMALL unpaletted
+0x52c1	3FC 	GW_SKELETON_ARMY4_BEHEADED        	NORMAL 3 It  IWD SMALL unpaletted
+0x52c2	3FD 	GW_SKELETON_ARMY4_RIPPED_OUT      	NORMAL 3 It  IWD SMALL unpaletted
+0x52c3	3FE 	GW_DOOM_KNIGHT_PRIEST             	NORMAL 3 It  IWD SMALL unpaletted
+0x52c4	3FF 	GW_DOOM_KNIGHT_PRIEST_COLD        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52c5	3FG 	GW_DOOM_KNIGHT_PRIEST_FIRE        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52c6	3FH 	GW_DOOM_KNIGHT_PRIEST_POISON      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52c7	3FI 	GW_DOOM_KNIGHT_PRIEST_UNHOLY      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52c8	3FJ 	GW_DOOM_KNIGHT_MAGE               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52c9	3FK 	GW_DOOM_KNIGHT_MAGE_COLD          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ca	3FL 	GW_DOOM_KNIGHT_MAGE_FIRE          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52cb	3FM 	GW_DOOM_KNIGHT_MAGE_POISON        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52cc	3FN 	GW_PANTHER_WOMAN                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52cd	3FO 	GW_PANTHER_WOMAN_ELITE1           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ce	3FP 	GW_PANTHER_WOMAN_ELITE2           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52cf	3FQ 	GW_PANTHER_WOMAN_WHIP             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d0	3FR 	GW_PANTHER_WOMAN_WHIP_ELITE       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d1	3FS 	GW_PANTHER_WOMAN_CHIEF            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d2	3FT 	GW_PANTHER_WOMAN_RANGE            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d3	3FU 	GW_PANTHER_WOMAN_RANGE_ELITE      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d4	3FV 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d5	3FW 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d6	3FX 	GW_MUMMY_PUTRID                   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d7	3FY 	GW_LICH_FIRE                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d8	3FZ 	GW_GOATMAN_TWO_HANDED_AXE         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52d9	3GA 	GW_GOATMAN_GREAT_MAUL             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52da	3GB 	GW_SAND_BEETLE                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52db	3GC 	GW_MAGGOT_BLUE                    	NORMAL 3 It  IWD SMALL unpaletted
+0x52dc	3GD 	GW_MAGGOT_BLACK                   	NORMAL 3 It  IWD SMALL unpaletted
+0x52dd	3GE 	GW_MAGGOT_RED                     	NORMAL 3 It  IWD SMALL unpaletted
+0x52de	3GF 	GW_MAGGOT_GOLD                    	NORMAL 3 It  IWD SMALL unpaletted
+0x52df	3GG 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e0	3GH 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e1	3GI 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e2	3GJ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e3	3GK 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e4	3GL 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e5	3GM 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e6	3GN 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52e7	3GO 	GW_MAGGOT_EGG                     	NORMAL 3 It  IWD SMALL unpaletted
+0x52e8	3GP 	GW_EVARD_TENTACLES                	NORMAL 3 It  IWD SMALL unpaletted
+0x52e9	3GQ 	GW_EVARD_FIRE_TENTACLES           	NORMAL 3 It  IWD SMALL unpaletted
+0x52ea	3GR 	GW_EVARD_BLACK_TENTACLES          	NORMAL 3 It  IWD SMALL unpaletted
+0x52eb	3GS 	GW_PUTRID_DEFILER                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ec	3GT 	GW_GOLEM_MECHANIC_BLUE            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ed	3GU 	GW_GOLEM_MECHANIC_GREEN           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ee	3GV 	GW_GOLEM_MECHANIC_RED             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ef	3GW 	GW_SPIDER_MECHANIC                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f0	3GX 	GW_SPIDER_MECHANIC_GREEN          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f1	3GY 	GW_SPIDER_MECHANIC_RED            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f2	3GZ 	GW_SPIDER_MECHANIC_YELLOW         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f3	3HA 	GW_RAZOR_SPINE                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f4	3HB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f5	3HC 	GW_FROG_DEMON                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52f6	3HD 	GW_FROG_DEMON_BLUE                	NORMAL 3 It  IWD SMALL unpaletted
+0x52f7	3HE 	GW_FROG_DEMON_GREEN               	NORMAL 3 It  IWD SMALL unpaletted
+0x52f8	3HF 	GW_FROG_DEMON_PURPLE              	NORMAL 3 It  IWD SMALL unpaletted
+0x52f9	3HG 	GW_FROG_DEMON_RED                 	NORMAL 3 It  IWD SMALL unpaletted
+0x52fa	3HH 	GW_FROG_DEMON_YELLOW              	NORMAL 3 It  IWD SMALL unpaletted
+0x52fb	3HI 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52fc	3HJ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52fd	3HK 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52fe	3HL 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x52ff	3HM 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5300	3HN 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5301	3HO 	GW_BAT_DEMON                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5302	3HP 	GW_BAT_DEMON_BLACK                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5303	3HQ 	GW_BAT_DEMON_BLUE                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5304	3HR 	GW_BAT_DEMON_FIRE                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5305	3HS 	GW_BAT_DEMON_SMALL                	NORMAL 3 It  IWD SMALL unpaletted
+0x5306	3HT 	GW_IMP_GREMLIN                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5307	3HU 	GW_IMP_GREMLIN_BLUE               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5308	3HV 	GW_IMP_GREMLIN_GREEN              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5309	3HW 	GW_IMP_GREMLIN_RED                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530a	3HX 	GW_SUCCUBUS                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530b	3HY 	GW_SUCCUBUS_WITCH                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530c	3HZ 	GW_SUCCUBUS_SEXY                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530d	3IA 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530e	3IB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x530f	3IC 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5310	3ID 	GW_DEMON_IZUAL                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5311	3IE 	GW_DEMON_MEPHISTO                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5312	3IF 	GW_MEGA_DEMON                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5313	3IG 	GW_MEGA_DEMON_FLAMBERGE           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5314	3IH 	GW_MEGA_DEMON_SCYTHE              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5315	3II 	GW_MEGA_DEMON_SWORD               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5316	3IJ 	GW_MEGA_DEMON_WAR_AXE             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5317	3IK 	GW_WERERAT_MANTUOCK_PST           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5318	3IL 	GW_WERERAT_BLUE_PST               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5319	3IM 	GW_WERERAT_GREEN_PST              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531a	3IN 	GW_WERERAT_OCHRE_PST              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531b	3IO 	GW_WERERAT_DARK_OCHRE_PST         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531c	3IP 	GW_WERERAT_YELLOW_PST             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531d	3IQ 	GW_WERERAT_GIANT_BLUE_PST         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531e	3IR 	GW_WERERAT_GIANT_GREEN_PST        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x531f	3IS 	GW_WERERAT_GIANT_OCHRE_PST        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5320	3IT 	GW_WERERAT_GIANT_DARK_OCHRE_PST   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5321	3IU 	GW_WERERAT_GIANT_YELLOW_PST       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5322	3IV 	GW_BLADE_CREEPER                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5323	3IW 	GW_FLYING_SCIMITAR                	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5324	3IX 	GW_FLYING_SCIMITAR_CYAN           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5325	3IY 	GW_FLYING_SCIMITAR_FIRE           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5326	3IZ 	GW_FLYING_SCIMITAR_GREEN          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5327	3JA 	GW_FLYING_SCIMITAR_HOLY           	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5328	3JB 	ANIMATED_PLATE_BRONZE             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5329	3JC 	ANIMATED_PLATE_DARK               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x532a	3JD 	ANIMATED_PLATE_GREEN              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x532b	3JE 	GW_TRAPPED_SOUL1                  	NORMAL 3 It  IWD SMALL unpaletted
+0x532c	3JF 	GW_TRAPPED_SOUL2                  	NORMAL 3 It  IWD SMALL unpaletted
+0x532d	3JG 	GW_TRAPPED_SOUL3                  	NORMAL 3 It  IWD SMALL unpaletted
+0x532e	3JH 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x532f	3JI 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5330	3JJ 	GW_MUTATED_RAT                    	NORMAL 3 It  IWD SMALL unpaletted
+0x5331	3JK 	GW_MUTATED_RAT_BLACK              	NORMAL 3 It  IWD SMALL unpaletted
+0x5332	3JL 	GW_MUTATED_RAT_BROWN              	NORMAL 3 It  IWD SMALL unpaletted
+0x5333	3JM 	GW_MUTATED_RAT_GREEN              	NORMAL 3 It  IWD SMALL unpaletted
+0x5334	3JN 	GW_CLAW_VIPER                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5335	3JO 	GW_NAJA_SNAKE                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5336	3JP 	GW_NAJA_SNAKE_RED                 	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5337	3JQ 	GW_NAJA_SNAKE_YELLOW              	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5338	3JR 	GW_HYDRA_FIRE                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5339	3JS 	THE_BUTCHER_HOTS                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533a	3JT 	GW_TIGER                          	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533b	3JU 	GW_TIGER_WHITE                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533c	3JV 	GW_MEDUSA                         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533d	3JW 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533e	3JX 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x533f	3JY 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5340	3JZ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5341	3KA 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5342	3KB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5343	3KC 	GW_MEDUSA_GREEN                   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5344	3KD 	GW_MEDUSA_QUEEN                   	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5345	3KE 	SVIRFNEBLIN_DARK_AXE              	NORMAL 3 It  IWD SMALL unpaletted
+0x5346	3KF 	SVIRFNEBLIN_DARK_NOAXE            	NORMAL 3 It  IWD SMALL unpaletted
+0x5347	3KG 	ARUNDEL                           	NORMAL 3 It  IWD SMALL unpaletted
+0x5348	3KH 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5349	3KI 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x534a	3KJ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x534b	3KK 	TROLL_SCRAG                       	NORMAL 3 Ix  IWD SMALL unpaletted
+0x534c	3KL 	TROLL_SPECTRAL                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x534d	3KM 	HEPHERNAAN                        	NORMAL 3 It  IWD SMALL unpaletted
+0x534e	3KN 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x534f	3KO 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5350	3KP 	DROWNED_DEAD_RED                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5351	3KQ 	HALFDRAGON_GREEN                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5352	3KR 	BOAR_WILD                         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5353	3KS 	BUGBEAR_SHAMAN                    	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5354	3KT 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5355	3KU 	MKHIIN                            	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5356	3KV 	MKHIIN_BOW                        	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5357	3KW 	MKHIIN_STAFF                      	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5358	3KX 	MKHIIN_ARMOR_AXE                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x5359	3KY 	MKHIIN_ARMOR_BOW                  	NORMAL 3 Ix  IWD SMALL unpaletted
+0x535a	3KZ 	BEE_GIANT                         	NORMAL 3 Ix  IWD SMALL unpaletted
+0x535b	3LA 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x535c	3LB 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+0x535d	3LC 	GW_BALD_EAGLE                     	NORMAL 3 Ix  IWD SMALL unpaletted
+0x535e	3LD 	GW_BALD_EAGLE_SMALL               	NORMAL 3 Ix  IWD SMALL unpaletted
+0x547a	1AA 	MAUREZHI                          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x547b	1AB 	MYRLOCHAR                         	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x547c	1AC 	CHICKEN_BROWN                     	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x547d	1AD 	GW_GUARD1_GLAIVE_D2               	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x547e	1AE 	GW_GUARD1_SPEAR_D2                	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x547f	1AF 	GW_GUARD2_GLAIVE_D2               	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x5480	1AG 	GW_GUARD2_SPEAR_D2                	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x5481	1AH 	GW_SNAKE_SEA                      	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5482	1AI 	GW_JELLYFISH_BLUE                 	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5483	1AJ 	GW_JELLYFISH_GREEN                	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5484	1AK 	GW_JELLYFISH_PURPLE               	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5485	1AL 	GW_JELLYFISH_YELLOW               	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5486	1AM 	GW_JELLYFISH_BLUE_LARGE           	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5487	1AN 	GW_JELLYFISH_GREEN_LARGE          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5488	1AO 	GW_JELLYFISH_PURPLE_LARGE         	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5489	1AP 	GW_JELLYFISH_YELLOW_LARGE         	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548a	1AQ 	GW_GUARD_ZEALOT_AXE               	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548b	1AR 	GW_GUARD_ZEALOT_VOULGE            	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548c	1AS 	GW_GUARD_ZEALOT_POLEAXE           	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548d	1AT 	GW_GUARD_ZEALOT_SCYTHE            	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548e	1AU 	GW_CHICKEN_WHITE                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x548f	1AV 	GW_CHICKEN_GREY                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5490	1AW 	GW_CHICKEN_BLACK                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5491	1AX 	GW_RAT_WILD_PST                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5492	1AY 	GW_MOSQUITO_GIANT                 	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5493	1AZ 	GW_VULTURE_DEMON                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5494	1BA 	GW_MINOTAUR_ARMOR_2_AXES          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5495	1BB 	GW_MINOTAUR_ARMOR_2_FLAILS        	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5496	1BC 	GW_MINOTAUR_ARMOR_AXE_AND_FLAIL   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5497	1BD 	GW_MINOTAUR_2_AXES                	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x5498	1BE 	GW_MINOTAUR_2_FLAILS              	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x5499	1BF 	GW_MINOTAUR_AXE_AND_FLAIL         	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549a	1BG 	GW_AMAZON_SCIMITAR                	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549b	1BH 	GW_AMAZON_FALCHION                	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549c	1BI 	GW_AMAZON_SABER                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549d	1BJ 	GW_AMAZON_AXE                     	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549e	1BK 	GW_AMAZON_PIKE                    	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x549f	1BL 	GW_AMAZON_TRIDENT                 	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a0	1BM 	GW_AMAZON_NOVICE                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a1	1BN 	GW_AMAZON_ARCHER                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a2	1BO 	GW_PYGMY                          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a3	1BP 	GW_PYGMY_BLOWPIPE                 	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a4	1BQ 	GW_DOOM_KNIGHT                    	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a5	1BR 	GW_DOOM_KNIGHT_ONE_ARMED          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a6	1BS 	GW_DOOM_KNIGHT_BEHEADED           	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a7	1BT 	GW_DOOM_KNIGHT_RIPPED_OUT         	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a8	1BU 	GW_REANIMATED_HORDE               	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54a9	1BV 	GW_REANIMATED_HORDE_BEHEADED      	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54aa	1BW 	GW_DEMON_BABOON                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54ab	1BX 	GW_BAURIER_BROWN_PST              	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x54ac	1BY 	GW_BAURIER_CHESTNUT_PST           	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x54ad	1BZ 	GW_BAURIER_WHITE_PST              	NORMAL 3 Xt  BGI SIMPLE MONSTER unpaletted
+0x54ae	1CA 	SPIDER_BLACK_WIDOW                	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54af	1CB 	DOG_HIGHLAND                      	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b0	1CC 	BEAR_BLACK_FIXED                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b1	1CD 	BEAR_CAVE_FIXED                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b2	1CE 	BEAR_POLAR_FIXED                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b3	1CF 	DOG_WAR_FIXED                     	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b4	1CG 	GHAST_FIXED                       	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b5	1CH 	REVENANT_FIXED                    	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b6	1CI 	WOLF_FIXED                        	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b7	1CJ 	WOLF_WORG_FIXED                   	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b8	1CK 	DOG_GRAY                          	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54b9	1CL 	SPIDER_WATER                      	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54ba	1CM 	GIBBERLING_BROOD                  	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x54bb	1CN 	BLACK_PUDDING                     	NORMAL 3 Xx  BGI SIMPLE MONSTER unpaletted
+0x557b	1JX 	BASILISK_NWN                      	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x557c	1JY 	GW_THORNED_HULK1                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x557d	1JZ 	GW_THORNED_HULK2                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x557e	1KA 	GW_THORNED_HULK3                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x557f	1KB 	GW_THORNED_HULK4                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5580	1KC 	GW_THORNED_HULK5                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5581	1KD 	GW_SNOW_YETI                      	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5582	1KE 	GW_REGURGITATOR                   	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5583	1KF 	GW_MOSQUITO_NEST                  	LARGE  5 Xt  BGI SIMPLE MONSTER unpaletted
+0x5584	1KG 	GW_SIEGE_BEAST                    	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5585	1KH 	GW_DEMON_DURIEL                   	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5586	1KI 	GW_INSECTS_SWARM                  	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x5587	1KJ 	BASILISK_GREATER_FIXED            	LARGE  5 Xx  BGI SIMPLE MONSTER unpaletted
+0x56b7	1AA 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56b8	1AB 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56b9	1AC 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ba	1AD 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56bb	1AE 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56bc	1AF 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56bd	1AG 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56be	1AH 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56bf	1AI 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c0	1AJ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c1	1AK 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c2	1AL 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c3	1AM 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c4	1AN 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c5	1AO 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c6	1AP 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c7	1AQ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c8	1AR 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56c9	1AS 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ca	1AT 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56cb	1AU 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56cc	1AV 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56cd	1AW 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ce	1AX 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56cf	1AY 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d0	1AZ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d1	1BA 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d2	1BB 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d3	1BC 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d4	1BD 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d5	1BE 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d6	1BF 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d7	1BG 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d8	1BH 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56d9	1BI 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56da	1BJ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56db	1BK 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56dc	1BL 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56dd	1BM 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56de	1BN 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56df	1BO 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e0	1BP 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e1	1BQ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e2	1BR 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e3	1BS 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e4	1BT 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e5	1BU 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e6	1BV 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e7	1BW 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e8	1BX 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56e9	1BY 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ea	1BZ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56eb	1CA 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ec	1CB 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ed	1CC 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ee	1CD 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56ef	1CE 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f0	1CF 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f1	1CG 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f2	1CH 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f3	1CI 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f4	1CJ 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f5	1CK 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f6	1CL 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f7	1CM 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x56f8	1CN 	-----                             	NORMAL 3 Xx  BGI SIMPLE MONSTER paletted
+0x57b8	1JX 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57b9	1JY 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57ba	1JZ 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57bb	1KA 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57bc	1KB 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57bd	1KC 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57be	1KD 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57bf	1KE 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57c0	1KF 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57c1	1KG 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57c2	1KH 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57c3	1KI 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x57c4	1KJ 	-----                             	LARGE  5 Xx  BGI SIMPLE MONSTER paletted
+0x5b00	3AA 	ELLESIME_WHITE                    	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b01	3AB 	LAGOON_CREATURE                   	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b02	3AC 	MODRON_ROUND                      	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b03	3AD 	ABISHAI_BLACK                     	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b04	3AE 	ABISHAI_BLUE                      	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b05	3AF 	ABISHAI_GREEN                     	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b06	3AG 	ABISHAI_RED                       	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b07	3AH 	DISPLACER_BEAST                   	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b08	3AI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b09	3AJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b0a	3AK 	HAG_NIGHT                         	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b0b	3AL 	HAG_GREEN                         	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b0c	3AM 	HAG_SEA                           	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b0d	3AN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b0e	3AO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b0f	3AP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b10	3AQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b11	3AR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b12	3AS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b13	3AT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b14	3AU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b15	3AV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b16	3AW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b17	3AX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b18	3AY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b19	3AZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1a	3BA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1b	3BB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1c	3BC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1d	3BD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1e	3BE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b1f	3BF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b20	3BG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b21	3BH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b22	3BI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b23	3BJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b24	3BK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b25	3BL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b26	3BM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b27	3BN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b28	3BO 	GW_DESTRIER_BLACK_AND_WHITE       	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b29	3BP 	GW_MODRON_PST                     	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2a	3BQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2b	3BR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2c	3BS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2d	3BT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2e	3BU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b2f	3BV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b30	3BW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b31	3BX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b32	3BY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b33	3BZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b34	3CA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b35	3CB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b36	3CC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b37	3CD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b38	3CE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b39	3CF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3a	3CG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3b	3CH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3c	3CI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3d	3CJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3e	3CK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b3f	3CL 	GW_NORDOM_PST                     	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b40	3CM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b41	3CN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b42	3CO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b43	3CP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b44	3CQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b45	3CR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b46	3CS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b47	3CT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b48	3CU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b49	3CV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4a	3CW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4b	3CX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4c	3CY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4d	3CZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4e	3DA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b4f	3DB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b50	3DC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b51	3DD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b52	3DE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b53	3DF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b54	3DG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b55	3DH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b56	3DI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b57	3DJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b58	3DK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b59	3DL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5a	3DM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5b	3DN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5c	3DO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5d	3DP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5e	3DQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b5f	3DR 	GW_DRONE_HEAVY_RED_PST            	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b60	3DS 	GW_DRONE_HEAVY_YELLOW_PST         	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b61	3DT 	GW_LARVAL_WORM_SMALL_PST          	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b62	3DU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b63	3DV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b64	3DW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b65	3DX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b66	3DY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b67	3DZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b68	3EA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b69	3EB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6a	3EC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6b	3ED 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6c	3EE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6d	3EF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6e	3EG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b6f	3EH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b70	3EI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b71	3EJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b72	3EK 	GW_DRONE_HEAVY_PST                	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b73	3EL 	GW_DRONE_HEAVY_GOLD_PST           	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b74	3EM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b75	3EN 	GW_DRONE_HEAVY_GREEN_PST          	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b76	3EO 	GW_DRONE_HEAVY_MAGENTA_PST        	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b77	3EP 	GW_DRONE_HEAVY_PURPLE_PST         	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b78	3EQ 	GW_LARVAL_WORM_PST                	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b79	3ER 	GHOUL_QUEEN                       	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b7a	3ES 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b7b	3ET 	HAG_ANNIS                         	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b7c	3EU 	GW_DRONE_LIGHT_PST                	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b7d	3EV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b7e	3EW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b7f	3EX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b80	3EY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b81	3EZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b82	3FA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b83	3FB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b84	3FC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b85	3FD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b86	3FE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b87	3FF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b88	3FG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b89	3FH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8a	3FI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8b	3FJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8c	3FK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8d	3FL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8e	3FM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b8f	3FN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b90	3FO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b91	3FP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b92	3FQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b93	3FR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b94	3FS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b95	3FT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b96	3FU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b97	3FV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b98	3FW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b99	3FX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b9a	3FY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b9b	3FZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b9c	3GA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b9d	3GB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5b9e	3GC 	SNAKE_SMALL                       	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5b9f	3GD 	SNAKE_SMALL_GREEN                 	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5ba0	3GE 	SNAKE_SMALL_RED                   	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5ba1	3GF 	LEPRECHAUN_ANNAH_PST              	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5ba2	3GG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5ba3	3GH 	EASTER_EGG_MORTE_PST              	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+0x5bae	3GS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5baf	3GT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb0	3GU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb1	3GV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb2	3GW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb3	3GX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb4	3GY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb5	3GZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb6	3HA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb7	3HB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bb8	3HC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bbe	3HI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bc4	3HO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bc5	3HP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bc6	3HQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bc7	3HR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bc9	3HT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bca	3HU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bcb	3HV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bcc	3HW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bcd	3HX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bce	3HY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bcf	3HZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd0	3IA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd1	3IB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd2	3IC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd3	3ID 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd4	3IE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd5	3IF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd6	3IG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd7	3IH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd8	3II 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bd9	3IJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bda	3IK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bdb	3IL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bdc	3IM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bdd	3IN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bde	3IO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bdf	3IP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be0	3IQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be1	3IR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be2	3IS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be3	3IT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be4	3IU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be5	3IV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be6	3IW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be7	3IX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be8	3IY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5be9	3IZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bea	3JA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5beb	3JB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bec	3JC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bed	3JD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bf7	3JN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bf8	3JO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bf9	3JP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bfa	3JQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bfb	3JR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bfc	3JS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bfd	3JT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bfe	3JU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5bff	3JV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c00	3JW 	DEATH_TYRANT                      	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c01	3JX 	GIANT_FIRE_2                      	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c02	3JY 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c03	3JZ 	GIANT_FIRE_FEMALE                 	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c04	3KA 	GIANT_FROST_FEMALE                	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c05	3KB 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c06	3KC 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c07	3KD 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c08	3KE 	LADY_OF_PAIN                      	LARGE  5 Bt  BGII UNSPLIT EXT. unpaletted
+0x5c0b	3KH 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c0c	3KI 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c0d	3KJ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c0e	3KK 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c0f	3KL 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c11	3KN 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c12	3KO 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c13	3KP 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c14	3KQ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c15	3KR 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c16	3KS 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c17	3KT 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c18	3KU 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c19	3KV 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1a	3KW 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1b	3KX 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1c	3KY 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1d	3KZ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1e	3LA 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c1f	3LB 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c20	3LC 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5c21	3LD 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. unpaletted
+0x5d3d	3AA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d3e	3AB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d3f	3AC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d40	3AD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d41	3AE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d42	3AF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d43	3AG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d44	3AH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d45	3AI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d46	3AJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d47	3AK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d48	3AL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d49	3AM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4a	3AN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4b	3AO 	BAURIER_MALE_PST                  	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4c	3AP 	TOWNIE_CURST_FEMALE_PST           	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4d	3AQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4e	3AR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d4f	3AS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d50	3AT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d51	3AU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d52	3AV 	GITHZERAI_PST                     	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d53	3AW 	GODSMAN_PST                       	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d54	3AX 	THUG_LARGE_PST                    	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d55	3AY 	TOWNIE_LOWER_CLASS_FEMALE_PST     	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d56	3AZ 	TOWNIE_LOWER_CLASS_MALE_PST       	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d57	3BA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d58	3BB 	MIDWIFE_PST                       	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d59	3BC 	HARLOT_PST                        	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5a	3BD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5b	3BE 	SKELETON_WORKER_PST               	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5c	3BF 	THOKOLA_PST                       	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5d	3BG 	THUG_PST                          	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5e	3BH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d5f	3BI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d60	3BJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d61	3BK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d62	3BL 	TOWNIE_UPPER_CLASS_MALE_PST       	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d63	3BM 	ZOMBIE_FEMALE_PST                 	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d64	3BN 	ZOMBIE_MALE_PST                   	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d65	3BO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d66	3BP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d67	3BQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d68	3BR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d69	3BS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6a	3BT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6b	3BU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6c	3BV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6d	3BW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6e	3BX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d6f	3BY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d70	3BZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d71	3CA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d72	3CB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d73	3CC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d74	3CD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d75	3CE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d76	3CF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d77	3CG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d78	3CH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d79	3CI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7a	3CJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7b	3CK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7c	3CL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7d	3CM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7e	3CN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d7f	3CO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d80	3CP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d81	3CQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d82	3CR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d83	3CS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d84	3CT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d85	3CU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d86	3CV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d87	3CW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d88	3CX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d89	3CY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8a	3CZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8b	3DA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8c	3DB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8d	3DC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8e	3DD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d8f	3DE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d90	3DF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d91	3DG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d92	3DH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d93	3DI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d94	3DJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d95	3DK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d96	3DL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d97	3DM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d98	3DN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d99	3DO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9a	3DP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9b	3DQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9c	3DR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9d	3DS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9e	3DT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5d9f	3DU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da0	3DV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da1	3DW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da2	3DX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da3	3DY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da4	3DZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da5	3EA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da6	3EB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da7	3EC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da8	3ED 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5da9	3EE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5daa	3EF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dab	3EG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dac	3EH 	TIEFLING_MALE_PST                 	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dad	3EI 	TOWNIE_WIZARD_PST                 	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dae	3EJ 	TOWNIE_UPPER_CLASS_FEMALE_PST     	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5daf	3EK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db0	3EL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db1	3EM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db2	3EN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db3	3EO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db4	3EP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db5	3EQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db6	3ER 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db7	3ES 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db8	3ET 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5db9	3EU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dba	3EV 	AASIMAR_FEMALE_PST                	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dbb	3EW 	TOWNIE_CURST_MALE_PST             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dbc	3EX 	DUSTMAN_FEMALE_PST                	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dbd	3EY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dbe	3EZ 	DUSTMAN_MALE_PST                  	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dbf	3FA 	GHOUL_FEMALE_PST                  	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc0	3FB 	GHOUL_MALE_PST                    	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc1	3FC 	MERCHANT_PST                      	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc2	3FD 	SKELETON_PRIEST_PST               	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc3	3FE 	TIEFLING_FEMALE_PST               	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc4	3FF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc5	3FG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc6	3FH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc7	3FI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc8	3FJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dc9	3FK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dca	3FL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dcb	3FM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dcc	3FN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dcd	3FO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dce	3FP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dcf	3FQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd0	3FR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd1	3FS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd2	3FT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd3	3FU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd4	3FV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd5	3FW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd6	3FX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd7	3FY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd8	3FZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dd9	3GA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dda	3GB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5ddb	3GC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5ddc	3GD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5ddd	3GE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dde	3GF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5ddf	3GG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5de0	3GH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5deb	3GS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dec	3GT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5ded	3GU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dee	3GV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5def	3GW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df0	3GX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df1	3GY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df2	3GZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df3	3HA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df4	3HB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5df5	3HC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5dfb	3HI 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e01	3HO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e02	3HP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e03	3HQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e04	3HR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e06	3HT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e07	3HU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e08	3HV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e09	3HW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0a	3HX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0b	3HY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0c	3HZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0d	3IA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0e	3IB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e0f	3IC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e10	3ID 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e11	3IE 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e12	3IF 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e13	3IG 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e14	3IH 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e15	3II 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e16	3IJ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e17	3IK 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e18	3IL 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e19	3IM 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1a	3IN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1b	3IO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1c	3IP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1d	3IQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1e	3IR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e1f	3IS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e20	3IT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e21	3IU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e22	3IV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e23	3IW 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e24	3IX 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e25	3IY 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e26	3IZ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e27	3JA 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e28	3JB 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e29	3JC 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e2a	3JD 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e34	3JN 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e35	3JO 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e36	3JP 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e37	3JQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e38	3JR 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e39	3JS 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e3a	3JT 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e3b	3JU 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e3c	3JV 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted
+0x5e3d	3JW 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e3e	3JX 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e3f	3JY 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e40	3JZ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e41	3KA 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e42	3KB 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e43	3KC 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e44	3KD 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e45	3KE 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e48	3KH 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e49	3KI 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e4a	3KJ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e4b	3KK 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e4c	3KL 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e4e	3KN 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e4f	3KO 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e50	3KP 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e51	3KQ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e52	3KR 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e53	3KS 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e54	3KT 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e55	3KU 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e56	3KV 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e57	3KW 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e58	3KX 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e59	3KY 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e5a	3KZ 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e5b	3LA 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e5c	3LB 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e5d	3LC 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5e5e	3LD 	-----                             	LARGE  5 Bx  BGII UNSPLIT EXT. paletted
+0x5fbc	8CO 	DAO                               	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fbd	8CP 	DAO_LEGS                          	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fbe	8CQ 	EFREETI                           	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fbf	8CR 	EFREETI_LEGS                      	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc0	8CS 	JANNI                             	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc1	8CT 	JANNI_LEGS                        	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc2	8CU 	MARID                             	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc3	8CV 	MARID_LEGS                        	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc4	8CW 	GW_GOLEM_AMBER                    	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc5	8CX 	GW_UNICORN_WHITE                  	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc6	8CY 	GW_UNICORN_BLACK                  	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc7	8CZ 	GW_UNICORN_NIGHTMARE              	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc8	8DA 	GW_HORSE_BLACK_AND_WHITE          	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fc9	8DB 	GW_HORSE_BAIE                     	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fca	8DC 	GW_HORSE_CHESTNUT                 	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fcb	8DD 	GW_HORSE_BLANKET_BAIE             	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fcc	8DE 	GW_HORSE_GRULLO                   	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fcd	8DF 	GW_HORSE_BLUE_ROANNED             	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fce	8DG 	GW_WAR_HORSE_BAIE                 	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fcf	8DH 	GW_WAR_HORSE_BAIE_AND_WHITE       	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fd0	8DI 	GW_WAR_HORSE_BLACK                	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fd1	8DJ 	GW_WAR_HORSE_GREY                 	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fd2	8DK 	GW_TROLL_DARKNESS                 	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fd3	8DL 	GW_TROLL_SMALL_DARKNESS           	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fd4	8DM 	RED_WIZARD                        	NORMAL 3 Bt  BGII SPLIT unpaletted
+0x5fd5	8DN 	SAILOR_GREEN                      	NORMAL 3 Bt  BGII SPLIT unpaletted
+0x5fd6	8DO 	SAILOR_RED                        	NORMAL 3 Bt  BGII SPLIT unpaletted
+0x5fd7	8DP 	SAILOR_DARK                       	NORMAL 3 Bt  BGII SPLIT unpaletted
+0x5fd8	8DQ 	CRUSADER_SOLDIER                  	NORMAL 3 Bt  BGII SPLIT unpaletted
+0x5fd9	8DR 	GOLEM_MINI                        	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fda	8DS 	SNAKE_WATER                       	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fdb	8DT 	EFREETI_NOBLE                     	NORMAL 3 Bx  BGII SPLIT unpaletted
+0x5fdd	8DV 	YOCHLOL                           	LARGE  5 Bx  BGII SPLIT unpaletted
+0x683d	0A0A	MOINESSE_BARBARIAN_MALE_HUMAN     	NORMAL 3 Cx  CHARACTER BGII WQL paletted
+0x683e	0A0B	MOINESSE_NINJA_MALE_HUMAN         	NORMAL 3 Cx  CHARACTER BGII WQL paletted
+0x683f	0A0C	MOINESSE_VAMPIRE                  	NORMAL 3 Cx  CHARACTER BGII WQL paletted
+0x6841	0A0E	MOINESSE_MAGE_FEMALE_ELF          	NORMAL 3 Cx  CHARACTER BGII WQM paletted
+0x6845	0A0I	MOINESSE_DRUID_FEMALE_HUMAN       	NORMAL 3 Cx  CHARACTER BGII WQN paletted
+0x6846	0A0J	MOINESSE_FIGHTER_FEMALE_HUMAN     	NORMAL 3 Cx  CHARACTER BGII WQN paletted
+0x6847	0A0K	MOINESSE_MAGE_FEMALE_HUMAN        	NORMAL 3 Cx  CHARACTER BGII WQN paletted
+0x6848	0A0L	MOINESSE_THIEF_FEMALE_HUMAN       	NORMAL 3 Cx  CHARACTER BGII WQN paletted
+0x6d3d	0A0A	-----                             	NORMAL 3 Cx  CHARACTER BGI WPL paletted
+0x6d3e	0A0B	-----                             	NORMAL 3 Cx  CHARACTER BGI WPL paletted
+0x6d3f	0A0C	-----                             	NORMAL 3 Cx  CHARACTER BGI WPL paletted
+0x6d41	0A0E	-----                             	NORMAL 3 Cx  CHARACTER BGI WPL paletted
+0x6d45	0A0I	-----                             	NORMAL 3 Cx  CHARACTER BGI WPM paletted
+0x6d46	0A0J	-----                             	NORMAL 3 Cx  CHARACTER BGI WPM paletted
+0x6d47	0A0K	-----                             	NORMAL 3 Cx  CHARACTER BGI WPM paletted
+0x6d48	0A0L	-----                             	NORMAL 3 Cx  CHARACTER BGI WPS paletted
+0xa001	2AA 	MEGALOCENTIPEDE                   	NORMAL 3 Xx  BGI MONSTER LONG unpaletted
+0xa002	2AB 	WYVERN_WHITE                      	NORMAL 3 Xx  BGI MONSTER LONG unpaletted
+0xa101	2JW 	GW_SHARK_LEOPARD                  	LARGE  5 Xt  BGI MONSTER LONG unpaletted

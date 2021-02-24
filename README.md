@@ -833,6 +833,7 @@ This component corrects changed creature animations in area files for easier ref
   - Modified animations name-spaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
   - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
+  - Updated IA Reference Picker tool and documentation.
   - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
   - Added IA modders' content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
@@ -889,12 +890,13 @@ This component corrects changed creature animations in area files for easier ref
   - Added French translation (Gwendolyne).
   - New traification. Feel free to provide me with translations. I will include them as soon as possible.
   - ...
+  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types.
   - Lower cased files.
-  - Updated WeiDU installer to v246.
+  - Added OggDec v1.9.7 and sox v14.4.1 for Mac.
+  - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
+  - Updated WeiDU installer to v247.
   - Uploaded mod to official Spellhold Studios GitHub mirror account.
-  - ... Add OggDec v1.9.7 and sox v14.4.1 for Mac.
   - Replaced `GAME_IS` conditions with variables checks to speed up install time.
-  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
 
  <br>
 
