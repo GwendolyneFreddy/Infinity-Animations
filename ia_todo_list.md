@@ -3,7 +3,7 @@
 
 ![GitHub help wanted](https://img.shields.io/badge/%20-help--wanted-%23159818?style=plastic)
 
-## 
+<hr>
 
 #### Before official release
 
@@ -42,4 +42,5 @@
 
 #### EE version
 
+- [ ] All components: list all EE games specific creatures that need to be patched
 - [ ] Distinctive Fiends component: Is it very useful to add creatures sound clips for EE games???

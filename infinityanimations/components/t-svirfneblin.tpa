@@ -1,13 +1,13 @@
 /* ======================================================================================================================================================================= *
  *  v 6.0.0                                                                                                                                                                *
- *                                          S V I R F N E B L I N S   A N I M A T I O N S   C O M P O N E N T   ( 4 8 0 - 4 9 0 )                                          *
+ *                                         S V I R F N E B L I N S    A N I M A T I O N S    C O M P O N E N T    ( 4 8 0 - 4 9 0 )                                        *
  *                                                                                                                                                                         *
  * ======================================================================================================================================================================= *
  *  This component assigns all IWD svirfneblins animations variants for Underdark deep gnomes.                                                                             *
  * ======================================================================================================================================================================= *
  *  change-log:                                                                                                                                                            *
  *  -----------                                                                                                                                                            *
- *      - Added "%t-svi%" variable used in a single routine for the two sub-components.                                                                                    *
+ *      - Added "%t-svi%" variable used in a single routine for the two sub-components (1 = install soundsets).                                                            *
  *      - Fixed soundset clips typos (a few were misspelled "t_sva" and "t_svn" instead of "t-sva" and "t-svn").                                                           *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~).  *
  * ======================================================================================================================================================================= */
@@ -28,7 +28,7 @@ COPY_EXISTING ~udsvir04.cre~ ~override~ // Innkeeper
 		PATCH_IF (t-svi = 1) BEGIN
 			SAY INITIAL_MEETING @10400  // Yes. [t-sva01b]
 			SAY MORALE @10401           // Help! Help! [t-sva03b]
-			SAY UNHAPPY_BREAKING @10401 // Help! Help! [t-sva03b]
+			SAY UNHAPPY_BREAKING @10401 // id.
 			SAY BATTLE_CRY1 @10402      // My powers shall obliterate you! [t-sva02c]
 			SAY BATTLE_CRY2 @10403      // Die! [t-sva02d]
 			SAY ATTACK1 ~~ [t-sva04b]
@@ -42,14 +42,14 @@ COPY_EXISTING ~udsvir04.cre~ ~override~ // Innkeeper
 			SAY DIALOGUE_HOSTILE @10408 // You're in GREAT peril if you bother me. Just you wait! [t-sva08]
 			SAY CRITICAL_HIT @10409     // That's the way it's done and done! [t-sva09]
 			SAY CRITICAL_MISS @10410    // No... [t-sva10]
-			SAY SPELL_DISRUPTED @10410  // No... [t-sva10]
+			SAY SPELL_DISRUPTED @10410  // id.
 		END
 	END
 BUT_ONLY
 
-/* =====================))=========== *
+/* ================================== *
  *  svirfneblin_pale_noaxe animation  *
- * =====================))=========== */
+ * ================================== */
 
 COPY_EXISTING ~udsvdead.cre~ ~override~ // Svirfneblin (Dead)
               ~udsvir03.cre~ ~override~ // Goldander Blackenrock
@@ -62,7 +62,7 @@ COPY_EXISTING ~udsvdead.cre~ ~override~ // Svirfneblin (Dead)
 		PATCH_IF (t-svi = 1) BEGIN
 			SAY INITIAL_MEETING @10411  // Come and talk a while. [t-svn01c]
 			SAY MORALE @10412           // Please help me! [t-svn03b]
-			SAY UNHAPPY_BREAKING @10412 // Please help me! [t-svn03b]
+			SAY UNHAPPY_BREAKING @10412 // id.
 			SAY BATTLE_CRY1 @10413      // Take that! [t-svn02c]
 			SAY BATTLE_CRY2 @10414      // Evil fall before me! [t-svn02d]
 			SAY ATTACK1 ~~ [t-svn04b]
@@ -76,7 +76,7 @@ COPY_EXISTING ~udsvdead.cre~ ~override~ // Svirfneblin (Dead)
 			SAY DIALOGUE_HOSTILE @10419 // You're heading for a good beating, you are! [t-svn08]
 			SAY CRITICAL_HIT @10420     // Well look at that! [t-svn09]
 			SAY CRITICAL_MISS @10421    // No... [t-svn10]
-			SAY SPELL_DISRUPTED @10421  // No... [t-svn10]
+			SAY SPELL_DISRUPTED @10421  // id.
 		END
 	END
 BUT_ONLY
@@ -96,7 +96,7 @@ COPY_EXISTING ~udsvir01.cre~ ~override~ // Odendal Breachgnome
 		PATCH_IF (t-svi = 1) BEGIN
 			SAY INITIAL_MEETING @10405  // Good day! [t-sva01a]
 			SAY MORALE @10422           // So long! [t-sva03a]
-			SAY UNHAPPY_BREAKING @10422 // So long! [t-sva03a]
+			SAY UNHAPPY_BREAKING @10422 // id.
 			SAY BATTLE_CRY1 @10423      // Kill that scum! Get 'em good! [t-sva02a]
 			SAY BATTLE_CRY2 @10424      // Blood and bloody hell! [t-sva02b]
 			SAY ATTACK1 ~~ [t-sva04a]
@@ -110,7 +110,7 @@ COPY_EXISTING ~udsvir01.cre~ ~override~ // Odendal Breachgnome
 			SAY DIALOGUE_HOSTILE @10408 // You're in GREAT peril if you bother me. Just you wait! [t-sva08]
 			SAY CRITICAL_HIT @10409     // That's the way it's done and done! [t-sva09]
 			SAY CRITICAL_MISS @10410    // No... [t-sva10]
-			SAY SPELL_DISRUPTED @10410  // No... [t-sva10]
+			SAY SPELL_DISRUPTED @10410  // id.
 		END
 	END
 BUT_ONLY
@@ -128,7 +128,7 @@ COPY_EXISTING ~udsvir05.cre~ ~override~ // Therndle Daglefodd
 		PATCH_IF (t-svi = 1) BEGIN
 			SAY INITIAL_MEETING @10416  // Hello there. [t-svn01a]
 			SAY MORALE @10425           // Farewell. [t-svn03a]
-			SAY UNHAPPY_BREAKING @10425	// Farewell. [t-svn03a]
+			SAY UNHAPPY_BREAKING @10425	// id.
 			SAY BATTLE_CRY1 @10426		// Get 'em! [t-svn02a]
 			SAY BATTLE_CRY2 @10427		// I will cut you down to size! [t-svn02b]
 			SAY ATTACK1 ~~ [t-svn04a]
@@ -142,7 +142,7 @@ COPY_EXISTING ~udsvir05.cre~ ~override~ // Therndle Daglefodd
 			SAY DIALOGUE_HOSTILE @10419 // You're heading for a good beating, you are! [t-svn08]
 			SAY CRITICAL_HIT @10420     // Well look at that! [t-svn09]
 			SAY CRITICAL_MISS @10421    // No... [t-svn10]
-			SAY SPELL_DISRUPTED @10421  // No... [t-svn10]
+			SAY SPELL_DISRUPTED @10421  // id.
 		END
 	END
 BUT_ONLY

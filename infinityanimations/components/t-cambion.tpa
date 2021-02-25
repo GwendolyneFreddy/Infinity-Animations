@@ -1,16 +1,16 @@
-/* ======================================================================================================================================================================= *
- *  v 6.0.0                                                                                                                                                                *
- *                                     C A M B I O N S   G E T   I S A I R   A N I M A T I O N   C O M P O N E N T   ( 2 1 0 - 2 3 5 )                                     *
- *                                                                                                                                                                         *
- * ======================================================================================================================================================================= *
- *  This component assigns assigns Cambions creatures the Isair animation. Weapon changes necessary as Isair animation displays hardcoded scimitars.                       *
- * ======================================================================================================================================================================= *
- *  change-log:                                                                                                                                                            *
- *  -----------                                                                                                                                                            *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_cambions_arrays.tph library) for easier maintenance.                                   *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x5242 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ISAIR~).            *
- *      - Removed deprecated Male Tieflings patching process.                                                                                                              *
- * ======================================================================================================================================================================= */
+/* ============================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                      *
+ *                              C A M B I O N S    G E T    I S A I R    A N I M A T I O N    C O M P O N E N T    ( 2 1 0 - 2 3 5 )                             *
+ *                                                                                                                                                               *
+ * ============================================================================================================================================================= *
+ *  This component assigns assigns Cambions creatures the Isair animation. Weapon changes necessary as Isair animation displays hardcoded scimitars.             *
+ * ============================================================================================================================================================= *
+ *  change-log:                                                                                                                                                  *
+ *  -----------                                                                                                                                                  *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_cambions_arrays.tph library) for easier maintenance.                         *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x5242 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ISAIR~).  *
+ *      - Removed deprecated Male Tieflings patching process.                                                                                                    *
+ * ============================================================================================================================================================= */
 
 SILENT
 
@@ -87,5 +87,3 @@ COPY_EXISTING ~%nb%.cre~ ~override~
 	END
 
 BUT_ONLY
-
-VERBOSE

@@ -1,6 +1,6 @@
 /* ===================================================================================================================================== *
  *  v 6.0.0                                                                                                                              *
- *                           S K E L E T O N   W A R R I O R S   C O M P O N E N T   ( 4 1 0 - 4 1 5 - 4 2 0 )                           *
+ *                         S K E L E T O N    W A R R I O R S    C O M P O N E N T    ( 4 1 0 - 4 1 5 - 4 2 0 )                          *
  *                                                                                                                                       *
  * ===================================================================================================================================== *
  *  This component assigns the chosen animation to all skeleton warriors.                                                                *
@@ -50,8 +50,6 @@ ACTION_PHP_EACH GW_skeleton_warriors AS nb => correct BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/glowcheck.tpp~
 			  END
 		BUT_ONLY
-
-		VERBOSE
 
 	END
 

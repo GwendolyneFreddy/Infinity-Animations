@@ -1,17 +1,17 @@
-/* ================================================================================================================================================================================== *
- *  v 6.0.0                                                                                                                                                                           *
- *                                                    H U M A N O I D   A N I M A T I O N   F I X E S   C O M P O N E N T   ( 25 )                                                    *
- *                                                                                                                                                                                    *
- * ================================================================================================================================================================================== *
- *  This component fixes humanoid creature files that have wrong animation slots.                                                                                                     *
- * ================================================================================================================================================================================== *
- *  change-log:                                                                                                                                                                       *
- *  -----------                                                                                                                                                                       *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                        *
- *      - Tutu variables: replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables and added missing tutu variable for BG1 kent and sailned files.          *
- *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).                     *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                             *
- * ================================================================================================================================================================================== */
+/* ========================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                                   *
+ *                                              H U M A N O I D    A N I M A T I O N    F I X E S    C O M P O N E N T    ( 25 )                                              *
+ *                                                                                                                                                                            *
+ * ========================================================================================================================================================================== *
+ *  This component fixes humanoid creature files that have wrong animation slots.                                                                                             *
+ * ========================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                               *
+ *  -----------                                                                                                                                                               *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                *
+ *      - Tutu variables: replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables and added missing tutu variable for BG1 kent and sailned files.  *
+ *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).             *
+ *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                     *
+ * ========================================================================================================================================================================== */
 
 /* ----------------------------------------------------------------------------- *
  *                             CREATURES                                   line  *
