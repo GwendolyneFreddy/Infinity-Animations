@@ -1,0 +1,127 @@
+/* ======================================================================================================================= *
+ *  v 6.0.0                                                                                                                *
+ *                      D E C L A R A T I O N    o f    B G T    P L A T F O R M    V A R I A B L E S                      *
+ *                                                                                                                         *
+ * ======================================================================================================================= */
+
+/* =================================== *
+ *  tp2, d, and baf parsing variables  *
+ * =================================== */
+
+OUTER_SPRINT "tutorbgt"        "bgt"
+OUTER_SPRINT "tutubgtbgee"     "bgt"
+
+OUTER_SPRINT "tutu_var"        ""
+OUTER_SPRINT "tutu_scriptbg"   "bg"  // BGT 'BG' prefix
+OUTER_SPRINT "tutu_scripta"    "a"
+OUTER_SPRINT "tutu_scriptb"    "b"
+OUTER_SPRINT "tutu_scriptc"    "c"
+OUTER_SPRINT "tutu_scriptd"    "d"
+OUTER_SPRINT "tutu_scripte"    "e"
+OUTER_SPRINT "tutu_scriptf"    "f"
+OUTER_SPRINT "tutu_scriptg"    "g"
+OUTER_SPRINT "tutu_scripth"    "h"
+OUTER_SPRINT "tutu_scripti"    "i"
+OUTER_SPRINT "tutu_scriptj"    "j"
+OUTER_SPRINT "tutu_scriptk"    "k"
+OUTER_SPRINT "tutu_scriptl"    "l"
+OUTER_SPRINT "tutu_scriptm"    "m"
+OUTER_SPRINT "tutu_scriptn"    "n"
+OUTER_SPRINT "tutu_scripto"    "o"
+OUTER_SPRINT "tutu_scriptp"    "p"
+OUTER_SPRINT "tutu_scriptq"    "q"
+OUTER_SPRINT "tutu_scriptr"    "r"
+OUTER_SPRINT "tutu_scripts"    "s"
+OUTER_SPRINT "tutu_scriptt"    "t"
+OUTER_SPRINT "tutu_scriptu"    "u"
+OUTER_SPRINT "tutu_scriptv"    "v"
+OUTER_SPRINT "tutu_scriptw"    "w"
+OUTER_SPRINT "tutu_scriptx"    "x"
+OUTER_SPRINT "tutu_scripty"    "y"
+OUTER_SPRINT "tutu_scriptz"    "z"
+OUTER_SPRINT "percentage_sign" "%"
+
+// EET naming convention
+OUTER_SPRINT "eet_var"         ""  // EET '_' suffix for conflicting resources with 7 or less characters
+
+
+/* --------------------- *
+ *  tricky BG cre names  *
+ * --------------------- */
+
+OUTER_SPRINT "ftowba_b"        "ftowba_b"
+OUTER_SPRINT "ftowba_d"        "ftowba_d"
+OUTER_SPRINT "ftowba_e"        "ftowba_e"
+
+OUTER_SPRINT "ftowbe_a"        "ftowbe_a"
+OUTER_SPRINT "ftowbe_b"        "ftowbe_b"
+OUTER_SPRINT "ftowbe_c"        "ftowbe_c"
+OUTER_SPRINT "ftowbe_d"        "ftowbe_d"
+OUTER_SPRINT "ftowbe_e"        "ftowbe_e"
+
+OUTER_SPRINT "ftowfr_b"        "ftowfr_b"
+OUTER_SPRINT "ftowfr_e"        "ftowfr_e"
+
+OUTER_SPRINT "ftowub_a"        "ftowub_a"
+OUTER_SPRINT "ftowub_b"        "ftowub_b"
+OUTER_SPRINT "ftowub_c"        "ftowub_c"
+OUTER_SPRINT "ftowub_d"        "ftowub_d"
+OUTER_SPRINT "ftowub_e"        "ftowub_e"
+
+OUTER_SPRINT "ftwbax_a"        "ftwbax_a"
+OUTER_SPRINT "ftwbax_b"        "ftwbax_b"
+OUTER_SPRINT "ftwbax_c"        "ftwbax_c"
+OUTER_SPRINT "ftwbax_d"        "ftwbax_d"
+OUTER_SPRINT "ftwbax_e"        "ftwbax_e"
+
+OUTER_SPRINT "ftowna_a"        "ftowna_a"
+OUTER_SPRINT "ftowna_b"        "ftowna_b"
+
+OUTER_SPRINT "mtowba_a"        "mtowba_a"
+OUTER_SPRINT "mtowba_c"        "mtowba_c"
+
+OUTER_SPRINT "mtowfr_d"        "mtowfr_d"
+
+OUTER_SPRINT "willia"          "bgwillia"
+OUTER_SPRINT "william"         "william1"
+
+OUTER_SPRINT "tutu_skeleton_warrior" "bgskel"
+
+/*
+OUTER_SPRINT "FTOWBASC" "FTOWBASC"
+OUTER_SPRINT "FTOWBASN" "FTOWBASN"
+OUTER_SPRINT "FTOWBESC" "FTOWBESC"
+OUTER_SPRINT "FTOWUBSC" "FTOWUBSC"
+OUTER_SPRINT "FTOWUBSN" "FTOWUBSN"
+OUTER_SPRINT "FTOWWI_A" "FTOWWI_A"
+OUTER_SPRINT "FTOWWI_B" "FTOWWI_B"
+OUTER_SPRINT "FTOWWI_C" "FTOWWI_C"
+OUTER_SPRINT "FTOWWI_D" "FTOWWI_D"
+OUTER_SPRINT "FTOWWI_E" "FTOWWI_E"
+OUTER_SPRINT "MTOWUBSN" "MTOWUBSN"
+OUTER_SPRINT "MTOWUBST" "MTOWUBST"
+*/
+
+
+/* ---------------------- *
+ *  tricky BG2 cre names  *
+ * ---------------------- */
+
+OUTER_SPRINT "carbos_bg2"      "carbos"  // fake name (iaiaiaia) to avoid overwriting the file in BG:EE and tutu
+OUTER_SPRINT "ftown2_bg2"      "ftown2"  // id.
+OUTER_SPRINT "ftown3_bg2"      "ftown3"  // id.
+OUTER_SPRINT "ftown4_bg2"      "ftown3"  // id.
+OUTER_SPRINT "mtown2_bg2"      "mtown3"  // id.
+OUTER_SPRINT "mtown3_bg2"      "mtown3"  // id.
+OUTER_SPRINT "mtown4_bg2"      "mtown4"  // id.
+OUTER_SPRINT "mtown5_bg2"      "mtown5"  // id.
+OUTER_SPRINT "roger_bg2"       "roger"   // id.
+OUTER_SPRINT "shank_bg2"       "shank"   // id.
+OUTER_SPRINT "shop01_bg2"      "shop01"  // id.
+OUTER_SPRINT "shop03_bg2"      "shop03"  // id.
+OUTER_SPRINT "shop04_bg2"      "shop04"  // id.
+OUTER_SPRINT "shop05_bg2"      "shop05"  // id.
+OUTER_SPRINT "shop06_bg2"      "shop06"  // id.
+OUTER_SPRINT "shop07_bg2"      "shop07"  // id.
+OUTER_SPRINT "towncr_bg2"      "towncr"  // id.
+OUTER_SPRINT "willia_bg2"      "willia"  // id.

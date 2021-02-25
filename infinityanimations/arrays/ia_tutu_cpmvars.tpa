@@ -1,0 +1,132 @@
+/* ======================================================================================================================= *
+ *  v 6.0.0                                                                                                                *
+ *                     D E C L A R A T I O N    o f    T U T U    P L A T F O R M    V A R I A B L E S                     *
+ *                                                                                                                         *
+ * ======================================================================================================================= */
+
+/* =================================== *
+ *  tp2, d, and baf parsing variables  *
+ * =================================== */
+
+OUTER_SPRINT "tutorbgt"        "tutu"
+OUTER_SPRINT "tutubgtbgee"     "tutu"
+
+OUTER_SPRINT "tutu_var"        "_"
+OUTER_SPRINT "tutu_scriptbg"   "_"  // BGT 'BG' prefix
+OUTER_SPRINT "tutu_scripta"    "_"
+OUTER_SPRINT "tutu_scriptb"    "_"
+OUTER_SPRINT "tutu_scriptc"    "_"
+OUTER_SPRINT "tutu_scriptd"    "_"
+OUTER_SPRINT "tutu_scripte"    "_"
+OUTER_SPRINT "tutu_scriptf"    "_"
+OUTER_SPRINT "tutu_scriptg"    "_"
+OUTER_SPRINT "tutu_scripth"    "_"
+OUTER_SPRINT "tutu_scripti"    "_"
+OUTER_SPRINT "tutu_scriptj"    "_"
+OUTER_SPRINT "tutu_scriptk"    "_"
+OUTER_SPRINT "tutu_scriptl"    "_"
+OUTER_SPRINT "tutu_scriptm"    "_"
+OUTER_SPRINT "tutu_scriptn"    "_"
+OUTER_SPRINT "tutu_scripto"    "_"
+OUTER_SPRINT "tutu_scriptp"    "_"
+OUTER_SPRINT "tutu_scriptq"    "_"
+OUTER_SPRINT "tutu_scriptr"    "_"
+OUTER_SPRINT "tutu_scripts"    "_"
+OUTER_SPRINT "tutu_scriptt"    "_"
+OUTER_SPRINT "tutu_scriptu"    "_"
+OUTER_SPRINT "tutu_scriptv"    "_"
+OUTER_SPRINT "tutu_scriptw"    "_"
+OUTER_SPRINT "tutu_scriptx"    "_"
+OUTER_SPRINT "tutu_scripty"    "_"
+OUTER_SPRINT "tutu_scriptz"    "_"
+OUTER_SPRINT "percentage_sign" "%"
+
+// EET naming convention
+OUTER_SPRINT "eet_var"         ""  // EET '_' suffix for conflicting resources with 7 or less characters
+
+
+/* --------------------- *
+ *  tricky BG cre names  *
+ * --------------------- */
+
+OUTER_SPRINT "ftowba_b"        "_1b_ftow"
+OUTER_SPRINT "ftowba_d"        "_15_ftow"
+OUTER_SPRINT "ftowba_e"        "_1a_ftow"
+
+OUTER_SPRINT "ftowbe_a"        "_0_ftowb"
+OUTER_SPRINT "ftowbe_b"        "_1_ftowb"
+OUTER_SPRINT "ftowbe_c"        "_2_ftowb"
+OUTER_SPRINT "ftowbe_d"        "_3_ftowb"
+OUTER_SPRINT "ftowbe_e"        "_4_ftowb"
+
+OUTER_SPRINT "ftowfr_b"        "_c_ftowf"
+OUTER_SPRINT "ftowfr_e"        "_d_ftowf"
+
+OUTER_SPRINT "ftowub_a"        "_23_ftow"
+OUTER_SPRINT "ftowub_b"        "_24_ftow"
+OUTER_SPRINT "ftowub_c"        "_25_ftow"
+OUTER_SPRINT "ftowub_d"        "_26_ftow"
+OUTER_SPRINT "ftowub_e"        "_27_ftow"
+
+OUTER_SPRINT "ftwbax_a"        "_17_ftwb"
+OUTER_SPRINT "ftwbax_b"        "_10_ftwb"
+OUTER_SPRINT "ftwbax_c"        "_18_ftwb"
+OUTER_SPRINT "ftwbax_d"        "_14_ftwb"
+OUTER_SPRINT "ftwbax_e"        "_19_ftwb"
+
+OUTER_SPRINT "ftowna_a"        "_6_ftown"
+OUTER_SPRINT "ftowna_b"        "_7_ftown"
+
+OUTER_SPRINT "mtowba_a"        "_11_mtow"
+OUTER_SPRINT "mtowba_c"        "_16_mtow"
+
+OUTER_SPRINT "mtowfr_d"        "_a_mtowf"
+
+OUTER_SPRINT "willia"          "_willia"
+OUTER_SPRINT "william"         "_william"
+
+OUTER_SPRINT "tutu_skeleton_warrior" "_kelwa"
+/*BG			EET			BGT
+SKELWA 	    SKELWA_ 	BGSKELWA 	
+SKELWA02 	BGSKEL02 	BGSKEL02 	//adopted BGT naming due to 8 characters limit
+SKELWA03 	BGSKEL03 	BGSKEL03 	//adopted BGT naming due to 8 characters limit
+GHAST 	    GHAST 	    BGGHAST 	
+*/
+/*
+OUTER_SPRINT "FTOWBASC" "_12_FTOW"
+OUTER_SPRINT "FTOWBASN" "_1C_FTOW"
+OUTER_SPRINT "FTOWBESC" "_5_FTOWB"
+OUTER_SPRINT "FTOWUBSC" "_28_FTOW"
+OUTER_SPRINT "FTOWUBSN" "_29_FTOW"
+OUTER_SPRINT "FTOWWI_A" "_1E_FTOW"
+OUTER_SPRINT "FTOWWI_B" "_1F_FTOW"
+OUTER_SPRINT "FTOWWI_C" "_20_FTOW"
+OUTER_SPRINT "FTOWWI_D" "_21_FTOW"
+OUTER_SPRINT "FTOWWI_E" "_22_FTOW"
+OUTER_SPRINT "MTOWUBSN" "_2A_MTOW"
+OUTER_SPRINT "MTOWUBST" "_2B_MTOW"
+*/
+
+
+/* ---------------------- *
+ *  tricky BG2 cre names  *
+ * ---------------------- */
+
+OUTER_SPRINT "carbos_bg2"      "iaiaiaia"   // fake name to avoid overwriting the file (carbos in BG2 and BG:EE)
+OUTER_SPRINT "ftown2_bg2"      "iaiaiaia"   // id. (ftown2 in BG2 and BG:EE)
+OUTER_SPRINT "ftown3_bg2"      "iaiaiaia"   // id. (ftown3 in BG2 and BG:EE)
+OUTER_SPRINT "ftown4_bg2"      "iaiaiaia"   // id. (ftown4 in BG2 and BG:EE)
+OUTER_SPRINT "mtown2_bg2"      "iaiaiaia"   // id. (mtown2 in BG2 and BG:EE)
+OUTER_SPRINT "mtown3_bg2"      "iaiaiaia"   // id. (mtown3 in BG2 and BG:EE)
+OUTER_SPRINT "mtown4_bg2"      "iaiaiaia"   // id. (mtown4 in BG2 and BG:EE)
+OUTER_SPRINT "mtown5_bg2"      "iaiaiaia"   // id. (mtown5 in BG2 and BG:EE)
+OUTER_SPRINT "roger_bg2"       "iaiaiaia"   // id. (roger in BG2 and BG:EE)
+OUTER_SPRINT "shank_bg2"       "iaiaiaia"   // id. (shank in BG2 and BG:EE)
+OUTER_SPRINT "shop01_bg2"      "iaiaiaia"   // id. (shop01 in BG2 and BG:EE)
+OUTER_SPRINT "shop03_bg2"      "iaiaiaia"   // id. (shop03 in BG2 and BG:EE)
+OUTER_SPRINT "shop04_bg2"      "iaiaiaia"   // id. (shop04 in BG2 and BG:EE)
+OUTER_SPRINT "shop05_bg2"      "iaiaiaia"   // id. (shop05 in BG2 and BG:EE)
+OUTER_SPRINT "shop06_bg2"      "iaiaiaia"   // id. (shop06 in BG2 and BG:EE)
+OUTER_SPRINT "shop07_bg2"      "iaiaiaia"   // id. (shop07 in BG2 and BG:EE)
+OUTER_SPRINT "towncr_bg2"      "iaiaiaia"   // id. (towncr in BG2 and BG:EE)
+OUTER_SPRINT "willia_bg2"      "iaiaiaia"   // id. (willia in BG2 and BG:EE)

@@ -878,7 +878,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Simplification du code :
     - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
     - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
-    - Remplacement des variables "*%tsx%*" spécifiques à IA par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods.
+    - Remplacement des variables "*%tsx%*" spécifiques à IA par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods : dorénavant, IA utilise les valeurs actualisées du système "*crossmod platform variables*".
     - Externalisation des listes de fichiers de créatures à modifier dans des tables [*NdT : arrays*] pour faciliter leur mise à jour.
     - Corrections mineures...
   - ...

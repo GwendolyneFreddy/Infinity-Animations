@@ -882,7 +882,7 @@ This component corrects changed creature animations in area files for easier ref
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
     - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory.
-    - Replaced specific "*%tsx%*" IA variables with more compatible "*%tutu%_scriptx%*" variables.
+    - Replaced specific "*%tsx%*" IA variables with more compatible "*%tutu%_scriptx%*" variables: from now on, IA uses up-to-date *crossmod platform variables*.
     - Externalized lists of creatures to be patched into arrays for easier maintenance.
     - Minor fixes...
   - ...
