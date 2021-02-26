@@ -1,20 +1,20 @@
-/* ======================================================================================================================================================================== *
- *  v 6.0.0                                                                                                                                                                 *
- *                                                    D I S T I N C T I V E   U N D E A D   C O M P O N E N T   ( 4 0 0 )                                                   *
- *                                                                                                                                                                          *
- * ======================================================================================================================================================================== *
- *  This component assigns genies distinctive animations.                                                                                                                   *
- * ======================================================================================================================================================================== *
- *  change-log:                                                                                                                                                             *
- *  -----------                                                                                                                                                             *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_undead_arrays.tph library) for easier maintenance.                                      *
- *      - Integrated patch that prevent Skeletons with modified animations to glow red ( http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498 ) [Ghasts     *
- *        get the ghast animation: ghastsu is a skeleton, not a ghast) and glowcheck.tpp ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).        *
- *      - Tutu variables: replaced "%tsz%" that did not exist with "%tutu_scriptz%" (GW_zombies array).                                                                     *
- *      - Removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it (#696).                                                               *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)    *
- *        whenever relevant.                                                                                                                                                *
- * ======================================================================================================================================================================== */
+/* ====================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                               *
+ *                                                 D I S T I N C T I V E    U N D E A D    C O M P O N E N T    ( 4 0 0 )                                                 *
+ *                                                                                                                                                                        *
+ * ====================================================================================================================================================================== *
+ *  This component assigns genies distinctive animations.                                                                                                                 *
+ * ====================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                           *
+ *  -----------                                                                                                                                                           *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_undead_arrays.tph library) for easier maintenance.                                    *
+ *      - Integrated patch that prevent Skeletons with modified animations to glow red ( http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498 ) [Ghasts   *
+ *        get the ghast animation: ghastsu is a skeleton, not a ghast) and glowcheck.tpp ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).      *
+ *      - Tutu variables: replaced "%tsz%" that did not exist with "%tutu_scriptz%" (GW_zombies array).                                                                   *
+ *      - Removed gzombie.cre botched strref patch (Greater Zombie): TS v6 and later already fixed it (#696).                                                             *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
+ *        whenever relevant.                                                                                                                                              *
+ * ====================================================================================================================================================================== */
 
 /* ------------------------------------------------------------------ *
  *                    CREATURES                                 line  *
@@ -35,18 +35,18 @@
  *  Wraiths get the shadow_large (IWD) animation              #  446  *
  *  Spectres get the shadow_large_murky (IWD) animation       #  479  *
  *  Shadows get the shadow_small (IWD) animation              #  512  *
- *  Some Shadows get the shadow_small_murky animation         #  535  *
- *  Large Skeletons get the skeleton_monster animation        #  559  *
- *  Moon Horrors get the skeleton_fiend animation             #  594  *
- *  Female Vampires get the vampire_female animation          #  616  *
- *  Wights get the wight_gray animation                       #  639  *
- *  Green Zombies get the wight_green animation               #  662  *
- *  Zombie Lords get the wight_yellow animation               #  686  *
- *  Barrow Wights get the wight_barrow animation              #  716  *
- *  Zombies get the zombie animation                          #  740  *
- *  Yellow Zombies get the zombie_yellow (IWD) animation      #  768  *
- *  Lacedons get the zombie_blue (IWD) animation              #  792  *
- *  Sea Zombies get the zombie_blue (IWD) animation           #  813  *
+ *  Some Shadows get the shadow_small_murky animation         #  536  *
+ *  Large Skeletons get the skeleton_monster animation        #  560  *
+ *  Moon Horrors get the skeleton_fiend animation             #  595  *
+ *  Female Vampires get the vampire_female animation          #  617  *
+ *  Wights get the wight_gray animation                       #  640  *
+ *  Green Zombies get the wight_green animation               #  663  *
+ *  Zombie Lords get the wight_yellow animation               #  687  *
+ *  Barrow Wights get the wight_barrow animation              #  717  *
+ *  Zombies get the zombie animation                          #  741  *
+ *  Yellow Zombies get the zombie_yellow (IWD) animation      #  769  *
+ *  Lacedons get the zombie_blue (IWD) animation              #  793  *
+ *  Sea Zombies get the zombie_blue (IWD) animation           #  814  *
  * ------------------------------------------------------------------ */
 
 SILENT
@@ -54,7 +54,7 @@ SILENT
 /* ============================== *
  *  Loads creatures lists arrays  *
  * ============================== */
-INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_undeads_arrays.tph~
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_undead_arrays.tph~
 
 
 /* =========================================== *
@@ -514,6 +514,7 @@ ACTION_CLEAR_ARRAY GW_spectres
 ACTION_PHP_EACH GW_shadows AS nb => correct BEGIN
 
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -570,7 +571,7 @@ ACTION_PHP_EACH GW_skeleton_monster AS nb => correct BEGIN
 				WRITE_BYTE 0x237 4      // Sex (neither)
 				WRITE_BYTE 0x271 4      // General (undead)
 				WRITE_BYTE 0x272 115    // Race (skeleton)
-				READ_BYTE 0x273  cs     // Class
+				READ_BYTE  0x273  cs    // Class
 				// If invalid class
 				PATCH_IF cs > 20 BEGIN
 					WRITE_BYTE 0x273 134 // skeleton
