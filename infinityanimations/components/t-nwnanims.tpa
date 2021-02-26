@@ -1,6 +1,6 @@
 /* ====================================================================================================================================================================== *
  *  v 6.0.0                                                                                                                                                               *
- *                                                  M O R E   N W N   A N I M A T I O N S   C O M P O N E N T   ( 6 5 0 )                                                 *
+ *                                                M O R E    N W N    A N I M A T I O N S    C O M P O N E N T    ( 6 5 0 )                                               *
  *                                                                                                                                                                        *
  * ====================================================================================================================================================================== *
  *  This component assigns some creatures distinctive NWN animations.                                                                                                     *
@@ -29,7 +29,7 @@ SILENT
 /* ============================== *
  *  Loads creatures lists arrays  *
  * ============================== */
-INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_nwn_anims_arrays.tph~
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_nwn_anim_arrays.tph~
 
 
 /* =============================================== *
@@ -204,4 +204,3 @@ ACTION_PHP_EACH GW_giant_frost_female AS nb => correct BEGIN
 
 END
 ACTION_CLEAR_ARRAY GW_giant_frost_female
-
