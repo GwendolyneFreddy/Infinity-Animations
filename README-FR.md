@@ -864,7 +864,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Ajout du fichier de meta-données *infinityanimations.ini*pour intégration dans le projet « Project Infinity » d'AL|EN.
   - Fichier *setup-infinityanimations.tp2* renommé *infinityanimations.tp2* pour une meilleure intégration dans le projet « Project Infinity » d'AL|EN.
   - Remplacement du mot-clé `AUTHOR` par `SUPPORT`.
-  - TODO Added missing `REQUIRE_PREDICATE` conditions to avoid installing components in inaccurate games or if required components are not installed.
+  - Ajout des conditions `REQUIRE_PREDICATE` manquantes pour éviter d'installer des composants sur des jeux inappropriés ou si des composants pré-requis ne le sont pas.
   - Attribution à chaque component d'un `LABEL`.
   - Ajout de la librairie "*always.tpa*".
   - Les options de configuration d'installation ont été externalisés dans le fichier *infinityanimations-config-default.ini*. Si vous souhaitez les modifier, veuillez consulter ce <a href="#config">chapitre</a>.
@@ -887,13 +887,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Nouvelle traification du mod.
   - ...
   - Passage en minuscules des noms de fichiers.
+  - Réorganisation de l'arborescence des répertoires du mod : creation de sous-répertoires pour classer les fichiers d'animation et de son par type de créature et/ou par langue.
   - Ajout de l'utilitaire OggDec v1.9.7 et de sox v14.4.1 pour Mac.
   - Mise à jour de WeiDU (v247).
   - Ajout de l'archive libiconv-1.9.2-1-src.7z avec la licence iconv.
   - Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.
-  - ...
-  - Replaced `GAME_IS` conditions with variables checks to speed up install time.
-  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types. 
+
+ <br>
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)

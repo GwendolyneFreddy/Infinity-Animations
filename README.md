@@ -890,13 +890,12 @@ This component corrects changed creature animations in area files for easier ref
   - Added French translation (Gwendolyne).
   - New traification. Feel free to provide me with translations. I will include them as soon as possible.
   - ...
-  - Reorganized folders architecture tree: created sub-folders to sort paperdolls .BAM files according to creature types.
+  - Reorganized folders architecture tree: created sub-folders to sort animations and sound clips files according to creature types and/or language localization.
   - Lower cased files.
   - Added OggDec v1.9.7 and sox v14.4.1 for Mac.
   - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
   - Updated WeiDU installer to v247.
   - Uploaded mod to official Spellhold Studios GitHub mirror account.
-  - Replaced `GAME_IS` conditions with variables checks to speed up install time.
 
  <br>
 
