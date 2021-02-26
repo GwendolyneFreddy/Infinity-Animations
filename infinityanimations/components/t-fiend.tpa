@@ -1,6 +1,6 @@
 /* ============================================================================================================================================================ *
  *  v 6.0.0                                                                                                                                                     *
- *                                              D I S T I N C T I V E   F I E N D S   C O M P O N E N T   ( 1 0 0 )                                             *
+ *                                            D I S T I N C T I V E    F I E N D S    C O M P O N E N T    ( 1 0 0 )                                            *
  *                                                                                                                                                              *
  * ============================================================================================================================================================ *
  *  This component assigns fiends creatures either their proper animation or new animations.                                                                    *
@@ -93,8 +93,8 @@ ACTION_PHP_EACH GW_nabassus AS nb => correct BEGIN
 					INT_VAR opcode_to_delete = 51 // Strong-dark by RGB
 				END
 				SAY INITIAL_MEETING @10101  // Who disturbs me? [t-nab04]
-				SAY MORALE @507             // Rawrr! [t-nab03]
-				SAY UNHAPPY_BREAKING @10102 // Rawrr! [t-nab03]
+				SAY MORALE @10102           // Rawrr! [t-nab03]
+				SAY UNHAPPY_BREAKING @10102 // id.
 				SAY BATTLE_CRY1 @10103      // I will rend your soul! [t-nab05]
 				SAY BATTLE_CRY2 @10104      // Your pain shall be eternal! [t-nab06]
 				WRITE_LONG BATTLE_CRY3 (0 - 1)
@@ -199,13 +199,13 @@ ACTION_PHP_EACH GW_gelugons AS nb => correct BEGIN
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~ // These CREs need fixing because of hosed slots
 			WRITE_SHORT 0x28 0xe910 // Animation ID (salamander_frost)
-			WRITE_BYTE 0x2f 57      // Skin color (LIGHT_BLUE)
-			WRITE_BYTE 0x237 1      // Sex (male)
-			WRITE_BYTE 0x271 255    // General (monster)
-			READ_BYTE  0x275 gd     // Gender
+			WRITE_BYTE  0x2f 57     // Skin color (LIGHT_BLUE)
+			WRITE_BYTE  0x237 1     // Sex (male)
+			WRITE_BYTE  0x271 255   // General (monster)
+			READ_BYTE   0x275 gd    // Gender
 			// If not summoned
 			PATCH_IF (gd != 6) AND (gd != 9) BEGIN
-				WRITE_BYTE 0x275 1      // male
+				WRITE_BYTE 0x275 1  // male
 			END
 			SAY BATTLE_CRY1 ~~ [t-gel01a]
 			SAY BATTLE_CRY2 ~~ [t-gel01b]
@@ -233,20 +233,20 @@ ACTION_PHP_EACH GW_mariliths_dark AS nb => correct BEGIN
 
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH_DARK~) // original 0x5052 - EE depends on installation
-			WRITE_BYTE 0x2d 56          // Minor color (DARK_TURQUOISE)
-			WRITE_BYTE 0x2e 63          // Major color (LIGHT_GRAY)
-			WRITE_BYTE 0x2f 63          // Skin color
-			WRITE_BYTE 0x237 2          // Sex (female)
-			WRITE_BYTE 0x271 255        // General (monster)
-			WRITE_BYTE 0x275 2          // Gender (female)
-			SAY MORALE #61765           // No! Nooo! I must be away! [UNEARF08]
-			SAY UNHAPPY_BREAKING #61765 // No, no, I must be away! [UNEARF08]
-			SAY BATTLE_CRY1 #61761      // I shall enjoy gutting you like the dog you are... [UNEARF04]
-			SAY BATTLE_CRY2 #61760      // Death will only be the beginning for you... [UNEARF03]
-			SAY BATTLE_CRY3 #61762      // Now the time has come for you to pay... [UNEARF05]
-			SAY SELECT_COMMON1 #61758   // Your death lies here, fool! [UNEARF01]
-			SAY SELECT_COMMON2 #61759   // This is your end, I assure you. [UNEARF02]
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH_DARK~) // original 0x5052 - EE depends on installation
+				WRITE_BYTE 0x2d 56          // Minor color (DARK_TURQUOISE)
+				WRITE_BYTE 0x2e 63          // Major color (LIGHT_GRAY)
+				WRITE_BYTE 0x2f 63          // Skin color
+				WRITE_BYTE 0x237 2          // Sex (female)
+				WRITE_BYTE 0x271 255        // General (monster)
+				WRITE_BYTE 0x275 2          // Gender (female)
+				SAY MORALE #61765           // No! Nooo! I must be away! [UNEARF08]
+				SAY UNHAPPY_BREAKING #61765 // No, no, I must be away! [UNEARF08]
+				SAY BATTLE_CRY1 #61761      // I shall enjoy gutting you like the dog you are... [UNEARF04]
+				SAY BATTLE_CRY2 #61760      // Death will only be the beginning for you... [UNEARF03]
+				SAY BATTLE_CRY3 #61762      // Now the time has come for you to pay... [UNEARF05]
+				SAY SELECT_COMMON1 #61758   // Your death lies here, fool! [UNEARF01]
+				SAY SELECT_COMMON2 #61759   // This is your end, I assure you. [UNEARF02]
 			END
 		BUT_ONLY
 
@@ -489,8 +489,8 @@ ACTION_PHP_EACH GW_erinyes AS nb => correct BEGIN
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 				WRITE_SHORT 0x28 0x6111 // Animation ID (fighter_female_elf)
-				WRITE_BYTE 0x2f 113     // Skin color (FOG)
-				WRITE_BYTE 0x32 0       // Hair color (RUST-TINTED_BLACK)
+				WRITE_BYTE  0x2f 113    // Skin color (FOG)
+				WRITE_BYTE  0x32 0      // Hair color (RUST-TINTED_BLACK)
 				REPLACE_CRE_ITEM ~wings01~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~
 				WRITE_BYTE 0x237 2      // Sex (female)
 				WRITE_BYTE 0x275 2      // Gender (female)
@@ -560,7 +560,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~wardtief.cre~ BEGIN
 		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
 			WRITE_SHORT 0x28 0x6311 // Animation ID (thief_female_elf)
 			REPLACE_CRE_ITEM ~wings01~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~
-			WRITE_BYTE 0x272 121    // Race (fiend)
+			WRITE_BYTE  0x272 121   // Race (fiend)
 			// Clear soundset (is not Imoen)
 			FOR (s1 = 0xa4 ; s1 < 0x1d0 ; s1 += 4) BEGIN
 				WRITE_LONG s1 (0 - 1)
