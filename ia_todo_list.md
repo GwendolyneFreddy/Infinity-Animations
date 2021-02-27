@@ -9,7 +9,7 @@
 
 - [ ] Remove all DEBUGGING CONTROL LOG messages
 - [ ] Arrays: fill all unknown mods references
-- [ ] Modders content: Check Ulb's sound files
+- [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
 
 ## 
 

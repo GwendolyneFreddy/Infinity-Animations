@@ -62,7 +62,7 @@ Finally, this mod contains optional components that implement many new animation
 - Adds custom game animations for characters and creatures (including dragons)
 - Allows use of many different animation *types* (some never before seen in the games)
 - Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts
-- Harmonize animations names in all games to avoid conflicts with EE games
+- Harmonizes animations names in all games to avoid conflicts with EE games
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
 <div align="right"><a href="#top">Back to top</a></div>
@@ -96,7 +96,7 @@ If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-in
 
 #### Installation Order
 
->Although it is not required for the 1pp mod to function properly, ToB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
+>Although it is not required for Infinity Animations to function properly, ToB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 
 In a perfect world, Infinity Animations would be installed as a data base that would be usable by anyone who would like to add animation entries to the game without being bogged down by issues of mod conflicts and incompatibilities. Unfortunately, since it was designed a long time after the first megamods generation that were overwriting game files, in particular to resolve animation conflicts and restore standard animations that megamods have overwritten; it needs to be installed after those megamods, at least until their authors will update them to benefit from Infinity Animations content... &#128577;
 
@@ -166,7 +166,7 @@ Run **`setup-infinityanimations.exe`** in your game folder to reinstall, un-inst
 
 #### Mac OS X
 
->:warning: Unfortunately, **this mod is not currently fully compatible with OS X** because a few components patching exe file do not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
+>:warning: Unfortunately, **this mod is not currently fully compatible with OS X** because the main component patching exe file does not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)
 
 &#128541; **However,** since EE games don't need to be patched to benefit from Infinity Animations, **it can be installed on Mac OS X EE games**.
 
@@ -200,7 +200,7 @@ In addition to the methods above for removing individual components, you can com
 
 ##### As of version 6.0.0, configuration options needed for installation are read from <a href="infinityanimations/infinityanimations-config-default.ini">infinityanimations-config-default.ini</a> file, or *infinityanimations-config-user.ini* if it exists.
 
-The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations :file_folder: **_content_** or :file_folder: **_restore_** subfolders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
+The previous versions needed all required content to be downloaded from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a> and extracted into the infinityanimations :file_folder: **_content_** or :file_folder: **_restore_** sub-folders. The installer warned you if you were missing anything you need, at which point you could exit it, download missing content, extract it and rerun the installer.
 
 From now on, the content needed by Infinity Animations is included in the :file_folder: **_archives_** folder and automatically copied by the main component into your :file_folder: **_override_** folder. Being useless, the respective :file_folder: *content* and :file_folder: *restore* sub-folders have been removed.
 
@@ -442,7 +442,7 @@ The installer includes the following components. The number of each is the compo
 - Classic game only: Replaces _LOW creature animations
 - Classic game only: Resolves soundsets creature animation conflicts if TobEx is installed
 - Updates .ids, .2da and .ini files
-- Harmonize animations names in all games to avoid conflicts with EE games
+- Harmonizes animations names in all games to avoid conflicts with EE games
 - Restores any necessary previously mod-overwritten animations and resolves the problems of animation stacking, slot and naming conflicts
 - Copies new animations (any extracted to :file_folder: /archives folder)
 - Fixes any affected creatures
@@ -833,7 +833,7 @@ This component corrects changed creature animations in area files for easier ref
   - Modified animations name-spaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
   - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
-  - Updated IA Reference Picker tool and documentation.
+  - Rewrote IA Reference Picker tool (can now be translated) and updated its documentation.
   - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
   - Added IA modders content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
@@ -859,7 +859,6 @@ This component corrects changed creature animations in area files for easier ref
     - IA base_anims content: Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.
     - IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
     - IA IWD content: Animated Plate small (bronze, dark, green), Barbarian warrior (tan, red, brown), Creeping Doom, Drowned Dead, Elemental (Earth, Fire, Water), Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
-    - Rewrote Tool IA Reference Picker (can now be translated) and updated its readme.
     - IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
     - IA now automatically installs sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in *infinityanimations-config-default.ini* file gives the choice to bypass the default soundset language.
 <br><br>
