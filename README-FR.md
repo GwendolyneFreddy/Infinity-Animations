@@ -907,8 +907,8 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
         - Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
     - <ins>ia_correcting_creature animations.tpa</ins> :
         - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_correct_arrays.tph*") pour faciliter leur mise à jour.
-        - Integration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes READ_BYTE manquantes de Miloch</a>.
-        - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
+        - Intégration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes READ_BYTE manquantes de Miloch</a>.
+        - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
         - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.
         - Dorénavant, ne corrige les jeux de son des créatures que si la résolution des conflits entre soundsets d'animations de créatures a échoué.
     - <ins>ia_correcting_weapon_animations.tpa</ins> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équippe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).
@@ -916,13 +916,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 - [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : ajout des variables manquantes pour les fichiers kent and sailned de BG (array " *GW_male_human_fighters* ").
-    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les elfes magiciens n'étaient pas patchés).
+    - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les elfes magiciens n'étaient pas patchés).
 - [50] Genies différenciés (t-genie.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_genies_arrays.tph*") pour faciliter leur mise à jour.
 - [100] Démons différenciés (t-fiend.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_fiends_arrays.tph*") pour faciliter leur mise à jour.
     - Suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : «&nbsp;*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way* »).
-    - Integration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (un maurezhi n'était pas patché).
+    - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (un maurezhi n'était pas patché).
 - [150-175] Diantrefosses (t-pit_fiend.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_pit_fiends_arrays.tph*") pour faciliter leur mise à jour.
 - [210-230] Cambions get Isair Animation (t-cambion.tpa)
@@ -935,7 +935,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_undead_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : remplacement de la variable "*%tsz%*" n'existait pas par la variable "*%tutu_scriptz%*" (array *GW_zombies*).
     - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
-    - Array *GW_ghasts* : integration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations modifiées de briller en rouge (Attribuer aux blêmes l'animation ghast : suppression du fichier ghastsu qui est un squelette, et non une blême).
+    - Array *GW_ghasts* : intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations modifiées de briller en rouge (Attribuer aux blêmes l'animation ghast : suppression du fichier ghastsu qui est un squelette, et non une blême).
     - Attribuer aux zombis majeurs l'animation de zombi jaune d'IWD : suppression de la correction des noms du fichier gzombie.cre (*Zombi majeur<*) déjà corrigée par le mod TS à partir de la version 6..
 - [410-415-420] Combattants squelettes (t-skelwa.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_skelwa_arrays.tph*") pour faciliter leur mise à jour.

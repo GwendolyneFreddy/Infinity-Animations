@@ -429,7 +429,7 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br>
 
 
-###### All components require the main component (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
+###### <strong>All components require the main component</strong> (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
 <div align="right"><a href="#top">Back to top</a></div>
 
 ------------------------

@@ -8,7 +8,7 @@
 #### Before official release
 
 - [ ] Remove all DEBUGGING CONTROL LOG messages
-- [ ] Arrays: fill all unknown mods references
+- [ ] Arrays: fill all unknown creature mods references
 - [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
 
 ## 
@@ -16,15 +16,13 @@
 #### Humanoid Animations Fixes component
 
 - [ ] Male Sailors get the sailor_man animation: add new options with new IA_EE content (colored sailors)?
-- [ ] Contact the media
-- [ ] Contact the media
-- [ ] Contact the media
+- [ ] Male human Shadow Thieves get the shadow_thief animation: add arnfgt04, flyfgt02, flyfgt03 and repthf12?
 
 ## 
 
 #### Distinctive Fiends component
 
-- [ ] Erinyes get wings and elf animations: write a better 1pp compatibility???
+- [ ] Erinyes get wings and elf animations: write a better 1pp compatibility?
 
 ## 
 
@@ -43,4 +41,4 @@
 #### EE version
 
 - [ ] All components: list all EE games specific creatures that need to be patched
-- [ ] Distinctive Fiends component: Is it very useful to add creatures sound clips for EE games???
+- [ ] Distinctive Fiends component: Is it very useful to add creatures sound clips for EE games?
