@@ -1,0 +1,41 @@
+4aj /wyrmling_albino
+***
+						SOUND
+ATTACK          		t-wyvr03 wyver05
+ATTACK          		0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		t-wyvr06
+DAMAGE          		0
+DIE             		t-wyvr07
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		wyver06
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		t-wyvr03 nosound
+ATTACK_SLASH    		0 0
+ATTACK_BACKSLASH		wyver05 nosound
+ATTACK_BACKSLASH		0 0
+ATTACK_JAB      		wyver06
+ATTACK_JAB      		0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry				t-wyvr01 t-wyvr02
+Battle_Cry				0 0
+Selection				t-wyvr03 nosound
+Selection				0 0
