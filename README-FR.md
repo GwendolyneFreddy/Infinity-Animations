@@ -295,7 +295,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
 		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour démon vert (Nabassu), erinyes, gelugon, guenaude nocturne et tieffelins.<br>
-		- Nécessaire pour les composants Genies différenciés [50] et Démons différenciés [100].<br><br>
+		- Nécessaire pour les composants Génies différenciés [50] et Démons différenciés [100].<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
 	</tr>

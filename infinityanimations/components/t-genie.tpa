@@ -15,17 +15,18 @@
 /* ------------------------------ *
  *     CREATURES            line  *
  * ------------------------------ *
- *  Dao                   #   38  *
- *  Dao with legs         #   63  *
- *  Djinni                #   88  *
- *  Efreeti               #  119  *
- *  Efreeti with legs     #  154  *
- *  Janni                 #  189  *
- *  Janni with legs       #  214  *
- *  Marid                 #  232  *
- *  Marid with legs       #  257  *
+ *  Dao                   #   39  *
+ *  Dao with legs         #   64  *
+ *  Djinni                #   89  *
+ *  Efreeti               #  120  *
+ *  Efreeti with legs     #  155  *
+ *  Janni                 #  190  *
+ *  Janni with legs       #  215  *
+ *  Marid                 #  233  *
+ *  Marid with legs       #  258  *
  * ------------------------------ */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *

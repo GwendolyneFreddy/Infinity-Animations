@@ -1,7 +1,7 @@
 <div align="center"><h1>Infinity Animations todo list</h1>
 </div>
 
-![GitHub help wanted](https://img.shields.io/badge/%20-help--wanted-%23159818?style=plastic)
+![GitHub help wanted](https://img.shields.io/badge/%20-help--wanted-%23159818?style=plastic) Anyone interested in contributing may contact Gwendolyne at <a href="http://www.shsforums.net/user/24495-gwendolyne/">SHS</a>!
 
 <hr>
 
@@ -17,6 +17,13 @@
 
 - [ ] Male Sailors get the sailor_man animation: add new options with new IA_EE content (colored sailors)?
 - [ ] Male human Shadow Thieves get the shadow_thief animation: add arnfgt04, flyfgt02, flyfgt03 and repthf12?
+
+## 
+
+#### Distinctive Genies component
+
+- [ ] Djinnis: ddguard2 and ddguard3 class is GENIE_EFREETI. Should they be reverted into the efreeti array?
+- [ ] ee_tob content: why not use the EE EFREETI_NOBLE animation for some Efreetis?
 
 ## 
 

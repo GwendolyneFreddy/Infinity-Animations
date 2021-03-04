@@ -74,9 +74,9 @@ trgeni01                => 1	// Khan Zahraa
 END
 
 
-/* ======================================================================================= *
- *  ARRAY GW_daos_legs : LISTS vanilla and modded Djinni creatures needing to be patched.  *
- * ======================================================================================= */
+/* ===================================================================================== *
+ *  ARRAY GW_djinnis : LISTS vanilla and modded Djinni creatures needing to be patched.  *
+ * ===================================================================================== */
 
 ACTION_CLEAR_ARRAY GW_djinnis
 
@@ -225,9 +225,9 @@ END
  *  Jannis with legs get the janni_legs animation.                                                   *
  * ================================================================================================= *
 
-ACTION_CLEAR_ARRAY GW_janniçlegs
+ACTION_CLEAR_ARRAY GW_janni_legs
 
-ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_GW_efreeti_legs BEGIN
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_janni_legs BEGIN
 
 // TDD
 // ---
