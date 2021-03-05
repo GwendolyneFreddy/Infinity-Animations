@@ -1,17 +1,18 @@
-/* ===================================================================================================================================== *
- *  v 6.0.0                                                                                                                              *
- *                         S K E L E T O N    W A R R I O R S    C O M P O N E N T    ( 4 1 0 - 4 1 5 - 4 2 0 )                          *
- *                                                                                                                                       *
- * ===================================================================================================================================== *
- *  This component assigns the chosen animation to all skeleton warriors.                                                                *
- * ===================================================================================================================================== *
- *  change-log:                                                                                                                          *
- *  -----------                                                                                                                          *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_skelwa_arrays.tph library) for easier maintenance.   *
- *      - Added glowcheck.tpp patch ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).                          *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                *
- * ===================================================================================================================================== */
+/* ==================================================================================================================================== *
+ *  v 6.0.0                                                                                                                             *
+ *                         S K E L E T O N    W A R R I O R S    C O M P O N E N T    ( 4 1 0 - 4 1 5 - 4 2 0 )                         *
+ *                                                                                                                                      *
+ * ==================================================================================================================================== *
+ *  This component assigns the chosen animation to all skeleton warriors.                                                               *
+ * ==================================================================================================================================== *
+ *  change-log:                                                                                                                         *
+ *  -----------                                                                                                                         *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_skelwa_arrays.tph library) for easier maintenance.  *
+ *      - Added Turambar's glowcheck.tpp patch ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).              *
+ *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                               *
+ * ==================================================================================================================================== */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *
