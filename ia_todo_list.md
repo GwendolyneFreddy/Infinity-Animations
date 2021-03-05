@@ -1,7 +1,9 @@
 <div align="center"><h1>Infinity Animations todo list</h1>
 </div>
 
-![GitHub help wanted](https://img.shields.io/badge/%20-help--wanted-%23159818?style=plastic) Anyone interested in contributing may contact Gwendolyne at <a href="http://www.shsforums.net/user/24495-gwendolyne/">SHS</a>!
+![GitHub help wanted](https://img.shields.io/badge/%20-help--wanted-%23159818?style=plastic)
+
+Anyone interested in contributing may contact Gwendolyne at <a href="http://www.shsforums.net/user/24495-gwendolyne/">SHS</a>!
 
 <hr>
 
@@ -43,7 +45,14 @@
 
 ##### Cambions get Isair Animation component
 
-- [ ] gw_ia_cambions_arrays.tph: Should we removed from this array a few creatures esigned to be Lesser demons and not cambions? demlord and uddemon (BG2), kz#dmlrd (Kiara-Zaiya), tg#did1 (Refinements).
+- [ ] gw_ia_cambions_arrays.tph: Should we removed from this array a few creatures designed to be Lesser demons and not cambions? demlord and uddemon (BG2), kz#dmlrd (Kiara-Zaiya), tg#did1 (Refinements).
+
+## 
+
+##### Distinctive Undead component
+
+- [ ] Remove IA Base Animations content requirement as it is automatically installed by main component as of this version?
+- [ ] Ghoul Queens get the ghoul_queen animation: replace `ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3erg1.bam~` condition with Fiends_Genies content requirement check?
 
 ## 
 

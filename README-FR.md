@@ -295,7 +295,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
 		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour démon vert (Nabassu), erinyes, gelugon, guenaude nocturne et tieffelins.<br>
-		- Nécessaire pour les composants Génies différenciés [50] et Démons différenciés [100].<br><br>
+		- Nécessaire pour les composants Génies différenciés [50], Démons différenciés [100] et Morts-vivants différenciés [400].<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
@@ -541,7 +541,7 @@ Ce composant attribue aux alu-démons l'animation de Madae :
 Ce composant attribue aux morts_vivants des animations différenciées :
 - Attribue aux banshees l'animation de vestale gémissante [<em>NdT : wailing virgin</em>].
 - Attribue aux crânes flottants l'animation de demi-liche.
-- Attribue aux blêmes majeurs l'animation de blême majeure d'IWD.
+- Attribue aux blêmes majeurs l'animation de blême majeur d'IWD.
 - Attribue aux fantômes classiques l'animation de fantôme d'IWD.
 - Attribue aux goules majeures l'animation de goule majeure d'IWD.
 - Attribue à certaines goules l'animation de reine des goules de PS:T.
@@ -933,13 +933,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Suppression de la partie du code des anciennes versions modifiant aussi les femmes tieffelins, obsolète depuis longtemps.
 - [400] Morts-vivants différenciés (t-undead.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_undead_arrays.tph*") pour faciliter leur mise à jour.
-    - Variables tutu : remplacement de la variable "*%tsz%*" n'existait pas par la variable "*%tutu_scriptz%*" (array *GW_zombies*).
-    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
-    - Array *GW_ghasts* : intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> qui empêche les squelettes ayant des animations modifiées de briller en rouge (Attribuer aux blêmes l'animation ghast : suppression du fichier ghastsu qui est un squelette, et non une blême).
-    - Attribuer aux zombis majeurs l'animation de zombi jaune d'IWD : suppression de la correction des noms du fichier gzombie.cre (*Zombi majeur<*) déjà corrigée par le mod TS à partir de la version 6..
+    - Variables tutu : remplacement de la variable "*%tsz%*", qui n'existait pas, par la variable "*%tutu_scriptz%*" (array *GW_zombies*).
+    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch</a> qui empêche les squelettes ayant des animations modifiées de briller en rouge.
+    - Attribuer aux blêmes l'animation ghast : intégration du correctif <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Ghasts glowcheck patch</a> qui supprime la créature ghastsu qui est un squelette, et non une blême, de l'array *GW_ghasts*.
+    - Attribuer aux zombis majeurs l'animation de zombi jaune d'IWD : suppression de la correction des noms du fichier gzombie.cre (*Zombi majeur*) déjà corrigée par le mod TS à partir de la version 6..
 - [410-415-420] Combattants squelettes (t-skelwa.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_skelwa_arrays.tph*") pour faciliter leur mise à jour.
-    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
+    - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch</a>.
 - [450-455] Animation de pauvre hère (t-seer.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
     - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).

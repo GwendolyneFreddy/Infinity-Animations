@@ -294,7 +294,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
 		<td><ins>IA Content - Fiends and Genies</ins><br><br>
 		- Content: Fiend blue, Fiend green (Nabassu), Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul Queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Fiend green (Nabassu), Gelugon, Hag Night and Tieflings sound files.<br>
-		- Needed for Distinctive Genies [50] and Distinctive Fiends [100] components.<br><br>
+		- Needed for Distinctive Genies [50], Distinctive Fiends [100] and Distinctive Undead [400] components.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -937,12 +937,12 @@ This component corrects changed creature animations in area files for easier ref
 - [400] Distinctive Undead (t-undead.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_undead_arrays.tph*" library) for easier maintenance.
     - Tutu variables: replaced "*%tsz%*" that did not exist with "*%tutu_scriptz%*" (*GW_zombies* array).
-    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
-    - *GW_ghasts* array: integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Turambar's glowcheck patch</a> that prevents Skeletons with modified animations to glow red (Ghasts get the ghast animation: removed ghastsu which is a skeleton, not a ghast).
+    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch that prevents Skeletons with modified animations to glow red</a>.
+    - Ghasts get the ghast animation: integrated <a href="http://www.shsforums.net/topic/54249-colors-problem-solved/?p=535498">Ghasts glowcheck patch</a> that removes ghastsu which is a skeleton, not a ghast, from*GW_ghasts* array. 
     - Zombie Lords get the wight_yellow animation: removed gzombie.cre botched strref patch (*Greater Zombie*) already fixed by TS v6 and later.
 - [410-415-420] Skeleton Warriors (t-skelwa.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
-    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">glowcheck.tpp patch</a>.
+    - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch</a>.
 - [450-455] Seer animations (t-seer.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
     - A few creatures have been moved from the beggars to the slaves array (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).

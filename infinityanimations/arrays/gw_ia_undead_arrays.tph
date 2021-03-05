@@ -1,6 +1,6 @@
 /* ====================================================================================================================================================== *
  *  v 6.0.0                                                                                                                                               *
- *                        A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E   U N D E A D   C O M P O N E N T   ( 400 )                        *
+ *                       A R R A Y S    ( T A B L E S )    :    D I S T I N C T I V E    U N D E A D    C O M P O N E N T    ( 400 )                      *
  *                                                                                                                                                        *
  *                 Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-undead.tpa WeiDU routine.                *
  *                                                                                                                                                        *
@@ -70,8 +70,8 @@
 /* ======================================================================================== *
  *  ARRAY GW_banshees : LISTS vanilla and modded Banshees creatures needing to be patched.  *
  * ---------------------------------------------------------------------------------------- *
- *  Banshees get the wailing_virgin animation.                                               *
- * ========================================================================================= */
+ *  Banshees get the wailing_virgin animation.                                              *
+ * ======================================================================================== */
 
 ACTION_CLEAR_ARRAY GW_banshees
 
@@ -1063,7 +1063,7 @@ END
 
 ACTION_CLEAR_ARRAY GW_zombie_blue
 
-ACTION_DEFINE_ASSOCIATIVE_ARRAY zombie_blue BEGIN
+ACTION_DEFINE_ASSOCIATIVE_ARRAY  GW_zombie_blue BEGIN
 
 // BG2
 // ---
