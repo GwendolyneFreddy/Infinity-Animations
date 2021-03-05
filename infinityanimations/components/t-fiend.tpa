@@ -9,34 +9,35 @@
  *  -----------                                                                                                                                                 *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
  *      - Replaced specific %tsu% ia variables with more compatible %tutu_var% variables.                                                                       *
- *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#41).                                                                                 *
+ *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#42).                                                                                 *
  *      - Integrated Lollorian's patch to correct loops: one maurezhi was not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).  *
- *      - Rewrote animation ID patching to solve EE games compatibility:                                                                                        *
- *        replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                    *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with                                                 *
+ *        WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                                                           *
  * ============================================================================================================================================================ */
 
 /* ---------------------------------------------------------- *
  *                    CREATURES                         line  *
  * ---------------------------------------------------------- *
- *  Nabassus get the green-gray tanar'ri animation    #   65  *
- *  Chromatic Demon (makes him somewhat chromatic)    #  120  *
- *  Bebiliths get the bebilith_nwn animation          #  137  *
- *  Bone Fiends get the osyluth_nwn animation         #  164  *
- *  Gelugons get the salamander_frost animation       #  193  *
- *  Some Mariliths get the marilith_dark animation    #  228  *
- *  Night Hags get the hag_night animation            #  260  *
- *  Yochlols get a darkened otyugh animation          #  320  *
- *  Silver Abishais get the abishai_white animation   #  353  *
- *  Manes get the drowned_dead animation              #  385  *
- *  Green Abishais get the abishai_green animation    #  398  *
- *  Red Abishais get the abishai_red animation        #  431  *
- *  Erinyes get wings and elf animations              #  464  *
- *  Succubi get the succubus_nwn animation            #  595  *
- *  Kirinhale gets the succubus_nwn animation         #  636  *
- *  Maurezhi get the maurezhi animation               #  657  *
- *  Glabrezus get the proper animation                #  693  *
+ *  Nabassus get the green-gray tanar'ri animation    #   69  *
+ *  Chromatic Demon (makes him somewhat chromatic)    #  124  *
+ *  Bebiliths get the bebilith_nwn animation          #  141  *
+ *  Bone Fiends get the osyluth_nwn animation         #  168  *
+ *  Gelugons get the salamander_frost animation       #  198  *
+ *  Some Mariliths get the marilith_dark animation    #  233  *
+ *  Night Hags get the hag_night animation            #  265  *
+ *  Yochlols get a darkened otyugh animation          #  325  *
+ *  Silver Abishais get the abishai_white animation   #  358  *
+ *  Manes get the drowned_dead animation              #  390  *
+ *  Green Abishais get the abishai_green animation    #  403  *
+ *  Red Abishais get the abishai_red animation        #  436  *
+ *  Erinyes get wings and elf animations              #  469  *
+ *  Succubi get the succubus_nwn animation            #  600  *
+ *  Kirinhale gets the succubus_nwn animation         #  641  *
+ *  Maurezhi get the maurezhi animation               #  662  *
+ *  Glabrezus get the proper animation                #  698  *
  * ---------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 /* DEPRECATED as of SCSII v13: "Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way"
 // SCS2 overwrites an abishai with a nabassu
@@ -54,6 +55,9 @@ ACTION_IF FILE_EXISTS_IN_GAME ~dw#nabsu.cre~ BEGIN
 	BUT_ONLY
 END
 */
+
+OUTER_SPRINT list_cre_fixer "" // initializes t-cre_fixer.log file appending process
+
 
 /* ============================== *
  *  Loads creatures lists arrays  *
@@ -166,6 +170,7 @@ ACTION_CLEAR_ARRAY GW_bebiliths
 ACTION_PHP_EACH GW_bone_fiends AS nb => correct BEGIN
 
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -567,7 +572,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~wardtief.cre~ BEGIN
 			END
 			SAY INITIAL_MEETING @10123  // Well hello there. [t-eri02a]
 			SAY MORALE @10124           // Farewell for now. [t-eri06]
-			SAY UNHAPPY_BREAKING @10124 // Farewell for now. [t-eri06]
+			SAY UNHAPPY_BREAKING @10124 // id.
 			SAY BATTLE_CRY1 @10125      // On your knees! [t-eri01a]
 			SAY BATTLE_CRY2 @10126      // You are mine! [t-eri01b]
 			SAY BATTLE_CRY3 @10127      // Rrrauugh!~ [t-eri01c]
@@ -690,7 +695,7 @@ ACTION_CLEAR_ARRAY GW_maurezhi
 
 
 /* ===================================================================== *
- *  Assigns glabrezus the proper animation instead of balor or cornugon  *
+ *  Assigns Glabrezus the proper animation instead of balor or cornugon  *
  * ===================================================================== */
 ACTION_PHP_EACH GW_glabrezus AS nb => correct BEGIN
 
@@ -711,3 +716,11 @@ ACTION_PHP_EACH GW_glabrezus AS nb => correct BEGIN
 
 END
 ACTION_CLEAR_ARRAY GW_glabrezus
+
+
+/* ======================== *
+ *  Append t-cre_fixer.log  *
+ * ======================== */
+ACTION_IF ("%list_cre_fixer%" STR_CMP "") BEGIN
+	APPEND_OUTER ~infinityanimations/log/t-cre_fixer.log~ ~%list_cre_fixer%~
+END

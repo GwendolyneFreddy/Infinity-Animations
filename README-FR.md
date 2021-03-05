@@ -278,7 +278,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, géant du feu alternatif, créature des lagons, tyramort), ni dans IWD (abishai blanc, blaireau-garou, chimère, crochorreur, demi-dragon noir/rouge, drider mâle/femelle, élémentaire de l'eau petit, freyeur normale/grande, géant Fomorian, gobelins de IWD II, gobelins chevaucheurs de worg, gobelours, capitaine gobelours, isair, kegs, lémure, madae, malarite, orog chaman, orques morts-vivants, rat-garou, tréant, sanglier arctique, shenrical, worg, yuan-ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
-		- Nécessaire pour les composants Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
+		- Nécessaire pour les composants Démons différenciés [100], Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
 		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -481,7 +481,7 @@ Ce composant attribue aux génies des animations différenciées :
 
 Ce composant attribue aux démons soit leur bonne animation, soit des animations différenciées :
 - Attribue aux nabassus une animation de tanar'ri vert-gris.
-- Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : bleue</em>].
+- Attribue au Démon chromatique une animation de base un peu plus colorée [<em>NdT : démon bleu</em>].
 - Attribue aux bebiliths (seulement dans les mods Longer Road et Drizzt Saga) une animation provenant de NWN.
 - Attribue à certaines mariliths une animation plus sombre.
 - Attribue aux sorcières de la nuit [<em>NdT : ou guenaudes nocturnes selon les traductions de Night hag</em>] l'animation de night hag de PS:T.

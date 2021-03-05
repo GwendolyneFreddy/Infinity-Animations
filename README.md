@@ -277,7 +277,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Content: all IWD II animations that are neither in BGII (Death Tyrant, Alternate Ellesime, Alternate Fire Giant, Lagoon Creature) or IWD (Abishai White, Arctic Boar, Bugbear, Bugbear Captain, Chimera, Dark Treant, Drider male/female, Elemental Water Small, Feyr lesser/greater, Fomorian Giant, IWD II goblins, Goblin Worgrider, Goblin Worgrider Captain, Half-dragon black/red, Hook Horror, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Shenrical, Undead Orcs, Werebadger, Wererat, Worg, Yuan-Ti Halfbreed). Includes all relevant creature sounds and tables.<br>
-		- Needed for Cambions get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
+		- Needed for Distinctive Fiends [100], Cambions get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
 		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -483,19 +483,19 @@ This component assigns genies distinctive animations:
 
 This component assigns fiends creatures either their proper animation or new animations:
 - Nabassus get a green-grey tanar'ri animation
-- Chromatic Demon gets a somewhat more colourful base animation
+- Chromatic Demon gets a somewhat more colourful base animation (blue fiend)
 - Bebiliths (Longer Road and Drizzt Saga only) get the NWN animation
 - Some mariliths get a darker animation
 - Night hags get the PS:T night hag animation
 - Bone fiends get the NWN osyluth animation
-- Gelugons (only if added by a mod) get an ice salamander animation
+- Gelugons (only if added by a mod) get the frost salamander animation
 - Yochlols (except those in drow form) get a dark otyugh-based animation
 - White, green and red abishai get the relevant IWD or PS:T animations
 - Manes get the IWD drowned dead animation
 - Erinyes get a black-winged elf avatar
 - Succubi get the NWN succubus animation
-- Maurezhi get a dark ghoulish animation
-- Glabrezu get the proper glabrezu animation
+- Maurezhis get a dark ghoulish animation
+- Glabrezus get the proper glabrezu animation
 
 &nbsp;
 

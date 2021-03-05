@@ -30,6 +30,7 @@
 #### Distinctive Fiends component
 
 - [ ] Erinyes get wings and elf animations: write a better 1pp compatibility?
+- [ ] Which demons might get the EE FIEND_RED animation (new ee_tob content)?
 
 ## 
 
