@@ -13,6 +13,13 @@
 
 ## 
 
+#### EE version
+
+- [ ] All components: list all EE games specific creatures that need to be patched
+- [ ] Distinctive Fiends component: Is it very useful to add creatures sound clips for EE games?
+
+## 
+
 #### Humanoid Animations Fixes component
 
 - [ ] Male Sailors get the sailor_man animation: add new options with new IA_EE content (colored sailors)?
@@ -34,6 +41,12 @@
 
 ## 
 
+##### Cambions get Isair Animation component
+
+- [ ] gw_ia_cambions_arrays.tph: Should we removed from this array a few creatures esigned to be Lesser demons and not cambions? demlord and uddemon (BG2), kz#dmlrd (Kiara-Zaiya), tg#did1 (Refinements).
+
+## 
+
 #### More IWD Animations component
 
 - [ ] Animated Plates: choose between the IWD animations or the IA ones (smaller, by default)...
@@ -44,9 +57,3 @@
 
 - [ ] Why not dynamically build all arrays?
 
-## 
-
-#### EE version
-
-- [ ] All components: list all EE games specific creatures that need to be patched
-- [ ] Distinctive Fiends component: Is it very useful to add creatures sound clips for EE games?

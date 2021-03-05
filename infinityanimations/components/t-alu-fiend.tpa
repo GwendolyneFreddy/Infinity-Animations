@@ -1,16 +1,16 @@
-/* ============================================================================================================================================================== *
- *  v 6.0.0                                                                                                                                                       *
- *                               A L U - F I E N D S   G E T   M A D A E   A N I M A T I O N   C O M P O N E N T   ( 2 6 0 - 2 8 0 )                              *
- *                                                                                                                                                                *
- * ============================================================================================================================================================== *
- *  This component assigns Alu-Fiends creatures the Madae animation. Weapon changes necessary as Madae animation displays hardcoded morningstar.                  *
- * ============================================================================================================================================================== *
- *  change-log:                                                                                                                                                   *
- *  -----------                                                                                                                                                   *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_alu_fiends_arrays.tph library) for easier maintenance.                        *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x55243 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MADAE~).  *
- *      - Removed deprecated Female Tieflings patching process.                                                                                                   *
- * ============================================================================================================================================================== */
+/* ============================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                      *
+ *                            A L U - F I E N D S    G E T    M A D A E    A N I M A T I O N    C O M P O N E N T    ( 2 6 0 - 2 8 0 )                           *
+ *                                                                                                                                                               *
+ * ============================================================================================================================================================= *
+ *  This component assigns Alu-Fiends creatures the Madae animation. Weapon changes necessary as Madae animation displays hardcoded morningstar.                 *
+ * ============================================================================================================================================================= *
+ *  change-log:                                                                                                                                                  *
+ *  -----------                                                                                                                                                  *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_alu_fiends_arrays.tph library) for easier maintenance.                       *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x5243 with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MADAE~).  *
+ *      - Removed deprecated Female Tieflings patching process.                                                                                                  *
+ * ============================================================================================================================================================= */
 
 SILENT
 
@@ -23,7 +23,7 @@ COPY_EXISTING ~%nb%.cre~ ~override~
 			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MADAE~) // original 0x5243 - EE 0xe277
 			WRITE_BYTE 0x73 5   // Spiked
 			REMOVE_CRE_ITEM ~bow02~ ~dagg02~ ~sharswd~ ~staf07~ ~staf17~ ~staf19~ ~sw1h09~ ~sw1h25~ ~sw1h52~ ~sw1h66~ ~sw1h74~
-			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~goralu01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~teltief2~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~yugalu01~ = 1) BEGIN
+			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~goralu01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~yugalu01~ = 1) BEGIN
 				REPLACE_CRE_ITEM ~blun15~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
 			END
 			PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~alufie01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~finaluf~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~nsaluf01~ = 1) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~telalu1~ = 1) BEGIN
@@ -78,5 +78,3 @@ COPY_EXISTING ~%nb%.cre~ ~override~
 	END
 
 BUT_ONLY
-
-VERBOSE
