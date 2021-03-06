@@ -942,11 +942,12 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Intégration du <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch</a>.
 - [450-455] Animation de pauvre hère (t-seer.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_seers_arrays.tph*") pour faciliter leur mise à jour.
-    - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
-    - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *our certains mendiants* » étaient interverties. &#128541;
+    - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
+    - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *Pour certains mendiants* » étaient interverties. &#128541;
+    - Variable tutu : ajout de la variable manquante " *%tutu_var%* " pour le fichier andars (BG1).
 - [480-490] Animations de svirneblins (t-svirfneblin.tpa)
     - Utilisation d'une nouvelle variable "*%t-svi%*" dans une routine unique pour les deux sous-composants.
-    - Correction de noms de fichiers sons mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
+    - Correction de noms de fichiers son mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
 - [500] Plus d'animations de base (t-baseanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_base_anim_arrays.tph*") pour faciliter leur mise à jour.
 - [550] Plus d'animations d'Icewind Dale (t-iwdanims.tpa)

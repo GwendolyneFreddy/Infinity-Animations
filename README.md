@@ -311,7 +311,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_iwd_svirfneblin</strong></td>
 		<td><ins>IA Content - IWD Svirfneblin</ins><br><br>
 		- Content: IWD/IWD2 animations for svirfneblin (deep gnomes). By default, they are pale (flesh-coloured) whereas in canon references, they should be darker (stone-coloured). The original game had variants with and without pickaxes (they do not display separate weapon animations). Since these slots are unpaletted, there are alternates as follows (the last two being custom variants of the IWD pale animations): Svirfneblin pale with axe, Svirfneblin pale without axe, Svirfneblin dark with axe, Svirfneblin dark without axe. Includes gnome sounds ported from NWN.<br>
-		- Needed for Svirfneblin Animations [480-490] component.<br><br>
+		- Needed for Svirfneblins Animations [480-490] component.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -943,13 +943,14 @@ This component corrects changed creature animations in area files for easier ref
 - [410-415-420] Skeleton Warriors (t-skelwa.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_skelwa_arrays.tph*" library) for easier maintenance.
     - Added <a href="http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098">Turambar's glowcheck.tpp patch</a>.
-- [450-455] Seer animations (t-seer.tpa)
+- [450-455] Seer Animation (t-seer.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_seers_arrays.tph*" library) for easier maintenance.
-    - A few creatures have been moved from the beggars to the slaves array (slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
+    - A few creatures have been moved from the beggars to the slaves array (slslav01, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
     - Fix: "*Some beggars and slaves* and "*Some beggars*" sub-components creatures listings were inverted. &#128541;
+    - Tutu variable: added missing "*%tutu_var%*" prefix for andars (BG1 creature).
 - [480-490] Svirfneblins Animations (t-svirfneblin.tpa)
     - Added "*%t-svi%*" variable used in a single routine for both sub-components.
-    - Fixed soundset clips typos (a few were misspelled "*t_sva*" and "*t_svn*" instead of "*t-sva*" and "*t-svn*").
+    - Fixed sound clips typos (a few were misspelled "*t_sva*" and "*t_svn*" instead of "*t-sva*" and "*t-svn*").
 - [500] More Base Animations (t-baseanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_base_anim_arrays.tph*" library) for easier maintenance.
 - [550] More Icewind Dale Animations (t-iwdanims.tpa)

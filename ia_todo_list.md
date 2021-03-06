@@ -24,8 +24,8 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### Humanoid Animations Fixes component
 
-- [ ] Male Sailors get the sailor_man animation: add new options with new IA_EE content (colored sailors)?
-- [ ] Male human Shadow Thieves get the shadow_thief animation: add arnfgt04, flyfgt02, flyfgt03 and repthf12?
+- [ ] *Male Sailors get the sailor_man animation*: add new options with new IA_EE content (colored sailors)?
+- [ ] *Male human Shadow Thieves get the shadow_thief animation*: add arnfgt04, flyfgt02, flyfgt03 and repthf12?
 
 ## 
 
@@ -38,7 +38,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### Distinctive Fiends component
 
-- [ ] Erinyes get wings and elf animations: write a better 1pp compatibility?
+- [ ] *Erinyes get wings and elf animations*: write a better 1pp compatibility?
 - [ ] Which demons might get the EE FIEND_RED animation (new ee_tob content)?
 
 ## 
@@ -52,7 +52,13 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 ##### Distinctive Undead component
 
 - [ ] Remove IA Base Animations content requirement as it is automatically installed by main component as of this version?
-- [ ] Ghoul Queens get the ghoul_queen animation: replace `ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3erg1.bam~` condition with Fiends_Genies content requirement check?
+- [ ] *Ghoul Queens get the ghoul_queen animation*: replace `ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3erg1.bam~` condition with Fiends_Genies content requirement check?
+
+## 
+
+##### Seer Animation component
+
+- [ ] gw_ia_seers_arrays.tph: Why not merging all arrays into one single and use t-seer variable to patch only beggars, slaves, or both?
 
 ## 
 

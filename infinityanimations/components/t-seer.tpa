@@ -1,18 +1,19 @@
-/* =================================================================================================================================================================== *
- *  v 6.0.0                                                                                                                                                            *
- *                                            S E E R    A N I M A T I O N    C O M P O N E N T    ( 4 5 0 - 4 5 5 - 4 6 0 )                                           *
- *                                                                                                                                                                     *
- * =================================================================================================================================================================== *
- *  This component assigns the IWD Seer animation to some beggars and slaves.                                                                                          *
- * =================================================================================================================================================================== *
- *  change-log:                                                                                                                                                        *
- *  -----------                                                                                                                                                        *
- *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_seers_arrays.tph library) for easier maintenance.                                  *
- *      - slslav01, udilsla1, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4 and udvictim creatures have been moved from the beggars to the slaves array.   *
- *      - Fix: "Some beggars and slaves" and "Some beggars" sub-components creatures listings were inverted.                                                           *
- *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x528a with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~).         *
- * =================================================================================================================================================================== */
+/* ============================================================================================================================================================ *
+ *  v 6.0.0                                                                                                                                                     *
+ *                                        S E E R    A N I M A T I O N    C O M P O N E N T    ( 4 5 0 - 4 5 5 - 4 6 0 )                                        *
+ *                                                                                                                                                              *
+ * ============================================================================================================================================================ *
+ *  This component assigns the IWD Seer animation to some beggars and slaves.                                                                                   *
+ * ============================================================================================================================================================ *
+ *  change-log:                                                                                                                                                 *
+ *  -----------                                                                                                                                                 *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_seers_arrays.tph library) for easier maintenance.                           *
+ *      - slslav01, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4 and udvictim creatures have been moved from the beggars to the slaves array.      *
+ *      - Fix: "Some beggars and slaves" and "Some beggars" sub-components creatures listings were inverted.                                                    *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 0x528a with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SEER~).  *
+ * ============================================================================================================================================================ */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 COPY_EXISTING ~%nb%.cre~ ~override~
