@@ -8,7 +8,6 @@
  *  change-log:                                                                                                                                                           *
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_iwd_anim_arrays.tph library) for easier maintenance.                             *
- *      - Replaced WRITE_LONG 0x28 with WRITE_LONG 0x28.                                                                                                                  *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
  *      - BG:EE compatibility: added `IF_EXISTS` after `COPY_EXISTING` to avoid installation failure (#491).                                                              *
@@ -46,6 +45,7 @@
  *  Sahuagins royal guards get the sahuagin_large animation                    #  674  *
  * ----------------------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *
@@ -450,9 +450,9 @@ END
 ACTION_CLEAR_ARRAY GW_elemental_fire_small
 
 
-/* ========================================================= *
+/* ======================================================== *
  *  Water Elementals get the IWD elemental_water animation  *
- * ========================================================= */
+ * ======================================================== */
 ACTION_PHP_EACH GW_elemental_water AS nb => correct BEGIN
 
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN

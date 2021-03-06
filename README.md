@@ -617,7 +617,7 @@ This component assigns some creatures distinctive basic animations:
 This component assigns some creatures distinctive IWD animations:
 - Animated Plates get small animated plate animations
 - Archdruids get the IWD Arundel animation
-- Variant barbarians (brown, red, tan and shamans)
+- Variant barbarians get the IWD Barbarian Warrior (brown, red, tan) and Shaman animations
 - Greater elementals make use of variant BG2/IWD animations
 - Some fire giants get the IWD fire giant animation
 - Iron golems get the IWD iron golem animation

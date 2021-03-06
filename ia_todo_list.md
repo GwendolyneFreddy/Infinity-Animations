@@ -62,9 +62,15 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 ## 
 
+#### More Base Animations component
+
+- [ ] Remove IA Base Animations content requirement as it is automatically installed by main component as of this version?
+
+## 
+
 #### More IWD Animations component
 
-- [ ] Animated Plates: choose between the IWD animations or the IA ones (smaller, by default)...
+- [ ] Animated Plates: choose between original IWD animations or IA ones (smaller, by default) might be a good option to add...
 
 ## 
 

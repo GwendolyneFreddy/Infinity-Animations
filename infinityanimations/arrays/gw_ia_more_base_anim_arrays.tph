@@ -1,6 +1,6 @@
 /* ====================================================================================================================================================== *
  *  v 6.0.0                                                                                                                                               *
- *                      A R R A Y S    ( T A B L E S )    :    M O R E   B A S E   A N I M A T I O N S   C O M P O N E N T   ( 500 )                      *
+ *                    A R R A Y S    ( T A B L E S )    :    M O R E    B A S E    A N I M A T I O N S    C O M P O N E N T    ( 500 )                    *
  *                                                                                                                                                        *
  *               Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by t-baseanims.tpa WeiDU routine.               *
  *                                                                                                                                                        *
@@ -66,7 +66,7 @@ END
 
 ACTION_CLEAR_ARRAY GW_lizardmen_brown
 
-ACTION_DEFINE_ASSOCIATIVE_ARRAY lizardmen_brown BEGIN
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_lizardmen_brown BEGIN
 
 // BG2
 // ---

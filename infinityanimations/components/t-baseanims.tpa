@@ -8,7 +8,6 @@
  *  change-log:                                                                                                                                                           *
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_base_anim_arrays.tph library) for easier maintenance.                            *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                 *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
  * ====================================================================================================================================================================== */
@@ -29,6 +28,7 @@
  *  Elder Umber Hulks get the umber_hulk_elder (IWD) animation   #  305  *
  * --------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *

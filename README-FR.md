@@ -615,7 +615,7 @@ Ce composant attribue à certaines créatures des animations basiques différenc
 Ce composant attribue à certaines créatures des animations d'IWD différenciées :
 - Attribue aux armures animées les animations de petites armures animées d'IWD [<em>NdT : animated plate</em>].
 - Attribue aux Archidruides l'animation d'Arundel d'IWD.
-- Attribue aux barbares leur animation appropriée (marron, rouge, brun et chaman).
+- Attribue aux barbares leur animation appropriée d'IWD (marron, rouge, brun et chaman).
 - Attribue aux élémentaires majeurs différentes animations de BG2/IWD.
 - Attribue à certains géants du feu l'animation de géant du feu d'IWD.
 - Attribue aux golems de fer l'animation de golem de fer d'IWD.
