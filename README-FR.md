@@ -923,6 +923,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_fiends_arrays.tph*") pour faciliter leur mise à jour.
     - Suppression d'un code de compatibilité avec stratagems intégré par SCSII depuis la version 13 (février 2010 : «&nbsp;*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way* »).
     - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (un maurezhi n'était pas patché).
+    - Ne modifie le fichier *t-cre_fixer.log* qu'en cas de besoin.
 - [150-175] Diantrefosses (t-pit_fiend.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_pit_fiends_arrays.tph*") pour faciliter leur mise à jour.
 - [210-230] Animation d'Isair pour les cambions (t-cambion.tpa)
@@ -955,6 +956,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Compatibilité avec BG:EE : ajout de la condition `IF_EXISTS` après `COPY_EXISTING` pour éviter un échec de l'installation.
 - [600] Plus d'animations d'Icewind Dale II (t-iwd2anims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd2_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Ne modifie le fichier *t-cre_fixer.log* qu'en cas de besoin.
 - [650] Plus d'animations de Neverwinter Nights (t-nwnanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_nwn_anim_arrays.tph*") pour faciliter leur mise à jour.
 - [710-720-760-740] Plus d'animations de Planescape: Torment (t-pstanims.tpa)

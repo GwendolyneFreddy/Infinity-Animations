@@ -633,7 +633,7 @@ This component assigns some creatures distinctive IWD animations:
 
 This component assigns some creatures distinctive IWD2 animations:
 - Greater fire giants and firbolgs get the fire giant variant animation
-- Variant goblins (worgriders, leaders, browns, greens, elites)
+- Variant goblins get their proper animation (worgriders, leaders, browns, greens, elites)
 - Hook horrors get the hook horror animation
 - Shadow druids get the Malarite animation
 - Ellesime clones get the white-haired Ellesime animation
@@ -926,6 +926,7 @@ This component corrects changed creature animations in area files for easier ref
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_fiends_arrays.tph*" library) for easier maintenance.
     - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (one maurezhi was not patched).
+    - Append *t-cre_fixer.log* file only if needed.
 - [150-175] Pit Fiends (t-pit_fiend.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
 - [210-230] Cambions get Isair Animation (t-cambion.tpa)
@@ -958,6 +959,7 @@ This component corrects changed creature animations in area files for easier ref
     - BG:EE compatibility: added `IF_EXISTS` after `COPY_EXISTING` to avoid installation failure.
 - [600] More Icewind Dale II Animations (t-iwd2anims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd2_anim_arrays.tph*" library) for easier maintenance.
+    - Append *t-cre_fixer.log* file only if needed.
 - [650] More Neverwinter Nights Animations (t-nwnanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_nwn_anim_arrays.tph*" library) for easier maintenance.
 - [710-720-760-740] More Planescape: Torment Animations (t-pstanims.tpa)

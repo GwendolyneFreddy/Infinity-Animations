@@ -8,36 +8,40 @@
  *  change-log:                                                                                                                                                           *
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_iwd2_anim_arrays.tph library) for easier maintenance.                            *
- *      - Replaced WRITE_SHORT 0x28 with WRITE_LONG 0x28.                                                                                                                 *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
+ *      - Append t-cre_fixer.log file only if needed.                                                                                                                     *
  * ====================================================================================================================================================================== */
 
 /* ----------------------------------------------------------------------------------- *
  *                            CREATURES                                          line  *
  * ----------------------------------------------------------------------------------- *
- *  Fire Giants get the giant_fire animation                                   #   49  *
- *  Greater fire giants and firbolgs get the giant_fire_2 animation            #   79  *
- *  Goblin Worgriders get the goblin_worg animation                            #  108  *
- *  Goblin Worgrider Captain gets the goblin_worg_captain animation            #  142  *
- *  Goblin Leaders get the goblin_captain animation                            #  170  *
- *  Green Goblins Elite with Axe get the goblinelite_axe_green animation       #  201  *
- *  Green Goblins Elite with Bow get the goblinelite_bow_green animation       #  232  *
- *  Green Goblins with Axe get the goblin_axe_green animation                  #  269  *
- *  Green Goblins with Bow get the goblin_bow_green animation                  #  305  *
- *  Goblins Elite with Axe get the goblin_elite_axe animation                  #  341  *
- *  Goblins Elite with Bow get the goblin_elite_bow animation                  #  362  *
- *  Hook Horrors get the hook_horror animation                                 #  383  *
- *  Shadow Druids get the malarite animation                                   #  418  *
- *  Ellesime Clones get the ellesime_white animation                           #  471  *
- *  Poison Mists get the lagoon_creature animation                             #  496  *
- *  Death Tyrants get the death_tyrant animation                               #  521  *
- *  Wererat gets the wererat animation                                         #  544  *
- *  Worgs get the worg (iwd) animation                                         #  569  *
- *  Yuan-Ti Halfbreeds get the yuan-ti_half animation                          #  601  *
+ *  Fire Giants get the giant_fire animation                                   #   53  *
+ *  Greater fire giants and firbolgs get the giant_fire_2 animation            #   83  *
+ *  Goblin Worgriders get the goblin_worg animation                            #  112  *
+ *  Goblin Worgrider Captain gets the goblin_worg_captain animation            #  146  *
+ *  Goblin Leaders get the goblin_captain animation                            #  174  *
+ *  Green Goblins Elite with Axe get the goblinelite_axe_green animation       #  205  *
+ *  Green Goblins Elite with Bow get the goblinelite_bow_green animation       #  236  *
+ *  Green Goblins with Axe get the goblin_axe_green animation                  #  273  *
+ *  Green Goblins with Bow get the goblin_bow_green animation                  #  309  *
+ *  Goblins Elite with Axe get the goblin_elite_axe animation                  #  345  *
+ *  Goblins Elite with Bow get the goblin_elite_bow animation                  #  366  *
+ *  Hook Horrors get the hook_horror animation                                 #  387  *
+ *  Shadow Druids get the malarite animation                                   #  422  *
+ *  Ellesime Clones get the ellesime_white animation                           #  475  *
+ *  Poison Mists get the lagoon_creature animation                             #  500  *
+ *  Death Tyrants get the death_tyrant animation                               #  525  *
+ *  Wererat gets the wererat animation                                         #  548  *
+ *  Worgs get the worg (iwd) animation                                         #  573  *
+ *  Yuan-Ti Halfbreeds get the yuan-ti_half animation                          #  605  *
  * ----------------------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
+
+OUTER_SPRINT list_cre_fixer "" // initializes t-cre_fixer.log file appending process
+
 
 /* ============================== *
  *  Loads creatures lists arrays  *
@@ -629,3 +633,11 @@ ACTION_PHP_EACH GW_yuan-ti_half AS nb => correct BEGIN
 
 END
 ACTION_CLEAR_ARRAY GW_yuan-ti_half
+
+
+/* ======================== *
+ *  Append t-cre_fixer.log  *
+ * ======================== */
+ACTION_IF ("%list_cre_fixer%" STR_CMP "") BEGIN
+	APPEND_OUTER ~infinityanimations/log/t-cre_fixer.log~ ~%list_cre_fixer%~
+END

@@ -1,6 +1,6 @@
 /* ====================================================================================================================================================== *
  *  v 6.0.0                                                                                                                                               *
- *                    A R R A Y S    ( T A B L E S )    :    M O R E    I W D 2    A N I M A T I O N S    C O M P O N E N T   ( 600 )                     *
+ *                    A R R A Y S    ( T A B L E S )    :    M O R E    I W D 2    A N I M A T I O N S    C O M P O N E N T    ( 600 )                    *
  *                                                                                                                                                        *
  *               Arrays to patch vanilla and modded creature files (animation slots, sound clips...) used by t-iwd2anims.tpa WeiDU routine.               *
  *                                                                                                                                                        *
@@ -96,9 +96,9 @@ END
  *  Greater fire giants and firbolgs get the giant_fire_2 animation.                                       *
  * ======================================================================================================= */
 
-ACTION_CLEAR_ARRAY giant_fire_2
+ACTION_CLEAR_ARRAY GW_giant_fire_2
 
-ACTION_DEFINE_ASSOCIATIVE_ARRAY giant_fire_2 BEGIN
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire_2 BEGIN
 
 // Heart of the Wood
 // -----------------
