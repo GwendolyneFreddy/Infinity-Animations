@@ -9,32 +9,33 @@
  *  -----------                                                                                                                                                 *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_fiends_arrays.tph library) for easier maintenance.                          *
  *      - Replaced specific %tsu% ia variables with more compatible %tutu_var% variables.                                                                       *
- *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#42).                                                                                 *
+ *      - Removed stratagems compatibility code fixed by SCSII as of v13 (#43).                                                                                 *
  *      - Integrated Lollorian's patch to correct loops: one maurezhi was not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).  *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with                                                 *
  *        WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~) whenever relevant.                                                                           *
+ *      - Append t-cre_fixer.log file only if needed.                                                                                                           *
  * ============================================================================================================================================================ */
 
 /* ---------------------------------------------------------- *
  *                    CREATURES                         line  *
  * ---------------------------------------------------------- *
- *  Nabassus get the green-gray tanar'ri animation    #   69  *
- *  Chromatic Demon (makes him somewhat chromatic)    #  124  *
- *  Bebiliths get the bebilith_nwn animation          #  141  *
- *  Bone Fiends get the osyluth_nwn animation         #  168  *
- *  Gelugons get the salamander_frost animation       #  198  *
- *  Some Mariliths get the marilith_dark animation    #  233  *
- *  Night Hags get the hag_night animation            #  265  *
- *  Yochlols get a darkened otyugh animation          #  325  *
- *  Silver Abishais get the abishai_white animation   #  358  *
- *  Manes get the drowned_dead animation              #  390  *
- *  Green Abishais get the abishai_green animation    #  403  *
- *  Red Abishais get the abishai_red animation        #  436  *
- *  Erinyes get wings and elf animations              #  469  *
- *  Succubi get the succubus_nwn animation            #  600  *
- *  Kirinhale gets the succubus_nwn animation         #  641  *
- *  Maurezhi get the maurezhi animation               #  662  *
- *  Glabrezus get the proper animation                #  698  *
+ *  Nabassus get the green-gray tanar'ri animation    #   70  *
+ *  Chromatic Demon (makes him somewhat chromatic)    #  125  *
+ *  Bebiliths get the bebilith_nwn animation          #  142  *
+ *  Bone Fiends get the osyluth_nwn animation         #  169  *
+ *  Gelugons get the salamander_frost animation       #  199  *
+ *  Some Mariliths get the marilith_dark animation    #  234  *
+ *  Night Hags get the hag_night animation            #  266  *
+ *  Yochlols get a darkened otyugh animation          #  326  *
+ *  Silver Abishais get the abishai_white animation   #  359  *
+ *  Manes get the drowned_dead animation              #  391  *
+ *  Green Abishais get the abishai_green animation    #  404  *
+ *  Red Abishais get the abishai_red animation        #  437  *
+ *  Erinyes get wings and elf animations              #  470  *
+ *  Succubi get the succubus_nwn animation            #  601  *
+ *  Kirinhale gets the succubus_nwn animation         #  642  *
+ *  Maurezhi get the maurezhi animation               #  663  *
+ *  Glabrezus get the proper animation                #  699  *
  * ---------------------------------------------------------- */
 
 PRINT @28 // ~Patching creature files...~
