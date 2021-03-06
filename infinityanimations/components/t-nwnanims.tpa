@@ -15,15 +15,16 @@
 /* ----------------------------------------------------------------------------------- *
  *                            CREATURES                                          line  *
  * ----------------------------------------------------------------------------------- *
- *  Scythe Wielders get the amel_pc_nwn animation                              #   36  *
- *  Bombardier Beetle (BP) gets the beetle_bombardier_nwn animation            #   64  *
- *  Greater Basilisks get the basilisk_nwn animation                           #   80  *
- *  Modrons get the modron_round animation                                     #  101  *
- *  Displacer Beasts (AjocMod) get the displacer_beast animation               #  129  *
- *  Fire Giant Females get the giant_fire_female animation                     #  161  *
- *  Frost Giant Females get the giant_frost_female animation                   #  186  *
+ *  Scythe Wielders get the amel_pc_nwn animation                              #   37  *
+ *  Bombardier Beetle (BP) gets the beetle_bombardier_nwn animation            #   65  *
+ *  Greater Basilisks get the basilisk_nwn animation                           #   81  *
+ *  Modrons get the modron_round animation                                     #  102  *
+ *  Displacer Beasts (AjocMod) get the displacer_beast animation               #  130  *
+ *  Fire Giant Females get the giant_fire_female animation                     #  162  *
+ *  Frost Giant Females get the giant_frost_female animation                   #  187  *
  * ----------------------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *
