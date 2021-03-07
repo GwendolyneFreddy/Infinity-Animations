@@ -1,6 +1,6 @@
 /* ======================================================================================================================================================================= *
  *  v 6.0.0                                                                                                                                                                *
- *                                      M O R E   P S T   A N I M A T I O N S   C O M P O N E N T   ( 7 1 0 - 7 2 0 - 7 3 0 - 7 4 0 )                                      *
+ *                                    M O R E    P S T    A N I M A T I O N S    C O M P O N E N T    ( 7 1 0 - 7 2 0 - 7 3 0 - 7 4 0 )                                    *
  *                                                                                                                                                                         *
  * ======================================================================================================================================================================= *
  *  This component assigns some creatures distinctive PST animations.                                                                                                      *
@@ -10,7 +10,7 @@
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_pst_anim_arrays.tph library) for easier maintenance.                              *
  *      - Tutu variables: added missing tutu variables for BG1 UB (bart8, bart9, edie, ennahe, erlinh, feldan, galkin, hersch, memnis, mercha, mtob4, mtob5, read4,        *
  *        serwen, travel, volose, wilton) and BG:EE/Tutu (gretek). Added new variables to avoid overwriting BG and BG2 files having the same names.                        *
- *      - Externalized random seed in a new library (gw_random.tpp).                                                                                                       *
+ *      - Externalized random seed, from now on automatically called by gw_set_random_value function (gw_functions.tpa library).                                           *
  *      - Integrated Miloch's updated t-pstanims.tpa patch, tuned by Lollorian. ( http://www.shsforums.net/topic/45383-infinity-animations-from-pst/page-3#entry534274 )   *
  *      - Added glowcheck.tpp patch ( http://www.shsforums.net/topic/45497-glowing-undead/page-2#entry496098 ).                                                            *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~).  *
@@ -19,32 +19,33 @@
 /* ------------------------------------------------------------------------------------------------- *
  *                            CREATURES                                                        line  *
  * ------------------------------------------------------------------------------------------------- *
- *  Female Human Thieves get the townie_curst_female animation                               #   66  *
- *  Male Human Thieves get the townie_curst_male animation                                   #  104  *
- *  Female Monks get the dustman_female animation                                            #  169  *
- *  Dustmen get the dustman_male animation                                                   #  211  *
- *  Male Monks get the dustman_male animation                                                #  245  *
- *  Some Female Ghouls get the ghoul_female animation                                        #  286  *
- *  Some Male Ghouls get the ghoul_male animation                                            #  330  *
- *  Male Human Smiths get the godsman animation                                              #  372  *
- *  Axe- and hammer-wielding bandits and mercenaries get the thug_large animation            #  412  *
- *  Sword- and dagger-wielding bandits and mercenaries get the thug animation                #  465  *
- *  Female Human Peasants get the townie_lower_class_female animation                        #  526  *
- *  Male Human Peasants get the townie_lower_class_male animation                            #  574  *
- *  Male Human Merchants get the merchant animation                                          #  639  *
- *  Female Human Merchants get the midwife animation                                         #  688  *
- *  Harlots get the harlot animation                                                         #  733  *
- *  Skeleton Mages get the skeleton_priest animation                                         #  778  *
- *  Skeletons get the skeleton_worker animation                                              #  821  *
- *  Female Tieflings get the tiefling_female animation                                       #  875  *
- *  Male Tieflings get the tiefling_male animation                                           #  938  *
- *  Male Human Mages get the townie_wizard animation                                         # 1016  *
- *  Female Human Nobles get the townie_upper_class_female or the aasimar_female animation    # 1083  *
- *  Male Human Nobles get the townie_upper_class_male animation                              # 1153  *
- *  Female Zombies get the zombie_female animation                                           # 1202  *
- *  Male Zombies get the zombie_male animation                                               # 1263  *
+ *  Female Human Thieves get the townie_curst_female animation                               #   64  *
+ *  Male Human Thieves get the townie_curst_male animation                                   #  102  *
+ *  Female Monks get the dustman_female animation                                            #  167  *
+ *  Dustmen get the dustman_male animation                                                   #  209  *
+ *  Male Monks get the dustman_male animation                                                #  243  *
+ *  Some Female Ghouls get the ghoul_female animation                                        #  284  *
+ *  Some Male Ghouls get the ghoul_male animation                                            #  328  *
+ *  Male Human Smiths get the godsman animation                                              #  370  *
+ *  Axe- and hammer-wielding bandits and mercenaries get the thug_large animation            #  410  *
+ *  Sword- and dagger-wielding bandits and mercenaries get the thug animation                #  463  *
+ *  Female Human Peasants get the townie_lower_class_female animation                        #  524  *
+ *  Male Human Peasants get the townie_lower_class_male animation                            #  572  *
+ *  Male Human Merchants get the merchant animation                                          #  637  *
+ *  Female Human Merchants get the midwife animation                                         #  686  *
+ *  Harlots get the harlot animation                                                         #  731  *
+ *  Skeleton Mages get the skeleton_priest animation                                         #  776  *
+ *  Skeletons get the skeleton_worker animation                                              #  819  *
+ *  Female Tieflings get the tiefling_female animation                                       #  873  *
+ *  Male Tieflings get the tiefling_male animation                                           #  936  *
+ *  Male Human Mages get the townie_wizard animation                                         # 1014  *
+ *  Female Human Nobles get the townie_upper_class_female or the aasimar_female animation    # 1081  *
+ *  Male Human Nobles get the townie_upper_class_male animation                              # 1151  *
+ *  Female Zombies get the zombie_female animation                                           # 1200  *
+ *  Male Zombies get the zombie_male animation                                               # 1261  *
  * ------------------------------------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *
@@ -56,10 +57,7 @@ INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_pst_anim_arrays.tph~
 /* =========================== *
  *  Initialize random numbers  *
  * =========================== */
-ACTION_INCLUDE ~%MOD_FOLDER%/lib/gw_random.tpp~
 RANDOM_SEED null
-
-SILENT
 
 
 /* ============================================================ *
@@ -67,7 +65,7 @@ SILENT
  * ============================================================ */
 ACTION_PHP_EACH GW_townie_curst_female AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -103,9 +101,9 @@ ACTION_CLEAR_ARRAY GW_townie_curst_female
 /* ======================================================== *
  *  Male Human Thieves get the townie_curst_male animation  *
  * ======================================================== */
-ACTION_PHP_EACH GW_townie_curst_male_male AS nb => correct BEGIN
+ACTION_PHP_EACH GW_townie_curst_male AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -114,7 +112,7 @@ ACTION_PHP_EACH GW_townie_curst_male_male AS nb => correct BEGIN
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 				// If not shadow_thief
-				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN
+				PATCH_IF LONG_AT 0x28 != 0x7f36 BEGIN
 					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE_PST~) // original 0x5dbb - EE depends on installation
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
@@ -170,7 +168,7 @@ ACTION_CLEAR_ARRAY GW_townie_curst_male
  * =============================================== */
 ACTION_PHP_EACH GW_dustman_female AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -246,7 +244,7 @@ ACTION_CLEAR_ARRAY GW_dustman_male
  * =========================================== */
 ACTION_PHP_EACH GW_dustman_male2 AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -373,7 +371,7 @@ ACTION_CLEAR_ARRAY GW_ghoul_male
  * ============================================= */
 ACTION_PHP_EACH GW_godsman AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -413,7 +411,7 @@ ACTION_CLEAR_ARRAY GW_godsman
  * =============================================================================== */
 ACTION_PHP_EACH GW_thug_large AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -466,7 +464,7 @@ ACTION_CLEAR_ARRAY GW_thug_large
  * =========================================================================== */
 ACTION_PHP_EACH GW_thug AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -474,8 +472,8 @@ ACTION_PHP_EACH GW_thug AS nb => correct BEGIN
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				If not shadow_thief
-				PATCH_IF SHORT_AT 0x28 != 0x7f36 BEGIN
+				// If not shadow_thief
+				PATCH_IF LONG_AT 0x28 != 0x7f36 BEGIN
 					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~THUG_PST~) // original 0x5d5d - EE depends on installation
 				END
 				PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
@@ -527,7 +525,7 @@ ACTION_CLEAR_ARRAY GW_thug
  * =================================================================== */
 ACTION_PHP_EACH GW_townie_lower_class_female AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 		COPY_EXISTING ~%nb%.cre~ ~override~
@@ -575,7 +573,7 @@ ACTION_CLEAR_ARRAY GW_townie_lower_class_female
  * =============================================================== */
 ACTION_PHP_EACH GW_townie_lower_class_male AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -640,7 +638,7 @@ ACTION_CLEAR_ARRAY GW_townie_lower_class_male
  * ================================================= */
 ACTION_PHP_EACH GW_merchant AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -689,7 +687,7 @@ ACTION_CLEAR_ARRAY GW_merchant
  * ================================================== */
 ACTION_PHP_EACH GW_midwife AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND ((rmq > 6) OR (~%SOURCE_RES%~ STRING_EQUAL_CASE ~0xstdg~ = 1)) BEGIN
 
@@ -734,7 +732,7 @@ ACTION_CLEAR_ARRAY GW_midwife
  * ================================== */
 ACTION_PHP_EACH GW_harlot AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -822,7 +820,7 @@ ACTION_CLEAR_ARRAY GW_skeleton_priest
  * ============================================ */
 ACTION_PHP_EACH GW_skeleton_worker AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -831,7 +829,7 @@ ACTION_PHP_EACH GW_skeleton_worker AS nb => correct BEGIN
 			PATCH_IF valid BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 				// If not golem
-				PATCH_IF SHORT_AT 0x28 != 0x7f07 BEGIN
+				PATCH_IF LONG_AT 0x28 != 0x7f07 BEGIN
 					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SKELETON_WORKER_PST~) // original 0x5d5b - EE depends on installation
 					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
 						SAY BATTLE_CRY1 ~~ [t-skw01a]
@@ -1017,7 +1015,7 @@ ACTION_CLEAR_ARRAY GW_tiefling_male
  * ================================================== */
 ACTION_PHP_EACH GW_townie_wizard AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1084,7 +1082,7 @@ ACTION_CLEAR_ARRAY GW_townie_wizard
  * ======================================================================================= */
 ACTION_PHP_EACH GW_female_human_nobles AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1154,7 +1152,7 @@ ACTION_CLEAR_ARRAY GW_female_human_nobles
  * ============================================================= */
 ACTION_PHP_EACH GW_townie_upper_class_male AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1203,7 +1201,7 @@ ACTION_CLEAR_ARRAY GW_townie_upper_class_male
  * ================================================ */
 ACTION_PHP_EACH GW_zombie_female AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 
@@ -1264,7 +1262,7 @@ ACTION_CLEAR_ARRAY GW_zombie_female
  * ============================================ */
 ACTION_PHP_EACH GW_zombie_male AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rmp%" RET rmq = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rmp%" RET rmq = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmq > 6) BEGIN
 

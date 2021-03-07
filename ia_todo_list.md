@@ -74,6 +74,18 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 ## 
 
+#### More PsT Animations component
+
+- [ ] Resolve duplicate entries that cause conflicts between BG and BG2 creatures (mtown5, shop04 and shop07).
+
+## 
+
+#### Moinesse's Avatars for IA component
+
+- [ ] Resolve illasera duplicate entries in GW_moinesse_mage_female_human and GW_moinesse_fighter_female_human arrays.
+
+## 
+
 #### BG1 Animations for NPCs component
 
 - [ ] Why not dynamically build all arrays?

@@ -1,6 +1,6 @@
 /* ======================================================================================================================================================================= *
  *  v 6.0.0                                                                                                                                                                *
- *                             M O I N E S S ' S   A V A T A R S   f o r   I A   C O M P O N E N T   ( 7 0 0 0 - 7 0 1 0 - 7 0 2 0 - 7 0 3 0 )                             *
+ *                           M O I N E S S ' S    A V A T A R S    f o r    I A    C O M P O N E N T    ( 7 0 0 0 - 7 0 1 0 - 7 0 2 0 - 7 0 3 0 )                          *
  *                                                                                                                                                                         *
  * ======================================================================================================================================================================= *
  *  This component assigns some creatures distinctive Moinesse's animations.                                                                                               *
@@ -9,8 +9,8 @@
  *  -----------                                                                                                                                                            *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_moinesse_anim_arrays.tph library) for easier maintenance.                              *
  *      - Added new tutu variables to avoid overwriting BG and BG2 files having the same names.                                                                            *
- *      - Externalized random seed in a new library (gw_random.tpp).                                                                                                       *
- *      - Integrated Miloch's IA Moinesse Ninja Fix, necessary if both Infinity Animations and Angelo are installed (#219).                                                *
+ *      - Externalized random seed, from now on automatically called by gw_set_random_value function (gw_functions.tpa library).                                           *
+ *      - Integrated Miloch's IA Moinesse Ninja Fix, necessary if both Infinity Animations and Angelo are installed (#221).                                                *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)   *
  *        and used new %ia_townie_curst_female_pst% and %ia_townie_curst_male_pst% variables to patch files according to the game.                                         *
  * ======================================================================================================================================================================= */
@@ -18,17 +18,18 @@
 /* ------------------------------------------------------------------------------------------------- *
  *                            CREATURES                                                        line  *
  * ------------------------------------------------------------------------------------------------- *
- *  Male Human Barbarians get the moinesse_barbarian_male_human animation                    #   52  *
- *  Female Human Druids get the moinesse_druid_female_human animation                        #   77  *
- *  Female Human Fighters get the moinesse_fighter_female_human animation                    #  104  *
- *  Female Elf Mages get the moinesse_mage_female_elf animation                              #  135  *
- *  Female Human Mages get the moinesse_mage_female_human animation                          #  162  *
- *  Some Female Human Thieves get the moinesse_thief_female_human animation                  #  189  *
- *  Male Human Ninjas get the moinesse_ninja_male_human animation                            #  219  *
- *  Male Human Assassins get the moinesse_ninja_male_human animation                         #  253  *
- *  Male Vampires get the moinesse_vampire animation                                         #  292  *
+ *  Male Human Barbarians get the moinesse_barbarian_male_human animation                    #   50  *
+ *  Female Human Druids get the moinesse_druid_female_human animation                        #   73  *
+ *  Female Human Fighters get the moinesse_fighter_female_human animation                    #   98  *
+ *  Female Elf Mages get the moinesse_mage_female_elf animation                              #  127  *
+ *  Female Human Mages get the moinesse_mage_female_human animation                          #  152  *
+ *  Some Female Human Thieves get the moinesse_thief_female_human animation                  #  177  *
+ *  Male Human Ninjas get the moinesse_ninja_male_human animation                            #  205  *
+ *  Male Human Assassins get the moinesse_ninja_male_human animation                         #  237  *
+ *  Male Vampires get the moinesse_vampire animation                                         #  274  *
  * ------------------------------------------------------------------------------------------------- */
 
+PRINT @28 // ~Patching creature files...~
 SILENT
 
 /* ============================== *
@@ -42,10 +43,7 @@ OUTER_SET ia_townie_curst_male_pst   = IDS_OF_SYMBOL (animate ~TOWNIE_CURST_MALE
 /* =========================== *
  *  Initialize random numbers  *
  * =========================== */
-ACTION_INCLUDE ~%MOD_FOLDER%/lib/gw_random.tpp~
 RANDOM_SEED null
-
-SILENT
 
 
 /* ======================================================================= *
@@ -53,11 +51,10 @@ SILENT
  * ======================================================================= */
 ACTION_PHP_EACH GW_moinesse_barbarian_male_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -65,7 +62,6 @@ ACTION_PHP_EACH GW_moinesse_barbarian_male_human AS nb => correct BEGIN
 				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MOINESSE_BARBARIAN_MALE_HUMAN~) // original 0x683d - EE depends on installation
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -78,11 +74,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_barbarian_male_human
  * =================================================================== */
 ACTION_PHP_EACH GW_moinesse_druid_female_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -92,7 +87,6 @@ ACTION_PHP_EACH GW_moinesse_druid_female_human AS nb => correct BEGIN
 				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -105,11 +99,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_druid_female_human
  * ======================================================================= */
 ACTION_PHP_EACH GW_moinesse_fighter_female_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -123,7 +116,6 @@ ACTION_PHP_EACH GW_moinesse_fighter_female_human AS nb => correct BEGIN
 				END
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -136,11 +128,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_fighter_female_human
  * ============================================================= */
 ACTION_PHP_EACH GW_moinesse_mage_female_elf AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -150,7 +141,6 @@ ACTION_PHP_EACH GW_moinesse_mage_female_elf AS nb => correct BEGIN
 				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -163,11 +153,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_mage_female_elf
  * ================================================================= */
 ACTION_PHP_EACH GW_moinesse_mage_female_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -177,7 +166,6 @@ ACTION_PHP_EACH GW_moinesse_mage_female_human AS nb => correct BEGIN
 				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -190,11 +178,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_mage_female_human
  * ======================================================================================================================================== */
 ACTION_PHP_EACH GW_moinesse_thief_female_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -207,7 +194,6 @@ ACTION_PHP_EACH GW_moinesse_thief_female_human AS nb => correct BEGIN
 				WRITE_BYTE 0x275 2  // Gender (female)
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -217,14 +203,13 @@ ACTION_CLEAR_ARRAY GW_moinesse_thief_female_human
 
 /* =============================================================== *
  *  Male Human Ninjas get the moinesse_ninja_male_human animation  *
- *  Miloch's IA Moinesse Ninja Fix : this fix is only necessary    *
- *  if both Infinity Animations and Angelo are installed.          *
+ *  Miloch's IA Moinesse Ninja Fix: this fix is only necessary if  *
+ *  both Infinity Animations and Angelo are installed.             *
  * =============================================================== */
 ACTION_PHP_EACH GW_angelo_ninja_male_human AS nb => correct BEGIN
 
 	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			  PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			  PATCH_IF valid BEGIN
@@ -241,7 +226,6 @@ ACTION_PHP_EACH GW_angelo_ninja_male_human AS nb => correct BEGIN
 				WRITE_BYTE 0x275 1  // Gender (male)
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -254,11 +238,10 @@ ACTION_CLEAR_ARRAY GW_angelo_ninja_male_human
  * ======================================================================================================================================================== */
 ACTION_PHP_EACH GW_moinesse_ninja_male_human AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -280,7 +263,6 @@ ACTION_PHP_EACH GW_moinesse_ninja_male_human AS nb => correct BEGIN
 				END
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
@@ -293,11 +275,10 @@ ACTION_CLEAR_ARRAY GW_moinesse_ninja_male_human
  * ================================================== */
 ACTION_PHP_EACH GW_moinesse_vampire AS nb => correct BEGIN
 
-	LAF ~gw_set_random_value~ INT_VAR gw_choice = EVAL "%rma%" RET rmb = gw_random_value END
+	LAF ~gw_set_random_value~ INT_VAR gw_percentage = EVAL "%rma%" RET rmb = gw_random_value END
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~%nb%.cre~) AND (rmb > 6) BEGIN
 
-		SILENT
 		COPY_EXISTING ~%nb%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
 			PATCH_IF valid BEGIN
@@ -574,7 +555,6 @@ ACTION_PHP_EACH GW_moinesse_vampire AS nb => correct BEGIN
 				END
 			END
 		BUT_ONLY
-		VERBOSE
 
 	END
 
