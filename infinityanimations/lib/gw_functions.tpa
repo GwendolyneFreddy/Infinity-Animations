@@ -113,6 +113,10 @@ BEGIN
 END
 
 
+/* =================================================================================== *
+ *  MACRO gw_set_low_anim_names : Defines former _LOW animations slots removed by IA.  *
+ * =================================================================================== */
+
 DEFINE_ACTION_MACRO ~gw_set_low_anim_names~
 BEGIN
 
@@ -152,12 +156,27 @@ BEGIN
 
 END
 
-/* ================================================================================================================================ *
+
+/* ================================================================================ *
  *  MACRO gw_set_bg1_characters_anim_id : Defines BG1 Characters animations slots.  *
- * ================================================================================================================================ */
+ * ================================================================================ */
 
 DEFINE_ACTION_MACRO ~gw_set_bg1_characters_anim_id~
 BEGIN
+
+/* TODO
+0x6212 MAGE_FEMALE_DWARF
+0x6214 MAGE_FEMALE_GNOME
+
+OUTER_SET ia-cleric_female_dwarf_bg1      = IDS_OF_SYMBOL (animate ~CLERIC_FEMALE_DWARF_BG1~)
+APPEND ~animate.ids~ ~0x6415 CLERIC_FEMALE_DWARF_BG1~       UNLESS ~^0x6415~            // former L_CLERIC_FEMALE_DWARF
+OUTER_SET ia-fighter_female_dwarf_bg1     = IDS_OF_SYMBOL (animate ~FIGHTER_FEMALE_DWARF_BG1~)
+APPEND ~animate.ids~ ~0x6425 FIGHTER_FEMALE_DWARF_BG1~      UNLESS ~^0x6425~            // former L_FIGHTER_FEMALE_DWARF
+OUTER_SET ia-mage_female_dwarf_bg1        = IDS_OF_SYMBOL (animate ~MAGE_FEMALE_DWARF_BG1~)
+APPEND ~animate.ids~ ~0x6435 MAGE_FEMALE_DWARF_BG1~         UNLESS ~^0x6435~            // former L_MAGE_FEMALE_DWARF
+OUTER_SET ia-thief_female_dwarf_bg1       = IDS_OF_SYMBOL (animate ~THIEF_FEMALE_DWARF_BG1~)
+APPEND ~animate.ids~ ~0x6445 THIEF_FEMALE_DWARF_BG1~        UNLESS ~^0x6445~            // former L_THIEF_FEMALE_DWARF
+*/
 
 	OUTER_SET ia-cleric_male_human_bg1        = IDS_OF_SYMBOL (animate ~CLERIC_MALE_HUMAN_BG1~)
 	OUTER_SET ia-cleric_male_elf_bg1          = IDS_OF_SYMBOL (animate ~CLERIC_MALE_ELF_BG1~)

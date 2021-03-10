@@ -719,6 +719,7 @@ This component assigns some creatures distinctive Moinesse's animations:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75% of relevant creatures<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** Most relevant creatures<br><br>
 
+This component assigns some NPCs distinctive BG1 Character Animations:
 - Uses the original Baldur's Gate character animations as specified
 - The last option is "most" instead of "all" because certain creatures are excluded
 - These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since BG1 did not have these animations
@@ -876,7 +877,7 @@ This component corrects changed creature animations in area files for easier ref
   - Moved components tpa files into new :file_folder: "*components*" folder and kept functions and macros in "*lib*" :file_folder: folder.
   - Commented code as much as possible.
   - Changed lines of code for further EE compatibility whenever possible, in particular the animations names have been harmonized.
-  - Re-format .log files entries to be more friendly readable.
+  - Re-formated .log files entries to be more friendly readable.
   - ...
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
@@ -975,14 +976,16 @@ This component corrects changed creature animations in area files for easier ref
     - Integrated <a href="http://www.shsforums.net/files/file/967-ia-patch-b5-moinesse-ninja-fix/">Miloch's IA Moinesse Ninja Fix</a>, necessary if both Infinity Animations and Angelo are installed.
     - Externalized random seed, from now on automatically called by `gw_set_random_value` function ("*gw_functions.tpa*" library).
 - [8000-8010-8020-8030] BG1 Animations for NPCs (t-bg1anims.tpa)
-    - Fixed crash due to 1pp Wings not working with BG1 L_ Animations.
-    - EE games compatibility: used new "*%ia-new_aniamationtype_bg1%*" variables to patch files according to the game.
+    - Fixed a crash due to 1pp Wings not working with BG1 Characters Animations.
+    - EE games compatibility: used new "*%ia-animationtype_bg1%*" variables to patch files according to the game.
     - Externalized random seed, from now on automatically called by `gw_set_random_value` function ("*gw_functions.tpa*" library).
-- [9000] Fix Area Creature References ()
-    - In some areas, the former patch prevented cutscenes to be correctly displayed, due to unproper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
-
+    - Re-formated *t-bg1anims.txt* file entries to be more friendly readable.
+- [9000] Fix Area Creature References (t-arecre.tpa)
+    - Fixed area creature references causing script issues: in some areas, the former patch prevented cutscenes to be correctly displayed, due to un-proper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
+    - Used new "*%low_0xnnnn%*" variables to define former _LOW animations ID removed by Infinity Animations.
+    - Re-formated *t-arecr.log* file entries to be more friendly readable.
 - [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
-    - Both components should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing!).
+    - Both components should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing it!).
 
 ## 
 

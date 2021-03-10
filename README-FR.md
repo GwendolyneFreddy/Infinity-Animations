@@ -698,6 +698,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7020]** 75 % des créatures non-recrutables concernées.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[7030]** Toutes les créatures non-recrutables concernées.<br><br>
 
+Ce composant attribue à certaines créatures des animations de Moinesse différenciées :
 - Attribue aux barbares humains l'animation de barbare homme.
 - Attribue aux druidesses humaine l'animation de druidesse.
 - Attribue aux guerrières humaines l'animation de guerrière humaine.
@@ -716,10 +717,11 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8020]** 75 % des créatures concernées.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[8030]** La plupart des créatures concernées.<br><br>
 
+Ce composant attribue à certains PNJs des animations de personnages de BG1 :
 - Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
-- La dernière option est intitulée « la plupart » plutôt que « toutes » car certaines créatures sont exclues des modifications.
+- La dernière option est intitulée « la plupart » plutôt que « toutes », car certaines créatures sont exclues des modifications.
 - Cela inclue les créatures utilisant des cimeterres, des katanas ou autre chose d'autre qu'un bouclier dans leur deuxième main (ou dotées de ces compétences), puisque BG1 ne dispose pas de ces animations.
-- :warning: **À utiliser avec précaution** avec des PNJs recrutables : si ce composant ne traitera pas les personnages compétents en style de combat a deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.
+- :warning: **À utiliser avec précaution** avec des PNJs recrutables : si ce composant ne traitera pas les personnages compétents en style de combat à deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -727,7 +729,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
 <a name="9000" id="9000"></a>&#10173; **|9000] Correction des références des créatures dans les cartes**
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Installé par défaut.</em><br><br>
 
-- Corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.
+Ce composant corrige les références aux animations de créatures modifiées dans les fichiers de cartes (.are) pour mieux les détecter.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -873,7 +875,7 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
   - Déplacement des fichiers tpa d'installation des composants dans le nouveau répertoire :file_folder: « *components* » et conservation des librairies de fonctions et de macros dans le répertoire :file_folder: « *lib* ».
   - Ajout de commentaires dans les fichiers de code chaque fois que possible.
   - Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
-  - Re-formatage des données des fichiers .log  pour les rendre enfin lisibles.
+  - Re-formatage des données des fichiers .log pour les rendre enfin lisibles.
   - ...
   - Simplification du code :
     - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
@@ -973,11 +975,13 @@ Ce composant attribue à certaines créatures des animations de PsT différenci�
     - Externalisation de la procédure de modification aléatoire des créatures, désormais appelée automatiquement par la fonction `gw_set_random_value` (librairie " *gw_random.tpp* ").
 - [8000-8010-8020-8030] Animations de personnages de BG1 pour les PNJs (t-bg1anims.tpa)
     - Correction d'un bug plantant le jeu à cause des ailes de 1pp ne fonctionnant pas avec les animations de personnages de BG1.
-    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-new_aniamationtype_bg1%* " pour patcher les fichiers selon le jeu.
-    - Externalisation de la procédure de modification aléatoire des créatures dans la librairie " *gw_random.tpp* ".
-- [9000] Correction des références des créatures dans les cartes ()
-    - Dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
-
+    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-animationtype_bg1%* " pour patcher les fichiers selon le jeu.
+    - Externalisation de la procédure de modification aléatoire des créatures, désormais appelée automatiquement par la fonction `gw_set_random_value` (librairie " *gw_random.tpp* ").
+    - Re-formatage des données du fichier *t-bg1anims.txt* pour les rendre enfin lisibles.
+- [9000] Correction des références des créatures dans les cartes (t-arecre.tpa)
+    - Correction des références des créatures dans les cartes qi provoquait des problèmes d'exécution de scripts : dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
+    - Utilisation des nouvelles variables " *%low_0xnnnn%* " pour définir les noms des anciennes animations _LOW supprimées par Infinity Animations.
+    - Re-formatage des données du fichier *t-arecr.log.log* pour les rendre enfin lisibles.
 - [9900-9910] Correction des animations dans les parties sauvegardées et [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
     - Ces deux composants ne devraient plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
 
