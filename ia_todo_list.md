@@ -15,6 +15,13 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 ## 
 
+#### All components: new improvements
+
+- [ ] Dynamically build exclusion arrays specific to the player's modded game: t-exc-cre (diffucult to build because components specific, but why not?), t-exc-scim (scimitars exclusion: easy), t-exc-shld (shields exclusion: easy) and (wings exclusion: easy).
+
+
+## 
+
 #### EE version
 
 - [ ] <ins>All components<_ins>: list all EE games specific creatures that need to be patched
@@ -89,6 +96,8 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 #### BG1 Animations for NPCs component
 
 - [ ] Why not dynamically build an array of NPCs to be patched?
+- [ ] What about halforc animations?
+- [ ] Write a more inclusive 1PP compatibility (maybe include some 1pp BG1 avatars and animations content)?
 
 ## 
 
