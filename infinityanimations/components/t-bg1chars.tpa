@@ -1,59 +1,117 @@
-/* =============================================================== *
- *  INFINITY ANIMATIONS : BG1 Animations for Exported PCs routine  *
- * =============================================================== */
+/* =========================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                    *
+ *          B G 1    A N I M A T I O N S    f o r    E X P O R T E D    P C s    C O M P O N E N T    ( 9 5 1 0 - 9 5 2 0 - 9 5 3 0 )          *
+ *                                                                                                                                             *
+ * =========================================================================================================================================== *
+ *  This component assigns PCs distinctive BG1 Character Animations.                                                                           *
+ * =========================================================================================================================================== *
+ *  change-log:                                                                                                                                *
+ *  -----------                                                                                                                                *
+ *      - EE games compatibility: use new %ia-animationtype_bg1% variables to patch files according to the game.                               *
+ *      - Replaced READ_SHORT and WRITE_SHORT 0x28 with READ_LONG and WRITE_LONG 0x28.                                                         *
+ *      - Re-formated t-bg1chars.txt file entries to be more friendly readable.                                                                *
+ * =========================================================================================================================================== */
+
+PRINT @9502 // ~Patching character files (this may take a while)...~
+SILENT
 
 <<<<<<<< .../infinityanimations-inlined/t-bg1chars.txt
-Char	Name	Diff	OldAnim	OldAnimText	NewAnim	NewAnimText
+=====================================================================================================================================================
+Character Name                             Diff  Old Animation                                            New Animation
+=====================================================================================================================================================
 >>>>>>>>
+COPY ~.../infinityanimations-inlined/t-bg1chars.txt~ ~infinityanimations/log~
 
-COPY ~.../infinityanimations-inlined/t-bg1chars.txt~ ~infinityanimations/batch~
 
-OUTER_SPRINT t01 @93	// (Invalid Offhand Item)
-OUTER_SPRINT t02 @94	// (Katana Proficiency)
-OUTER_SPRINT t03 @95	// (Scimitar Proficiency)
-OUTER_SPRINT t04 @96	// (Two Weapon Proficiency)
-OUTER_SPRINT t05 @97	// (Scimitar or Katana)
-OUTER_SPRINT t06 @98	// Patch
-OUTER_SPRINT t07 @99	// [Y/N]?
-OUTER_SPRINT t08 @100	// has an item or proficiency that may crash the game with the new animation
-OUTER_SPRINT t09 @101	// Patch anyway [Y/N]?
+/* ================= *
+ *  Defines Prompts  *
+ * ================= */
+OUTER_SPRINT t01 @1211  // ~(Invalid Offhand Item)~
+OUTER_SPRINT t02 @1212  // ~(Katana Proficiency)~
+OUTER_SPRINT t03 @1213  // ~(Scimitar Proficiency)~
+OUTER_SPRINT t04 @1214  // ~(Two Weapon Proficiency)~
+OUTER_SPRINT t05 @1215  // ~(Scimitar or Katana)~
+OUTER_SPRINT t06 @1216  // ~Patch~
+OUTER_SPRINT t07 @1217  // ~[Y/N]?~
+OUTER_SPRINT t08 @1218  // ~has an item or proficiency that may crash the game with the new animation~
+OUTER_SPRINT t09 @1219  // ~Patch anyway [Y/N]?~
 
-OUTER_SPRINT t-scim ~ _sw1h15 _sw1h16 _sw1h20 _sw1h22 _sw1h23 agbladen agsw1h04 aqaticsc bhsw1h01 bitswe blacknig c2sw1h02 c2sw1h03 cb35ass1 cb35ass2 cbhblfet cbhbsldv cbhbslzp cbmtscim cbmtswkt cbsbmlt5 cdkat2 chlosw1 chlosw2 chlosw3 cm1h08 curkat d0t#sw12 d1belm darklite deitm044 deitm045 deitm069 deitm070 deitm071 deitm072 deitm095 deitm109 deitm118 drizztde drizztfr drowbmsc dskatan1 dskatan2 dsswd01 dsswd03 dsswd04 dsswd05 dsswd06 dstears dvenkata dvenscim dvgasfrm dw#dwkat dwsw1h01 elemkata elemkate elemkatf elemkatw enteri1 fhsw1 fhsw3 firkat frozkat fwsw1h04 fwsw1h10 fwsw1h11 fwsw1h13 grean icekat ikkat01a ikkat02a ikkat03a ikkat04a ikkat05a ikkat06a ikkat08a ikkat09a ikkat10a ikkat11a ikkat12a ikkat18a ikkat19a ikkat20a ikkat21a ikkat22a ikkat24a ikkat25a ikkat26a ikkat27a ikkat43a ikkat44a ikkat45a ikkat51a ikkat55a ikkat70a ikkat71a ikkat75a jarlaxc1 jarlaxsc katanacr katanat katofpow kibaday kibaxx m#mgift m#mgift2 m#mgiftl misc9q moonlite newkat01 newkat02 newsci01 newsci02 newsci03 npsw02 npsw04 o!bom038 o!bom042 rr#dmari rtt015 rtt035 scim01 scimamne scimflam sd_2sw1 sd_2sw2 sdnpcsw3 sdnpcsw4 serend sgsw1h5 sgsw1h6 sgsw1h7 shdwsam1 shdwsam2 shdwsam3 shdwsam4 solak1 succub sw1h15 sw1h16 sw1h20 sw1h22 sw1h23 sw1h30 sw1h43 sw1h44 sw1h45 sw1h50 sw1h51 sw1h52 sw1h55 sw1h56 sw1h66 sw1h67 sw1h68 sw1h68c sw1h69 sw1h69c sw1h70 sw1h71 sw1h75 sw1h76 sw1h78 sw1hwk swkat swzzz1 swzzz2 tcilhsw tcsw1h02 tcsw1h03 tcsw1h11 tcsw1h15 thunder tzsw1h03 tzsw1h04 tzsw1h06 tzsw1h07 u#s1h05a u#sw1h05 u#sw1h06 u#sw1h07 valiant wa2dak wa2dak2 wa2dak3 wa2dak4 wa2dak5 wuhaltai wujen yoshkata zyscimit zysw1hn2 zytdagn1 ~
 
-OUTER_SPRINT t-shld ~ _ishld02 _ishld03 _shld01 _shld02 _shld03 _shld04 _shld05 _shld06 _shld07 _shld08 _shld09 _shld10 _shld11 _shld12 _shld13 _shld14 _shld15 _shld16 _shld18 _shld19 _shld20 _shld99 a!brsb accshld agshld01 agshld02 bruensh buck02 bw05ish1 c2anom01 c2shld01 c2shld02 cb351g03 cbcl005 cbcl037 cbcl058 cblyshld cbmhshld cbmilt03 cbmilt13 cbpdofcm cbrjr015 cbrolfsh cbsbmltw cbsbmltx cbsbmlty cbshldwk cbshsoub cbtempus cbtssd01 cbwtni5a chalshld cmgforg8 cmshld01 cmshld03 cmshld04 cmshld05 cmshq01 cmshq02 coms01 coms02 d1shld01 d1shld02 darshld deitm119 deitm120 deitm121 deitm122 dscushld dshld dshld01 dsjeshld dsshld02 dsshld51 dsshld52 dsshld53 dsshld54 dwshld01 elemshld fireshld frozshld fwshld01 gcmsh01 gcmsh02 gmd03 guardshz holyshld i1sh001 iibwlsh1 ishld02 ishld03 m#buck2 mashld01 mgishld1 mgishld2 mystery newshp1 newshpo newsl01 newsl02 newsm01 newss01 newss02 newss03 npshld nsshld01 nsshld02 ntshld01 ntshld02 ntshld03 o!bom027 orrshld psmade23 psmade24 psmade25 psmade26 psshld01 r!kitshd r#asshld r#runed revenan rr#buc01 rr#buc02 rr#buc03 rr#buc04 rr#guara rr#guarb rr#guarc rr#lyre rr#rward rr#shl01 rr#shl02 rtt020 s#shld01 sgshld1 shghost shld01 shld02 shld03 shld04 shld05 shld06 shld07 shld08 shld09 shld10 shld11 shld12 shld13 shld14 shld15 shld16 shld17 shld18 shld19 shld20 shld21 shld22 shld23 shld24 shld25 shld26 shld27 shld28 shld29 shld30 shld31 shld32 shld99 shldgraz shldoth shldred skelshld starshld tcaltsh1 tcaltsh2 tcshld01 tcshld02 tcshld03 tcshldxx tcvilds1 tcvilds2 ttshld01 tzshld01 u#shld01 ushld3b wa2shiel waukeen x#ajshld x#fai3 x#fash01 zyshldn1 zyshldn2 ~
+/* ==================== *
+ *  Defines Exclusions  *
+ * ==================== */
+
+// Scimitars exclusion
+// -------------------
+OUTER_SPRINT t-exc-scim ~ _sw1h15 _sw1h16 _sw1h20 _sw1h22 _sw1h23 agbladen agsw1h04 aqaticsc bhsw1h01 bitswe blacknig c2sw1h02 c2sw1h03 cb35ass1 cb35ass2 cbhblfet cbhbsldv cbhbslzp cbmtscim cbmtswkt cbsbmlt5 cdkat2 chlosw1 chlosw2 chlosw3 cm1h08 curkat d0t#sw12 d1belm darklite deitm044 deitm045 deitm069 deitm070 deitm071 deitm072 deitm095 deitm109 deitm118 drizztde drizztfr drowbmsc dskatan1 dskatan2 dsswd01 dsswd03 dsswd04 dsswd05 dsswd06 dstears dvenkata dvenscim dvgasfrm dw#dwkat dwsw1h01 elemkata elemkate elemkatf elemkatw enteri1 fhsw1 fhsw3 firkat frozkat fwsw1h04 fwsw1h10 fwsw1h11 fwsw1h13 grean icekat ikkat01a ikkat02a ikkat03a ikkat04a ikkat05a ikkat06a ikkat08a ikkat09a ikkat10a ikkat11a ikkat12a ikkat18a ikkat19a ikkat20a ikkat21a ikkat22a ikkat24a ikkat25a ikkat26a ikkat27a ikkat43a ikkat44a ikkat45a ikkat51a ikkat55a ikkat70a ikkat71a ikkat75a jarlaxc1 jarlaxsc katanacr katanat katofpow kibaday kibaxx m#mgift m#mgift2 m#mgiftl misc9q moonlite newkat01 newkat02 newsci01 newsci02 newsci03 npsw02 npsw04 o!bom038 o!bom042 rr#dmari rtt015 rtt035 scim01 scimamne scimflam sd_2sw1 sd_2sw2 sdnpcsw3 sdnpcsw4 serend sgsw1h5 sgsw1h6 sgsw1h7 shdwsam1 shdwsam2 shdwsam3 shdwsam4 solak1 succub sw1h15 sw1h16 sw1h20 sw1h22 sw1h23 sw1h30 sw1h43 sw1h44 sw1h45 sw1h50 sw1h51 sw1h52 sw1h55 sw1h56 sw1h66 sw1h67 sw1h68 sw1h68c sw1h69 sw1h69c sw1h70 sw1h71 sw1h75 sw1h76 sw1h78 sw1hwk swkat swzzz1 swzzz2 tcilhsw tcsw1h02 tcsw1h03 tcsw1h11 tcsw1h15 thunder tzsw1h03 tzsw1h04 tzsw1h06 tzsw1h07 u#s1h05a u#sw1h05 u#sw1h06 u#sw1h07 valiant wa2dak wa2dak2 wa2dak3 wa2dak4 wa2dak5 wuhaltai wujen yoshkata zyscimit zysw1hn2 zytdagn1 ~
+
+// Shields exclusion
+// -----------------
+OUTER_SPRINT t-exc-shld ~ _ishld02 _ishld03 _shld01 _shld02 _shld03 _shld04 _shld05 _shld06 _shld07 _shld08 _shld09 _shld10 _shld11 _shld12 _shld13 _shld14 _shld15 _shld16 _shld18 _shld19 _shld20 _shld99 a!brsb accshld agshld01 agshld02 bruensh buck02 bw05ish1 c2anom01 c2shld01 c2shld02 cb351g03 cbcl005 cbcl037 cbcl058 cblyshld cbmhshld cbmilt03 cbmilt13 cbpdofcm cbrjr015 cbrolfsh cbsbmltw cbsbmltx cbsbmlty cbshldwk cbshsoub cbtempus cbtssd01 cbwtni5a chalshld cmgforg8 cmshld01 cmshld03 cmshld04 cmshld05 cmshq01 cmshq02 coms01 coms02 d1shld01 d1shld02 darshld deitm119 deitm120 deitm121 deitm122 dscushld dshld dshld01 dsjeshld dsshld02 dsshld51 dsshld52 dsshld53 dsshld54 dwshld01 elemshld fireshld frozshld fwshld01 gcmsh01 gcmsh02 gmd03 guardshz holyshld i1sh001 iibwlsh1 ishld02 ishld03 m#buck2 mashld01 mgishld1 mgishld2 mystery newshp1 newshpo newsl01 newsl02 newsm01 newss01 newss02 newss03 npshld nsshld01 nsshld02 ntshld01 ntshld02 ntshld03 o!bom027 orrshld psmade23 psmade24 psmade25 psmade26 psshld01 r!kitshd r#asshld r#runed revenan rr#buc01 rr#buc02 rr#buc03 rr#buc04 rr#guara rr#guarb rr#guarc rr#lyre rr#rward rr#shl01 rr#shl02 rtt020 s#shld01 sgshld1 shghost shld01 shld02 shld03 shld04 shld05 shld06 shld07 shld08 shld09 shld10 shld11 shld12 shld13 shld14 shld15 shld16 shld17 shld18 shld19 shld20 shld21 shld22 shld23 shld24 shld25 shld26 shld27 shld28 shld29 shld30 shld31 shld32 shld99 shldgraz shldoth shldred skelshld starshld tcaltsh1 tcaltsh2 tcshld01 tcshld02 tcshld03 tcshldxx tcvilds1 tcvilds2 ttshld01 tzshld01 u#shld01 ushld3b wa2shiel waukeen x#ajshld x#fai3 x#fash01 zyshldn1 zyshldn2 ~
+
+
+/* ========================================= *
+ *  Defines BG1 Characters animations slots  *
+ * ========================================= */
+LAM ~gw_set_bg1_characters_anim_id~
+
+
+/* ========= *
+ *  Patches  *
+ * ========= */
+OUTER_SPRINT list_bg1_chars ""
 
 ACTION_BASH_FOR ~characters~ ~^.+\.chr$~ BEGIN
+
+	SILENT
+
 	COPY ~%BASH_FOR_FILESPEC%~ ~%BASH_FOR_FILESPEC%~
+
 		t-diff = 0
 		SPRINT t-prob ~~
 		READ_LONG 0x2c t-crelen
+
 		PATCH_IF t-crelen > 0x2d3 BEGIN
-			READ_ASCII 0x8 t-crnm (32) NULL
-			READ_LONG 0x28 t-cff
-			READ_SHORT (t-cff + 0x28) t-crean
-			PATCH_IF (((t-crean > 0x5fff) AND (t-crean < 0x6005)) OR ((t-crean > 0x600f) AND (t-crean < 0x6016)) OR ((t-crean > 0x60ff) AND (t-crean < 0x6106)) OR ((t-crean > 0x610f) AND (t-crean < 0x6116)) OR ((t-crean > 0x61ff) AND (t-crean < 0x6206)) OR ((t-crean > 0x620f) AND (t-crean < 0x6216)) OR ((t-crean > 0x62ff) AND (t-crean < 0x6306)) OR ((t-crean > 0x630f) AND (t-crean < 0x6316))) BEGIN
-				READ_LONG (t-cff + 0x2b8) t-slots
-				t-slots += t-cff
-				READ_LONG (t-cff + 0x2bc) t-itoff
-				t-itoff += t-cff
-				READ_SSHORT (t-slots + 4) t-shsl
-				PATCH_IF (t-shsl > (0 - 1)) BEGIN
-					READ_ASCII (t-shsl * 0x14 + t-itoff) t-shie ELSE ~None~
-					TO_LOWER t-shie
-					PATCH_IF (~%t-shld%~ STRING_CONTAINS_REGEXP ~ %t-shie% ~ = 1) BEGIN
+			READ_ASCII 0x8 t-char-name (32) NULL
+			READ_LONG  0x28 t-cff
+			READ_LONG (t-cff + 0x28) t-char-anim
+
+			PATCH_IF (((t-char-anim > 0x5fff) AND (t-char-anim < 0x6005)) OR 
+                      ((t-char-anim > 0x600f) AND (t-char-anim < 0x6016)) OR 
+                      ((t-char-anim > 0x60ff) AND (t-char-anim < 0x6106)) OR 
+                      ((t-char-anim > 0x610f) AND (t-char-anim < 0x6116)) OR 
+                      ((t-char-anim > 0x61ff) AND (t-char-anim < 0x6206)) OR 
+                      ((t-char-anim > 0x620f) AND (t-char-anim < 0x6216)) OR 
+                      ((t-char-anim > 0x62ff) AND (t-char-anim < 0x6306)) OR 
+                      ((t-char-anim > 0x630f) AND (t-char-anim < 0x6316))) BEGIN
+				READ_LONG (t-cff + 0x2b8) t-item_slots_off
+				t-item_slots_off += t-cff
+				READ_LONG (t-cff + 0x2bc) t-items_off
+				t-items_off += t-cff
+				READ_SSHORT (t-item_slots_off + 4) t-shield_sl
+
+				// Shield slot
+				// -----------
+				PATCH_IF (t-shield_sl > (0 - 1)) BEGIN
+					READ_ASCII (t-shield_sl * 0x14 + t-items_off) t-shield_item ELSE ~None~
+					TO_LOWER t-shield_item
+					PATCH_IF (~%t-exc-shld%~ STRING_CONTAINS_REGEXP ~ %t-shield_item% ~ = 1) BEGIN
 						SPRINT t-prob ~%t-prob% %t01%~ // Invalid Offhand Item
 						t-diff += 1
 					END
 				END
+
+				// Proficiencies
+				// -------------
 				PATCH_IF t-diff = 0 BEGIN
-					READ_LONG (t-cff + 0x2c4) t-efoff
-					t-efoff += t-cff
-					READ_LONG (t-cff + 0x2c8) t-efcnt
-					FOR (t = 0 ; t < t-efcnt ; t += 1) BEGIN
-						READ_LONG (t * 0x108 + t-efoff + 8) t-opc ELSE 0
+					READ_LONG (t-cff + 0x2c4) t-effects_off
+					t-effects_off += t-cff
+					READ_LONG (t-cff + 0x2c8) t-effects_cnt
+					FOR (t = 0 ; t < t-effects_cnt ; t += 1) BEGIN
+						READ_LONG (t * 0x108 + t-effects_off + 8) t-opc ELSE 0
 						PATCH_IF t-opc = 233 BEGIN
-							READ_LONG (t * 0x108 + t-efoff + 0x14) t-star ELSE 0
-							READ_LONG (t * 0x108 + t-efoff + 0x18) t-prof ELSE 0
+							READ_LONG (t * 0x108 + t-effects_off + 0x14) t-star ELSE 0
+							READ_LONG (t * 0x108 + t-effects_off + 0x18) t-prof ELSE 0
 							PATCH_IF (t-star > 0) AND (t-prof = 94) BEGIN
 								SPRINT t-prob ~%t-prob% %t02%~ // Katana Proficiency
 								t-diff += 1
@@ -69,115 +127,166 @@ ACTION_BASH_FOR ~characters~ ~^.+\.chr$~ BEGIN
 						END
 					END
 				END
+
+				// Scimitar
+				// --------
 				PATCH_IF t-diff = 0 BEGIN
-					READ_LONG (t-cff + 0x2c0) t-itcnt
-					FOR (t = 0 ; t < t-itcnt ; t += 1) BEGIN
-						READ_ASCII (t * 0x14 + t-itoff) t-item ELSE ~None~
-						PATCH_IF (~%t-scim%~ STRING_CONTAINS_REGEXP ~ %t-item% ~ = 0) BEGIN
+					READ_LONG (t-cff + 0x2c0) t-items_cnt
+					FOR (t = 0 ; t < t-items_cnt ; t += 1) BEGIN
+						READ_ASCII (t * 0x14 + t-items_off) t-item ELSE ~None~
+						PATCH_IF (~%t-exc-scim%~ STRING_CONTAINS_REGEXP ~ %t-item% ~ = 0) BEGIN
 							SPRINT t-prob ~%t-prob% %t05%~ // Scimitar or Katana
 							t-diff += 1
 						END
 					END
 				END
+
 				SPRINT t-rdl ~y~
-				PATCH_IF t-mod = 0 BEGIN
-					PATCH_PRINT ~%t06% %BASH_FOR_FILE% (%t-crnm%) %t07%~ // Patch [file] [Y/N]?
+				// Prompt for each PC
+				// ------------------
+				PATCH_IF t-prompt = 0 BEGIN
+					PATCH_PRINT ~%t06% %BASH_FOR_FILE% (%t-char-name%) %t07%~ // Patch [file] [Y/N]?
 					PATCH_READLN t-rdl
+					PATCH_SILENT
 				END
-				PATCH_IF (t-diff > 0) AND (t-mod = 1) BEGIN
-					PATCH_PRINT ~%BASH_FOR_FILE% (%t-crnm%) %t08%%t-prob%.
+				// Prompt for problematic PCs
+				// --------------------------
+				PATCH_IF (t-diff > 0) AND (t-prompt = 1) BEGIN
+					PATCH_PRINT ~%BASH_FOR_FILE% (%t-char-name%) %t08%%t-prob%.
 %t09%~ // [File] has an item or proficiency that may crash the game with the new animation. Patch anyway [Y/N]?
 					PATCH_READLN t-rdl
+					PATCH_SILENT
 				END
+
+				// Assigns BG1 Characters animations
+				// ---------------------------------
 				PATCH_IF (~%t-rdl%~ STRING_EQUAL_CASE ~y~ = 1) BEGIN
-					PATCH_IF (t-crean = 0x6000) OR (t-crean = 0x6005) BEGIN // CLERIC_MALE_HUMAN
-						t-new = 0x6410
+
+					// If CLERIC_MALE_HUMAN or CLERIC_MALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6000) OR (t-char-anim = 0x6005) BEGIN
+						t-new-anim = ia-cleric_male_human_bg1 // former 0x6410
 					END
-					PATCH_IF t-crean = 0x6001 BEGIN // CLERIC_MALE_ELF
-						t-new = 0x6412
+					// If CLERIC_MALE_ELF
+					PATCH_IF t-char-anim = 0x6001 BEGIN
+						t-new-anim = ia-cleric_male_elf_bg1 // former 0x6412
 					END
-					PATCH_IF (t-crean = 0x6002) OR (t-crean = 0x6004) BEGIN // CLERIC_MALE_DWARF
-						t-new = 0x6414
+					// If CLERIC_MALE_DWARF or CLERIC_MALE_GNOME
+					PATCH_IF (t-char-anim = 0x6002) OR (t-char-anim = 0x6004) BEGIN
+						t-new-anim = ia-cleric_male_dwarf_bg1 // former 0x6414
 					END
-					PATCH_IF t-crean = 0x6003 BEGIN // CLERIC_MALE_HALFLING
-						t-new = 0x6416
+					// If CLERIC_MALE_HALFLING
+					PATCH_IF t-char-anim = 0x6003 BEGIN
+						t-new-anim = ia-cleric_male_halfling_bg1 // former 0x6416
 					END
-					PATCH_IF (t-crean = 0x6010) OR (t-crean = 0x6015) BEGIN // CLERIC_FEMALE_HUMAN
-						t-new = 0x6411
+					// If CLERIC_FEMALE_HUMAN or CLERIC_FEMALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6010) OR (t-char-anim = 0x6015) BEGIN
+						t-new-anim = ia-cleric_female_human_bg1 // former 0x6411
 					END
-					PATCH_IF t-crean = 0x6011 BEGIN // CLERIC_FEMALE_ELF
-						t-new = 0x6413
+					// If CLERIC_FEMALE_ELF
+					PATCH_IF t-char-anim = 0x6011 BEGIN
+						t-new-anim = ia-cleric_female_elf_bg1 // former 0x6413
 					END
-					PATCH_IF (t-crean = 0x6012) OR (t-crean = 0x6013) OR (t-crean = 0x6014) BEGIN // CLERIC_FEMALE_HALFLING
-						t-new = 0x6417
+					// If CLERIC_FEMALE_DWARF or CLERIC_FEMALE_HALFLING or CLERIC_FEMALE_GNOME
+					PATCH_IF (t-char-anim = 0x6012) OR (t-char-anim = 0x6013) OR (t-char-anim = 0x6014) BEGIN
+						t-new-anim = ia-cleric_female_halfling_bg1 // former 0x6417
 					END
-					PATCH_IF (t-crean = 0x6100) OR (t-crean = 0x6105) BEGIN // FIGHTER_MALE_HUMAN
-						t-new = 0x6420
+					// If FIGHTER_MALE_HUMAN or FIGHTER_MALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6100) OR (t-char-anim = 0x6105) BEGIN
+						t-new-anim = ia-fighter_male_human_bg1 // former 0x6420
 					END
-					PATCH_IF t-crean = 0x6101 BEGIN // FIGHTER_MALE_ELF
-						t-new = 0x6422
+					// If FIGHTER_MALE_ELF
+					PATCH_IF t-char-anim = 0x6101 BEGIN
+						t-new-anim = ia-fighter_male_elf_bg1 // former 0x6422
 					END
-					PATCH_IF (t-crean = 0x6102) OR (t-crean = 0x6104) BEGIN // FIGHTER_MALE_DWARF
-						t-new = 0x6424
+					// If FIGHTER_MALE_DWARF or FIGHTER_MALE_GNOME
+					PATCH_IF (t-char-anim = 0x6102) OR (t-char-anim = 0x6104) BEGIN
+						t-new-anim = ia-fighter_male_dwarf_bg1 // former 0x6424
 					END
-					PATCH_IF t-crean = 0x6103 BEGIN // FIGHTER_MALE_HALFLING
-						t-new = 0x6426
+					// If FIGHTER_MALE_HALFLING
+					PATCH_IF t-char-anim = 0x6103 BEGIN
+						t-new-anim = ia-fighter_male_halfling_bg1 // former 0x6426
 					END
-					PATCH_IF (t-crean = 0x6110) OR (t-crean = 0x6115) BEGIN // FIGHTER_FEMALE_HUMAN
-						t-new = 0x6421
+					// If FIGHTER_FEMALE_HUMAN or FIGHTER_FEMALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6110) OR (t-char-anim = 0x6115) BEGIN
+						t-new-anim = ia-fighter_female_human_bg1 // former 0x6421
 					END
-					PATCH_IF t-crean = 0x6111 BEGIN // FIGHTER_FEMALE_ELF
-						t-new = 0x6423
+					// If FIGHTER_FEMALE_ELF
+					PATCH_IF t-char-anim = 0x6111 BEGIN
+						t-new-anim = ia-fighter_female_elf_bg1 // former 0x6423
 					END
-					PATCH_IF (t-crean = 0x6112) OR (t-crean = 0x6113) OR (t-crean = 0x6114) BEGIN // FIGHTER_FEMALE_HALFLING
-						t-new = 0x6427
+					// If FIGHTER_FEMALE_DWARF or FIGHTER_FEMALE_HALFLING or FIGHTER_FEMALE_GNOME
+					PATCH_IF (t-char-anim = 0x6112) OR (t-char-anim = 0x6113) OR (t-char-anim = 0x6114) BEGIN
+						t-new-anim = ia-fighter_female_halfling_bg1 // former 0x6427
 					END
-					PATCH_IF (t-crean = 0x6200) OR (t-crean = 0x6205) BEGIN // MAGE_MALE_HUMAN
-						t-new = 0x6430
+					// If MAGE_MALE_HUMAN or MAGE_MALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6200) OR (t-char-anim = 0x6205) BEGIN
+						t-new-anim = ia-mage_male_human_bg1 // former 0x6430
 					END
-					PATCH_IF t-crean = 0x6201 BEGIN // MAGE_MALE_ELF
-						t-new = 0x6432
+					// If MAGE_MALE_ELF
+					PATCH_IF t-char-anim = 0x6201 BEGIN
+						t-new-anim = ia-mage_male_elf_bg1 // former 0x6432
 					END
-					PATCH_IF (t-crean = 0x6202) OR (t-crean = 0x6204) BEGIN // MAGE_MALE_DWARF
-						t-new = 0x6434
+					// If MAGE_MALE_DWARF or MAGE_MALE_GNOME
+					PATCH_IF (t-char-anim = 0x6202) OR (t-char-anim = 0x6204) BEGIN
+						t-new-anim = ia-mage_male_dwarf_bg1 // former 0x6434
 					END
-					PATCH_IF (t-crean = 0x6210) OR (t-crean = 0x6215) BEGIN // MAGE_FEMALE_HUMAN
-						t-new = 0x6431
+					// If MAGE_FEMALE_HUMAN or MAGE_FEMALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6210) OR (t-char-anim = 0x6215) BEGIN
+						t-new-anim = ia-mage_female_human_bg1 // former 0x6431
 					END
-					PATCH_IF t-crean = 0x6211 BEGIN // MAGE_FEMALE_ELF
-						t-new = 0x6433
+					// If MAGE_FEMALE_ELF
+					PATCH_IF t-char-anim = 0x6211 BEGIN
+						t-new-anim = ia-mage_female_elf_bg1 // former 0x6433
 					END
-					PATCH_IF (t-crean = 0x6300) OR (t-crean = 0x6305) BEGIN // THIEF_MALE_HUMAN
-						t-new = 0x6440
+					// If THIEF_MALE_HUMAN or THIEF_MALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6300) OR (t-char-anim = 0x6305) BEGIN
+						t-new-anim = ia-thief_male_human_bg1 // former 0x6440
 					END
-					PATCH_IF t-crean = 0x6301 BEGIN // THIEF_MALE_ELF
-						t-new = 0x6442
+					// If THIEF_MALE_ELF
+					PATCH_IF t-char-anim = 0x6301 BEGIN
+						t-new-anim = ia-thief_male_elf_bg1 // former 0x6442
 					END
-					PATCH_IF (t-crean = 0x6302) OR (t-crean = 0x6304) BEGIN // THIEF_MALE_DWARF
-						t-new = 0x6444
+					// If THIEF_MALE_DWARF or THIEF_MALE_GNOME
+					PATCH_IF (t-char-anim = 0x6302) OR (t-char-anim = 0x6304) BEGIN
+						t-new-anim = ia-thief_male_dwarf_bg1 // former 0x6444
 					END
-					PATCH_IF t-crean = 0x6303 BEGIN //THIEF_MALE_HALFLING
-						t-new = 0x6446
+					// If THIEF_MALE_HALFLING
+					PATCH_IF t-char-anim = 0x6303 BEGIN
+						t-new-anim = ia-thief_male_halfling_bg1 // former 0x6446
 					END
-					PATCH_IF (t-crean = 0x6310) OR (t-crean = 0x6315) BEGIN //THIEF_FEMALE_HUMAN
-						t-new = 0x6441
+					// If THIEF_FEMALE_HUMAN or THIEF_FEMALE_HALFORC
+					PATCH_IF (t-char-anim = 0x6310) OR (t-char-anim = 0x6315) BEGIN
+						t-new-anim = ia-thief_female_human_bg1 // former 0x6441
 					END
-					PATCH_IF t-crean = 0x6311 BEGIN // THIEF_FEMALE_ELF
-						t-new = 0x6443
+					// If THIEF_FEMALE_ELF
+					PATCH_IF t-char-anim = 0x6311 BEGIN
+						t-new-anim = ia-thief_female_elf_bg1 // former 0x6443
 					END
-					PATCH_IF (t-crean = 0x6212) OR (t-crean = 0x6214) OR (t-crean = 0x6312) OR (t-crean = 0x6313) OR (t-crean = 0x6314) BEGIN // THIEF_FEMALE_HALFLING
-						t-new = 0x6447
+					// If THIEF_FEMALE_DWARF or THIEF_FEMALE_HALFLING or THIEF_FEMALE_GNOME
+					PATCH_IF (t-char-anim = 0x6212) OR (t-char-anim = 0x6214) OR (t-char-anim = 0x6312) OR (t-char-anim = 0x6313) OR (t-char-anim = 0x6314) BEGIN
+						t-new-anim = ia-thief_female_halfling_bg1 // former 0x6447
 					END
-					WRITE_SHORT (t-cff + 0x28) t-new
-					LOOKUP_IDS_SYMBOL_OF_INT t-creant animate t-crean
-					LOOKUP_IDS_SYMBOL_OF_INT t-newt animate t-new
-					INNER_ACTION BEGIN
-						SILENT
-						APPEND_OUTER ~infinityanimations/batch/t-bg1chars.txt~ ~%BASH_FOR_RES%	%t-crnm%	%t-diff%	%t-crean%	%t-creant%	%t-new%	%t-newt%~
-						VERBOSE
-					END
-				END
-			END
-		END
+
+					WRITE_LONG (t-cff + 0x28) t-new-anim
+
+					LOOKUP_IDS_SYMBOL_OF_INT t-char-anim-type animate t-char-anim
+					LOOKUP_IDS_SYMBOL_OF_INT t-new-anim-type animate t-new-anim
+
+					LPF ~gw_format_string~ INT_VAR length = 8  STR_VAR string = EVAL "%BASH_FOR_RES%"        RET character = string_new END
+					LPF ~gw_format_string~ INT_VAR length = 32 STR_VAR string = EVAL "%t-char-name%"         RET t-char-name = string_new END
+					LPF ~gw_format_string~ INT_VAR length = 15 STR_VAR string = EVAL "%t-char-anim%" hex = m RET t-char-anim = string_new END
+					LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "%t-char-anim-type%"    RET t-char-anim-type = string_new END
+					LPF ~gw_format_string~ INT_VAR length = 15 STR_VAR string = EVAL "%t-new-anim%" hex = m  RET t-new-anim = string_new END
+					SPRINT list_bg1_chars "%list_bg1_chars%%character%  %t-char-name%   %t-diff%   %t-char-anim%  %t-char-anim-type%  ==>  %t-new-anim%  %t-new-anim-type%%WNL%"
+
+				END // of PATCH_IF (~%t-rdl%~ STRING_EQUAL_CASE ~y~ = 1)
+
+			END // of PATCH_IF (((t-char-anim > 0x5fff) AND (t-char-anim < 0x6005)) OR ((t-char-anim > 0x600f) AND (t-char-anim < 0x6016)) OR ((t-char-anim > 0x60ff) AND (t-char-anim < 0x6106)) OR ((t-char-anim > 0x610f) AND (t-char-anim < 0x6116)) OR ((t-char-anim > 0x61ff) AND (t-char-anim < 0x6206)) OR ((t-char-anim > 0x620f) AND (t-char-anim < 0x6216)) OR ((t-char-anim > 0x62ff) AND (t-char-anim < 0x6306)) OR ((t-char-anim > 0x630f) AND (t-char-anim < 0x6316)))
+
+		END // of PATCH_IF t-crelen > 0x2d3
+
 	BUT_ONLY
+
 END	// of ACTION_BASH_FOR ~characters~ ~^.+\.chr$~
+
+APPEND_OUTER ~infinityanimations/log/t-bg1chars.txt~ ~%list_bg1_chars%~

@@ -734,11 +734,12 @@ Ce composant corrige les références aux animations de créatures modifiées da
 
 ## 
 
-<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] Animations de personnages de BG1 pour les PJs**<br>
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] Animations de personnages de BG1 pour les PJs exportés**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Demander confirmation pour chaque PJ exporté.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Demander confirmation pour les PJs posant problème.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Modifier tous les PJs sans demander confirmation.<br><br>
 
+Ce composant attribue à certains PJs exportés des animations de personnages de BG1 :
 - Utilise les animations de personnages originales de Baldur's Gate selon le choix spécifié.
 - La deuxième option modifie tous les PJs, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.
 - Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.
@@ -981,9 +982,18 @@ Ce composant corrige les références aux animations de créatures modifiées da
 - [9000] Correction des références des créatures dans les cartes (t-arecre.tpa)
     - Correction des références des créatures dans les cartes qi provoquait des problèmes d'exécution de scripts : dans certaines zones, le patch précédent empêchait certaines cinématiques de se déclencher à cause d'une mauvaise attribution de noms à certaines créatures. Source : <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
     - Utilisation des nouvelles variables " *%low_0xnnnn%* " pour définir les noms des anciennes animations _LOW supprimées par Infinity Animations.
-    - Re-formatage des données du fichier *t-arecr.log.log* pour les rendre enfin lisibles.
-- [9900-9910] Correction des animations dans les parties sauvegardées et [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
-    - Ces deux composants ne devraient plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
+    - Re-formatage des données du fichier *t-arecre.log.log* pour les rendre enfin lisibles.
+- [9500-9510-9520] Animations de personnages de BG1 pour les PJs exportés (t-bg1chars.tpa)
+    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-animationtype_bg1%* " pour patcher les fichiers selon le jeu.
+    - Re-formatage des données du fichier *t-bg1chars.txt* pour les rendre enfin lisibles.
+- [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
+    - Ce composant ne devrait plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
+    - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-animationtype_bg1%* " pour patcher les fichiers selon le jeu.
+    - Re-formatage des données du fichier *t-bg1.txt* pour les rendre enfin lisibles.
+- [9900-9910] Correction des animations dans les parties sauvegardées ()
+    - Ce composant ne devrait plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas.
+    - .
+    - Re-formatage des données du fichier *t-bg1.txt* pour les rendre enfin lisibles.
 
 ## 
 

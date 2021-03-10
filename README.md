@@ -736,11 +736,12 @@ This component corrects changed creature animations in area files for easier ref
 
 ## 
 
-<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for PCs**<br>
+<a name="9500" id="9500"></a>&#10173; **[9500-9510-9520] BG1 Character Animations for Exported PCs**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9500]** Prompt for each exported PC<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9510]** Prompt for problematic PCs<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9520]** Patch all PCs without prompting<br><br>
 
+This component assigns some exported PCs distinctive BG1 Character Animations:
 - Uses the original Baldur's Gate character animations as specified
 - The second option patches all PCs but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot
 - Scimitars and katanas should work, but will appear as long swords on character avatars
@@ -983,9 +984,18 @@ This component corrects changed creature animations in area files for easier ref
 - [9000] Fix Area Creature References (t-arecre.tpa)
     - Fixed area creature references causing script issues: in some areas, the former patch prevented cutscenes to be correctly displayed, due to un-proper patched unique actor names. Source: <a href="http://www.shsforums.net/topic/50797-fix-area-creature-references-causing-script-problems/">Broken creature references</a>.
     - Used new "*%low_0xnnnn%*" variables to define former _LOW animations ID removed by Infinity Animations.
-    - Re-formated *t-arecr.log* file entries to be more friendly readable.
-- [9900-9910] Saved Game Animation Fixer and [9600-9610-9620] BG1 Character Animations for Saved Games components ()
-    - Both components should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing it!).
+    - Re-formated *t-arecre.log* file entries to be more friendly readable.
+- [9500-9510-9520] BG1 Animations for Exported PCs (t-bg1chars.tpa)
+    - EE games compatibility: used new "*%ia-animationtype_bg1%*" variables to patch files according to the game.
+    - Re-formated *t-bg1chars.txt* file entries to be more friendly readable.
+- [9600-9610-9620] BG1 Character Animations for Saved Games ()
+    - Component hould no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing it!).
+    - EE games compatibility: used new "*%ia-animationtype_bg1%*" variables to patch files according to the game.
+    - Re-formated *t-bg1.txt* file entries to be more friendly readable.
+- [9900-9910] Saved Game Animation Fixer ()
+    - Component should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist.
+    - .
+    - Re-formated *t-bg1.txt* file entries to be more friendly readable.
 
 ## 
 
