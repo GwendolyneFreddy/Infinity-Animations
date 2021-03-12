@@ -7,8 +7,9 @@
  * ========================================================================================================================================= *
  *  change-log:                                                                                                                              *
  *  -----------                                                                                                                              *
- *      - EE games compatibility: use new %ia-animationtype_bg1% variables to patch files according to the game (#62).                       *
- *      - Used new %low_0xnnnn% variables to define former _LOW animations ID removed by IA (#63).                                           *
+ *      - Component should no longer crash if \save or \mpsave folders do not exist (Thanks Sam for fixing it!).                             *
+ *      - EE games compatibility: use new %ia-animationtype_bg1% variables to patch files according to the game (#63).                       *
+ *      - Used new %low_0xnnnn% variables to define former _LOW animations ID removed by IA (#64).                                           *
  *      - Replaced READ_SHORT and WRITE_SHORT 0x28 with READ_LONG and WRITE_LONG 0x28.                                                       *
  *      - Re-formated t-gamlog.txt and t-savlog.txt files entries to be more friendly readable.                                              *
  * ========================================================================================================================================= */
