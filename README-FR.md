@@ -108,7 +108,7 @@ En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
 
 ## 
 
-**Commencez une nouvelle partie** après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « Correction des animations dans les parties sauvegardées ».</br>
+**Commencez une nouvelle partie** après avoir installé ce mod, ou si vous êtes réticent(e), installez le composant « <a href="#9900">Correction des animations dans les parties sauvegardées</a> ».</br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
 
@@ -242,7 +242,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
 		(uniquement pour les jeux EE)</td>
 		<td><ins>IA Content - Base EE Content</ins> (nouveau)<br><br>
-		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions, les animations de personnages de BG. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
+		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
 		<em>1 = Installation automatique [par défaut]</em></td>
@@ -287,7 +287,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(uniquement pour ToB)</td>
 		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (nouveau)<br><br>
-		- Contenu: sanglier sauvage, vargouille, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
+		- Contenu: sanglier sauvage, vargouille, gobelours chaman, poulet blanc, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, efrit noble, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
@@ -383,7 +383,7 @@ Voici le tableau des options concernées :</br></br>
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
 		<td><ins>IA Content - Modders resources</ins> (nouveau)<br><br>
-		- Contenu : poule marron (Jarl), chien gris de jastey, mule (Kwiat_W) ; ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb) ; leprechaun annah, easter egg morte, pygargue à tête blanche (et petit), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- Contenu : poulet marron (Jarl), chien gris de jastey, mule (Kwiat_W) ; ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb) ; leprechaun annah, easter egg morte, pygargue à tête blanche (et petit), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Et bien plus encore à venir dans le futur.<br><br>
 		0 = Ne pas l'installer<br>
 		<em>1 = L'installer [par défaut]</em></td>
@@ -421,7 +421,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 
 ><span style="margin-left: 50px;"><a href="#9000">[9000] Correction des références des créatures dans les cartes</a></span></br>
 
-><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] Animations de personnages de BG1 pour les PJs</a></span></br>
+><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] Animations de personnages de BG1 pour les PJs exportés</a></span></br>
 
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées</a></span></br>
 ><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Correction des animations dans les parties sauvegardées</a></span>
@@ -602,7 +602,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 Ce composant attribue à certaines créatures des animations basiques différenciées :
 - Attribue aux histachii l'animation d'histachii d'IWD.
 - Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
-- Attribue au chaman homme-lézard l'animation d'homme-lézard vert.
+- Attribue aucx chamans homme-lézards l'animation d'homme-lézard vert.
 - Attribue aux chefs hommes-lézards l'animation de roi homme-lézard.
 - Attribue aux différentes espèces de trolls leur animation appropriée (normale, bleue, des glaces, des neiges, petite).
 - Attribue aux anciens ombres des roches l'animation d'ombre des roches anciens d'IWD.
@@ -615,7 +615,7 @@ Ce composant attribue à certaines créatures des animations basiques différenc
 Ce composant attribue à certaines créatures des animations d'IWD différenciées :
 - Attribue aux armures animées les animations de petites armures animées d'IWD [<em>NdT : animated plate</em>].
 - Attribue aux Archidruides l'animation d'Arundel d'IWD.
-- Attribue aux barbares leur animation appropriée d'IWD (marron, rouge, brun et chaman).
+- Attribue aux barbares leur animation appropriée d'IWD (marron, rouge, brun et shaman).
 - Attribue aux élémentaires majeurs différentes animations de BG2/IWD.
 - Attribue à certains géants du feu l'animation de géant du feu d'IWD.
 - Attribue aux golems de fer l'animation de golem de fer d'IWD.
@@ -753,6 +753,7 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Demander confirmation pour les personnages posant problème.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Modifier tous les personnages sans demander confirmation.<br><br>
 
+Ce composant attribue aux personnages des animations de personnages de BG1 dans les sauvegardes, si nécessaire :
 - Mêmes remarques que pour le composant précédent.
 - Vous devrez décider de patcher ou non chaque partie sauvegardée (et le personnage qu'elle contient, si vous avez choisi l'une des options de confirmation).
 - :warning: **Faites une copie de vos parties sauvegardées**avant de désinstaller ce composant, car sa désinstallation restaurera les versions présentes lorsque vous l'avez installé.
@@ -761,9 +762,10 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
 ## 
 
 <a name="9900" id="9900"></a>&#10173; **|9900-9910] Correction des animations dans les parties sauvegardées**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Corriger uniquement les animations LOW.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Corriger uniquement les animations _LOW.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Corriger toutes les animations que IA a modifiées.<br><br>
 
+Ce composant corrige dans les parties sauvegardées les animations de créatures que IA a modifiées, pour empêcher le jeu de crasher :
 - La première option empêche les crashs du jeu dus au déplacement des slots d'animation _LOW.
 - La seconde option fait la même chose, et modifie aussi dans vos parties sauvegardées toutes les animations qui ont été modifiées.
 - Vous devrez décider de patcher ou non chaque partie sauvegardée.
@@ -834,7 +836,7 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
   - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
   - Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.
   - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux (MMIN), les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
-  - Ajout du nouveau pack de contenu ee_tob (animations de EE pour ToB) : sanglier sauvage, vargouille, gobelours chaman, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (vert, rouge), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure avec hache, en armure avec arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
+  - Ajout du nouveau pack de contenu ee_tob (animations de EE pour ToB) : sanglier sauvage, vargouille, gobelours chaman, poulet blanc, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (vert, rouge), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, efrit noble, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure avec hache, en armure avec arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
   - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : poulet marron (Jarl), chien gris de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul) ; pygargue à tête blanche (et petit), leprechaun annah, easter egg morte, petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
   - Compatibilité native avec les jeux Enhanced Edition :
     - Restauration des fichiers bam d'animation manquants : abishais (blanc, noir, rouge, vert), armures animées (bronze/sombre/verte), Arundel, barbares shaman (avec marteau, bâton, gourdin), barbares guerriers (bleu, rouge, marron), barbare Icasaracht, scarabées (bombardier, scolyte, de feu, rhinocéros), belhifet, belhifet prêtre, sanglier arctique, vargouille, gobelours, capitaine gobelours, poule (blanche, marron), chimère, cornugon, fatalité rampante, cyclope, tréant, déva monadic déchue, dragons de BG2 (noir, rouge, d'argent), dragons juvéniles (rouge, vert), dragon blanc (IWD et jeune), driders (femelle, mâle), mort noyé, élémentaire (de terre, de feu, d'eau, d'eau petit), freyeur ( normale et grande), fantôme, blême majeur, goule majeure, géant du feu 2, géant du feu IWD, géant du givre, géant fomorian, géant des collines, géant verbeeg, glabrezu, gobelins (capitaine, chaman, chevaucheur de worg, capitaine chevaucheur de worg), gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), golem de glace, golem de fer de IWD, golem minuscule, guenaudes (annis, nocturne), demi-dragons (noire, rouge), harpie, hephernaan, histachii, crochorreur, Isair, kegs, kuo-toa (et grand), lémure, liche blanche, homme lézard (et d'élite, roi), madae, malarite, marilith, marilith (IWD), mégalo-mille-pattes, orque mort-vivant avec hache, orque mort-vivant chaman, orog chaman, planaire, planaire déchu, rémorhaz, sahuagin IWD (et grand), pauvre hère, ombre (petite, grande), shenrical, svirfneblins (pâle, foncé, avec et sans hache), trolls (d'eau douce, des glaces, des neiges), yeti, ver de tunnels, ombre des roches (ancienne, vodyanoi), vestale gémissante, esprit des eaux, blaireau-garou, rat-garou, nécrophages (gris, vert, jaune, des tertres), will o wisp (et petit), worg (IWD), yuan-ti demi-sang, zombi (bleu, jaune).
@@ -986,14 +988,15 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
 - [9500-9510-9520] Animations de personnages de BG1 pour les PJs exportés (t-bg1chars.tpa)
     - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-animationtype_bg1%* " pour patcher les fichiers selon le jeu.
     - Re-formatage des données du fichier *t-bg1chars.txt* pour les rendre enfin lisibles.
-- [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées ()
+- [9600-9610-9620] Animations de personnages de BG1 dans les parties sauvegardées (t-bg1sav.tpa)
     - Ce composant ne devrait plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas (Merci à Sam pour ce correctif !).
     - Compatibilité avec les jeux EE : utilisation des nouvelles variables " *%ia-animationtype_bg1%* " pour patcher les fichiers selon le jeu.
-    - Re-formatage des données du fichier *t-bg1.txt* pour les rendre enfin lisibles.
-- [9900-9910] Correction des animations dans les parties sauvegardées ()
+    - Utilisation des nouvelles variables " *%low_0xnnnn%* " pour définir les noms des anciennes animations _LOW supprimées par Infinity Animations.
+    - Re-formatage des données des fichiers *t-gamlog.txt* et *t-savlog.txt* pour les rendre enfin lisibles.
+- [9900-9910] Correction des animations dans les parties sauvegardées (t-savfix.tpa)
     - Ce composant ne devrait plus planter l'installation si les répertoires :file_folder: \save ou :file_folder: \mpsave n'existent pas.
-    - .
-    - Re-formatage des données du fichier *t-bg1.txt* pour les rendre enfin lisibles.
+    - Utilisation des nouvelles variables " *%low_0xnnnn%* " pour définir les noms des anciennes animations _LOW supprimées par Infinity Animations.
+    - Re-formatage des données du fichier *t-savlog.txt* pour les rendre enfin lisibles.
 
 ## 
 

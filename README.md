@@ -109,7 +109,7 @@ While waiting for this marvelous day, here is the recommended installation order
 
 ## 
 
-**Start a new game** after installing this mod, or use the "Saved Game Animation Fixer" component if you're reluctant to do that.</br>
+**Start a new game** after installing this mod, or use the "<a href="#9900">Saved Games Animations Fixer</a>" component if you're reluctant to do that.</br>
 <div align="right"><a href="#top">Back to top</a></div>
 
 
@@ -241,7 +241,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
 		(EE games only)</td>
 		<td><ins>IA Content - Base EE Content</ins> (New)<br><br>
-		- Content: all missing animations that already have animation slots in Enhanced games, restored BG I character animations. Includes all relevant missing creature sounds and ini files.<br>
+		- Content: all missing animations that already have animation slots in Enhanced games. Includes all relevant missing creature sounds and ini files.<br>
 		- Needed for all EE games (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Needed for all components.<br><br>
 		<em>1 = Installation by default</em></td>
@@ -259,7 +259,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg1_character_animations</strong></td>
-		<td><ins>IA Content - BG1 Character Animations</ins> (New: extracted from IA Content 001 - Base Content)<br><br>
+		<td><ins>IA Content - BG1 Character Animations</ins> (New: extracted from former IA Content 001 - Base Content)<br><br>
 		- Content: restored BG I character animations. Includes BG1 scimitars.<br>
 		- Needed for BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
 		0 = Don't install<br>
@@ -286,7 +286,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
 		(classic games only)</td>
 		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (New)<br><br>
-		- Content: Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
+		- Content: Boar Wild, Bonebat, Bugbear Shaman, Chicken White, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
 	</tr>
@@ -412,7 +412,7 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#400">[400] Distinctive Undead</a></span></br>
 ><span style="margin-left: 50px;"><a href="#410">[410-415-420] Skeleton Warriors</a></span></br>
 ><span style="margin-left: 50px;"><a href="#450">[450-455-460] Seer Animation</a></span></br>
-><span style="margin-left: 50px;"><a href="#480">[480-490] Svirneblin Animations</a></span></br>
+><span style="margin-left: 50px;"><a href="#480">[480-490] Svirneblins Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#500">[500] More Base Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#550">[550] More Icewind Dale Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#600">[600] More Icewind Dale II Animations</a></span></br>
@@ -423,10 +423,10 @@ The installer includes the following components. The number of each is the compo
 
 ><span style="margin-left: 50px;"><a href="#9000">[9000] Fix Area Creature References</a></span></br>
 
-><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] BG1 Character Animations for PCs</a></span></br>
+><span style="margin-left: 50px;"><a href="#9500">[9500-9510-9520] BG1 Character Animations for Exported PCs</a></span></br>
 
 ><span style="margin-left: 50px;"><a href="#9600">[9600-9610-9620] BG1 Character Animations for Saved Games</a></span></br>
-><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Game Animation Fixer</a></span></br>
+><span style="margin-left: 50px;"><a href="#9900">[9900-9910] Saved Games Animations Fixer</a></span></br>
 
 
 ###### <strong>All components require the main component</strong> (they need to since it's the one that installs new content). All components are otherwise optional. Also note that no component affects joinable NPCs, something best left to individual modder discretion. (Hence, if something says it affects all female tieflings, it doesn't include Amber and Fade in that.)</br>
@@ -755,6 +755,7 @@ This component assigns some exported PCs distinctive BG1 Character Animations:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9610]** Prompt for problematic characters<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9620]** Patch all characters without prompting<br><br>
 
+This component assigns saved games actors their distinctive BG1 Character Animations if needed:
 - Same notes as above
 - You get to choose whether to patch each game (and character within it, if you've selected one of the prompting options)
 - :warning: **Back up your saved games** before un-installing this component, as it will restore the versions present at the time of the installation
@@ -762,10 +763,11 @@ This component assigns some exported PCs distinctive BG1 Character Animations:
 
 ## 
 
-<a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Game Animation Fixer**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only LOW animations<br>
+<a name="9900" id="9900"></a>&#10173; **[9900-9910] Saved Games Animations Fixer**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9900]** Correct only _LOW animations<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[9910]** Correct all animations IA has changed<br><br>
 
+This component patches any changed creature animation in saved games to prevent game from crashing:
 - The first option prevents games from crashing due to moved _LOW animations
 - The second option does the above and also patches any changed animations into your saved games
 - You get to choose whether to patch each game
@@ -836,7 +838,7 @@ This component assigns some exported PCs distinctive BG1 Character Animations:
   - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
   - Rewrote IA Reference Picker tool (can now be translated) and updated its documentation.
-  - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
+  - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Chicken White, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
   - Added IA modders content: Brow Chicken (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
     - Restored missing bam content in EE games: Abishais (black, green, red, white), Animated plates, Arundel, Barbarian shaman (club, hammer, staff), Barbarian warriors (brown, red, tan), Barbarian Icasaracht, Beetles (boring, fire, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chicken (brown, white), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragons BG2 (black, red, silver), Dragon red juvenile, Dragon white (and young), Driders (female, male), Drowned dead, Elemental earth, Elemental (fire, water, water small), Feyr (and greater), Ghast greater, Ghost, Ghoul greater, Giant fire 2, Giant fire IWD, Giant frost, Giant fomorian, Giant hill, Giant verbeeg, Glabrezu, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Golem mini, Hag (annis, night), Halfdragon (black, red), Harpy, Hephernaan, Histachii, Hook horror, Isair, Kegs (1, 2, 3), Kuo-toa (and large), Lemure, Lich white, Lizard man (and elite, king), Madae, Malarite, Marilith, Marilith (IWD), Megalocentipede, Mkhiins, Orc axe undead, Orc shaman undead, Orog shaman, Planetar, Planetar fallen, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Svirfneblins (pale and dark, with/without axe), Trolls (ice, scrag, snow), Tundra yeti, Tunnel worm, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, gray, green, yellow), Will o wisp (and small), Worg IWD, Yuan-ti halfbreed, Zombie (blue, yellow).
@@ -988,14 +990,15 @@ This component assigns some exported PCs distinctive BG1 Character Animations:
 - [9500-9510-9520] BG1 Animations for Exported PCs (t-bg1chars.tpa)
     - EE games compatibility: used new "*%ia-animationtype_bg1%*" variables to patch files according to the game.
     - Re-formated *t-bg1chars.txt* file entries to be more friendly readable.
-- [9600-9610-9620] BG1 Character Animations for Saved Games ()
-    - Component hould no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing it!).
+- [9600-9610-9620] BG1 Character Animations for Saved Games (t-bg1sav.tpa)
+    - Component should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist (Thanks Sam for fixing it!).
     - EE games compatibility: used new "*%ia-animationtype_bg1%*" variables to patch files according to the game.
-    - Re-formated *t-bg1.txt* file entries to be more friendly readable.
-- [9900-9910] Saved Game Animation Fixer ()
+    - Used new "*%low_0xnnnn%*" variables to define former _LOW animations ID removed by Infinity Animations.
+    - Re-formated *t-gamlog.txt* and *t-savlog.txt* files entries to be more friendly readable.
+- [9900-9910] Saved Games Animations Fixer (t-savfix.tpa)
     - Component should no longer crash if :file_folder: \save or :file_folder: \mpsave folders do not exist.
-    - .
-    - Re-formated *t-bg1.txt* file entries to be more friendly readable.
+    - Used new "*%low_0xnnnn%*" variables to define former _LOW animations ID removed by Infinity Animations.
+    - Re-formated *t-savlog.txt* file entries to be more friendly readable.
 
 ## 
 

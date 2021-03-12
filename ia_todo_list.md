@@ -108,15 +108,20 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 ## 
 
-####  component []
+#### BG1 Character Animations for Saved Games component [9600-9610-9620]
 
-- [ ] 
+- [ ] Why asking for each saved game?
+- [ ] Externalize t-bg1gam macro?
+- [ ] What about distinctive CLERIC_FEMALE_DWARF, FEMALE_DWARF, MAGE_FEMALE_DWARFand THIEF_FEMALE_DWARF animations?
+- [ ] The following bof has never been reported, but should be fixed: it crashes the game if BG1 Animations for NPCs and Exported PCs components are not installed.
+   1. Change its requirements?
+   2. Force its installation if either one of the above components is installed?
 
 ## 
 
-####  component []
+#### Saved Games Animations Fixer component [9900-9910]
 
-- [ ] 
+- [ ] Why asking for each saved game?
 
 ## 
 

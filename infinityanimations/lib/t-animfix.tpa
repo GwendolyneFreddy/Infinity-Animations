@@ -1,86 +1,137 @@
-ACTION_IF NOT FILE_EXISTS ~infinityanimations/batch/t-savlog.txt~ BEGIN
-	<<<<<<<< .../infinityanimations-inlined/t-savlog.txt
-SaveGame	File	Creature	Name	OldAnimation	NewAnimation
->>>>>>>>
+/* ==================================================================================================================================== *
+ *  v 6.0.0                                                                                                                             *
+ *                                     W e i D U    T - A N I M F I X    P A T C H    R O U T I N E                                     *
+ *                                                                                                                                      *
+ * ==================================================================================================================================== *
+ *  This macro patches creature animations Infinity Animations had modified in saved games and appends t-savlog.txt to report changes.  *
+ * ==================================================================================================================================== */
 
-	COPY ~.../infinityanimations-inlined/t-savlog.txt~ ~infinityanimations/batch~
+
+ACTION_IF NOT FILE_EXISTS ~infinityanimations/log/t-savlog.txt~ BEGIN
+
+	<<<<<<<< .../infinityanimations-inlined/t-savlog.txt
+ SaveGame                                  File     Creature  (Name)                              Old Animation                       New Animation
+====================================================================================================================================================================
+>>>>>>>>
+	COPY ~.../infinityanimations-inlined/t-savlog.txt~ ~infinityanimations/log~
 
 END
 
-DEFINE_PATCH_MACRO t-animfix BEGIN
 
-	READ_SLONG (t-cf + 8) t-nr
+DEFINE_PATCH_MACRO ~t-animfix~ BEGIN
+
+	READ_SLONG (t-cre_off + 8) t-nr
 	PATCH_IF t-nr < 1 BEGIN
-		READ_ASCII (t-pf + i * 0x160 + 0xc0) t-nm (32) NULL
+		READ_ASCII (t-pf + i * 0x160 + 0xc0) t-cre_name (32) NULL
 	END ELSE BEGIN
-		READ_STRREF (t-cf + 8) t-nm
-		lna = STRING_LENGTH ~%t-nm%~
+		READ_STRREF (t-cre_off + 8) t-cre_name
+		lna = STRING_LENGTH ~%t-cre_name%~
+		// Truncate long names
 		PATCH_IF lna > 32 BEGIN
-			INNER_PATCH ~%t-nm%~ BEGIN
-				READ_ASCII 0 t-nm (32) NULL // Truncate long names
+			INNER_PATCH ~%t-cre_name%~ BEGIN
+				READ_ASCII 0 t-cre_name (32) NULL
 			END
 		END
 	END
-	READ_SHORT (t-cf + 0x28) t-an // Animation ID
+
+	READ_LONG (t-cre_off + 0x28) t-cre_anim // Animation ID
+
 	PATCH_IF (t-agg = 1) AND (~%t-xt%~ STRING_EQUAL_CASE ~gam~ = 0) BEGIN
+
 		SPRINT t-xnm ~T-None~
-		t-xanim = t-an
+		t-xanim = t-cre_anim
+
 		INNER_ACTION BEGIN
+
 			ACTION_IF FILE_EXISTS_IN_GAME ~%t-sav%~ BEGIN
-				SILENT
-				COPY_EXISTING ~%t-sav%~ override					// Copy area file
-					READ_LONG 0x54 t-pg								// Actors offset
-					READ_SHORT 0x58 t-pd							// Actors count
-					FOR (j = 0 ; j < t-pd ; j += 1) BEGIN			// Cycle through actors
-						READ_ASCII (t-pg + j * 0x110 + 0x80) t-xcre	// Area CRE file
-						lnb = STRING_LENGTH ~%t-xcre%~				// Count the number of characters
+
+				COPY_EXISTING ~%t-sav%~ ~override~  // Copy area file
+					READ_LONG  0x54 t-pg            // Actors offset
+					READ_SHORT 0x58 t-pd            // Actors count
+
+					// Looping through actors
+					// ----------------------
+					FOR (j = 0 ; j < t-pd ; j += 1) BEGIN
+						READ_ASCII (t-pg + j * 0x110 + 0x80) t-xcre // Area CRE file
+						lnb = STRING_LENGTH ~%t-xcre%~              // Count the number of characters
+						// Trim leftmost character
 						INNER_PATCH ~%t-xcre%~ BEGIN
-							READ_ASCII 1 t-xcrn (lnb - 1)			// Trim leftmost character
+							READ_ASCII 1 t-xcrn (lnb - 1)
 						END
-						SPRINT t-xcrn ~*%t-xcrn%~					// Prefix with an underscore
-						PATCH_IF (~%t-cn%~ STRING_EQUAL_CASE ~%t-xcrn%~ = 1) AND (FILE_EXISTS_IN_GAME ~%t-xcre%.cre~) BEGIN
+						SPRINT t-xcrn ~*%t-xcrn%~  // Prefix with an underscore
+						// Checking if creature animation has been modified in .cre file
+						// -------------------------------------------------------------
+						PATCH_IF (~%t-cre_file%~ STRING_EQUAL_CASE ~%t-xcrn%~ = 1) AND (FILE_EXISTS_IN_GAME ~%t-xcre%.cre~) BEGIN
 							INNER_ACTION BEGIN
-								COPY_EXISTING ~%t-xcre%.cre~ override
+								COPY_EXISTING ~%t-xcre%.cre~ ~override~
 									PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
-										READ_STRREF 8 t-xnm			// Area CRE name
+										READ_STRREF 8 t-xnm  // Area CRE name
 										xln = STRING_LENGTH ~%t-xnm%~
+										// Truncate long names
 										PATCH_IF xln > 32 BEGIN
 											INNER_PATCH ~%t-xnm%~ BEGIN
-												READ_ASCII 0 t-xnm (32) NULL // Truncate long names
+												READ_ASCII 0 t-xnm (32) NULL
 											END
 										END
-										READ_SHORT 0x28 t-xanim		// Area CRE animation
+										READ_LONG 0x28 t-xanim  // Area CRE animation
 									END
 								BUT_ONLY
 							END
 						END
 					END
 				BUT_ONLY
-				VERBOSE
+
 			END
+
 		END
-		PATCH_IF (~%t-nm%~ STRING_EQUAL_CASE ~%t-xnm%~ = 1) AND (t-an != t-xanim) BEGIN
-			WRITE_SHORT (t-cf + 0x28) t-xanim // Update .sav animation from .cre file
-			LOOKUP_IDS_SYMBOL_OF_INT t-old animate %t-an%
-			LOOKUP_IDS_SYMBOL_OF_INT t-new animate %t-xanim%
-			t-an = t-xanim
-			INNER_ACTION BEGIN
-				SILENT
-				APPEND_OUTER ~infinityanimations/batch/t-savlog.txt~ ~%t-to%	%t-sav%	%t-cn%	%t-nm%	%t-old%	%t-new%~
-				VERBOSE
-			END
+
+		PATCH_IF (~%t-cre_name%~ STRING_EQUAL_CASE ~%t-xnm%~ = 1) AND (t-cre_anim != t-xanim) BEGIN
+			// Update .sav animation from .cre file
+			// ------------------------------------
+			WRITE_LONG (t-cre_off + 0x28) t-xanim
+			LOOKUP_IDS_SYMBOL_OF_INT t-old animate t-cre_anim
+			LOOKUP_IDS_SYMBOL_OF_INT t-new animate t-xanim
+			t-cre_anim = t-xanim
+
+			LPF ~gw_format_string~ INT_VAR length = 39 STR_VAR string = EVAL "%t-to%"         RET t-tot = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 8  STR_VAR string = EVAL "%t-cre_file%"   RET t-cre_file = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "(%t-cre_name%)" RET t-cre_name = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "%t-old%"        RET t-old = string_new END
+
+			SPRINT list_savlog "%list_savlog%%t-tot% %t-sav%  %t-cre_file%  %t-cre_name%  %t-old%  %t-new%%WNL%"
+
 		END
-	END
-	PATCH_IF ((t-an > 0x4fff) AND (t-an < 0x5004)) OR ((t-an > 0x500f) AND (t-an < 0x5014)) OR ((t-an > 0x50ff) AND (t-an < 0x5104)) OR ((t-an > 0x510f) AND (t-an < 0x5114)) OR ((t-an > 0x51ff) AND (t-an < 0x5203)) OR ((t-an > 0x520f) AND (t-an < 0x5213)) OR ((t-an > 0x52ff) AND (t-an < 0x5304)) OR ((t-an > 0x530f) AND (t-an < 0x5314)) BEGIN
-		LOOKUP_IDS_SYMBOL_OF_INT t-old animate %t-an%
-		t-an += 0x1000
-		LOOKUP_IDS_SYMBOL_OF_INT t-new animate %t-an%
-		WRITE_SHORT (t-cf + 0x28) t-an // Fix _LOW animations
-		INNER_ACTION BEGIN
-			SILENT
-			APPEND_OUTER ~infinityanimations/batch/t-savlog.txt~ ~%t-to%	%t-sav%	%t-cn%	%t-nm%	%t-old%	%t-new%~
-			VERBOSE
-		END
+
+	END // of PATCH_IF (t-agg = 1) AND (~%t-xt%~ STRING_EQUAL_CASE ~gam~ = 0)
+
+	// Fix removed _LOW animations
+	// ---------------------------
+	PATCH_IF (((t-cre_anim > 0x4fff) AND (t-cre_anim < 0x5004)) OR   // CLERIC_MALE_xxx_LOW
+              ((t-cre_anim > 0x500f) AND (t-cre_anim < 0x5014)) OR   // CLERIC_FEMALE_xxx_LOW
+              ((t-cre_anim > 0x50ff) AND (t-cre_anim < 0x5104)) OR   // FIGHTER_MALE_xxx_LOW
+              ((t-cre_anim > 0x510f) AND (t-cre_anim < 0x5114)) OR   // FIGHTER_FEMALE_xxx_LOW
+              ((t-cre_anim > 0x51ff) AND (t-cre_anim < 0x5203)) OR   // MAGE_MALE_xxx_LOW
+              ((t-cre_anim > 0x520f) AND (t-cre_anim < 0x5213)) OR   // MAGE_FEMALE_xxx_LOW
+              ((t-cre_anim > 0x52ff) AND (t-cre_anim < 0x5304)) OR   // THIEF_MALE_xxx_LOW
+              ((t-cre_anim > 0x530f) AND (t-cre_anim < 0x5314)))     // THIEF_FEMALE_xxx_LOW
+	BEGIN
+
+//		LOOKUP_IDS_SYMBOL_OF_INT t-old animate %t-cre_anim%
+		LPF ~TO_HEX_NUMBER~ INT_VAR value = t-cre_anim minDigits = 4 RET hexNumber END
+//		SPRINT t-cre-old-anim-type EVAL "%low_0x%hexNumber%%"
+		SPRINT t-old EVAL "%low_0x%hexNumber%%"
+		t-cre_anim += 0x1000
+//		LOOKUP_IDS_SYMBOL_OF_INT t-cre-new-anim-type animate t-cre_anim
+		LOOKUP_IDS_SYMBOL_OF_INT t-new animate t-cre_anim
+		WRITE_LONG (t-cre_off + 0x28) t-cre_anim
+
+		LPF ~gw_format_string~ INT_VAR length = 39 STR_VAR string = EVAL "%t-to%"         RET t-tot = string_new END
+		LPF ~gw_format_string~ INT_VAR length = 8  STR_VAR string = EVAL "%t-cre_file%"   RET t-cre_file = string_new END
+		LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "(%t-cre_name%)" RET t-cre_name = string_new END
+		LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "%t-old%"        RET t-old = string_new END
+
+		SPRINT list_savlog "%list_savlog%%t-tot% %t-sav%  %t-cre_file%  %t-cre_name%  %t-old%  %t-new%%WNL%"
+
 	END
 
-END	// of DEFINE_PATCH_MACRO t-animfix
+END	// of DEFINE_PATCH_MACRO
