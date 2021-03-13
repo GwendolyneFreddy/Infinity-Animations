@@ -1,0 +1,143 @@
+÷÷ Executable space claimed (was padding): ÷÷
+
+0x006A470F - 0x006A4FFF
+
+÷÷ Possible incompabilities: ÷÷ 
+
+Due to limits of number space, the 5xxx series of animations is used by this mod to accomodate animation slots. This space was used for the _LOW character animations that, in BGII were a direct link to the normal character animations (BGII not having separate LOW animations whatsoever, e.g. 5002 was the same reference as 6002). The IA_low_fix will replace redundant links during install, but mods may have used them, in which case they will show mismatched animations. It's safest to check for animation entries in the 5xxx series and replace them with their 6xxx equivalents (while making sure new animations in the 5xxx series are not overwritten).
+
+÷÷ Identifier naming: ÷÷
+
+Identifiers use uncommon start characters to prevent them from sorting randomly and conflicting with existing mod or game files. # and similar are ommitted because they are widely used in mods. The letter 3 shows incorrectly as M in NearInfinity.
+
+÷÷ anims.list entry: ÷÷
+
+[number] = hex ID of animation
+[TAB] = tabspace
+[x] = x whitespaces
+[ID] = file prefix padded to four characters
+[NAME] = name padded to 34 characters
+[FC] = foot circle size, 8 characters
+[TYPE] = L is 4pt Split, X is BG1, I is IWD, B is BG2, C is character, D is dragon
+[AVAIL] = o is free, p is partly free, t is partly taken, x is taken
+[ANIM] = animation type
+[SUBTYPE] = animation subtype
+
+0x[NUMBER][TAB][ID][TAB][NAME][TAB][FC][1][TYPE][AVAIL][2][ANIM][1][SUBTYPE]
+
+
+÷÷ Availability is determined by the following scheme: ÷÷
+
+First line is status of current animation, lines below is how free slots (o) of other types with the same identifier change accordingly. Partly free slots are always replaced with x. Characters replace every other character slot with X. Dragons never modify other entries.
+
+Taking ID
+Io  It  Ix 
+Bo  Bo  Bp
+Xo  Xx  Xx
+Lo  Lo  Lp
+
+
+Taking BGII
+Bo  Bt  Bx
+Io  Io  Ip
+Xo  Xx  Xx
+Lo  Lx  Lx
+
+Taking BGI
+Xo  Xt  Xx
+Bo  Bx  Bx
+Io  Io  Ip
+Lo  Lo  Lp
+
+Taking LONG
+Lo  Lt  Lx
+Xo  Xo  Xp
+Bo  Bx  Bx
+Io  Io  Ip
+
+
+÷÷ List of new animation entries in the executable: ÷÷
+
+First number is length of identifier (3 for monster animations, 4 for characters and dragons). numbers at the end are special character ASCII value and reference space, as well as the identifier itself (ASCII sign). fc = foot circle. ^^ = same references used above.
+
+:3/ 1000 - 11FF  (without 1000 1100)   	BGI MONSTER LONG 4 PART unpaletted	c6.7FC 4_ 
+(NOTE: 0xx smaller fc 1xx larger fc)
+:4/ 1209 - 1234		       		DRAGONS (XDR)				.
+:3/ 1300 - 13FF	(without 1300)		BGII SPLIT 4 PART			de.3fc -_
+(NOTE: 00-ED smaller fc, EE-FF large fc)
+:3/ 2000 - 21FF  (s 2001 -2100)   	BGI SIRINE (BOW) CASTER			a5.7FC 2_
+:3/ 2200 - 22FF  (s 2201)		BGI OGRE MAGE (S1) CASTER		d0.3fc 6_
+:3/ 3000 - 31FF  (s 3001)		BROKEN ANKHEG				.^^ 4_
+:3/ 5000 - 523B				IWD big FC				b5.8F0 3_
+:3/ 523D - 5478				IWD small FC				.^ 3_
+:3/ 547A - 56B6				BGI SIMPLE MONSTER unpaletted		a3.8F0 1_
+(NOTE: 547A-557A small fc, 557B-56B6 large fc)
+:3/ 56B7 - 58F3				BGI SIMPLE MONSTER paletted		.^  1_
+(NOTE: 56B7-57B7 small fc, 57B8-58F3 large fc)
+:3/ 5B00 - 5D3B				BGII UNSPLIT EXT. unpaletted		.^ 3_
+(NOTE: 5B00-5BFF small fc, 5C00-5D3B large fc)
+:3/ 5D3D - 5F78				BGII UNSPLIT EXT. paletted		.^ 3_
+(NOTE: 5D3D-5E3C small fc, 5E3D-5F78 large fc)
+:3/ 5F7A - 5FBB				BGII SPLIT paletted			d8.104 8_
+(NOTE: F7A-F9A small fc F9B-FBB large fc)
+:3/ 5FBC - 5FFF				BGII SPLIT unpaletted			a7.10C 8_ 
+(NOTE: FBC-FDC small fc FDD-FFF large fc)
+:4/ 6600 - 683C				CHARACTER BGII paletted			a2.B2C 0_3_
+(NOTE: 6600-6800 small fc 6801-683C large fc)
+:4/ 683D - 68C2				CHARACTER BGII WQM/L/N/S		a2.299 0_0_
+:4/ 68C3 - 6AFF				CHARACTER BGII unpaletted		.^ 0_3_
+(NOTE: 68C3-6A3C small fc 6A3D-6AFF large fc)
+:4/ 6B00 - 6D3C				CHARACTER BGI paletted			.^
+(NOTE:6B00-6D00 small fc 6D01-6D3C large fc)
+:4/ 6D3D - 6DC2				CHARACTER BGI WQM/L/N/S			.^
+:4/ 6DC3 - 6FFF				CHARACTER BGI unpaletted		.^
+(NOTE 6DC3-6FC3 small fc 6FC4-6FFF large fc)
+:3/ A000 - A1FF	(without A000 A100)	BGI MONSTER LONG			^^^^ 2_
+(NOTE: 0xx small fc 1xx large fc)
+
+Characters and dragons have four characters because their suffixes are appended at fixed intervals (characters with three character identifiers cannot have paperdolls or object animations, dragons crash.)
+
+Characters have a doubled identifier character because the second is replaced by P for the BGII inventory types. (to accomodate WP paperdoll images with WQ BGII animations).
+
+
+÷÷ Reference offsets in the executable: ÷÷
+
+6A470F
+3 ...3 <
+
+409806 
+0_3_ ..4 23c+1 <
+0_0_ ..4  < 
+4_   ..3 1ff <
+1_   ..3 23c+1 < 
+8_   ..3 104 104+1
+8_   ..3 (ext.) 10C 10c+1
+
+408ab6 
+2 ..  3 <
+6 .. 3 <
+
+407713 
+- .. 3 <
+
+Space for these is freed mostly by removing invalid animation duplicates. The BGI slots were copied in their entirety to the BGII scheme, and again partly to the dragon/demogorgon scheme. The same was true for characters, though the BGI portion has been restored (i.e. not freed). The slots are rerouted in the animation call, so it was impossible to actually execute the invalid animation code or the BGI character code (e.g. a werewolf animation using BGII's animation scheme).
+
+
+÷÷ The character hack: ÷÷
+
+Character animations with non-WP/WQ object animations are achieved by using the same offset to create object and creature identifiers (rather than a separate WQL/WPM etc. reference as intended). For BGII characters, it is additionally used to create the paperdoll reference. The BGII paperdoll reference uses the first three characters of the identifier plus a fixed character (which we instead load from the identifier as well). The paperdoll reference is originally also used to switch between the different animation categories (B/C/F animations) in the BGII files. this is where the doubled identifier comes in;
+
+0E0E
+^      animation identifier
+
+0E0E
+ ^     object identifier (i.e. E0E)
+
+0E0E
+   ^   paperdoll identifier (i.e. the name remains the same as the base animation)
+
+Since objects compatible with BGII animations follow the WQL/M/N/S scheme, but paperdolls were not renamed, a WQ animation had to be tweaked to load a WP paperdoll, which was done via simple replace. This carries over to the example above, leading to an object paperdoll that is not E0E, but EPE.
+
+No identifying letters are lost (save the 0), and since it only affects BGII paperdoll object images the risk of file name conflict is relatively negligible. (e.g. EPES1INV.BAM would not typically be found in game or mod files)
+
+Baldur's Gate I characters do not require the above trickery (since animations were unique rather than grouped), although non-WP object animations are created in similar fashion. Since they had no need to force the second character, ironically enough the corresponding BG1 file would indeed be E0ES1INV.BAM.
