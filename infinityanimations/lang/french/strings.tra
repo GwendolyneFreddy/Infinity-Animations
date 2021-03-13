@@ -1,8 +1,8 @@
-/* ============================================ *
- *                Main component                *
- * -------------------------------------------- *
- *  t-fiend.tpa traified                        *
- * ============================================ */
+/* =================================================== *
+ *                 Main component (0)                  *
+ * --------------------------------------------------- *
+ *  t-main.tpa traified                                *
+ * =================================================== */
 @10000 = ~Mage Yuan-ti~
 @10001 = ~Yuan-ti~
 @10002 = ~Capitaine gnoll~
@@ -11,22 +11,22 @@
 @10005 = ~Balor~
 
 
-/* ============================================ *
- *           Distinctive Fiends (50)            *
- * -------------------------------------------- *
- *  t-fiend.tpa traified                        *
- * ============================================ */
+/* =================================================== *
+ *               Distinctive Fiends (50)               *
+ * --------------------------------------------------- *
+ *  t-fiend.tpa traified                               *
+ * =================================================== */
 
-// Nabassus NWN soundset
-// ---------------------
+// Nabassu NWN soundset
+// --------------------
 @10101 = ~Qui ose ?~ [t-nab04]                  // = c_demon_slct.wav - #10739
 @10102 = ~Rawrr !~ [t-nab03]                    // = c_demon_atk3.wav
 @10103 = ~Je vais t'arracher l'âme !~ [t-nab05] // = c_demon_bat1.wav - #10737
 @10104 = ~Ta douleur sera sans fin !~ [t-nab06] // = c_demon_bat2.wav - #10738
 // sound clips without strref: t-nab01 = c_demon_atk1.wav - t-nab02 = c_demon_atk2.wav - t-nab07 = c_demon_hit1.wav - t-nab08 = c_demon_hit2.wav - t-nab09 = c_demon_dead.wav
 
-// Night Hags PsT soundset
-// -----------------------
+// Night Hag PsT soundset
+// ----------------------
 @10110 = ~Eh bien... Bonjour, mes jolis !~ [t-hag01]             // = rav001.wav
 @10111 = ~Tes os et ton sang recouvriront mon jardin.~ [t-hag77] // = rav077.wav
 @10112 = ~Va-t-en. Je suis morte.~ [t-hag90a]                    // = rav090a.wav
@@ -73,19 +73,19 @@ Utilisable uniquement par :
 // sound clips without strref: t-suc03 = c_succubus_atk1.wav - t-suc04 = c_succubus_atk2.wav - t-suc05 = c_succubus_atk3.wav - t-suc07 = c_succubus_hit1.wav - t-suc08 = c_succubus_hit2.wav - t-suc09 = c_succubus_dead.wav
 
 
-/* ============================================ *
- *           Distinctive Undead (400)           *
- * -------------------------------------------- *
- *  t-undead.tpa traified                       *
- * ============================================ */
+/* =================================================== *
+ *               Distinctive Undead (400)              *
+ * --------------------------------------------------- *
+ *  t-undead.tpa traified                              *
+ * =================================================== */
 @10401 = ~Seigneur zombi~
 
 
-/* ============================================ *
- *      Svirfneblins Animations (480-490)       *
- * -------------------------------------------- *
- *  t-svirfneblin.tpa traified                  *
- * ============================================ */
+/* =================================================== *
+ *          Svirfneblins Animations (480-490)          *
+ * --------------------------------------------------- *
+ *  t-svirfneblin.tpa traified                         *
+ * =================================================== */
 
 // Svirfneblins NWN soundsets
 // --------------------------
@@ -125,11 +125,11 @@ Utilisable uniquement par :
 // sound clips without strref: svn04a = vs_ngnomem2_atk1.wav - svn04b = vs_ngnomem2_atk2.wav - svn05a = vs_ngnomem2_hit1.wav - svn05b = vs_ngnomem2_hit3.wav - svn06a = vs_ngnomem2_dead.wav - svn06b = vs_ngnomem2_hit2.wav
 
 
-/* ============================================ *
- *          More NWN Animations (650)           *
- * -------------------------------------------- *
- *  t-nwnanims.tpa traified                     *
- * ============================================ */
+/* =================================================== *
+ *              More NWN Animations (650)              *
+ * --------------------------------------------------- *
+ *  t-nwnanims.tpa traified                            *
+ * =================================================== */
 
 // amel_pc_nwn soundset
 // --------------------
@@ -150,10 +150,10 @@ Utilisable uniquement par :
  *  t-pstanims.tpa traified                            *
  * =================================================== */
 
-// Tieflings males NWN soundset
-// ----------------------------
+// Tiefling males NWN soundset
+// ---------------------------
 @71001 = ~Vous ne pourrez pas gagner !~ [t-tim01a]                                                   // vs_nx2valem_bat1.wav - #101088
-@71003 = ~Dans les flammes nous bondissons !~ [t-tim01b]                                             // vs_nx2valem_bat2.wav - #101089
+@71002 = ~Dans les flammes nous bondissons !~ [t-tim01b]                                             // vs_nx2valem_bat2.wav - #101089
 @71003 = ~Ha ha ha ha !~ [t-tim01c]                                                                  // vs_nx2valem_bat3.wav
 @71004 = ~Mon sang bout et le vôtre va couler à flots.~ [t-tim01d]                                   // vs_nx2valem_tant.wav - #101094 bout
 @71005 = ~Vous voulez mourir maintenant ? Parce que ça peut s'arranger, si vous y tenez.~ [t-tim01E] // vs_nx2valem_warn.wav - #101126
@@ -165,105 +165,8 @@ Utilisable uniquement par :
 @71011 = ~Ma magie n'a pas fonctionné !~ [t-tim12]                                                   // vs_nx2valem_spel.wav - #101099
 // sound clips without strref: t-tim03 = vs_nx2valem_atk1.wav - t-tim07 = vs_nx2valem_hit1.wav - t-tim09 = vs_nx2valem_dead.wav
 
-// Tieflings females NWN soundset
-// ------------------------------
+// Tiefling females NWN soundset
+// -----------------------------
 @71021 = ~Votre temps sur ce monde s'achève !~ [t-tif01] // = c_tiefling_bat1.wav - #10836
 @71022 = ~Oui ? J'écoute.~ [t-tif02]                     // = c_tiefling_slct.wav - #10837
 // sound clips without strref: t-tif03 = c_tiefling_atk1.wav - t-tif07 = c_tiefling_hit1.wav - t-tif09 = c_tiefling_dead.wav
-
-
-/* ============================================ *
- *                WeiDU prompts                 *
- * ============================================ */
-@-1000= "Le mod %TP2_FILE_NAME% contient"
-@-1001= "composants optionnels distincts.
-Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
-au niveau general plutot que de repondre aux questions pour chacun.
-"
-@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
-Les [I]nstaller, les [S]auter, dem[a]nder pour chacun ? "
-@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
-Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[a]nder pour chacun ? "
-
-@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
-@-1005= "a"
-
-@-1006= "Installer le composant ["
-@-1007= "] ?
-[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
-@-1008= "] ?
-[I]nstaller, [N]e pas installer ou [Q]uitter ? "
-
-@-1009= "Entrez une partie du nom du module : "
-
-@-1010= "Reinstallation du composant ["
-@-1011= "] "
-@-1012= "Reinstallation dans la langue"
-
-@-1013= "Suppression de l'ancienne installation de ["
-@-1014= "] au prealable..."
-@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
-
-@-1016= "Installation en cours"
-@-1017= "ERREUR pendant l'installation de ["
-@-1018= "], retour a l'etat anterieur"
-@-1019= "INSTALLATION REUSSIE"
-@-1020= "Saute"
-@-1021= "Suppression de ["
-@-1022= "] (composant #"
-@-1023= ")"
-@-1024= "SUPPRESSION REUSSIE DE ["
-
-@-1025= "] ?
-[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
-@-1026= "] ?
-[N]e pas installer, [Q]uitter ou choisir un parmi :"
-@-1027= " (installe actuellement)"
-
-@-1028= "Souhaitez-vous afficher les composants de ["
-@-1029= "] ?
-[Y]Oui, [N]on ? "
-
-@-1030= "] ?
-choisir un parmi :"
-@-1031= "] ?
-[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
-@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
-@-1033= "INSTALLATION AVEC DES ALERTES"
-@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
-@-1035= "Dans la langue"
-
-@-1036= "Saute le GROUPE ["
-@-1037= "] pour cause d'absence des pre-requis."
-
-@-1038= "dem[a]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
-@-1039= "dem[a]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
-
-@-1040= "
-Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
-Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
-faudra editer le fichier weidu.conf et reinstaller vos mods.
-"
-@-1041= "Tcheque"
-@-1042= "Allemand"
-@-1043= "Anglais"
-@-1044= "Espagnol"
-@-1045= "Francais"
-@-1046= "Italien"
-@-1047= "Polonais"
-@-1048= "Portugais"
-@-1049= "Turc"
-@-1050= "Japonais"
-@-1051= "Coreen"
-@-1052= "Chinois simplifie"
-@-1053= "Russe"
-@-1054= "Ukrainien"
-
-@-1060= "
-Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
-
-Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
-"
-@-1061= "
-Utilisation de"
-@-1062= " et "

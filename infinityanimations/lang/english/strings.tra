@@ -1,8 +1,8 @@
-/* ============================================ *
- *                Main component                *
- * -------------------------------------------- *
- *  t-main.tpa traified                         *
- * ============================================ */
+/* =================================================== *
+ *                 Main component (0)                  *
+ * --------------------------------------------------- *
+ *  t-main.tpa traified                                *
+ * =================================================== */
 @10000 = ~Yuan-ti Mage~      // = strref #1154 (BG2)
 @10001 = ~Yuan-ti~           // = strref #1323 (BG2)
 @10002 = ~Gnoll Captain~     // = strref #2243 (BG2)
@@ -17,16 +17,16 @@
  *  t-fiend.tpa traified                               *
  * =================================================== */
 
-// Nabassus NWN soundset
-// ---------------------
+// Nabassu NWN soundset
+// --------------------
 @10101 = ~Who disturbs me?~ [t-nab04]            // = c_demon_slct.wav - #10739
 @10102 = ~Rawrr!~ [t-nab03]                      // = c_demon_atk3.wav (Polish sound clip missing replaced with English one)
 @10103 = ~I will rend your soul!~ [t-nab05]      // = c_demon_bat1.wav - #10737
 @10104 = ~Your pain shall be eternal!~ [t-nab06] // = c_demon_bat2.wav - #10738
 // sound clips without strref: t-nab01 = c_demon_atk1.wav - t-nab02 = c_demon_atk2.wav - t-nab07 = c_demon_hit1.wav - t-nab08 = c_demon_hit2.wav - t-nab09 = c_demon_dead.wav (Polish sound clips missing replaced with English ones)
 
-// Night Hags PsT soundset
-// -----------------------
+// Night Hag PsT soundset
+// ----------------------
 @10110 = ~Well... hello, my pretty!~ [t-hag01]                    // = rav001.wav
 @10111 = ~Your bones and blood will blanket my garden.~ [t-hag77] // = rav077.wav
 @10112 = ~Off with ye. Dead I am.~ [t-hag90a]                     // = rav090a.wav
@@ -150,10 +150,10 @@ Weight: 2~
  *  t-pstanims.tpa traified                            *
  * =================================================== */
 
-// Tieflings males NWN soundset
-// ----------------------------
+// Tiefling males NWN soundset
+// ---------------------------
 @71001 = ~You cannot win this fight!~ [t-tim01a]                                    // vs_nx2valem_bat1.wav - #101088
-@71003 = ~Into the flames we leap!~ [t-tim01b]                                      // vs_nx2valem_bat2.wav - #101089
+@71002 = ~Into the flames we leap!~ [t-tim01b]                                      // vs_nx2valem_bat2.wav - #101089
 @71003 = ~Ha ha ha ha!~ [t-tim01c]                                                  // vs_nx2valem_bat3.wav
 @71004 = ~My blood calls for yours and it *will* be satisfied.~ [t-tim01d]          // vs_nx2valem_tant.wav - #101094
 @71005 = ~Do you wish to die now? Because I can certainly arrange that.~ [t-tim01e] // vs_nx2valem_warn.wav - #101126
@@ -165,8 +165,8 @@ Weight: 2~
 @71011 = ~My magic did not work!~ [t-tim12]                                         // vs_nx2valem_spel.wav - #101099
 // sound clips without strref: t-tim03 = vs_nx2valem_atk1.wav - t-tim07 = vs_nx2valem_hit1.wav - t-tim09 = vs_nx2valem_dead.wav
 
-// Tieflings females NWN soundset
-// ------------------------------
+// Tiefling females NWN soundset
+// -----------------------------
 @71021 = ~Your time in this realm is over!~ [t-tif01] // = c_tiefling_bat1.wav - #10836
 @71022 = ~Yes? I listen.~ [t-tif02]                   // = c_tiefling_slct.wav - #10837
 // sound clips without strref: t-tif03 = c_tiefling_atk1.wav - t-tif07 = c_tiefling_hit1.wav - t-tif09 = c_tiefling_dead.wav

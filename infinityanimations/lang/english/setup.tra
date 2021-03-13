@@ -1,249 +1,360 @@
-/* ========================================= *
- *                DOS strings                *
- * ========================================= */
-@1  = ~Infinity Animations (main component)~
-/* DEPRECATED and useless as of v6
-@2  = ~Your ANSI code page is set to a value of %t-acp%. Changing it to 1252 (Latin)
+/* =========================================================== *
+ *                                                             *
+ *                   I N S T A L L A T I O N                   *
+ *                                                             *
+ * =========================================================== */
+
+/* ============================================ *
+ *              Main component (0)              *
+ * ============================================ */
+@0    = ~Infinity Animations (main component)~
+@1    = ~This mod requires the original Throne of Bhaal expansion or a EE game to be installed.~
+/* DEPRECATED and useless as of v6.0.0
+@2    = ~Your ANSI code page is set to a value of %t-acp%. Changing it to 1252 (Latin)
 for mod animation compatibility.~
-@3  = ~You must reboot to continue the installation. Reboot now? [Y]es [N]o~
-@4  = ~Rebooting in a few seconds. Please close all other applications.~
+@3    = ~You must reboot to continue the installation. Reboot now? [Y]es [N]o~
+@4    = ~Rebooting in a few seconds. Please close all other applications.~
 */
-@5  = ~This mod is not currently compatible with OS X. If you wish to make it so,
+
+/* ---------------------------- *
+ *  t-main.tpa & t-main_ee.tpa  *
+ * ---------------------------- */
+@2    = ~This mod is not currently compatible with OS X. If you wish to make it so,
 please post your interest to www.shsforums.net/forum/594-infinity-animations/.
 (It may help to examine your game launcher and the contents of the existing
 patch in an editor if you have any technical expertise.)~
-/* DEPRECATED and useless as of v6
-@6  = ~A mod has overwritten BG2 animations in your game. Extract IA_BG2_Restores.rar
+/* DEPRECATED and useless as of v6.0.0
+@6    = ~A mod has overwritten BG2 animations in your game. Extract IA_BG2_Restores.rar
 to your infinityanimations/restore folder.~
-@7  = ~An installed mod requires IA_Base_Anims.rar extracted to your
+@7    = ~An installed mod requires IA_Base_Anims.rar extracted to your
 infinityanimations/content folder.~
-@8  = ~An installed mod requires IA_IWD.rar extracted to your
+@8    = ~An installed mod requires IA_IWD.rar extracted to your
 infinityanimations/content folder.~
-@9  = ~An installed mod requires IA_BGII_IWDII.rar extracted to your
+@9    = ~An installed mod requires IA_BGII_IWDII.rar extracted to your
 infinityanimations/content folder.~
-@10 = ~An installed mod requires Belhifet_and_Marilith.zip extracted to your
+@10   = ~An installed mod requires Belhifet_and_Marilith.zip extracted to your
 infinityanimations/content folder.~
-@11 = ~An installed mod requires Shadows_harpy_frostgiant.zip extracted to your
+@11   = ~An installed mod requires Shadows_harpy_frostgiant.zip extracted to your
 infinityanimations/content folder.~
-@12 = ~An installed mod requires IA_NWN_01_Modron.rar and NWN_Misc_I.rar extracted
+@12   = ~An installed mod requires IA_NWN_01_Modron.rar and NWN_Misc_I.rar extracted
 to your infinityanimations/content folder.~
-@13 = ~An installed mod requires IA_Wh_Dr_Wyv_LoP.rar extracted to your
+@13   = ~An installed mod requires IA_Wh_Dr_Wyv_LoP.rar extracted to your
 infinityanimations/content folder.~
-@14 = ~NOTE: Download all content from Spellhold Studios. Each content module is at
+@14   = ~NOTE: Download all content from Spellhold Studios. Each content module is at
 www.shsforums.net/index.php?autocom=downloads&showcat=98. Extract all archives
 using the "Do not extract paths" option on the Advanced tab in WinRAR. Also,
 make sure the "Destination path" on the General tab terminates in /content or
 /restore after infinityanimations (there are no subfolders beyond that).~
-@15 = ~For WinZip, make sure the "Use folder names" box is *unselected*. You should
+@15   = ~For WinZip, make sure the "Use folder names" box is *unselected*. You should
 end up with a bunch of .bam files and no subfolders in your "content" and/or
 restore folders. Rerun this installer once you've extracted all content.~
 */
-@6  = ~A mod has overwritten BG2 animations in your game. Please make sure you have 
+@3    = ~A mod has overwritten BG2 animations in your game. Please make sure you have 
 extracted bg2_restores folder to your infinityanimations/archives folder.~
-@7  = ~An installed mod requires base_anims folder to be extracted in your 
+@4    = ~An installed mod requires base_anims folder to be extracted in your 
 infinityanimations/archives folder.~
-@8  = ~An installed mod requires iwd folder to be extracted in your 
+@5    = ~An installed mod requires iwd folder to be extracted in your 
 infinityanimations/archives folder.~
-@9  = ~An installed mod requires bg2_iwd2 folder to be extracted in your 
+@6    = ~An installed mod requires bg2_iwd2 folder to be extracted in your 
 infinityanimations/archives folder.~
-@10 = ~An installed mod requires belhifet_and_marilith folder to be extracted in 
+@7    = ~An installed mod requires belhifet_and_marilith folder to be extracted in 
 your infinityanimations/archives folder.~
-@11 = ~An installed mod requires shadows_harpy_frostgiant folder to be extracted in 
+@8    = ~An installed mod requires shadows_harpy_frostgiant folder to be extracted in 
 your infinityanimations/archives folder.~
-@12 = ~An installed mod requires nwb_01_modron and nwn_misc_1 folders to be extracted
+@9    = ~An installed mod requires nwb_01_modron and nwn_misc_1 folders to be extracted
 in your infinityanimations/archives folder.~
-@13 = ~An installed mod requires wh_dr_wyv_lop folder to be extracted in your
+@10   = ~An installed mod requires wh_dr_wyv_lop folder to be extracted in your
 infinityanimations/archives folder.~
-@14 = ~NOTE: Open the mod zip file and extract the whole archives subfolders in your
+
+@11   = ~Required content missing.~
+@12   = ~NOTE: Open the mod zip file and extract the whole archives subfolders in your
 infinityanimations/archives folder.~
-@15 = ~Rerun this installer once you've extracted all needed content.~
-@16 = ~Required content missing.~
+@13   = ~Re-run this installer once you've extracted all needed content.~
 
-@17 = ~BGMain.exe appears to be patched already; skipping .exe modifications ...~
-@18 = ~BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
-@19 = ~Patching BGMain.exe to enable new animations ...~
+// Original game only: Patching executable and Replacing _LOW creature animations
+// ------------------------------------------------------------------------------
+@14   = ~BGMain.exe appears to be patched already; skipping .exe modifications...~
+@15   = ~BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
+@16   = ~Patching BGMain.exe to enable new animations...~
+@17   = ~Replacing _LOW creature animations (this may take a while)...~
 
-@20 = ~Replacing _LOW creature animations (this may take a while) ...~
-@21 = ~Patching IDS files ...~
+// Installing animations
+// ---------------------
+@18   = ~Patching IDS files...~
+@19   = ~Updating scripts and dialogs files...~
+@20   = ~Restoring previously overwritten BG2 animations...~
+@21   = ~Copying new animations to the game (this may take a while)...~
+@22   = ~Resolving soundsets creature animation conflicts.~
+@23   = ~Correcting creature animations...~
+@24   = ~Correcting creature weapons animations...~
 
-@22 = ~Restoring previously overwritten BG2 animations ...~
-@23 = ~Copying new animations to the game (this may take a while) ...~
-@24 = ~Correcting creature animations ...~
 
-@25 = ~This component requires the main component.~
-@26 = ~Distinctive Genies~
+/* ============================================================ *
+ *           Humanoid Animations Fixes component (25)           *
+ * ============================================================ */
+@25   = ~Humanoid Animations Fixes~
+@26   = ~This component requires the main component.~
+@27   = ~This component is not compatible with Icewind Dale: Enhanced Edition.~
+@28   = ~Patching creature files...~
 
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                   Distinctive Genies (50)                    *
+ * ============================================================ */
+@50   = ~Distinctive Genies~
+/* DEPRECATED and useless as of v6.0.0
 @27 = ~IA_Fiends_Genies.rar needs to be extracted and installed with the main
 component.~*/
-@27 = ~IA_Fiends_Genies content needs to be extracted and/or installed with the main
+@51   = ~IA_Fiends_Genies content needs to be extracted and/or installed with the main
 component. Please make sure infinityanimations/archives folder contains 
 fiends_genies sub-folder.~
 
-@28 = ~Distinctive Fiends~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                   Distinctive Fiends (100)                   *
+ * ============================================================ */
+@100  = ~Distinctive Fiends~
+/* DEPRECATED and useless as of v6.0.0
 @29 = ~IA_Fiends_Genies.rar, IA_IWD.rar, IA_PST_Abishai.rar,
 IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and installed
 with the main component.~*/
-@29 = ~IA_Fiends_Genies, IA_IWD, IA_PST_Abishai, IA_NWN_01_Modron and NWN_Misc_I 
+@101  = ~IA_Fiends_Genies, IA_IWD, IA_PST_Abishai, IA_NWN_01_Modron and NWN_Misc_I 
 contents need to be extracted and/or installed with the main component. Please
 make sure infinityanimations/archives folder contains iwd, fiends_genies, 
 pst_abishai, nwn_01_modron and nwn_misc_1 sub-folders.~
 
-@30 = ~Pit Fiends~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                     Pit Fiends (150-175)                     *
+ * ============================================================ */
+@151  = ~Pit Fiends~
+/* DEPRECATED and useless as of v6.0.0
 @31 = ~IA_NWN_01_Modron.rar needs to be extracted and installed with the main
 component.~*/
-@31 = ~IA_NWN_01_Modron content needs to be extracted and/or installed with the main
+@152  = ~IA_NWN_01_Modron content needs to be extracted and/or installed with the main
 component. Please make sure infinityanimations/archives folder contains
 nwn_01_modron sub-folder.~
-@32 = ~All get the NWN animation~
-@33 = ~Some get the NWN animation~
+@150  = ~All get the NWN animation~
+@175  = ~Some get the NWN animation~
 
-@34 = ~Cambions get Isair Animation~
-/* DEPRECATED and useless as of v6
-@35 = ~IA_BGII_IWDII.rar needs to be extracted and installed with the main
+
+/* ============================================================ *
+ *            Cambions get Isair Animation (210-230)            *
+ * ============================================================ */
+@211  = ~Cambions get Isair Animation~
+/* DEPRECATED and useless as of v6.0.0
+@120 = ~IA_BGII_IWDII.rar needs to be extracted and installed with the main
 component.~*/
-@35 = ~IA_BG2_IWD2 content needs to be extracted and/or installed with the main
+@212  = ~IA_BG2_IWD2 content needs to be extracted and/or installed with the main
 component. Please make sure infinityanimations/archives folder contains bg2_iwd2
 sub-folder.~
-@36 = ~All cambions~
-@37 = ~Some cambions~
-@38 = ~Alu-Fiends get Madae Animation~
-@39 = ~All alu-fiends~
-@40 = ~Some alu-fiends~
+@210  = ~All cambions~
+@230  = ~Some cambions~
 
-@41 = ~Distinctive Undead~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *           Alu-Fiends get Madae Animation (260-280)           *
+ * ============================================================ */
+@261  = ~Alu-Fiends get Madae Animation~
+@260  = ~All alu-fiends~
+@280  = ~Some alu-fiends~
+
+
+/* ============================================================ *
+ *                   Distinctive Undead (400)                   *
+ * ============================================================ */
+@400  = ~Distinctive Undead~
+/* DEPRECATED and useless as of v6.0.0
 @42 = ~IA_Base_Anims.rar, IA_IWD.rar and Shadows_harpy_frostgiant.zip need to
 be extracted and installed with the main component.~*/
-@42 = ~IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant contents need to be 
+@401  = ~IA_Base_Anims, IA_IWD and Shadows_harpy_frostgiant contents need to be 
 extracted and/or installed with the main component. Please make sure 
 infinityanimations/archives folder contains base_anims, iwd and 
 shadows_harpy_frostgiant sub-folders.~
 
-@43 = ~Skeleton Warriors~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                Skeleton Warriors (410-415-420)               *
+ * ============================================================ */
+@411  = ~Skeleton Warriors~
+/* DEPRECATED and useless as of v6.0.0
 @44 = ~IA_IWD.rar needs to be extracted and installed with the main component.~*/
-@44 = ~IA_IWD content needs to be extracted and/or installed with the main component.
+@412  = ~IA_IWD content needs to be extracted and/or installed with the main component.
 Please make sure infinityanimations/archives folder contains iwd sub-folder.~
-@45 = ~Wight Barrow animation~
-@46 = ~Skeleton animation~
-@47 = ~Skeleton Warrior animation~
+@410  = ~Wight Barrow animation~
+@415  = ~Skeleton animation~
+@420  = ~Skeleton Warrior animation~
 
-@48 = ~Seer Animation~
-@49 = ~Some beggars and slaves~
-@50 = ~Some beggars~
-@51 = ~Some slaves~
 
-@52 = ~Svirfneblin Animations~
-@53 = ~Aurora's Shoes has already installed this.~
-/* DEPRECATED and useless as of v6
+/* ============================================================ *
+ *                 Seer Animation (450-455-460)                 *
+ * ============================================================ */
+@451  = ~Seer Animation~
+@450  = ~Some beggars and slaves~
+@455  = ~Some beggars~
+@460  = ~Some slaves~
+
+
+/* ============================================================ *
+ *              Svirfneblins Animations (480-490)               *
+ * ============================================================ */
+@481  = ~Svirfneblins Animations~
+@482  = ~Aurora's Shoes has already installed this.~
+/* DEPRECATED and useless as of v6.0.0
 @54 = ~IA_IWD_Svirfneblin.rar needs to be extracted and installed with the
 main component.~*/
-@54 = ~IA_IWD_Svirfneblin content needs to be extracted and/or installed with the 
+@483  = ~IA_IWD_Svirfneblin content needs to be extracted and/or installed with the 
 main component. Please make sure infinityanimations/archives folder contains 
 iwd_svirfneblin sub-folder.~
-@55 = ~Animations only~
-@56 = ~Animations and sounds~
+@480  = ~Animations only~
+@490  = ~Animations and sounds~
 
-@57 = ~More Base Animations~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                  More Base Animations (500)                  *
+ * ============================================================ */
+@500  = ~More Base Animations~
+/* DEPRECATED and useless as of v6.0.0
 @58 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~*/
-@58 = ~IA_Base_Anims content needs to be extracted and/or installed with the main 
+@501 = ~IA_Base_Anims content needs to be extracted and/or installed with the main 
 component. Please make sure infinityanimations/archives folder contains 
 base_anims sub-folder.~
 
-@59 = ~More Icewind Dale Animations~
 
-@60 = ~More Icewind Dale II Animations~
+/* ============================================================ *
+ *                   More IWD Animations (550)                  *
+ * ============================================================ */
+@550  = ~More Icewind Dale Animations~
 
-@61 = ~More Neverwinter Nights Animations~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *                  More IWD2 Animations (600)                  *
+ * ============================================================ */
+@600  = ~More Icewind Dale II Animations~
+
+
+/* ============================================================ *
+ *                  More NWN Animations (650)                   *
+ * ============================================================ */
+@650  = ~More Neverwinter Nights Animations~
+/* DEPRECATED and useless as of v6.0.0
 @62 = ~IA_NWN_01_Modron.rar and NWN_Misc_I.rar need to be extracted and
 installed with the main component.~*/
-@62 = ~IA_NWN_01_Modron and NWN_Misc_I content need to be extracted and/or installed
+@651  = ~IA_NWN_01_Modron and NWN_Misc_I content need to be extracted and/or installed
 with the main component. Please make sure infinityanimations/archives folder 
 contains nwn_01_modron and nwn_misc_1 sub-folders.~
 
-@63 = ~More Planescape: Torment Animations~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *            More PsT Animations (710-720-730-740)             *
+ * ============================================================ */
+@711  = ~More Planescape: Torment Animations~
+/* DEPRECATED and useless as of v6.0.0
 @64 = ~IA_PST_Paletted.rar needs to be extracted and installed with the main
 component.~*/
-@64 = ~IA_PST_Paletted content needs to be extracted and/or installed with the main 
+@712  = ~IA_PST_Paletted content needs to be extracted and/or installed with the main 
 component. Please make sure infinityanimations/archives folder contains 
 pst_paletted sub-folder.~
-@65 = ~25% of relevant non-joinables~
-@66 = ~50% of relevant non-joinables~
-@67 = ~75% of relevant non-joinables~
-@68 = ~All relevant non-joinables~
+@710  = ~25% of relevant non-joinables~
+@720  = ~50% of relevant non-joinables~
+@730  = ~75% of relevant non-joinables~
+@740  = ~All relevant non-joinables~
 
-@69 = ~Moinesse's Avatars for IA~
-/* DEPRECATED and useless as of v6
+
+/* ============================================================ *
+ *       Moinesse's Avatars for IA (7000-7010-7020-7030)        *
+ * ============================================================ */
+@7000 = ~Moinesse's Avatars for IA~
+/* DEPRECATED and useless as of v6.0.0
 @70 = ~Moinesse_edits_IAised.rar needs to be extracted and installed with the main
 component.~*/
-@70 = ~Moinesse_edits_IAised content needs to be extracted and/or installed with the
+@7001 = ~Moinesse_edits_IAised content needs to be extracted and/or installed with the
 main component. Please make sure infinityanimations/archives folder contains 
 moinesse_edits_iaised sub-folder.~
 
-@71 = ~BG1 Animations for NPCs~
-/* DEPRECATED and useless as of v6: same as @58
+
+/* ============================================================ *
+ *        BG1 Animations for NPCs (8000-8010-8020-8030)         *
+ * ============================================================ */
+@8001 = ~BG1 Animations for NPCs~
+/* DEPRECATED and useless as of v6.0.0: same as @58
 @72 = ~IA_Base_Anims.rar needs to be extracted and installed with the main component.~
 */
-@73 = ~Patching character-based creatures (this may take a while) ...~
-@74 = ~25% of relevant creatures~
-@75 = ~50% of relevant creatures~
-@76 = ~75% of relevant creatures~
-@77 = ~Most relevant creatures~
+@8002 = ~BG1_Character_Animations content needs to be extracted and/or installed with
+the main component. Please make sure infinityanimations/archives folder contains 
+bg1_character_animations sub-folder.~
+@8003 = ~Patching character-based creatures (this may take a while)...~
+@8000 = ~25% of relevant creatures~
+@8010 = ~50% of relevant creatures~
+@8020 = ~75% of relevant creatures~
+@8030 = ~Most relevant creatures~
 
-@78 = ~BG1 Animations for Exported PCs~
-@79 = ~Prompt for each PC~
-@80 = ~Prompt for problematic PCs~
-@81 = ~Patch all PCs without prompting~
 
-@82 = ~BG1 Animations for Saved Games~
-@83 = ~Prompt for each character~
-@84 = ~Prompt for problematic characters~
-@85 = ~Patch all characters without prompting~
+/* ============================================================ *
+ *             Fix Area Creature References (9000)              *
+ * ============================================================ */
+@9000 = ~Fix Areas~
+@9001 = ~Fix Area Creature References~
+@9002 = ~Correcting area creature references (this may take a while)...~
 
-@86 = ~Saved Game Animation Fixer~
-@87 = ~Correct only LOW animations~
-@88 = ~Correct all animations IA has changed~
 
-// fj_cre_validity.tpp
-@89 = ~is corrupt~
-@90 = ~below minimum length~
-@91 = ~header misplaced~
-@92 = ~extended structures point to header~
+/* ============================================================ *
+ *       BG1 Animations for Exported PCs (9500-9510-9520)       *
+ * ============================================================ */
+@9501 = ~BG1 Animations for Exported PCs~
+@9502 = ~Patching character files (this may take a while)...~
+@9500 = ~Prompt for each PC~
+@9510 = ~Prompt for problematic PCs~
+@9520 = ~Patch all PCs without prompting~
 
-// t-bg1chars.tpa, t-bg1sav.tpa et t-savfix.tpa
-@93 = ~(Invalid Offhand Item)~
-@94 = ~(Katana Proficiency)~
-@95 = ~(Scimitar Proficiency)~
-@96 = ~(Two Weapon Proficiency)~
-@97 = ~(Scimitar or Katana)~
-@98 = ~Patch~
-@99 = ~[Y/N]?~
-@100 = ~has an item or proficiency that may
-crash the game with the new animation~
-@101 = ~Patch anyway [Y/N]?~
-@102 = ~Updating .gam file in~
-@103 = ~Updating .sav file in~
 
-@104 = ~Fix Areas~
-@105 = ~Fix Area Creature References~
-@106 = ~Correcting area creature references (this may take a while) ...~
-@107 = ~Humanoid Animation Fixes~
+/* ============================================================ *
+ *        BG1 Animations for Saved Games (9600-9610-9620)       *
+ * ============================================================ */
+@9601 = ~BG1 Animations for Saved Games~
+@9602 = ~Patching BG1 Animations in saved games (this may take a while)...~
+@9600 = ~Prompt for each character~
+@9610 = ~Prompt for problematic characters~
+@9620 = ~Patch all characters without prompting~
 
-@200 = ~This mod requires the classical Throne of Bhaal expansion and is not available yet for EE games.~
 
-// ia_read_configuration.tph and always.tpa
-@301 = ~Configuration option 1a_%variable_0% value (%wrong_value%) does not match its scope and has been reset to its default value (%default%).~
-@302 = ~Configuration option 1a_%variable_0% does not exist: it has been set to its default value (%default%).~
-@303 = ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
+/* ============================================================ *
+ *           Saved Games Animations Fixer (9900-9910)           *
+ * ============================================================ */
+@9901 = ~Saved Games Animations Fixer~
+@9902 = ~Patching modified animations in saved games (this may take a while)...~
+@9900 = ~Correct only _LOW animations~
+@9910 = ~Correct all animations IA has changed~
+
+
+
+/* ============================================================ *
+ *                     Macros and Functions                     *
+ * ============================================================ */
+
+/* ------------------------------------------ *
+ *  ia_read_configuration.tph and always.tpa  *
+ * ------------------------------------------ */
+@1000 = ~Your SoD game needs to be mod-merged before mods can be installed on this game. Check the readme for more information and a link to download the DLC Merger or Modmerge.~
+
+@1001 = ~Tutu install detected.~
+@1002 = ~BG2:ToB install detected.~
+@1003 = ~BGT install detected.~
+@1004 = ~Baldur's Gate Enhanced Edition install detected.~
+@1005 = ~Siege of Dragonspear install detected.~
+@1006 = ~Baldur's Gate II Enhanced Edition install detected.~
+@1007 = ~Enhanced Edition Trilogy install detected.~
+@1008 = ~Icewind Dale Enhanced Edition install detected.~
+
+@1011 = ~Configuration option ia_%variable_0% value (%wrong_value%) does not match its scope and has been reset to its default value (%default%).~
+@1012 = ~Configuration option ia_%variable_0% does not exist and has been set to its default value (%default%).~
+@1013 = ~Configuration option ia_base_anims has been reset to 1 to update IE games base animations!~
+@1014 = ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
 ---------------------------------------------------
+	ia_force_soundset = %ia_force_soundset%
 	ia_base_anims = %ia_base_anims%
 	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
+	ia_bg1_character_animations = %ia_bg1_character_animations%
 	ia_bg2_restores = %ia_bg2_restores%
 	ia_ee_missing = %ia_ee_missing%
 	ia_bg2_iwd2 = %ia_bg2_iwd2%
@@ -251,20 +362,81 @@ crash the game with the new animation~
 	ia_fiends_genies = %ia_fiends_genies%
 	ia_iwd = %ia_iwd%
 	ia_iwd_svirfneblin = %ia_iwd_svirfneblin%
-	ia_moinesse_edits_iaised = %ia_moinesse_edits_iaised%
+	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised%%ee_file%
 	ia_nwn_01_modron = %ia_nwn_01_modron%
 	ia_nwn_misc_1 = %ia_nwn_misc_1%
 	ia_pst_abishai = %ia_pst_abishai%
 	ia_pst_paletted = %ia_pst_paletted%
 	ia_shadows_harpy_frostgiant = %ia_shadows_harpy_frostgiant%
 	ia_wh_dr_wyv_lop = %ia_wh_dr_wyv_lop%
+	ia_modders = %ia_modders%
+---------------------------------------------------
+	Game's localization ==> GAME LANGUAGE = %game_lang%
+	===> soundset_lang = %soundset_lang% - soundset_lang_ee = %soundset_lang_ee%
 ---------------------------------------------------~
 
-// ps_recursive_copy.tpa
-@310 = ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
-@311 = ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
+/* ----------------------- *
+ *  ps_recursive_copy.tpa  *
+ * ----------------------- */
+@1030 = ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
+@1031 = ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
 
-// .tpa
-@320 = ~Folder %iacontent% (#%archives%) content copied to override: %Count% files (configuration option ia_%iacontent% = %variable%)~
-@321 = ~Folder %iacontent% (#%archives%) content not copied to override (configuration option ia_%iacontent% = %variable%)~
-@322 = ~Folder %iacontent% (#%archives%) content copied to override: %Count% files~
+@1041 = ~REMINDER: in which language sound clips should be installed : %soundset_lang% - %soundset_lang_ee%~
+@1042 = ~CONTENT IN PROCESS: %iacontent% (#%archives%)~
+@1043 = ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files (configuration option ia_%iacontent% = %variable%).~
+@1044 = ~  ==> Folder %iacontent% (#%archives%) content not copied to override (configuration option ia_%iacontent% = %variable%).~
+@1045 = ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files.~
+
+@1051 = ~%IA_content% content needed by this component is missing: Infinity Animations will force its installation.~
+
+@1061 = ~wav sound clips detected (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
+@1062 = ~Sound clips relative to the animation have been detected.~
+@1063 = ~No sound clip relative to the animation has been detected.~
+@1064 = ~Sound clips folder found = %sounds_folder%~
+@1065 = ~  ==> sound clips folder to be installed = %sounds_folder%~
+@1066 = ~AUDIO PROCESS = %audio% - ParentDir = %sounds_rep% - %ParentDir%~
+@1067 = ~NEW DIRECTORY IN PROCESS - dirfrom = %dirfrom% ==> %dirC%~
+
+/* --------------------- *
+ *  gw_functions_ee.tpa  *
+ * --------------------- */
+@1100 = ~  ==> %countf% specific EE missing %folder% animation file(s) installed.~
+@1101 = ~  ==> %countf% IE missing %folder% animation file(s) installed.~
+@1102 = ~  ==> %countf% IA missing %folder% animation file(s) installed.~
+
+@1121 = ~  ==> Animation %inifile% ini file installed as 0x%GW_nv_ini%.ini~
+@1122 = ~  ==> Animation %inifile% ini file not installed.~
+
+/* ------------------ *
+ *  t-animate_ee.tpa  *
+ * ------------------ */
+@1141 = ~!!! WARNING : No free creature animation slot found for %GWNewAnim% !!!~
+@1131 = ~  ==> ini file %SOURCE_FILE% patched and fixed~
+
+/* --------------------- *
+ *  fj_cre_validity.tpp  *
+ * --------------------- */
+@1201 = ~is corrupt~
+@1202 = ~below minimum length~
+@1203 = ~header misplaced~
+@1204 = ~extended structures point to header~
+
+/* --------------------------------------------- *
+ *  t-bg1chars.tpa, t-bg1sav.tpa & t-savfix.tpa  *
+ * --------------------------------------------- */
+@1211 = ~(Invalid Offhand Item)~
+@1212 = ~(Katana Proficiency)~
+@1213 = ~(Scimitar Proficiency)~
+@1214 = ~(Two Weapon Proficiency)~
+@1215 = ~(Scimitar or Katana)~
+@1216 = ~Patch~
+@1217 = ~[Y/N]?~
+@1218 = ~has an item or proficiency that may
+crash the game with the new animation~
+@1219 = ~Patch anyway [Y/N]?~
+@1220 = ~Updating .gam file in~
+@1221 = ~Updating .sav file in~
+
+// 110_animate.tph
+@334    = ~  ==> %countf% animation file(s) from folder %copy_from% copied to override.~
+@335    = ~  ==> Animation %2dafile% 2da file installed: %donnees_3%.2da~
