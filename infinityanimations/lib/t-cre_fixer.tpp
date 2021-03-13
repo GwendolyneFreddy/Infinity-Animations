@@ -1,3 +1,11 @@
+/* ============================================================================================================================== *
+ *  v 6.0.0                                                                                                                       *
+ *                                W e i D U    T - C R E _ F I X E R    P A T C H    R O U T I N E                                *
+ *                                                                                                                                *
+ * ============================================================================================================================== *
+ *  This macro patches creature files needing fixes because of hosed slots, then appends t-cre_fixer.log file to report changes.  *
+ * ============================================================================================================================== */
+
 sz = SOURCE_SIZE
 PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
 
@@ -6,28 +14,30 @@ READ_LONG 0x2bc io                      // Items offset
 READ_LONG 0x2c0 ic                      // Item count
 READ_SSHORT (so + 4) hn ELSE (0 - 1)    // Shield number
 
+// Shield slot
+// -----------
 PATCH_IF (hn > (0 - 1)) AND (hn < ic) BEGIN
 	sf = hn * 0x14 + io // Item offset
 	READ_ASCII sf sd    // Item
 	TO_LOWER sd
 	PATCH_IF NOT FILE_EXISTS_IN_GAME ~%sd%.itm~ BEGIN
-		INNER_ACTION BEGIN
-			APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	%sd%	0x4	Shield slot item does not exist~
-		END
+		LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sd%" RET sd = string_new END
+		LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+		SPRINT list_cre_fixer "%list_cre_fixer%%srt%  %sd%  0x4    Shield slot item does not exist%WNL%"
 		REMOVE_CRE_ITEM ~%sd%~
 		hn = 0 - 1
 	END
 END ELSE BEGIN
 	PATCH_IF (hn > (ic - 1)) OR (hn < (0 - 1)) BEGIN
-		INNER_ACTION BEGIN
-			APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	N/A	0x4	Invalid shield slot assignment~
-		END
+		LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+		SPRINT list_cre_fixer "%list_cre_fixer%%srt%  N/A       0x4    Invalid shield slot assignment%WNL%"
 		WRITE_SHORT (so + 4) (0 - 1)
 		hn = 0 - 1
 	END
 END
 
 // Weapon slots
+// ------------
 PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
 	READ_SSHORT (so + wp) tn ELSE (0 - 1)  // Item number
 	PATCH_IF (tn > (0 - 1)) AND (tn < ic) BEGIN
@@ -35,9 +45,9 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
 		READ_ASCII tf tm    // Item
 		TO_LOWER tm
 		PATCH_IF NOT FILE_EXISTS_IN_GAME ~%tm%.itm~ BEGIN
-			INNER_ACTION BEGIN
-				APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	%tm%	%wp%	Weapon slot item does not exist~
-			END
+			LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%tm%" RET tm = string_new END
+			SPRINT list_cre_fixer "%list_cre_fixer%%srt%  %tm%  %wp%  Weapon slot item does not exist%WNL%"
 			REMOVE_CRE_ITEM ~%tm%~
 			PATCH_IF (~%tm%~ STRING_EQUAL ~_bow01~ = 1) BEGIN
 				ADD_CRE_ITEM ~bow01~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
@@ -123,13 +133,16 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
 			tp = 0
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~%tm%.itm~ ~override~
-					READ_BYTE 0x18 fl   // Flags
+					READ_BYTE  0x18 fl  // Flags
 					READ_SHORT 0x1c tp  // Item type
 				BUT_ONLY
 			END
 			PATCH_IF ((fl BOR 0b11111101) = 0b11111111) AND (hn > (0 - 1)) AND (hn < ic) BEGIN
+				LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+				LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%tm%" RET tm = string_new END
+				LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sd%" RET sd = string_new END
+				SPRINT list_cre_fixer "%list_cre_fixer%%srt%  %tm%  %wp%  Two-handed weapon equipped with off-hand item %sd%%WNL%"
 				INNER_ACTION BEGIN
-					APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	%tm%	%wp%	Two-handed weapon equipped with off-hand item %sd%~
 					COPY_EXISTING ~%sd%.itm~ ~override~
 						READ_SHORT 0x1c sp  // Shield type
 					BUT_ONLY
@@ -152,9 +165,9 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
 				END
 			END
 			PATCH_IF ((tp > 0) AND (tp < 0xf)) OR ((tp > 0x1e) AND (tp != 0x26) AND (tp != 0x39) AND (tp != 0x45)) BEGIN
-				INNER_ACTION BEGIN
-					APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	%tm%	%wp%	Item of wrong type %tp% in weapon slot~
-				END
+				LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+				LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%tm%" RET tm = string_new END
+				SPRINT list_cre_fixer "%list_cre_fixer%%srt%  %tm%  %wp%  Item of wrong type %tp% in weapon slot%WNL%"
 				REMOVE_CRE_ITEM ~%tm%~
 				PATCH_IF tp = 1 BEGIN
 					ADD_CRE_ITEM ~%tm%~ #1 #0 #0 ~NONE~ ~AMULET~
@@ -197,9 +210,8 @@ PATCH_FOR_EACH wp IN 0x12 0x14 0x16 0x18 0x4a BEGIN
 		END
 	END ELSE BEGIN
 		PATCH_IF (tn > (ic - 1)) OR (tn < (0 - 1)) BEGIN
-			INNER_ACTION BEGIN
-				APPEND_OUTER ~infinityanimations/batch/t-cre_fixer.log~ ~%sr%	N/A	%wp%	Invalid weapon slot assignment~
-			END
+			LPF ~gw_format_string~ INT_VAR length = 8 STR_VAR string = EVAL "%sr%" RET srt = string_new END
+			SPRINT list_cre_fixer "%list_cre_fixer%%srt%  %tm%  %wp%  Item of wrong type %tp% in weapon slot%WNL%"
 			WRITE_SHORT (so + wp) (0 - 1)
 		END
 	END
@@ -211,6 +223,7 @@ wf = 0
 READ_LONG 0x2b8 so // Slots offset
 READ_LONG 0x2c0 ic // Item count
 // Weapon slots
+// ------------
 PATCH_FOR_EACH wp IN 0x18 0x16 0x14 0x12 BEGIN
 	READ_SSHORT (so + wp) tn ELSE (0 - 1)  // Item number
 	PATCH_IF (tn > (0 - 1)) AND (tn < ic) BEGIN
@@ -223,7 +236,9 @@ PATCH_FOR_EACH wp IN 0x18 0x16 0x14 0x12 BEGIN
 	END
 END
 
-READ_SSHORT (so + 0x4c) ws // Weapon selected
+// Weapon selected
+// ---------------
+READ_SSHORT (so + 0x4c) ws
 PATCH_IF (ws > wc) OR (ws < wd) BEGIN
 	WRITE_SHORT (so + 0x4c) wf
 END
