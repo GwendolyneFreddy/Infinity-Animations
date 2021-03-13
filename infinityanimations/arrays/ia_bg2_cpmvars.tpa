@@ -101,8 +101,8 @@ GHAST 	    GHAST 	    BGGHAST
 OUTER_SPRINT "carbos_bg2"      "carbos"  // fake name (iaiaiaia) to avoid overwriting the file in BG:EE and tutu
 OUTER_SPRINT "ftown2_bg2"      "ftown2"  // id.
 OUTER_SPRINT "ftown3_bg2"      "ftown3"  // id.
-OUTER_SPRINT "ftown4_bg2"      "ftown3"  // id.
-OUTER_SPRINT "mtown2_bg2"      "mtown3"  // id.
+OUTER_SPRINT "ftown4_bg2"      "ftown4"  // id.
+OUTER_SPRINT "mtown2_bg2"      "mtown2"  // id.
 OUTER_SPRINT "mtown3_bg2"      "mtown3"  // id.
 OUTER_SPRINT "mtown4_bg2"      "mtown4"  // id.
 OUTER_SPRINT "mtown5_bg2"      "mtown5"  // id.
