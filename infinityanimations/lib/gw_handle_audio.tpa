@@ -1,0 +1,116 @@
+/* =================================================================================================================== *
+ *  v 6.0.0                                                                                                            *
+ *                                                                                                                     *
+ *                            W e i D U    G W _ H A N D L E _ A U D I O    F U N C T I O N                            *
+ *                                                                                                                     *
+ * =================================================================================================================== *
+ *  Adapted from the WeiDU HANDLE_AUDIO action function, this function SILENTLY installs Ogg-Vorbis compressed audio   *
+ *  files in a safe and easy manner.                                                                                   *
+ *  If the game is not EE, the audio will be decompressed and the resulting .wav files will be MOVEd to the override.  *
+ *  If the game is EE, the .ogg files are copied into the override and renamed into .wav files.                        *
+ * =================================================================================================================== */
+
+DEFINE_ACTION_FUNCTION ~gw_handle_audio~
+	INT_VAR
+        music = 0
+	STR_VAR
+        audio_path  = EVAL "%MOD_FOLDER%/audio"
+        oggdec_path = EVAL "%audio_path%"
+        sox_path    = EVAL "%audio_path%"
+        output_path = "override"
+        output_name = "same"
+    RET count_audio
+BEGIN
+
+	OUTER_SET count_audio = 0
+
+	/* Early versions of BG:EE do not include bgee.lua and PST:EE does not include monkfist.2da */
+	ACTION_IF !FILE_EXISTS_IN_GAME bgee.lua AND
+              !FILE_EXISTS_IN_GAME monkfist.2da
+	BEGIN
+
+		SILENT
+		<<<<<<<< .../fl#inlined/null.file
+>>>>>>>>
+
+		ACTION_MATCH ~%WEIDU_OS%~ WITH
+			win32 BEGIN
+				ACTION_IF FILE_EXISTS ~%oggdec_path%/oggdec.exe~ BEGIN
+					ACTION_BASH_FOR ~%audio_path%~ ~.+\.ogg$~ BEGIN
+						ACTION_TO_LOWER %BASH_FOR_FILESPEC%
+						ACTION_TO_LOWER %BASH_FOR_RES%
+						ACTION_IF ("%BASH_FOR_RES%" STR_CMP "same") BEGIN
+						END
+						OUTER_SPRINT wavfile ~%audio_path%/%BASH_FOR_RES%.wav~
+//						SILENT
+						COPY ~.../fl#inlined/null.file~ ~%wavfile%~
+						AT_NOW ~%oggdec_path%/oggdec.exe -Q "%BASH_FOR_FILESPEC%" 2> nul~ // --quiet
+						MOVE ~%wavfile%~ ~%output_path%~
+						OUTER_SET count_audio += 1
+//						PRINT "CONTROL gw_handle_audio function : count_audio = %count_audio%"
+					END
+				END ELSE BEGIN
+					WARN ~WARNING: audio was not installed because oggdec.exe could not be found in %oggdec_path%~
+				END
+			END
+
+			osx BEGIN
+				ACTION_IF FILE_EXISTS ~%sox_path%/sox~ BEGIN
+					AT_NOW ~chmod +x '%sox_path%/sox'~
+					ACTION_BASH_FOR ~%audio_path%~ ~.+\.ogg$~ BEGIN
+						ACTION_TO_LOWER %BASH_FOR_FILESPEC%
+						ACTION_TO_LOWER %BASH_FOR_RES%
+						OUTER_SPRINT wavfile ~%audio_path%/%BASH_FOR_RES%.wav~
+//						SILENT
+						COPY ~.../fl#inlined/null.file~ ~%wavfile%~
+						AT_NOW ~'%sox_path%/sox' '%BASH_FOR_FILESPEC%' '%wavfile%'~
+						MOVE ~%wavfile%~ ~%output_path%~
+						OUTER_SET count_audio += 1
+					END
+				END ELSE BEGIN
+					WARN ~WARNING: audio was not installed because sox could not be found in %sox_path%~
+				END
+			END
+
+			unix BEGIN
+				OUTER_SET installed = 1
+				ACTION_BASH_FOR ~%audio_path%~ ~.+\.ogg$~ BEGIN
+					ACTION_TO_LOWER %BASH_FOR_FILESPEC%
+					ACTION_TO_LOWER %BASH_FOR_RES%
+					OUTER_SPRINT wavfile ~%audio_path%/%BASH_FOR_RES%.wav~
+//					SILENT
+					COPY ~.../fl#inlined/null.file~ ~%wavfile%~
+					AT_NOW ~oggdec '%BASH_FOR_FILESPEC%'~
+					ACTION_IF FILE_EXISTS ~%wavfile%~ AND !FILE_SIZE ~%wavfile%~ 0 BEGIN
+						MOVE ~%wavfile%~ ~%output_path%~
+						OUTER_SET count_audio += 1
+					END ELSE BEGIN
+						OUTER_SET installed = 0
+					END
+				END
+				ACTION_IF !installed BEGIN
+					WARN "WARNING: audio was not installed because WAV files were not found. Are you sure you have oggdec installed?"
+				END
+			END
+			DEFAULT
+		END
+
+	END ELSE BEGIN
+
+		ACTION_IF !music BEGIN
+			OUTER_SPRINT ext "wav"
+		END ELSE BEGIN
+			OUTER_SPRINT ext "acm"
+		END
+
+		ACTION_BASH_FOR ~%audio_path%~ ~.+\.ogg$~ BEGIN
+			ACTION_TO_LOWER %BASH_FOR_FILESPEC%
+			ACTION_TO_LOWER %BASH_FOR_RES%
+//			SILENT
+			COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~%output_path%/%BASH_FOR_RES%.%ext%~
+			OUTER_SET count_audio += 1
+		END
+
+	END
+
+END
