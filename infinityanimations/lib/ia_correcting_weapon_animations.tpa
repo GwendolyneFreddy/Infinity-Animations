@@ -6,6 +6,8 @@
  *  This part patches vanilla creature files with new cloned weapons compatible with their animations.                                                            *
  * ============================================================================================================================================================== */
 
+PRINT @24 // ~Correcting creature weapons animations...~
+SILENT
 
 /* ==================================================================================================================================== *
  *  FUNCTION check_cre_weapon : CHECKS if weapons in creature weapon slots fit the weapon animations usable by the creature animation.  *
@@ -76,8 +78,8 @@ ACTION_PHP_EACH GW_fix_weapon_anim AS donnees => newweapon BEGIN
 	SILENT
 	ACTION_IF FILE_EXISTS_IN_GAME ~%donnees_0%.cre~ BEGIN
 
-		COPY_EXISTING ~%donnees_0%.cre~ ~override/%donnees_0%.cre~
-			TO_LOWER %DEST_RES%
+		COPY_EXISTING ~%donnees_0%.cre~ ~override~
+
 			// 1. Checks if primary and/or secondary weapon need to be patched.
 			// ----------------------------------------------------------------
 			
@@ -88,8 +90,8 @@ ACTION_PHP_EACH GW_fix_weapon_anim AS donnees => newweapon BEGIN
 			// ----------------------------
 			PATCH_IF (weap_slot > 0) BEGIN
 
-				// 3a. Clone weapon does not exist
-				// -------------------------------
+				// 3a. Clone weapon if it does not exist
+				// -------------------------------------
 				PATCH_IF NOT FILE_EXISTS_IN_GAME ~%newweapon%.itm~ BEGIN
 
 					PATCH_LOG "%newweapon%.itm does not exist"
@@ -118,7 +120,7 @@ ACTION_PHP_EACH GW_fix_weapon_anim AS donnees => newweapon BEGIN
 				PATCH_IF clone_weapon BEGIN
 					SPRINT weaponslot EVAL "WEAPON%weap_slot%"
 					ADD_CRE_ITEM ~%newweapon%~ #0 #0 #0 ~identified&unstealable&undroppable~ ~%weaponslot%~
-					PATCH_PRINT "%DEST_RES%: install clone weapon %newweapon% at slot %weaponslot%"
+					PATCH_PRINT "%donnees_0%: install cloned weapon %newweapon% at slot %weaponslot%"
 					PATCH_SILENT
 				END
 

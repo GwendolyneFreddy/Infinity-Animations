@@ -1,0 +1,1161 @@
+/* ====================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                               *
+ *                          M A I N    C O M P O N E N T    ( T o B - E E )    :    C o r r e c t i n g    C r e a t u r e    A n i m a t i o n s                         *
+ *                                                                                                                                                                        *
+ * ====================================================================================================================================================================== *
+ *  This part patches vanilla and modded creature files with new animations content.                                                                                      *
+ * ====================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                           *
+ *  -----------                                                                                                                                                           *
+ *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_correct_arrays.tph) for easier maintenance.                                           *
+ *      - No longer automatically patches cre soundsets in EE games (useless as soundset is defined by .ini files) or if soundsets conflicts resolution has been          *
+ *        successfully installed.                                                                                                                                         *
+ *      - Integrated Lollorian's patch to correct loops: white abishais were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).         *
+ *      - #956: Integrated Miloch's missing READ_BYTE fix ( http://www.shsforums.net/topic/44716-error-installing/?p=483927 ).                                            *
+ *      - #1135: Integrated Miloch's Circus orcs/ogres should not have INNOCENT class patch ( http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/ ).     *
+ *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
+ *        whenever relevant.                                                                                                                                              *
+ *      - Appends t-cre_fixer.log file only if needed.                                                                                                                    *
+ * ====================================================================================================================================================================== */
+
+/* ---------------------------- | ---------------------------- *
+ *    CREATURES           line  |    CREATURES           line  *
+ * ---------------------------- | ---------------------------- *
+ *  Balors              #   70  |  Abishai             #  768  *
+ *  Devils              #  131  |  Harpy               #  799  *
+ *  Mind Flayers        #  162  |  Bovine              #  813  *
+ *  Minotaurs           #  201  |  Scarecrow           #  827  *
+ *  Drider Females      #  244  |  Bronze Sentries     #  841  *
+ *  Drider Males        #  290  |  Green Sentries      #  865  *
+ *  Bugbears            #  336  |  Tan Barbarians      #  889  *
+ *  Bugbear Captains    #  399  |  Red Barbarians      #  917  *
+ *  Mariliths IWD       #  444  |  Yeti                #  945  *
+ *  Frost Giants        #  474  |  Lady of Pain        #  977  *
+ *  Belhifets           #  508  |  Target              #  998  *
+ *  Iron Golem IWD      #  535  |  Planetar            # 1012  *
+ *  Remorhazes          #  551  |  Mariliths BG2       # 1022  *
+ *  Verbeegs            #  571  |  Cornugons           # 1070  *
+ *  Treants             #  595  |  Shadows (Small)     # 1101  *
+ *  Black Harpies       #  629  |  Shadows (Large)     # 1121  *
+ *  Red Harpies         #  669  |  Orcs                # 1135  *
+ *  Samurai             #  710                                 *
+ * ----------------------------------------------------------- */
+
+PRINT @23 // ~Correcting creature animations...~
+SILENT
+
+OUTER_SPRINT list_cre_fixer "" // initializes t-cre_fixer.log file appending process
+
+
+/* =========================== *
+ *  Some mod misspell "Balor"  *
+ * =========================== */
+OUTER_PATCH blor BEGIN
+	GET_STRREF 8449 bl
+END
+
+ACTION_IF (~%bl%~ STRING_EQUAL ~Baalor~ = 1) BEGIN
+	STRING_SET 8449 @10005 // Balor
+	STRING_SET 8450 @10005
+END
+
+
+/* ============================== *
+ *  Loads creatures lists arrays  *
+ * ============================== */
+INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_correct_arrays.tph~
+
+
+/* ================================== *
+ *  Balors get the Tanarri animation  *
+ * ================================== */
+ACTION_PHP_EACH GW_correct_balors AS balor => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%balor%.cre~ BEGIN
+
+		COPY_EXISTING ~%balor%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				// Fix bame typos
+				READ_STRREF 0x8 nm      // Name
+				PATCH_IF (~%nm%~ STRING_EQUAL ~Baalor~ = 1) OR (~%nm%~ STRING_EQUAL ~Baloar~ = 1) BEGIN
+					WRITE_LONG 0x8 8449
+					WRITE_LONG 0xc 8450
+				END
+				WRITE_LONG 0x28 0x1100  // Animation ID (tanarri)
+				PATCH_IF BYTE_AT 0x234 < 13 BEGIN
+					WRITE_BYTE 0x234 13 // Level 1
+				END
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 160    // Class (tanar'ri)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				WRITE_BYTE 0x27b 51     // Alignment (chaotic evil by definition)
+				LPF DELETE_CRE_EFFECT
+					INT_VAR opcode_to_delete = 52 // Very bright by RGB
+				END
+				// EE games: useless as soundset is defined by .ini files - ToBEx: useless if soundsets conflicts resolution has been successfully installed.
+				PATCH_IF is_classic AND (fix_soundsets_conflicts = 0) BEGIN
+					SAY INITIAL_MEETING ~~ [TANAR03]
+					SAY MORALE ~~ [TANAR02]
+					SAY UNHAPPY_BREAKING ~~ [TANAR02]
+					SAY BATTLE_CRY1 ~~ [TANAR01]
+					SAY BATTLE_CRY2 ~~ [TANAR02]
+					SAY BATTLE_CRY3 ~~ [TANAR03]
+					WRITE_LONG BATTLE_CRY4 (0 - 1)
+					WRITE_LONG BATTLE_CRY5 (0 - 1)
+					SAY ATTACK1 ~~ [TANAR04]
+					WRITE_LONG ATTACK2 (0 - 1)
+					SAY DAMAGE ~~ [TANAR06]
+					SAY DYING ~~ [TANAR07]
+					SAY SELECT_COMMON1 ~~ [TANAR01]
+					SAY SELECT_COMMON2 ~~ [TANAR04]
+					SAY SELECT_COMMON3 ~~ [TANAR05]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_balors
+
+
+/* ========================================================= *
+ *  Devils (Pit Fiends, Gelugons) get the Tanarri animation  *
+ * ========================================================= */
+ACTION_PHP_EACH GW_correct_devils AS devil => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%devil%.cre~ BEGIN
+
+		COPY_EXISTING ~%devil%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0x1100  // Animation ID (tanarri)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 179    // Class (devil)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_devils
+
+
+/* ============== *
+ *  Mind Flayers  *
+ * ============== */
+ACTION_PHP_EACH GW_correct_mindflayers AS mflayer => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%mflayer%.cre~ BEGIN
+
+		COPY_EXISTING ~%mflayer%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				PATCH_IF BYTE_AT 0x237 = 0 BEGIN
+					WRITE_BYTE 0x237 1      // Sex (male)
+				END
+				WRITE_BYTE 0x272 124        // Race (mind_flayer)
+				PATCH_IF (BYTE_AT 0x273 = 0) OR (BYTE_AT 0x273 > 20) BEGIN
+					WRITE_BYTE 0x273 162    // Class (mind_flayer)
+				END
+				PATCH_IF BYTE_AT 0x275 > 7 BEGIN
+					WRITE_BYTE 0x275 1      // male
+				END
+				// EE games: useless as soundset is defined by .ini files - ToBEx: useless if soundsets conflicts resolution has been successfully installed.
+				PATCH_IF is_classic AND (fix_soundsets_conflicts = 0) BEGIN
+					SAY BATTLE_CRY1 ~~ [MINDF01]
+					SAY BATTLE_CRY2 ~~ [MINDF02]
+					SAY ATTACK1 ~~ [MINDF03]
+					SAY DAMAGE ~~ [MINDF06]
+					SAY DYING ~~ [MINDF07]
+					SAY SELECT_COMMON1 ~~ [MINDF01]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_mindflayers
+
+
+/* =========== *
+ *  Minotaurs  *
+ * =========== */
+ACTION_PHP_EACH GW_correct_minotaurs AS minotaur => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%minotaur%.cre~ BEGIN
+
+		COPY_EXISTING ~%minotaur%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_BYTE 0x237 1          // Sex (male)
+				WRITE_BYTE 0x271 5          // General (gianthumanoid)
+				WRITE_BYTE 0x272 113        // Race (ogre)
+				PATCH_IF BYTE_AT 0x273 > 20 BEGIN
+					WRITE_BYTE 0x273 125    // Class (ogre)
+				END
+				READ_BYTE 0x275 gd          // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1      // male
+				END
+				// EE games: useless as soundset is defined by .ini files - ToBEx: useless if soundsets conflicts resolution has been successfully installed.
+				PATCH_IF is_classic AND (fix_soundsets_conflicts = 0) BEGIN
+					SAY BATTLE_CRY1 ~~ [t-min01]
+					SAY BATTLE_CRY2 ~~ [t-min02]
+					SAY BATTLE_CRY3 ~~ [t-min09]
+					SAY ATTACK1 ~~ [t-min03]
+					SAY DAMAGE ~~ [t-min07]
+					SAY DYING ~~ [t-min10]
+					SAY SELECT_COMMON1 ~~ [t-min04]
+					SAY SELECT_COMMON2 ~~ [t-min08]
+					SAY SELECT_COMMON3 ~~ [t-min11]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_minotaurs
+
+
+/* =============================================================================================================== *
+ *  Drider Females [CtB : cbdrifal (Drider), cbdrifml (Drider Priestess), cbdrifsl (Drider) - Unknown : bpdric01]  *
+ * =============================================================================================================== */
+ACTION_FOR_EACH nb IN ~bpdric01~ ~cbdrifal~ ~cbdrifml~ ~cbdrifsl~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DRIDER_FEMALE~) // original 0x5001 - EE 0xe282
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY INITIAL_MEETING ~~ [t-drf06b]
+					SAY MORALE ~~ [t-drf08a]
+					SAY UNHAPPY_BREAKING ~~ [t-drf08a]
+					SAY BATTLE_CRY1 ~~ [t-drf01a]
+					SAY BATTLE_CRY2 ~~ [t-drf01b]
+					SAY BATTLE_CRY3 ~~ [t-drf02a]
+					SAY BATTLE_CRY4 ~~ [t-drf05a]
+					SAY ATTACK1 ~~ [t-drf03a]
+					SAY DAMAGE ~~ [t-drf07a]
+					SAY DYING ~~ [t-drf10a]
+					SAY SELECT_COMMON1 ~~ [t-drf03b]
+					SAY SELECT_COMMON2 ~~ [t-drf04a]
+					SAY SELECT_COMMON3 ~~ [t-drf04b]
+					SAY SELECT_COMMON4 ~~ [t-drf05b]
+					SAY CRITICAL_MISS ~~ [t-drf06a]
+					SAY SPELL_DISRUPTED ~~ [t-drf07b]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ================================================================================================== *
+ *  Drider Males [CtB : cbdrimml (Drider), cbdrimsl (Drider) - Unknown : bpdrif01 bpdrif02 bpdrifm1]  *
+ * ================================================================================================== */
+ACTION_FOR_EACH nb IN ~bpdrif01~ ~bpdrif02~ ~bpdrifm1~ ~cbdrimml~ ~cbdrimsl~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DRIDER_MALE~) // original 0x5002 - EE 0xe283
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY INITIAL_MEETING ~~ [t-drm06b]
+					SAY MORALE ~~ [t-drm08a]
+					SAY UNHAPPY_BREAKING ~~ [t-drm08a]
+					SAY BATTLE_CRY1 ~~ [t-drm01a]
+					SAY BATTLE_CRY2 ~~ [t-drm01b]
+					SAY BATTLE_CRY3 ~~ [t-drm02a]
+					SAY BATTLE_CRY4 ~~ [t-drm05a]
+					SAY ATTACK1 ~~ [t-drm04a]
+					SAY DAMAGE ~~ [t-drm07b]
+					SAY DYING ~~ [t-drm09a]
+					SAY SELECT_COMMON1 ~~ [t-drm03a]
+					SAY SELECT_COMMON2 ~~ [t-drm03b]
+					SAY SELECT_COMMON3 ~~ [t-drm04b]
+					SAY SELECT_COMMON4 ~~ [t-drm05b]
+					SAY CRITICAL_MISS ~~ [t-drm06a]
+					SAY SPELL_DISRUPTED ~~ [t-drm05c]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ============================================================================================ *
+ *  Bugbears [BP : bugarch, bugbear) - CtB (cbbgber1, cbbgbera, cbbgberb, cbbgberc, cbbgberd)]  *
+ * ============================================================================================ */
+ACTION_FOR_EACH nb IN ~bugarch~ ~bugbear~ ~cbbgber1~ ~cbbgbera~ ~cbbgberb~ ~cbbgberc~ ~cbbgberd~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BUGBEAR~) // original 0x500e - EE 0xe267
+				READ_BYTE  0x237 sx     // Sex
+				// If not female
+				PATCH_IF sx != 2 BEGIN
+					sx = 1
+					WRITE_BYTE 0x237 1  // Sex (male)
+				END
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned and not female
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY INITIAL_MEETING ~~ [t-bug08a]
+					SAY MORALE ~~ [t-bug09a]
+					SAY UNHAPPY_BREAKING ~~ [t-bug09a]
+					SAY BATTLE_CRY1 ~~ [t-bug01a]
+					SAY BATTLE_CRY2 ~~ [t-bug02a]
+					SAY ATTACK1 ~~ [t-bug03a]
+					SAY DAMAGE ~~ [t-bug07a]
+					SAY DYING ~~ [t-bug10a]
+					SAY SELECT_COMMON1 ~~ [t-bug01a]
+					SAY SELECT_COMMON2 ~~ [t-bug04a]
+				END
+				PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~bugarch~ = 1) BEGIN
+					REMOVE_CRE_ITEM ~helm01~ ~helmnoan~ ~bow03~ ~sw1h01~ ~arow01~ ~shld03~ ~ax1h04~ ~blun04~ // Animation consistency
+					REPLACE_CRE_ITEM ~helmnoan~ #0 #0 #0 ~NONE~ ~HELMET~        // Helmet (No Animation)
+					REPLACE_CRE_ITEM ~ax1h04~ #10 #0 #0 ~NONE~ ~WEAPON1~ EQUIP  // Throwing Axe
+					REPLACE_CRE_ITEM ~ax1h04~ #10 #0 #0 ~NONE~ ~WEAPON2~        // Throwing Axe
+					REPLACE_CRE_ITEM ~blun04~ #0 #0 #0 ~NONE~ ~WEAPON3~         // Mace
+					WRITE_BYTE 0x6e 0                                           // Large swords (was 3)
+					WRITE_BYTE 0x70 0                                           // Bows (was 1)
+					WRITE_BYTE 0x72 1                                           // Blunt weapons
+					WRITE_BYTE 0x74 3                                           // Axes
+				END
+				PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~bugbear~ = 1) BEGIN
+					REMOVE_CRE_ITEM ~helm01~ ~helmnoan~ ~bow03~ ~sw1hbug~ ~shld03~ ~blun06~ // Animation consistency
+					REPLACE_CRE_ITEM ~helmnoan~ #0 #0 #0 ~NONE~ ~HELMET~                    // Helmet (No Animation)
+					REPLACE_CRE_ITEM ~blun06~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP               // Morning Star
+					WRITE_BYTE 0x6e 1                                                       // Large swords (was 3)
+					WRITE_BYTE 0x73 3                                                       // Spiked weapons
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ======================== *
+ *  Bugbear Captains (CtB)  *
+ * ======================== */
+ACTION_FOR_EACH nb IN ~cbbgber~ ~cbbgber2~ ~cbbgberw~ ~cbbgberx~ ~cbbgbery~ ~cbbgberz~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BUGBEAR_CAPTAIN~) // original 0x500f - EE 0xe266
+				READ_BYTE  0x237 sx     // Sex
+				// If not female
+				PATCH_IF sx != 2 BEGIN
+					sx = 1
+					WRITE_BYTE 0x237 1  // Sex (male)
+				END
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned and not female
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY INITIAL_MEETING ~~ [t-bgc08a]
+					SAY MORALE ~~ [t-bgc09a]
+					SAY UNHAPPY_BREAKING ~~ [t-bgc09a]
+					SAY BATTLE_CRY1 ~~ [t-bgc01a]
+					SAY BATTLE_CRY2 ~~ [t-bgc02a]
+					SAY ATTACK1 ~~ [t-bgc03a]
+					SAY DAMAGE ~~ [t-bgc07a]
+					SAY DYING ~~ [t-bgc10a]
+					SAY SELECT_COMMON1 ~~ [t-bgc01a]
+					SAY SELECT_COMMON2 ~~ [t-bgc04a]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* =============== *
+ *  Mariliths IWD  *
+ * =============== */
+ACTION_PHP_EACH GW_correct_mariliths AS marilith => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%marilith%.cre~ BEGIN
+
+		COPY_EXISTING ~%marilith%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH_IWD~) // original 0x502a - EE 0xe25c
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
+				END
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 160    // Class (tanar'ri)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_mariliths
+
+
+/* ============================================ *
+ *  Frost Giants get the giant_frost animation  *
+ * ============================================ */
+ACTION_PHP_EACH GW_correct_frostgiants AS frostgiant => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%frostgiant%.cre~ BEGIN
+
+		COPY_EXISTING ~%frostgiant%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FROST~) // original 0x502b - EE 0xe24f
+				READ_BYTE  0x237 sx     // Sex
+				// If not female
+				PATCH_IF sx != 2 BEGIN
+					sx = 1
+					WRITE_BYTE 0x237 1  // Sex (male)
+				END
+				WRITE_BYTE 0x271 5      // General (gianthumanoid)
+				WRITE_BYTE 0x272 142    // Race (giant)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned and not female
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_frostgiants
+
+
+/* ============================================================================================= *
+ *  Belhifets [RoT : grean (Greandal) - NEJ : kiotsi (Kiotsi) - Drizzt Saga : f_bel (Belhifet)]  *
+ * ============================================================================================= */
+ACTION_FOR_EACH nb IN ~f_bel~ ~grean~ ~kiotsi~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BELHIFET~) // original 0x502f - EE 0xe256
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* =================================================== *
+ *  Iron Golem IWD [NEJ : giaearth (Knight of Auril)]  *
+ * =================================================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~giaearth.cre~ BEGIN
+
+	COPY_EXISTING ~giaearth.cre~ ~override~
+		PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+		PATCH_IF valid BEGIN
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GOLEM_IRON_IWD~) // original 0x504b - EE 0xe250
+		END
+	BUT_ONLY
+
+END
+
+
+/* =========================================================================== *
+ *  Remorhazes [SoS : cbtwrmgr (Greater Tremor Worm), cbtwrmls (Tremor Worm)]  *
+ * =========================================================================== */
+ACTION_FOR_EACH nb IN ~cbtwrmgr~ ~cbtwrmls~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~REMORHAZ~) // original 0x504c - EE 0xe253
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ============================================================================================================= *
+ *  Verbeegs [NEJ : verbdead (Verbeeg), verbeeg (Verbeeg), verbeegd (Red Toe) - TS : purang (Purang Berserker)]  *
+ * ============================================================================================================= */
+ACTION_FOR_EACH nb IN ~purang~ ~verbdead~ ~verbeeg~ ~verbeegd~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~  // These CREs need fixing because of hosed slots
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_VERBEEG~) // original 0x5050 - EE 0xe251
+			WRITE_BYTE 0x237 1      // Sex (male)
+			WRITE_BYTE 0x271 5      // General (gianthumanoid)
+			WRITE_BYTE 0x272 142    // Race (giant)
+			READ_BYTE  0x275 gd     // Gender
+			// If not summoned
+			PATCH_IF (gd != 6) BEGIN
+				WRITE_BYTE 0x275 1  // male
+			END
+		BUT_ONLY
+
+	END
+END
+
+
+/* ==================================================================================================================================== *
+ *  Treants [BP : bptreant (Treant), bptrebos (Treant Chieftain), bptreeld (Treant Elder), bptresu (Treant) - CtB : cbtreant (Treant)]  *
+ * ==================================================================================================================================== */
+ACTION_FOR_EACH nb IN ~bptreant~ ~bptrebos~ ~bptreeld~ ~bptresu~ ~cbtreant~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TREANT_DARK~) // original 0x523d - EE 0xe26b
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY BATTLE_CRY1 ~~ [t-tre01a]
+					SAY BATTLE_CRY2 ~~ [t-tre02a]
+					SAY BATTLE_CRY3 ~~ [t-tre04a]
+					SAY ATTACK1 ~~ [t-tre03a]
+					SAY DAMAGE ~~ [t-tre07a]
+					SAY DYING ~~ [t-tre09a]
+					SAY SELECT_COMMON1 ~~ [t-tre01a]
+					SAY SELECT_COMMON2 ~~ [t-tre02a]
+					SAY SELECT_COMMON3 ~~ [t-tre11a]
+					SAY CRITICAL_MISS ~~ [t-tre08a]
+					SAY SPELL_DISRUPTED ~~ [t-tre10a]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ================================================================================ *
+ *  Black Harpies [CtB : cbharpy1, cbharpya, cbharpyb, cbharpyc, cbharpyd (Harpy)]  *
+ * ================================================================================ */
+ACTION_FOR_EACH nb IN ~cbharpy1~ ~cbharpya~ ~cbharpyb~ ~cbharpyc~ ~cbharpyd~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HALFDRAGON_BLACK~) // original 0x5240 - EE 0xe269
+				WRITE_BYTE 0x237 2      // Sex (female)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY BATTLE_CRY1 ~~ [t-hdr01a]
+					SAY BATTLE_CRY2 ~~ [t-hdr01b]
+					SAY BATTLE_CRY3 ~~ [t-hdr05a]
+					SAY ATTACK1 ~~ [t-hdr03a]
+					SAY DAMAGE ~~ [t-hdr07a]
+					SAY DYING ~~ [t-hdr09a]
+					SAY SELECT_COMMON1 ~~ [t-hdr02a]
+					SAY SELECT_COMMON2 ~~ [t-hdr03b]
+					SAY SELECT_COMMON3 ~~ [t-hdr04a]
+					SAY CRITICAL_MISS ~~ [t-hdr06b]
+					SAY SPELL_DISRUPTED ~~ [t-hdr06a]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ============================================== *
+ *  Red Harpies get the halfdragon_red animation  *
+ * ============================================== */
+ACTION_PHP_EACH GW_correct_redharpies AS redharpy => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%redharpy%.cre~ BEGIN
+
+		COPY_EXISTING ~%redharpy%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HALFDRAGON_RED~) // original 0x5241 - EE 0xe26a
+				WRITE_BYTE 0x237 2      // Sex (female)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					SAY BATTLE_CRY1 ~~ [t-hdr01a]
+					SAY BATTLE_CRY2 ~~ [t-hdr01b]
+					SAY BATTLE_CRY3 ~~ [t-hdr05b]
+					SAY ATTACK1 ~~ [t-hdr04b]
+					SAY DAMAGE ~~ [t-hdr08a]
+					SAY DYING ~~ [t-hdr09c]
+					SAY SELECT_COMMON1 ~~ [t-hdr02a]
+					SAY SELECT_COMMON2 ~~ [t-hdr03b]
+					SAY SELECT_COMMON3 ~~ [t-hdr04a]
+					SAY CRITICAL_MISS ~~ [t-hdr06b]
+					SAY SPELL_DISRUPTED ~~ [t-hdr06a]
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_redharpies
+
+
+/* ================================= *
+ *  Samurai get the isair animation  *
+ * ================================= */
+ACTION_PHP_EACH GW_correct_samurais AS samurai => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%samurai%.cre~ BEGIN
+
+		COPY_EXISTING ~%samurai%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ISAIR~) // original 0x5242 - EE 0xe275
+				WRITE_BYTE 0x237 1      // Sex (male)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				// EE games: useless as soundset is defined by .ini files
+				PATCH_IF is_classic BEGIN
+					PATCH_IF SLONG_AT BATTLE_CRY1 < 1 BEGIN
+						SAY BATTLE_CRY1 ~~ [t-isa01a]
+						SAY BATTLE_CRY2 ~~ [t-isa01b]
+						SAY BATTLE_CRY3 ~~ [t-isa04b]
+						SAY BATTLE_CRY4 ~~ [t-isa05b]
+						SAY BATTLE_CRY5 ~~ [t-isa09b]
+					END
+					PATCH_IF SLONG_AT ATTACK1 < 1 BEGIN
+						SAY ATTACK1 ~~ [t-isa05a]
+					END
+					PATCH_IF SLONG_AT DAMAGE < 1 BEGIN
+						SAY DAMAGE ~~ [t-isa07]
+					END
+					PATCH_IF SLONG_AT DYING < 1 BEGIN
+						SAY DYING ~~ [t-isa09a]
+					END
+					PATCH_IF SLONG_AT SELECT_COMMON1 < 1 BEGIN
+						SAY SELECT_COMMON1 ~~ [t-isa02a]
+						SAY SELECT_COMMON2 ~~ [t-isa02b]
+						SAY SELECT_COMMON3 ~~ [t-isa04a]
+						SAY SELECT_COMMON4 ~~ [t-isa08]
+					END
+					PATCH_IF SLONG_AT CRITICAL_MISS < 1 BEGIN
+						SAY CRITICAL_MISS ~~ [t-isa03a]
+					END
+					PATCH_IF SLONG_AT SPELL_DISRUPTED < 1 BEGIN
+						SAY SPELL_DISRUPTED ~~ [t-isa03b]
+					END
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_samurais
+
+
+/* ========================================= *
+ *  Abishai get the abishai_white animation  *
+ * ========================================= */
+ACTION_PHP_EACH GW_correct_abishais AS abishai => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%abishai%.cre~ BEGIN
+
+		COPY_EXISTING ~%abishai%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ABISHAI_WHITE~) // original 0x5249 - EE 0xe28b
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 179    // Class (devil)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_abishais
+
+
+/* ===================== *
+ *  Harpy (Drizzt Saga)  *
+ * ===================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~f_harpy.cre~ BEGIN
+
+	COPY_EXISTING ~f_harpy.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~HARPY~) // original 0x5269 - EE 0xe252
+		END
+	BUT_ONLY
+
+END
+
+
+/* ====================== *
+ *  Bovine (RPG Kitpack)  *
+ * ====================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~s#bov.cre~ BEGIN 
+
+	COPY_EXISTING ~s#bov.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BOVINE_AXE_THING~) // original 0x5292 - EE depends on installation
+		END
+	BUT_ONLY
+
+END
+
+
+/* ========================= *
+ *  Scarecrow (RPG Kitpack)  *
+ * ========================= */
+ACTION_IF FILE_EXISTS_IN_GAME ~s#crow.cre~ BEGIN 
+
+	COPY_EXISTING ~s#crow.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~SCARECROW_NWN~) // original 0x5273 - EE depends on installation
+		END
+	BUT_ONLY
+
+END
+
+
+/* ================================================================================================ *
+ *  Bronze Sentries [NEJ : doomleut (Doom Lieutenant), doomwarr (Doom Warrior), lethias (Lethias)]  *
+ * ================================================================================================ */
+ACTION_FOR_EACH nb IN ~doomleut~ ~doomwarr~ ~lethias~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN 
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				PATCH_IF (is_classic AND (ia_ee_tob = 0)) BEGIN	// IA reduced animations
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_BRONZE_SMALL~) // original 0x5279 - EE depends on installation
+				END ELSE BEGIN								// Restore original IWD animations used by NEJ
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_BRONZE~)       // original 0x5328 - EE 0xe240
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ==================================== *
+ *  Green Sentries (NEJ : Doom Guards)  *
+ * ==================================== */
+ACTION_FOR_EACH nb IN ~doomguar~ ~rdundea2~ ~rdundea3~ ~rdundea4~ ~rdundead~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				PATCH_IF (is_classic AND (ia_ee_tob = 0)) BEGIN	// IA reduced animations
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_GREEN_SMALL~) // original 0x527b - EE depends on installation 
+				END ELSE BEGIN								// Restore original IWD animations used by NEJ
+					WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ANIMATED_PLATE_GREEN~)       // original 0x532a - EE 0xe242
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* =========================================================================================== *
+ *  Tan Barbarians [CtB : cbnrt001, cbnrt002, cbnrt003 (Northman), cbnrt020 (Northman Elder)]  *
+ * =========================================================================================== */
+ACTION_FOR_EACH nb IN ~cbnrt001~ ~cbnrt002~ ~cbnrt003~ ~cbnrt020~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_WARRIOR_TAN~) // original 0x5280 - EE 0xe244
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				WRITE_BYTE 0x272 1      // Race (human)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* =========================================================================================== *
+ *  Red Barbarians [CtB : cbnrt004, cbnrt005, cbnrt010 (Northman), cbnrt025 (Northman Elder)]  *
+ * =========================================================================================== */
+ACTION_FOR_EACH nb IN ~cbnrt004~ ~cbnrt005~ ~cbnrt010~ ~cbnrt025~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~BARBARIAN_WARRIOR_RED~) // original 0x5281 - EE 0xe245
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				WRITE_BYTE 0x272 1      // Race (human)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ====== *
+ *  Yeti  *
+ * ====== */
+ACTION_PHP_EACH GW_correct_yetis AS yeti => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%yeti%.cre~ BEGIN 
+
+		COPY_EXISTING ~%yeti%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~TUNDRA_YETI~) // original 0x528b - EE 0xe25d
+				READ_BYTE  0x237 sx     // Sex
+				// If not female
+				PATCH_IF sx != 2 BEGIN
+					sx = 1
+					WRITE_BYTE 0x237 1  // Sex (male)
+				END
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned and not female
+				PATCH_IF (gd != 6) AND ((gd != 2) OR (sx = 1)) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_yetis
+
+
+/* ============================== *
+ *  Lady of Pain (Planar Sphere)  *
+ * ============================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~pslady.cre~ BEGIN
+
+	COPY_EXISTING ~pslady.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~LADY_OF_PAIN~) // original 0x5c08 - EE depends on installation
+			WRITE_BYTE 0x237 2          // Sex (female)
+			SAY INITIAL_MEETING #73121  // Solar soundset (she is not Elminster)
+			SAY BATTLE_CRY1 #73123
+			SAY ATTACK1 #73122
+			SAY DAMAGE #73124
+			SAY DYING #73125
+			SAY SELECT_COMMON1 #73121
+		END
+	BUT_ONLY
+
+END
+
+
+/* ==================================================================== *
+ *  Big Picture: Target gets the wizard_eye animation (was goblin_axe)  *
+ * ==================================================================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~bptarget.cre~ BEGIN
+
+	COPY_EXISTING ~bptarget.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 0x7f38 // Animation ID (wizard_eye)
+		END
+	BUT_ONLY
+
+END
+
+
+/* ============================================== *
+ *  Planetar gets the deva_monadic (was tanarri)  *
+ * ============================================== */
+COPY_EXISTING ~planet01.cre~ ~override~
+	PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+		WRITE_LONG 0x28 0x7f3c // Animation ID (deva_monadic)
+	END
+BUT_ONLY
+
+
+/* =============== *
+ *  Mariliths BG2  *
+ * =============== */
+ACTION_PHP_EACH GW_correct_mariliths2 AS marilith2 => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%marilith2%.cre~ BEGIN
+
+		COPY_EXISTING ~%marilith2%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~MARILITH~) // original 0xe090 - EE 0xe090
+				WRITE_BYTE 0x237 2      // Sex (female)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 2  // female
+				END
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 160    // Class (tanar'ri)
+				// EE games: useless as soundset is defined by .ini files - ToBEx: useless if soundsets conflicts resolution has been successfully installed.
+				PATCH_IF is_classic AND (fix_soundsets_conflicts = 0) BEGIN
+					PATCH_IF (~demosum1 gorwom03 icmarili melsum05~ STRING_CONTAINS_REGEXP ~%SOURCE_RES%~ = 1) OR ((~demosum1 gorwom03 icmarili melsum05~ STRING_CONTAINS_REGEXP ~%SOURCE_RES%~ = 0) AND (NOT FILE_EXISTS_IN_GAME ~rr#mar01.wav~)) BEGIN
+						SAY INITIAL_MEETING #55379   // [SNAKE03]
+						SAY MORALE #61765            // No, no! I must be away! [UNEARF08]
+						SAY UNHAPPY_BREAKING #61765  // No, no, I must be away! [UNEARF08]
+						SAY BATTLE_CRY1 #61761       // I shall enjoy gutting you like the dog you are... [UNEARF04]
+						SAY BATTLE_CRY2 #61760       // Death will only be the beginning for you... [UNEARF03]
+						SAY BATTLE_CRY3 #61762       // Now the time has come for you to pay... [UNEARF05]
+						SAY ATTACK1 #55380           // [SNAKE04]
+						SAY DAMAGE #61763            // [UNEARF06]
+						SAY DYING #61764             // [UNEARF07]
+						SAY HURT #55377              // [SNAKE01]
+						SAY SELECT_COMMON1 #61758    // Your death lies here, fool! [UNEARF01]
+						SAY SELECT_COMMON2 #61759    // This is your end, I assure you. [UNEARF02]
+						SAY SELECT_COMMON3 #55378    // [SNAKE02]
+					END
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_mariliths2
+
+
+/* ====================================== *
+ *  Cornugons get the cornugon animation  *
+ * ====================================== */
+ACTION_PHP_EACH GW_correct_cornugons AS cornugon => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%cornugon%.cre~ BEGIN
+
+		COPY_EXISTING ~%cornugon%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xe0e0  // Animation ID (cornugon)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 255    // General (monster)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned
+				PATCH_IF (gd != 6) AND (gd != 9) BEGIN
+					WRITE_BYTE 0x275 1  // male
+				END
+				WRITE_BYTE 0x272 121    // Race (fiend)
+				WRITE_BYTE 0x273 179    // Class (devil)
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_correct_cornugons
+
+
+/* ====================================================================================================================================== *
+ *  Shadows (Small) [shadow01 & shadowsu (Shadow) - NEJ : shadsoul (Shadowed Soul), shatsoul (Shattered Soul), vampsoul (Vampiric Soul)]  *
+ * ====================================================================================================================================== */
+ACTION_FOR_EACH nb IN ~shadow01~ ~shadowsu~ ~shadsoul~ ~shatsoul~ ~vampsoul~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0xea10 // Animation ID (shadow_small)
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ============================== *
+ *  Shadow (Large) [Devil Shade]  *
+ * ============================== */
+ACTION_IF FILE_EXISTS_IN_GAME ~shadfi02.cre~ BEGIN
+
+	COPY_EXISTING ~shadfi02.cre~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+			WRITE_LONG 0x28 0xea20 // Animation ID (shadow_large)
+		END
+	BUT_ONLY
+
+END
+
+
+/* ============================================================================================= *
+ *  These are orcs, not ogres (Miloch's Circus orcs/ogres should not have INNOCENT class patch)  *
+ * ============================================================================================= */
+ACTION_FOR_EACH nb IN ~kchild1~ ~kchild2~ BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_BYTE 0x271 1      // General (humanoid)
+				WRITE_BYTE 0x272 143    // Race (orc)
+				WRITE_BYTE 0x273 181    // Class (orc)
+			END
+		BUT_ONLY
+
+	END
+
+END
+
+
+/* ======================== *
+ *  Append t-cre_fixer.log  *
+ * ======================== */
+ACTION_IF ("%list_cre_fixer%" STR_CMP "") BEGIN
+	APPEND_OUTER ~infinityanimations/log/t-cre_fixer.log~ ~%list_cre_fixer%~
+END

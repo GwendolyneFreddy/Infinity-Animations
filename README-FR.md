@@ -239,7 +239,7 @@ Voici le tableau des options concernées :</br></br>
 		<em>Installation automatique seulement si nécessaire [par défaut]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
+		<td><div align="center"><strong>ia_ee_missing</strong><br><br>
 		(uniquement pour les jeux EE)</td>
 		<td><ins>IA Content - Base EE Content</ins> (nouveau)<br><br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
@@ -902,11 +902,14 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
-   - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*;*ia_correcting_weapon_animations.tpa*). :wink:
+   - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*;*ia_correcting_weapon_animations.tpa*). :wink:
     - Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (*t-aniwksnd.tpa*) et résout les conflits entre soundsets d'animations de créatures (*ia_soundsets_conflicts.tpa*).
     - Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.
     - Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.
     - Ajout de la nouvelle option d'installation *ia_sort_ids* (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. : wink
+    - <ins>ia_replacing_low_animations.tpa</ins> :
+        - Re-formatage des données du fichier *t-low_fix.log* pour les rendre enfin lisibles.
+        - Ne modifie le fichier *t-cre_fixer.log* qu'en cas de besoin.
     - <ins>ia_restore_bg2_animations.tpa</ins> :
         - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.

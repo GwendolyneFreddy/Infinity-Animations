@@ -1,0 +1,102 @@
+/* ========================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                  *
+ *                     M A I N    C O M P O N E N T    ( T o B - E E )    :    M o d    C o n t e n t    C h e c k i n g                     *
+ *                                                                                                                                           *
+ * ========================================================================================================================================= *
+ *  This part checks creature animation files that megamods have overwritten, then makes sure that all needed animations will be installed.  *
+ * ========================================================================================================================================= *
+ *  change-log:                                                                                                                              *
+ *  -----------                                                                                                                              *
+ *      - Used Sam's ps_recursive_copy.tpa library that will recursively search files into a parent directory.                               *
+ * ========================================================================================================================================= */
+
+
+// Mod checks: BP, BH, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS, Sheena, Planar Sphere, RPGKits (looking for GOBLIN_ELITE_AXE animation)
+// -------------------------------------------------------------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/bg2_restores" ChildDirRegex = "goblin_elite_with_axe" FileRegex = "^mgo3a1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~bhlizkng.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~doomguar.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) OR (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~) OR (FILE_EXISTS_IN_GAME ~k#polys.spl~) OR (FILE_EXISTS_IN_GAME ~pslady.cre~) OR (FILE_EXISTS_IN_GAME ~s#crow.cre~)) AND NOT F_Exists BEGIN // AND NOT FILE_EXISTS ~infinityanimations/restore/mgo3a1.bam~
+	OUTER_SET modfail = 1
+	PRINT @3 // ~A mod has overwritten BG2 animations in your game. Please make sure you have extracted bg2_restores folder to your infinityanimations/archives folder.~
+END
+
+// Mod checks: BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS, RPG Kitpack (looking for BEETLE_BORING animation)
+// -----------------------------------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/base_anims" ChildDirRegex = "iwd_beetle_boring" FileRegex = "^mbeta1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~doomguar.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) OR (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~) OR (FILE_EXISTS_IN_GAME ~s#crow.cre~)) AND NOT F_Exists BEGIN // FILE_EXISTS ~infinityanimations/content/mbeta1.bam~ BEGIN
+	OUTER_SET modfail = 1
+	PRINT @4 // ~An installed mod requires base_anims folder to be extracted in your infinityanimations/archives folder.~
+END
+
+// Mod checks: BP, BH, CtB, NEJ, RoT, SOS, TS (looking for TUNDRA_YETI animation)
+// ------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/iwd" ChildDirRegex = "iwd_tundra_yeti" FileRegex = "^3daa1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~bhlizkng.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~doomguar.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~)) BEGIN // AND NOT F_Exists // FILE_EXISTS ~infinityanimations/content/3daa1.bam~ BEGIN
+	ACTION_IF NOT F_Exists BEGIN
+		OUTER_SET modfail = 1
+		PRINT @5 // ~An installed mod requires iwd folder to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_iwd = 1
+	END
+END
+
+// Mod checks: BP, CtB, NEJ, Planar Sphere, RoT, Sheena (looking for BUGBEAR animation) TODO Abishai TDD wardabi1
+// ------------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/bg2_iwd2" ChildDirRegex = "iwd2_bugbear" FileRegex = "^3aoa1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~doomguar.cre~) OR (FILE_EXISTS_IN_GAME ~pslady.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~k#polys.spl~)) BEGIN // AND NOT F_Exists // FILE_EXISTS ~infinityanimations/content/3aoa1.bam~ BEGIN
+	ACTION_IF NOT F_Exists BEGIN
+		OUTER_SET modfail = 1
+		PRINT @6 // ~An installed mod requires bg2_iwd2 folder to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_bg2_iwd2 = 1
+	END
+END
+
+// Mod checks: Drizzt Saga, RoT, TDD, TS (looking for MARILITH_IWD animation)
+// --------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/belhifet_and_marilith" ChildDirRegex = "iwd_marilith" FileRegex = "^3bqa1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~)) BEGIN // AND NOT F_Exists // FILE_EXISTS ~infinityanimations/content/3bqa1.bam~ BEGIN
+	ACTION_IF NOT F_Exists BEGIN
+		OUTER_SET modfail = 1
+		PRINT @7 // ~An installed mod requires belhifet_and_marilith folder to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_belhifet_and_marilith = 1
+	END
+END
+
+// Mod checks: BP, Drizzt Saga, NEJv691, RoT, TDD, TS (looking for GIANT_FROST animation)
+// --------------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/shadows_harpy_frostgiant" ChildDirRegex = "giant_frost" FileRegex = "^3bra1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~frost01.cre~) OR (FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~giantfs.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~)) BEGIN // AND NOT F_Exists // FILE_EXISTS ~infinityanimations/content/3bra1.bam~ BEGIN
+	ACTION_IF NOT F_Exists BEGIN
+		OUTER_SET modfail = 1
+		PRINT @8 // ~An installed mod requires shadows_harpy_frostgiant folder to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_shadows_harpy_frostgiant = 1
+	END
+END
+
+// Mod checks: RPG Kitpack (looking for SCARECROW_NWN and BOVINE_AXE_THING animations)
+// -----------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/nwn_01_modron" ChildDirRegex = "nwn_scarecrow" FileRegex = "^3cca1.bam$" RET F_Exists = Count END
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/nwn_misc_1" ChildDirRegex = "bovine_axe_thing" FileRegex = "^3dha1.bam$" RET F2_Exists = Count END
+ACTION_IF FILE_EXISTS_IN_GAME ~s#crow.cre~ BEGIN // AND (NOT F_Exists OR NOT F2_Exists) // FILE_EXISTS ~infinityanimations/content/3cca1.bam~ FILE_EXISTS ~infinityanimations/content/3dha1.bam~ BEGIN
+	ACTION_IF (NOT F_Exists OR NOT F2_Exists) BEGIN
+		OUTER_SET modfail = 1
+		PRINT @9 // ~An installed mod requires nwb_01_modron and nwn_misc_1 folders to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_nwn_01_modron = 1
+		OUTER_SET ia_nwn_misc_1 = 1
+	END
+END
+
+// Mod checks: Planar Sphere (looking for LADY_OF_PAIN animation)
+// --------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/wh_dr_wyv_lop" ChildDirRegex = "pst_lady_of_pain" FileRegex = "^3keg1.bam$" RET F_Exists = Count END
+ACTION_IF FILE_EXISTS_IN_GAME ~pslady.cre~ BEGIN // AND NOT F_Exists // FILE_EXISTS ~infinityanimations/content/3jyg1.bam~ BEGIN
+	ACTION_IF NOT F_Exists BEGIN
+		OUTER_SET modfail = 1
+		PRINT @10 // ~An installed mod requires wh_dr_wyv_lop folder to be extracted in your infinityanimations/archives folder.~
+	END ELSE BEGIN
+		OUTER_SET ia_wh_dr_wyv_lop = 1
+	END
+END

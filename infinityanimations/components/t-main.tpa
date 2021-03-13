@@ -1,0 +1,449 @@
+/* =================================================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                                                            *
+ *                                                                      M A I N    C O M P O N E N T    ( T o B )                                                                      *
+ *                                                                                                                                                                                     *
+ * =================================================================================================================================================================================== *
+ *  change-log:                                                                                                                                                                        *
+ *  -----------                                                                                                                                                                        *
+ *      - Split this huge component into smaller ones for more comfortable readability and maintenance.                                                                                *
+ *      - Variables needed for installation are read from infinityanimations-config-default.ini or infinityanimations-config-user.ini files.                                           *
+ *        The previous version interrupted installation when IA content was missing, asked for downloading them and to reinstall the mod. As of v6.0.0, those controls set during      *
+ *        installation have been moved into infinityanimations-config-default.ini file in infinityanimations folder. This file provides a standard installation. If players want to    *
+ *        define their own customized installation, they have to modify the variables in infinityanimations-config-default.ini and save it as infinityanimations-config-user.ini. The  *
+ *        installation process will read both .ini files and prioritize user values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation       *
+ *        failure will be prevented by reverting it back to its default value.                                                                                                         *
+ *      - Modified animations namespaces, now compatible with non-Western code pages: got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western  *
+ *        code page was detected (#50).                                                                                                                                                *
+ *      - Added new Correcting creature weapons animations routine that patches vanilla creature files with new cloned weapons compatible with their animations (#414).                *
+ *      - ToBEx compatibility: checks for ToBEx external walking sound files (#192) and resolves soundsets creature animation conflicts (#401).                                        *
+ *      - Externalized lists of creatures to be patched into arrays for easier maintenance (gw_ia_correct_arrays.tph library).                                                         *
+ *      - Used Gwendolyne's gw_install_archives function to install new animations (any extracted in /archives folder).                                                                *
+ *      - Coding simplification:                                                                                                                                                       *
+ *          Replaced READ_SHORT 0x28 and WRITE_SHORT 0x28 with READ_LONG 0x28 and WRITE_LONG 0x28.                                                                                     *
+ *          Scripts and dialogs updates: Got rid of `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` deprecated functions replaced with `DECOMPILE_AND_PATCH`.                          *
+ *                                                                                                                                                                                     *
+ *  specific fixes:                                                                                                                                                                    *
+ *  ---------------                                                                                                                                                                    *
+ *      - #213  ==> NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.                            *
+ *      - #243  ==> Patches soundsets 2da files with new animations names for consistency.                                                                                             *
+ *      - #341  ==> Strings updates: No longer fixes strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.                        *
+ * =================================================================================================================================================================================== */
+
+/* ----------------------------------------------------------- *
+ *          FEATURES                                     line  *
+ * ----------------------------------------------------------- *
+ *  Mod content checking                               #  109  *
+ *  Patching executable                                #  124  *
+ *  Replacing _LOW creature animations                 #  165  *
+ *  Patching IDS files                                 #  175  *
+ *  Scripts and dialogs updates                        #  200  *
+ *  2DA files updates                                  #  240  *
+ *  Strings updates                                    #  338  *
+ *  Restoring previously overwritten BG2 animations    #  368  *
+ *  Update .CRE animation offsets                      #  375  *
+ *  Copying new animations to the game                 #  382  *
+ *  Correcting creature animations                     #  407  *
+ *  Correcting creature weapons animations             #  414  *
+ *  Items fixes                                        #  421  *
+ * ----------------------------------------------------------- */
+
+/* DEPRECATED as of v6.0.0
+   Modified animations namespaces, now compatible with non-Western code pages: got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected.
+
+OUTER_SET t-acp = 0 // Non-Unicode code page check
+ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~ = 1) BEGIN // if Windows
+	<<<<<<<< .../infinityanimations-inlined/t-ansi1.reg
+>>>>>>>>
+	COPY ~.../infinityanimations-inlined/t-ansi1.reg~ ~infinityanimations/batch/t-ansi1.reg~
+	AT_NOW ~infinityanimations/batch/t-ansi.bat~
+	COPY ~infinityanimations/batch/t-ansi1.reg~ ~infinityanimations/batch/t-ansi2.reg~
+		REPLACE_EVALUATE ~"ACP"="\([0-9]+\)~ BEGIN
+			SET t-acp = ~%MATCH1%~
+		END ~"ACP"="1252~
+	BUT_ONLY
+	ACTION_IF t-acp != 1252 BEGIN
+		ACTION_IF NOT FILE_EXISTS ~infinityanimations/batch/t-ansi3.reg~ BEGIN
+			COPY ~infinityanimations/batch/t-ansi1.reg~ ~infinityanimations/batch/t-ansi3.reg~
+		END
+	END
+
+	ACTION_IF FILE_EXISTS ~infinityanimations/batch/t-ansi2.reg~ BEGIN
+		ACTION_IF t-acp != 1252 BEGIN
+			PRINT @2 // Your ANSI code page is set to a value of %t-acp%. Changing it to 1252 (Latin) for mod animation compatibility.
+			AT_NOW ~regedit -s infinityanimations\batch\t-ansi2.reg~
+			PRINT @3 // You must reboot to continue the installation. Reboot now? [Y]es [N]o
+			ACTION_READLN ~reply~
+			OUTER_WHILE (~%reply%~ STRING_EQUAL_CASE ~y~ = 0) BEGIN
+				PRINT @3 // You must reboot to continue the installation. Reboot now? [Y]es [N]o
+				ACTION_READLN ~reply~
+			END
+			PRINT @4 // Rebooting in a few seconds. Please close all other applications.
+			AT_NOW ~shutdown -r -c "Rebooting is required to continue installing." -t 20~
+			ACTION_READLN ~nada~
+			OUTER_WHILE ((~%nada%~ STRING_EQUAL_CASE ~y~ = 0) OR (~%nada%~ STRING_EQUAL_CASE ~y~ = 1)) BEGIN
+				PRINT @4 // Rebooting in a few seconds. Please close all other applications.
+				ACTION_READLN ~nada~
+			END
+		END
+		ACTION_IF FILE_EXISTS ~infinityanimations/batch/t-ansi3.reg~ BEGIN
+			AT_INTERACTIVE_UNINSTALL ~regedit -s infinityanimations\batch\t-ansi3.reg~
+		END
+	END
+END ELSE BEGIN
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~osx~ = 1) BEGIN //if OS X
+		FAIL @5 // This mod is not currently compatible with OS X
+	END
+END
+*/
+
+/* ========= *
+ *  If OS X  *
+ * ========= */
+
+ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~osx~ = 1) BEGIN
+	FAIL @2	// ~This mod is not currently compatible with OS X...~
+END
+
+
+/* ====================== *
+ *  Mod content checking  *
+ * ====================== */
+
+OUTER_SET modfail = 0 // Mod content checks
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_mod_content_check.tpa~
+
+ACTION_IF modfail = 1 BEGIN
+	PRINT @12   // ~NOTE: Open the mod zip file and extract the whole archives subfolders in your infinityanimations/archives folder.~
+	PRINT @13   // ~Rerun this installer once you've extracted all needed content.~
+	FAIL  @11   // ~Required content missing.~
+END
+
+
+/* ===================== *
+ *  Patching executable  *
+ * ===================== */
+
+SILENT
+OUTER_SET skip = 0 // Executable validity check
+
+COPY ~BGMain.exe~ ~BGMain.exe~
+	sz = SOURCE_SIZE
+	READ_LONG 0x40742c c1
+	READ_LONG 0x40a8da c2
+	PATCH_IF sz > 0x7536e6 BEGIN
+		READ_LONG 0x7536e7 c3
+	END ELSE BEGIN
+		c3 = 0
+	END
+	READ_BYTE 0x4595c9 c4
+BUT_ONLY
+
+ACTION_IF (c1 = 0x3db6d84) AND (c2 = 0xc6004c48) AND (c3 = 0x54464958) AND (c4 = 0xf9) AND (sz = 0x77a02e) BEGIN
+	OUTER_SET skip = 1
+	PRINT @14 // ~BGMain.exe appears to be patched already; skipping .exe modifications...~
+END ELSE BEGIN
+	ACTION_IF (c1 != 0xb48f) OR (c2 != 0x3d7c1) OR (c3 != 0x53505700) OR (sz != 0x77a02e) BEGIN
+		ACTION_IF (c1 = 0x3db6d84) AND (c2 = 0xc6004c48) AND (c3 = 0x54464958) AND (c4 = 0xfc) AND (sz = 0x77a02e) BEGIN
+			OUTER_SET skip = 0
+		END ELSE BEGIN
+			FAIL @15 // ~BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
+		END
+	END
+END
+
+ACTION_IF skip = 0 BEGIN
+	PRINT @16 // ~Patching BGMain.exe to enable new animations...~
+	SILENT
+	COPY ~BGMain.exe~ ~BGMain.exe~
+		PATCH_INCLUDE ~%MOD_FOLDER%/patch/t-exe_patch_xdrupdate.tpp~
+	BUT_ONLY
+END
+
+
+/* ==================================== *
+ *  Replacing _LOW creature animations  *
+ * ==================================== */
+
+PRINT @17 // ~Replacing _LOW creature animations (this may take a while)...~
+SILENT
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_replacing_low_animations.tpa~
+
+
+/* ==================== *
+ *  Patching IDS files  *
+ * ==================== */
+
+PRINT @18 // ~Patching IDS files...~
+SILENT
+
+OUTER_PATCH wlib BEGIN
+	WRITE_LONG 0x0 0x090a0d20
+	READ_ASCII 0x0 ws(4) // detects any whitespace
+END
+
+// Loads library sorting and rewriting ids files
+INCLUDE ~%MOD_FOLDER%/lib/gw_ids_lib.tpa~
+
+INCLUDE ~%MOD_FOLDER%/ids/t-animate.tpa~
+INCLUDE ~%MOD_FOLDER%/ids/t-anisnd.tpa~
+
+// Check for ToBEx external sound files
+// ------------------------------------
+ACTION_IF (FILE_EXISTS_IN_GAME ~aniwksnd.2da~) BEGIN
+	INCLUDE ~%MOD_FOLDER%/ids/t-aniwksnd.tpa~
+END
+
+
+/* ============================= *
+ *  Scripts and dialogs updates  *
+ * ============================= */
+
+PRINT @19 // ~Updating scripts and dialogs files...~
+SILENT
+
+COPY_EXISTING ~%tutu_scriptt%halantr.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Polymorph(MAGE_MALE_HUMAN_LOW)~ ~Polymorph(MAGE_MALE_HUMAN)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Polymorph(20992)~ ~Polymorph(25088)~
+	END
+BUT_ONLY
+
+/* DEPRECATED as of v6.0.0 because already fixed in latest NTotSC versions)
+ACTION_IF FILE_EXISTS_IN_GAME ~ntkeelor.dlg~ BEGIN	// Keelor the Dwarf (Northern Tales of the Sword Coast)
+	COPY_EXISTING ~ntkeelor.dlg~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x34 BEGIN
+			DECOMPILE_AND_PATCH BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Polymorph(FIGHTER_MALE_DWARF_LOW)~ ~Polymorph(FIGHTER_MALE_DWARF)~
+				REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Polymorph(20738)~ ~Polymorph(24834)~
+			END
+		END
+	BUT_ONLY
+END
+*/
+
+// Never Ending Journey
+// --------------------
+ACTION_IF FILE_EXISTS_IN_GAME ~dalbion.dlg~ BEGIN
+	COPY_EXISTING ~dalbion.dlg~ ~override~
+		PATCH_IF SOURCE_SIZE > 0x34 BEGIN
+			DECOMPILE_AND_PATCH BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Polymorph(IC_YUANTI3)~ ~Polymorph(YUAN-TI_PRIEST)~
+			END
+		END
+	BUT_ONLY
+END
+
+
+/* =================== *
+ *  2DA files updates  *
+ * =================== */
+
+// Gwen fix: Harmonize animations names
+// ------------------------------------
+COPY_EXISTING ~mgh2.2da~ ~override~
+	REPLACE_TEXTUALLY ~ghoul~ ~ghoul greater~
+BUT_ONLY
+
+COPY_EXISTING ~mliz.2da~ ~override~
+	REPLACE_TEXTUALLY ~2 hand~ ~elite~
+BUT_ONLY
+
+COPY_EXISTING ~mli2.2da~ ~override~
+	REPLACE_TEXTUALLY ~ 1 hand~ ~~
+BUT_ONLY
+
+COPY_EXISTING ~mno3.2da~ ~override~
+	REPLACE_TEXTUALLY ~neo-orog chief~ ~orog chieftain~
+BUT_ONLY
+
+COPY_EXISTING ~mor1.2da~ ~override~
+	REPLACE_TEXTUALLY ~^MOR1.+$~ ~%DEST_RES% / orc melee w axe /~
+BUT_ONLY
+
+COPY_EXISTING ~mor2.2da~ ~override~
+	REPLACE_TEXTUALLY ~^MOR2.+$~ ~%DEST_RES% / orc range w bow /~
+BUT_ONLY
+
+COPY_EXISTING ~msah.2da~ ~override~
+              ~msat.2da~ ~override~
+	REPLACE_TEXTUALLY ~Sahaugin~ ~sahuagin~
+BUT_ONLY
+
+COPY_EXISTING ~mska.2da~ ~override~
+	REPLACE_TEXTUALLY ~^MSKA.+$~ ~%DEST_RES% / skeleton_warrior~
+BUT_ONLY
+
+COPY_EXISTING ~mskb.2da~ ~override~
+	REPLACE_TEXTUALLY ~^MSKB.+$~ ~%DEST_RES% / skeleton_fiend~
+BUT_ONLY
+
+COPY_EXISTING ~mwig.2da~ ~override~
+	REPLACE_TEXTUALLY ~^MWIG.+$~ ~%DEST_RES% / wight_grey~
+BUT_ONLY
+
+// MCAR gets rerouted to MCWL according to devSin
+// ----------------------------------------------
+ACTION_IF FILE_EXISTS_IN_GAME mcar.2da AND NOT FILE_EXISTS_IN_GAME mcwl.2da BEGIN
+	COPY_EXISTING ~mcar.2da~ ~override/mcwl.2da~
+		REPLACE_TEXTUALLY ~^Mcar.+$~ ~%DEST_RES% / carrion crawler~
+END
+
+// Copy djinni to djinni_legs for consistency
+// ------------------------------------------
+ACTION_IF FILE_EXISTS_IN_GAME mdji.2da AND NOT FILE_EXISTS_IN_GAME mdjl.2da BEGIN
+	COPY_EXISTING ~mdji.2da~ ~override/mdjl.2da~
+		REPLACE_TEXTUALLY ~^Mdji.+$~ ~%DEST_RES% / djinni with legs~
+END
+
+// Copy mist_creature to blob_mist_creature
+// ----------------------------------------
+ACTION_IF FILE_EXISTS_IN_GAME mmis.2da AND NOT FILE_EXISTS_IN_GAME mmst.2da BEGIN
+	COPY_EXISTING ~mmis.2da~ ~override/mmst.2da~
+		REPLACE_TEXTUALLY ~^Mmis.+$~ ~%DEST_RES% / blob mist creature~
+END
+
+// Copy myconid to myconid2
+// ------------------------
+ACTION_IF FILE_EXISTS_IN_GAME mmyc.2da BEGIN
+	COPY_EXISTING ~mmyc.2da~ ~override/mmy2.2da~
+		REPLACE_TEXTUALLY ~^MMYC.+$~ ~%DEST_RES% / myconid blue~
+END
+
+// Copy orc_range2 to orc_range4
+// ------------------------------
+ACTION_IF NOT FILE_EXISTS_IN_GAME mor4.2da BEGIN
+	COPY_EXISTING ~mor2.2da~ ~override/mor4.2da~
+		REPLACE_TEXTUALLY ~^MOR2.+$~ ~%DEST_RES% / orc elite range w bow /~
+END ELSE BEGIN
+	COPY_EXISTING ~mor4.2da~ ~override~
+		REPLACE_TEXTUALLY ~^MOR4.+$~ ~%DEST_RES% / orc elite range w bow /~
+	BUT_ONLY
+END
+
+// Copy skeleton warrior to skeleton monster
+// -----------------------------------------
+ACTION_IF NOT FILE_EXISTS_IN_GAME mskt.2da BEGIN
+	COPY_EXISTING ~mska.2da~ ~override/mskt.2da~
+		REPLACE_TEXTUALLY ~^MSKA.+$~ ~%DEST_RES% / skeleton_monster~
+END ELSE BEGIN
+	COPY_EXISTING ~mskt.2da~ ~override~
+		REPLACE_TEXTUALLY ~^MSKT.+$~ ~%DEST_RES% / skeleton_monster~
+	BUT_ONLY
+END
+
+
+/* ======================================================== *
+ *  Strings updates : Deletes extra spaces and line breaks  *
+ * ======================================================== */
+
+// Gwen Fix: no longer fixes strref typos if the selected mod language is not the game language.
+ACTION_IF ("%soundset_lang%" STR_EQ "%LANGUAGE%") BEGIN
+
+	ACTION_CLEAR_ARRAY ia_fix_typos
+	ACTION_DEFINE_ASSOCIATIVE_ARRAY ia_fix_typos BEGIN
+		1154,  10000 => ytm1   // Yuan-Ti  mage     ==> Yuan-ti Mage
+		1294,  10000 => ytm2   // Yuan-Ti  mage     ==> Yuan-ti Mage
+		1323,  10001 => yt     // Yuan-Ti           ==> Yuan-ti
+		2243,  10002 => gnlcp1 // Gnoll Captain     ==> Gnoll Captain
+		19694, 10002 => gnlcp2 // Gnoll Captain     ==> Gnoll Captain
+		2258,  10003 => hobcp  // Hobgoblin Captain ==> Hobgoblin Captain
+		2268,  10004 => hobwz  // Hobgoblin Wizard  ==> Hobgoblin Wizard
+	END
+	ACTION_PHP_EACH ia_fix_typos AS strref => typo BEGIN
+		ACTION_GET_STRREF %strref% %typo%
+		OUTER_SPRINT temp_strref (AT %strref_1%)
+		ACTION_IF ("%typo%" STR_CMP "%temp_strref%") BEGIN
+//			PRINT "DEBUGGING CONTROL ==> #%strref% = %typo% - str%strref% = %temp_strref%"
+			STRING_SET_EVALUATE strref (AT %strref_1%)
+		END
+	END
+	ACTION_CLEAR_ARRAY ia_fix_typos
+
+END
+
+
+/* ================================================= *
+ *  Restoring previously overwritten BG2 animations  *
+ * ================================================= */
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_restore_bg2_animations.tpa~
+
+
+/* =============================== *
+ *  Update .CRE animation offsets  *
+ * =============================== */
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_update_cre_animation_offset.tpa~
+
+
+/* ==================================== *
+ *  Copying new animations to the game  *
+ * ==================================== */
+
+PRINT @21 // ~Copying new animations to the game (this may take a while)...~
+/*DEPRECATED as of v6.0.0
+SILENT
+ACTION_BASH_FOR ~infinityanimations/content~ ~^.+$~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~%BASH_FOR_FILE%~ BEGIN
+		WARN ~%BASH_FOR_FILE% already exists in the game and will be overwritten by IA.~
+	END
+	SILENT
+	COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~override~
+END
+VERBOSE*/
+
+//LAF ps_recursive_copy INT_VAR WarnOnOverwrite = 2 STR_VAR ParentDir = "infinityanimations/content" DestinationDir = "override" RET Count END
+LAM ~gw_install_archives~
+LAM ~gw_install_modders_content~
+
+// Resolves soundsets creature animation conflicts (Courtesy of skellytz - from his Infinity Sounds project mod).
+// --------------------------------------------------------------------------------------------------------------
+INCLUDE ~%MOD_FOLDER%/lib/ia_soundsets_conflicts.tpa~
+
+
+/* ================================ *
+ *  Correcting creature animations  *
+ * ================================ */
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_correcting_creature animations.tpa~
+
+
+/* ======================================== *
+ *  Correcting creature weapons animations  *
+ * ======================================== */
+
+INCLUDE ~%MOD_FOLDER%/lib/ia_correcting_weapon_animations.tpa~
+
+
+/* ============= *
+ *  Items fixes  *
+ * ============= */
+
+SILENT
+ACTION_IF FILE_EXISTS_IN_GAME ring99.itm AND NOT FILE_EXISTS_IN_GAME ringn99.itm BEGIN
+
+	COPY_EXISTING ~ring99.itm~ ~override/ringn99.itm~
+		PATCH_IF (%SOURCE_SIZE% > 0x71) BEGIN // file size sanity check (filters out 0 byte files i.e. ALLOW_MISSING)
+			SET opcode_to_delete = "8"
+			LPM ~DELETE_ITEM_EQEFFECT~        // remove glow
+		END
+
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ring95.itm AND NOT FILE_EXISTS_IN_GAME ringg95.itm BEGIN
+
+	COPY_EXISTING ~ring95.itm~ ~override/ringg95.itm~  // glowing version of the ring
+		PATCH_IF (%SOURCE_SIZE% > 0x71) BEGIN          // file size sanity check (filters out 0 byte files i.e. ALLOW_MISSING)
+			LPF ADD_ITEM_EQEFFECT                      // makes it glow
+				INT_VAR	opcode = 8                     // set colorglow solid
+						target = 1                     // self
+						timing = 2                     // while equipped
+						parameter1 = 0xc800            // green/blue/red/2 empty
+						parameter2 = 2                 // Major Color
+						probability1 = 100             // probability1: 100%
+			END
+		END
+
+END

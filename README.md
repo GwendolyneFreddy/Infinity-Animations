@@ -238,7 +238,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<em>Installation forced only if needed [default]</em></td>
 	</tr>
 	<tr>
-		<td><div align="center"><strong>ia_ee_restore</strong><br><br>
+		<td><div align="center"><strong>ia_ee_missing</strong><br><br>
 		(EE games only)</td>
 		<td><ins>IA Content - Base EE Content</ins> (New)<br><br>
 		- Content: all missing animations that already have animation slots in Enhanced games. Includes all relevant missing creature sounds and ini files.<br>
@@ -904,11 +904,14 @@ This component patches any changed creature animation in saved games to prevent 
 
 &#9755; <ins>c. Components specific changes and fixes</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
-    - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*, *ia_correcting_weapon_animations.tpa*). :wink:
+    - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*, *ia_correcting_weapon_animations.tpa*). :wink:
     - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
     - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - Added new *ia_sort_ids* installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. :wink:
+    - <ins>ia_replacing_low_animations.tpa</ins>:
+        - Re-formated *t-low_fix.log* file entries to be more friendly readable.
+        - Appends *t-cre_fixer.log* file only if needed.
     - <ins>ia_restore_bg2_animations.tpa</ins>:
         - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
@@ -930,7 +933,7 @@ This component patches any changed creature animation in saved games to prevent 
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_fiends_arrays.tph*" library) for easier maintenance.
     - Removed stratagems compatibility code fixed by SCSII as of v13 (February 2010 : "*Avoided a possible clash with other mods by replacing the Abishai in Diathya's group in a more compatibility-friendly way*").
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (one maurezhi was not patched).
-    - Append *t-cre_fixer.log* file only if needed.
+    - Appends *t-cre_fixer.log* file only if needed.
 - [150-175] Pit Fiends (t-pit_fiend.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_pit_fiends_arrays.tph*" library) for easier maintenance.
 - [210-230] Cambions get Isair Animation (t-cambion.tpa)
@@ -963,7 +966,7 @@ This component patches any changed creature animation in saved games to prevent 
     - BG:EE compatibility: added `IF_EXISTS` after `COPY_EXISTING` to avoid installation failure.
 - [600] More Icewind Dale II Animations (t-iwd2anims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd2_anim_arrays.tph*" library) for easier maintenance.
-    - Append *t-cre_fixer.log* file only if needed.
+    - Appends *t-cre_fixer.log* file only if needed.
 - [650] More Neverwinter Nights Animations (t-nwnanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_nwn_anim_arrays.tph*" library) for easier maintenance.
 - [710-720-760-740] More Planescape: Torment Animations (t-pstanims.tpa)

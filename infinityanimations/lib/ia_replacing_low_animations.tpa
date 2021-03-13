@@ -1,0 +1,79 @@
+/* ========================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                   *
+ *          M A I N    C O M P O N E N T    ( T o B )    :    R e p l a c i n g    _ L O W    C r e a t u r e    A n i m a t i o n s          *
+ *                                                                                                                                            *
+ * ========================================================================================================================================== *
+ *  This part replaces _LOW creature animations with new animations content.                                                                  *
+ * ========================================================================================================================================== *
+ *  change-log:                                                                                                                               *
+ *  -----------                                                                                                                               *
+ *      - Re-formated t-low_fix.log file entries to be more friendly readable.                                                                *
+ *      - Appends t-cre_fixer.log file only if needed.                                                                                        *
+ * ========================================================================================================================================== */
+
+<<<<<<<< .../infinityanimations-inlined/t-low_fix.log
+=======================================================================================================
+Creature  Old Animation                                        New Animation
+=======================================================================================================
+>>>>>>>>
+COPY ~.../infinityanimations-inlined/t-low_fix.log~   ~infinityanimations/log~
+
+
+/* ==================== *
+ *  Defines Exclusions  *
+ * ==================== */
+OUTER_SPRINT t-exc ~bpdric01 bpdrif01 bpdrif02 bpdrifm1 bugarch bugbear cbbgber cbbgber1 cbbgber2 cbbgbera cbbgberb cbbgberc cbbgberd cbbgberw cbbgberx cbbgbery cbbgberz cbdrifal cbdrifml cbdrifsl cbdrimml cbdrimsl tcbugb01 tcbugb02 tcgrell ~
+
+
+/* ========= *
+ *  Patches  *
+ * ========= */
+OUTER_SPRINT list_low ""
+OUTER_SPRINT list_cre_fixer ""
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
+
+	PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+	PATCH_IF valid BEGIN
+		SPRINT sr ~%SOURCE_RES%~
+		TO_LOWER sr
+		READ_LONG 0x28 t-old
+		PATCH_IF (((t-old > 0x4fff) AND (t-old < 0x5004)) OR   // CLERIC_MALE_xxx_LOW
+                  ((t-old > 0x500f) AND (t-old < 0x5014)) OR   // CLERIC_FEMALE_xxx_LOW
+                  ((t-old > 0x50ff) AND (t-old < 0x5104)) OR   // FIGHTER_MALE_xxx_LOW
+                  ((t-old > 0x510f) AND (t-old < 0x5114)) OR   // FIGHTER_FEMALE_xxx_LOW
+                  ((t-old > 0x51ff) AND (t-old < 0x5203)) OR   // MAGE_MALE_xxx_LOW
+                  ((t-old > 0x520f) AND (t-old < 0x5213)) OR   // MAGE_FEMALE_xxx_LOW
+                  ((t-old > 0x52ff) AND (t-old < 0x5304)) OR   // THIEF_MALE_xxx_LOW
+                  ((t-old > 0x530f) AND (t-old < 0x5314))) AND // THIEF_FEMALE_xxx_LOW
+                  (~%t-exc%~ STRING_CONTAINS_REGEXP ~%sr% ~ = 1) BEGIN
+			// These CREs need fixing because of hosed slots
+			PATCH_IF (~c6bruen c6bruen2 cor jolus p#seas1 p#seasn tirthold ~ STRING_CONTAINS_REGEXP ~%sr% ~ = 0) BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~
+			END ELSE BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+			END
+			t-new = t-old + 0x1000
+			WRITE_LONG 0x28 t-new
+			LOOKUP_IDS_SYMBOL_OF_INT t-oldt animate %t-old%
+			LOOKUP_IDS_SYMBOL_OF_INT t-newt animate %t-new%
+			LPF ~gw_format_string~ INT_VAR length = 8  STR_VAR string = EVAL "%sr%"     RET sr = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 34 STR_VAR string = EVAL "%t-oldt%" RET t-oldt = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 15 STR_VAR string = EVAL "%t-old%" hex = y RET t-old = string_new END
+			LPF ~gw_format_string~ INT_VAR length = 15 STR_VAR string = EVAL "%t-new%" hex = y RET t-new = string_new END
+
+			SPRINT list_low "%list_low%%sr%  %t-old%  %t-oldt%  %t-new%  %t-newt%%WNL%"
+		END
+	END
+
+BUT_ONLY
+
+APPEND_OUTER ~infinityanimations/log/t-low_fix.log~ ~%list_low%~
+
+
+/* ======================== *
+ *  Append t-cre_fixer.log  *
+ * ======================== */
+ACTION_IF ("%list_cre_fixer%" STR_CMP "") BEGIN
+	APPEND_OUTER ~infinityanimations/log/t-cre_fixer.log~ ~%list_cre_fixer%~
+END

@@ -1,0 +1,216 @@
+/* ============================================================================== *
+ *                                                                                *
+ *        F U N C T I O N S    &    M A C R O S    :    I D S    F I L E S        *
+ *                                                                                *
+ * ============================================================================== */
+
+/* ======================================================================================================================================= *
+ *  FUNCTION and MACRO gw_sort_hex_ids : SORTS an IDS file into numerical order - TRIE un fichier IDS en le classant par ordre numérique.  *
+ * --------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Courtesy of DavidW and Camdawg (stratagems) and adapted for specific ANIMATE.ids and ANISND.ids files.                                 *
+ * ======================================================================================================================================= */
+
+DEFINE_ACTION_FUNCTION ~gw_sort_hex_ids~
+	STR_VAR ids = ""
+BEGIN
+
+	ACTION_IF ia_sort_ids BEGIN
+
+		ACTION_CLEAR_ARRAY ids_entries
+		OUTER_SET max = 0
+
+		COPY_EXISTING ~%ids%.ids~ ~override~
+			LPM ~gw_sort_hex_ids~
+		BUT_ONLY
+
+		COPY ".../infinityanimations-inline/blank" ~override/%ids%.ids~
+			LPM ~gw_rewrite_hex_ids~
+
+	END
+
+END
+
+
+DEFINE_PATCH_MACRO ~gw_sort_hex_ids~
+BEGIN
+
+	PATCH_IF ("%SOURCE_RES%" STR_CMP "animate") BEGIN
+		SET num_cols = 3
+	END ELSE BEGIN
+		SET num_cols = 2
+	END
+
+	READ_2DA_ENTRIES_NOW ids_array num_cols //2
+
+	// top row is either 'IDS V1.0', or a single row entry, or blank
+	PATCH_IF (INDEX_BUFFER ("IDS *V1.0") >= 0) BEGIN
+		SPRINT top_row "IDS V1.0"
+	END ELSE BEGIN
+		COUNT_2DA_ROWS 1 rowcount_1
+		PATCH_IF (rowcount_1 = ids_array) BEGIN
+			SPRINT top_row " "
+		END ELSE BEGIN
+			READ_2DA_ENTRY 0 0 1 top_row
+		END
+	END
+//	PATCH_PRINT "CONTROL top_row = %top_row%"
+
+	SPRINT list ""
+	FOR (i = 0 ; i < ids_array ; ++i) BEGIN
+		READ_2DA_ENTRY_FORMER ids_array i 0 num
+		PATCH_IF IS_AN_INT num BEGIN
+			SET max = (num > max) ? num : max
+			PATCH_IF num_cols = 2 BEGIN
+				READ_2DA_ENTRY_FORMER ids_array i 1 val
+			END ELSE BEGIN
+				READ_2DA_ENTRY_FORMER ids_array i 1 2da
+				READ_2DA_ENTRY_FORMER ids_array i 2 val
+			END
+			PATCH_IF ("%val%" STRING_COMPARE_CASE DMWW_UNUSED_FOR_DELETION) BEGIN
+				PATCH_IF VARIABLE_IS_SET $ids_entries("%num%") BEGIN // This control is useless for our purpose, but...
+					SPRINT temp $ids_entries("%num%")
+					PATCH_IF VARIABLE_IS_SET 2da BEGIN
+						SPRINT $ids_entries("%num%") "%temp% %2da%"
+					END
+					SPRINT $ids_entries("%num%") "%temp% %val%"
+				END ELSE BEGIN
+					// Work around to handle sensitive case in arrays.
+					TO_UPPER %num%
+					INNER_PATCH_SAVE num ~%num%~ BEGIN REPLACE_TEXTUALLY ~^0X~ ~0x~ END
+					PATCH_IF VARIABLE_IS_SET 2da BEGIN
+					SPRINT $ids_2da("%num%") "%2da%"
+					END
+					SPRINT $ids_entries("%num%") "%val%"
+				END
+					LPF ~HEX_TO_DEC_NUMBER~ STR_VAR hexNumber = EVAL ~%num%~ RET dec_value END
+					SPRINT list "%list% %dec_value%"
+			END
+		END
+	END
+
+END	// of DEFINE_PATCH_MACRO
+
+
+/* ============================================================================================================================================ *
+ *  MACRO gw_rewrite_hex_ids : REWRITE an IDS file previously sorted into numerical order - RÉÉCRIT un fichier IDS classé par ordre numérique.  *
+ * -------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Courtesy of DavidW and Camdawg (stratagems) and adapted for specific ANIMATE.ids and ANISND.ids files.                                      *
+ * ============================================================================================================================================ */
+
+DEFINE_PATCH_MACRO ~gw_rewrite_hex_ids~
+BEGIN
+
+	INSERT_2DA_ROW 0 2 "DW_SORT_IDS_PLACEHOLDER"
+	SET rowcount = 0
+	FOR (num = 0 ; num <= max ; ++num) BEGIN
+		PATCH_IF (~%list%~ STRING_CONTAINS_REGEXP "%num%" = 0) BEGIN
+			LPF ~TO_HEX_NUMBER~ INT_VAR value = num minDigits = 4 RET hexNumber END
+			TO_UPPER %hexNumber%
+			SPRINT num EVAL "0x%hexNumber%"
+			PATCH_IF VARIABLE_IS_SET $ids_entries("%num%") BEGIN
+				PATCH_IF num_cols = 2 BEGIN
+					SPRINT entry $ids_entries("%num%")
+					INSERT_2DA_ROW rowcount 2 "%num% %entry%"
+				END ELSE BEGIN
+					SPRINT 2da $ids_2da("%num%")
+					longueur = (7 - (STRING_LENGTH ~%2da%~))  // used for better formatting
+					FOR (lg = 0 ; lg < longueur ; ++lg) BEGIN
+						SPRINT 2da EVAL "%2da% "
+					END
+					SPRINT entry $ids_entries("%num%")
+					INSERT_2DA_ROW rowcount 3 "%num% %2da%  %entry%"
+				END
+				SET rowcount+=1
+			END
+		END
+	END
+	REPLACE_TEXTUALLY "DW_SORT_IDS_PLACEHOLDER" "%top_row%"
+
+END	// of DEFINE_PATCH_MACRO
+
+
+/* ================================================================================================================================================= *
+ *  FUNCTION gw_sort_aniwksnd_2da : REWRITE aniwksnd.2da into numerical order - RÉÉCRIT le fichier aniwksnd.2da en le classant par ordre numérique.  *
+ * ================================================================================================================================================= */
+
+DEFINE_ACTION_FUNCTION ~gw_sort_aniwksnd_2da~
+BEGIN
+
+	ACTION_IF ia_sort_ids BEGIN
+
+		OUTER_SET max = 0
+
+		COPY_EXISTING ~aniwksnd.2da~ ~override~
+			LPM ~gw_sort_aniwksnd_2da~
+		BUT_ONLY
+
+		<<<<<<<< .../infinityanimations-inline/aniwksnd.2da
+2DA V1.0
+*
+ID      ANIMATION                    WALK_SOUND  WALK_NUM
+>>>>>>>>
+		COPY ~.../infinityanimations-inline/aniwksnd.2da~ ~override/aniwksnd.2da~
+			LPM ~gw_rewrite_aniwksnd_2da~
+
+	END
+
+END
+
+
+DEFINE_PATCH_MACRO ~gw_sort_aniwksnd_2da~
+BEGIN
+
+	READ_2DA_ENTRIES_NOW ids_array 4
+	SPRINT list ""
+	FOR (i = 0 ; i < ids_array ; ++i) BEGIN
+		READ_2DA_ENTRY_FORMER ids_array i 0 num
+		PATCH_IF IS_AN_INT num BEGIN
+			SET max = (num > max) ? num : max
+			READ_2DA_ENTRY_FORMER ids_array i 1 anim
+			READ_2DA_ENTRY_FORMER ids_array i 2 wksnd
+			READ_2DA_ENTRY_FORMER ids_array i 3 wknum
+			// Work around to handle sensitive case in arrays.
+			TO_UPPER %num%
+			INNER_PATCH_SAVE num ~%num%~ BEGIN REPLACE_TEXTUALLY ~^0X~ ~0x~ END
+			longueur_anim = (34 - (STRING_LENGTH ~%anim%~))   // used for better formatting
+			FOR (lg = 0 ; lg < longueur_anim ; ++lg) BEGIN
+				SPRINT anim EVAL "%anim% "
+			END
+			longueur_wksnd = (10 - (STRING_LENGTH ~%wksnd%~)) // used for better formatting
+			FOR (lg = 0 ; lg < longueur_wksnd ; ++lg) BEGIN
+				SPRINT wksnd EVAL "%wksnd% "
+			END
+/*			SPRINT $2da_anim("%num%") "%anim%"
+			SPRINT $2da_wksnd("%num%") "%wksnd%"
+			SPRINT $2da_wknum("%num%") "%wknum%"*/
+			SPRINT $2da_wkrow("%num%") "%num%  %anim%%wksnd%%wknum%"
+			LPF ~HEX_TO_DEC_NUMBER~ STR_VAR hexNumber = EVAL ~%num%~ RET dec_value END
+			SPRINT list "%list% %dec_value%"
+		END
+	END
+
+END	// of DEFINE_PATCH_MACRO
+
+
+DEFINE_PATCH_MACRO ~gw_rewrite_aniwksnd_2da~
+BEGIN
+
+	SET rowcount = 1
+	FOR (num = 0 ; num <= max ; ++num) BEGIN
+		PATCH_IF (~%list%~ STRING_CONTAINS_REGEXP "%num%" = 0) BEGIN
+			LPF ~TO_HEX_NUMBER~ INT_VAR value = num minDigits = 4 RET hexNumber END
+			TO_UPPER %hexNumber%
+			SPRINT num EVAL "0x%hexNumber%"
+			PATCH_IF VARIABLE_IS_SET $2da_wkrow("%num%") BEGIN
+/*				SPRINT anim $2da_anim("%num%")
+				SPRINT wksnd $2da_wksnd("%num%")
+				SPRINT wknum $2da_wknum("%num%")
+				INSERT_2DA_ROW rowcount 4 "%num%  %anim%  %wksnd%  %wknum%"*/
+				SPRINT wkrow $2da_wkrow("%num%")
+				INSERT_2DA_ROW rowcount 4 "%wkrow%"
+				SET rowcount+=1
+			END
+		END
+	END
+
+END	// of DEFINE_PATCH_MACRO

@@ -1,0 +1,807 @@
+/* ==================================================================================================================================================== *
+ *  v 6.0.0                                                                                                                                             *
+ *                             A R R A Y S    ( T A B L E S )    :    P A T C H    C R E A T U R E S    A N I M A T I O N S                             *
+ *                                                                                                                                                      *
+ *   Arrays used to patch vanilla and modded creature files (animation slots, sound clips...) by ia_correcting_creature animations.tpa WeiDU routine.   *
+ *                                                                                                                                                      *
+ *                    Originally designed by Gwendolyne to make Infinity Animations installation compatible with all platform games.                    *
+ *                                                                                                                                                      *
+ * ==================================================================================================================================================== *
+ *  LIST of ARRAYS - LISTE des TABLES                                                                                                                   *
+ * -----------------------------------                                                                                                                  *
+ *  - GW_correct_balors        :   LISTS vanilla and modded Balor creatures needing to be patched.                                      => line #  39   *
+ *                                 LISTE les créatures Balors du jeu et de mods nécessitant d'être modifiées.                                           *
+ *  - GW_correct_devils        :   LISTS vanilla and modded Devil creatures (Pit Fiends, Gelugons) needing to be patched.               => line # 260   *
+ *                                 LISTE les créatures Diables du jeu et de mods nécessitant d'être modifiées.                                          *
+ *  - GW_correct_mindflayers   :   LISTS vanilla and modded Mind Flayer creatures needing to be patched.                                => line # 338   *
+ *                                 LISTE les créatures Flagelleurs mentaux du jeu et de mods nécessitant d'être modifiées.                              *
+ *  - GW_correct_minotaurs     :   LISTS vanilla and modded Minotaur creatures needing to be patched.                                   => line # 412   *
+ *                                 LISTE les créatures Minotaures mentaux du jeu et de mods nécessitant d'être modifiées.                               *
+ *  - GW_correct_mariliths     :   LISTS modded Marilith (IWD animation) creatures needing to be patched.                               => line # 466   *
+ *                                 LISTE les créatures Mariliths (animation de IWD) du jeu et de mods nécessitant d'être modifiées.                     *
+ *  - GW_correct_frostgiants   :   LISTS modded Frost Giant creatures needing to be patched.                                            => line # 499   *
+ *                                 LISTE les créatures Géants du givre du jeu et de mods nécessitant d'être modifiées.                                  *
+ *  - GW_correct_redharpies    :   LISTS modded Red harpies creatures needing to be patched.                                            => line # 549   *
+ *                                 LISTE les créatures Harpies rouges du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_correct_samurais      :   LISTS modded Samurai creatures needing to be patched.                                                => line # 589   *
+ *                                 LISTE les créatures Samourais du jeu et de mods nécessitant d'être modifiées.                                        *
+ *  - GW_correct_abishais      :   LISTS modded Abishai creatures needing to be patched.                                                => line # 616   *
+ *                                 LISTE les créatures Abishais du jeu et de mods nécessitant d'être modifiées.                                         *
+ *  - GW_correct_yetis         :   LISTS modded Yeti creatures needing to be patched.                                                   => line # 659   *
+ *                                 LISTE les créatures Yétis du jeu et de mods nécessitant d'être modifiées.                                            *
+ *  - GW_correct_mariliths2    :   LISTS vanilla and modded Mariliths (BG2 animation) creatures needing to be patched.                  => line # 689   *
+ *                                 LISTE les créatures Mariliths (animation de BG2) du jeu et de mods nécessitant d'être modifiées.                     *
+ *  - GW_correct_cornugons     :   LISTS vanilla and modded Cornugon creatures needing to be patched.                                   => line # 753   *
+ *                                 LISTE les créatures Cornugons du jeu et de mods nécessitant d'être modifiées.                                        *
+ * ==================================================================================================================================================== */
+
+/* =========================================================================================== *
+ *  ARRAY GW_correct_balors : LISTS vanilla and modded Balor creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Balors get the tanarri animation.                                                          *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_balors
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_balors BEGIN
+
+// BG2
+// ---
+balor01                 => 1	// Balor
+dembal01                => 1	// id.
+dembal02                => 1	// id.
+demosum2                => 1	// id.
+dpdem01                 => 1	// Demon
+enddem03                => 1	// Balor
+gordem                  => 1	// id.
+gordemc1                => 1	// id.
+gortan1                 => 1	// Tahazzar
+hellfear                => 1	// Fear
+hellgree                => 1	// Greed
+hellprid                => 1	// Pride
+hellself                => 1	// Selfishness
+jondem02                => 1	// Balor
+jondem04                => 1	// id.
+m05demon                => 1	// id.
+melsum04                => 1	// id.
+ppdemon                 => 1	// Demon
+riftcr04                => 1	// Empathic Manifestation
+sudemde1                => 1	// Balor
+sudemde2                => 1	// id.
+sudemon                 => 1	// id.
+sudemon2                => 1	// id.
+sudemw1                 => 1	// id.
+sumtan01                => 1	// Tanar'ri
+sumtan02                => 1	// id.
+telbal1                 => 1	// Balor
+telbal2                 => 1	// id.
+udbalor                 => 1	// id.
+
+// Amber
+// -----
+m#ydemon                => 1	// Demon
+
+// atweaks
+// -------
+rr#sbalr                => 1	// Balor
+
+// BP
+// --
+finbalor                => 1	// Balor
+garg                    => 1	// Gargoyle
+orcus                   => 1	// Orcus
+
+// CtB
+// ---
+cbmalrdm                => 1	// Permatrated Mage
+
+// Drizzt Saga
+// -----------
+f_demdrg                => 1	// Greater Tanari
+f_errtu                 => 1	// Errtu
+f_tanari                => 1	// Tanari
+f_tansum                => 1	// id.
+
+// DSotSC
+// ------
+dsroach                 => 1	// Atr'Jkslad'Roa'CH
+
+// Freedom's Reign of Virtue
+// -------------------------
+decre#09                => 1	// Sataraleth
+
+// Imnesvale
+// ---------
+dubnd10                 => 1	// Demon
+
+// Improved Asylum
+// ---------------
+r#demon                 => 1	// Balor
+
+// Improved Summons
+// ----------------
+dembalsu                => 1	// Balor
+
+// Kiara-Zaiya
+// -----------
+delord                  => 1	// Demon Lord
+endragor                => 1	// Endragor
+
+// KKits
+// -----
+balorsu                 => 1	// Balor
+
+// NeJ/TS ??
+// ---------
+yoshimoa                => 1	// Hsiang
+
+// NTotSC
+// ------
+ntdemon                 => 1	// Doomsayer
+
+// Planar Sphere
+// -------------
+psdem01                 => 1	// Demon
+psdem02                 => 1	// id.
+psdem03                 => 1	// id.
+pstana01                => 1	// Tanar'ri
+pstanal                 => 1	// Tanar'ri Leader
+
+// Refinements
+// -----------
+tg#did3                 => 1	// Balor
+tg#did4                 => 1	// id.
+
+// RoT
+// ---
+asham                   => 1	// Ashamael (Marilith ???)
+caddem1                 => 1	// Tanar'ri
+caddem12                => 1	// Balor
+caddem16                => 1	// Balor Lord
+caddem17                => 1	// Xer
+caddem18                => 1	// Carethron
+caddem21                => 1	// Balor Lord
+caddem24                => 1	// Demon
+caddem25                => 1	// Carethron
+caddem4                 => 1	// Balor
+caddem8                 => 1	// Blazor
+caddem9                 => 1	// Tanar'ri
+cratzyl                 => 1	// Cratzyl
+errtu                   => 1	// Errtu
+godmari4                => 1	// Tanar'ri Lord
+heldem5                 => 1	// Crec'tur
+holytana                => 1	// Tanar'ri
+tannar                  => 1	// id.
+tannar2                 => 1	// id.
+tannar3                 => 1	// id.
+
+// Saerileth
+// ---------
+glourkis                => 1	// Glourkist
+
+// SoS
+// ---
+cbtanasu                => 1	// Tanar'ri
+
+// Spellhold Gauntlet
+// ------------------
+z#gbalor                => 1	// Balor
+
+// Sylmar - Elves vs Orcs
+// ----------------------
+zy18bala                => 1	// Balrog
+zy18balb                => 1	// id.
+zy18balc                => 1	// id.
+zy18bald                => 1	// id.
+zy18bale                => 1	// id.
+zy18balf                => 1	// id.
+zy18balg                => 1	// id.
+zy18balh                => 1	// id.
+zy18bali                => 1	// id.
+zy18balj                => 1	// id.
+zy18balk                => 1	// id.
+zy18ball                => 1	// id.
+zy18balm                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_2balor                => 1	// Balor
+z_bered                 => 1	// Beredil
+z_torta                 => 1	// Tortarinelok
+
+// TDD
+// ---
+dembalr1                => 1	// Baalor
+eastdem2                => 1	// Balor
+eastdem4                => 1	// id.
+eastdem7                => 1	// id.
+eastdem9                => 1	// id.
+errtu01                 => 1	// Errtu
+errtu02                 => 1	// id.
+errtu03                 => 1	// id.
+riattan1                => 1	// Balor
+riattan2                => 1	// id.
+riattan3                => 1	// id.
+tanarix1                => 1	// Tanar'ri
+tanarixa                => 1	// id.
+tanarixb                => 1	// id.
+tartar01                => 1	// Tartarus
+tartarus                => 1	// id.
+
+// The Grey Clan Episode One: In Candlelight
+// -----------------------------------------
+bw05jere                => 1	// Jeremias
+
+// The Vault
+// ---------
+jc_dem02                => 1	// Lestraubimat
+
+// Tower of Deception
+// ------------------
+va#balor                => 1	// Baloar
+
+// Wheels of Prophecy
+// ------------------
+dw#grbal                => 1	// Balor
+
+// Worgas the NPC
+// --------------
+w_rune                  => 1	// Demon Lord
+
+// Unknown mods
+// ------------
+acq50002                => 1	// 
+actanar                 => 1	// 
+
+END
+
+
+/* ================================================================================================================== *
+ *  ARRAY GW_correct_devils : LISTS vanilla and modded Devil creatures (Pit Fiends, Gelugons) needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------------ *
+ *  Devils get the tanarri animation.                                                                                 *
+ * ================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_devils
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_devils BEGIN
+
+// BG2
+// ---
+dempit                  => 1	// Pit Fiend
+dempit01                => 1	// id.
+dempitsu                => 1	// id.
+telpit1                 => 1	// id.
+telpit2                 => 1	// id.
+
+// BP
+// --
+rempitsu                => 1	// Pit Fiend ==> Does not see to be installed
+
+// Imnesvale
+// ---------
+dubnd11                 => 1	// Pit Demon
+
+// Improved Summons
+// ----------------
+demgelsu                => 1	// Gelugon
+
+// Planar Sphere
+// -------------
+psbaatl                 => 1	// Baatezu Leader
+
+// Refinements
+// -----------
+tg#dem1                 => 1	// Pit Fiend
+
+// RoT
+// ---
+caddem11                => 1	// Pit Fiend
+caddem18                => 1	// Carethron
+caddem25                => 1	// id.
+caddem3                 => 1	// Pit Fiend
+heldem3                 => 1	// id.
+heldem4                 => 1	// id.
+heldem5                 => 1	// Crec'tur
+
+// Spellhold Gauntlet
+// ------------------
+z#gpit01                => 1	// Pit Fiend
+z#gpitfd                => 1	// id.
+
+// Stratagems
+// ----------
+dw#bazpf                => 1	// Pit Fiend
+dw#pitsu                => 1	// id.
+
+// Tales of Anegh
+// --------------
+z_whel1                 => 1	// Infernal guard
+z_whel2                 => 1	// id.
+z_whel3                 => 1	// id.
+z_whel4                 => 1	// id.
+
+// TDD
+// ---
+dempitr1                => 1	// Pit Fiend
+dempitr2                => 1	// id.
+gelugon1                => 1	// Gelugon
+
+// Unknown mods
+// ------------
+gelugeon                => 1	// BP?
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_correct_mindflayers : LISTS vanilla and modded Mind Flayers creatures needing to be patched.  *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_correct_mindflayers
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_mindflayers BEGIN
+
+// BG2
+// ---
+damind1                 => 1	// Mind Flayer
+damind2                 => 1	// id.
+dpmon01                 => 1	// id.
+eleill01                => 1	// id.
+elmind01                => 1	// id.
+gorminc1                => 1	// id.
+gorminc2                => 1	// id.
+gorminc3                => 1	// id.
+gorminc4                => 1	// id.
+gormind                 => 1	// Ulitharid
+melsum06                => 1	// Alhoon
+mindal01                => 1	// id.
+mindfl01                => 1	// Mind Flayer
+mindul01                => 1	// Ulitharid
+mindva01                => 1	// Vampiric Illithid
+mindvam                 => 1	// id.
+ppmind01                => 1	// Ulitharid
+senill01                => 1	// Mithykyl
+senill02                => 1	// id.
+shmind                  => 1	// Mind Flayer
+udill01                 => 1	// id.
+udmind01                => 1	// id.
+udmind02                => 1	// id.
+udmind03                => 1	// id.
+udmind04                => 1	// id.
+udmind10                => 1	// id.
+udvamp                  => 1	// Vampiric Illithid
+
+// Classic Adventures
+// -------------------
+tcmdalh1                => 1	// Alhoon Leader
+tcmdalh2                => 1	// Alhoon Assistant
+tcmdalh3                => 1	// Alhoon
+
+// Exnem
+// -----
+xsmindf                 => 1	// Mind Flayer
+xsmindv                 => 1	// Vampiric Illithid
+
+// Kiara-Zaiya
+// -----------
+kz#fvamp                => 1	// Vampiric Illithid
+
+// Planar Sphere
+// -------------
+psflay1                 => 1	// Illithid
+psflay2                 => 1	// Illithid
+
+// RoT
+// ---
+alessari                => 1	// Alessarid
+godmiva1                => 1	// Vampiric Illithid
+guareye3                => 1	// Guardian of the Eye
+holymind                => 1	// Mind Flayer
+marelid                 => 1	// Marelid
+nuessa                  => 1	// Nu'essa
+
+// Unknown mods
+// ------------
+dw#ssill                => 1	// 
+
+END
+
+
+/* ================================================================================================== *
+ *  ARRAY GW_correct_minotaurs : LISTS vanilla and modded Minotaurs creatures needing to be patched.  *
+ * ================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_minotaurs
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_minotaurs BEGIN
+
+// BG2
+// ---
+garock                  => 1	// Garock
+hlmafer                 => 1	// Maferan
+icmin01                 => 1	// Minotaur
+rock                    => 1	// Rock
+slandor                 => 1	// Andorian
+uhogre03                => 1	// Minotaur
+
+// BP
+// --
+grommin                 => 1	// Halbazzer Drin
+
+// Classic Adventures
+// ------------------
+tcmin01                 => 1	// Minotaur
+tcmin02                 => 1	// id.
+tcslseer                => 1	// Overseer
+
+// Expanded Thief Stronghold
+// -------------------------
+tsnbad1                 => 1	// Gruuk the Hairy
+
+// Imnesvale
+// ---------
+duogre02                => 1	// Minotaur
+
+// Quest Pack
+// ----------
+d0qpsy09                => 1	// Sythillisian Soldier
+
+// TDD
+// ---
+minat                   => 1	// Minotaur
+
+// Tower of Deception
+// ------------------
+va#minot                => 1	// Minotaur
+
+// Uldar NPC
+// ---------
+amminot                 => 1	// Minotaur
+
+END
+
+
+/* ====================================================================================================== *
+ *  ARRAY GW_correct_mariliths : LISTS modded Mariliths (IWD animation) creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------ *
+ *  Mariliths get the marilith_iwd animation.                                                             *
+ * ====================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_mariliths
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_mariliths BEGIN
+
+// Drizzt Saga
+// -----------
+f_mari                  => 1	// Marilith
+
+// Planar Sphere
+// -------------
+psmari2                 => 1	// Marilith
+psmarile                => 1	// id.
+
+// RoT
+// ---
+caddem14                => 1	// Marilith
+garmari2                => 1	// Marilith Lord
+godmari1                => 1	// id.
+heldem2                 => 1	// Marilith
+
+// Shed's Mods
+// -----------
+sd_sif                  => 1	// Marilith
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY GW_correct_frostgiants : LISTS modded Frost Giant creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------ *
+ *  Frost Giants get the giant_frost animation.                                               *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_frostgiants
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_frostgiants BEGIN
+
+// BP
+// --
+frost01                 => 1	// Frost Giant
+
+// Drizzt Saga
+// -----------
+f_giantf                => 1	// Frost Giant
+
+// NEJ
+// ---
+giantfg                 => 1	// Frost Giant Guard
+giantfn                 => 1	// Frost Giant
+giantfs                 => 1	// Joril’s Bodyguard
+gorg                    => 1	// Gorg
+joril                   => 1	// joril
+
+// RoT
+// ---
+brefr1                  => 1	// Frost Giant
+brefr2                  => 1	// id.
+frostgg                 => 1	// Greater Frost Giant
+frostgi                 => 1	// Frost Giant
+frostgi2                => 1	// id.
+frostgi3                => 1	// id.
+frostgi4                => 1	// id.
+frostham                => 1	// Garth Frosthammer
+icebeard                => 1	// Thorin Icebeard
+zacare2                 => 1	// Zacare
+
+// TDD
+// ---
+ddfrost1                => 1	// Frost Giant
+hillfro1                => 1	// id.
+hillfro2                => 1	// id.
+hillfro3                => 1	// id.
+knord                   => 1	// Knord
+
+END
+
+
+/* ========================================================================================= *
+ *  ARRAY GW_correct_redharpies : LISTS modded Red harpies creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------------- *
+ *  Red harpies get the halfdragon_red animation.                                            *
+ * ========================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_correct_redharpies
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_redharpies BEGIN
+
+// CtB
+// ---
+cbharpy2                => 1	// Harpy
+cbharpyw                => 1	// id.
+cbharpyx                => 1	// id.
+cbharpyy                => 1	// id.
+cbharpyz                => 1	// id.
+
+// RoT
+// ---
+malar1                  => 1	// Malarchite
+malar10                 => 1	// id.
+malar11                 => 1	// Mid.
+malar12                 => 1	// Trezz
+malar15                 => 1	// Malarchite
+malar16                 => 1	// id.
+malar17                 => 1	// id.
+malar18                 => 1	// id.
+malar19                 => 1	// Zatac
+malar3                  => 1	// Tezz
+malar4                  => 1	// Malarchite
+malar5                  => 1	// id.
+malar6                  => 1	// id.
+malar7                  => 1	// id.
+malar8                  => 1	// id.
+malar9                  => 1	// Ell
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_correct_samurais : LISTS modded Samurai creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Samurais get the isair animation.                                                  *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_samurais
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_samurais BEGIN
+
+// RoT
+// ---
+chxzar                  => 1	// Chxzar
+shdwsam1                => 1	// Shadow Samurai
+shdwsam2                => 1	// Zakath
+shdwsam3                => 1	// Shadow Samurai
+shdwsam4                => 1	// Dark Guardian
+shdwsam5                => 1	// Shadow Samurai
+shdwsam6                => 1	// id.
+shdwsam7                => 1	// Fe'Raph
+shdwsam8                => 1	// Avenger
+sumsamur                => 1	// Cal'Zakath
+zacare1                 => 1	// Zacare
+
+END
+
+
+/* =================================================================================== *
+ *  ARRAY GW_correct_abishais : LISTS modded Abishai creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------------- *
+ *  Abishais get the abishai_white animation.                                          *
+ * =================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_abishais
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_abishais BEGIN
+
+// BP
+// --
+babi                    => 1	// Green Abishai ==> Does not seem to be installed
+rabi                    => 1	// Does not seem to be installed
+redabi01                => 1	// Red Abishai
+
+// Planar Sphere
+// -------------
+psbaat02                => 1	// Baatezu
+psbaat2a                => 1	// id.
+
+// RoT
+// ---
+abishai1                => 1	// Abishai
+godabis1                => 1	// Abishai Almu'd
+godabis2                => 1	// Abishai Mala'nid
+remorhaz                => 1	// Abishai
+remorle                 => 1	// Abishai Leader
+
+// Saerileth
+// ---------
+nsabish                 => 1	// Abishai
+
+// TDD
+// ---
+duegabis                => 1	// Green Abishai Guardian
+grenabi1                => 1	// Green Abishai
+wardabi1                => 1	// Silver Abishai
+wardabi2                => 1	// id.
+
+END
+
+
+/* ============================================================================= *
+ *  ARRAY GW_correct_yetis : LISTS modded Yeti creatures needing to be patched.  *
+ * ----------------------------------------------------------------------------- *
+ *  Yetis get the tundra_yeti animation.                                         *
+ * ============================================================================= */
+
+ACTION_CLEAR_ARRAY GW_correct_yetis
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_yetis BEGIN
+
+// CtB
+// ---
+cbssyeti                => 1	// Abominable Snowman
+
+// NEJ
+// ---
+yetiche2                => 1	// Yeti Chieftan
+yetichef                => 1	// Tundra Yeti
+yetineut                => 1	// id.
+yetitund                => 1	// id.
+
+// RoT
+// ---
+yeti1                   => 1	// Tundra Yeti
+yeti2                   => 1	// Rabid Yeti
+yeti3                   => 1	// Yeti Tribe Leader
+
+END
+
+
+/* =================================================================================================================== *
+ *  ARRAY GW_correct_mariliths2 : LISTS vanilla and modded Mariliths (BG2 animation) creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------------------- *
+ *  Mariliths get the marilith animation.                                                                              *
+ * =================================================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_correct_mariliths2
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_mariliths2 BEGIN
+
+// BG2
+// ---
+demosum1                => 1	// Marilith
+gorwom03                => 1	// Y'tossi
+icmarili                => 1	// Marilith
+melsum05                => 1	// id.
+
+// BP
+// --
+finmaril                => 1	// Marilith
+
+// Improved Summons
+// ----------------
+demmarsu                => 1	// Marilith
+
+// Planar Sphere
+// -------------
+psmari1                 => 1	// Marilith
+
+// RoT
+// ---
+caddem6                 => 1	// Marilith
+garmari1                => 1	// Marilith Lord
+heldem1                 => 1	// Marilith
+maril                   => 1	// id.
+shamon                  => 1	// Shamon'na
+
+// Tales of Anegh
+// --------------
+z_2spe2                 => 1	// Marilith
+
+// TDD
+// ---
+yuxbossa                => 1	// Marilith
+
+// The Unusual Oddities Shop
+// -------------------------
+r#asdemn                => 1	// Abysima
+
+// Tower of Deception
+// ------------------
+va#maril                => 1	// Astral Shard Guardian
+
+// Wheels of Prophecy
+// ------------------
+dw#grmar                => 1	// Marilith
+
+// Unknown mods
+// ------------
+yux01                   => 1	// BP ? Does not seem to be installed
+
+END
+
+
+/* ================================================================================================= *
+ *  ARRAY GW_correct_cornugons : LISTS vanilla and modded Cornugon creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Cornugons get the cornugon animation.                                                            *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_correct_cornugons
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_correct_cornugons BEGIN
+
+// BG2
+// ---
+deaddem1                => 1	// Cornugon
+demcor01                => 1	// id.
+gorbat3                 => 1	// id.
+telcor1                 => 1	// id.
+
+// Demon Summoning Ritual
+// ----------------------
+demcorsu                => 1	// Cornugon
+
+// Drizzt Saga
+// -----------
+f_corn                  => 1	// Cornugon
+f_corn02                => 1	// id.
+
+// Planar Sphere
+// -------------
+psbaat                  => 1	// Baatezu
+psbaat01                => 1	// id.
+psbaat02                => 1	// id.
+psbaat2a                => 1	// id.
+psbaatl                 => 1	// Baatezu Leader
+
+// RoT
+// ---
+caddem15                => 1	// Cornugon
+caddem23                => 1	// id.
+caddem7                 => 1	// id.
+cambion                 => 1	// id.
+cultmo2                 => 1	// id.
+rahvin_r                => 1	// Rah'vin
+xsadfae                 => 1	// Xsad'fae
+zagorr                  => 1	// Za'gorr
+
+// Saerileth
+// ---------
+nscornug                => 1	// Cornugon
+nsdemon1                => 1	// Devil
+nsmaril                 => 1	// id
+
+// Tales of Anegh
+// --------------
+z_daemo                 => 1	// Arazitorinaro
+
+END

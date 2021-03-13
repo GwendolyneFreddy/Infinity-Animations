@@ -1,0 +1,517 @@
+/* ======================================================================================================== *
+ *  v 6.0.0                                                                                                 *
+ *                                                                                                          *
+ *       M A I N    C O M P O N E N T    ( T o B )    -    P A T C H I N G    A N I W K S N D . 2 D A       *
+ *                                                                                                          *
+ * ======================================================================================================== */
+
+SILENT
+
+/* =========== *
+ *  Patch 2DA  *
+ * =========== */
+
+COPY_EXISTING ~aniwksnd.2da~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~DEMIGORGON~                                           ~DEMOGORGON~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~REVEANT~                                              ~REVENANT~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~WOLF_VAMPIRE~                                         ~WOLF_VAMPIRIC~                       // harmonized with ANISND.IDS
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SAHAUGIN~                                             ~SAHUAGIN~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~AMISH_SOLDIER~                                        ~AMNIAN_SOLDIER~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~HULA_WIZARD~                                          ~IRENICUS_ROBED~                      // renamed to avoid conflict with EE games.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ANTISOLAR~                                            ~DEVA_MONADIC~                        // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~FIRE_GIANT~                                           ~GIANT_FIRE~                          // id.
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_ETTIN~                                             ~ETTIN~                               // renamed to avoid conflict with EE games
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE050[%ws%]+IC_LICHBLACK[%ws%]+WAL_09[%ws%]+4~       ~0xE050  LICH_BLACK                     TERRAIN     *~  // id.	TODO OR WAL_24
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE070[%ws%]+IC_MINOTAUR[%ws%]+WAL_09[%ws%]+4~        ~0xE070  MINOTAUR                       WAL_30      4~  // id. - from 0xe070.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE080[%ws%]+IC_MUMMY[%ws%]+WAL_09[%ws%]+4~           ~0xE080  MUMMY                          WAL_10      4~  // id. - from 0xe080.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE090[%ws%]+IC_MERILITH[%ws%]+WAL_09[%ws%]+4~        ~0xE090  MARILITH                       *           *~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE0B0[%ws%]+IC_TROLL1[%ws%]+WAL_09[%ws%]+4~          ~0xE0B0  TROLL_BLUE                     WAL_24      4~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_CORNUGONSKI~                                       ~CORNUGON~                            // renamed to avoid conflict with EE games
+REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_ICE_GOLEM~                                         ~GOLEM_ICE~                           // id. VOIR pas wal_09
+//0xE0F0  GOLEM_ICE                      WAL_09      4
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GLAB~                                              ~GLABREZU~                            // id.
+/* TODO
+0xE0E0  CORNUGON                       WAL_09      4		or WAL_30 ???
+0xE0F1  GLABREZU                       WAL_09      4		or WAL_30 ???
+*/
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE0F2[%ws%]+IC_WAILING_VIRGIN[%ws%]+WAL_09[%ws%]+4~  ~0xE0F2  WAILING_VIRGIN                 *           *~   // id. + remove walking sound (was WAL_09  4)
+
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GOBLIN~                                            ~GOBLIN~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GOBLINELITE~                                          ~GOBLIN_ELITE~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE500[%ws%]+IC_LIZARDCASTER1[%ws%]+WAL_09[%ws%]+4~   ~0xE500  LIZARD_MAN_ELITE               WAL_24      4~  // former LIZARDMAN_BROWN - from 0xe500.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_MYCONID2~                                          ~MYCONID_BLUE~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_MYCONID~                                           ~MYCONID_RED~
+/*TODO
+0xE600  MYCONID_RED                    WAL_09      4		or WAL_30 ???
+0xE610  MYCONID_BLUE                   WAL_09      4		or WAL_30 ???
+*/
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_OROG1~                                             ~OROG~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_OROG2~                                             ~OROG_ELITE~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_OROG3~                                             ~OROG_CHIEFTAIN~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE800[%ws%]+IC_ORC_MELEE1[%ws%]+WAL_09[%ws%]+4~      ~0xE800  ORC_MELEE                      WAL_24      4~  // same sound clip as dragons ans demons?!? A bit excessive, isn't it?
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE810[%ws%]+IC_ORC_RANGE2[%ws%]+WAL_09[%ws%]+4~      ~0xE810  ORC_RANGE                      WAL_24      4~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE820[%ws%]+IC_ORC_MELEE3[%ws%]+WAL_09[%ws%]+4~      ~0xE820  ORC_ELITE_MELEE                WAL_24      4~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE830[%ws%]+IC_ORC_RANGE4[%ws%]+WAL_09[%ws%]+4~      ~0xE830  ORC_ELITE_RANGE                WAL_24      4~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE840[%ws%]+IC_ORC_SHAMAN[%ws%]+WAL_09[%ws%]+4~      ~0xE840  ORC_SHAMAN                     WAL_24      4~  // id.
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE900[%ws%]+IC_SALAMANDER[%ws%]+WAL_09[%ws%]+4~      ~0xE900  SALAMANDER_FIRE                *           *~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE910[%ws%]+IC_SALAMANDER2[%ws%]+WAL_09[%ws%]+4~     ~0xE910  SALAMANDER_FROST               *           *~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_SHROOM~                                            ~SHRIEKER~
+/*TODO
+0xEA00  SHRIEKER                       WAL_09      4
+walk_sound=-
+*/
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xEB00[%ws%]+IC_SKELETON0[%ws%]+WAL_09[%ws%]+4~       ~0xEB00  SKELETON_MONSTER               WAL_19      5~  // harmonized with EE games- from 0xeb00.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xEB10[%ws%]+IC_SKELETONA[%ws%]+WAL_09[%ws%]+4~       ~0xEB10  SKELETON_WARRIOR               WAL_19      5~  // harmonized with EE games - from 0xeb10.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xEB20[%ws%]+IC_SKELETONB[%ws%]+WAL_09[%ws%]+4~       ~0xEB20  SKELETON_FIEND                 WAL_19      5~  // harmonized with EE games - from 0xeb20.ini
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xED00[%ws%]+IC_YUANTI[%ws%]+WAL_09[%ws%]+4~          ~0xED00  YUAN-TI                        *           *~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xED10[%ws%]+IC_YUANTI2[%ws%]+WAL_09[%ws%]+4~         ~0xED10  YUAN-TI_ELITE                  *           *~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xED20[%ws%]+IC_YUANTI3[%ws%]+WAL_09[%ws%]+4~         ~0xED20  YUAN-TI_PRIEST                 *           *~
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5000[%ws%]+CLERIC_MALE_HUMAN_LOW~                   ~0x6410  CLERIC_MALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5001[%ws%]+CLERIC_MALE_ELF_LOW~                     ~0x6412  CLERIC_MALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5002[%ws%]+CLERIC_MALE_DWARF_LOW~                   ~0x6414  CLERIC_MALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5003[%ws%]+CLERIC_MALE_HALFLING_LOW~                ~0x6416  CLERIC_MALE_HALFLING_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5010[%ws%]+CLERIC_FEMALE_HUMAN_LOW~                 ~0x6411  CLERIC_FEMALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5011[%ws%]+CLERIC_FEMALE_ELF_LOW~                   ~0x6413  CLERIC_FEMALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5012[%ws%]+CLERIC_FEMALE_DWARF_LOW~                 ~0x6415  CLERIC_FEMALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5013[%ws%]+CLERIC_FEMALE_HALFLING_LOW~              ~0x6417  CLERIC_FEMALE_HALFLING_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5100[%ws%]+FIGHTER_MALE_HUMAN_LOW~                  ~0x6420  FIGHTER_MALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5101[%ws%]+FIGHTER_MALE_ELF_LOW~                    ~0x6422  FIGHTER_MALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5102[%ws%]+FIGHTER_MALE_DWARF_LOW~                  ~0x6424  FIGHTER_MALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5103[%ws%]+FIGHTER_MALE_HALFLING_LOW~               ~0x6426  FIGHTER_MALE_HALFLING_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5110[%ws%]+FIGHTER_FEMALE_HUMAN_LOW~                ~0x6421  FIGHTER_FEMALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5111[%ws%]+FIGHTER_FEMALE_ELF_LOW~                  ~0x6423  FIGHTER_FEMALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5112[%ws%]+FIGHTER_FEMALE_DWARF_LOW~                ~0x6425  FIGHTER_FEMALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5113[%ws%]+FIGHTER_FEMALE_HALFLING_LOW~             ~0x6427  FIGHTER_FEMALE_HALFLING_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5200[%ws%]+MAGE_MALE_HUMAN_LOW~                     ~0x6430  MAGE_MALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5201[%ws%]+MAGE_MALE_ELF_LOW~                       ~0x6432  MAGE_MALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5202[%ws%]+MAGE_MALE_DWARF_LOW~                     ~0x6434  MAGE_MALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5210[%ws%]+MAGE_FEMALE_HUMAN_LOW~                   ~0x6431  MAGE_FEMALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5211[%ws%]+MAGE_FEMALE_ELF_LOW~                     ~0x6433  MAGE_FEMALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5212[%ws%]+MAGE_FEMALE_DWARF_LOW~                   ~0x6435  MAGE_FEMALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5300[%ws%]+THIEF_MALE_HUMAN_LOW~                    ~0x6440  THIEF_MALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5301[%ws%]+THIEF_MALE_ELF_LOW~                      ~0x6442  THIEF_MALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5302[%ws%]+THIEF_MALE_DWARF_LOW~                    ~0x6444  THIEF_MALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5303[%ws%]+THIEF_MALE_HALFLING_LOW~                 ~0x6446  THIEF_MALE_HALFLING_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5310[%ws%]+THIEF_FEMALE_HUMAN_LOW~                  ~0x6441  THIEF_FEMALE_HUMAN_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5311[%ws%]+THIEF_FEMALE_ELF_LOW~                    ~0x6443  THIEF_FEMALE_ELF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5312[%ws%]+THIEF_FEMALE_DWARF_LOW~                  ~0x6445  THIEF_FEMALE_DWARF_BG1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0x5313[%ws%]+THIEF_FEMALE_HALFLING_LOW~               ~0x6447  THIEF_FEMALE_HALFLING_BG1~
+
+BUT_ONLY
+
+
+/* ============ *
+ *  Append 2DA  *
+ * ============ */
+
+APPEND ~aniwksnd.2da~ ~0x0001  FIRE_RING_BRIGHT               *           *~    UNLESS ~^0x0001~
+APPEND ~aniwksnd.2da~ ~0x1001  FIEND_GREEN                    WAL_09      4~    UNLESS ~^0x1001~           // former NABASSU    - same as 0x1100 TANARRI
+APPEND ~aniwksnd.2da~ ~0x1002  FIEND_BLUE                     WAL_09      4~    UNLESS ~^0x1002~           // former DEMON_BLUE - same as 0x1100 TANARRI
+APPEND ~aniwksnd.2da~ ~0x1003  WYVERN_WHITE_BIG               WAL_17      2~    UNLESS ~^0x1003~           // same as 0x1000 WYVERN_BIG
+APPEND ~aniwksnd.2da~ ~0x100A  WYRMLING_ALBINO                WAL_17      2~    UNLESS ~^0x100[Aa]~        // same as 0x1000 WYVERN_BIG
+APPEND ~aniwksnd.2da~ ~0x100B  FIEND_RED                      WAL_09      4~    UNLESS ~^0x100[Bb]~        // same as 0x1100 TANARRI
+APPEND ~aniwksnd.2da~ ~0x100C  TUNNEL_WORM                    WAL_13      4~    UNLESS ~^0x100[Cc]~        // same as 0xA100 CARRION_CRAWLER
+
+APPEND ~aniwksnd.2da~ ~0x1101  DRAGON_WHITE                   WAL_09      4~    UNLESS ~^0x1101~           // former DRAGON_WHITE - same as 0x1200 DRAGON_RED
+APPEND ~aniwksnd.2da~ ~0x1103  DRAGON_GREEN_IWD               WAL_09      4~    UNLESS ~^0x1103~           // same as dragons
+APPEND ~aniwksnd.2da~ ~0x1306  DRAGON_RED_JUVENILE            WAL_09      4~    UNLESS ~^0x1306~           // same as dragons
+APPEND ~aniwksnd.2da~ ~0x1307  DRAGON_GREEN_JUVENILE          WAL_09      4~    UNLESS ~^0x1307~           // same as dragons
+APPEND ~aniwksnd.2da~ ~0x1308  GIANT_HILL                     WAL_09      4~    UNLESS ~^0x1308~           // from 0xe293.ini
+APPEND ~aniwksnd.2da~ ~0x1309  ELEMENTAL_SUNNIS_WOW           WAL_30      4~    UNLESS ~^0x1309~           // Modders content: Ulb's Animation Pack - same as 0x7300 ELEMENTAL_EARTH
+APPEND ~aniwksnd.2da~ ~0x130A  ELEMENTAL_ZAAMAN_WOW           WAL_30      4~    UNLESS ~^0x130[Aa]~        // Modders content: Ulb's Animation Pack - same as 0x7310 ELEMENTAL_FIRE
+
+APPEND ~aniwksnd.2da~ ~0x5001  DRIDER_FEMALE                  WAL_14      5~    UNLESS ~^0x5001~           // from 0xe282.ini
+APPEND ~aniwksnd.2da~ ~0x5002  DRIDER_MALE                    WAL_14      5~    UNLESS ~^0x5002~           // from 0xe283.ini
+APPEND ~aniwksnd.2da~ ~0x500E  BUGBEAR                        WAL_24      4~    UNLESS ~^0x500{Ee]~        // from 0xE266.ini
+APPEND ~aniwksnd.2da~ ~0x500F  BUGBEAR_CAPTAIN                WAL_24      4~    UNLESS ~^0x500[Ff]~        // from 0xE267.ini
+//TODO APPEND ~aniwksnd.2da~ ~0x5010  CHIMERA		~    UNLESS ~^0x5010~           // same as
+APPEND ~aniwksnd.2da~ ~0x5011  ELEMENTAL_WATER_SMALL          WAL_01      5~    UNLESS ~^0x5011~           // same as 0x5039 ELEMENTAL_WATER
+APPEND ~aniwksnd.2da~ ~0x5013  FEYR_GREATER                   *           *~    UNLESS ~^0x5013~
+APPEND ~aniwksnd.2da~ ~0x5014  GIANT_FOMORIAN                 WAL_09      4~    UNLESS ~^0x5014~           // from 0xE26f.ini
+APPEND ~aniwksnd.2da~ ~0x5018  GOBLIN_WORG                    WAL_31      1~    UNLESS ~^0x5018~           // former GOBLIN_WORGRIDER         - from 0xe272.ini
+APPEND ~aniwksnd.2da~ ~0x5019  GOBLIN_WORG_CAPTAIN            WAL_31      1~    UNLESS ~^0x5019~           // former GOBLIN_WORGRIDER_CAPTAIN - from 0xe273.ini
+APPEND ~aniwksnd.2da~ ~0x502A  MARILITH_IWD                   *           *~    UNLESS ~^0x502[Aa]~        // same as 0xE090 MARILITH
+APPEND ~aniwksnd.2da~ ~0x502B  GIANT_FROST                    TERRAIN     *~    UNLESS ~^0x502[Bb]~        // former FROST_GIANT              - same as 0x7F3E GIANT_FIRE
+APPEND ~aniwksnd.2da~ ~0x502F  BELHIFET                       WAL_30      4~    UNLESS ~^0x502[Ff]~        // from 0xe256.ini
+APPEND ~aniwksnd.2da~ ~0x5032  BEBILITH_NWN                   WAL_14      5~    UNLESS ~^0x5032~           // same as 0x7A00 SPIDER_GIANT
+//TODO APPEND ~aniwksnd.2da~ ~0x5033  HAMATULA_NWN		~    UNLESS ~^0x5033~            // same as
+APPEND ~aniwksnd.2da~ ~0x5035  PIT_FIEND_NWN                  WAL_09      4~    UNLESS ~^0x5035~           // same as 0x1100 TANARRI and other demons
+APPEND ~aniwksnd.2da~ ~0x5037  ELEMENTAL_EARTH_IWD            WAL_30      4~    UNLESS ~^0x5037~           // same as 0x7300 ELEMENTAL_EARTH
+APPEND ~aniwksnd.2da~ ~0x5038  ELEMENTAL_FIRE_IWD             WAL_30      4~    UNLESS ~^0x5038~           // same as 0x7310 ELEMENTAL_FIRE
+APPEND ~aniwksnd.2da~ ~0x5039  ELEMENTAL_WATER                WAL_01      5~    UNLESS ~^0x5039~           // from 0xe24d.ini
+APPEND ~aniwksnd.2da~ ~0x504A  GIANT_FIRE_IWD                 TERRAIN     *~    UNLESS ~^0x504[Aa]~        // former FIRE_GIANT_IWD - same as 0x7F3E GIANT_FIRE
+APPEND ~aniwksnd.2da~ ~0x504B  GOLEM_IRON_IWD                 WAL_MT      4~    UNLESS ~^0x504[Bb]~        // same as 0x7F04 GOLEM_IRON
+//TODO APPEND ~aniwksnd.2da~ ~0x504C  REMORHAZ		~    UNLESS ~^0x504[Cc]~         // same as
+APPEND ~aniwksnd.2da~ ~0x5050  GIANT_VERBEEG                  WAL_09      4~    UNLESS ~^0x5050~           // former VERBEEG - from 0xe251.ini
+APPEND ~aniwksnd.2da~ ~0x5052  MARILITH_DARK                  *           *~    UNLESS ~^0x5052~           // same as 0xE090 MARILITH
+APPEND ~aniwksnd.2da~ ~0x510B  DRAGON_WHITE_YOUNG             WAL_09      4~    UNLESS ~^0x510[Bb]~        // same as 0xe28e.ini
+APPEND ~aniwksnd.2da~ ~0x510C  DRAGON_GREEN_YOUNG             WAL_09      4~    UNLESS ~^0x510[Cc]~        // from 0xe28e.ini
+APPEND ~aniwksnd.2da~ ~0x510D  DRAGON_SILVER_YOUNG            WAL_09      4~    UNLESS ~^0x510[Dd]~        // from 0xe28d.ini
+APPEND ~aniwksnd.2da~ ~0x5111  GOBLIN_WORG_ELITE              WAL_31      1~    UNLESS ~^0x5111~           // from 0xe288.ini
+APPEND ~aniwksnd.2da~ ~0x5112  GOBLIN_WORG_SHAMAN             WAL_31      1~    UNLESS ~^0x5112~           // from 0xe289.ini
+/*TODO 
+APPEND ~aniwksnd.2da~ ~0x5117  ETTIN_GHOST		~    UNLESS ~^0x5117~           // WAL_09 ??? 0xe292.ini
+APPEND ~aniwksnd.2da~ ~0x5117  ETTIN_GHOST	WAL_09	4~    UNLESS ~^0x5117~           // from 0xe292.ini
+	APPEND ~aniwksnd.2da~ ~0x511E ELEMENTAL_ICE_WOW		~    UNLESS ~^0x511[Ee]~        // Modders content: Ulb's Animation Pack
+*/
+APPEND ~aniwksnd.2da~ ~0x523D  TREANT-DARK                    WAL_30      4~    UNLESS ~^0x523[Dd]~        // former DARK_TREANT       - from 0xe26b.ini
+APPEND ~aniwksnd.2da~ ~0x5240  HALFDRAGON_BLACK               WAL_24      4~    UNLESS ~^0x5240~           // former HALF-DRAGON_BLACK - same as 0x5241 HALFDRAGON_RED
+APPEND ~aniwksnd.2da~ ~0x5241  HALFDRAGON_RED                 WAL_24      4~    UNLESS ~^0x5241~           // former HALF-DRAGON_RED   - from 0xe26a.ini
+APPEND ~aniwksnd.2da~ ~0x5242  ISAIR                          WAL_24      4~    UNLESS ~^0x5242~
+APPEND ~aniwksnd.2da~ ~0x5243  MADAE                          WAL_24      4~    UNLESS ~^0x5243~
+APPEND ~aniwksnd.2da~ ~0x5244  MALARITE                       TERRAIN     *~    UNLESS ~^0x5244~
+APPEND ~aniwksnd.2da~ ~0x5245  SHENRICAL                      WAL_24      4~    UNLESS ~^0x5245~           // same as 0x5241 HALFDRAGON_RED
+APPEND ~aniwksnd.2da~ ~0x5246  WEREBADGER                     WAL_24      4~    UNLESS ~^0x5246~           // from 0xe27d.ini
+APPEND ~aniwksnd.2da~ ~0x5247  WERERAT                        WAL_24      4~    UNLESS ~^0x5247~           // from 0xe27e.ini
+APPEND ~aniwksnd.2da~ ~0x5248  YUAN-TI_HALF                   WAL_09      4~    UNLESS ~^0x5248~           // former YUAN-TI_HALFBREED - same as 0xED00 YUAN-TI
+APPEND ~aniwksnd.2da~ ~0x5249  ABISHAI_WHITE                  WAL_24      4~    UNLESS ~^0x5249~           // from 0xe28b.ini
+//TODO APPEND ~aniwksnd.2da~ ~0x524A  BOAR_ARCTIC		~    UNLESS ~^0x524[Aa]~
+/*As per engine behaviour, a sound file will be loaded with name <WALK_SOUND><random>, where <random> is mapped 0 -> a, 1 -> b, 2 -> c, ..., (WALK_NUM - 1) -> nul.
+walk_sound=*
+*/
+APPEND ~aniwksnd.2da~ ~0x524F  FEYR                           *           *~    UNLESS ~^0x524[Ff]~
+APPEND ~aniwksnd.2da~ ~0x5252  GOBLIN_CAPTAIN                 WAL_26      2~    UNLESS ~^0x5252~           // same as 0xE420 IC_GOBLINELITE_AXE
+APPEND ~aniwksnd.2da~ ~0x5253  GOBLINELITE_AXE_GREEN          WAL_26      2~    UNLESS ~^0x5253~           // former GOBLINELITE_AXE_IWD - same as 0xE420 IC_GOBLINELITE_AXE
+APPEND ~aniwksnd.2da~ ~0x5254  GOBLINELITE_BOW_GREEN          WAL_26      2~    UNLESS ~^0x5254~           // former GOBLINELITE_BOW_IWD - same as 0xE430 IC_GOBLINELITE_BOW
+APPEND ~aniwksnd.2da~ ~0x5257  GOBLIN_SHAMAN                  WAL_26      2~    UNLESS ~^0x5257~           // same as 0xE420 IC_GOBLINELITE_AXE
+APPEND ~aniwksnd.2da~ ~0x5258  GOBLIN_AXE_GREEN               WAL_26      2~    UNLESS ~^0x5258~           // former GOBLIN_AXE_IWD - same as 0xE400 IC_GOBLIN_AXE
+APPEND ~aniwksnd.2da~ ~0x5259  GOBLIN_BOW_GREEN               WAL_26      2~    UNLESS ~^0x5259~           // former GOBLIN_BOW_IWD - same as 0xE410 IC_GOBLIN_BOW
+APPEND ~aniwksnd.2da~ ~0x525A  HOOK_HORROR                    WAL_30      4~    UNLESS ~^0x525[Aa]~        // from 0xe274.ini
+APPEND ~aniwksnd.2da~ ~0x525B  KEG1                           *           *~    UNLESS ~^0x525[Bb]~        // former KEG_1, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x525C  KEG2                           *           *~    UNLESS ~^0x525[Cc]~        // former KEG_2, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x525D  KEG3                           *           *~    UNLESS ~^0x525[Dd]~        // former KEG_3, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x525E  LEMURE                         WAL_15      5~    UNLESS ~^0x525[Ee]~        // from 0xe276.ini
+APPEND ~aniwksnd.2da~ ~0x525F  OROG_SHAMAN                    WAL_30      4~    UNLESS ~^0x525[Ff]~        // former NEO-OROG_SHAMAN - from 0xe279.ini
+APPEND ~aniwksnd.2da~ ~0x5260  ORC_SHAMAN_UNDEAD              WAL_24      4~    UNLESS ~^0x5260~           // same as 0xE800 ORC_MELEE
+APPEND ~aniwksnd.2da~ ~0x5261  ORC_AXE_UNDEAD                 WAL_24      4~    UNLESS ~^0x5261~           // id.
+APPEND ~aniwksnd.2da~ ~0x5262  WORG                           WAL_31      1~    UNLESS ~^0x5262~           // former WORG_IWD - from 0xe280.ini
+APPEND ~aniwksnd.2da~ ~0x5263  SVIRFNEBLIN_PALE_AXE           TERRAIN     *~    UNLESS ~^0x5263~
+APPEND ~aniwksnd.2da~ ~0x5264  SVIRFNEBLIN_PALE_NOAXE         TERRAIN     *~    UNLESS ~^0x5264~
+APPEND ~aniwksnd.2da~ ~0x5269  HARPY                          WAL_17      2~    UNLESS ~^0x5269~           // same as 0xA000 WYVERN
+APPEND ~aniwksnd.2da~ ~0x526A  SHADOW_SMALL_MURKY             *           *~    UNLESS ~^0x526[Aa]~        // same as 0xEA10 SHADOW_SMALL
+APPEND ~aniwksnd.2da~ ~0x526B  SHADOW_LARGE_MURKY             *           *~    UNLESS ~^0x526[Bb]~        // same as 0xEA20 SHADOW_LARGE
+APPEND ~aniwksnd.2da~ ~0x526D  AMEL_PC_NWN                    *           *~    UNLESS ~^0x526[Dd]~
+APPEND ~aniwksnd.2da~ ~0x526E  VEDRED_PC_NWN                  *           *~    UNLESS ~^0x526[Ee]~
+APPEND ~aniwksnd.2da~ ~0x5271  OSYLUTH_NWN                    WAL_19      5~    UNLESS ~^0x5271~           // same as 0xEB20 SKELETON_FIEND
+APPEND ~aniwksnd.2da~ ~0x5273  SCARECROW_NWN                  TERRAIN     *~    UNLESS ~^0x5273~
+APPEND ~aniwksnd.2da~ ~0x5277  SAHUAGIN_IWD                   WAL_24      4~    UNLESS ~^0x5277~           // from 0xe261.ini
+APPEND ~aniwksnd.2da~ ~0x5278  SAHUAGIN_LARGE_IWD             WAL_24      4~    UNLESS ~^0x5278~           // same as 0x7F23 SAHAUGIN_LARGE
+//todo e262
+APPEND ~aniwksnd.2da~ ~0x5279  ANIMATED_PLATE_BRONZE_SMALL    WAL_MT      4~    UNLESS ~^0x5279~           // former ANIMATED_PLATE_BRONZE - from 0xe240.ini
+APPEND ~aniwksnd.2da~ ~0x527A  ANIMATED_PLATE_DARK_SMALL      WAL_MT      4~    UNLESS ~^0x527[Aa]~        // former ANIMATED_PLATE_DARK   - from 0xe241.ini
+APPEND ~aniwksnd.2da~ ~0x527B  ANIMATED_PLATE_GREEN_SMALL     WAL_MT      4~    UNLESS ~^0x527[Bb]~        // former ANIMATED_PLATE_GREEN  - from 0xe242.ini
+APPEND ~aniwksnd.2da~ ~0x527D  BARBARIAN_SHAMAN_HAMMER        TERRAIN     *~    UNLESS ~^0x527[Dd]~
+APPEND ~aniwksnd.2da~ ~0x527E  BARBARIAN_SHAMAN_STAFF         TERRAIN     *~    UNLESS ~^0x527[Ee]~
+APPEND ~aniwksnd.2da~ ~0x527F  BARBARIAN_SHAMAN_CLUB          TERRAIN     *~    UNLESS ~^0x527[Ff]~
+APPEND ~aniwksnd.2da~ ~0x5280  BARBARIAN_WARRIOR_TAN          TERRAIN     *~    UNLESS ~^0x5280~
+APPEND ~aniwksnd.2da~ ~0x5281  BARBARIAN_WARRIOR_RED          TERRAIN     *~    UNLESS ~^0x5281~
+APPEND ~aniwksnd.2da~ ~0x5282  BARBARIAN_WARRIOR_BROWN        TERRAIN     *~    UNLESS ~^0x5282~
+APPEND ~aniwksnd.2da~ ~0x5283  BARBARIAN_ICASARACHT           TERRAIN     *~    UNLESS ~^0x5283~
+APPEND ~aniwksnd.2da~ ~0x5284  BELHIFET_PRIEST                TERRAIN     *~    UNLESS ~^0x5284~
+APPEND ~aniwksnd.2da~ ~0x5285  CREEPING_DOOM                  *           *~    UNLESS ~^0x5285~
+APPEND ~aniwksnd.2da~ ~0x5286  DROWNED_DEAD                   WAL_25      2~    UNLESS ~^0x5286~           // same as 0xEC00 WIGHT_GRAY
+APPEND ~aniwksnd.2da~ ~0x528A  SEER                           WAL_24      4~    UNLESS ~^0x528[Aa]~        // former SEER_IWD - same as 0xC600 BEGGAR_MAN and others
+//TODO APPEND ~aniwksnd.2da~ ~0x528B  TUNDRA_YETI		~    UNLESS ~^0x528[Bb]~        // same as
+APPEND ~aniwksnd.2da~ ~0x528C  UMBER_HULK_VODYANOI            WAL_24      4~    UNLESS ~^0x528[Cc]~        // former UMBERHULK_VODYANOI - same as 0x7F11 UMBER_HULK
+APPEND ~aniwksnd.2da~ ~0x528E  WIGHT_BARROW                   WAL_19      5~    UNLESS ~^0x528[Ee]~        // same as 0x6403 SKELETON
+APPEND ~aniwksnd.2da~ ~0x5290  SUCCUBUS_NWN                   TERRAIN     *~    UNLESS ~^0x5290~
+APPEND ~aniwksnd.2da~ ~0x5291  BEETLE_BOMBARDIER_NWN          WAL_30      4~    UNLESS ~^0x5291~           // same as 0xe230 BEETLE_RHINOCEROS
+APPEND ~aniwksnd.2da~ ~0x5292  BOVINE_AXE_THING               WAL_30      4~    UNLESS ~^0x5292~           // same as 0xE070 MINOTAUR
+APPEND ~aniwksnd.2da~ ~0x5293  PACK_MULE_WOW                  TERRAIN     *~    UNLESS ~^0x5293~           // Modders content: packmule_wow content pack & Pack Mule mod (Kwiat_W)
+APPEND ~aniwksnd.2da~ ~0x5294  WEREBEAR_D2                    TERRAIN     *~    UNLESS ~^0x5294~           // Modders content: D2 Bear & Werebear Animations - Bear Walker kit (Ulb)
+APPEND ~aniwksnd.2da~ ~0x5295  BEAR_GIANT_D2                  WAL_12      1~    UNLESS ~^0x5295~           // Modders content: D2 Bear & Werebear Animations (Ulb)
+APPEND ~aniwksnd.2da~ ~0x5296  JASTEY_WOLFHOUND               WAL_31      1~    UNLESS ~^0x5296~           // Modders content: Jastey's Greyhound mod project
+APPEND ~aniwksnd.2da~ ~0x52A6  BONEBAT                        t-var02     1~    UNLESS ~^0x52[Aa]6~        // EE animations content: shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel). [PdT]
+APPEND ~aniwksnd.2da~ ~0x5328  ANIMATED_PLATE_BRONZE          WAL_MT      4~    UNLESS ~^0x5328~           // IWD : Shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel) - from 0xe240.ini
+APPEND ~aniwksnd.2da~ ~0x5329  ANIMATED_PLATE_DARK            WAL_MT      4~    UNLESS ~^0x5329~           // id. - from 0xe241.ini
+APPEND ~aniwksnd.2da~ ~0x532A  ANIMATED_PLATE_GREEN           WAL_MT      4~    UNLESS ~^0x532[Aa]~        // id. - from 0xe242.ini
+APPEND ~aniwksnd.2da~ ~0x5339  THE_BUTCHER_HOTS               WAL_09      4~    UNLESS ~^0x5339~           // Modders content: Butcher animation from Heroes of the Storm (Ulb) - same as 0x1100 TANARRI and other demons
+APPEND ~aniwksnd.2da~ ~0x5345  SVIRFNEBLIN_DARK_AXE           TERRAIN     *~    UNLESS ~^0x5345~           // modified to avoid soundset conflicts: was ~0x5265 SVIRFNEBLIN_DARK_AXE~ in former version
+APPEND ~aniwksnd.2da~ ~0x5346  SVIRFNEBLIN_DARK_NOAXE         TERRAIN     *~    UNLESS ~^0x5346~           // modified to avoid soundset conflicts: was ~0x5266 SVIRFNEBLIN_DARK_NOAXE~ in former version
+APPEND ~aniwksnd.2da~ ~0x5347  ARUNDEL                        TERRAIN     *~    UNLESS ~^0x5347~           // modified to avoid soundset conflicts: was ~aniwksnd.2da~ ~0x527C ARUNDEL~ in former version
+APPEND ~aniwksnd.2da~ ~0x534B  TROLL_SCRAG                    WAL_24      4~    UNLESS ~^0x534[Bb]~        // EE animations content - from 0xe254.ini
+/*TODO 
+APPEND ~aniwksnd.2da~ ~0x534C  TROLL_SPECTRAL	WAL_24	4~    UNLESS ~^0x534[Cc]~        // id. - from 0xe88a.ini
+	APPEND ~aniwksnd.2da~ ~0x534D  HEPHERNAAN		~    UNLESS ~^0x534[Dd]~        // id. -
+*/
+APPEND ~aniwksnd.2da~ ~0x5350  DROWNED_DEAD_RED               WAL_25      2~    UNLESS ~^0x5350~           // id. - same as 0xEC00 WIGHT_GRAY
+APPEND ~aniwksnd.2da~ ~0x5351  HALFDRAGON_GREEN               WAL_24      4~    UNLESS ~^0x5351~           // id. - from 0xe290.ini
+//TPDP APPEND ~aniwksnd.2da~ ~0x5352  BOAR_WILD		~    UNLESS ~^0x5352~        // id.
+APPEND ~aniwksnd.2da~ ~0x5353  BUGBEAR_SHAMAN                 WAL_24      4~    UNLESS ~^0x5353~           // id. - from 0xe291.ini
+APPEND ~aniwksnd.2da~ ~0x5355  MKHIIN                         WAL_26      2~    UNLESS ~^0x5355~           // id. - same as 0xE400 GOBLIN_AXE
+APPEND ~aniwksnd.2da~ ~0x5356  MKHIIN_BOW                     WAL_26      2~    UNLESS ~^0x5356~           // id.
+APPEND ~aniwksnd.2da~ ~0x5357  MKHIIN_STAFF                   WAL_26      2~    UNLESS ~^0x5357~           // id.
+APPEND ~aniwksnd.2da~ ~0x5358  MKHIIN_ARMOR_AXE               WAL_26      2~    UNLESS ~^0x5358~           // id.
+APPEND ~aniwksnd.2da~ ~0x5359  MKHIIN_ARMOR_BOW               WAL_26      2~    UNLESS ~^0x5359~           // id.
+APPEND ~aniwksnd.2da~ ~0x535A  BEE_GIANT_WOW                  *           *~    UNLESS ~^0x535[Aa]~        // Modders content: Ulb's Animation Pack
+APPEND ~aniwksnd.2da~ ~0x535D  GW_BALD_EAGLE                  *           *~    UNLESS ~^00x535[Dd]~       // Modders content: shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel) - WoW
+APPEND ~aniwksnd.2da~ ~0x535E  GW_BALD_EAGLE_SMALL            *           *~    UNLESS ~^00x535[Ee]~       // id.
+
+APPEND ~aniwksnd.2da~ ~0x547A  MAUREZHI                       WAL_18      5~    UNLESS ~^0x547[Aa]~        // same as 0x7700 GHOUL
+APPEND ~aniwksnd.2da~ ~0x547B  MYRLOCHAR                      WAL_14      5~    UNLESS ~^0x547[Bb]~        // same as 0x7A00 SPIDER_GIANT
+APPEND ~aniwksnd.2da~ ~0x547C  CHICKEN_BROWN                  *           *~    UNLESS ~^0x547[Cc]~        // Modders content: Jarl's BGT Adventure Pack - same as 0xC200 CHICKEN
+APPEND ~aniwksnd.2da~ ~0x548E  CHICKEN_WHITE                  *           *~    UNLESS ~^0x548[Ee]~        // EE animations content: shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel) - same as 0xC200 CHICKEN
+
+APPEND ~aniwksnd.2da~ ~0x54B8  DOG_GRAY                       WAL_31      1~    UNLESS ~^0x54[Bb]8~        // EE animations content - same as 0x7400 DOG_WILD
+APPEND ~aniwksnd.2da~ ~0x54B9  SPIDER_WATER                   WAL_14      5~    UNLESS ~^0x54[Bb]9~        // EE animations content - same as 0x7A00 SPIDER_GIANT
+APPEND ~aniwksnd.2da~ ~0x54BA  GIBBERLING_BROOD               WAL_25      2~    UNLESS ~^0x54[Bb][Aa]~     // EE animations content - same as 0x7800 GIBBERLING
+APPEND ~aniwksnd.2da~ ~0x54BB  BLACK_PUDDING                  WAL_15      5~    UNLESS ~^0x54[Bb][Bb]~     // EE animations content - same as 0x7900 SLIME_GREEN
+
+APPEND ~aniwksnd.2da~ ~0x557B  BASILISK_NWN                   WAL_16      1~    UNLESS ~^0x557[Bb]~        // same as 0x7100 BASILISK
+APPEND ~aniwksnd.2da~ ~0x5B00  ELLESIME_WHITE                 TERRAIN     *~    UNLESS ~^0x5[Bb]00~        // former ELLESIME_WHITE-HAIRED - same as 0x7F31 ELLESIME
+//TODO APPEND ~aniwksnd.2da~ ~0x5B01  LAGOON_CREATURE		~    UNLESS ~^0x5[Bb]01~
+APPEND ~aniwksnd.2da~ ~0x5B02  MODRON_ROUND                   WAL_10      4~    UNLESS ~^0x5[Bb]02~
+APPEND ~aniwksnd.2da~ ~0x5B03  ABISHAI_BLACK                  WAL_24      4~    UNLESS ~^0x5[Bb]03~        // same as 0xe28b ABISHAI_WHITE
+APPEND ~aniwksnd.2da~ ~0x5B04  ABISHAI_BLUE                   WAL_24      4~    UNLESS ~^0x5[Bb]04~        // same as 0xe28b ABISHAI_WHITE
+APPEND ~aniwksnd.2da~ ~0x5B05  ABISHAI_GREEN                  WAL_24      4~    UNLESS ~^0x5[Bb]05~        // same as 0xe28b ABISHAI_WHITE
+APPEND ~aniwksnd.2da~ ~0x5B06  ABISHAI_RED                    WAL_24      4~    UNLESS ~^0x5[Bb]06~        // same as 0xe28b ABISHAI_WHITE
+APPEND ~aniwksnd.2da~ ~0x5B07  DISPLACER_BEAST                WAL_31      1~    UNLESS ~^0x5[Bb]07~        // same as 0x7F0A GREATCAT_PANTHER
+APPEND ~aniwksnd.2da~ ~0x5B0A  HAG_NIGHT                      TERRAIN     *~    UNLESS ~^0x5[Bb]0[Aa]~     // former NIGHT_HAG, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x5B0B  HAG_GREEN                      TERRAIN     *~    UNLESS ~^0x5[Bb]0[Bb]~     // former GREEN_HAG, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x5B0C  HAG_SEA                        TERRAIN     *~    UNLESS ~^0x5[Bb]0[Cc]~     // former SEA_HAG, renamed to avoid conflict with EE games.
+APPEND ~aniwksnd.2da~ ~0x5B79  GHOUL_QUEEN                    TERRAIN     *~    UNLESS ~^0x5[Bb]79~        // modified to avoid soundset conflicts: was ~0x5B08 GHOUL_QUEEN~ in former version
+APPEND ~aniwksnd.2da~ ~0x5B7B  HAG_ANNIS                      TERRAIN     *~    UNLESS ~^0x5[Bb]7[Bb]~     // former ANNIS, modified to avoid soundset conflicts: was ~0x5B09 HAG_ANNIS~ in former version
+APPEND ~aniwksnd.2da~ ~0x5B9E  SNAKE_SMALL                    *           *~    UNLESS ~^0x5[Bb]9[Ee]~     // Modders content: shared with Gwendolyne (Menace sur le Royaume de Diamant Éternel), Grammarsalad (Spells and Magic) and subtledoctor (Faiths and Powers).  - same as 0x7F13 SNAKE
+APPEND ~aniwksnd.2da~ ~0x5B9F  SNAKE_SMALL_GREEN              *           *~    UNLESS ~^0x5[Bb]9[Ff]~     // id.
+APPEND ~aniwksnd.2da~ ~0x5BA0  SNAKE_SMALL_RED                *           *~    UNLESS ~^0x5[Bb][Aa]0~     // id.
+APPEND ~aniwksnd.2da~ ~0x5BA1  LEPRECHAUN_ANNAH_PST           TERRAIN     *~    UNLESS ~^0x5[Bb][Aa]1~     // Modders content: Power Action Leprechaun Annah, by Black Isle, shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel)
+APPEND ~aniwksnd.2da~ ~0x5BA3  EASTER_EGG_MORTE_PST           *           *~    UNLESS ~^0x5[Bb][Aa]3~     // Modders content: Easter Egg Morte, by Black Isle, shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel)
+
+APPEND ~aniwksnd.2da~ ~0x5C00  DEATH_TYRANT                   *           *~    UNLESS ~^0x5[Cc]00~        // same as 0x7F02 BEHOLDER
+APPEND ~aniwksnd.2da~ ~0x5C01  GIANT_FIRE_2	TERRAIN           TERRAIN     *~    UNLESS ~^0x5[Cc]01~        // former FIRE_GIANT_2       - same as 0x7F3E GIANT_FIRE
+APPEND ~aniwksnd.2da~ ~0x5C03  GIANT_FIRE_FEMALE              TERRAIN     *~    UNLESS ~^0x5[Cc]03~        // former FIRE_GIANT_FEMALE  - same as 0x7F3E GIANT_FIRE
+APPEND ~aniwksnd.2da~ ~0x5C04  GIANT_FROST_FEMALE             TERRAIN     *~    UNLESS ~^0x5[Cc]04~        // former FROST_GIANT_FEMALE - same as 0x7F3E GIANT_FIRE
+APPEND ~aniwksnd.2da~ ~0x5C08  LADY_OF_PAIN                   *           *~    UNLESS ~^0x5[Cc]08~        // modified to avoid soundset conflicts: was ~0x5C02 LADY_OF_PAIN~ in former version
+//TODO APPEND ~aniwksnd.2da~ ~0x5D4B  BAURIER_MALE_PST		~    UNLESS ~^0x5[Dd]4[Bb]~	// former BARIAUR_MALE_PST
+APPEND ~aniwksnd.2da~ ~0x5D4C  TOWNIE_CURST_FEMALE_PST        TERRAIN     *~    UNLESS ~^0x5[Dd]4[Cc]~
+APPEND ~aniwksnd.2da~ ~0x5D52  GITHZERAI_PST                  TERRAIN     *~    UNLESS ~^0x5[Dd]52~
+APPEND ~aniwksnd.2da~ ~0x5D53  GODSMAN_PST                    TERRAIN     *~    UNLESS ~^0x5[Dd]53~
+APPEND ~aniwksnd.2da~ ~0x5D54  THUG_LARGE_PST                 TERRAIN     *~    UNLESS ~^0x5[Dd]54~
+APPEND ~aniwksnd.2da~ ~0x5D55  TOWNIE_LOWER_CLASS_FEMALE_PST  TERRAIN     *~    UNLESS ~^0x5[Dd]55~
+APPEND ~aniwksnd.2da~ ~0x5D56  TOWNIE_LOWER_CLASS_MALE_PST    TERRAIN     *~    UNLESS ~^0x5[Dd]56~
+APPEND ~aniwksnd.2da~ ~0x5D58  MIDWIFE_PST                    TERRAIN     *~    UNLESS ~^0x5[Dd]58~
+APPEND ~aniwksnd.2da~ ~0x5D59  HARLOT_PST                     WAL_24      4~    UNLESS ~^0x5[Dd]59~        // same as 0xC610 HARLOT_WOMAN
+APPEND ~aniwksnd.2da~ ~0x5D5B  SKELETON_WORKER_PST            WAL_19      5~    UNLESS ~^0x5[Dd]5[Bb]~     // same as 0x6403 SKELETON
+//TODO APPEND ~aniwksnd.2da~ ~0x5D5C  THOKOLA_PST		~    UNLESS ~^0x5[Dd]5[Cc]~		// same as
+APPEND ~aniwksnd.2da~ ~0x5D5D  THUG_PST                       TERRAIN     *~    UNLESS ~^0x5[Dd]5[Dd]~
+APPEND ~aniwksnd.2da~ ~0x5D62  TOWNIE_UPPER_CLASS_MALE_PST    TERRAIN     *~    UNLESS ~^0x5[Dd]62~
+APPEND ~aniwksnd.2da~ ~0x5D63  ZOMBIE_FEMALE_PST              WAL_10      4~    UNLESS ~^0x5[Dd]63~        // same as 0x7D00 ZOMBIE
+APPEND ~aniwksnd.2da~ ~0x5D64  ZOMBIE_MALE_PST                WAL_10      4~    UNLESS ~^0x5[Dd]64~        // same as 0x7D00 ZOMBIE
+APPEND ~aniwksnd.2da~ ~0x5DAC  TIEFLING_MALE_PST              TERRAIN     *~    UNLESS ~^0x5[Dd][Aa][Cc]~  // modified to avoid soundset conflicts: was ~0x5D5F TIEFLING_MALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DAD  TOWNIE_WIZARD_PST              TERRAIN     *~    UNLESS ~^0x5[Dd][Aa][Dd]~  // modified to avoid soundset conflicts: was ~0x5D60 TOWNIE_WIZARD_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DAE  TOWNIE_UPPER_CLASS_FEMALE_PST  TERRAIN     *~    UNLESS ~^0x5[Dd][Aa][Ee]~  // modified to avoid soundset conflicts: was ~0x5D61 TOWNIE_UPPER_CLASS_FEMALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DBA  AASIMAR_FEMALE_PST             TERRAIN     *~    UNLESS ~^0x5[Dd][Bb][Aa]~  // modified to avoid soundset conflicts: was ~0x5D4A AASIMAR_FEMALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DBB  TOWNIE_CURST_MALE_PST          TERRAIN     *~    UNLESS ~^0x5[Dd][Bb][Bb]~  // modified to avoid soundset conflicts: was ~0x5D4D TOWNIE_CURST_MALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DBC  DUSTMAN_FEMALE_PST             TERRAIN     *~    UNLESS ~^0x5[Dd][Bb][Cc]~  // modified to avoid soundset conflicts: was ~0x5D4E DUSTMAN_FEMALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DBE  DUSTMAN_MALE_PST               TERRAIN     *~    UNLESS ~^0x5[Dd][Bb][Ee]~  // modified to avoid soundset conflicts: was ~0x5D4F DUSTMAN_MALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DBF  GHOUL_FEMALE_PST               TERRAIN     *~    UNLESS ~^0x5[Dd][Bb][Ff]~  // modified to avoid soundset conflicts: was ~0x5D50 GHOUL_FEMALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DC0  GHOUL_MALE_PST                 TERRAIN     *~    UNLESS ~^0x5[Dd][Cc]0~     // modified to avoid soundset conflicts: was ~0x5D51 GHOUL_MALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DC1  MERCHANT_PST                   TERRAIN     *~    UNLESS ~^0x5[Dd][Cc]1~     // modified to avoid soundset conflicts: was ~0x5D57 MERCHANT_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DC2  SKELETON_PRIEST_PST            WAL_19      5~    UNLESS ~^0x5[Dd][Cc]2~     // modified to avoid soundset conflicts: was ~0x5D5A SKELETON_PRIEST_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5DC3  TIEFLING_FEMALE_PST            WAL_19      5~    UNLESS ~^0x5[Dd][Cc]3~     // modified to avoid soundset conflicts: was ~0x5D5E TIEFLING_FEMALE_PST~ in former version
+APPEND ~aniwksnd.2da~ ~0x5FBC  DAO                            *           *~    UNLESS ~^0x5[Ff][Bb][Cc]~  // same as 0x7F05 DJINNI
+APPEND ~aniwksnd.2da~ ~0x5FBD  DAO_LEGS                       TERRAIN     *~    UNLESS ~^0x5[Ff][Bb][Dd]~  // same as 0x7F06 DJINNI_LEGS
+APPEND ~aniwksnd.2da~ ~0x5FBE  EFREETI                        *           *~    UNLESS ~^0x5[Ff][Bb][Ee]~  // same as 0x7F05 DJINNI
+APPEND ~aniwksnd.2da~ ~0x5FBF  EFREETI_LEGS                   TERRAIN     *~    UNLESS ~^0x5[Ff][Bb][Ff]~  // same as 0x7F06 DJINNI_LEGS
+APPEND ~aniwksnd.2da~ ~0x5FC0  JANNI                          *           *~    UNLESS ~^0x5[Ff][Cc]0~     // same as 0x7F05 DJINNI
+APPEND ~aniwksnd.2da~ ~0x5FC1  JANNI_LEGS                     TERRAIN     *~    UNLESS ~^0x5[Ff][Cc]1~     // same as 0x7F06 DJINNI_LEGS
+APPEND ~aniwksnd.2da~ ~0x5FC2  MARID                          *           *~    UNLESS ~^0x5[Ff][Cc]2~     // same as 0x7F05 DJINNI
+APPEND ~aniwksnd.2da~ ~0x5FC3  MARID_LEGS                     TERRAIN     *~    UNLESS ~^0x5[Ff][Cc]3~     // same as 0x7F06 DJINNI_LEGS
+
+APPEND ~aniwksnd.2da~ ~0x5FD4  RED_WIZARD                     TERRAIN     *~    UNLESS ~^0x5[Ff][Dd]4~     // EE animations content
+APPEND ~aniwksnd.2da~ ~0x5FD5  SAILOR_GREEN                   TERRAIN     *~    UNLESS ~^0x5[Ff][Dd]5~     // id. - same as 0x7F2A SAILOR_MAN
+APPEND ~aniwksnd.2da~ ~0x5FD6  SAILOR_RED                     TERRAIN     *~    UNLESS ~^0x5[Ff][Dd]6~     // id.
+APPEND ~aniwksnd.2da~ ~0x5FD7  SAILOR_DARK                    TERRAIN     *~    UNLESS ~^0x5[Ff][Dd]7~     // id.
+APPEND ~aniwksnd.2da~ ~0x5FD8  CRUSADER_SOLDIER               TERRAIN     *~    UNLESS ~^0x5[Ff][Dd]8~     // EE animations content - same as 0x7F2C AMNIAN_SOLDIER
+/*TODO 
+APPEND ~aniwksnd.2da~ ~0x5FD9  GOLEM_MINI		~    UNLESS ~^0x5[Ff][Dd]9~		// same as
+*/
+APPEND ~aniwksnd.2da~ ~0x5FDA  SNAKE_WATER                    *           *~    UNLESS ~^0x5[Ff][Dd][Aa]~  // EE animations content - same as 0x7F13 SNAKE
+APPEND ~aniwksnd.2da~ ~0x5FDB  EFREETI_NOBLE                  TERRAIN     *~    UNLESS ~^0x5[Ff][Dd][Bb]~  // EE animations content - same as 0x5FBF EFREETI_LEGS
+
+APPEND ~aniwksnd.2da~ ~0x5FDD  YOCHLOL                        WAL_30      4~    UNLESS ~^0x5[Ff][Dd][Dd]~  // same as 0x7F08 OTYUGH
+APPEND ~aniwksnd.2da~ ~0x683D  MOINESSE_BARBARIAN_MALE_HUMAN  TERRAIN     *~    UNLESS ~^0x683[Dd]~
+APPEND ~aniwksnd.2da~ ~0x683E  MOINESSE_NINJA_MALE_HUMAN      TERRAIN     *~    UNLESS ~^0x683[Ee]~
+APPEND ~aniwksnd.2da~ ~0x683F  MOINESSE_VAMPIRE               TERRAIN     *~    UNLESS ~^0x683[Ff]~
+APPEND ~aniwksnd.2da~ ~0x6841  MOINESSE_MAGE_FEMALE_ELF       TERRAIN     *~    UNLESS ~^0x6841~
+APPEND ~aniwksnd.2da~ ~0x6845  MOINESSE_DRUID_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x6845~
+APPEND ~aniwksnd.2da~ ~0x6846  MOINESSE_FIGHTER_FEMALE_HUMAN  TERRAIN     *~    UNLESS ~^0x6846~
+APPEND ~aniwksnd.2da~ ~0x6847  MOINESSE_MAGE_FEMALE_HUMAN     TERRAIN     *~    UNLESS ~^0x6847~
+APPEND ~aniwksnd.2da~ ~0x6848  MOINESSE_THIEF_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x6848~
+
+APPEND ~aniwksnd.2da~ ~0x7F3F  GIANT_YAGA-SHURA               TERRAIN     *~    UNLESS ~^0x7[Ff]3[Ff]~     // former FIRE_GIANT_YAGA_SHURA - same as 0x7F3E GIANT_FIRE
+
+APPEND ~aniwksnd.2da~ ~0xA001  MEGALOCENTIPEDE                WAL_13      4~    UNLESS ~^0x[Aa]001~        // EE animations content - same as 0xA100 CARRION_CRAWLER
+APPEND ~aniwksnd.2da~ ~0xA002  WYVERN_WHITE                   WAL_17      2~    UNLESS ~^0x[Aa]002~        // EE animations content - same as 0xA000 WYVERN
+
+APPEND ~aniwksnd.2da~ ~0xE000  CYCLOPS                        WAL_09      4~    UNLESS ~^0x[Ee]000~        // from 0xe000.ini
+APPEND ~aniwksnd.2da~ ~0xE040  HISTACHII                      WAL_10      4~    UNLESS ~^0x[Ee]040~        // same as 0xE080 MUMMY
+APPEND ~aniwksnd.2da~ ~0xE060  LICH_WHITE                     TERRAIN     *~    UNLESS ~^0x[Ee]060~        // same as LICH_BLACK (TODO OR WAL_24)
+APPEND ~aniwksnd.2da~ ~0xE0A0  TROLL_ICE                      WAL_24      4~    UNLESS ~^0x[Ee]0[Aa]0~     // same as 0xE0B0 TROLL_BLUE
+APPEND ~aniwksnd.2da~ ~0xE0C0  TROLL_SNOW                     WAL_24      4~    UNLESS ~^0x[Ee]0[Cc]0~     // from 0xe0c0.ini
+APPEND ~aniwksnd.2da~ ~0xE0D0  UMBER_HULK_ELDER               WAL_24      4~    UNLESS ~^0x[Ee]0[Dd]0~     // former UMBERHULK_IWD - from 0xe0d0.ini
+APPEND ~aniwksnd.2da~ ~0xE200  BEETLE_BORING                  WAL_20      4~    UNLESS ~^0x[Ee]200~        // former BEETLE_COPPER - from 0xe200.ini
+APPEND ~aniwksnd.2da~ ~0xE210  BEETLE_FIRE                    WAL_20      4~    UNLESS ~^0x[Ee]210~        // from 0xe210.ini
+APPEND ~aniwksnd.2da~ ~0xE220  BEETLE_BOMBARDIER              WAL_20      4~    UNLESS ~^0x[Ee]220~        // former BEETLE_BLACK - from 0xe220.ini
+APPEND ~aniwksnd.2da~ ~0xE230  BEETLE_RHINOCEROS              WAL_20      4~    UNLESS ~^0x[Ee]230~        // from 0xe230.ini
+APPEND ~aniwksnd.2da~ ~0xE300  GHOST                          *           *~    UNLESS ~^0x[Ee]300~        // former GHOST_IWD
+APPEND ~aniwksnd.2da~ ~0xE310  GHOUL_GREATER                  WAL_25      2~    UNLESS ~^0x[Ee]310~        // former GHOUL_IWD - from 0xe310.ini
+APPEND ~aniwksnd.2da~ ~0xE320  GHAST_GREATER                  WAL_25      2~    UNLESS ~^0x[Ee]320~        // former GHAST_IWD - from 0xe320.ini
+APPEND ~aniwksnd.2da~ ~0xE510  LIZARD_MAN                     WAL_24      4~    UNLESS ~^0x[Ee]510~        // former LIZARDMAN_GREEN - from 0xe510.ini
+APPEND ~aniwksnd.2da~ ~0xE520  LIZARD_KING                    WAL_09      4~    UNLESS ~^0x[Ee]520~        // from 0xe520.ini
+APPEND ~aniwksnd.2da~ ~0xEA10  SHADOW_SMALL                   *           *~    UNLESS ~^0x[Ee][Aa]10~     // former SHADOW_SMALL_IWD
+APPEND ~aniwksnd.2da~ ~0xEA20  SHADOW_LARGE                   *           *~    UNLESS ~^0x[Ee][Aa]20~     // former SHADOW_LARGE_IWD
+APPEND ~aniwksnd.2da~ ~0xEC00  WIGHT_GRAY                     WAL_25      2~    UNLESS ~^0x[Ee][Cc]00~     // same as 0xE310 GHOUL_GREATER
+APPEND ~aniwksnd.2da~ ~0xEC10  WIGHT_GREEN                    WAL_25      2~    UNLESS ~^0x[Ee][Cc]10~     // same as 0xE310 GHOUL_GREATER
+APPEND ~aniwksnd.2da~ ~0xEC20  WIGHT_YELLOW                   WAL_25      2~    UNLESS ~^0x[Ee][Cc]20~     // same as 0xE310 GHOUL_GREATER
+APPEND ~aniwksnd.2da~ ~0xEE00  ZOMBIE_YELLOW                  WAL_10      4~    UNLESS ~^0x[Ee][Ee]00~     // former ZOMBIE_YELLOW_IWD - same as 0x7D00 ZOMBIE
+APPEND ~aniwksnd.2da~ ~0xEE10  ZOMBIE_BLUE                    WAL_10      4~    UNLESS ~^0x[Ee][Ee]10~     // former ZOMBIE_BLUE_IWD   - same as 0x7D00 ZOMBIE
+APPEND ~aniwksnd.2da~ ~0xEF10  WATER_WEIRD                    WAL_01      5~    UNLESS ~^0x[Ee][Ff]10~     // same as 0x5039 ELEMENTAL_WATER
+
+
+/* ============================= *
+ *  Pure cosmetic, but so cool!  *
+ * ============================= */
+
+LAF ~gw_sort_aniwksnd_2da~ END
+
+/* TEMPLATES
+0xe254	TROLL_SCRAG	MSCR	WAL_24
+walk_sound=-
+0x1000	WYVERN_BIG				WAL_17	2
+0xA000	WYVERN					WAL_17	2
+0x7F03	IMP						WAL_PS	1
+0x7F2D	WYVERN_FAMILIAR			WAL_PS	1
+
+0x1100	TANARRI					WAL_09	4
+0x1200	DRAGON_RED				WAL_09	4
+0x9000	OGRE					WAL_09	4
+
+0x1300	DEMIGORGON				WAL_30	4
+0x2200	OGRE_MAGE				WAL_30	4
+0x2300	DEATH_KNIGHT			WAL_30	4
+0x7000	HALF_OGRE				WAL_30	4
+0x7001	OGRILLON				WAL_30	4
+0x7302	SHAMBLING_MOUND			WAL_30	4
+0x7320	ELEMENTAL_AIR			WAL_30	4
+0x7F00	TROLL					WAL_30	4
+0x7F0F	TROLL_SMALL				WAL_30	4
+0x7F08	OTYUGH					WAL_30	4
+
+0x6403	SKELETON				WAL_19	5
+0x7100	BASILISK				WAL_16	1
+0x7200	BEAR_BLACK				WAL_12	1
+
+0x2000	SIRINE					WAL_24	4
+0x7301	ELEMENTAL_EARTH_SMALL	WAL_24	4
+0x7311	ELEMENTAL_FIRE_SMALL	WAL_24	4
+0x7314	BURNING_MAN				WAL_24	4
+0x7321	ELEMENTAL_AIR_SMALL		WAL_24	4
+0x7500	DOPPLEGANGER			WAL_24	4
+0x7600	ETTERCAP				WAL_24	4
+0x7703	SHADOW					WAL_24	4
+0x7F2F	SPIDER_SMALL			WAL_24	4
+0x7E00	WEREWOLF				WAL_24	4
+0x7E01	WEREWOLF_GREATER		WAL_24	4
+0x7F09	SAHAUGIN				WAL_24	4
+0x7F23	SAHAUGIN_LARGE			WAL_24	4
+0x7F0C	KUO-TOA					WAL_24	4
+0x7F28	KUO-TOA_LARGE			WAL_24	4
+0x7F0D	LICH					WAL_24	4
+0x7F11	UMBER_HULK				WAL_24	4
+0x7F14	GITHYANKI				WAL_24	4
+0x7F2E	RAVER					WAL_24	4
+0x7F32	SLAYER					WAL_24	4
+0x7F35	MIST_CREATURE			WAL_24	4
+0xC600	BEGGAR_MAN				WAL_24	4
+0xC610	HARLOT_WOMAN			WAL_24	4
+0xC700	BOY						WAL_24	4
+0xCB00	SLAVE					WAL_24	4
+
+0x7400	DOG_WILD				WAL_31	1
+0x7B00	WOLF					WAL_31	1
+0x7F0A	GREATCAT_PANTHER		WAL_31	1
+
+0x7700	GHOUL					WAL_18	5
+0x7701	REVEANT					WAL_18	5
+0x7702	GHAST					WAL_18	5
+
+0x7800	GIBBERLING				WAL_25	2
+
+0x7900	SLIME_GREEN				WAL_15	5
+
+0x7A00	SPIDER_GIANT			WAL_14	5
+
+0x7C00	KOBOLD_XVART			WAL_26	2
+0x7C01	KOBOLD_TASLOI			WAL_26	2
+0x8200	KOBOLD					WAL_26	2
+0xE400	IC_GOBLIN_AXE			WAL_26	2
+
+0x7D00	ZOMBIE					WAL_10	4
+
+0x8000	GNOLL					WAL_28	4
+
+0x8100	HOBGOBLIN				WAL_29	4
+
+0xA100	CARRION_CRAWLER			WAL_13	4
+
+0x7F02	BEHOLDER				*	*
+0x7F0E	DEMILICH				*	*
+0x7F13	SNAKE					*	*
+0x7F16	MOOSE					*	*
+0x7F17	RABBIT					*	*
+0x7F18	DEER					*	*
+0x7F19	DANCING_SWORD			*	*
+0x7F20	GROUNDHOG				*	*
+0x7F39	BLOB_MIST_CREATURE		*	*
+0xB000	COW						*	*
+0xB100	HORSE					*	*
+0xC000	BAT_INSIDE				*	*
+0xC100	CAT						*	*
+0xC200	CHICKEN					*	*
+0xC300	RAT						*	*
+0xC400	SQUIRREL				*	*
+0xD300	BIRD					*	*
+0x7F07	GOLEM_CLAY				WAL_MT	4
+
+0x7F01	MINDFLAYER				TERRAIN	*
+0x7F10	RAKSHASA				TERRAIN	*
+0x7F12	VAMPIRE					TERRAIN	*
+0x7F24	PIRATE					TERRAIN	*
+0x7F27	DROW					TERRAIN	*
+0x7F2A	SAILOR_MAN				TERRAIN	*
+0x7F2C	AMISH_SOLDIER			TERRAIN	*
+0x7F36	SHADOW_THIEF			TERRAIN	*
+0x7F37	JON_IRENICUS			TERRAIN	*
+0x7F3A	HULA_WIZARD				TERRAIN	*
+0x7F3B	SOLAR					TERRAIN	*
+0x7F3C	ANTISOLAR				TERRAIN	*
+0x7F3D	MELISSAN				TERRAIN	*
+0xC800	FAT_MAN					TERRAIN	*
+0xC900	PEASANT_MAN				TERRAIN	*
+0xCA00	NOBLE_MAN				TERRAIN	*
+
+0xE050	IC_LICHBLACK			WAL_09	4
+walk_sound=*
+0xE070	IC_MINOTAUR				WAL_09	4
+WAL_30
+0xE700	IC_OROG1				WAL_09	4
+walk_sound=*
+720
+WAL_30
+0xE800	IC_ORC_MELEE1			WAL_09	4
+0xE810	IC_ORC_RANGE2			WAL_09	4
+0xE840	IC_ORC_SHAMAN			WAL_09	4
+walk_sound=*
+0xEF10 WATER_WEIRD
+*/
+
+/*TODO
+COPY_EXISTING ~aniwksnd.2da~ ~override~
+	REPLACE_TEXTUALLY ~0xE070	IC_MINOTAUR	WAL_09	4~ ~0xE070	MINOTAUR	WAL_29	4~	//30
+BUT_ONLY
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_LICH~ ~LICH_WHITE~
+*/
