@@ -1,0 +1,137 @@
+/* ================================================================================================================================================================================= *
+ *  v 6.0.0                                                                                                                                                                          *
+ *             M A I N    C O M P O N E N T    ( T o B - E E )    :    R e s t o r i n g    p r e v i o u s l y    o v e r w r i t t e n    B G 2    a n i m a t i o n s             *
+ *                                                                                                                                                                                   *
+ * ================================================================================================================================================================================= *
+ *  This part restores any necessary standard animations that megamods have overwritten and resolves the problems of animation stacking.                                             *
+ * ================================================================================================================================================================================= *
+ *  change-log:                                                                                                                                                                      *
+ *  -----------                                                                                                                                                                      *
+ *      - Used Sam's ps_recursive_copy.tpa library that will recursively search files into a parent directory, then copy them to a destination directory.                            *
+ *      - #30  = Integrated Lollorian's patch to handle non-biffed installations.                                                                                                    *
+ *      - #31  = Integrated Lollorian's Ghouls transforming to Golems fix.                                                                                                           *
+ *      - #101 = Fixed Yellow Zombie animations not being disabled bug ( http://www.shsforums.net/topic/47995-zombie/ ).                                                             *
+ *      - #121 = Fixed Cyclops animations not being disabled bug ( http://www.shsforums.net/topic/48626-cyclops-bug/ ).                                                              *
+ *      - #135 = Used Gwendolyne's gw_update_content function to restore bg2_restores folder content.                                                                                *
+ * ================================================================================================================================================================================= */
+
+SILENT
+
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/bg2_restores" ChildDirRegex = "goblin_elite_with_axe" FileRegex = "^mgo3a1.bam$" RET F_Exists = Count END
+
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~doomguar.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) OR (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~) OR (FILE_EXISTS_IN_GAME ~k#polys.spl~) OR (FILE_EXISTS_IN_GAME ~pslady.cre~) OR (FILE_EXISTS_IN_GAME ~s#crow.cre~) OR (FILE_EXISTS_IN_GAME ~lcwtazok.itm~) OR (FILE_EXISTS_IN_GAME ~zur104.itm~)) AND F_Exists BEGIN // FILE_EXISTS ~infinityanimations/restore/mgo3a1.bam~ BEGIN
+
+	PRINT @20 // ~Restoring previously overwritten BG2 animations...~
+	SILENT
+
+	// Mods checks: BP, CtB, Drizzt Saga, RoT, SOS, TS
+	ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~) OR (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) OR (FILE_EXISTS_IN_GAME ~f_bel.cre~) OR (FILE_EXISTS_IN_GAME ~brefr1.cre~) OR (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) OR (FILE_EXISTS_IN_GAME ~purang.cre~)) BEGIN
+
+		// Lollorian's patch to handle non-biffed installations ( http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291 ).
+		// ghoul_greater (iwd): Lollorian's Ghouls transforming to Golems fix ( http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939 ).
+		ACTION_FOR_EACH bm IN ~mgh2a3~ ~mgh2a4~ ~mgh2ca~ ~mgh2sp~ ~mgh2a3e~ ~mgh2a4e~ ~mgh2cae~ ~mgh2spe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// ghast_greater (iwd)
+		ACTION_FOR_EACH bm IN ~mgh3a4.bam~ ~mgh3a4e.bam~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// goblin_elite_bow
+		ACTION_FOR_EACH bm IN ~mgo4a2~ ~mgo4ca~ ~mgo4sp~ ~mgo4a2e~ ~mgo4cae~ ~mgo4spe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// histachii
+		ACTION_FOR_EACH bm IN ~mhisa4~ ~mhisca~ ~mhissp~ ~mhisa4e~ ~mhiscae~ ~mhisspe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// lich_white (iwd)
+		ACTION_FOR_EACH bm IN ~mlica3~ ~mlica4~ ~mlica3e~ ~mlica4e~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// troll_ice
+		ACTION_FOR_EACH bm IN ~mtica4~ ~mticca~ ~mticsp~ ~mtica4e~ ~mticcae~ ~mticspe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// wight_gray
+		ACTION_FOR_EACH bm IN ~mwiga4.bam~ ~mwiga4e.bam~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// zombie_yellow: Fixed Yellow Zombie animations not being disabled bug ( http://www.shsforums.net/topic/47995-zombie/ ).
+		ACTION_FOR_EACH bm IN ~mzo2a3~ ~mzo2a4~ ~mzo2ca~ ~mzo2sp~ ~mzo2a3e~ ~mzo2a4e~ ~mzo2cae~ ~mzo2spe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// stacked slots
+		ACTION_FOR_EACH bm IN ~mgh2aa1~ ~mgh2aa1e~ ~mgh2aa2~ ~mgh2aa2e~ ~mgh2agh~ ~mgh2aghe~ ~mgh2agu~ ~mgh2ague~ ~mgh2asc~ ~mgh2asce~ ~mgh2asd~ ~mgh2asde~ ~mgh2asl~ ~mgh2asle~ ~mgh2awk~ ~mgh2awke~ ~mgh2ma1~ ~mgh2ma1e~ ~mgh2ma2~ ~mgh2ma2e~ ~mgh2mgh~ ~mgh2mghe~ ~mgh2mgu~ ~mgh2mgue~ ~mgh2msc~ ~mgh2msce~ ~mgh2msd~ ~mgh2msde~ ~mgh2msl~ ~mgh2msle~ ~mgh2mwk~ ~mgh2mwke~ ~mgh2sa1~ ~mgh2sa1e~ ~mgh2sa2~ ~mgh2sa2e~ ~mgh2sgh~ ~mgh2sghe~ ~mgh2sgu~ ~mgh2sgue~ ~mgh2ssc~ ~mgh2ssce~ ~mgh2ssd~ ~mgh2ssde~ ~mgh2ssl~ ~mgh2ssle~ ~mgh2swk~ ~mgh2swke~ ~mgh3aa1~ ~mgh3aa1e~ ~mgh3aa2~ ~mgh3aa2e~ ~mgh3agh~ ~mgh3aghe~ ~mgh3agu~ ~mgh3ague~ ~mgh3asc~ ~mgh3asce~ ~mgh3asd~ ~mgh3asde~ ~mgh3asl~ ~mgh3asle~ ~mgh3awk~ ~mgh3awke~ ~mgh3sa1~ ~mgh3sa1e~ ~mgh3sa2~ ~mgh3sa2e~ ~mgh3sgh~ ~mgh3sghe~ ~mgh3sgu~ ~mgh3sgue~ ~mgh3ssc~ ~mgh3ssce~ ~mgh3ssd~ ~mgh3ssde~ ~mgh3ssl~ ~mgh3ssle~ ~mgh3swk~ ~mgh3swke~ ~mgh3wa1~ ~mgh3wa1e~ ~mgh3wa2~ ~mgh3wa2e~ ~mgh3wgh~ ~mgh3wghe~ ~mgh3wgu~ ~mgh3wgue~ ~mgh3wsc~ ~mgh3wsce~ ~mgh3wsd~ ~mgh3wsde~ ~mgh3wsl~ ~mgh3wsle~ ~mgh3wwk~ ~mgh3wwke~ ~mhisma1~ ~mhisma1e~ ~mhisma2~ ~mhisma2e~ ~mhisma4~ ~mhisma4e~ ~mhismca~ ~mhismcae~ ~mhismgh~ ~mhismghe~ ~mhismgu~ ~mhismgue~ ~mhismsc~ ~mhismsce~ ~mhismsd~ ~mhismsde~ ~mhismsl~ ~mhismsle~ ~mhismsp~ ~mhismspe~ ~mhismwk~ ~mhismwke~ ~mhissa1~ ~mhissa1e~ ~mhissa2~ ~mhissa2e~ ~mhissa4~ ~mhissa4e~ ~mhissca~ ~mhisscae~ ~mhissgh~ ~mhissghe~ ~mhissgu~ ~mhissgue~ ~mhisssc~ ~mhisssce~ ~mhisssd~ ~mhisssde~ ~mhisssl~ ~mhisssle~ ~mhisssp~ ~mhissspe~ ~mhisswk~ ~mhisswke~ ~mlicaa1~ ~mlicaa1e~ ~mlicaa2~ ~mlicaa2e~ ~mlicaa4~ ~mlicaa4e~ ~mlicaca~ ~mlicacae~ ~mlicagh~ ~mlicaghe~ ~mlicagu~ ~mlicague~ ~mlicasc~ ~mlicasce~ ~mlicasd~ ~mlicasde~ ~mlicasl~ ~mlicasle~ ~mlicasp~ ~mlicaspe~ ~mlicawk~ ~mlicawke~ ~mlicma1~ ~mlicma1e~ ~mlicma2~ ~mlicma2e~ ~mlicma4~ ~mlicma4e~ ~mlicmca~ ~mlicmcae~ ~mlicmgh~ ~mlicmghe~ ~mlicmgu~ ~mlicmgue~ ~mlicmsc~ ~mlicmsce~ ~mlicmsd~ ~mlicmsde~ ~mlicmsl~ ~mlicmsle~ ~mlicmsp~ ~mlicmspe~ ~mlicmwk~ ~mlicmwke~ ~mlicsa1~ ~mlicsa1e~ ~mlicsa2~ ~mlicsa2e~ ~mlicsa4~ ~mlicsa4e~ ~mlicsca~ ~mlicscae~ ~mlicsgh~ ~mlicsghe~ ~mlicsgu~ ~mlicsgue~ ~mlicssc~ ~mlicssce~ ~mlicssd~ ~mlicssde~ ~mlicssl~ ~mlicssle~ ~mlicssp~ ~mlicsspe~ ~mlicswk~ ~mlicswke~ ~mum2a4~ ~mum2a4e~ ~mum2aa1~ ~mum2aa1e~ ~mum2aa2~ ~mum2aa2e~ ~mum2aa4~ ~mum2aa4e~ ~mum2aca~ ~mum2acae~ ~mum2agh~ ~mum2aghe~ ~mum2agu~ ~mum2ague~ ~mum2asc~ ~mum2asce~ ~mum2asd~ ~mum2asde~ ~mum2asl~ ~mum2asle~ ~mum2asp~ ~mum2aspe~ ~mum2awk~ ~mum2awke~ ~mum2ma1~ ~mum2ma1e~ ~mum2ma2~ ~mum2ma2e~ ~mum2ma4~ ~mum2ma4e~ ~mum2mca~ ~mum2mcae~ ~mum2mgh~ ~mum2mghe~ ~mum2mgu~ ~mum2mgue~ ~mum2msc~ ~mum2msce~ ~mum2msd~ ~mum2msde~ ~mum2msl~ ~mum2msle~ ~mum2msp~ ~mum2mspe~ ~mum2mwk~ ~mum2mwke~ ~mum2sa1~ ~mum2sa1e~ ~mum2sa2~ ~mum2sa2e~ ~mum2sa4~ ~mum2sa4e~ ~mum2sca~ ~mum2scae~ ~mum2sgh~ ~mum2sghe~ ~mum2sgu~ ~mum2sgue~ ~mum2ssc~ ~mum2ssce~ ~mum2ssd~ ~mum2ssde~ ~mum2ssl~ ~mum2ssle~ ~mum2ssp~ ~mum2sspe~ ~mum2swk~ ~mum2swke~ ~mwigaa1~ ~mwigaa1e~ ~mwigaa2~ ~mwigaa2e~ ~mwigaa4~ ~mwigaa4e~ ~mwigaca~ ~mwigacae~ ~mwigagh~ ~mwigaghe~ ~mwigagu~ ~mwigague~ ~mwigasc~ ~mwigasce~ ~mwigasd~ ~mwigasde~ ~mwigasl~ ~mwigasle~ ~mwigasp~ ~mwigaspe~ ~mwigawk~ ~mwigawke~ ~mwigma1~ ~mwigma1e~ ~mwigma2~ ~mwigma2e~ ~mwigma4~ ~mwigma4e~ ~mwigmca~ ~mwigmcae~ ~mwigmgh~ ~mwigmghe~ ~mwigmgu~ ~mwigmgue~ ~mwigmsc~ ~mwigmsce~ ~mwigmsd~ ~mwigmsde~ ~mwigmsl~ ~mwigmsle~ ~mwigmsp~ ~mwigmspe~ ~mwigmwk~ ~mwigmwke~ ~mwigsa1~ ~mwigsa1e~ ~mwigsa2~ ~mwigsa2e~ ~mwigsa4~ ~mwigsa4e~ ~mwigsca~ ~mwigscae~ ~mwigsgh~ ~mwigsghe~ ~mwigsgu~ ~mwigsgue~ ~mwigssc~ ~mwigssce~ ~mwigssd~ ~mwigssde~ ~mwigssl~ ~mwigssle~ ~mwigssp~ ~mwigsspe~ ~mwigswk~ ~mwigswke~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+		// Belhifet in Cyclops slot leftover from TDD: Fixed Cyclops animations not being disabled bug ( http://www.shsforums.net/topic/48626-cyclops-bug/ ).
+		ACTION_FOR_EACH bm IN ~mcycca~ ~mcyccae~ ~mcycsp~ ~mcycspe~ BEGIN
+			ACTION_IF FILE_EXISTS_IN_GAME ~%bm%.bam~ BEGIN
+				ACTION_IF FILE_EXISTS ~override/%bm%.bam~ BEGIN
+					DELETE ~override/%bm%.bam~
+				END
+				DISABLE_FROM_KEY ~%bm%.bam~
+			END
+		END
+
+	END	// of Mods checks: BP, CtB, Drizzt Saga, RoT, SOS, TS
+
+	// COPY_LARGE ~infinityanimations/restore~ ~override~
+	// LAF ps_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = "infinityanimations/restore" DestinationDir = "override" RET Count END
+	LAF ~gw_update_content~ STR_VAR archive = "bg2_restores" IA_content = "IA_BG2_Restores" soundsets = "n" END
+
+END	// of Restoring previously overwritten BG2 animations
