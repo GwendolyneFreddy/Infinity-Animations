@@ -1,0 +1,290 @@
+/* ========================================== *
+ *  v 6.0.0                                   *
+ *          A L W A Y S    B L O C K          *
+ *                                            *
+ * ========================================== */
+
+// Concept borrowed from DavidW's Immutability and encapsulation in mod design ( https://github.com/Gibberlings3/immutable )
+
+/* =================================================================== *
+ *  This code only runs once, even if you install lots of components.  *
+ * =================================================================== */
+
+ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
+
+	OUTER_SET always_once_section = 1
+	SILENT
+
+	/* -------------------------- *
+	 *    Sod: Modmerge check.    *
+	 * -------------------------- */
+
+	ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) BEGIN FAIL @1000 END // Modmerge check
+
+
+	/* ----------------------------------------- *
+	 *    Determines which game is installed.    *
+	 * ----------------------------------------- */
+
+	OUTER_SET is_tutu    = (GAME_IS ~tutu tutu_totsc~) ? 1 : 0                             // tutu
+	OUTER_SET is_bgt     = (GAME_IS ~bgt~) ? 1 : 0                                         // bgt
+	OUTER_SET is_tob     = (GAME_IS ~tob ca~ AND (is_tutu = 0 ) AND (is_bgt = 0)) ? 1 : 0  // based on classical ToB standalone
+
+	OUTER_SET is_bgee    = (GAME_IS "bgee" AND NOT GAME_INCLUDES ~sod~) ? 1 : 0            // bgee without SoD
+	OUTER_SET is_sod     = (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) ? 1 : 0                // SoD
+	OUTER_SET is_bg2ee   = (GAME_IS "bg2ee") ? 1 : 0                                       // b2gee
+	OUTER_SET is_iwdee   = (GAME_IS "iwdee") ? 1 : 0                                       // iwdee
+	OUTER_SET is_eet     = (GAME_IS "eet") ? 1 : 0                                         // eet
+	OUTER_SET is_ee      = (GAME_IS "bgee bg2ee iwdee eet") ? 1 : 0                        // based on EE games, except PSTEE
+	OUTER_SET is_classic = (is_ee = 0) ? 1 : 0                                             // based classic games
+
+
+	/* ------------------------------- *
+	 *    Check game's localization    *
+	 * ------------------------------- */
+
+//	OUTER_TEXT_SPRINT game_lang ~en_us~
+	// 1. EE games: language is defined by WeiDU EE_LANGUAGE variable
+	ACTION_IF (VARIABLE_IS_SET "EE_LANGUAGE") BEGIN
+
+		OUTER_TEXT_SPRINT game_lang ~%EE_LANGUAGE%~
+		ACTION_TO_LOWER "game_lang"
+
+	// 2. Original games: we must find in which language the game is installed (look for string #6913 and compare it with foreign languages strings).
+	END ELSE BEGIN
+
+		ACTION_GET_STRREF 6913 collier
+//PRINT "CONTROL Check game's localization - string ingame ==> 6913 = %collier%"
+		ACTION_FOR_EACH lang_tra IN ~pt_br~ ~zh_cn~ ~de_de~ ~es_es~ ~fr_fr~ ~it_it~ ~ja_jp~ ~ko_kr~ ~ru_ru~ ~en_us~ BEGIN //~cs_cz~ ~hu_hu~ ~pl_pl~ ~tr_tr~ ~uk_ua~
+			ACTION_IF NOT VARIABLE_IS_SET game_lang BEGIN
+				LAF SUBSTRING INT_VAR start = 3 length = 2 STR_VAR string = EVAL "%lang_tra%" RET lang = substring END
+//PRINT "CONTROL Check game's localization - lang_tra = %lang_tra% - lang = %lang%"
+				WITH_TRA ~%MOD_FOLDER%/lang/string_%lang%.tra~ BEGIN
+					OUTER_SPRINT neck_string @6913
+				END
+				ACTION_IF NOT (~%collier%~ STRING_CONTAINS_REGEXP ~%neck_string%~) BEGIN
+					OUTER_SPRINT game_lang EVAL ~%lang_tra%~
+/*					PRINT "CONTROL Check game's localization - 6913 = %collier% ==> string_%lang% = %neck_string% - GAME LANGUAGE = %game_lang%"
+				END ELSE BEGIN
+					PRINT "CONTROL Check game's localization - language %lang_tra% - 6913 = %collier% # string_%lang% = %neck_string%"
+*/				END
+			END
+		END
+
+	END
+	PRINT "CONTROL Check game's localization ===> GAME LANGUAGE = %game_lang%"
+
+
+	/* ------------------------ *
+	 *    Detects other mods    *
+	 * ------------------------ */
+
+	OUTER_SET is_tobex     = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0
+	OUTER_SET is_bh        = (FILE_EXISTS_IN_GAME ~bhlizkng.cre~)
+	OUTER_SET is_ctb       = (FILE_EXISTS_IN_GAME ~cbbgbera.cre~)
+	OUTER_SET is_drizzt    = (FILE_EXISTS_IN_GAME ~f_bel.cre~)
+	OUTER_SET is_nej       = (FILE_EXISTS_IN_GAME ~doomguar.cre~) //giantfs
+	OUTER_SET is_ps        = (FILE_EXISTS_IN_GAME ~pslady.cre~)
+	OUTER_SET is_rot       = (FILE_EXISTS_IN_GAME ~brefr1.cre~)
+	OUTER_SET is_sheena    = (FILE_EXISTS_IN_GAME ~k#polys.spl~)
+	OUTER_SET is_sos       = (FILE_EXISTS_IN_GAME ~cbssyeti.cre~)
+	OUTER_SET is_tdd       = (FILE_EXISTS_IN_GAME ~ddfrost1.cre~)
+	OUTER_SET is_ts        = (FILE_EXISTS_IN_GAME ~purang.cre~)
+	OUTER_SET is_rpgkit    = (FILE_EXISTS_IN_GAME ~s#crow.cre~)
+/* Mod checks: BP (looking for TUNDRA_YETI animation)
+// ------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/iwd" ChildDirRegex = "iwd_tundra_yeti" FileRegex = "^3daa1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~bpdrifm1.cre~)) AND NOT F_Exists BEGIN // FILE_EXISTS ~infinityanimations/content/3daa1.bam~ BEGIN
+
+// Mod checks: BP (looking for GIANT_FROST animation)
+// --------------------------------------------------------------------------------------
+LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/shadows_harpy_frostgiant" ChildDirRegex = "giant_frost" FileRegex = "^3bra1.bam$" RET F_Exists = Count END
+ACTION_IF ((FILE_EXISTS_IN_GAME ~frost01.cre~)) AND NOT F_Exists BEGIN // FILE_EXISTS ~infinityanimations/content/3bra1.bam~ BEGIN*/
+
+
+	/* ------------------------------------------------------------------------- *
+	 *    Loads Crossplatform variables according to which game is installed.    *
+	 * ------------------------------------------------------------------------- */
+	ACTION_IF is_tutu BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_tutu_cpmvars.tpa~
+		PRINT @1001 // ~Tutu install detected.~
+	END
+	ACTION_IF is_bgt BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_bgt_cpmvars.tpa~
+		PRINT @1003 // ~BGT install detected.~
+	END
+	ACTION_IF is_tob BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_bg2_cpmvars.tpa~
+		PRINT @1002 // ~Throne of Bhaal install detected.~
+	END
+	ACTION_IF is_bgee BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_bgee_vars.tpa~
+		PRINT @1004 // ~Baldur's Gate Enhanced Edition install detected.~
+	END
+	ACTION_IF is_sod BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_bgee_vars.tpa~
+		PRINT @1005 // ~Siege of Dragonspear install detected.~
+	END
+	ACTION_IF is_bg2ee BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_bg2_cpmvars.tpa~
+		PRINT @1006 // ~Baldur's Gate II Enhanced Edition install detected.~
+	END
+	ACTION_IF is_eet BEGIN
+		INCLUDE ~%MOD_FOLDER%/arrays/ia_eet_cpmvars.tpa~
+		PRINT @1007 // ~Enhanced Edition Trilogy install detected.~
+	END
+	ACTION_IF is_iwdee BEGIN
+		PRINT @1008 // ~Icewind Dale Enhanced Edition install detected.~
+	END
+
+
+	/* -------------------------- *
+	 *    Creates a blank file    *
+	 * -------------------------- */
+
+<<<<<<<< .../infinityanimations-inlined/blank
+
+>>>>>>>>
+
+	ACTION_IF (NOT FILE_EXISTS ~infinityanimations/log/t-cre_fixer.log~) BEGIN
+		<<<<<<<< .../infinityanimations-inlined/t-cre_fixer.log
+=================================================================================
+Creature  Item      Slot   Issue
+=================================================================================
+>>>>>>>>
+		COPY ~.../infinityanimations-inlined/t-cre_fixer.log~ ~infinityanimations/log~
+	END
+
+
+	/* ------------------------------------------------------- *
+	 *    Sets default variables if they're not set already    *
+	 * ------------------------------------------------------- */
+
+	ACTION_IF (is_ee) BEGIN
+		OUTER_SPRINT ee_file "_ee"
+	END ELSE BEGIN
+		OUTER_SPRINT ee_file ""
+	END
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~mmar.2da~) BEGIN // Marilith
+		OUTER_SET fix_soundsets_conflicts = 1
+	END ELSE BEGIN
+		OUTER_SET fix_soundsets_conflicts = 0
+	END
+
+	ACTION_IF !VARIABLE_IS_SET base_language BEGIN
+		OUTER_SPRINT base_language "english"
+	END
+
+	OUTER_SPRINT configuration-default "infinityanimations-config-default.ini"  // configuration file to read default configuration options
+	OUTER_SPRINT configuration-user    "infinityanimations-config-user.ini"     // user .ini file, not included inside mod archive. If exists, it will overwrite infinityanimations-config-degault.ini file configuration options.
+
+
+	/* --------------------------------------------------------------------------- *
+	 *    Loads in any shared function libraries (general macros and functions)    *
+	 * --------------------------------------------------------------------------- */
+
+	INCLUDE ~%MOD_FOLDER%/lib/ia_read_configuration.tph~    // Library of functions and macros reading the configuration options values (Bibliothèque de fonctions et de macros lisant les options de configuration).
+	INCLUDE ~%MOD_FOLDER%/lib/ps_recursive_copy.tpa~        // Sam's library allowing to recursively search into a parent directory, then copy files to a destination directory. Gwendolyne's library to install IA content.
+	INCLUDE ~%MOD_FOLDER%/lib/gw_handle_audio.tpa~          // Customised silent HANDLE_AUDIO function.
+	INCLUDE ~%MOD_FOLDER%/lib/a7_functions.tpa~             // Loads Argent77's functions library to install new animations slots into ANIMATE.ids (big thanks to him!) - Ajout automatique de slots d'animations de créatures dans BG2EE. Merci à Argent77 pour sa procédure !
+	INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~             // Shared library of functions and macros.
+
+
+	/* -------------------------------------- *
+	 *    Reading .ini configuration files    *
+	 * -------------------------------------- */
+
+	ACTION_IF (VARIABLE_IS_SET configuration-default) BEGIN
+		OUTER_SPRINT ini_to_read "%MOD_FOLDER%/%configuration-default%"
+		LAM ~gw_read_ini_file~
+	END
+
+	ACTION_IF (VARIABLE_IS_SET configuration-user) BEGIN
+		OUTER_SPRINT ini_to_read "%MOD_FOLDER%/%configuration-user%"
+		LAM ~gw_read_ini_file~
+	END
+
+	LAM ~GW_CHECK_CONFIG_VARIABLES~
+
+
+	/* ------------------------------------------------- *
+	 *    Defines which language soundsets to install    *
+	 * ------------------------------------------------- */
+
+	LAM ~gw_check_sound_language~
+	PRINT "==> soundset_lang = %soundset_lang% - soundset_lang_ee = %soundset_lang_ee%"
+
+
+	PRINT @1014 /* ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
+---------------------------------------------------
+	ia_force_soundset = %ia_force_soundset%
+	ia_base_anims = %ia_base_anims%
+	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
+	ia_bg1_character_animations = %ia_bg1_character_animations%
+	ia_bg2_restores = %ia_bg2_restores%
+	ia_ee_missing = %ia_ee_missing%
+	ia_bg2_iwd2 = %ia_bg2_iwd2%
+	ia_ee_tob = %ia_ee_tob%
+	ia_fiends_genies = %ia_fiends_genies%
+	ia_iwd = %ia_iwd%
+	ia_iwd_svirfneblin = %ia_iwd_svirfneblin%
+	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised%%ee_file%
+	ia_nwn_01_modron = %ia_nwn_01_modron%
+	ia_nwn_misc_1 = %ia_nwn_misc_1%
+	ia_pst_abishai = %ia_pst_abishai%
+	ia_pst_paletted = %ia_pst_paletted%
+	ia_shadows_harpy_frostgiant = %ia_shadows_harpy_frostgiant%
+	ia_wh_dr_wyv_lop = %ia_wh_dr_wyv_lop%
+	ia_modders = %ia_modders%
+---------------------------------------------------
+	Game's localization ==> GAME LANGUAGE = %game_lang%
+	===> soundset_lang = %soundset_lang% - soundset_lang_ee = %soundset_lang_ee%
+---------------------------------------------------~ */
+	SILENT
+
+
+	/* ------------------------------------------- *
+	 *    Convert strings to UTF-8 for EE games    *
+	 * ------------------------------------------- */
+
+	ACTION_DEFINE_ARRAY ia#noconvert BEGIN END
+	ACTION_DEFINE_ARRAY ia#reload BEGIN setup strings END
+
+	// Converts once .tra files
+	LAF ~check_ini~ STR_VAR ini = ia_force_tra_rebuild RET ia_force_tra_rebuil = value END
+	ACTION_IF (!FILE_EXISTS "%MOD_FOLDER%/ia_languages_installed.mrk"  || ia_force_tra_rebuild) BEGIN
+
+		COPY ~.../infinityanimations-inlined/blank~ ~%MOD_FOLDER%/ia_languages_installed.mrk~
+
+		ACTION_DEFINE_ARRAY ia_noconvert BEGIN setup END
+		// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+		ACTION_DEFINE_ARRAY ia_reload BEGIN setup strings END
+		LAF HANDLE_CHARSETS
+			INT_VAR
+				infer_charsets = 1
+			STR_VAR
+				tra_path = EVAL ~%MOD_FOLDER%/lang~
+				noconvert_array = ia_noconvert
+				reload_array = ia_reload
+		END
+
+	END
+
+
+	/* --------------------------------------------------------- *
+	 *    TRAs declared in LANGUAGE must be reloaded             *
+	 *    by hand, because of the copying (for non-EE version    *
+	 * --------------------------------------------------------- */
+
+	LOAD_TRA ~infinityanimations/lang/%base_language%/setup.tra~
+	LOAD_TRA ~infinityanimations/lang/%LANGUAGE%/setup.tra~
+
+	/* TRAs used in original games must be loaded by hand */
+	ACTION_IF (NOT is_ee) BEGIN
+		LOAD_TRA ~%MOD_FOLDER%/lang/%base_language%/strings.tra~	~%MOD_FOLDER%/lang/%LANGUAGE%/strings.tra~
+	END
+
+	SILENT
+
+END	// of ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN

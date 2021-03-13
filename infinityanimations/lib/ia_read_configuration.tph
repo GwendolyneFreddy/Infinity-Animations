@@ -1,0 +1,210 @@
+/* ============================================================================================================================ *
+ *  v 6.0.0                                                                                                                     *
+ *        F U N C T I O N S    &    M A C R O S    :    R E A D I N G    I N I    C O N F I G U R A T I O N    F I L E S        *
+ *                                                                                                                              *
+ * ============================================================================================================================ */
+
+/* ======================================================================================================================================== *
+ *  LIST of FUNCTIONS & MACROS                                                                                                              *
+ *  --------------------------                                                                                                              *
+ *  - MACRO gw_read_ini_file           : READS an .ini file (LIT un fichier .ini).                                          => line #  20   *
+ *  - FUNCTION check_ini               : CHECKS an ini value (case-insensitive) / Vérifie une variable (en minuscules).     => line #  50   *
+ *  - MACRO GW_CHECK_CONFIG_VARIABLES  : CHECKS configuration options values validity.                                      => line #  72   *
+ *                                       VÉRIFIE la validité des options de configuration.                                                  *
+ *  - MACRO gw_check_sound_language    : DEFINES which language soundsets to install.                                       => line # 155   *
+ *                                       DÉTERMINE dans quelle langue les jeux de sons sont installés.                                      *
+ * ======================================================================================================================================== */
+
+
+/* ======================================================================================== *
+ *  MACRO gw_read_ini_file : READS an .ini file (LIT un fichier .ini).                      *
+ * ---------------------------------------------------------------------------------------- *
+ *  This WeiDU action macro reads the configuration options values set in "%ini_to_read%"   *
+ *  file and writes them into ia_ini_var.                                                   *
+ *  ini key values are treated case-insensitive.                                            *
+ *  (Initially wrote for AL|EN, but borrowed from CamDawg's most efficient version).        *
+ * ======================================================================================== */
+
+DEFINE_ACTION_MACRO ~gw_read_ini_file~
+BEGIN
+
+	LOCAL_SPRINT key ""
+
+	ACTION_IF FILE_EXISTS "%ini_to_read%" BEGIN
+		PRINT "DEBUGGING CONTROL configuration file to read = %ini_to_read%"
+		COPY - ~%ini_to_read%~ ~override~
+			REPLACE_EVALUATE ~^\([^ %TAB%%WNL%]+\) *= *\([^%WNL%$]+\)~
+				BEGIN
+					// key must start line and cannot contain whitespace value is everything after the "=" until the newline/end
+					SPRINT key "%MATCH1%"
+					TO_LOWER key
+					TEXT_SPRINT $ia_ini_var(~%key%~) ~%MATCH2%~
+				END
+			~~
+		END
+
+END
+
+
+/* ============================================================== *
+ *  FUNCTION check_ini : CHECKS an ini value (case-insensitive).  *
+ * -------------------------------------------------------------- *
+ *  Borrowed from CamDawg and turned into a dimorphic function.   *
+ * ============================================================== */
+
+DEFINE_DIMORPHIC_FUNCTION ~check_ini~
+	STR_VAR ini = ""
+	RET     value
+BEGIN
+
+	ACTION_TO_LOWER ini
+	ACTION_IF !VARIABLE_IS_SET $ia_ini_var(~%ini%~) BEGIN
+		OUTER_SPRINT value 0
+//		OUTER_SPRINT value 4
+	END ELSE BEGIN
+		OUTER_SPRINT value $ia_ini_var(~%ini%~)
+	END
+
+END
+
+
+/* ============================================================================================================== *
+ *  MACRO GW_CHECK_CONFIG_VARIABLES : CHECKS configuration options values validity.                               *
+ *                                    VÉRIFIE la validité des options de configuration.                           *
+ * -------------------------------------------------------------------------------------------------------------- *
+ *  Cette macro vérifie que la valeurs des options de configuration des fichiers %configuration-default% et       *
+ *  %configuration-user% sont présentes et conformes ; sinon, elle leur assigne leur valeur par défaut (définie   *
+ *  dans l'array ia_ini_variables_check).                                                                         *
+ * -------------------------------------------------------------------------------------------------------------- *
+ *  This macro checks if configuration option values (in %configuration-default% & %configuration-user%) are set  *
+ *  and not mismatched. If not, it will revert them to their default values (ia_ini_variables_check array).       *
+ * ============================================================================================================== */
+
+ACTION_CLEAR_ARRAY ia_ini_variables_check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ia_ini_variables_check BEGIN
+//  VARIABLE                  VALUES : MAX  => DEFAULT
+	force_tra_rebuild,                  1	=> 0 // used during mod development. YOU SHOULD NOT BE ALLOWED TO MODIFY IT.
+	sort_ids,                           1	=> 0 // id.
+	force_soundset,                     1	=> 0
+	bg1_character_animations,           1	=> 1
+	bg2_restores,                       1	=> 1
+	ee_missing,                         1	=> 1
+	base_anims,                         1	=> 1
+	belhifet_and_marilith,              1	=> 1
+	bg2_iwd2,                           1	=> 1
+	ee_tob,                             1	=> 1
+	fiends_genies,                      1	=> 1
+	iwd,                                1	=> 1
+	iwd_svirfneblin,                    1	=> 1
+	moinesse_edits_iaised,              1	=> 1
+	moinesse_edits_iaised_ee,           1	=> 1
+	nwn_01_modron,                      1	=> 1
+	nwn_misc_1,                         1	=> 1
+	pst_abishai,                        1	=> 1
+	pst_paletted,                       1	=> 1
+	shadows_harpy_frostgiant,           1	=> 1
+	wh_dr_wyv_lop,                      1	=> 1
+	modders,                            1	=> 1
+END
+
+DEFINE_ACTION_MACRO ~GW_CHECK_CONFIG_VARIABLES~
+BEGIN
+
+	ACTION_PHP_EACH ia_ini_variables_check AS variable => default BEGIN
+
+		// If variable is already set
+		ACTION_IF (VARIABLE_IS_SET $ia_ini_var(~ia_%variable_0%~)) BEGIN
+
+			ACTION_IF (NOT(IS_AN_INT $ia_ini_var(~ia_%variable_0%~)) || ($ia_ini_var(~ia_%variable_0%~) < 0 ) || ($ia_ini_var(~ia_%variable_0%~) > %variable_1%)) BEGIN
+				OUTER_TEXT_SPRINT wrong_value $ia_ini_var("ia_%variable_0%")
+				OUTER_TEXT_SPRINT $ia_ini_var("ia_%variable_0%") "%default%"
+				OUTER_SET value = $ia_ini_var("ia_%variable_0%")
+				PRINT @1011 // ~Configuration option ia_%variable_0% value (%wrong_value%) does not match its scope and has been reset to its default value (%default%).~
+			END ELSE BEGIN
+				OUTER_SET value = $ia_ini_var("ia_%variable_0%")
+			END
+
+		// If variable is not set
+		END ELSE BEGIN
+
+			OUTER_TEXT_SPRINT $ia_ini_var("ia_%variable_0%") "%default%"
+			OUTER_SET value = $ia_ini_var("ia_%variable_0%")
+			PRINT @1012 // ~Configuration option ia_%variable_0% does not exist: it has been set to its default value (%default%).~
+
+		END
+
+		OUTER_SET EVAL "ia_%variable_0%" = value
+
+/*TODO remove (only used during development)
+LAF ~check_ini~ STR_VAR ini = EVAL "ia_%variable_0%" RET var = value END
+PRINT "CONTROL check_ini ia_%variable_0% = %var%"*/
+
+	END	// of ACTION_PHP_EACH GW_ini_variables_check AS variable => default
+
+	ACTION_IF NOT ia_base_anims BEGIN
+		OUTER_SET ia_base_anims = 1
+		PRINT @1013 // ~Configuration option ia_base_anims has been reset to 1 to update IE games base animations!~
+	END
+
+	ACTION_CLEAR_ARRAY ia_ini_variables_check
+
+END	// of DEFINE_ACTION_MACRO
+
+
+/* ============================================================================================================================================== *
+ *  MACRO gw_check_sound_language : DEFINES which language soundsets to install.                                                                  *
+ *                                  DÉTERMINE dans quelle langue les jeux de sons sont installés.                                                 *
+ * ---------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Infinity Animations automatically install sound clips accordingly to the game language localization. However it is possible to bypass this    *
+ *  behaviour  by setting %ia_force_soundset% variable to 1.                                                                                      *
+ *  For example, if you install the mod in English in a French BG2 game, IA will install French soundsets unless you set this variable to 1.      *
+ *  In which  case, English soundsets will be installed instead of French ones.                                                                   *
+ * ---------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This macro returns %soundset_lang% and %soundset_lang_ee% variables which define which language soundset will be installed.                   *
+ *  By default, it prioritizes 1) the game installation language, 2) the mod installation language, 3) English.                                   *
+ * ---------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  Cette macro retourne les variables %soundset_lang% et %soundset_lang_ee% qui déterminent dans quelle langue les jeux de sons sont installés.  *
+ *  Par défaut, il s'agit par ordre de priorité de 1) la langue d'installation du jeu, 2) la langue d'installation du mod, 3) l'anglais.          *
+ * ============================================================================================================================================== */
+
+DEFINE_ACTION_MACRO ~gw_check_sound_language~
+BEGIN
+
+	ACTION_CLEAR_ARRAY ia_sound_languages
+	ACTION_DEFINE_ASSOCIATIVE_ARRAY ia_sound_languages BEGIN
+		zh_cn, schinese  => english
+		cs_cz, czech     => english
+		en_us, english   => english
+		fr_fr, french    => french
+		de_de, german    => german
+		hu_hu, hungarian => english
+		it_it, italian   => english
+		ja_jp, japanese  => english
+		ko_kr, korean    => english
+		pl_pl, polish    => polish
+		ru_ru, russian   => english
+		es_es, spanish   => english
+		tr_tr, turkish   => english
+		uk_ua, ukrainian => english
+	END
+
+	ACTION_PHP_EACH ia_sound_languages AS langue => soundset BEGIN
+
+		ACTION_IF (NOT VARIABLE_IS_SET soundset_lang) BEGIN
+//			PRINT "DEBUGGING CONTROL : %langue% ==> %langue_1% - force_soundset = %ia_force_soundset%"
+
+			ACTION_IF ia_force_soundset AND ("%langue_1%" STR_EQ "%LANGUAGE%") BEGIN
+				OUTER_SPRINT soundset_lang EVAL "%soundset%"
+				OUTER_SPRINT soundset_lang_ee EVAL "%soundset%_ee"
+			END ELSE BEGIN
+				ACTION_IF ("%langue%" STR_EQ "%game_lang%") BEGIN
+					OUTER_SPRINT soundset_lang EVAL "%soundset%"
+					OUTER_SPRINT soundset_lang_ee EVAL "%soundset%_ee"
+				END
+			END
+
+		END
+
+	END
+
+END	// of DEFINE_ACTION_MACRO
