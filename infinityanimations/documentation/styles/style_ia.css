@@ -85,8 +85,7 @@ body {
 	display: block;
 border-radius: 4px 4px 4px 5px;
 	box-shadow: 6px 6px 9px rgba(0,0,0,.3);
-	}
-
+}
 #maindiv .content::before {
 	content: counter(kman, lower-roman);
 	font-size: 100%;
@@ -100,7 +99,6 @@ border-radius: 4px 4px 4px 5px;
 	display: block;
 }
 /*1pp
-#maindiv .content::before {
 	width: 50px;
 }*/
 
@@ -121,11 +119,13 @@ border-radius: 4px 4px 4px 5px;
 #maindiv .important::before {
 	display: none;
 }
+
 #maindiv .important p {
 	font-size: 100%;
 	text-indent: 0px;
 	margin: 5px 0 10px 0;
 }
+
 #maindiv .important ol {
 	margin: -10px 0 0 20px;
 }
@@ -149,6 +149,21 @@ border-radius: 4px 4px 4px 5px;
 #maindiv .important ul {
 	margin: -10px 0 0 15px;
 }*/
+
+#maindiv .important_tuto {
+	font-size: 100%;
+	font-family: Verdana;
+	text-align: left;
+	background-color: #F1F1F1;
+	border-top: solid 1px #aaa;
+	border-bottom: solid 1px #aaa;
+	border-left: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+	padding: 10px;
+	margin: 20px auto;
+	width: 80%;
+	line-height: 160%;
+}
 
 .tocplus{
 	counter-increment:hman;
@@ -180,9 +195,9 @@ border-radius: 4px 4px 4px 5px;
 }
 
 
-/* ---------------- *
- *  Corps de texte  *
- * ---------------- */
+/* ---------------------------- *
+ *  Corps du texte - Body text  *
+ * ---------------------------- */
 #maindiv p {
 	font-size: 100%;
 	font-style: normal;
@@ -205,6 +220,7 @@ border-radius: 4px 4px 4px 5px;
 	padding: 6px;
 }
 
+
 /* ---------------- *
  *  Listes - Lists  *
  * ---------------- */
@@ -219,6 +235,7 @@ border-radius: 4px 4px 4px 5px;
 /*#maindiv ul li {
 	margin-right: 0px;
 }*/
+
 #maindiv ul li ul {
 	margin: 0px;
 	width: 96%;
@@ -231,7 +248,7 @@ border-radius: 4px 4px 4px 5px;
 	#maindiv ul li ul li ul li {}
 	ul.c1 {margin-left: 32px;}*/
 
-/* INUTILISE 1pp= liste numérique
+/* UNUSED 1pp = liste numérique
 #maindiv ol {
 	margin: 0px 0 0 35px;
 	*margin-left: 70px;
@@ -240,13 +257,13 @@ border-radius: 4px 4px 4px 5px;
 	line-height: 170%;
 }
 */
-	#maindiv ol {
-		margin: -10px 0 0 35px;
-		*margin-left: 70px;
-	}
-	#maindiv ol li {
-		line-height: 150%;
-	}
+#maindiv ol {
+	margin: -10px 0 0 35px;
+	*margin-left: 70px;
+}
+#maindiv ol li {
+	line-height: 150%;
+}
 
 	#maindiv ul li a:link,
 	#maindiv ul li a:visited,
@@ -269,13 +286,14 @@ border-radius: 4px 4px 4px 5px;
 	font-weight: bold;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	border-bottom: solid 1px #FFCC33;
-	border-top: solid 1px #FFCC33;
+	border-bottom: solid 1px #781808;
+	border-top: solid 1px #781808;
 }
 
-/* ---------------- *
- *  Liens internet  *
- * ---------------- */
+
+/* ------------------------ *
+ *  Liens internet (links)  *
+ * ------------------------ */
 a:hover,
 a:active {
 	color: #222;
@@ -326,9 +344,9 @@ a:hover {
 }
 
 
-/* --------------------- *
- *  Titres des sections  *
- * --------------------- */
+/* --------------------------------------- *
+ *  Titres des sections (Sections Titles)  *
+ * --------------------------------------- */
 /*h1 {
 	line-height: 170%;
 	font-size: 225%;
@@ -344,7 +362,8 @@ h1 {
 		padding: 10px 0 15px 0; /* 5 0 5 0 */
 		margin: 0;
 		width: 100%;
-	}
+}
+
 /*  Titres de section (160 %)  */
 /*h2 {
 	line-height: 170%;
@@ -366,11 +385,12 @@ h2::first-letter {
 	background-color: transparent;
 }
 
-/*	h2 .com {
-		color: #781808;
-		background-color: transparent;
-		margin-right:30px;
-	}*/
+h2 .com {
+	color: #781808;
+	background-color: transparent;
+	margin-left:40px;
+	margin-right:30px;
+}
 
 /*h3, h4, h5, h6 {
 	line-height: 170%;
@@ -392,12 +412,6 @@ h3 {
 	font-size: 125%;
 	font-style: italic;
 }
-/*	h3 {
-		font-size: 125%;
-		font-style: italic;
-		margin: 10px 40px 10px 40px;
-		padding: 0;
-	}*/
 
 h4 {
 	font-size: 125%;
@@ -432,16 +446,16 @@ h6 {
 	font-size: 125%;
 }*/
 
-/*	.com {
-		color: #781808;
-		background-color: transparent;
-	}*/
+.com {
+	color: #781808;
+	background-color: transparent;
+	margin-right:30px;
+	}
 
 
 /* ------------------ *
  *  Additional stuff  *
  * ------------------ */
-
 .t1 {
 	font-weight: bold;
 	width: 26%;
@@ -477,9 +491,9 @@ h6 {
 	}*/
 
 
-/* --------------- *
- *  Texte de code  *
- * --------------- */
+/* ----------------------------------------------- *
+ *  Format de code WeiDU - WeiDU coding formating  *
+ * ----------------------------------------------- */
 .weidu {
 	font-family: Courier New;
 	font-size: 100%;
@@ -492,6 +506,7 @@ h6 {
 	font-family: Courier New;
 	font-size: 100%;
 }
+
 
 /* --------------------- *
  * Image-logo d'en-tête  *
@@ -507,7 +522,7 @@ h6 {
 .screen img{max-width:100%; opacity:1;transition: opacity 1.25s ease-in-out;
 	-moz-transition: opacity 1.25s ease-in-out;
 	-webkit-transition: opacity 1.25s ease-in-out;
-display: inline-block;}
+	display: inline-block;}
 .screen img:hover{max-width:100%; opacity:0}
 
 
@@ -525,9 +540,9 @@ hr {
 }
 
 
-/* ---------- *
- *  Tableaux  *
- * ---------- */
+/* ------------------- *
+ *  Tableaux - Tables  *
+ * ------------------- */
 /*table {
 	width: 90%;
 	padding: 10px;*/
