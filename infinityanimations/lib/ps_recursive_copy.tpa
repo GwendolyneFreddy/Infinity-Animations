@@ -1,47 +1,67 @@
-//////////////////////////////////////////////////////////////////////////////////
-////////////////////////////     ps_recursive_copy    ////////////////////////////
-////////////////////////////          v0.0.1          ////////////////////////////
-//////////////////////////// Copyright (c) 2018 Sam.  ////////////////////////////
-////////////////////////////          WTFPL           ////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////
+/* ============================================================ *
+ *                                                              *
+ *               PS_RECURSIVE_COPY   LIBRARY                    *
+ *                            v0.0.1                            *
+ *                   Copyright (c) 2018 Sam.                    *
+ *                            WTFPL                             *
+ *                                                              *
+ * ============================================================ */
+
+/* ================================================================================================================================================================== *
+ *  LIST of FUNCTIONS & MACROS                                                                                                                                        *
+ *  --------------------------                                                                                                                                        *
+ *  - FUNCTION ps_recursive_copy        : Recursively searches into a parent directory, then copies files to a destination directory.                 => line #  24   *
+ *  - FUNCTION ps_recursive_search      : Automatically copies all needed animations and sounds files from archives/subfolders to override folder.    => line #  76   *
+ *  - FUNCTION gw_find_sounds_folder    : Automatically search which sub-folder contains sounds files for a given animation.                          => line # 110   *
+ *  - FUNCTION gw_recursive_copy        : Recursively searches into a parent directory, then copies files to a destination directory.                 => line # 190   *
+ *  - FUNCTION gw_update_content        : Automatically copies all needed animations and sounds files from archives subfolders to override folder.    => line # 300   *
+ *  - MACRO gw_install_archives         : Automatically installs all needed animations and sounds files from archives/subfolders to override folder.  => line # 348   *
+ *  - MACRO gw_install_modders_content  : Automatically installs all needed animations and sounds files from archives/modders to override folder.     => line # 393   *
+ * ================================================================================================================================================================== */
 
 
-/* =============================================================================================================================== *
- *  FUNCTION ps_recursive_copy                                                                                                     *
- * =============================================================================================================================== *
- * This is a WeiDU action function that will recursively search into a parent directory, copying files to a destination directory. *
- *   INT_VAR WarnOnOverwrite can be 1 to print a warning when a file in the destination directory will be overwritten, 2 to warn   *
- *           when a file already exists in the destination game, or 0 to print no warnings.                                        *
- *   STR_VAR ParentDir is a string containing the name of the parent directory that will be recursively searched.                  *
- *   STR_VAR ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir.                       *
- *   STR_VAR FileRegex is a string containing the RegEX of files to match for the COPY_LARGE.                                      *
- *   STR_VAR DestinationDir is a sting containing the name of the destination directory any matching files will be copied into.    *
- *   This function returns the "Count" of files copied to the destination directory.                                               *
- * =============================================================================================================================== */
+/* ================================================================================================================================= *
+ *  FUNCTION ps_recursive_copy                                                                                                       *
+ * --------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action function that will recursively search into a parent directory, copying files to a destination directory.  *
+ * --------------------------------------------------------------------------------------------------------------------------------- *
+ *   INT_VAR                                                                                                                         *
+ *      - WarnOnOverwrite can be 1 to print a warning when a file in the destination directory will be overwritten, 2 to warn when   *
+ *        a file already exists in the destination game, or 0 to print no warnings.                                                  *
+ *   STR_VAR                                                                                                                         *
+ *      - ParentDir is a string containing the name of the parent directory that will be recursively searched.                       *
+ *      - ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir.                            *
+ *      - FileRegex is a string containing the RegEX of files to match for the COPY_LARGE.                                           *
+ *      - DestinationDir is a string containing the name of the destination directory any matching files will be copied into.        *
+ *   RET                                                                                                                             *
+ *      This function returns the "Count" of files copied to the destination directory.                                              *
+ * ================================================================================================================================= */
 
 DEFINE_ACTION_FUNCTION ps_recursive_copy
 	INT_VAR WarnOnOverwrite = 0
-	STR_VAR ParentDir = ""
-			ChildDirRegex = ""
-			FileRegex = "^.+$"
-			DestinationDir = "override"
+	STR_VAR ParentDir       = ""
+            ChildDirRegex   = ""
+            FileRegex       = "^.+$"
+            DestinationDir  = "override"
 	RET Count
 BEGIN
 
 	SILENT
 	OUTER_SET Count = 0
+
 	ACTION_BASH_FOR ~%ParentDir%~ ~%FileRegex%~ BEGIN
 		ACTION_IF (WarnOnOverwrite > 0) AND (FILE_EXISTS ~%DestinationDir%/%BASH_FOR_FILE%~) BEGIN
-			WARN @310 // ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
+			WARN @1030 // ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
 		END ELSE ACTION_IF (WarnOnOverwrite > 1) AND (FILE_EXISTS_IN_GAME ~%BASH_FOR_FILE%~) BEGIN
-			WARN @311 // ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
+			WARN @1031 // ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
 		END
 		SILENT
+		ACTION_TO_LOWER %BASH_FOR_FILESPEC%
 		COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~%DestinationDir%~
-		ACTION_TO_LOWER %BASH_FOR_FILE%
 		OUTER_SET Count += 1
 	END
-	ACTION_CLEAR_ARRAY ChildDir
+
+	ACTION_CLEAR_ARRAY  ChildDir
 	GET_DIRECTORY_ARRAY ChildDir ~%ParentDir%~ ~%ChildDirRegex%~
 	ACTION_PHP_EACH ChildDir AS dirfrom => dirC BEGIN
 		LAF ps_recursive_copy INT_VAR WarnOnOverwrite STR_VAR ParentDir = EVAL "%dirC%" ChildDirRegex FileRegex DestinationDir RET CountN = %Count% END
@@ -52,20 +72,23 @@ BEGIN
 END
 
 
-/* ===================================================================================================================================================== *
- *  FUNCTION ps_recursive_search                                                                                                                         *
- * ===================================================================================================================================================== *
- * This is a WeiDU action function that will recursively search into a parent directory, and report how many files that match the given RegEX are found. *
- *   STR_VAR ParentDir is a string containing the name of the parent directory that will be recursively searched.                                        *
- *   STR_VAR ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir. ParentDir is always searched.               *
- *   STR_VAR FileRegex is a string containing the RegEX of files to match.                                                                               *
- *   This function returns the "Count" of files found matching the given RegEX.                                                                          *
- * ===================================================================================================================================================== */
+/* ======================================================================================================================================================= *
+ *  FUNCTION ps_recursive_search                                                                                                                           *
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action function that will recursively search into a parent directory, and report how many files that match the given RegEX are found.  *
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *   STR_VAR                                                                                                                                               *
+ *      - ParentDir is a string containing the name of the parent directory that will be recursively searched.                                             *
+ *      - ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir. ParentDir is always searched.                    *
+ *      - FileRegex is a string containing the RegEX of files to match.                                                                                    *
+ *   RET                                                                                                                                                   *
+ *      This function returns the "Count" of files found matching the given RegEX.                                                                         *
+ * ======================================================================================================================================================= */
 
 DEFINE_ACTION_FUNCTION ps_recursive_search
-	STR_VAR ParentDir = ""
-			ChildDirRegex = ""
-			FileRegex = "^.+$"
+	STR_VAR ParentDir     = ""
+            ChildDirRegex = ""
+            FileRegex     = "^.+$"
 	RET Count
 BEGIN
 
@@ -73,7 +96,7 @@ BEGIN
 	ACTION_BASH_FOR ~%ParentDir%~ ~%FileRegex%~ BEGIN
 		OUTER_SET Count += 1
 	END
-	ACTION_CLEAR_ARRAY ChildDir
+	ACTION_CLEAR_ARRAY  ChildDir
 	GET_DIRECTORY_ARRAY ChildDir ~%ParentDir%~ ~%ChildDirRegex%~
 	ACTION_PHP_EACH ChildDir AS dirfrom => dirC BEGIN
 		LAF ps_recursive_search STR_VAR ParentDir = EVAL "%dirC%" ChildDirRegex FileRegex RET CountN = %Count% END
@@ -81,3 +104,369 @@ BEGIN
 	END
 
 END
+
+
+/* ==================================================================================================================================================== *
+ *  FUNCTION gw_find_sounds_folder                                                                                                                      *
+ * ---------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action function that will recursively search into a parent directory which sub-folder contains sounds clips for a given animation.  *
+ * ---------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *   STR_VAR                                                                                                                                            *
+ *      - ParentDir is a string containing the name of the parent directory that will be recursively searched.                                          *
+ *      - sounds_rep is the directory in which searching for the sound clips folder.                                                                    *
+ *   RET                                                                                                                                                *
+ *      - sounds_folder       : the name of the folder containing animations sound clips to ne installed.                                               *
+ *      - sounds_folder_found : returns 1 if a dedicated soundset folder exists (0 if not).                                                             *
+ * ==================================================================================================================================================== */
+
+DEFINE_ACTION_FUNCTION gw_find_sounds_folder
+    STR_VAR ParentDir  = ""
+            sounds_rep = "none"
+    RET     sounds_folder
+            sounds_folder_found
+BEGIN
+
+	LOG "sounds_rep = %sounds_rep%"
+	ACTION_IF ("%sounds_rep%" STR_EQ "none") BEGIN
+
+		OUTER_SET sounds_folder_found = 0
+		OUTER_SPRINT sounds_folder "none"
+		OUTER_SPRINT soundset_subfolder "none"
+
+		ACTION_IF DIRECTORY_EXISTS ~%ParentDir%/_soundsets~ OR DIRECTORY_EXISTS ~%ParentDir%/%soundset_lang%~ OR DIRECTORY_EXISTS ~%ParentDir%/english~ BEGIN
+			LOG @1062 // ~Sound clips relative to the animation have been detected.~
+			OUTER_SET sounds_folder_found = 1
+		END ELSE BEGIN
+			LOG @1063 // ~No sound clip relative to the animation has been detected.~
+		END
+
+		ACTION_IF (sounds_folder_found = 1) BEGIN
+
+			ACTION_IF DIRECTORY_EXISTS ~%ParentDir%/_soundsets~ BEGIN
+				OUTER_SPRINT soundset_subfolder "%ParentDir%/_soundsets"
+			END ELSE BEGIN
+				OUTER_SPRINT soundset_subfolder EVAL "%ParentDir%"
+			END
+			LOG "top soundset subfolder = %soundset_subfolder%"
+
+			ACTION_FOR_EACH folder IN ~%soundset_subfolder%/english~ ~%soundset_subfolder%/%soundset_lang%~ BEGIN
+
+				ACTION_IF DIRECTORY_EXISTS ~%folder%~ BEGIN
+					OUTER_SPRINT sounds_folder EVAL "%folder%"
+					LOG @1064 // ~Sound clips folder found = %sounds_folder%~
+				END ELSE BEGIN
+					OUTER_SPRINT sounds_folder EVAL "%soundset_subfolder%"
+				END
+
+				ACTION_IF is_ee BEGIN
+					ACTION_IF DIRECTORY_EXISTS ~%soundset_subfolder%/%soundset_lang_ee%~ BEGIN
+						OUTER_SPRINT sounds_folder EVAL "%soundset_lang_ee%"
+					END ELSE BEGIN
+						ACTION_IF DIRECTORY_EXISTS ~%soundset_subfolder%/%soundset_lang%~ BEGIN
+							OUTER_SPRINT sounds_folder EVAL "%soundset_lang%"
+						END ELSE BEGIN
+							ACTION_IF DIRECTORY_EXISTS ~%soundset_subfolder%/english_ee~ BEGIN
+								OUTER_SPRINT sounds_folder EVAL "%soundset_english_ee%"
+							END ELSE BEGIN
+								ACTION_IF DIRECTORY_EXISTS ~%soundset_subfolder%/english~ BEGIN
+									OUTER_SPRINT sounds_folder EVAL "%soundset_english%"
+								END
+							END
+						END
+					END
+				END
+	
+			END
+			LOG @1065 // ~  ==> sound clips folder to be installed = %sounds_folder%~
+
+		END
+
+	END
+
+END	// of DEFINE_ACTION_FUNCTION
+
+
+/* ================================================================================================================================= *
+ *  FUNCTION gw_recursive_copy                                                                                                       *
+ * --------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action function that will recursively search into a parent directory, copying files to a destination directory.  *
+ * --------------------------------------------------------------------------------------------------------------------------------- *
+ *   INT_VAR                                                                                                                         *
+ *      - WarnOnOverwrite can be 1 to print a warning when a file in the destination directory will be overwritten, 2 to warn when   *
+ *        a file already exists in the destination game, or 0 to print no warnings.                                                  *
+ *   STR_VAR                                                                                                                         *
+ *      - ParentDir is a string containing the name of the parent directory that will be recursively searched.                       *
+ *      - ChildDirRegex is a string containing the RegEx of child directories to search within ParentDir.                            *
+ *      - FileRegex is a string containing the RegEX of files to match for the COPY_LARGE.                                           *
+ *      - DestinationDir is a string containing the name of the destination directory any matching files will be copied into.        *
+ *   RET                                                                                                                             *
+ *      - Count : This function returns the number of files copied to the destination directory.                                     *
+ * ================================================================================================================================= */
+
+DEFINE_ACTION_FUNCTION gw_recursive_copy
+    INT_VAR WarnOnOverwrite = 0
+    STR_VAR ParentDir       = ""
+            ChildDirRegex   = ""
+            FileRegex       = "^.+$"
+            DestinationDir  = "override"
+            outputfile      = "same"
+			sounds_rep      = "none"
+    RET     Count
+BEGIN
+
+	SILENT
+	OUTER_SET Count = 0
+	OUTER_SET audio = 0
+
+	// 1. Looking for sound clips to install.
+	ACTION_IF ("%sounds_rep%" STR_EQ "none") BEGIN
+
+		LAF ps_recursive_search STR_VAR ParentDir = EVAL "%ParentDir%" ChildDirRegex = "none" FileRegex = "^.+\.wav$" RET wav_exists = Count END
+		ACTION_IF wav_exists BEGIN
+			OUTER_SET sounds_folder_found = 1
+			OUTER_SPRINT sounds_folder EVAL "%ParentDir%"
+			OUTER_SPRINT sounds_rep EVAL "%ParentDir%"
+			LOG @1061 // ~wav sound clips detected (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
+		END ELSE BEGIN
+			LAF gw_find_sounds_folder STR_VAR ParentDir = EVAL ~%ParentDir%~ sounds_rep = EVAL "%sounds_rep%" RET sounds_rep = sounds_folder sounds_folder_found END
+		END
+	END
+LOG "-------------------------------------------------------------------------------------------------------------
+DEBUG CONTROL gw_find_sounds_folder function : sounds_folder_found = %sounds_folder_found%
+sounds_folder = %sounds_rep%
+-------------------------------------------------------------------------------------------------------------"
+
+	// 2. Copy files
+	ACTION_BASH_FOR ~%ParentDir%~ ~%FileRegex%~ BEGIN
+
+		ACTION_IF ("%BASH_FOR_EXT%" STR_CMP "OGG") BEGIN
+//PRINT "%BASH_FOR_FILE%"
+			ACTION_IF ("%BASH_FOR_EXT%" STR_EQ "WAV" AND "%ParentDir%" STR_CMP "%sounds_rep%") BEGIN
+				OUTER_SET copy = 0
+			END ELSE BEGIN
+				OUTER_SET copy = 1
+			END
+
+			// Copy files, except .ogg
+			ACTION_IF copy BEGIN
+				ACTION_IF (WarnOnOverwrite > 0) AND (FILE_EXISTS ~%DestinationDir%/%BASH_FOR_FILE%~) BEGIN
+					LOG @1030 // ~%BASH_FOR_FILE% already exists in %DestinationDir% and will be overwritten.~
+				END ELSE ACTION_IF (WarnOnOverwrite > 1) AND (FILE_EXISTS_IN_GAME ~%BASH_FOR_FILE%~) BEGIN
+					LOG @1031 // ~%BASH_FOR_FILE% already exists in the game and will be overwritten.~
+				END
+				SILENT
+				ACTION_TO_LOWER %BASH_FOR_FILESPEC%
+				COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~%DestinationDir%~
+				OUTER_SET Count += 1
+				OUTER_SET audio = 0
+			END
+
+		END ELSE BEGIN
+			OUTER_SET audio = 1
+		END
+
+	END
+
+	// 3. Install .ogg files
+	ACTION_IF (audio AND "%ParentDir%" STR_EQ "%sounds_rep%") BEGIN
+		LOG @1066 // ~AUDIO PROCESS = %audio% - ParentDir = %sounds_rep% - %ParentDir%~
+		LAF ~gw_handle_audio~
+			STR_VAR
+//              audio_path  = EVAL "%ParentDir%"
+                audio_path  = EVAL "%sounds_rep%"
+                oggdec_path = EVAL "%MOD_FOLDER%/audio"
+                sox_path    = EVAL "%MOD_FOLDER%/audio"
+                output_path = "override"
+			RET count_audio
+		END
+		LOG "  ==> %sounds_rep% = %count_audio% fichiers audio installes"
+		OUTER_SET Count = Count + count_audio
+	END
+
+
+	ACTION_CLEAR_ARRAY  ChildDir
+	GET_DIRECTORY_ARRAY ChildDir ~%ParentDir%~ ~%ChildDirRegex%~
+
+	ACTION_PHP_EACH ChildDir AS dirfrom => dirC BEGIN
+		LOG @1067 // ~NEW DIRECTORY IN PROCESS - dirfrom = %dirfrom% ==> %dirC%~
+		LAF gw_recursive_copy INT_VAR WarnOnOverwrite STR_VAR ParentDir = EVAL "%dirC%" ChildDirRegex FileRegex DestinationDir sounds_rep RET CountN = %Count% END
+		OUTER_SET Count += CountN
+	END
+
+END	// of DEFINE_ACTION_FUNCTION
+
+
+/* ================================================================================================================================================== *
+ *  FUNCTION gw_update_content                                                                                                                        *
+ * -------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action function that will automatically copy all needed animations and sounds files from archives subfolders to override folder.  *
+ *  Used after main component is installed and after updating configuration .ini file.                                                                *
+ * -------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *   STR_VAR                                                                                                                                          *
+ *      - archive    : "archives/subfolder" containing content to be installed (for example: base_anims, fiends_genies...).                           *
+ *      - IA_content : IA Content pack needed by the component.                                                                                       *
+ *      - soundsets  : Distinctive localized sound clips content to be installed ("y" by default).                                                    *
+ * ================================================================================================================================================== */
+
+DEFINE_ACTION_FUNCTION ~gw_update_content~
+    STR_VAR archive    = ""
+            IA_content = ""
+            soundsets  = "y"
+BEGIN
+
+	PRINT @1051 // ~%IA_content% content needed by this component is missing: Infinity Animations will force its installation.~
+	PRINT @1041 // ~REMINDER : in which language sound clips should be installed : %soundset_lang% - %soundset_lang_ee%~
+	SILENT
+
+	ACTION_CLEAR_ARRAY  dirs
+	GET_DIRECTORY_ARRAY dirs ~infinityanimations/archives/%archive%~ ~~
+
+	ACTION_PHP_EACH dirs AS archives => iacontent BEGIN
+
+		SILENT
+		OUTER_PATCH_SAVE iacontent ~%iacontent%~ BEGIN
+			REPLACE_TEXTUALLY ~infinityanimations/archives/%archive%/~ ~~
+		END
+		LOG "DEBUG CONTROL archive #%archives% %iacontent% - ParentDir = infinityanimations/archives/%archive%/%iacontent%"
+
+		ACTION_IF ("%soundsets%" STR_CMP "y") BEGIN // No localized soundsets to be installed
+			LAF ps_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/%archive%" ChildDirRegex = EVAL "%iacontent%" DestinationDir = "override" RET Count END
+		END ELSE BEGIN                             // Localized soundsets to be installed
+			LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/%archive%/%iacontent%" DestinationDir = "override" RET Count END
+		END
+
+		PRINT @1045 // ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files.~
+		SILENT
+	END
+
+	ACTION_CLEAR_ARRAY dirs
+
+END	// of DEFINE_ACTION_FUNCTION
+
+
+/* =============================================================================================================================================== *
+ *  MACRO gw_install_archives                                                                                                                      *
+ * ----------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action macro that will automatically copy all needed animations and sounds files from archives/subfolders to override folder.  *
+ * =============================================================================================================================================== */
+
+DEFINE_ACTION_MACRO ~gw_install_archives~
+BEGIN
+
+	SILENT
+	LOG @1041 // ~REMINDER: in which language sound clips should be installed : %soundset_lang% - %soundset_lang_ee%~
+	ACTION_CLEAR_ARRAY  dirs
+	GET_DIRECTORY_ARRAY dirs ~infinityanimations/archives~ ~~
+
+	ACTION_PHP_EACH dirs AS archives => iacontent BEGIN
+
+		LOG "archives = %archives% --> %iacontent%"
+		OUTER_PATCH_SAVE iacontent ~%iacontent%~ BEGIN
+			REPLACE_TEXTUALLY ~infinityanimations/archives/~ ~~
+		END
+
+		// Excludes bg2_restores, moinesse for EE and EE missing animations contents. Only installs content if
+		//   - relevant option in infinityanimation-config-default.ini (or infinityanimation-config-user.ini) is set to 1.
+		//   - original game (EE games need a different install process).
+		ACTION_IF (("%iacontent%" STR_CMP "bg2_restores") AND ("%iacontent%" STR_CMP "moinesse_edits_iaised_ee") AND ("%iacontent%" STR_CMP "ee_missing") AND ("%iacontent%" STR_CMP "ini_ee") AND ("%iacontent%" STR_CMP "modders")) BEGIN
+
+			LOG @1042 // ~ARCHIVE IN PROCESS: %iacontent% (%archives%)~
+			OUTER_SET variable = EVAL "ia_%iacontent%"
+//			OUTER_SET variable = $ia_ini_var("ia_%iacontent%")
+
+			ACTION_IF (variable = 1) BEGIN
+				PRINT @1042 // ~ARCHIVE IN PROCESS: %iacontent% (%archives%)~
+				LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 2 STR_VAR ParentDir = EVAL "infinityanimations/archives/%iacontent%" DestinationDir = "override" RET Count END
+				PRINT @1043 // ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files (configuration option ia_%iacontent% = %variable%).~
+			END ELSE BEGIN
+				PRINT @1044 // ~  ==> Folder %iacontent% (#%archives%) content not copied to override (configuration option ia_%iacontent% = %variable%).~
+			END
+		END
+	END
+
+	ACTION_CLEAR_ARRAY dirs
+
+END	// of DEFINE_ACTION_MACRO
+
+
+/* =================================================================================================================================================== *
+ *  MACRO gw_install_modders_content                                                                                                                   *
+ * --------------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action macro that will automatically copy all needed animations and sounds files from archives/modders folder to override folder.  *
+ * =================================================================================================================================================== */
+
+DEFINE_ACTION_MACRO ~gw_install_modders_content~
+BEGIN
+
+	ACTION_IF ia_modders BEGIN
+
+		ACTION_CLEAR_ARRAY  modders
+		GET_DIRECTORY_ARRAY modders ~infinityanimations/archives/modders~ ~~
+		OUTER_SET variable = ia_modders
+
+		ACTION_PHP_EACH modders AS archives => iacontent BEGIN
+
+			SILENT
+			OUTER_PATCH_SAVE iacontent ~%iacontent%~ BEGIN
+				REPLACE_TEXTUALLY ~infinityanimations/archives/modders/~ ~~
+			END
+			LOG @1042 // ~ARCHIVE IN PROCESS: %iacontent% (%archives%)~
+
+			ACTION_IF is_ee AND (("%iacontent%" STR_CMP "elemental_sunnis_wow") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow") AND ("%iacontent%" STR_CMP "snakes_small")) BEGIN
+				LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/modders/%iacontent%" DestinationDir = "override" RET Count END
+				PRINT @1045 // ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files.~
+			END
+			ACTION_IF NOT is_ee AND (("%iacontent%" STR_CMP "elemental_sunnis_wow_ee") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow_ee") AND ("%iacontent%" STR_CMP "snakes_small_ee")) BEGIN
+				LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/modders/%iacontent%" DestinationDir = "override" RET Count END
+				PRINT @1045
+			END
+
+		END
+
+	END
+
+END
+
+
+/* =============================================================================================================================================== *
+ *  MACRO gw_install_archives (Ex)                                                                                                                 *
+ * ----------------------------------------------------------------------------------------------------------------------------------------------- *
+ *  This is a WeiDU action macro that will automatically copy all needed animations and sounds files from archives/subfolders to override folder.  *
+ * =============================================================================================================================================== *
+
+DEFINE_ACTION_MACRO ~gw_install_archives~
+BEGIN
+
+	SILENT
+	ACTION_CLEAR_ARRAY  dirs
+	GET_DIRECTORY_ARRAY dirs ~infinityanimations/archives~ ~~
+
+	ACTION_PHP_EACH dirs AS archives => iacontent BEGIN
+
+		SILENT
+		OUTER_PATCH_SAVE iacontent ~%iacontent%~ BEGIN
+			REPLACE_TEXTUALLY ~infinityanimations/archives/~ ~~
+		END
+		OUTER_SET var = EVAL "ia_%iacontent%"
+
+		// Excludes bg2_restores, moinesse for EE and EE missing animations contents. Only installs content if
+		//   - relevant option in infinityanimation-config-default.ini (or infinityanimation-config-user.ini) is set to 1.
+		//   - original game (EE games need a different install process).
+		ACTION_IF (var = 1) AND (("%iacontent%" STR_CMP "bg2_restores") AND ("%iacontent%" STR_CMP "moinesse_edits_iaised_ee") AND ("%iacontent%" STR_CMP "ee_missing") 
+							AND  ("%iacontent%" STR_CMP "ini_ee")) BEGIN
+			OUTER_SET variable = $ia_ini_var("ia_%iacontent%")
+			LAF ps_recursive_copy INT_VAR WarnOnOverwrite = 2 STR_VAR ParentDir = EVAL "infinityanimations/archives/%iacontent%" DestinationDir = "override" RET Count END
+			PRINT @1043 // ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files (configuration option ia_%iacontent% = %variable%).~
+		END ELSE BEGIN
+			ACTION_IF (var = 0) BEGIN
+				OUTER_SET variable = $ia_ini_var("ia_%iacontent%")
+				PRINT @1044 // ~  ==> Folder %iacontent% (#%archives%) content not copied to override (configuration option ia_%iacontent% = %variable%).~
+			END
+		END
+		
+	END
+
+	ACTION_CLEAR_ARRAY dirs
+
+END	// of DEFINE_ACTION_MACRO
+*/
