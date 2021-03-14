@@ -1,0 +1,1048 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/style_ia-rp.css" type="text/css">
+
+	<title>
+		Spellhold Studios - Infinity Animations
+	</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="images/shsweb.ico" rel="icon" type="bmp" />
+  </head>
+
+  <body>
+
+	<script type="module">
+		document.getElementById("latestVersion").innerText = document.getElementById('versionHistory').getElementsByTagName("h6")[0].innerText
+	</script>
+
+	<div id="wrap">
+	<a name="top" id="top"></a>
+
+	  <div id="header">
+		<h1 style="color: #781808;text-shadow: 0.1rem 0.1rem 0.25rem #807559;">Infinity Animations Reference Picker</h1><br>
+
+		<span style="font-style: italic;"><strong>Un mod de Spellhold Studios pour Baldur's Gate II : <acronym title="Trône de Bhaal">ToB</acronym>, Baldur's Gate Trilogy, <acronym title="Baldur's Gate 'To Two'">Tutu</acronym>, Baldur's Gate: Enhanced Edition, Siege of Dragonspear, Baldur's Gate II: Enhanced Edition, Icewind Dale: Enhanced Edition et <acronym title="Enhanced Edition Trilogy">EET</acronym>.</strong></span>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="about">
+			Auteure : Erephine &#8226; Code <acronym title="Weimer Dialogue Utility">WeiDU</acronym> : Miloch, Sam et Gwendolyne
+		</p>
+		<p class="about">
+			<a href="http://www.spellholdstudios.net/ie/infinityanimations">Site internet du mod</a> &#8226; <a href="http://www.shsforums.net/forum/594-infinity-animations/">Forum du mod</a> &#8226; <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Téléchargement</a> &#8226; <a href="https://github.com/SpellholdStudios/Infinity-Animations">GitHub</a> &#8226; <span id="latestVersion"></span>
+		</p>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="menu">
+			<a href="#about">De quoi s'agit-il ?</a> &#x2B25; <a href="#rules">Règles de déclaration et d'enregistrement</a> &#x2B25; <a href="#picker">Reference Picker</a> &#x2B25; <a href="#adding">Ajouter un slot d'animation</a> &#x2B25; <a href="#sound">Jeux de sons</a>
+		</p>
+		<p class="menu">
+			<a href="#browsing">Parcourir les identifiants existants</a> &#x2B25; <a href="#building">Construire les fichiers .IDS</a> &#x2B25; <a href="#ref">Définition des slots d'animation</a> &#x2B25;  <a href="#manual">Installation manuelle</a> &#x2B25; <a href="#version">Historique des versions</a>
+		</p>
+	  </div>
+
+
+	<div id="maindiv">
+<!-- ========================= A b o u t ========================= -->
+	  <a name="about" id="about"></a>
+	  <div class="content">
+
+		<h2>De quoi s'agit-il ?</h2><br>
+
+		<p>
+			Le mod Infinity Animations modifie l'exécutable du jeu Baldur's Gate II : Trône de Bhaal (v 26498) ; ce qui vous permet d'ajouter de nouveaux emplacements d'animation de créatures et de personnages [<em>NdT&#160;: appelés parfois « slots d'animation » dans ce document</em>].
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; De quoi s'agit-il ?</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ========================= R u l e s ========================= -->
+	  <a name="rules" id="rules"></a>
+	  <div class="content">
+
+		<h2>Règles de déclaration et d'enregistrement de slots d'animation (à lire avant tout !)</h2><br>
+
+		<p>
+			Si vous souhaitez ajouter vos propres animations dans le jeu, veuillez prendre le temps de lire et de suivre les directives décrites ci-dessous. La procédure est très simple et ne devrait durer que quelques minutes. Si tous le monde - vous y compris(e) - les respecte, les enregistrements de nouveaux slots ne nécessiteront aucune action de modération, ni demande d'approbation.
+		</p><br>
+		<p>
+			<strong>I. N'ajoutez que les animations dont vous disposez, pas celles dont vous auriez éventuellement besoin.</strong>
+		</p>
+		<p>
+			N'enregistrez que les animations que vous avez déjà ajoutées au jeu. Si vous êtes en train de développer un mod, N'ENREGISTREZ-PAS de slots par avance. Seul du contenu terminé peut être ajouté.
+		</p><br>
+		<p>
+			<strong>II. Le contenu que vous ajoutez doit être disponible publiquement.</strong>
+		</p>
+		<p>
+			Seule une animation rendue publique peut obtenir un slot. Si votre mod est encore en phase de développement, vous avez le choix : soit vous attendez sa publication pour enregistrer la ou les animation(s) concernée(s), soit vous la (ou les) télé-versez en même temps que vous les enregistrez. Idéalement, vos fichiers d'animation devraient être disponibles en tant qu'archives séparées et publiées en pièce jointe dans le forum Infinity Animations, mais ce n'est pas nécessaire tant qu'ils sont publiés par un autre biais (dans ce cas, vous autorisez explicitement quiconque à les utiliser et à les redistribuer dans ce contexte). Dans tous les cas, vous devez poster un lien de téléchargement des fichiers en question.
+		</p><br>
+		<p>
+			<strong>III. Vérifiez l'existence de doublons avant d'enregistrer vos animations.</strong>
+		</p>
+ 		<p>
+			Particulièrement lorsqu'il s'agit de conversions d'animations, il est possible qu'un autre moddeur ait déjà ajouté ces animations dans le jeu. S'il vous plaît, ne surchargez pas les slots disponibles avec des doublons inutiles.
+		</p><br>
+		<p>
+			<strong>IV. N'ajoutez que des animations qui enrichissent le jeu.</strong>
+		</p>
+		<p>
+			Cette règle n'est pas aussi clairement définie que les autres, mais elle reste valable. Demandez-vous si votre animation apporte vraiment quelque chose de nouveau au jeu avant de l'enregistrer. À savoir que des copies d'animations existantes ne seront certainement pas retenues, contrairement à une nouvelle variante d'animation pour une créature existante. Des animations amusantes (comme un point qui saute) peuvent être acceptées dans le contexte d'un mod approprié. Tout est affaire de bon sens.
+		</p><br>
+		<p>
+			<strong>V. Assurez-vous que le contenu que vous soumettez est aussi finalisé que possible avant de l'ajouter.</strong>
+		</p>
+		<p>
+			Si des mises à jour et des corrections mineures de vos animations (ou l'ajout d'animations d'armes, etc.) sont généralement admises, évitez, s'il vous plaît, d'effectuer des modifications plus importantes, ou de remplacer les références que vous avez ajoutées par d'autres animations. Ce n'est pas parce que vous les avez enregistrées qu'elles vous appartiennent exclusivement, et que personne ne les utilisera dans un mod.
+		</p><br>
+		<p>
+			<strong>VI. Vérifiez votre orthographe et utilisez des descriptions claires.</strong>
+		</p>
+		<p>
+			Les noms des animations doivent être rédigés en anglais lisible, et décrire autant que possible l'animation avec précision. « PINK BEHOLDER, SMALL » convient parfaitement, mais «&#160;OBSERVATEUR ROSE PETIT » ou « BEH_MEGAMOD 112 » (encore pire) ne sont pas souhaitables. Des noms propres comme « FALL FROM GRACE » conviennent aussi. N'oubliez pas que la taille limite d'une description est de 34 caractères.
+		</p><br>
+		<p>
+			Si vous avez lu et compris ces directives et si vous estimez que votre demande d'enregistrement est admissible, passez au chapitre suivant.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Règles de déclaration et d'enregistrement</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ============== R e f e r e n c e   P i c k e r ============== -->
+	  <a name="picker" id="picker"></a>
+	  <div class="content">
+
+		<h2>Utilisation du <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym></h2>
+		<br>
+
+		<p>
+			&#10173; <em class="rule">Il est fortement recommandé d'utiliser l'utilitaire fourni pour ajouter un slot d'animation.</em>
+			<br><br>
+			Bien qu'il soit possible d'ajouter manuellement de nouveaux slots, en l'état actuel, cet utilitaire n'est pas très fiable pour corriger des données défectueuses (ce qui peut arriver facilement lorsqu'on les ajoute manuellement). Une liste de références inexacte peut engendrer des problèmes de compatibilité, voire des conflits, qui pourraient affecter d'autres mods, et éventuellement vous obliger à récupérer une liste non boguée pour ajouter de nouveau vos animations à partir d'une base saine.
+			<br><br>
+			Le chapitre suivant vous offre toute l'aide nécessaire pour ajouter des animations au jeu à l'aide du <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> d'Infinity Animations.
+			<br><br>
+			<strong>Note :</strong> Vous pouvez exécuter <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> dans une autre langue (s'il a été traduit). Voir <a href="#manual">plus bas</a>.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Utilisation du Reference Picker</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================= A d d i n g ======================== -->
+	  <a name="adding" id="adding"></a>
+	  <div class="content">
+
+		<h2>Ajouter un slot d'animation</h2><br>
+
+		<p>
+			Voici un résumé étape par étape du processus.
+		</p><br>
+
+		<p>
+			&#x26A0;&#xFE0F; <strong>Note sur les conversions totales.</strong>
+		</p>
+		<p>
+			Bien entendu, si votre mod s'inscrit dans le contexte d'une conversion totale, sans rapport avec le jeu d'origine ou d'autres mods, vous pouvez ignorer l'ensemble du processus ci-dessous et garder une trace de votre propre jeu de références. Dans ce cas, ces références ne doivent pas être publiées dans la liste des animations.
+		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>1. Lancez l'utilitaire à partir du répertoire dans lequel vous l'avez installé (voir <a href="#manual">plus bas</a>).</strong>
+		</p>
+		<p>
+			La fenêtre principale vous propose un menu composé de cinq onglets à la fonction explicite : « Liste des identifiants IA », « Déclarer une animation », « Consulter les identifiants existants », « Consulter le tableau des types d'animation » et « Construire les fichiers .IDS ».
+		</p>
+		<p>
+			<center><img src="images/rp01-fr.png" /></center>
+		</p>
+		<p>
+			Dans le tableau des types d'animation, vous trouverez un résumé des caractéristiques des types (ou formats) de slots d'animation pris en charge (avec <strong>p</strong> signifiant « paletted » [<em>NdT : une animation disposant d'une palette permet de définir ses couleurs avec les champs couleurs du fichier .CRE</em>], <strong>np</strong> « not paletted » [<em>NdT : les couleurs de l'animation sont prédéterminées et prennent le pas sur celles du fichier .CRE</em>] et <strong>pnp</strong> « les deux »). Si vous n'êtes pas certain(e) du format de votre animation, ou si vous souhaitez conserver le tableau sous le coude, c'est le bon moment pour l'ouvrir.
+		</p>
+		<p>
+			<center><img src="images/rp51-fr.png" /></center>
+		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>2. Cliquez sur l'onglet « Liste des identifiants IA ».</strong>
+		</p>
+		<p>
+			Une grande fenêtre vide s'ouvre, et il vous est demandé de charger la liste des animations à jour.
+		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>3. Récupérer la liste à jour dans le forum.</strong>
+		</p>
+		<p>
+			Dans le forum Infinity Animations, ouvrez la discussion épinglée <em class="rule">Animation Listings</em>. <a href="http://www.shsforums.net/topic/43502-animation-listings/">Ce lien vous y conduira directement</a>. Cherchez le dernier message qui devrait contenir la balise de code contenant la liste de slots d'animations à jour. Elle ressemble à ceci :<br>
+		</p>
+		<div class="important_tuto">
+			<p>
+			<pre>      0x100d	4AM 	ANNAH                             	LARGE  5 Lt  BGI MONSTER LONG 4 PART unpaletted
+      0x100e	4AN 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x100f	4AO 	PINK BEHOLDER, SMALL              	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+      0x1010	4AP 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x1011	4AQ 	-----                             	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+      0x1012	4AR 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x1013	4AS 	THIS IS AN EXAMPLE                	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted</pre>
+			</p>
+		</div>
+		<p>
+			Copiez la <strong>liste entière</strong> (c'est important), avec toutes les données <span style="tp2">EMPTY</span> et <span style="tp2">-----</span>, jusqu'au dernier caractère (c.à.d. assurez-vous que vous n'avez pas oublié le dernier « d » de unpaletted, ou tout autre dernier caractère, de la dernière ligne), et copiez-la en appuyant sur le bouton « Coller à partir du presse-papier ».
+		</p>
+		<p>
+			<center><img src="images/rp05-fr.png" /></center>
+		</p><br>
+		<p>
+			&#9888;&#65039; <strong><span style="color: #781808;">&#9755;</span> Note : </strong>Voici un autre moyen - et sans doute beaucoup plus simple - de charger la liste de slots d'animations à jour. Comme cette dernière n'a cessé de grossir, et est devenue de plus en plus difficile à lire et à sélectionner dans la discussion, les derniers contributeurs l'ont publiée sous la forme d'un fichier .txt joint à la fin de leur message, comme <a href="http://www.shsforums.net/topic/43502-animation-listings/page-3#entry604014">ici</a>. Cherchez le dernier message contenant ce type de fichier, téléchargez-le, puis chargez-le à l'aide du bouton « Charger un fichier ». &#128521;
+		</p>
+		<p>
+			<center><img src="images/rp02-fr.png" /></center>
+			<center><img src="images/rp03-fr.png" /></center>
+		</p>
+		<p>
+			Si aucun message d'erreur ne s'affiche, la liste n'est sans doute pas corrompue, ce qui est bon signe :
+		</p>
+		<p>
+			<center><img src="images/rp06-fr.png" /></center>
+		</p>
+
+		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
+			<div class="quotetitle">
+				<span style="text-decoration: underline">Exemple de message d'erreur</span> :
+				<input value="Afficher" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none;">
+					<center><img src="images/rp04-fr.png" /></center><br>
+				</div>
+			</div>
+		</div> 
+		<br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>4. Choisissez le type de slot d'animation que vous souhaitez déclarer.</strong>
+		</p>
+		<p>
+			Cliquez sur l'onglet « Déclarer une animation ». Une nouvelle fenêtre s'ouvre. À ce stade, vous devriez <strong>connaître avec certitude</strong> le type de format de votre animation. En cas de doute, consultez le tableau des types d'animation (voir plus haut).
+		</p>
+		<p>
+			<center><img src="images/rp11-fr.png" /></center>
+		</p><br>
+
+		<hr style="width: 90%; color: #781808; background-color: #781808; " /><br>
+
+		<p>
+			<strong>5. Saisissez les caractéristiques de votre animation.</strong>
+		</p>
+		<p>
+			La première fenêtre (<em class="rule" style="color: #781808">Étape 1 : Trouver un slot disponible</em>) vous permet de définir les caractéristiques de votre animation parmi les options disponibles : le type de slot, la taille du cercle de sélection, son sous-type (généralement unpaletted ou paletted, plus quelques autres pour les slots d'animations de personnage), et si votre animation nécessite ou non un paperdoll [<em>NdT : silhouette dans l'écran des personnages</em>] et/ou un jeu de sons.
+		</p>
+		<p>
+			<strong>Important :</strong> Votre animation n'a besoin d'un paperdoll que si elle concerne une créature recrutable ou dans laquelle il est possible de se métamorphoser. Si ce n'est pas le cas, veuillez choisir « No » pour cette option, ce qui est son paramétrage par défaut. Cela permettra de conserver les emplacements libres pour d'autres animations. Ne sélectionnez « Yes » que s'il vous est absolument indispensable d'avoir un paperdoll.
+		</p>
+		<p>
+			Vous remarquerez que seules sont affichées les options disponibles pour le type d'animation sélectionné (par exemple, les slots IWD ne proposeront que le sous-type « unpaletted »).
+		</p>
+		<p>
+			Presque toutes les combinaisons des options proposées sont prises en charge. Si vous choisissez une combinaison qui n'est pas disponible, ou si tous les emplacements du format sélectionné sont occupés, vous serez informé(e) qu'aucun emplacement correspondant n'a pu être trouvé et que le programme se terminera (vous devrez recommencer le processus décrit ci-dessus).
+		</p>
+		<p>
+			Sélectionnez les options appropriées pour continuer :
+		</p>
+		<p>
+			<center><img src="images/rp12-fr.png" /></center>
+			<center><img src="images/rp13-fr.png" /></center>
+			<center><img src="images/rp14-fr.png" /></center>
+			<center><img src="images/rp15-fr.png" /></center>
+			<center><img src="images/rp16-fr.png" /></center>
+		</p>
+
+		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
+			<div class="quotetitle">
+				&#x26A0;&#xFE0F; <span style="text-decoration: underline"><strong>Remarques sur l'utilisation de paperdoll et de soundset</strong></span><strong> :</strong>
+				<input value="Afficher" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none;">
+				<p>
+					Cette version d'Infiniry Animations fonctionne sur le même principe que celle conçue par Erephine. Ce qui signifie que plusieurs types d'animations peuvent cohabiter en partageant le même <acronym title="SND_Symbol">identifiant</acronym>, ce qui permet au moteur du jeu de gérer beaucoup plus d'animations et d'éviter les problèmes de compatibilité entre les nouveaux contenus publiés par les modeurs. Il possède cependant un inconvénient majeur : <strong>plusieurs animations peuvent partager le même <acronym title="soundset">jeu de sons</acronym></strong>. Pour la plupart des animations, ça n'a aucune conséquence puisqu'elles ne disposent pas de jeu de sons. En revanche, pour d'autres, ça peut s'avérer problématique. N'oubliez pas que ce fonctionnement signifie que seule une des animations partageant le même identifiant que d'autres peut disposer d'un paperdoll, et que toutes les animations partageant le même identifiant utiliseront le même jeu de sons.
+				</p>
+				<p>
+					Imaginons par exemple le pire des scenario. Vous déclarez une animation de type IWD avec un petit cercle de sélection et sans paperdoll. Vous utiliserez donc partiellement un slot IWD SMALL <em>unpaletted</em> (« partiellement » parce que le paperdoll correspondant à l'identifiant sera toujours disponible), mais aussi la totalité d'un slot IWD LARGE <em>unpaletted</em>. Ce sont donc deux slots qui seront utilisés par la même animation. Mais si le même slot IWD avait nécessité un paperdoll, il aurait utilisé l'ensemble des slots IWD SMALL <em>unpaletted</em> et IWD LARGE <em>unpaletted</em>. De plus, puisque le paperdoll correspondant à l'identifiant de l'animation n'est plus disponible, l'opération aurait aussi utilisé partiellement un slot BGII UNSPLIT EXT. <em>unpaletted</em> et un slot BGII UNSPLIT EXT. <em>paletted</em> qui partagent eux-aussi le même identifiant que l'animation IWD. L'enregistrement d'une seule animation aurait donc utilisé totalement deux slots et partiellement deux autres. En effet, ces quatre slots partagent le même identifiant et le même jeu de sons.
+				</p>
+				<p>
+					C'est le cas de :
+				</p>
+					<div class="important_tuto">
+					<p>
+					<pre>      0x502a	3BQ 	MARILITH_IWD                      	LARGE  5 It  IWD LARGE unpaletted
+      0x5267	3BQ 	-----                             	NORMAL 3 Ix  IWD SMALL unpaletted
+      0x5b2a	3BQ 	GW_NORDOM_PST                     	NORMAL 3 Bt  BGII UNSPLIT EXT. unpaletted
+      0x5d67	3BQ 	-----                             	NORMAL 3 Bx  BGII UNSPLIT EXT. paletted</pre>
+					</p>
+					</div>
+				<p>
+					Tous ces slots partagent le même identifiant (3BQ) et, par conséquent, ces 4 slots (dont seulement deux comportent une animation) PARTAGENT le même paperdoll.
+				</p>
+				<p>
+					Rappelez-vous que, de par sa conception, IA <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> ne peut attribuer de paperdoll qu'à UN SEUL SLOT parmi ceux qui partagent le même identifiant, et oblige les autres à NE PAS UTILISER de paperdoll. Dans ce cas, les animations MARILITH_IWD et GW_NORDOM_PST ne pourront donc pas être utilisées pour des PNJs car ces derniers auraient la même apparence dans l'écran des personnages, ce qui n'aurait aucun sens. Rassurez-vous, dans ce cas particulier, le problème ne se posera pas car les modeurs n'ont pas demandé de paperdoll. &#128521;
+				</p>
+				<p>
+					Il en va de même pour les jeux de sons 2DA. L'ENSEMBLE des identifiants 3BQ partagent le même jeu de sons. Si l'animation MARILITH_IWD est installée avec son jeu de sons (3BQ.2DA), alors GW_NORDOM_PST l'utilisera AUSSI, et vice versa. Si aucun n'utilise de jeu de sons, alots elle pourront partager le même identifiant sans problème. C'est ainsi que IA <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> fonctionne depuis sa première version.
+				</p>
+				<p>
+					Cependant, la mise à jour de IA <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> permet de résoudre la plupart de ces conflits en proposant une nouvelle option : 2DA Soundset. Si vous voulez être certain(e) que votre animation dispose d'un paperdoll et d'un jeu de sons uniques, vous pouvez désormais forcer IA <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> à « geler » l'ensemble des slots partageant le même identifiant. Par exemple; si le slot MARILITH_IWD avait nécessité un jeu de sons, il pourrait dorénavant réserver les quatre slots potentiels correspondant au même identifiant, rendant impossible l'enregistrement d'une autre animation avec le même identifiant.
+				</p><br>
+				<p>
+					Pour plus de clareté, illustrons ce comportement avec un exemple :
+				</p>
+				<p>
+					<center><img src="images/rp17-fr.png" /></center>
+					<center><img src="images/rp18-fr.png" /></center>
+				</p>
+				<p>
+					Si votre animation nécessite un jeu de sons uniques, une fenêtre s'ouvrira pour vous avertir des conséquences de votre choix. Si vous cliquez « Oui », IA <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> trouvera un slot disponible correspondant à un identifiant non utilisé et gèlera tous les slots correspondant à cet identifiant (vous garantissant l'utilisation d'un jeu de sons unique). Si vous cliquez « Non », il agira normalement (plusieurs types d'animation partagent le même identifiant, mais un seul peut bénéficier d'un paperdoll). Ainsi, les animations nécessitant un jeu de sons dédiés pourront en bénéficier alors que les autres pourront toujours partager le même identifiant. Ce qui permettra de déclarer un plus grand nombre d'animations.
+				</p>
+				<p>
+					Mais si vous avez sélectionné « No » pour un paperdoll, puis « Yes » pour un jeu de sons (comme dans l'exemple décrit), cliquer sur le bouton « Oui » dans la fenêtre popup effacera l'option choisie auparavant pour le paperdoll :
+				</p>
+				<p>
+					<center><img src="images/rp19-fr.png" /></center>
+				</p>
+				<p>
+					Vous devrez donc retourner dans la barre d'options du paperdoll et sélectionner l'option « Yes » afin que le <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> trouve un slot disponible et vous permette de saisir un nom descriptif :
+				</p>
+				<p>
+					<center><img src="images/rp20-fr.png" /></center>
+				</p>
+				<p>
+					Bien que contraignante, cette procédure a pour but de bien faire comprendre à l'utilisateur(trice) qu'un paperdoll est disponible pour son slot, même si il(elle) ne compte pas l'utiliser.
+				</p>
+				<p>
+					&#x25BA; Pour résumer, si vous avez besoin d'un jeu de sons, vous obtiendrez AUTOMATIQUEMENT un paperdoll puisqu'aucune autre animation ne partagera son identifiant. Mais n'oubliez-pas que ce n'est pas parce que votre animation dispose d'un paperdoll que vous êtes obligé(e) de l'utiliser. Cela signifie simplement qu'aucune autre animation partageant ce même identifiant ne pourra en avoir.
+				</p><br>
+
+				</div>
+			</div>
+		</div><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>6. Confirmez.</strong>
+		</p>
+		<p>
+			Si vous avez choisi une configuration valide, une nouvelle ligne rouge apparaît qui récapitule les informations détaillées sur le slot correspondant aux critères que vous avez choisis.
+		</p>
+		<p>
+			<center><img src="images/rp21-fr.png" /></center>
+		</p>
+		<p>
+			Vérifiez que les valeurs du type, du sous-type, de la taille du cercle de sélection, de l'option de paperdoll et du jeu de sons de votre animation sont corrects. Si oui, continuez. Sinon, appuyez sur le bouton « Effacer les caractéristiques » et recommencez les étapes précédentes.
+		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>7. Saisissez un nom.</strong>
+		</p>
+		<p>
+			Saisissez un nom décrivant votre animation (en respectant les directives énoncées plus haut) dans la deuxième fenêtre (<em class="rule" style="color: #781808">Étape 2 : Saisir un nom</em>).
+		</p>
+ 		<p>
+			<center><img src="images/rp22-fr.png" /></center>
+		</p><br>
+		<p>
+			Dans la troisième fenêtre (<em class="rule" style="color: #781808">Étape 3 : Déclarer votre slot</em>), cliquez sur le bouton « Enregistrer le slot » pour continuer.
+		</p>
+ 		<p>
+			<center><img src="images/rp23-fr.png" /></center>
+		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>8. Installer votre slot dans le jeu.</strong>
+		</p>
+		<p>
+			Quand vous en aurez terminé, vous pourrez copier ou noter les codes <em class="rule">ANIMATE.IDS</em> et <em class="rule">ANISND.IDS</em> affichés dans la dernière fenêtre en bas (<em class="rule" style="color: #781808">Étape 4 : Installer votre slot dans le jeu</em>). Ce sont les entrées qu'il faut insérer dans les fichiers .ids pour que votre slot d'animation soit reconnu par NearInfinity et les autres outils de modding. Si vous écrivez un programme d'installation pour votre mod, vous estimerez probablement plus utile d'utiliser le code <acronym title="Weimer Dialogue Utility">WeiDU</acronym> pour ajouter vos slots aux fichiers .ids du jeu (cliquez alors sur le bouton « Copier dans le presse-papier »).
+ 		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>9. Déclarer un autre slot.</strong>
+		</p>
+		<p>
+			Si vous souhaitez déclarer plusieurs slots à la suite, cliquez sur le bouton « Déclarer un autre slot » et recommencez les étapes précédentes.
+ 		</p><br>
+
+		<hr style="width: 90%;" /><br>
+
+		<p>
+			<strong>10. Pour conclure, l'étape la plus importante de toutes.</strong>
+		</p>
+		<p>
+			Retournez dans la fenêtre <em class="rule">Liste des identifiants IA</em> qui affiche maintenant la nouvelle liste d'animations, similaire à celle que vous avez copiée précédemment :
+		</p>
+		<p>
+			<center><img src="images/rp24-fr.png" /></center>
+		</p>
+		<p>
+			<strong>Dans tous les cas, la liste doit contenir plus d'entrées qu'avant.</strong> Pour l'exemple que nous traitons, elle devrait ressembler à ceci :<br>
+		</p>
+ 		<div class="important_tuto">
+			<p>
+			<pre>      0x100d	4AM 	ANNAH                             	LARGE  5 Lt  BGI MONSTER LONG 4 PART unpaletted
+      0x100e	4AN 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x100f	4AO 	PINK BEHOLDER, SMALL              	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+      0x1010	4AP 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x1011	4AQ 	-----                             	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+      0x1012	4AR 	EMPTY                             	LARGE  5 Lp  BGI MONSTER LONG 4 PART unpaletted
+      0x1013	4AS 	THIS IS AN EXAMPLE                	LARGE  5 Lx  BGI MONSTER LONG 4 PART unpaletted
+      0x6840	0A0D	PISCATA ROSEA                     	NORMAL 3 Cx  CHARACTER BGII WQL paletted</pre>
+			</p>
+		</div>
+		<p>
+			Vous devez copier et publier cette liste complète dans la discussion épinglée <em class="rule">Animation Listings</em> du forum Infinity Animations. <a href="http://www.shsforums.net/topic/43502-animation-listings/">En voici de nouveau le lien, pour plus de commodité</a>. Sous la liste, le bouton « Copier dans le presse-papier » vous simplifiera la tâche. Le contenu de la liste est copié dans votre presse-papier (n'oubliez pas qu'il écrasera le contenu de ce dernier) et peut être collé dans la discussion.
+		</p>
+		<p>
+			Afin de conserver le formatage de la liste et d'éviter qu'elle ne ressemble à un pâté illisible, collez-la entre balises [codebox] [/codebox]. <strong>Pré-visualisez votre message.</strong> Si la liste affichée dans votre message correspond parfaitement à celle affichée dans la fenêtre <em class="rule">IA Reference List</em>, <strong>publiez-la</strong>. N'oubliez-pas de télé-verser les fichiers bam de votre animation dans la discussion <a href="http://www.shsforums.net/topic/43503-ia-content-thread/">IA content thread</a>, s'ils ne sont pas encore disponibles.
+		</p><br>
+		<p>
+			<strong>Notes :</strong>
+			<ul style="margin-top: 4px;margin-left: 4%;width: 88%;">
+				<li>Vous pouvez aussi sauvegarder la liste des slots d'animations dans un fichier .txt et le publier en pièce jointe dans la discussion épinglée <em class="rule">Animation Listings</em> du forum Infinity Animations. Dans ce cas, sauvegardez-le à l'aide du bouton « Sauvegarder dans un fichier » et privilégiez un nom de fichier standard comme celui-ci ; IA_List_2018-12-05.txt (IA List_année-mois-jour). &#128521;</li>
+				<li style="margin-top: 2px">Par défaut, la nouvelle version du <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> sauvegarde le fichier contenant la liste des animations avec des informations de date/heure au format <acronym title="NdT : « Universal Time Coordinate » ou « Coordinated Universal Time » en anglais">UTC</acronym>, ou « Temps universel coordonné », une échelle de temps adoptée comme base du temps civil international, afin d'éviter les problèmes de compatibilité entre des listes fournies par des utilisateurs utilisant des informations de temps locales.</li>
+			</ul>	
+		</p>
+		<p>
+			<center><img src="images/rp25-fr.png" /></center>
+			<center><img src="images/rp26-fr.png" /></center>
+		</p><br>
+		<p>
+			Félicitations, vous venez de déclarer et d'enregistrer une référence d'animation ! &#129346;
+		</p><br>
+
+ 		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Ajouter un slot d'animation</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================== S o u n d ========================= -->
+	  <a name="sound" id="sound"></a>
+	  <div class="content">
+
+		<h2>Jeux de sons</h2><br>
+
+		<p>
+			Chaque slot d'animation dispose de quelques sons standards qui lui sont assignés (bruits de pas, etc.). Par souci de simplicité, ils sont tous liés aux informations de slots d'animation existants. Par exemple, tout emplacement de type IWD ajouté aura le même jeu de sons. Lorsque cela ne vous convient pas, vous pouvez changer ces sons en créant un fichier 2DA portant le nom de l'identifiant de l'animation (c'est-à-dire 0A0D.2DA pour notre animation PISCATA ROSEA ci-dessus). Pour vous simplifier la vie, vous pouvez utiliser l'un des modèles existants (par exemple MAIR.2DA) que vous modifierez.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Jeux de sons</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ===================== B r o w s i n g ====================== -->
+	  <a name="browsing" id="browsing"></a>
+	  <div class="content">
+
+		<h2>Parcourir les identifiants existants</h2><br>
+
+		<p>
+			Le <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> vous permet également de consulter un aperçu plus détaillé des animations actuellement implémentées.
+		</p>
+		<p>
+			Pour y accéder, cliquez sur l'onglet « Consulter les identifiants existants » :
+		</p>
+		<p>
+			<center><img src="images/rp31-fr.png" /></center>
+		</p>
+		<p>
+			En haut de la fenêtre, une barre d'avancement colorée affiche l'utilisation des slots d'animation en indiquant les pourcentages de slots utilisés, partiellement disponibles, et libres. J'imagine que jeter un coup d'œil au pourcentage de références d'animations non utilisées vous rassurera si culpabilisiez de vous «&#160;approprier » trop de slots d'animations. &#128526; 
+		</p>
+		<p>
+			Les slots partiellement libres sont disponibles pour toutes les animations, sous réserve qu'elles ne peuvent pas disposer de leur propre paperdoll (puisque certains formats de slots d'animation différents peuvent coexister, mais auraient des fichiers de paperdoll qui entreraient en conflit).
+		</p>
+		<p>
+			À gauche, se trouve la liste de toutes les animations ajoutées dans le cadre de ce mod, triées par identifiant et description. Cliquez sur l'une d'entre elles pour initialiser ses informations. Les caractéristiques de l'animation sélectionnée sont alors affichées sous la barre d'avancement, tandis qu'apparait à droite la liste de tous les fichiers .BAM que le slot utilise.
+		</p>
+		<p>
+			Le navigateur permet aussi de visualiser des images des animations enregistrées. Pour les afficher, il suffit de placer un fichier .gif portant le même nom que le slot ID dans le sous-répertoire &#x1F4C1; <em class="rule">referencepicker/preview</em> (s'il n'existe pas, créez-le). Par exemple, l'animation ID 0x1001 recherchera le fichier 0x1001.gif. L'image sera affichée à droite de la liste de fichiers du slot d'animation.
+		</p>
+		<p>
+			<center><img src="images/rp32-fr.png" /><img src="images/rp32b.png" /></center>
+		</p><br>
+		<p>
+			&#9755; <em>Remarque :</em> Le nombre hypothétique de slots disponibles n'est pas vraiment infini, mais se compte en milliers, alors, ne vous inquiétez pas si la barre affiche 90 % libres, même si certains emplacements sont utilisés.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Parcourir les identifiants existants</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ===================== B u i l d i n g ====================== -->
+	  <a name="building" id="building"></a>
+	  <div class="content">
+
+		<h2>Construire les fichiers .IDS</h2><br>
+
+		<p>
+			Vous pouvez construire les fichiers .ids en cliquant sur l'onglet « <em class="rule">Construire les fichiers .IDS</em> ».
+		</p>
+		<p>
+			Cela ouvre une nouvelle fenêtre affichant les fichiers .IDS complets créés à partir des animations originales du jeu et de la liste que vous avez importée à l'étape 3.
+ 		</p>
+		<p>
+			<center><img src="images/rp41-fr.png" /></center>
+		</p><br>
+
+		<p>
+			<strong>Présentation dans les styles BGII et IWD.</strong>
+		</p>
+		<p>
+			L'onglet ANIMATE.IDS vous permet de basculer entre les mises en forme pour Baldur's Gate II et pour Icewind Dale, selon votre préférence. Puisque ce fichier ne sert que comme référence pour NearInfinity et d'autres outils apparentés, libre à vous de consulter la liste au format de BGII (par exemple, GOBLIN_AXE) ou au format plus court de IWD (Goblin, Axe). En revanche, les codes utilisés pour ajouter de nouveaux slots dans ce fichier doivent correspondre au format standard de BGII.
+		</p>
+		<p>
+			Ce paramétrage est mémorisé par l'utilitaire.
+		</p>
+		<p>
+			<center><img src="images/rp42-fr.png" /></center>
+		</p><br>
+
+		<p>
+			<strong>Construire les fichiers IDS.</strong>
+		</p>
+		<p>
+			Vous pouvez copier chacun de ces nouveaux fichiers avec le bouton « Copier dans le presse-papier ». Le contenu de la liste est copié dans votre presse-papier (n'oubliez pas qu'il écrasera le contenu de ce dernier) et peut être collé dans un autre fichier.
+		</p>
+		<p>
+			<strong>Note : </strong>Vous pouvez aussi les sauvegarder directement sous forme de fichiers IDS à l'aide du bouton « Sauvegarder dans un fichier ». &#128521;
+		</p>
+		<p>
+			<center><img src="images/rp43-fr.png" /></center>
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Construire les fichiers .IDS</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ==================== R e f e r e n c e ===================== -->
+	  <a name="ref" id="ref"></a>
+	  <div class="content">
+
+		<h2>Définition des slots d'animation</h2><br>
+
+		<p>
+			Il s'agit des informations affichées dans le tableau des types d'animation, avec éventuellement plus de renseignements supplémentaires. Puisque la taille des animations pour BGII est limitée à 255 x 255 pixels, vous devrez utiliser les slots des formats 4 PART ou de DRAGON si vous créez une animation plus grande. N'oubliez pas que cette taille inclue celle des objets équipés : si les tailles cumulées de l'animation de base ET de l'objet dépassent 255 x 255 pixels, votre animation ne sera pas affichée correctement, ou pire, provoquera un crash du jeu.
+		</p>
+
+		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 32px; padding: 6px;">
+			<div class="quotetitle">
+				<strong><em><span style="text-decoration: underline">NdT</span> : les formats d'animations sont définis par quelques termes techniques, dont les principaux sont détaillés ci-dessous</em></strong>
+				<input value="Afficher" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none;">
+				<p>
+					<ul style="margin-top: 4px;margin-left: 4%;width: 88%;">
+						<li><em class="rule">mirrored</em><em> : ne nécessitent pas de directions « Est » qui sont générées automatiquement par le jeu.</em><br></li>
+						<li><em class="rule">unmirrored</em><em> : nécessitent des directions « Est » qui ne sont pas générées automatiquement par le jeu.</em><br></li>
+						<li><em class="rule"><acronym title = "NdT : « découpées »">split</acronym></em><em> : chaque action disponible est répartie dans un fichier BAM distinct.</em><br></li>
+						<li><em class="rule">unsplit</em><em> : chaque fichier bam regroupe l'ensemble des actions disponibles.]</em><br></li>
+					</ul>
+				</p>
+				</div>
+			</div>
+		</div><br>
+
+		<span class="t3">Types de formats d'animations Baldur's Gate I</span><br />
+
+		<hr class="floatfix" /><br>
+
+		<p>
+			<strong>&#8258 BGI MONSTER LONG 4 PART</strong>
+		</p>
+		<p>
+			16 Directions unmirrored (10 + 6E)<br>
+			G11 G11E G12 G12E G13 G13E G14 G14E // 16 séquences.<br>
+			G21 G21E G22 G22E G23 G23E G24 G24E // 80 séquences.<br>
+			G31 G31E G32 G32E G33 G33E G34 G34E // 48 séquences.<br>
+			<br>
+			Ce format est identique à celui des animations BGI MONSTER LONG, mais chaque fichier G1, G2 et G3 est découpé en quatre parties <em>[NdT : chaque partie correspondant à un quart de l'image]</em>.<br><br>
+			Exemples : wiverne majeure (MWYV), tanar'ri de BGI (MTAN).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGI MONSTER LONG</strong>
+		</p>
+		<p>
+			16 Directions unmirrored (10 + 6E)<br>
+			G1 G1E // 16 séquences.<br>
+			G2 G2E // 80 séquences.<br>
+			G3 G3E // 48 séquences.<br>
+			<br>
+			Exemples : ver charognard (MCAR), wyverne (MWYV).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGI SIMPLE CASTER (BOW)</strong>
+		</p>
+		<p>
+			8 Directions unmirrored (5 + 3E)<br>
+			G1 G1E // 48 séquences.<br>
+			G2 G2E // 24 séquences.<br>
+ 			<br>
+			Prend en charge éventuellement les animations d'arc (BG1, BG1E, BG2, BG2E). Dispose d'animations de lancement de sorts.<br>
+			<br>
+			Exemple : sirène (MSIR).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGI SIMPLE CASTER (S1)</strong>
+		</p>
+		<p>
+			8 Directions unmirrored (5 + 3E)<br>
+			G1 G1E // 48 séquences.<br>
+			G2 G2E // 24 séquences.<br>
+			<br>
+			Prend en charge éventuellement les animations d'épée (SG1, SG1E, SG2, SG2E). Dispose d'animations de lancement de sorts.<br>
+			<br>
+			Exemple : ogre mage (MOGM).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGI ANKHEG (actuellement non fonctionnel).</strong>
+		</p>
+ 		<p>
+			8 Directions unmirrored (5 + 3E)<br>
+			G1 G1E // 32 séquences.<br>
+			G2 G2E // 24 séquences.<br>
+			G3 G3E // 16 séquences.<br>
+			+D (animations d'émergence du sol - voir ci-dessous ; DG1, DG1E...)<br>
+			<br>
+			Actuellement non fonctionnel, ce slot affichera en boucle l'animation passive (idle) pour toutes les séquences. (J'ai pensé que ce ne serait sans doute pas le type d'animation le plus populaire, donc cela pourrait changer bientôt, ou pas).<br>
+			<br>
+			Exemple : ankheg (MAKH).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGI SIMPLE MONSTER</strong>
+		</p>
+ 		<p>
+			8 Directions unmirrored (5 + 3E)<br>
+			G1 G1E // 48 séquences [<em>NdT : décomposées ainsi = Marche - Sur ses gardes - Immobile - Touché - Tombe - Mort</em>].<br>
+			G2 G2E // 24 séquences [<em>NdT : décomposées ainsi = Attaque 1 - Attaque 2 - Attaque 3</em>].<br>
+ 			<br>
+			<strong>Note sur les paperdolls :</strong> Ces slots prennent en charge les paperdolls, mais leur système de nomenclature pourrait s'avérer incohérent à ce stade. Essayez [ID]INV, [ID]0INV, [ID]1INV... L'un d'entre eux devrait fonctionner.
+		</p>
+ 		<p>
+			Ce format est identique à celui des animations de lanceurs de sort (BGI SIMPLE CASTER), mais possède des animations d'attaque supplémentaires à la place des animations de lancement de sorts.<br>
+			<br>
+			Exemple : loup-garou (MWER).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 CHARACTER BGI</strong>
+		</p>
+  		<p>
+			8 Directions unmirrored (5 + 3E)<br>
+			A1 A1E A2 A2E A3 A3E A4 A4E A5 A5E A6 A6E SA SAE SX SXE <span style="padding-left:3px">// 8 séquences (A1 en a 16).</span><br>
+			CA CAE <span style="padding-left:337px">// 62/64 séquences.</span><br>
+			G1 G1E <span style="padding-left:338px">// 72 séquences.</span><br>
+			W2 W2E <span style="padding-left:330px">// 8 séquences.</span><br>
+			+ Niveaux d'armure (4) <em>[NdT : ils correspondent à la représentation graphique du type d'armure portée (plate, cotte de mailles, cuir et robe)]</em><br>
+			+ Animations d'objets arbitraires (à l'origine WP).<br>
+			+ CSHD.<br>
+ 			<br>
+			Avec, CBGI étant l'identifiant (ID) de l'animation...<br>
+			[CBGI][1]A1 (ID + niveau d'armure 1-4)<br>
+			[CBGI][1]INV<br>
+			<br>
+			La nomenclature pour les objets est...<br>
+			[BGI][S1]A1 (3 dernières lettres de l'ID + identifiant de l'objet)<br>
+			[BGI][S1]INV
+		</p>
+  		<p>
+			Contrairement aux autres formats d'animation, équiper un personnage avec un objet dont l'animation n'existe pas FAIT CRASHER le jeu.
+		</p>
+ 		<p>
+			Gardez à l'esprit que toutes les animations de personnages de BGI affichent l'animation des ombres (CSHD).
+		</p>
+ 		<p>
+			Si vous voulez créer une animation qui utilise des animations d'objets existants (par exemple, modifier une animation existante), sélectionnez l'une des options du slot d'animation CHARACTER BGI WPM/L/S avec la taille souhaitée.
+		</p><br><br>
+
+
+		<span class="t3">Types de formats d'animations Baldur's Gate II</span><br />
+
+		<hr class="floatfix" /><br>
+
+ 		<p>
+			<strong>&#8258 DRAGONS (XDR)</strong>
+		</p>
+ 		<p>
+			9 Directions mirrored<br>
+			Les images sont découpées en neuf parties.<br>
+			5 Animations (5 : 1 split no base ; 4 : 2 split).<br>
+			Animation + Partie de l'image + Découpage + Direction.<br>
+			<br>
+			Avec, XDR1 étant l'identifiant (ID) de l'animation...<br>
+			<br>
+			[XDR1][1][9][0][2] correspond à la première animation (marche), la 9ème partie de l'image (coin inférieur droit), premier découpage et la direction sud-ouest (troisième direction).<br><br>
+			Les parties de l'image sont classées du coin supérieur gauche au coin inférieur droit.
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGII <acronym title = "NdT : « découpées » - chaque action disponible est répartie dans un fichier BAM distinct">SPLIT</acronym></strong>
+		</p>
+ 		<p>
+			9 Directions mirrored<br>
+			G1 G11 G12 G13 G14 G15 <span style="padding-left:30px">// 54 séquences.</span><br>
+			G2 G21 G22 G23 G24 G25 G26 <span style="padding-left:2px">// 63 séquences.</span><br>
+			<br>
+			Vous pouvez affecter à ces animations des animations d'objets, comme aux personnages. Ces animations d'objets sont <acronym title = "NdT : unsplit">regroupées dans deux fichiers</acronym>, G1[ID] et G2[ID]. Ainsi, les animations d'un arc seraient définies dans les fichiers G1BW et G2BW, celles d'une épée dans les fichiers G1S et G2S... Contrairement aux formats d'animation de personnage, équiper une créature avec un objet dont l'animation n'existe pas ne fait pas crasher le jeu.<br>
+ 			<br>
+			Exemples : solaire (MSOL), troll (MTRO).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0; color: #781808; background-color: #781808;" /><br>
+
+		<p>
+			<strong>&#8258 BGII SPLIT 4 PART</strong>
+		</p>
+ 		<p>
+			9 Directions mirrored<br>
+			G11 G12 G13 G14 <span style="padding-left:34px">// 54 séquences.</span><br>
+			G111 G121 G131 G141 <span style="padding-left:2px">// 54 séquences.</span><br>
+			G113 G123 G133 G143 <span style="padding-left:2px">// 54 séquences.</span><br>
+			G114 G124 G134 G144 <span style="padding-left:2px">// 54 séquences.</span><br>
+			G115 G125 G135 G145 <span style="padding-left:2px">// 54 séquences.</span><br>
+ 			<br>
+			G21 G22 G23 G24 <span style="padding-left:34px">// 63 séquences.</span><br>
+			G211 G221 G231 G241 <span style="padding-left:2px">// 63 séquences.</span><br>
+			G212 G222 G232 G242 <span style="padding-left:2px">// 63 séquences.</span><br>
+			G213 G223 G233 G243 <span style="padding-left:2px">// 63 séquences.</span><br>
+			G214 G224 G234 G244 <span style="padding-left:2px">// 63 séquences.</span><br>
+			G215 G225 G235 G245 <span style="padding-left:2px">// 63 séquences.</span><br>
+			G216 G226 G236 G246 <span style="padding-left:2px">// 63 séquences.</span><br>
+			<br>
+			Ce format est identique à celui des animations BGII SPLIT, mais chaque fichier est découpé en quatre parties comme indiqué plus haut.<br>
+			<br>
+			Exemple : Démogorgon (MDEM).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 BGII UNSPLIT EXT</strong>
+		</p>
+  		<p>
+			9 Directions mirrored<br>
+			G1 // 72 séquences [<em>NdT : décomposé ainsi = Marche - Sur ses gardes - Immobile - Touché - Tombe - Mort - S'endort - Se relève</em>].<br>
+			G2 // 63 séquences [<em>NdT : décomposé ainsi = Attaque 1 - Attaque 2 - Attaque 3 - Lancer 1 - Lancer 2 - Incante un sort - Lance un sort</em>].<br>
+			<br>
+			C'est une variante étendue du format BGII SPLIT, mais toutes ses séquences sont regroupées dans un seul fichier, plutôt que réparties dans plusieurs. Prend également en charge les animations d'objet (voir plus haut).<br>
+			<br>
+			Exemples : Mélissanne (MMEL), tyramort (MBEG).
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /><br>
+
+		<p>
+			<strong>&#8258 CHARACTER BGII</strong>
+		</p>
+ 		<p>
+			8 Directions mirrored<br>
+			A1 A2 A3 A4 A5 A6 A7 A8 A9 SA SS SX <span style="padding-left:2px">// 9 séquences.</span><br>
+			CA <span style="padding-left:222px">// 72 séquences.</span><br>
+			G1 (<strong>not split</strong>) <span style="padding-left:154px">// 99 séquences.</span><br>
+			+ Niveaux d'armure (4) <em>[NdT : ils correspondent à la représentation graphique du type d'armure portée (plate, cotte de mailles, cuir et robe)]</em><br>
+			+ Animations d'objets arbitraires (à l'origine WQ).<br>
+			<br>
+			CBGT étant l'identifiant (ID) de l'animation...<br>
+			[CBGT][1]A1 (ID + niveau d'armure 1-4)<br>
+			[CBGT][1]INV<br>
+			<br>
+			La nomenclature pour les objets est...<br>
+			[BGT][S1]A1 (les 3 dernières lettres de l'ID + l'identifiant de l'objet)<br>
+			[B<strong>P</strong>T][S1]INV <strong>(la deuxième lettre est obligatoirement un P !!)</strong>
+		</p>
+ 		<p>
+			^ Cette nomenclature est due aux animations de BGII qui utilisent des objets WQ avec des paperdolls WP. Elle ne s'applique qu'aux fichiers INV. Ce P sera toujours positionné sur l'emplacement de la deuxième lettre (3 ou 0, les deux lettres d'identification restant intactes.)
+		</p>
+  		<p>
+			Contrairement aux autres formats d'animation, équiper un personnage avec un objet dont l'animation n'existe pas FAIT CRASHER le jeu.
+		</p>
+ 		<p>
+			Ce format d'animation est différent de celui utilisé par le jeu original, dans la mesure où j'ai décidé de ne pas découper les séries d'animation G. Mais leur contenu est identique, et est simplement regroupé dans un seul fichier (voir les formats BGII SPLIT/BGII UNSPLIT). Ainsi, si vous souhaitez dupliquer ou modifier une animation de personnage existante, vous devrez fusionner les fichiers G1, G11, G12... dans un fichier unique G1. Je l'ai fait principalement pour ne pas surcharger le répertoire override (et faciliter la création et le chargement de nouveau contenu).
+		</p>
+ 		<p>
+			Si vous voulez créer une animation qui utilise des animations d'objets existants (par exemple, modifier une animation existante), sélectionnez l'une des options du slot d'animation CHARACTER BGII WQM/L/N/S avec la taille souhaitée.
+		</p><br><br>
+
+
+		<span class="t3">Format d'animation IWD</span><br />
+
+		<hr class="floatfix" /><br>
+
+ 		<p>
+			<strong>&#8258 IWD</strong>
+		</p>
+ 		<p>
+			8 Directions <acronym title = "NdT : nécessitent des directions « Est » qui ne sont pas générées automatiquement par le jeu">unmirrored</acronym> (5 + 3E)<br>
+			A1 A1E A2 A2E A3 A3E A4 A4E	<span style="padding-left:2px">// Respectivement 5 et 8 séquences [<em>NdT : Attaques. A4 = lancer d'arme à projectiles</em>].</span><br>
+			CA CAE <span style="padding-left:144px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Cast (Spell release)">Lancer un sort</acronym></em>].</span><br>
+			DE DEE <span style="padding-left:144px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Dead">Mourir</acronym> (la créature tombe)</em>].</span><br>
+			GH GHE <span style="padding-left:142px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Get Hurt ou Hit">Blessé</acronym> (la créature est touchée par une arme ou un sort)</em>].</span><br>
+			GU GUE <span style="padding-left:142px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Get Up">Se relever</acronym></em>].</span><br>
+			SC SCE <span style="padding-left:144px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Stand before combat">Rester immobile, sur ses gardes</acronym></em>].</span><br>
+			SD SDE <span style="padding-left:144px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Stand idle">Rester immobile, passif</acronym></em>].</span><br>
+			SL SLE <span style="padding-left:148px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Sleep">S'endormir</acronym> (la créature tombe inconsciente)</em>].</span><br>
+			SP SPE <span style="padding-left:146px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Spell casting">Incanter un sort</acronym></em>].</span><br>
+			TW TWE <span style="padding-left:138px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Twitch">La créature est étendue morte sur le sol</acronym></em>].</span><br>
+			WK WKE <span style="padding-left:136px">// Respectivement 5 et 8 séquences [<em>NdT : <acronym title="NdT : Walk">Marcher</acronym></em>].</span><br><br>
+			+ Objet (SA1, MA1...).<br>
+			<br>
+			Les animations IWD peuvent coexister avec les animations BGII SPLIT/UNSPLIT (qui, elles-mêmes, peuvent coexister avec certaines animations au format 4 PART, etc.) en partageant le même identifiant, tant que l'une d'elle ne nécessite pas de paperdoll. En fait, c'est souvent le cas dans le jeu original.
+		</p>
+  		<p>
+			On peut affecter n'importe quel type d'objet à un slot IWD. Cependant, la dernière lettre de l'identifiant de l'objet est supprimée (par exemple, WH devient W).
+		</p>
+  		<p>
+			Contrairement aux formats d'animation de personnage, équiper une créature avec un objet dont l'animation n'existe pas ne fait pas crasher le jeu.
+		</p><br><br>
+
+
+		<span class="t3">Suggestions de conversions</span><br />
+
+		<hr class="floatfix" /><br>
+
+ 		<p>
+			<strong>&#8258 Planescape Torment</strong></p>
+ 		<p>
+			Les animations PST possèdent généralement la structure suivante :
+		</p>
+ 		<p>
+			5 Directions mirrored<br>
+			AT1 AT2 <span style="padding-left:2px">// 5 séquences (Attaques).</span><br>
+			C2S <span style="padding-left:24px">// 5 séquences (<acronym title="NdT : combat->idle">Stopper le combat, baisser sa garde</acronym>).</span><br>
+			CF1 <span style="padding-left:26px">// 5 séquences (<acronym title="NdT : Taunt">Rester immobile, sur ses gardes</acronym>).</span><br>
+			(CF2)<br>
+			DFB <span style="padding-left:26px">// 5 séquences (<acronym title="NdT : Fall">Tomber</acronym> - ou mourir).</span><br>
+			GUP <span style="padding-left:24px">// 5 séquences (<acronym title="NdT : Get Up">Se relever</acronym>).</span><br>
+			HIT <span style="padding-left:30px">// 5 séquences (<acronym title="NdT : Hit">Blessé</acronym> - la créature est touchée par une arme ou un sort).</span><br>
+			S2C <span style="padding-left:26px">// 5 séquences (<acronym title="NdT : idle->combat">Se mettre en garde</acronym>).</span><br>
+			SF1 <span style="padding-left:28px">// 5 séquences (<acronym title="NdT : Stretch">Rester passif (tourner la tête...</acronym>).</span><br>
+			SP1 <span style="padding-left:28px">// 5 séquences (<acronym title="NdT : Spell">Incanter un sort</acronym>).</span><br>
+			SP2 <span style="padding-left:28px">// 5 séquences (<acronym title="NdT : Spell">Lancer un sort</acronym>).</span><br>
+			SP3 <span style="padding-left:28px">// 5 séquences.</span><br>
+			(SP4)<br>
+			STC <span style="padding-left:28px">// 5 séquences (<acronym title="NdT : Combat idle">Rester immobile, sur ses gardes</acronym>).</span><br>
+			STD <span style="padding-left:28px">// 5 séquences (<acronym title="NdT : Idle normal">Rester immobile, passif</acronym>).</span><br>
+			TK1 <span style="padding-left:29px">// 5 séquences (<acronym title="NdT : Talk">Parler</acronym>).</span><br>
+			TK2 <span style="padding-left:29px">// 5 séquences (<acronym title="NdT : Talk">Parler</acronym>).</span><br>
+			TK3 <span style="padding-left:29px">// 5 séquences (<acronym title="NdT : Talk">Parler</acronym>).</span><br>
+			(TK4, TK5, TK6).<br><br>
+			9 Directions mirrored<br>
+			RUN <span style="padding-left:26px">// 9 séquences (<acronym title="NdT : Run">Courir</acronym>).</span><br>
+			WLK <span style="padding-left:24px">// 9 séquences (<acronym title="NdT : Walk">Marcher</acronym>).</span><br>
+			<br>
+			Cela signifie qu'elles devraient être converties autant que possible aux formats BGII UNSPLIT EXT. ou personnage de BGII, afin de conserver la plupart de leurs diverses animations hors combat, et leurs nombreuses directions dans les actions de marche et de course. Ces deux dernières seraient perdues si elles étaient converties aux formats IWD et BGI. Puisque la plupart de leurs animations disposent de cinq directions de type mirrored, vous devrez les assembler correctement, et les fusionner dans le bon ordre dans des fichiers G1 et G2.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Définition des slots d'animation</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================= M a n u a l ======================== -->
+	  <a name="manual" id="manual"></a>
+	  <div class="content">
+
+		<h2>Installation manuelle</h2><br>
+
+		<p>
+			<strong>&#8258 Installation sans le programme d'installation <acronym title="Weimer Dialogue Utility">WeiDU</acronym> fourni :</strong>
+ 		</p>
+		<ul style="margin-top: 4px;margin-left: 4%;width: 88%;">
+			<li>i. La modification de l'exécutable est effectuée avec les outils bsdiff/bspatch de Colin Percival disponibles <a href="http://www.daemonology.net/bsdiff/">ici</a>.</li>
+			<li>ii. Copier dans votre répertoire de jeu le fichier <em class="rule">.patch</em> (situé dans le répertoire <em class="rule">infinityanimations/patch</em>) et <em class="rule">bspatch</em>.</li>
+			<li>iii. Dans une ligne de commande, tapez ceci : <br>
+				<em class="rule">bspatch BGMain.exe BGMain_patched.exe Infinity10010043.patch</em></li>
+			<li>iv. Lancez le jeu avec BGMain_patched.exe, ou renommez-le BGMain.exe (assurez-vous de conserver l'exécutable original au cas où).</li>
+		</ul>
+		<br>
+
+		<p>
+			<strong>&#8258 Reference Picker</strong>
+		</p>
+		<p>
+			Extrayez le répertoire &#x1F4C1; <em class="rule">Reference Picker/</em> et son contenu dans l'emplacement de votre choix.
+		</p>
+		<p>
+			Vous pouvez exécuter <acronym title="NdT : Sélecteur de référence">Reference Picker</acronym> dans une autre langue (s'il a été traduit) en modifiant le fichier <em class="rule">Config.txt</em>. Sous la section [Program], attribuez à la variable «<span class="tp2"> UseLang </span>» la langue que vous souhaitez utiliser. Par exemple, <span class="tp2">UseLang=French</span> chargera les textes de la traduction situés dans le fichier <span class="weidu"> \lang\French.txt </span>. Ces textes étant chargés au lancement du programme, si vous modifiez la langue pendant son utilisation, vous devrez le relancer pour que la modification prenne effet.
+		</p>
+		<p>
+			&#x26A0;&#xFE0F; Le fichier de traduction doit être encodé en UTF-16 LE BOM. UTF-8 ne fonctionnera pas.
+		</p>
+		<p>
+			Vous pouvez aussi modifier à tout moment la langue utilisée en utilisant la combinaison de touches [Alt+L]. La procédure provoquera la fermeture et le redémarrage automatiques de l'utilitaire dans la langue choisie.
+		</p>
+		<p>
+			<center><img src="images/rp61-fr.png" /></center>
+			<center><img src="images/rp62-fr.png" /></center>
+		</p><br>
+		<p>
+			Le fichier <em class="rule">anims.list</em> est indispensable pour lancer l'utilitaire. <em><strong>NE LE MODIFIEZ PAS</strong></em>.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Installation manuelle</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ============== V e r s i o n   H i s t o r y =============== -->
+	  <a name="version" id="version"></a>
+	  <div class="content" id="versionHistory">
+
+		<h2>Historique des versions</h2><br>
+
+		<h6>Version 6.0.0 &nbsp;(nn mars 2021)</h6>
+
+		  <ul>
+			<li>Modification des noms de code des animations pour les rendre <strong>compatibles avec les code pages non occidentaux</strong> (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable) et correction des doublons de slots d'animation de dragon (XDR3, XDR6). &#128521;</li>
+			<li>Ajout de la compatibilité avec les jeux EE: adaptation du code pour une meilleure compatibilité du mod, avec notamment l'harmonisation des noms des animations.</li>
+			<li>Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.</li>
+			<li>Ajout de la traduction française (Gwendolyne).</li>
+			<li>Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 5 &nbsp;(12 mai 2010)</h6>
+
+		  <ul>
+			<li>Modification du patch de l'exécutable afin qu'il modifie le code page et redémarre l'ordinateur s'il détecte un code page non occidental.</li>
+			<li>Mise à jour du patch de l'exécutable pour qu'il reconnaisse les avatars de voleur de <acronym title="Baldur's Gate">BG1</acronym>.</li>
+			<li>Clonage des fichiers d'attribution de sons existants [<em>NdT : fichiers 2da</em>] pour créer ceux qui manquent.</li>
+			<li>Ajout des autres fichiers d'attribution de sons manquants dans le répertoire &#x1F4C1; /content.</li>
+			<li>Ajout des sons manquants du minotaure et de l'<acronym title="NdT : water weird">esprit des eaux</acronym>.</li>
+			<li>Suppression de l'empilage des mêmes animations dans le fichier chitin.key, qui posait problème.</li>
+			<li>Affectation aux créatures de leurs jeux de sons lorsque c'est approprié (mise à jour importante).</li>
+			<li>Correction d'un <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">dysfonctionnement mineur de la commande <span class="tp2">READ_BYTE</span></a> dans les patches de créatures.</li>
+			<li>Ajout d'un contrôle interdisant l'installation des sous-composants si le composant principal n'est pas installé (pour empêcher des crashes).</li>
+			<li>Ajout des <acronym title="NdT : night hags">sorcières de la nuit</acronym> [<em>NdT : ou guenaudes nocturnes selon les traductions</em>] dans le composant « <em>Démons différenciés</em> ».</li>
+			<li>Ajout de l'animation de la reine goule au composant « <em>Morts-vivants différenciés</em> ».</li>
+			<li>Ajout de l'animation <acronym title="NdT : white-haired Ellesime">Ellesime avec des cheveux blancs</acronym> au composant « <em>Plus d'animations d'<acronym title="Icewind Dale II">IWD2</acronym></em> ».</li>
+			<li>Ajout de l'animation <acronym title="NdT : lagoon creature">créature des lagons</acronym> au composant « <em>Plus d'animations d'<acronym title="Icewind Dale II">IWD2</acronym></em> ».</li>
+			<li>Déplacement du traitement des tieffelins des composants « cambions » et « alu-démons » dans le composant « <em>Plus d'animations de <acronym title="Planescape: Torment">PS:T</acronym></em> ».</li>
+			<li>Correction du petit bogue qui faisait apparaître les combattants squelettes sous la forme de verbeegs.</li>
+			<li>Ajout de l'animation d'Amel au composant « <em>Plus d'animations de <acronym title="Neverwinter Nights">NWN</acronym></em> » (si <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> est installé).</li>
+			<li>Ajout du composant « <em>Correction des animations des humanoïdes</em> ».</li>
+			<li>Ajout du composant « <em>Avatars de Moinesse pour IA</em> ».</li>
+			<li>Ajout du composant « <em>Plus d'animations de <acronym title="Planescape: Torment">PS:T</acronym></em> ».</li>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> dans les parties sauvegardées</em> ».</li>
+			<li>Ajout du composant « <em>Correction des animations dans les parties sauvegardées</em> ».</li>
+			<li>Traification manuelle de ce foutu mod pour faciliter le travail des traducteurs (de rien, <acronym title="Weimer Dialogue Utility">WeiDU</acronym> ! &#128541;).</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 4 &nbsp;(7 février 2010)</h6>
+
+		  <ul>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym></em> ».</li>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> exportés</em> ».</li>
+			<li>Modification de la procédure de modification des démons.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 3 &nbsp;(1er février 2010)</h6>
+ 
+		  <ul>
+			<li>Correction des bugs d'animations _LOW qui causaient des crashs de zones au chargement.</li>
+			<li>Correction des scripts et des dialogues qui <acronym title="Polymorph">métamorphosent</acronym> en créatures utilisant des animations _LOW.</li>
+			<li>Correction d'un dysfonctionnement du code qui empêchait l'installation de composants optionnels.</li>
+			<li>Ajout de l'option d'installation des sons dans le composant « <em>Animations de svirfneblins</em> ».</li>
+			<li>Ajout du composant « <em>Correction des références des créatures dans les cartes</em> ».</li>
+			<li>Ajout des fichiers révisés d'attribution de sons des salamandres (slots MSAL et MSA2).</li>
+			<li>Amélioration de la compatibilité avec <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a>.</li>
+			<li>Amélioration des procédures de modification de créatures pour les démons et les orques chamans.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 2 &nbsp;(23 janvier 2010</h6>
+
+		  <ul>
+			<li>Ajout de la prise en charge des systèmes non ANSI par la procédure d'installation.</li>
+		  </ul><br><br>
+
+		<h6>Version <acronym title="Weimer Dialogue Utility">WeiDU</acronym> Beta 1 &nbsp;(11 janvier 2010)</h6>
+
+		  <ul>
+			<li>Première sortie en version <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.</li>
+			<li>Toutes les créatures du jeu et des mods affectées par IA sont modifiées.</li>
+			<li>Ajout des composants optionnels.</li>
+		  </ul><br><br>
+
+		<h6>Version r.10010043</h6>
+
+		  <ul>
+			<li>Correction d'un bogue affectant les slots d'animation d'Icewind Dale dans Baldur's Gate II.</li>
+		  </ul><br><br>
+
+		<h6>Mise à jour de la version r.09102252</h6>
+
+		  <ul>
+			<li>Mise à jour de la documentation et du Reference Picker.</li>
+			<li>Ajout d'une feuille de style alternative. &#128521;</li>
+		  </ul><br><br>
+
+		<h6>Version r.09102252</h6>
+
+		  <ul>
+			<li>Sortie initiale.</li>
+		  </ul><br><br>
+
+		<address>
+			<span class="footer">Infinity Animations Reference Picker &gt; Historique des versions</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+	</div>
+  </div>
+</body>
+</html>

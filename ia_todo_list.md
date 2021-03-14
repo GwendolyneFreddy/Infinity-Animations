@@ -11,6 +11,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 - [ ] Remove all DEBUGGING CONTROL LOG messages
 - [ ] Arrays: fill all unknown creature mods references
+- [x] Check WRITE_LONG 0x28 ID values
 - [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
 
 ## 
@@ -26,6 +27,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 - [ ] <ins>All components<_ins>: list all EE games specific creatures that need to be patched
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
+- [ ] <ins>IA Reference Picker documentation</ins>: update animation types description.
 
 ## 
 

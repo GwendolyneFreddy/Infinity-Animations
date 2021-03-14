@@ -877,11 +877,11 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
   - Découpage du code en composants distincts pour offrir une meilleure lecture et faciliter sa maintenance. &#128521; :wink:
   - Déplacement des fichiers tpa d'installation des composants dans le nouveau répertoire :file_folder: « *components* » et conservation des librairies de fonctions et de macros dans le répertoire :file_folder: « *lib* ».
   - Ajout de commentaires dans les fichiers de code chaque fois que possible.
-  - Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
+  - Adaptation du code pour une meilleure compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.
   - Re-formatage des données des fichiers .log pour les rendre enfin lisibles.
   - ...
   - Simplification du code :
-    - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
+    - Utilisation de nouvelles fonctions WeiDU plus efficaces (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
     - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par Sam, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire; et les macros `gw_install_archives` et `gw_update_content` de Gwendolyne pour installer tous les fichiers nécessaires (animations et sons) des répertoires archives/subfolders dans le répertoire override.
     - Remplacement des variables "*%tsx%*" spécifiques à IA par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods : dorénavant, IA utilise les valeurs actualisées du système "*crossmod platform variables*".
     - Mise à jour des fonctions `fj_cre_validity.tpp`, `fj_cre_reindex.tpp` et `fj_cre_eff_v2.tpp` aux standards des nouvelles versions de WeiDU.

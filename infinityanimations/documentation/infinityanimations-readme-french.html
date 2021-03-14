@@ -2057,7 +2057,7 @@
 
 		<h2>Historique des versions</h2><br>
 
-		<h6>Version 6.0.0 &nbsp;(nn février 2021)</h6>
+		<h6>Version 6.0.0 &nbsp;(nn mars 2021)</h6>
 
 		<h5>&nbsp;<span style="color: #781808;">&#9755;</span>&nbsp;&nbsp; Principales mises à jour :</h5>
 
@@ -2129,14 +2129,14 @@
 			<li>Découpage du code en composants distincts pour offrir une meilleure lecture et faciliter sa maintenance. &#128521;</li>
 			<li>Déplacement des fichiers tpa d'installation des composants dans le nouveau répertoire &#x1F4C1; « <em>components</em> » et conservation des librairies de fonctions et de macros dans le répertoire &#x1F4C1; « <em>lib</em> ».</li>
 			<li>Ajout de commentaires dans les fichiers de code chaque fois que possible.</li>
-			<li>Adaptation du code pour une future compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.</li>
+			<li>Adaptation du code pour une meilleure compatibilité du mod avec les versions EE, avec notamment l'harmonisation des noms des animations.</li>
 			<li>Re-formatage des données des fichiers .log pour les rendre enfin lisibles.</li>
 		
 			<li>...</li>
 
 			<li>Simplification du code :</li>
 			  <ul>
-				<li style="margin-left:-4%; margin-right:-8%;">Utilisation de nouvelles fonctions plus efficaces de <acronym title="Weimer Dialogue Utility">WeiDU</acronym> (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme <span class="tp2">DECOMPILE_BCS_TO_BAF</span> et <span class="tp2">DECOMPILE_DLG_TO_D</span> remplacées par <span class="tp2">DECOMPILE_AND_PATCH</span>).</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Utilisation de nouvelles fonctions <acronym title="Weimer Dialogue Utility">WeiDU</acronym> plus efficaces (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme <span class="tp2">DECOMPILE_BCS_TO_BAF</span> et <span class="tp2">DECOMPILE_DLG_TO_D</span> remplacées par <span class="tp2">DECOMPILE_AND_PATCH</span>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Utilisation de <span class="tp2">ps_recursive_copy.tpa</span>, une nouvelle bibliothèque de fonctions <acronym title="Weimer Dialogue Utility">WeiDU</acronym> créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire; et les macros <span class="tp2">gw_install_archives</span> et <span class="tp2">gw_update_content</span> de Gwendolyne pour installer tous les fichiers nécessaires (animations et sons) des répertoires archives/subfolders dans le répertoire override.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Remplacement des variables " <em>%tsx%</em> " spécifiques à IA par les variables " <em>%tutu%_scriptx% </em>" plus utilisées et plus compatibles avec les autres mods : dorénavant, IA utilise les valeurs actualisées du système "<em>crossmod platform variables</em>".</li>
 				<li style="margin-left:-4%">Mise à jour des fonctions <span class="tp2">fj_cre_validity.tpp</span>, <span class="tp2">fj_cre_reindex.tpp</span> et <span class="tp2">fj_cre_eff_v2.tpp</span> aux standards des nouvelles versions de <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.</li>
@@ -2166,12 +2166,10 @@
 			<li><span style="color: #781808;">[0] Infinity Animations</span> (t-main.tpa, t-main_ee.tpa)</li>
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-8%;">Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replacing_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correcting_creature animations.tpa</em>, <em>ia_correcting_weapon_animations.tpa</em>).</li>
-
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (<em>t-aniwksnd.tpa</em>) et résout les conflits entre soundsets d'animations de créatures (<em>ia_soundsets_conflicts.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la nouvelle option d'installation <em>ia_sort_ids</em> (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. &#128521;</li>
-
 				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_replacing_low_animations.tpa</em> :</li>
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Re-formatage des données du fichier <em>t-low_fix.log</em> pour les rendre enfin lisibles.</li>
@@ -2368,7 +2366,7 @@
 
 		  <ul>
 			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym></em> ».</li>
-			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym></em> ».</li>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> exportés</em> ».</li>
 			<li>Modification de la procédure de modification des démons.</li>
 		  </ul><br><br>
 
