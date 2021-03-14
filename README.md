@@ -834,7 +834,7 @@ This component patches any changed creature animation in saved games to prevent 
 ##### Version 6.0.0 &nbsp;(September nn, 2020)
 
 &#9755; <ins>a. Major updates</ins>
-  - Modified animations name-spaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected). :wink:
+  - Modified animations name-spaces, **now compatible with non-Western code pages** (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected), and fixed duplicate usage of dragon type slots (XDR3, XDR6). :wink:
   - From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
   - Rewrote IA Reference Picker tool (can now be translated) and updated its documentation.
@@ -884,8 +884,10 @@ This component patches any changed creature animation in saved games to prevent 
   - ...
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
-    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory.
+    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory; and Gwendolyne's `gw_install_archives` and `gw_update_content` macros to install all needed animations and sounds files from archives/subfolders to override folder.
     - Replaced specific "*%tsx%*" IA variables with more compatible "*%tutu%_scriptx%*" variables: from now on, IA uses up-to-date *crossmod platform variables*.
+    - Updated `fj_cre_validity.tpp`, `fj_cre_reindex.tpp` and `fj_cre_eff_v2.tpp` patch functions to WeiDU new versions standards.
+    - Enjoy Gwendolyne's silent `gw_handle_audio`, adapted from WeiDU `HANDLE_AUDIO` action function, that may make installation a more easy-on-the-eyes visual experience!
     - Externalized lists of creatures to be patched into arrays for easier maintenance.
     - Minor fixes...
   - ...

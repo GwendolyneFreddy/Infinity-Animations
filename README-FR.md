@@ -832,7 +832,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 ##### Version 6.0.0 &nbsp;(nn septembre 2020)
 
 &#9755; <ins>a.Principales mises à jour</ins>
-  - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable). :wink:
+  - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable) et correction des doublons de slots d'animation de dragon (XDR3, XDR6). :wink:
   - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
   - Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.
   - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux (MMIN), les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
@@ -870,7 +870,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
   - Fichier *setup-infinityanimations.tp2* renommé *infinityanimations.tp2* pour une meilleure intégration dans le projet « Project Infinity » d'AL|EN.
   - Remplacement du mot-clé `AUTHOR` par `SUPPORT`.
   - Ajout des conditions `REQUIRE_PREDICATE` manquantes pour éviter d'installer des composants sur des jeux inappropriés ou si des composants pré-requis ne le sont pas.
-  - Attribution à chaque component d'un `LABEL`.
+  - Attribution d'un `LABEL` à chaque component.
   - Ajout de la librairie "*always.tpa*".
   - Les options de configuration d'installation ont été externalisés dans le fichier *infinityanimations-config-default.ini*. Si vous souhaitez les modifier, veuillez consulter ce <a href="#config">chapitre</a>.
   - ...
@@ -882,8 +882,10 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
   - ...
   - Simplification du code :
     - Utilisation de nouvelles fonctions plus efficaces de WeiDU (qui n'existaient pas lorsque Erephine a écrit ce mod) et remplacement de fonctions obsolètes (comme `DECOMPILE_BCS_TO_BAF` et `DECOMPILE_DLG_TO_D` remplacées par `DECOMPILE_AND_PATCH`).
-    - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire.
+    - Utilisation de `ps_recursive_copy.tpa`, une nouvelle bibliothèque de fonctions WeiDU créée par Sam, qui cherche de manière récursive des fichiers dans un répertoire parent, puis les copie dans un autre répertoire; et les macros `gw_install_archives` et `gw_update_content` de Gwendolyne pour installer tous les fichiers nécessaires (animations et sons) des répertoires archives/subfolders dans le répertoire override.
     - Remplacement des variables "*%tsx%*" spécifiques à IA par les variables "*%tutu%_scriptx%*" plus utilisées et plus compatibles avec les autres mods : dorénavant, IA utilise les valeurs actualisées du système "*crossmod platform variables*".
+    - Mise à jour des fonctions `fj_cre_validity.tpp`, `fj_cre_reindex.tpp` et `fj_cre_eff_v2.tpp` aux standards des nouvelles versions de WeiDU.
+    - Espérons que la fonction silencieuse `gw_handle_audio`, adaptation par Gwendolyne de la fonction WeiDU `HANDLE_AUDIO`, puisse rendre l'installation beaucoup plus reposante pour les yeux !
     - Externalisation des listes de fichiers de créatures à modifier dans des tables [*NdT : arrays*] pour faciliter leur mise à jour.
     - Corrections mineures...
   - ...
@@ -894,8 +896,8 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
   - Passage en minuscules des noms de fichiers.
   - Réorganisation de l'arborescence des répertoires du mod : création de sous-répertoires pour classer les fichiers d'animation et de son par type de créature et/ou par langue.
   - Ajout de l'utilitaire OggDec v1.9.7 et de sox v14.4.1 pour Mac.
-  - Mise à jour de WeiDU (v247).
   - Ajout de l'archive libiconv-1.9.2-1-src.7z avec la licence iconv.
+  - Mise à jour de WeiDU (v247).
   - Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.
 
  <br>
