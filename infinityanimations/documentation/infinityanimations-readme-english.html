@@ -77,7 +77,8 @@
 			<li>Adds custom game animations for characters and creatures (including dragons)</li>
 			<li>Allows use of many different animation <em>types</em> (some never before seen in the games)</li>
 			<li>Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts</li>
-			<li>Harmonizes animations names in all games to avoid conflicts with EE games</li>
+			<li>Harmonizes animations names in all games to avoid conflicts with EE games. For more details, please read <a href="ia_animations_ref_chart.html">Infinity Animations Reference Chart</a>.</li>
+			<li>As of version 6.0.0, automatically install creature sound clips accordingly to the game language localization</li>
 			<li>Offers <acronym title="Graphical User Interface">GUI</acronym> support for adding new animations</li>
 			<li>Lets you watch as the percentage of free animation entries refuses to go down &#128578;</li>
 		  </ul><br>
@@ -340,7 +341,7 @@
 
 			<tr>
 				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_force_soundset</span></strong></td>
-				<td style="border: 1px solid #781808; padding-left:5px; padding-top:20px; padding-bottom:20px; "><a name="forcelanguage" id="forcelanguage"></a>All IA Content sound clips: From now on, Infinity Animations automatically install sound clips accordingly to the game language localization. However it is possible to bypass this behaviour by setting this option to 1. For example:
+				<td style="border: 1px solid #781808; padding-left:5px; padding-top:20px; padding-bottom:20px; "><a name="forcelanguage" id="forcelanguage"></a>All IA Content sound clips: From now on, Infinity Animations automatically install creatures sound clips accordingly to the game language localization. However it is possible to bypass this behaviour by setting this option to 1. For example:
 				  <ul style="margin-left: -1%; margin-right: 40px">
 					<li style="margin-right: -10%">You play a French game and Infinity Animations is installed in French ==> French soundsets are installed.</li>
 					<li style="margin-right: -10%">You play a French game and Infinity Animations is installed in English ==> French soundsets are installed if option ia_force_soundset = 0.</li>
@@ -2002,11 +2003,10 @@
  		  <ul class="version-list c1">
 			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
 			<li>Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.</li>
-			<li><a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: .</li>
+			<li><a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: Huge thanks for his invaluable contribution to this update (<span class="tp2">ps_recursive_copy.tpa</span> library, better bam compressing process, executable patch update...) and for having completely rewritten IA Reference Picker tool.</li>
 			<li><a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his <span class="tp2">FIND_FREE_ANIM_SLOT</span> <acronym title="Weimer Dialogue Utility">WeiDU</acronym> function (<em>a7_functions.tpa</em> library) to automatically install new animation slots in EE games.</li>
 			<li><a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a>: thanks for providing his <em>Infinity Sounds</em> project mod code resolving soundsets creature animation conflicts.</li>
-
-			<li>Modders: <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.</li>
+			<li>Modders: <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.</li>
 			<li>French translation: <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne (<a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading).</li>
 			<li>Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading French translation and for his contribution with fixing a few missing EE animations.</li>
 		  </ul><br>
@@ -2102,7 +2102,7 @@
 				<li style="margin-left:-4%; margin-right:-6%;">IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.</li>
 			  </ul>
 
-			<li>Infinity Animations now automatically installs sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in <em>infinityanimations-config-default.ini</em> file gives the choice to bypass the default soundset language.</li>
+			<li>Infinity Animations now automatically installs creatures sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in <em>infinityanimations-config-default.ini</em> file gives the choice to bypass the default soundset language.</li>
 		  </ul><br>
 
 		<h5>&nbsp;<span style="color: #781808;">&#9755;</span>&nbsp;&nbsp; General overhaul and re-looking:</h5>

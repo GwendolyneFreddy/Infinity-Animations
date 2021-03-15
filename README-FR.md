@@ -61,7 +61,8 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 - Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).
 - Permet d'utiliser de nombreux *types* d'animation (dont certains n'ont jamais été vus dans les jeux).
 - Résout les problèmes d'empilement d'animation et les conflits de slots, de désignation et de jeux de sons des animations de créature.
-- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE.
+- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE. Pour plus de détails, veuillez consulter la <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_animations_ref_chart.html">table de références des animations</a>.
+- À partir de la version 6.0.0, installe automatiquement les fichiers son des créatures dans la langue du jeu.
 - Fournit un utilitaire GUI[*NdT : interface graphique*] pour vous aider à ajouter de nouvelles animations dans le jeu.
 - Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;
 <div align="right"><a href="#top">Retour en haut de page</a></div>
@@ -224,7 +225,7 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_force_soundset</strong></td>
-		<td><a name="forcelanguage" id="forcelanguage"></a><ins>Tous les contenus disposant de fichiers sons</ins> : Infinity Animations installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Cependant, attribuer la valeur 1 à cette variable permet de forcer la langue par défaut de ces fichiers. Par exemple :<br><br>
+		<td><a name="forcelanguage" id="forcelanguage"></a><ins>Tous les contenus disposant de fichiers sons</ins> : Infinity Animations installe désormais automatiquement les fichiers son des créatures dans la langue du jeu. Cependant, attribuer la valeur 1 à cette variable permet de forcer la langue par défaut de ces fichiers. Par exemple :<br><br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en français ==> les fichiers sons français sont installés.<br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons français sont installés si l'option ia_force_soundset est égale à 0.<br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons anglais sont installés si l'option ia_force_soundset est égale à 1.<br><br>
@@ -793,10 +794,10 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 
 - L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
 - Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : ...
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : un énorme merci pour son inestimable contribution à cette mise à jour (librairie *ps_recursive_copy.tpa*, meilleur taux de compression des fichiers bam, mise à jour du patch de l'exécutable...) et pour avoir réécrit complètement l'utilitaire IA Reference Picker.
 - <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_functions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
 - <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a> : merci pour avoir partagé le code de son projet de mod *Infinity Sounds* qui résout les conflits entre soundsets d'animations de créatures.
-- Moddeurs : <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
+- Moddeurs : <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
 - Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> (relecture par <a href="http://www.shsforums.net/user/16735-luren/">Luren</a>).
 - Spécial : <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> pour la relecture de la documentation et sa contribution à la conversion des animations de EE pour ToB.
 
@@ -862,7 +863,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
     - Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg.
     - Archive IA IWD : petites armures animées (bronze/sombre/verte), barbares guerriers (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
     - Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
-    - IA installe désormais automatiquement les fichiers sons du jeu dans la langue du jeu. Une <a href="#forcelanguage">variable<a> définie dans le fichier *infinityanimations-config-default.ini* permet toutefois de forcer la langue par défaut de ces fichiers.
+    - Infinity Animations installe désormais automatiquement les fichiers son des créatures dans la langue du jeu. Une <a href="#forcelanguage">variable<a> définie dans le fichier *infinityanimations-config-default.ini* permet toutefois de forcer la langue par défaut de ces fichiers.
 <br><br>
 
 &#9755; <ins>b. Refonte générale</ins>

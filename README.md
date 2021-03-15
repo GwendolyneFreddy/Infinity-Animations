@@ -62,7 +62,8 @@ Finally, this mod contains optional components that implement many new animation
 - Adds custom game animations for characters and creatures (including dragons)
 - Allows use of many different animation *types* (some never before seen in the games)
 - Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts
-- Harmonizes animations names in all games to avoid conflicts with EE games
+- Harmonizes animations names in all games to avoid conflicts with EE games. For more details, please read <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_animations_ref_chart.html">Infinity Animations Reference Chart</a>
+- As of version 6.0.0, automatically install creature sound clips accordingly to the game language localization
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
 <div align="right"><a href="#top">Back to top</a></div>
@@ -223,7 +224,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_force_soundset</strong></td>
-		<td><a name="forcelanguage" id="forcelanguage"></a><ins>All IA Content sound clips</ins>: Infinity Animations automatically install sound clips accordingly to the game language localization. However it is possible to bypass this behaviour by setting this variable to 1. For example:<br><br>
+		<td><a name="forcelanguage" id="forcelanguage"></a><ins>All IA Content sound clips</ins>: Infinity Animations automatically install creatures sound clips accordingly to the game language localization. However it is possible to bypass this behaviour by setting this variable to 1. For example:<br><br>
 		- You play a French game and Infinity Animations is installed in French ==> French soundsets are installed.<br>
 		- You play a French game and Infinity Animations is installed in English ==> French soundsets are installed if ia_force_soundset = 0.<br>
 		- You play a French game and Infinity Animations is installed in English ==> English soundsets are installed if ia_force_soundset = 1.<br><br>
@@ -795,10 +796,10 @@ This component patches any changed creature animation in saved games to prevent 
 
 - <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).
 - Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: ...
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: Huge thanks for his invaluable contribution to this update (*ps_recursive_copy.tpa* library, better bam compressing process, executable patch update...) and for having completely rewritten IA Reference Picker tool.
 - <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his `FIND_FREE_ANIM_SLOT` WeiDU function (*a7_functions.tpa* library) to automatically install new animation slots in EE games.
 - <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a>: thanks for providing his *Infinity Sounds* project mod code resolving soundsets creature animation conflicts.
-- Modders: <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.
+- Modders: <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.
 - French translation: <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> (<a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading).
 - Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading French translation and for his contribution with fixing a few missing EE animations.
 
@@ -864,7 +865,7 @@ This component patches any changed creature animation in saved games to prevent 
     - IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
     - IA IWD content: Animated Plate small (bronze, dark, green), Barbarian warrior (tan, red, brown), Creeping Doom, Drowned Dead, Elemental (Earth, Fire, Water), Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
     - IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
-    - IA now automatically installs sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in *infinityanimations-config-default.ini* file gives the choice to bypass the default soundset language.
+    - Infinity Animations now automatically installs creatures sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in *infinityanimations-config-default.ini* file gives the choice to bypass the default soundset language.
 <br><br>
 
 &#9755; <ins>b. General overhaul and re-looking</ins>
