@@ -13,12 +13,13 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [ ] Arrays: fill all unknown creature mods references
 - [x] Check WRITE_LONG 0x28 ID values
 - [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
+- [x] Fix Ellesime White-Haired\3aag2.bam <a ref="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/?p=490477">red hair color</a>
 
 ## 
 
 #### All components: new improvements
 
-- [ ] Dynamically build exclusion arrays specific to the player's modded game: t-exc-cre (diffucult to build because components specific, but why not?), t-exc-scim (scimitars exclusion: easy), t-exc-shld (shields exclusion: easy) and (wings exclusion: easy).
+- [ ] Dynamically build exclusion arrays specific to the player's modded game: t-exc-cre (difficult to build because components specific, but why not?), t-exc-scim (scimitars exclusion: easy), t-exc-shld (shields exclusion: easy) and (wings exclusion: easy).
 
 
 ## 
@@ -49,6 +50,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 - [ ] <ins>*Erinyes get wings and elf animations*</ins>: write a better 1pp compatibility?
 - [ ] Which demons might get the EE FIEND_RED animation (new ee_tob content)?
+- [ ] <a ref="http://www.shsforums.net/topic/54604-erinyes-causing-an-assertion-error/">Erinyes bug causing crash</a>: could not reproduce it...
 
 ## 
 
