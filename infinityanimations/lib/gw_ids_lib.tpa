@@ -23,7 +23,7 @@ BEGIN
 			LPM ~gw_sort_hex_ids~
 		BUT_ONLY
 
-		COPY ".../infinityanimations-inline/blank" ~override/%ids%.ids~
+		COPY ".../infinityanimations-inlined/blank" ~override/%ids%.ids~
 			LPM ~gw_rewrite_hex_ids~
 
 	END
@@ -144,12 +144,12 @@ BEGIN
 			LPM ~gw_sort_aniwksnd_2da~
 		BUT_ONLY
 
-		<<<<<<<< .../infinityanimations-inline/aniwksnd.2da
+		<<<<<<<< .../infinityanimations-inlined/aniwksnd.2da
 2DA V1.0
 *
 ID      ANIMATION                    WALK_SOUND  WALK_NUM
 >>>>>>>>
-		COPY ~.../infinityanimations-inline/aniwksnd.2da~ ~override/aniwksnd.2da~
+		COPY ~.../infinityanimations-inlined/aniwksnd.2da~ ~override/aniwksnd.2da~
 			LPM ~gw_rewrite_aniwksnd_2da~
 
 	END

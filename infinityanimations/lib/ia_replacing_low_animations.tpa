@@ -22,7 +22,7 @@ COPY ~.../infinityanimations-inlined/t-low_fix.log~   ~infinityanimations/log~
 /* ==================== *
  *  Defines Exclusions  *
  * ==================== */
-OUTER_SPRINT t-exc ~bpdric01 bpdrif01 bpdrif02 bpdrifm1 bugarch bugbear cbbgber cbbgber1 cbbgber2 cbbgbera cbbgberb cbbgberc cbbgberd cbbgberw cbbgberx cbbgbery cbbgberz cbdrifal cbdrifml cbdrifsl cbdrimml cbdrimsl tcbugb01 tcbugb02 tcgrell ~
+OUTER_SPRINT t-exc-cre ~bpdric01 bpdrif01 bpdrif02 bpdrifm1 bugarch bugbear cbbgber cbbgber1 cbbgber2 cbbgbera cbbgberb cbbgberc cbbgberd cbbgberw cbbgberx cbbgbery cbbgberz cbdrifal cbdrifml cbdrifsl cbdrimml cbdrimsl tcbugb01 tcbugb02 tcgrell ~
 
 
 /* ========= *
@@ -46,7 +46,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
                   ((t-old > 0x520f) AND (t-old < 0x5213)) OR   // MAGE_FEMALE_xxx_LOW
                   ((t-old > 0x52ff) AND (t-old < 0x5304)) OR   // THIEF_MALE_xxx_LOW
                   ((t-old > 0x530f) AND (t-old < 0x5314))) AND // THIEF_FEMALE_xxx_LOW
-                  (~%t-exc%~ STRING_CONTAINS_REGEXP ~%sr% ~ = 1) BEGIN
+                  (~%t-exc-cre%~ STRING_CONTAINS_REGEXP ~%sr% ~ = 1) BEGIN
 			// These CREs need fixing because of hosed slots
 			PATCH_IF (~c6bruen c6bruen2 cor jolus p#seas1 p#seasn tirthold ~ STRING_CONTAINS_REGEXP ~%sr% ~ = 0) BEGIN
 				PATCH_INCLUDE ~infinityanimations/lib/t-cre_fixer.tpp~
