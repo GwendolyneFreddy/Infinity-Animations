@@ -401,8 +401,8 @@ bg1_character_animations sub-folder.~
  *  gw_functions_ee.tpa  *
  * --------------------- */
 @1100 = ~  ==> %countf% specific EE missing %folder% animation file(s) installed.~
-@1101 = ~  ==> %countf% IE missing %folder% animation file(s) installed.~
-@1102 = ~  ==> %countf% IA missing %folder% animation file(s) installed.~
+@1101 = ~  ==> %countf% IE %folder% animation missing file(s) installed.~
+@1102 = ~  ==> %countf% IA %folder% animation missing file(s) installed.~
 
 @1121 = ~  ==> Animation %inifile% ini file installed as 0x%GW_nv_ini%.ini~
 @1122 = ~  ==> Animation %inifile% ini file not installed.~
