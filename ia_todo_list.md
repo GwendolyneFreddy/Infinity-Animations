@@ -15,8 +15,8 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
 - [ ] Fix Ellesime White-Haired\3aag2.bam <a ref="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/?p=490477">red hair color</a>
 - [ ] Check ABISHAI_BLACK bam files (classic and EE games versions seem to be different).
-- [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x2300 DEATH_KNIGHT, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Add missing localized sound clips (2021.03.25)
-- [x] 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Add missing localized sound clips (2021.03.26)
+- [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Add missing localized sound clips (2021.03.25)
+- [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Add missing localized sound clips (2021.03.26)
 
 ## 
 
@@ -32,7 +32,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [ ] <ins>All components<_ins>: list all EE games specific creatures that need to be patched
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
 - [ ] <ins>IA Reference Picker documentation</ins>: update animation types description.
-- [ ] <ins>Main component</ins>: force iwd_lizard_man animation files? (pure cosmetics :wink:)
+- [ ] <ins>Main component</ins>: force iwd_lizard_man animation files installation? (pure cosmetics: remove useless mirrored direction in files. :wink:)
 
 ## 
 
