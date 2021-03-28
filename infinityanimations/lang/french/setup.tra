@@ -87,7 +87,8 @@ Assurez-vous que vous avez bien installe le patch 26498 pour ToB !~
 @18   = ~Modification des fichiers IDS...~
 @19   = ~Mise a jour des scripts et des dialogues...~
 @20   = ~Retablissement des animations de BG2 ecrasees par d'autres mods...~
-@21   = ~Copie des nouvelles animations dans le jeu (veuillez patienter)...~
+@21   = ~Copie des nouvelles animations dans le jeu (veuillez patienter)...
+-------------------------------------------------------------------~
 @22   = ~Resolution des conflits entre soundsets d'animations de creatures...~
 @23   = ~Correction des animations des creatures...~
 @24   = ~Correction des armes portees par les creatures...~
@@ -370,7 +371,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 	ia_fiends_genies = %ia_fiends_genies%
 	ia_iwd = %ia_iwd%
 	ia_iwd_svirfneblin = %ia_iwd_svirfneblin%
-	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised%%ee_file%
+	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised_ee%
 	ia_nwn_01_modron = %ia_nwn_01_modron%
 	ia_nwn_misc_1 = %ia_nwn_misc_1%
 	ia_pst_abishai = %ia_pst_abishai%
@@ -396,12 +397,14 @@ contient bien le sous-repertoire bg1_character_animations.~
 @1045 = ~  ==> Contenu du repertoire %iacontent% (#%archives%) installe dans le repertoire override : %Count% fichiers copies.~
 
 @1051 = ~Ce composant a besoin du contenu %IA_content% : Infinity Animations va l'installer.~
+@1052 = ~Restauration des fichiers son traduits dans les jeux EE.
+--------------------------------------------------------~
 
 @1061 = ~Fichiers sons wav detectes (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
 @1062 = ~Fichiers son specifiques a l'animation detectes~
 @1063 = ~Aucun fichier son specifique a l'animation n'a ete detecte.~
-@1064 = ~Repertoire de fichiers sons trouve = %sounds_folder%~
-@1065 = ~  ==> Repertoire de fichiers sons a installer = %sounds_folder%~
+@1064 = ~Repertoire de fichiers son trouve = %sounds_folder%~
+@1065 = ~  ==> Repertoire de fichiers son a installer = %sounds_folder%~
 @1066 = ~TRAITEMENT AUDIO = %audio% - ParentDir = %sounds_rep% - %ParentDir%~
 @1067 = ~NOUVEAU REPERTOIRE A TRAITER - dirfrom = %dirfrom% ==> %dirC%~
 

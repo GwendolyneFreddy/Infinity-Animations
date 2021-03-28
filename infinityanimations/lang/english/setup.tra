@@ -83,7 +83,8 @@ infinityanimations/archives folder.~
 @18   = ~Patching IDS files...~
 @19   = ~Updating scripts and dialogs files...~
 @20   = ~Restoring previously overwritten BG2 animations...~
-@21   = ~Copying new animations to the game (this may take a while)...~
+@21   = ~Copying new animations to the game (this may take a while)...
+-------------------------------------------------------------~
 @22   = ~Resolving soundsets creature animation conflicts.~
 @23   = ~Correcting creature animations...~
 @24   = ~Correcting creature weapons animations...~
@@ -362,7 +363,7 @@ bg1_character_animations sub-folder.~
 	ia_fiends_genies = %ia_fiends_genies%
 	ia_iwd = %ia_iwd%
 	ia_iwd_svirfneblin = %ia_iwd_svirfneblin%
-	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised%%ee_file%
+	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised_ee%
 	ia_nwn_01_modron = %ia_nwn_01_modron%
 	ia_nwn_misc_1 = %ia_nwn_misc_1%
 	ia_pst_abishai = %ia_pst_abishai%
@@ -388,6 +389,8 @@ bg1_character_animations sub-folder.~
 @1045 = ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files.~
 
 @1051 = ~%IA_content% content needed by this component is missing: Infinity Animations will force its installation.~
+@1052 = ~Restoring missing EE localized sound clips.
+-------------------------------------------~
 
 @1061 = ~wav sound clips detected (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
 @1062 = ~Sound clips relative to the animation have been detected.~

@@ -229,7 +229,7 @@ Creature  Item      Slot   Issue
 	ia_fiends_genies = %ia_fiends_genies%
 	ia_iwd = %ia_iwd%
 	ia_iwd_svirfneblin = %ia_iwd_svirfneblin%
-	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised%%ee_file%
+	ia_moinesse_edits_iaised%ee_file% = %ia_moinesse_edits_iaised_ee%
 	ia_nwn_01_modron = %ia_nwn_01_modron%
 	ia_nwn_misc_1 = %ia_nwn_misc_1%
 	ia_pst_abishai = %ia_pst_abishai%
