@@ -17,6 +17,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [ ] Check ABISHAI_BLACK bam files (classic and EE games versions seem to be different).
 - [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Add missing localized sound clips (2021.03.25)
 - [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Add missing localized sound clips (2021.03.26)
+- [x] Resolve the f.....g mess with black dragon sound clips and ini files, different and buggy in EE games (2021.03.27)
 
 ## 
 
@@ -121,7 +122,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [ ] Why asking for each saved game?
 - [ ] Externalize t-bg1gam macro?
 - [ ] What about distinctive CLERIC_FEMALE_DWARF, FEMALE_DWARF, MAGE_FEMALE_DWARFand THIEF_FEMALE_DWARF animations?
-- [ ] The following bof has never been reported, but should be fixed: it crashes the game if BG1 Animations for NPCs and Exported PCs components are not installed.
+- [ ] The following bug has never been reported, but should be fixed: it crashes the game if BG1 Animations for NPCs and Exported PCs components are not installed.
    1. Change its requirements?
    2. Force its installation if either one of the above components is installed?
 
