@@ -77,7 +77,7 @@
 			<li>Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).</li>
 			<li>Permet d'utiliser de nombreux <em>types</em> d'animation (dont certains n'ont jamais été vus dans les jeux).</li>
 			<li>Résout les problèmes d'empilement d'animations et les conflits de slots, de désignation et de jeux de sons des animations de créature.</li>
-			<li>Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE. Pour plus de détails, veuillez consulter la <a href="ia_animations_ref_chart.html">table de références des animations</a>.</li>
+			<li>Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE. Pour plus de détails, veuillez consulter la <a href="ia_animations_ref_chart.html">table de références des animations d'Infinity Animations</a>.</li>
 			<li>À partir de la version 6.0.0, installe automatiquement les fichiers son des créatures dans la langue du jeu.</li>
 			<li>Fournit un utilitaire <acronym title="Graphical User Interface">GUI</acronym> [<em>NdT : interface graphique</em>] pour vous aider à ajouter de nouvelles animations dans le jeu.</li>
 			<li>Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;</li>
@@ -137,7 +137,7 @@
 			&#10173; Bien qu'il ne soit pas requis pour faire correctement tourner Infinity Animations, nous recommandons fortement aux joueurs de ToB original de télécharger et d'installer la dernière version du <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> avant d'installer ce mod.
 		</p><br>
 		<p>
-			Dans un monde parfait, Infinity Animations devrait être installé comme un fixpack qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
+			Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
 		</p>
 		<p>
 			En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
@@ -148,7 +148,7 @@
 		</ul><br>
 
 		<p>
-			<strong><span style="color: #781808;">&#9755;</span></strong> &#9888;&#65039; Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
+			<strong><span style="color: #781808;">&#9755;</span></strong> &#9888;&#65039; Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Notes pour moddeurs</a> qui les guidera à travers toutes les étapes nécessaires.
 		</p><br>
 
 
@@ -327,7 +327,7 @@
 		</p>
 		<p>
 			Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation les installera automatiquement s'ils sont présents dans le répertoire &#x1F4C1; archives. Sinon, il vous préviendra de leur absence. Vous pourrez alors quitter le programme, les extraire dans le répertoire du mod et relancer la procédure d'installation.<br>
-			Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous avertira de leur absence et vous demandera de les extraire avant d'installer le composant.
+			Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirfneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous avertira de leur absence et vous demandera de les extraire avant d'installer le composant.
 		</p>
 
 		<p>
@@ -1004,7 +1004,7 @@
 <!-- ================== C o m p o n e n t   4 8 0 ================== -->
 
 		<a name="480" id="480"></a>
-		<h2><span class="com">[480-490]</span>Animations de svirneblins</h2>
+		<h2><span class="com">[480-490]</span>Animations de svirfneblins</h2>
 
 		<p>
 			<em><span style="margin-left: 140px; font-variant:small-caps;">Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</span></em><br><br>
@@ -2167,6 +2167,7 @@
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-8%;">Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replacing_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correcting_creature animations.tpa</em>, <em>ia_correcting_weapon_animations.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (<em>t-aniwksnd.tpa</em>) et résout les conflits entre soundsets d'animations de créatures (<em>ia_soundsets_conflicts.tpa</em>).</li>
+				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em> : correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. &#x1F621;</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la nouvelle option d'installation <em>ia_sort_ids</em> (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. &#128521;</li>
@@ -2251,7 +2252,7 @@
 				<li style="margin-left:-4%; margin-right:-6%;">Variable tutu : ajout de la variable manquante " <em>%tutu_var%</em> " pour le fichier andars (BG1).</li>
 			  </ul><br>
 
-			<li><span style="color: #781808;">[480-490] Animations de svirneblins</span> (t-svirfneblin.tpa)</li>
+			<li><span style="color: #781808;">[480-490] Animations de svirfneblins</span> (t-svirfneblin.tpa)</li>
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-6%;">Utilisation d'une nouvelle variable "<em>%t-svi%</em>" dans une routine unique pour les deux sous-composants.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Correction de noms de fichiers son mal orthographiés ("<em>t_sva</em>" et "<em>t_svn</em>" replacés par "<em>t-sva</em>" et "<em>t-svn</em>").</li>

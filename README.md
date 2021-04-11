@@ -106,7 +106,7 @@ While waiting for this marvelous day, here is the recommended installation order
 - Please install Infinity Animations before 1PP, EET_end, and any final "biffing" routines.
 
 
-&#9755; :warning: Modders who wish to make their mods compatible with Infinity Animations are strongly recommended to read the <a href="ia_notes-for-modders-english.html">IA Note for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
+&#9755; :warning: Modders who wish to make their mods compatible with Infinity Animations are strongly recommended to read the <a href="ia_notes-for-modders-english.html">IA Notes for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
 
 ## 
 
@@ -212,7 +212,7 @@ Each line consists of an installation option, then '=', then a number. The only 
 The installation process will read both ini files and prioritize user's options values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation failure will be prevented by reverting it back to its *default* value.
 
 If you want to install a component requiring files that you have decided not to install, the installer will install them automatically if there are still in the :file_folder: archives folder. Otherwise, it will warn you. In this case, you will have to exit the installer, extract them in your mod folder, and rerun the installer.<br>
-Following the above example, if you indeed wish the svirneblins get the svirneblins animations after having set ia_iwd_svirfneblin option to 0, the installer will force their installation if it finds them in :file_folder: archives folder. If not, it will warn you to extract them before installing the component.
+Following the above example, if you indeed wish the svirfneblins get the svirfneblins animations after having set ia_iwd_svirfneblin option to 0, the installer will force their installation if it finds them in :file_folder: archives folder. If not, it will warn you to extract them before installing the component.
 
 Here is a chart listing the options related to the installation process:</br></br>
 
@@ -413,7 +413,7 @@ The installer includes the following components. The number of each is the compo
 ><span style="margin-left: 50px;"><a href="#400">[400] Distinctive Undead</a></span></br>
 ><span style="margin-left: 50px;"><a href="#410">[410-415-420] Skeleton Warriors</a></span></br>
 ><span style="margin-left: 50px;"><a href="#450">[450-455-460] Seer Animation</a></span></br>
-><span style="margin-left: 50px;"><a href="#480">[480-490] Svirneblins Animations</a></span></br>
+><span style="margin-left: 50px;"><a href="#480">[480-490] Svirfneblins Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#500">[500] More Base Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#550">[550] More Icewind Dale Animations</a></span></br>
 ><span style="margin-left: 50px;"><a href="#600">[600] More Icewind Dale II Animations</a></span></br>
@@ -590,7 +590,7 @@ This component assigns the IWD Seer animation to some beggars and slaves.
 
 ## 
 
-<a name="480" id="480"></a>&#10173; **[480-490] Svirneblins Animations**<br>
+<a name="480" id="480"></a>&#10173; **[480-490] Svirfneblins Animations**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Animations only<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Animations and sounds
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Skipped if Aurora's Shoes installed (does the same thing)</em><br><br>
@@ -909,6 +909,7 @@ This component patches any changed creature animation in saved games to prevent 
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
     - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*, *ia_correcting_weapon_animations.tpa*). :wink:
     - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
+    - *t-animate.tpa*: Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
     - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - Added new *ia_sort_ids* installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. :wink:

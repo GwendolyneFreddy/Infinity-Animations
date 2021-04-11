@@ -26,17 +26,17 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 	 *    Determines which game is installed.    *
 	 * ----------------------------------------- */
 
-	OUTER_SET is_tutu    = (GAME_IS ~tutu tutu_totsc~) ? 1 : 0                             // tutu
-	OUTER_SET is_bgt     = (GAME_IS ~bgt~) ? 1 : 0                                         // bgt
-	OUTER_SET is_tob     = (GAME_IS ~tob ca~ AND (is_tutu = 0 ) AND (is_bgt = 0)) ? 1 : 0  // based on classical ToB standalone
+	OUTER_SET is_tutu    = (GAME_IS ~tutu tutu_totsc~) ? 1 : 0                            // tutu
+	OUTER_SET is_bgt     = (GAME_IS ~bgt~) ? 1 : 0                                        // bgt
+	OUTER_SET is_tob     = (GAME_IS ~tob ca~ AND (is_tutu = 0) AND (is_bgt = 0)) ? 1 : 0  // based on classical ToB standalone
 
-	OUTER_SET is_bgee    = (GAME_IS "bgee" AND NOT GAME_INCLUDES ~sod~) ? 1 : 0            // bgee without SoD
-	OUTER_SET is_sod     = (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) ? 1 : 0                // SoD
-	OUTER_SET is_bg2ee   = (GAME_IS "bg2ee") ? 1 : 0                                       // b2gee
-	OUTER_SET is_iwdee   = (GAME_IS "iwdee") ? 1 : 0                                       // iwdee
-	OUTER_SET is_eet     = (GAME_IS "eet") ? 1 : 0                                         // eet
-	OUTER_SET is_ee      = (GAME_IS "bgee bg2ee iwdee eet") ? 1 : 0                        // based on EE games, except PSTEE
-	OUTER_SET is_classic = (is_ee = 0) ? 1 : 0                                             // based classic games
+	OUTER_SET is_bgee    = (GAME_IS "bgee" AND NOT GAME_INCLUDES ~sod~) ? 1 : 0           // bgee without SoD
+	OUTER_SET is_sod     = (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) ? 1 : 0               // SoD
+	OUTER_SET is_bg2ee   = (GAME_IS "bg2ee") ? 1 : 0                                      // b2gee
+	OUTER_SET is_iwdee   = (GAME_IS "iwdee") ? 1 : 0                                      // iwdee
+	OUTER_SET is_eet     = (GAME_IS "eet") ? 1 : 0                                        // eet
+	OUTER_SET is_ee      = (GAME_IS "bgee bg2ee iwdee eet") ? 1 : 0                       // based on EE games, except PSTEE
+	OUTER_SET is_classic = (is_ee = 0) ? 1 : 0                                            // based classic games
 
 
 	/* ------------------------------- *
@@ -79,18 +79,19 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 	 *    Detects other mods    *
 	 * ------------------------ */
 
-	OUTER_SET is_tobex     = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0
-	OUTER_SET is_bh        = (FILE_EXISTS_IN_GAME ~bhlizkng.cre~)
-	OUTER_SET is_ctb       = (FILE_EXISTS_IN_GAME ~cbbgbera.cre~)
-	OUTER_SET is_drizzt    = (FILE_EXISTS_IN_GAME ~f_bel.cre~)
-	OUTER_SET is_nej       = (FILE_EXISTS_IN_GAME ~doomguar.cre~) //giantfs
-	OUTER_SET is_ps        = (FILE_EXISTS_IN_GAME ~pslady.cre~)
-	OUTER_SET is_rot       = (FILE_EXISTS_IN_GAME ~brefr1.cre~)
-	OUTER_SET is_sheena    = (FILE_EXISTS_IN_GAME ~k#polys.spl~)
-	OUTER_SET is_sos       = (FILE_EXISTS_IN_GAME ~cbssyeti.cre~)
-	OUTER_SET is_tdd       = (FILE_EXISTS_IN_GAME ~ddfrost1.cre~)
-	OUTER_SET is_ts        = (FILE_EXISTS_IN_GAME ~purang.cre~)
-	OUTER_SET is_rpgkit    = (FILE_EXISTS_IN_GAME ~s#crow.cre~)
+	OUTER_SET is_tobex       = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0
+	OUTER_SET is_bh          = (FILE_EXISTS_IN_GAME ~bhlizkng.cre~) ? 1 : 0
+	OUTER_SET is_ctb         = (FILE_EXISTS_IN_GAME ~cbbgbera.cre~) ? 1 : 0
+	OUTER_SET is_drizzt      = (FILE_EXISTS_IN_GAME ~f_bel.cre~) ? 1 : 0
+	OUTER_SET is_nej         = (FILE_EXISTS_IN_GAME ~doomguar.cre~) ? 1 : 0 //giantfs
+	OUTER_SET is_ps          = (FILE_EXISTS_IN_GAME ~pslady.cre~) ? 1 : 0
+	OUTER_SET is_rot         = (FILE_EXISTS_IN_GAME ~brefr1.cre~) ? 1 : 0
+	OUTER_SET is_sheena      = (FILE_EXISTS_IN_GAME ~k#polys.spl~) ? 1 : 0
+	OUTER_SET is_sos         = (FILE_EXISTS_IN_GAME ~cbssyeti.cre~) ? 1 : 0
+	OUTER_SET is_tdd         = (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) ? 1 : 0
+	OUTER_SET is_ts          = (FILE_EXISTS_IN_GAME ~purang.cre~) ? 1 : 0
+	OUTER_SET is_rpgkit      = (FILE_EXISTS_IN_GAME ~s#crow.cre~) ? 1 : 0
+	OUTER_SET is_bwp_fixpack = ((FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x6621~) = 1) AND (FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x7D04~) = 1)) ? 1 : 0 // 0x6621 FIGHTER_FEMALE_HUMAN_BG1 - 0x7D04 HARLOT_FIGHTER ou RESOURCE_CONTAINS
 /* Mod checks: BP (looking for TUNDRA_YETI animation)
 // ------------------------------------------------------------------------------
 LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/iwd" ChildDirRegex = "iwd_tundra_yeti" FileRegex = "^3daa1.bam$" RET F_Exists = Count END

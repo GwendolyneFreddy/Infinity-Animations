@@ -61,7 +61,7 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 - Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).
 - Permet d'utiliser de nombreux *types* d'animation (dont certains n'ont jamais été vus dans les jeux).
 - Résout les problèmes d'empilement d'animation et les conflits de slots, de désignation et de jeux de sons des animations de créature.
-- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE. Pour plus de détails, veuillez consulter la <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_animations_ref_chart.html">table de références des animations</a>.
+- Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE. Pour plus de détails, veuillez consulter la <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_animations_ref_chart.html">table de références des animations d'Infinity Animations</a>.
 - À partir de la version 6.0.0, installe automatiquement les fichiers son des créatures dans la langue du jeu.
 - Fournit un utilitaire GUI[*NdT : interface graphique*] pour vous aider à ajouter de nouvelles animations dans le jeu.
 - Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;
@@ -98,14 +98,14 @@ Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.s
 
 >Bien qu'il ne soit pas requis pour faire correctement tourner Infinity Animations, nous recommandons fortement aux joueurs de ToB original de télécharger et d'installer la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> avant d'installer ce mod.</br>
 
-Dans un monde parfait, Infinity Animations devrait être installé comme un fixpack qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
+Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
 
 En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
 - Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
 - Veuillez installer Infinity Animations avant 1PP, EET_end et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
 
 
-&#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Note for modders</a> qui les guidera à travers toutes les étapes nécessaires.
+&#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Notes pour moddeurs</a> qui les guidera à travers toutes les étapes nécessaires.
 
 ## 
 
@@ -213,7 +213,7 @@ Chaque ligne de ce fichier comprend une option d'installation, suivie de « = »
 Le programme d'installation lira les valeurs des options dans les deux fichiers ini et donnera la priorité aux vôtres. Si le fichier infinityanimations-config-user.ini contient une valeur d'option non conforme, ou si une option est manquante, il la remplacera par sa valeur par défaut (celle correspondant à l'installation « _standard_ »)
 
 Si vous décidez d'installer un composant nécessitant des fichiers que vous avez choisi de ne pas installer, le programme d'installation les installera automatiquement s'ils sont présents dans le répertoire :file_folder: archives. Sinon, il vous préviendra de leur absence. Vous pourrez alors quitter le programme, les extraire dans le répertoire du mod et relancer la procédure d'installation.<br>
-Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous avertira de leur absence et vous demandera de les extraire avant d'installer le composant.
+Dans l'exemple précédent, si vous souhaitez finalement attribuer aux gnomes des profondeurs les animations de svirfneblins alors que vous avez modifié la valeur de l'option ia_iwd_svirfneblin en 0, le programme d'installation forcera leur installation si elles sont présentes dans le répertoire &#x1F4C1; archives. Sinon, il vous avertira de leur absence et vous demandera de les extraire avant d'installer le composant.
 
 Voici le tableau des options concernées :</br></br>
 
@@ -588,7 +588,7 @@ Ce composant attribue l'animation de pauvre hère (IWD) à certains mendiants et
 
 ## 
 
-<a name="480" id="480"></a>&#10173; **[480-490] Animations de svirneblins**<br>
+<a name="480" id="480"></a>&#10173; **[480-490] Animations de svirfneblins**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[480]** Seulement les animations.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[490]** Les animations et les sons.
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Pas proposé si le mod Aurora's Shoes and Boots est installé (car il fait la même chose).</em><br><br>
@@ -603,7 +603,7 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 Ce composant attribue à certaines créatures des animations basiques différenciées :
 - Attribue aux histachii l'animation d'histachii d'IWD.
 - Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
-- Attribue aucx chamans homme-lézards l'animation d'homme-lézard vert.
+- Attribue aux chamans homme-lézards l'animation d'homme-lézard vert.
 - Attribue aux chefs hommes-lézards l'animation de roi homme-lézard.
 - Attribue aux différentes espèces de trolls leur animation appropriée (normale, bleue, des glaces, des neiges, petite).
 - Attribue aux anciens ombres des roches l'animation d'ombre des roches anciens d'IWD.
@@ -907,6 +907,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
    - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*;*ia_correcting_weapon_animations.tpa*). :wink:
     - Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (*t-aniwksnd.tpa*) et résout les conflits entre soundsets d'animations de créatures (*ia_soundsets_conflicts.tpa*).
+    - *t-animate.tpa* : correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. :rage:
     - Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.
     - Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.
     - Ajout de la nouvelle option d'installation *ia_sort_ids* (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. : wink
@@ -957,7 +958,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
     - Quelques créatures ont été déplacées de la liste mendiants à la liste esclaves (slslav01, udilsla1, udilsla3, udslv02, udvicti2, udvicti3, udvicti4, udvictim).
     - Correction : les listes de créatures à modifier des sous-composants « *Pour certains mendiants et esclaves* » et « *Pour certains mendiants* » étaient interverties. &#128541;
     - Variable tutu : ajout de la variable manquante " *%tutu_var%* " pour le fichier andars (BG1).
-- [480-490] Animations de svirneblins (t-svirfneblin.tpa)
+- [480-490] Animations de svirfneblins (t-svirfneblin.tpa)
     - Utilisation d'une nouvelle variable "*%t-svi%*" dans une routine unique pour les deux sous-composants.
     - Correction de noms de fichiers son mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
 - [500] Plus d'animations de base (t-baseanims.tpa)
