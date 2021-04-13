@@ -9,13 +9,13 @@
  *      - Variables needed for installation are read from infinityanimations-config-default.ini or infinityanimations-config-user.ini files.                                           *
  *        The previous version interrupted installation when IA content was missing, asked for downloading them and to reinstall the mod. As of v6.0.0, those controls set during      *
  *        installation have been moved into infinityanimations-config-default.ini file in infinityanimations folder. This file provides a standard installation. If players want to    *
- *        define their own customized installation, they have to modify the variables in infinityanimations-config-default.ini and save it as infinityanimations-config-user.ini. The  *
+ *        The define their own customized installation, they have to modify the variables in infinityanimations-config-default.ini and save it as infinityanimations-config-user.ini.  *
  *        installation process will read both .ini files and prioritize user values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation       *
  *        failure will be prevented by reverting it back to its default value.                                                                                                         *
  *      - Modified animations namespaces, now compatible with non-Western code pages: got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western  *
  *        code page was detected (#50).                                                                                                                                                *
- *      - Added new Correcting creature weapons animations routine that patches vanilla creature files with new cloned weapons compatible with their animations (#414).                *
- *      - ToBEx compatibility: checks for ToBEx external walking sound files (#192) and resolves soundsets creature animation conflicts (#401).                                        *
+ *      - ToBEx compatibility: checks for ToBEx external walking sound files (#192) and resolves soundsets creature animation conflicts (#403).                                        *
+ *      - Added new Correct creature weapons animations routine that patches vanilla creature files with new cloned weapons compatible with their animations (#416).                   *
  *      - Externalized lists of creatures to be patched into arrays for easier maintenance (gw_ia_correct_arrays.tph library).                                                         *
  *      - Used Gwendolyne's gw_install_archives function to install new animations (any extracted in /archives folder).                                                                *
  *      - Coding simplification:                                                                                                                                                       *
@@ -42,9 +42,9 @@
  *  Restoring previously overwritten BG2 animations    #  368  *
  *  Update .CRE animation offsets                      #  375  *
  *  Copying new animations to the game                 #  382  *
- *  Correcting creature animations                     #  407  *
- *  Correcting creature weapons animations             #  414  *
- *  Items fixes                                        #  421  *
+ *  Correcting creature animations                     #  409  *
+ *  Correcting creature weapons animations             #  416  *
+ *  Items fixes                                        #  423  *
  * ----------------------------------------------------------- */
 
 /* DEPRECATED as of v6.0.0
@@ -168,7 +168,7 @@ END
 PRINT @17 // ~Replacing _LOW creature animations (this may take a while)...~
 SILENT
 
-INCLUDE ~%MOD_FOLDER%/lib/ia_replacing_low_animations.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/ia_replace_low_animations.tpa~
 
 
 /* ==================== *
@@ -392,9 +392,11 @@ ACTION_BASH_FOR ~infinityanimations/content~ ~^.+$~ BEGIN
 	SILENT
 	COPY_LARGE ~%BASH_FOR_FILESPEC%~ ~override~
 END
-VERBOSE*/
+VERBOSE
 
 //LAF ps_recursive_copy INT_VAR WarnOnOverwrite = 2 STR_VAR ParentDir = "infinityanimations/content" DestinationDir = "override" RET Count END
+*/
+
 LAM ~gw_install_archives~
 LAM ~gw_install_modders_content~
 
@@ -407,14 +409,14 @@ INCLUDE ~%MOD_FOLDER%/lib/ia_soundsets_conflicts.tpa~
  *  Correcting creature animations  *
  * ================================ */
 
-INCLUDE ~%MOD_FOLDER%/lib/ia_correcting_creature animations.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/ia_correct_creature animations.tpa~
 
 
 /* ======================================== *
  *  Correcting creature weapons animations  *
  * ======================================== */
 
-INCLUDE ~%MOD_FOLDER%/lib/ia_correcting_weapon_animations.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/ia_correct_weapon_animations.tpa~
 
 
 /* ============= *

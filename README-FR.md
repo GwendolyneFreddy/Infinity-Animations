@@ -88,7 +88,7 @@ Infinity Animations est conçu pour fonctionner sur la plupart des jeux Infinity
 Ce mod est un mod WeiDU et devrait par conséquent être compatible avec n'importe quel mod WeiDU. Bien que nous nous efforcions de rendre Infinity Animations compatible avec le plus grand nombre possible de mods, des incompatibilités risquent toujours de se produire. Voici la liste de celles recensées jusqu'à présent :
 
 - <a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a>
-- ...
+- :warning: Les dernières versions du <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> comportent une foutue régression en écrasant le fichier animate.ids. Elles ajoutent des doublons et des slots d'animation valables uniquement pour les jeux EE. Dommage collatéral, cela corrompt l'installation d'IA. La version v6.0.0 s'efforce de régler ce problème et semble fonctionner. Mais elle n'a pas été testée sur toutes les combinaisons de méga installation possibles. En conséquence, **_permettre au BWP Fixpack d'écraser le fichier animate.ids est à vos risques et périls_**.
 
 Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>, s'il vous plaît.
 
@@ -102,7 +102,7 @@ Dans un monde parfait, Infinity Animations devrait être installé comme un pack
 
 En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
 - Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
-- Veuillez installer Infinity Animations avant 1PP, EET_end et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
+- Veuillez installer Infinity Animations avant 1PP, EET_End et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
 
 
 &#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Notes pour moddeurs</a> qui les guidera à travers toutes les étapes nécessaires.
@@ -411,7 +411,7 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 ><span style="margin-left: 50px;"><a href="#400">[400] Morts-vivants différenciés</a></span></br>
 ><span style="margin-left: 50px;"><a href="#410">[410-415-420] Combattants squelettes</a></span></br>
 ><span style="margin-left: 50px;"><a href="#450">[450-455-460] Animation de pauvre hère</strong> [<em>NdT : seer en anglais</em>].</a></span></br>
-><span style="margin-left: 50px;"><a href="#480">[480-490] Animations de svirneblins</a></span></br>
+><span style="margin-left: 50px;"><a href="#480">[480-490] Animations de svirfneblins</a></span></br>
 ><span style="margin-left: 50px;"><a href="#500">[500] Plus d'animations de base</a></span></br>
 ><span style="margin-left: 50px;"><a href="#550">[550] Plus d'animations d'Icewind Dale</a></span></br>
 ><span style="margin-left: 50px;"><a href="#600">[600] Plus d'animations d'Icewind Dale II</a></span></br>
@@ -905,25 +905,25 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 
 &#9755; <ins>c. Modifications relatives à chaque composant</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
-   - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*;*ia_correcting_weapon_animations.tpa*). :wink:
+   - Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replace_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correct_creature animations.tpa*;*ia_correct_weapon_animations.tpa*). :wink:
     - Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (*t-aniwksnd.tpa*) et résout les conflits entre soundsets d'animations de créatures (*ia_soundsets_conflicts.tpa*).
     - *t-animate.tpa* : correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. :rage:
     - Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.
     - Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.
     - Ajout de la nouvelle option d'installation *ia_sort_ids* (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. : wink
-    - <ins>ia_replacing_low_animations.tpa</ins> :
+    - <ins>ia_replace_low_animations.tpa</ins> :
         - Re-formatage des données du fichier *t-low_fix.log* pour les rendre enfin lisibles.
         - Ne modifie le fichier *t-cre_fixer.log* qu'en cas de besoin.
     - <ins>ia_restore_bg2_animations.tpa</ins> :
         - Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a> et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.
-    - <ins>ia_correcting_creature animations.tpa</ins> :
+    - <ins>ia_correct_creature animations.tpa</ins> :
         - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_correct_arrays.tph*") pour faciliter leur mise à jour.
         - Intégration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes READ_BYTE manquantes de Miloch</a>.
         - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les abishais blanches n'étaient pas patchées).
         - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.
         - Dorénavant, ne corrige les jeux de son des créatures que si la résolution des conflits entre soundsets d'animations de créatures a échoué.
-    - <ins>ia_correcting_weapon_animations.tpa</ins> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équippe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).
+    - <ins>ia_correct_weapon_animations.tpa</ins> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équipe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).
     - .
 - [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.

@@ -122,7 +122,7 @@
 		</p>
 		<ul style="margin-left: 5%;">
 			<li><a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a></li>
-			<li>...</li>
+			<li>&#9888;&#65039; Les dernières versions du <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> comportent une foutue régression en écrasant le fichier animate.ids. Elles ajoutent des doublons et des slots d'animation valables uniquement pour les jeux EE. Dommage collatéral, cela corrompt l'installation d'IA. La version v6.0.0 s'efforce de régler ce problème et semble fonctionner. Mais elle n'a pas été testée sur toutes les combinaisons de méga installation possibles. En conséquence, <strong><em>permettre au BWP Fixpack d'écraser le fichier animate.ids est à vos risques et périls</em></strong>.</li>
 		</ul><br>
 		<p>
 			Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>, s'il vous plaît.
@@ -144,7 +144,7 @@
 		</p>
 		<ul style="margin-left: 5%;">
 			<li>Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
-			<li>Veuillez installer Infinity Animations avant 1PP, EET_end et les procédures finales de « biffing » [<em>NdT : archivage avec Generalized biffing</em>].</li>
+			<li>Veuillez installer Infinity Animations avant 1PP, EET_End et les procédures finales de « biffing » [<em>NdT : archivage avec Generalized biffing</em>].</li>
 		</ul><br>
 
 		<p>
@@ -2165,13 +2165,13 @@
 		  <ul style="width: 90%">
 			<li><span style="color: #781808;">[0] Infinity Animations</span> (t-main.tpa, t-main_ee.tpa)</li>
 			  <ul style="padding-top: 4px">
-				<li style="margin-left:-4%; margin-right:-8%;">Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replacing_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correcting_creature animations.tpa</em>, <em>ia_correcting_weapon_animations.tpa</em>).</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replace_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correct_creature animations.tpa</em>, <em>ia_correct_weapon_animations.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (<em>t-aniwksnd.tpa</em>) et résout les conflits entre soundsets d'animations de créatures (<em>ia_soundsets_conflicts.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em> : correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. &#x1F621;</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la nouvelle option d'installation <em>ia_sort_ids</em> (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. &#128521;</li>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_replacing_low_animations.tpa</em> :</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_replace_low_animations.tpa</em> :</li>
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Re-formatage des données du fichier <em>t-low_fix.log</em> pour les rendre enfin lisibles.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Ne modifie le fichier <em>t-cre_fixer.log</em> qu'en cas de besoin.</li>
@@ -2181,7 +2181,7 @@
 					<li style="margin-left:-8%; margin-right:-8%;">Intégration du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Correctif par Lollorian des goules transformées en golems</a>  et du <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">patch de Lollorian pour les installations non-biffées</a>. Source : <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Correction des bugs des animations de <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">cyclope</a> et de <a href="http://www.shsforums.net/topic/47995-zombie/">zombi jaune</a> qui n'étaient pas réinitialisées en cas de méga-installation.</li>
 				  </ul>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correcting_creature animations.tpa</em> :</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correct_creature animations.tpa</em> :</li>
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie " <em>gw_ia_correct_arrays.tph</em> ") pour faciliter leur mise à jour.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Intégration du <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">patch de correction des commandes <span class="tp2">READ_BYTE</span> manquantes de Miloch</a>.</li>
@@ -2189,7 +2189,7 @@
 					<li style="margin-left:-8%; margin-right:-8%;">Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Dorénavant, ne corrige les jeux de son des créatures que si la résolution des conflits entre soundsets d'animations de créatures a échoué.</li>
 				  </ul>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correcting_weapon_animations.tpa</em> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équippe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correct_weapon_animations.tpa</em> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équipe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).</li>
 			  </ul><br>
 
 			<li><span style="color: #781808;">[25] Correction des animations des humanoïdes</span> (t-humanoid_fixes.tpa)</li>

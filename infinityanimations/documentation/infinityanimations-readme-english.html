@@ -122,7 +122,7 @@
 		</p>
 		<ul style="margin-left: 5%;">
 			<li><a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a></li>
-			<li>...</li>
+			<li>&#9888;&#65039; Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. As result, <strong><em>allowing the BWP Fixpack to overwrite animate.ids is at your own risk</em></strong>.</li>
 		</ul>
 		<p>
 			If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
@@ -145,7 +145,7 @@
 		</p>
 		<ul style="margin-left: 5%;">
 			<li>Please install Infinity Animations after ToBEx, BG2 Fixpack, EET, and mods that add creatures or animations.</li>
-			<li>Please install Infinity Animations before 1PP, EET_end, and any final "biffing" routines.</li>
+			<li>Please install Infinity Animations before 1PP, EET_End, and any final "biffing" routines.</li>
 		</ul><br>
 
 		<p>
@@ -2156,15 +2156,15 @@
 		<h5>&nbsp;<span style="color: #781808;">&#9755;</span>&nbsp;&nbsp; Components specific changes and fixes:</h5>
 
 		  <ul style="width: 90%">
-			<li><span style="color: #781808;">[0] Infinity Animations</span> (t-main.tpa, t-main_ee.tpa)</li>
+			<li><span style="color: #781808;">[0] Infinity Animations main component</span> (t-main.tpa, t-main_ee.tpa)</li>
 			  <ul style="padding-top: 4px">
-				<li style="margin-left:-4%; margin-right:-8%;">Split this huge component into smaller ones for more comfortable readability and maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replacing_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correcting_creature animations.tpa</em>); <em>ia_correcting_weapon_animations.tpa</em>.</li>
+				<li style="margin-left:-4%; margin-right:-8%;">Split this huge component into smaller ones for more comfortable readability and maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replace_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correct_creature animations.tpa</em>); <em>ia_correct_weapon_animations.tpa</em>.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added ToBEx compatibility: checks for ToBEx external walking sound files (<em>t-aniwksnd.tpa</em>) and resolves soundsets creature animation conflicts (<em>ia_soundsets_conflicts.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em>: Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. &#x1F621;</li>
 				<li style="margin-left:-4%; margin-right:-8%;">NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">No longer fixes creature names strref typos (deletes extra spaces and line breaks) if the selected mod language is not the game language.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added new <em>ia_sort_ids</em> installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. &#128521;</li>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_replacing_low_animations.tpa</em> :</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_replace_low_animations.tpa</em> :</li>
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Re-formated <em>t-low_fix.log</em> file entries to be more friendly readable.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Appends <em>t-cre_fixer.log</em> file only if needed.</li>
@@ -2174,7 +2174,7 @@
 					<li style="margin-left:-8%; margin-right:-8%;">Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.</li>
 				  </ul>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correcting_creature animations.tpa</em>:</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correct_creature animations.tpa</em>:</li>
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Externalized lists of creatures to be patched into arrays (built in "<em>gw_ia_correct_arrays.tph</em>" library) for easier maintenance.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Integrated <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">Miloch's missing <span class="tp2">READ_BYTE</span> fix</a>.</li>
@@ -2182,7 +2182,7 @@
 					<li style="margin-left:-8%; margin-right:-8%;">Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">From now on, Tanar'ri, Marilith, Minotaurs and Mind Flayers soundsets are fixed only if resolving soundsets creature animation conflicts has not been successfully installed.</li>
 				  </ul>
-				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correcting_weapon_animations.tpa</em>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).</li>
+				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_correct_weapon_animations.tpa</em>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).</li>
 			  </ul><br>
 
 			<li><span style="color: #781808;">[25] Humanoid Animations Fixes</span> (t-humanoid_fixes.tpa)</li>

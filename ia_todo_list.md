@@ -25,14 +25,14 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### All components: new improvements
 
-- [ ] Dynamically build exclusion arrays specific to the player's modded game: t-exc-cre (difficult to build because components specific, but why not?), t-exc-scim (scimitars exclusion: easy), t-exc-shld (shields exclusion: easy) and (wings exclusion: easy).
+- [ ] Dynamically build exclusion arrays specific to the player's modded game: t-exc-cre (difficult to build because components specific, but why not?), t-exc-scim (scimitars exclusion: easy), t-exc-shld (shields exclusion: easy) and wings exclusion (easy).
 
 
 ## 
 
 #### EE version
 
-- [ ] <ins>All components<_ins>: list all EE games specific creatures that need to be patched
+- [ ] <ins>All components</ins>: list all EE games specific creatures that need to be patched.
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
 - [ ] <ins>IA Reference Picker documentation</ins>: update animation types description.
 - [ ] <ins>Main component</ins>: force iwd_lizard_man animation files installation? (pure cosmetics: remove useless mirrored direction in files. :wink:)
@@ -55,7 +55,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### Distinctive Fiends component [100]
 
-- [ ] <ins>*Erinyes get wings and elf animations*</ins>: write a better 1pp compatibility?
+- [ ] <ins>*Erinyes get wings and elf animations*</ins>: write a better 1pp compatibility code?
 - [ ] Which demons might get the EE FIEND_RED animation (new ee_tob content)?
 - [ ] <a ref="http://www.shsforums.net/topic/54604-erinyes-causing-an-assertion-error/">Erinyes bug causing crash</a>: could not reproduce it...
 

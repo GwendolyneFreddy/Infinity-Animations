@@ -88,8 +88,8 @@ Infinity Animations is designed to work on most Infinity Engine games. This incl
 
 This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. Below are the ones discovered thus far:
 
-- <a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a>
-- ...
+- <a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a>.
+- :warning: Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. As result, _**allowing the BWP Fixpack to overwrite animate.ids is at your own risk**_.
 
 If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
 
@@ -103,7 +103,7 @@ In a perfect world, Infinity Animations would be installed as a data base that w
 
 While waiting for this marvelous day, here is the recommended installation order:
 - Please install Infinity Animations after ToBEx, BG2 Fixpack, EET, and mods that add creatures or animations.
-- Please install Infinity Animations before 1PP, EET_end, and any final "biffing" routines.
+- Please install Infinity Animations before 1PP, EET_End, and any final "biffing" routines.
 
 
 &#9755; :warning: Modders who wish to make their mods compatible with Infinity Animations are strongly recommended to read the <a href="ia_notes-for-modders-english.html">IA Notes for modders</a> which guides them through each step of accomplishing particular modding tasks without breaking compatibility.
@@ -907,25 +907,25 @@ This component patches any changed creature animation in saved games to prevent 
 
 &#9755; <ins>c. Components specific changes and fixes</ins>
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
-    - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replacing_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correcting_creature animations.tpa*, *ia_correcting_weapon_animations.tpa*). :wink:
+    - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replace_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correct_creature animations.tpa*, *ia_correct_weapon_animations.tpa*). :wink:
     - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
     - *t-animate.tpa*: Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
     - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - Added new *ia_sort_ids* installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. :wink:
-    - <ins>ia_replacing_low_animations.tpa</ins>:
+    - <ins>ia_replace_low_animations.tpa</ins>:
         - Re-formated *t-low_fix.log* file entries to be more friendly readable.
         - Appends *t-cre_fixer.log* file only if needed.
     - <ins>ia_restore_bg2_animations.tpa</ins>:
         - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.
-    - <ins>ia_correcting_creature animations.tpa</ins>:
+    - <ins>ia_correct_creature animations.tpa</ins>:
         - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_correct_arrays.tph*" library) for easier maintenance.
         - Integrated <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">Miloch's missing READ_BYTE fix</a>.
         - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (white abishais were not patched).
         - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.
         - From now on, Tanar'ri, Marilith, Minotaurs and Mind Flayers soundsets are fixed only if resolving soundsets creature animation conflicts has not been successfully installed.
-    - <ins>ia_correcting_weapon_animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
+    - <ins>ia_correct_weapon_animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
     - .
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.

@@ -8,10 +8,6 @@ body {
 	margin-bottom: -20px;
 	background: #e3e3db url('../images/shsbkgd.jpg');
 }
-/*1pp	body {
-		margin: 0;
-		padding: 0;
-	}*/
 
 
 /* -------------------- *
@@ -30,10 +26,12 @@ body {
 #header {
 	text-align: center;
 	background: #e5e5e5;
-	border: 1px solid #781808;
+	border: 2px solid #781808;
 	border-top: 5px solid #781808;
 	border-bottom: 5px solid #781808;
 	padding: 5px 0 13px 0;
+border-radius: 4px 4px 4px 5px;
+	box-shadow: 6px 6px 9px rgba(0,0,0,.3);
 }
 #header .about {
 	margin: 7px 0 0 0;
