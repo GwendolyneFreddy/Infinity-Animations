@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/style_ia-rp.css" type="text/css">
+
+	<title>
+		Spellhold Studios - Infinity Animations : Notes pour les moddeurs
+	</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="images/shsweb.ico" rel="icon" type="bmp" />
+  </head>
+
+  <body>
+
+	<script type="module">
+		document.getElementById("latestVersion").innerText = document.getElementById('versionHistory').getElementsByTagName("h6")[0].innerText
+	</script>
+
+	<div id="wrap">
+	<a name="top" id="top"></a>
+
+	  <div id="header">
+		<h1 style="color: #781808;text-shadow: 0.1rem 0.1rem 0.25rem #807559;">Infinity Animations - Notes pour les moddeurs</h1><br>
+
+		<span style="font-style: italic;"><strong>Un mod de Spellhold Studios pour Baldur's Gate II : <acronym title="Trône de Bhaal">ToB</acronym>, Baldur's Gate Trilogy, <acronym title="Baldur's Gate 'To Two'">Tutu</acronym>, Baldur's Gate: Enhanced Edition, Siege of Dragonspear, Baldur's Gate II: Enhanced Edition, Icewind Dale: Enhanced Edition et <acronym title="Enhanced Edition Trilogy">EET</acronym>.</strong></span>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="about">
+			Auteure : Erephine &#8226; Code <acronym title="Weimer Dialogue Utility">WeiDU</acronym> : Miloch, Sam et Gwendolyne
+		</p>
+		<p class="about">
+			<a href="http://www.spellholdstudios.net/ie/infinityanimations">Site internet du mod</a> &#8226; <a href="http://www.shsforums.net/forum/594-infinity-animations/">Forum du mod</a> &#8226; <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Téléchargement</a> &#8226; <a href="https://github.com/SpellholdStudios/Infinity-Animations">GitHub</a> &#8226; <span id="latestVersion"></span>
+		</p>
+		<hr style="margin: 10px 0 10px 0; padding: 0; height: 1px; border: 0; color: #aaa; background-color: #aaa;" />
+
+		<p class="menu">
+			<a href="#about">De quoi s'agit-il ?</a> &#x2B25; <a href="#animate">Fichier ANIMATE.ids</a> &#x2B25; <a href="#adding_classic">Déclarer et ajouter un slot d'animation (jeu classique)</a> &#x2B25; <a href="#adding_ee">Ajouter un slot d'animation (EE)</a> &#x2B25; <a href="#install">Installer les animations dans le jeu</a>
+		</p>
+		<p class="menu" style="margin-top:7px;">
+			<a href="#ref">Utiliser un nouveau slot</a> &#x2B25; <a href="#ref">Mettre à jour les anciens mods</a> &#x2B25; <a href="#version">Historique des versions</a>
+		</p>
+	  </div>
+
+	<div id="maindiv">
+<!-- ========================== A b o u t ========================== -->
+	  <a name="about" id="about"></a>
+	  <div class="content">
+
+		<h2>De quoi s'agit-il ?</h2><br>
+
+		<p>
+			Ce mod modifie le jeu Baldur's Gate II : <acronym title="Trône de Bhaal">ToB</acronym> de façon à ce qu'il dispose d'animations supplémentaires de créatures et de personnages (appelées « slots d'animation » dans ce document [<em>NdT : «&nbsp;emplacements » ou « index »</em>]). Il fonctionne ainsi comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods.
+		</p>
+
+		<p>
+			Ce document est destiné aux moddeurs qui souhaitent rendre leur mod compatible avec Infinity Animations. Il fonctionne comme un tutoriel et s'efforce de vous guider à travers chaque étape nécessaire pour accomplir ces tâches.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; De quoi s'agit-il ?</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================== A n i m a t e ======================== -->
+	  <a name="animate" id="animate"></a>
+	  <div class="content">
+
+		<h2>Fichier ANIMATE.ids</h2><br>
+
+		<p>
+			Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations...
+		</p>
+
+		<p>
+			En attendant ce jour merveilleux, voici la méthode idéale pour vous assurer que les nouvelles animations que vous allez utiliser ou installer ne provoquent aucun problème d'incompatibilité avec les autres mods.
+		</p><br>
+
+		<p>
+			<span style="color: #781808;">&#10173;</span> La première chose à faire est de s'assurer que l'on dispose du bon fichier ANIMATE.ids. Et malheureusement, ce n'est pas aussi simple que ça en a l'air. &#128577;
+		</p><br>
+
+		<p>
+			En effet, de nombreux mods modifient, ou pire encore, écrasent le fichier ANIMATE.ids existant. Résultat des courses : une ombre des roches peut se retrouver avec une animation de cyclope ou de gobelin. Ça fait plutôt désordre, vous ne trouvez pas ?
+		</p>
+
+		<p>
+			Un autre effet pervers des modifications successives du fichier ANIMATE.ids est l'empilement d'animations identiques répertoriées avec un nom ou/et un index différent. Non seulement, ces nouvelles entrées sont redondantes et inutiles, mais elles peuvent provoquer de graves dysfonctionnement dans l'installation de mods qui utilisent la commande <span class="tp2" style="color: #781808;">IDS_OF_SYMBOL (animate ~animation name~)</span> pour assurer leur compatibilité aussi bien avec les jeux classiques que EE.
+		</p>
+
+		<p>
+			C'est pourquoi vous devez respectivement suivre les instructions suivantes pour utiliser des animations non présentes dans le jeu de base :
+		</p>
+		<div class="important" style="font-size: 100%;">
+			<p style ="width: 100%;"><span style="color: #781808;">&#9755;</span> 1. <span style="color: #781808;">Installez le composant principal d'Infinity Animations avant votre mod.</span> Ce dernier harmonise le fichier ANIMATE.ids pour le rendre utilisable par tous les mods et tous les jeux.</p>
+			<p style ="width: 100%;"><span style="color: #781808;">&#9755;</span> 2. <span style="color: #781808;">N'écrasez jamais le fichier ANIMATE.ids.</span></p>
+			<p style ="width: 100%;"><span style="color: #781808;">&#9755;</span> 3. <span style="color: #781808;">Privilégiez la procédure décrite dans les chapitres suivants pour ajouter vos nouvelles animations.</span></p>
+		</div>
+
+		<p>
+			&#x26A0;&#xFE0F; N'oubliez pas que ces consignes s'appliquent aussi au fichier ANISND.ids.
+		</p>
+
+		<p>
+			...
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Fichier ANIMATE.ids</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================== C l a s s i c ======================== -->
+	  <a name="adding_classic" id="adding_classic"></a>
+	  <div class="content">
+
+		<h2>Déclarer et ajouter un slot d'animation (jeu classique)</h2><br>
+
+		<p>
+			Si vous souhaitez ajouter vos propres animations dans le jeu, veuillez prendre le temps de lire et de suivre les directives décrites dans le paragraphe <a href="ia_reference_picker_readme-french.html#adding">Ajouter un slot d'animation</a> de la documentation de l'outil IA Reference Picker. La procédure est très simple et ne devrait durer que quelques minutes. Si tous le monde - vous y compris(e) - les respecte, les enregistrements de nouveaux slots ne nécessiteront aucune action de modération, ni demande d'approbation.
+		</p>
+		<p>
+			Si vous avez lu et compris ces directives et si vous estimez que votre demande d'enregistrement est admissible, passez au chapitre suivant.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Déclarer et ajouter un slot d'animation (jeu classique)</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ====================== A d d i n g _ E E ====================== -->
+	  <a name="adding_ee" id="adding_ee"></a>
+	  <div class="content">
+
+		<h2>Ajouter un slot d'animation dans les jeux EE</h2><br>
+
+		<p>
+			Ajouter un slot d'animation dans les jeux EE est un peu plus facile que le faire dans un jeu classique. Et surtout, il ne nécessite pas d'installer Infinity Animations. &#128521;
+		</p><br>
+
+		<p>
+			&#x26A0;&#xFE0F; <strong>Si votre mod est aussi destiné à être installé dans un jeu classique, commencez par enregistrer votre animation à l'aide l'utilitaire IA Reference Picker comme indiqué dans la section précédente.</strong>
+		</p><br>
+
+		<hr style="width: 90%;" /></br>
+
+		<p style="font-size: 130%;"><strong>1. Choisissez le type de slot d'animation que vous souhaitez déclarer</strong></p>
+
+		<p style="margin-top:2%;">
+			À ce stade, vous devriez <strong>connaître avec certitude</strong> le type de format de votre animation. En cas de doute, consultez <a href="ia_reference_picker_readme-french.html#ref">le tableau des types d'animation</a>.
+		</p>
+
+		<p>
+			Une fois vos fichiers bam réalisés, passez à l'étape suivante.
+		</p><br>
+
+		<hr style="width: 90%;" /></br>
+
+		<p style="font-size: 130%;"><strong>2. Installer votre slot dans le jeu</strong></p>
+
+		<p style="margin-top:2%;">
+			Le plus simple est d'utiliser la procédure développée pour installer Infinity Animations dans un jeu EE. Pour cela, vous aurez besoin des librairies de fonctions suivantes :
+		</p>
+		<div class="important" style="background-color: #F1F1F1;">
+			<p><pre style="padding-left: 2%;">
+<span style="color: green;">INCLUDE</span> <span style="color: #C00040">~%MOD_FOLDER%/lib/a7_functions.tpa~</span>
+<span style="color: green;">INCLUDE</span> <span style="color: #C00040">~%MOD_FOLDER%/lib/gw_functions_ee.tpa~</span></pre>
+			</p>
+		</div>
+
+		<p>avec :</p>
+		<ul>
+			<li><span class="tp2" style="color: #781808;">gw_functions_ee.tpa</span>: liste de macros et de fonctions dealing with installing animation slots in EE games.</li>
+			<li><span class="tp2" style="color: #781808;">a7_functions.tpa</span>: Ajout automatique de slots d'animations de créatures dans BG2EE. Merci à Argent77 pour sa procédure !</li>
+			<li><span class="tp2" style="color: #781808;">gw_ee_compat_arrays.tph</span>: listes de tables utilisées pour ajouter et installer de nouvelles animations de créature (slots, fichier bam, wav...).</li>
+		</ul><br>
+
+		<p>
+			Comment ça marche ?
+		</p>
+		<p>
+			Le principe est simple : la fonction <span class="tp2" style="color: #781808;">GW_FIND_FREE_ANIM_SLOT</span> recherche le premier slot d'animation disponible selon le format de l'animation traitée, défini dans la table "<em>GW_anim_slots_ee</em>".
+		</p>
+
+		<div style="margin: 10px auto;width: 90%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 20px; padding: 6px;">
+			<div class="quotetitle">
+				<em>&nbsp;&nbsp;&#x25BA; Fonction <span class="tp2" style="color: #781808;">GW_FIND_FREE_ANIM_SLOT</span> (définie dans la librairie gw_functions_ee.tpa) et table <span class="tp2" style="color: #781808;">GW_anim_slots_ee</span> (définie dans la librairie gw_ee_compat_arrays.tph)</em> :
+				<input value="Afficher" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none; ">
+					<div class="important" style="background-color: #F1F1F1;">
+						<p><pre style="padding-left: 2%;">
+/* ================================================================================================================================================ *
+ *  FUNCTION GW_FIND_FREE_ANIM_SLOT : LOOKS for the first available animation slot matching a given animation type.                                 *
+ *                                    RECHERCHE le premier slot d'animation disponible selon le format de l'animation.                              *
+ * ------------------------------------------------------------------------------------------------------------------------------------------------ *
+ *  Returns the first available creature animation slot in the range matching its type defined by %GWFormatAnim%.                                   *
+ *  Original function courtesy of Argent77 - Modified by Gwendolyne to make Infinity Animations installation compatible with EE games.              *
+ * ------------------------------------------------------------------------------------------------------------------------------------------------ *
+ *  INT_VAR GWSlotFound  = Used internally to stop the function when a slot is found (DON'T MODIFY IT!).                                            *
+ *  STR_VAR GWFormatAnim = A slots range defined in GW_anim_slots_ee array (built in gw_ee_compat_arrays.tph).                                      *
+ *                         Each slots range is defined with the lowest and highest available creature animation slots matching its animation type.  *
+ *                         The array also defines how many slots to skip after each iteration, starting from the lowest one.                        *
+ *  RET slot             = Free animation slot found. Returns -1 if none found.                                                                     *
+ * ================================================================================================================================================ */
+
+<span style="color: green;">DEFINE_ACTION_FUNCTION</span> <span style="color: #C00040">~GW_FIND_FREE_ANIM_SLOT~</span>
+    <span style="color: blue;">INT_VAR</span> GWSlotFound  <span style="color: purple;">= 0</span>
+    <span style="color: blue;">STR_VAR</span> GWFormatAnim <span style="color: purple;">=</span> <span style="color: #C00040">""</span>
+    <span style="color: blue;">RET</span>     slot
+<span style="color: blue;">BEGIN</span>
+
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span><span style="color: #C00040">"%GWFormatAnim%"</span> <span style="color: purple;">STR_CMP</span> <span style="color: #C00040">""</span><span style="color: purple;">)</span> <span style="color: blue;">BEGIN</span>
+
+        <span style="color: green;">ACTION_PHP_EACH</span> GW_anim_slots_ee <span style="color: blue;">AS</span> slots => GW_slot <span style="color: blue;">BEGIN</span>
+
+            <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>GWSlotFound <span style="color: purple;">= 0)</span> <span style="color: blue;">BEGIN</span>
+
+                <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span><span style="color: #C00040">"%slots_0%"</span> <span style="color: purple;">STR_EQ</span> <span style="color: #C00040">"%GWFormatAnim%"</span><span style="color: purple;">) OR (</span><span style="color: #C00040">"%GW_slot%"</span> <span style="color: purple;">STR_EQ</span> <span style="color: #C00040">"%GWFormatAnim%"</span><span style="color: purple;">)</span> <span style="color: blue;">BEGIN</span>
+
+                    <span style="color: green;">OUTER_SET</span> GW_slotMin <span style="color: purple;">= %</span>slots_1<span style="color: purple;">%</span>
+                    <span style="color: green;">OUTER_SET</span> GW_slotMax <span style="color: purple;">= %</span>slots_4<span style="color: purple;">%</span>
+                    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span><span style="color: purple;">%</span>slots_3<span style="color: purple;">% > 0)</span> <span style="color: blue;">BEGIN</span>
+                        <span style="color: green;">OUTER_SET</span> GW_iter <span style="color: purple;">= (</span>GW_slotMax - GW_slotMin<span style="color: purple;">) / %</span>slots_3<span style="color: purple;">%</span>
+                        // Looping through iterations between GW_slotMin and GW_slotMax
+                        <span style="color: green;">OUTER_FOR</span> <span style="color: purple;">(</span>i <span style="color: purple;">= 0</span> ; i <span style="color: purple;">&#x3c;=</span> GW_iter ; ++i<span style="color: purple;">)</span> <span style="color: blue;">BEGIN</span>
+                            <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>GWSlotFound <span style="color: purple;">= 0)</span> <span style="color: blue;">BEGIN</span>
+                                <span style="color: green;">OUTER_SET</span> slotMin <span style="color: purple;">=</span> GW_slotMin <span style="color: purple;">+ (</span>i <span style="color: purple;">* %</span>slots_3<span style="color: purple;">%</span>)
+                                <span style="color: green;">OUTER_SET</span> slotMax <span style="color: purple;">=</span> slotMin <span style="color: purple;">+ %</span>slots_2<span style="color: purple;">%</span>
+                                <span style="color: blue;">LAF</span> <span style="color: #C00040">~FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">INT_VAR</span> slotMin slotMax <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+                                <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span><span style="color: #C00040">"%slot%"</span> >= <span style="color: purple;">0)</span> <span style="color: blue;">BEGIN</span>
+                                    <span style="color: green;">OUTER_SET</span> GWSlotFound <span style="color: purple;">= 1</span>
+                                <span style="color: blue;">END</span>
+                            <span style="color: blue;">END</span>
+                        <span style="color: blue;">END</span> // of Looping through iterations between GW_slotMin and GW_slotMax
+                    <span style="color: blue;">END ELSE BEGIN</span>
+                        <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>GWSlotFound <span style="color: purple;">= 0)</span> <span style="color: blue;">BEGIN</span>
+                            <span style="color: blue;">LAF</span> <span style="color: #C00040">~FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">INT_VAR</span> slotMin = GW_slotMin slotMax = GW_slotMax <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+                            <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span><span style="color: #C00040">"%slot%"</span> >= <span style="color: purple;">0)</span> <span style="color: blue;">BEGIN</span>
+                                <span style="color: green;">OUTER_SET</span> GWSlotFound <span style="color: purple;">= 1</span>
+                            <span style="color: blue;">END</span>
+                        <span style="color: blue;">END</span>
+                    <span style="color: blue;">END</span>
+
+                <span style="color: blue;">END</span> // ACTION_IF ("%slots_0%" STR_EQ "%GWFormatAnim%") OR ("%GW_slot%" STR_EQ "%GWFormatAnim%")
+
+            <span style="color: blue;">END</span>     // of ACTION_IF (GWSlotFound = 0)
+
+        <span style="color: blue;">END</span>         // of ACTION_PHP_EACH
+
+    <span style="color: blue;">END</span>             // of ACTION_IF ("%GWFormatAnim%" STR_CMP "")
+
+<span style="color: blue;">END</span>                 // of DEFINE_ACTION_FUNCTION</pre>
+						</p>
+					</div>
+					<div class="important" style="background-color: #F1F1F1;">
+						<p><pre style="padding-left: 2%;">
+/* =========================================================================================== *
+ *  ARRAY GW_anim_slots_ee : DEFINES available slots ranges matching each animation type.      *
+ * ------------------------------------------------------------------------------------------- *
+ *  Used by function GW_FIND_FREE_ANIM_SLOT to install new animation slots in EE games.        *
+ * ------------------------------------------------------------------------------------------- *
+ *  1st value = animation type.                                                                *
+ *  2nd value = lowest available creature animation slot for this animation type.              *
+ *  3rd value = how many slots to search inside each step.                                     *
+ *  4th value = how many slots to skip after each iteration, starting from the lowest one.     *
+ *  5th value = highest available creature animation slot for this animation type.             *
+ *  6th value = specific range to customize where to install new slots.                        *
+ * ------------------------------------------------------------------------------------------- *
+ *  Use: to install a BG1 SIMPLE MONSTER animation, you can                                    *
+ *   - Either choose the general 1st value label: BG1SM.                                       *
+ *   - Or choose a specific range: 1SM7100 will look for the first free available slot from    *
+ *     0x7110 to 0x7200, reading 2 slots every 0x10 step (0x7110, 0x7111, 0x7120, 0x7121...).  *
+ * =========================================================================================== */ </pre>
+						</p>
+					</div><br>
+				</div>
+			</div>
+		</div><br>
+
+		<p>
+			Si un slot est trouvé, on le convertit en valeur hexadécimale (fonction <span class="tp2" style="color: #781808;">TO_HEX_NUMBER</span>) pour l'insérer dans le fichier ANIMATE.ids. Enfin, on assigne cette variable à l'array $GWNewIni(~%GWNewAnim%~) que l'on utilisera pour lui attribuer un fichier .ini.
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /></br>
+
+		<p>
+			Quoi de mieux qu'un exemple pour retranscrire ce code dans l'installateur tp2 ? &#128521;
+		</p>
+
+		<div class="important" style="background-color: #F1F1F1;">
+			<p><pre style="padding-left: 2%;">
+/* --------------------------------------------------------- *
+ *  BGII SPLIT (EE: monster, split_bams=1): 0x7300 - 0x7f00  *
+ * --------------------------------------------------------- */
+
+<span style="color: green;">ACTION_FOR_EACH</span> GWNewAnim <span style="color: blue;">IN</span> <span style="color: #C00040">~DAO~ ~DAO_LEGS~ ~EFREETI_LEGS~ ~JANNI~ ~JANNI_LEGS~ ~MARID~ ~MARID_LEGS~</span> <span style="color: blue;">BEGIN</span>
+    <span style="color: green;">SILENT</span>
+    <span style="color: blue;">LAF</span> <span style="color: #C00040">~GW_FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">STR_VAR</span> GWFormatAnim = BG2SPLIT <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: green;">WARN</span> <span style="color: purple;">@1141</span>  // ~!!!  ATTENTION !!! : il n'existe aucun emplacement (slot) disponible pour ajouter l'animation %GWNewAnim%. !!!~
+    <span style="color: blue;">END ELSE BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~TO_HEX_NUMBER~</span> <span style="color: blue;">INT_VAR</span> value = slot minDigits = 4 <span style="color: blue;">RET</span> hexNumber <span style="color: blue;">END</span>
+        <span style="color: green;">APPEND</span> <span style="color: #C00040">~animate.ids~ ~0x%hexNumber% %GWNewAnim%~</span> <span style="color: blue;">UNLESS</span> <span style="color: #C00040">~%GWNewAnim%~</span>
+        <span style="color: green;">OUTER_SPRINT</span> <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%GWNewAnim%~</span><span style="color: purple;">)</span> <span style="color: red;">EVAL</span> <span style="color: #C00040">"%hexNumber%"</span>
+        <span style="color: green;">CLEAR_IDS_MAP</span>
+    <span style="color: blue;">END</span>
+<span style="color: blue;">END</span>
+
+/* -------------------------------------------- *
+ *  IWD (EE monster_icewind): 0xe000 --> 0xefff *
+ * -------------------------------------------- */
+
+<span style="color: green;">ACTION_FOR_EACH</span> GWNewAnim <span style="color: blue;">IN</span> <span style="color: #C00040">~BOVINE_AXE_THING~</span> <span style="color: blue;">BEGIN</span>
+    <span style="color: green;">SILENT</span>
+    // 1. D'abord, on essaie de l'installer le plus près possible de 0xe070 MINOTAUR
+    <span style="color: blue;">LAF</span> <span style="color: #C00040">~FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">INT_VAR</span> slotMin = 0xe070 slotMax = 0xe080 <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+    // 2. Si ce n'est possible, on l'installe dans le premier slot disponible
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~GW_FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">STR_VAR</span> GWFormatAnim = IWD <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+        <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: green;">WARN</span> <span style="color: purple;">@1141</span>  // ~!!!  ATTENTION !!! : il n'existe aucun emplacement (slot) disponible pour ajouter l'animation %GWNewAnim%. !!!~
+        <span style="color: blue;">END</span>
+    <span style="color: blue;">END</span>
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&gt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~TO_HEX_NUMBER~</span> <span style="color: blue;">INT_VAR</span> value = slot minDigits = 4 <span style="color: blue;">RET</span> hexNumber <span style="color: blue;">END</span>
+        <span style="color: green;">APPEND</span> <span style="color: #C00040">~animate.ids~ ~0x%hexNumber% %GWNewAnim%~</span> <span style="color: blue;">UNLESS</span> <span style="color: #C00040">~%GWNewAnim%~</span>
+        <span style="color: green;">OUTER_SPRINT</span> <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%GWNewAnim%~</span><span style="color: purple;">)</span> <span style="color: red;">EVAL</span> <span style="color: #C00040">"%hexNumber%"</span>
+        <span style="color: green;">CLEAR_IDS_MAP</span>
+    <span style="color: blue;">END</span>
+<span style="color: blue;">END</span>
+
+<span style="color: green;">ACTION_FOR_EACH</span> GWNewAnim <span style="color: blue;">IN</span> <span style="color: #C00040">~MARILITH_DARK~</span> <span style="color: blue;">BEGIN</span>
+    <span style="color: green;">SILENT</span>
+    // 1. D'abord, on essaie de l'installer le plus près possible de 0xe090 MARILITH
+    <span style="color: blue;">LAF</span> <span style="color: #C00040">~FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">INT_VAR</span> slotMin = 0xe090 slotMax = 0xe0a0 <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+    // 2. Si ce n'est possible, on l'installe dans le premier slot disponible
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~GW_FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">STR_VAR</span> GWFormatAnim = IWD <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+        <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+            <span style="color: green;">WARN</span> <span style="color: purple;">@1141</span>
+        <span style="color: blue;">END</span>
+    <span style="color: blue;">END</span>
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&gt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~TO_HEX_NUMBER~</span> <span style="color: blue;">INT_VAR</span> value = slot minDigits = 4 <span style="color: blue;">RET</span> hexNumber <span style="color: blue;">END</span>
+        <span style="color: green;">APPEND</span> <span style="color: #C00040">~animate.ids~ ~0x%hexNumber% %GWNewAnim%~</span> <span style="color: blue;">UNLESS</span> <span style="color: #C00040">~%GWNewAnim%~</span>
+        <span style="color: green;">OUTER_SPRINT</span> <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%GWNewAnim%~</span><span style="color: purple;">)</span> <span style="color: red;">EVAL</span> <span style="color: #C00040">"%hexNumber%"</span>
+        <span style="color: green;">CLEAR_IDS_MAP</span>
+    <span style="color: blue;">END</span>
+<span style="color: blue;">END</span>
+
+<span style="color: green;">ACTION_FOR_EACH</span> GWNewAnim <span style="color: blue;">IN</span> <span style="color: #C00040">~BEETLE_BOMBARDIER_NWN~</span> <span style="color: blue;">BEGIN</span>
+    <span style="color: green;">SILENT</span>
+    // 1. D'abord, on essaie de l'installer le plus près possible de 0xe220 BEETLE_BOMBARDIER
+    <span style="color: blue;">LAF</span> <span style="color: #C00040">~FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">INT_VAR</span> slotMin = 0xe220 slotMax = 0xe230 <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+    // 2. Si ce n'est possible, on l'installe dans le premier slot disponible
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~GW_FIND_FREE_ANIM_SLOT~</span> <span style="color: blue;">STR_VAR</span> GWFormatAnim = IWD <span style="color: blue;">RET</span> slot <span style="color: blue;">END</span>
+        <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&lt; 0)</span> <span style="color: blue;">BEGIN</span>
+            <span style="color: green;">WARN</span> <span style="color: purple;">@1141</span>
+        <span style="color: blue;">END</span>
+    <span style="color: blue;">END</span>
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">(</span>slot <span style="color: purple;">&gt; 0)</span> <span style="color: blue;">BEGIN</span>
+        <span style="color: blue;">LAF</span> <span style="color: #C00040">~TO_HEX_NUMBER~</span> <span style="color: blue;">INT_VAR</span> value = slot minDigits = 4 <span style="color: blue;">RET</span> hexNumber <span style="color: blue;">END</span>
+        <span style="color: green;">APPEND</span> <span style="color: #C00040">~animate.ids~ ~0x%hexNumber% %GWNewAnim%~</span> <span style="color: blue;">UNLESS</span> <span style="color: #C00040">~%GWNewAnim%~</span>
+        <span style="color: green;">OUTER_SPRINT</span> <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%GWNewAnim%~</span><span style="color: purple;">)</span> <span style="color: red;">EVAL</span> <span style="color: #C00040">"%hexNumber%"</span>
+        <span style="color: green;">CLEAR_IDS_MAP</span>
+    <span style="color: blue;">END</span>
+<span style="color: blue;">END</span> </pre>
+			</p>
+		</div><br>
+
+		<hr style="width: 90%;" /></br>
+
+		<p>
+			Il ne vous reste plus qu'à copier les fichiers relatifs à vos animations.
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Ajouter un slot d'animation dans les jeux EE</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ======================== I n s t a l l ======================== -->
+	  <a name="adding" id="install"></a>
+	  <div class="content">
+
+		<h2>Installer les animations dans le jeu</h2><br>
+
+		<p style="font-size: 130%;"><strong>1. Copier les nouvelles animations dans le jeu</strong></p>
+
+		<p style="margin-top:2%;">
+			Pour ce faire, nous vous conseillons de placer les fichiers bam dans un répertoire distinct, par exemple &#x1F4C1; bam/cre, dans lequel vous créez un sous-répertoire par animation, que vous copiez dans le répertoire &#x1F4C1; override :
+ 		</p>
+
+		<div class="important" style="background-color: #F1F1F1;">
+			<p><pre style="padding-left: 2%;">
+<span style="color: green;">ACTION_FOR_EACH</span> animation <span style="color: blue;">IN</span> <span style="color: #C00040">~animation1~ ~animation2~ ~animation3~</span> ... <span style="color: blue;">BEGIN</span>
+
+    <span style="color: green;">ACTION_BASH_FOR</span> <span style="color: #C00040">~%MOD_FOLDER%/bam/cre/%animation%~ ~^.+\.bam$~</span> <span style="color: blue;">BEGIN</span>
+
+        // On ne copie que les fichiers nécessaires.
+        <span style="color: green;">ACTION_IF</span> <span style="color: purple;">NOT FILE_EXISTS_IN_GAME</span> <span style="color: #C00040">~%BASH_FOR_FILE%~</span> <span style="color: blue;">BEGIN</span>
+            <span style="color: green;">ACTION_TO_LOWER</span> <span style="color: purple;">%</span>BASH_FOR_FILE<span style="color: purple;">%</span>
+            <span style="color: green;">COPY_LARGE</span> <span style="color: #C00040">~%BASH_FOR_FILESPEC%~ ~override/%BASH_FOR_FILE%~</span>
+        <span style="color: blue;">END</span>
+
+    <span style="color: blue;">END</span>
+
+<span style="color: blue;">END</span> </pre>
+			</p>
+		</div><br>
+
+		<hr style="width: 90%;" /></br>
+
+		<p style="font-size: 130%;"><strong>2. Installer les fichiers .2da (pour les jeux classiques) ou .ini gérant les variables et les sons des animations de créatures (jeux EE)</strong></p>
+
+		<p style="margin-top:2%;">
+			Si vous voulez que votre mod puisse être installé aussi bien sur un jeu classique que sur une version EE, nous vous conseillons de placer les fichiers 2da et ini dans deux répertoire distincts, par exemple &#x1F4C1; 2da/cre et &#x1F4C1; ini.
+		</p>
+
+		<p style="margin-top:2%;">
+			&#9888;&#65039; <strong><span style="color: #781808;">&#9755;</span> Note pour les jeux EE: </strong>Puisque l'identifiant du slot d'animation est inconnu avant son installation et peut dépendre des autres animations installées par d'autres mods avant le vôtre, voici une petite astuce qui permet d'installer facilement les fichiers .ini. <strong>Attribuez au fichier .ini de votre animation le nom de l'animation enregistré dans le fichier ANIMATE.IDS.</strong> Par exemple dao.ini, dao_legs.ini, animation1.ini, animation2.ini... &#128521;
+		</p><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /></br>
+
+		<p>
+			Puis, copiez les fichiers .2da dans le répertoire override (jeu classique) :
+		</p>
+
+		<div class="important" style="background-color: #F1F1F1;">
+			<p><pre style="padding-left: 2%;">
+<span style="color: green;">COPY</span> <span style="color: #C00040">~%MOD_FOLDER%/2da/cre~ ~override~</span> </pre>
+			</p>
+		</div><br>
+
+		<hr style="width: 90%; height: 1px; border: 0;" /></br>
+
+		<p>
+			Quant aux fichiers ini (jeux EE), servez-vous du code développé pour Infinity Animations qui utilise la valeur hexadécimale définie dans la procédure d'installation de l'animation dans le fichier animate.ids pour copier automatiquement le fichier ini correspondant avec le bon intitulé [<em>$GWNewIni(~%GWNewAnim%~)</em>].
+		</p>
+
+		<div class="important" style="background-color: #F1F1F1;">
+			<p><pre style="padding-left: 2%;">
+<span style="color: green;">ACTION_BASH_FOR</span> <span style="color: #C00040">~%MOD_FOLDER%/ini~ ~^.+\.ini$~</span> <span style="color: blue;">BEGIN</span>
+
+    <span style="color: green;">OUTER_SPRINT</span> inifile <span style="color: red">EVAL</span> <span style="color: #C00040">"%BASH_FOR_RES%"</span>
+    <span style="color: green;">ACTION_TO_UPPER</span> inifile
+
+    <span style="color: green;">ACTION_IF</span> <span style="color: purple;">VARIABLE_IS_SET</span> <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%inifile%~</span><span style="color: purple;">)</span> <span style="color: blue;">BEGIN</span>  // Attribue à chaque nouveau fichier ini la valeur définie dans le fichier animate.ids
+        <span style="color: green;">SILENT</span>
+        <span style="color: green;">OUTER_SPRINT</span> GW_nv_ini <span style="color: purple;">$</span>GWNewIni<span style="color: purple;">(</span><span style="color: #C00040">~%inifile%~</span><span style="color: purple;">)</span>
+        <span style="color: green;">COPY</span> <span style="color: #C00040">~%BASH_FOR_FILESPEC%~ ~override/%GW_nv_ini%.ini~</span>
+        <span style="color: green;">PRINT</span> <span style="color: purple;">@1121</span> // ~  ==> fichier ini de l'animation %inifile% installe : 0x%GW_nv_ini%.ini~
+    <span style="color: blue;">END ELSE BEGIN</span>
+        <span style="color: green;">PRINT</span> <span style="color: purple;">@1122</span> // ~  ==> fichier ini de l'animation %inifile% pas installe.~
+    <span style="color: blue;">END</span>
+
+<span style="color: blue;">END</span> // of ACTION_BASH_FOR </pre>
+			</p>
+		</div><br>
+
+		<hr style="width: 90%;" /></br>
+
+		<p>
+			Félicitations, vous venez de déclarer, d'enregistrer et d'installer une nouvelle animation de créature ! &#129346;
+		</p><br>
+
+		<p>
+			<span style="color: #781808;">&#10173;</span> Cerise sur le gâteau, vous trouverez dans le répertoire &#x1F4C1; documentation/mymod un canevas de mod résumant l'ensemble de la procédure, et que vous pourrez intégrer dans votre code. &#128541;
+		</p><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Installer les animations dans le jeu</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ================== U s e   n e w   s l o t s ================== -->
+	  <a name="adding" id="use_slots"></a>
+	  <div class="content">
+
+		<h2>Utiliser les nouveaux slots d'animation</h2><br>
+
+		<p>
+<span style="color: green;">INCLUDE</span> <span style="color: #C00040">~%MOD_FOLDER%/lib/ps_recursive_copy.tpa~</span>        // Sam's library allowing to recursively search into a parent directory, then copy files to a destination directory. Gwendolyne's library to install IA content.
+<span style="color: green;">INCLUDE</span> <span style="color: #C00040">~%MOD_FOLDER%/lib/gw_handle_audio.tpa~</span>          // Customised silent HANDLE_AUDIO function.
+		</p>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Utiliser les nouveaux slots d'animation</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ==================== U p d a t e   M o d s ==================== -->
+	  <a name="adding" id="update_mods"></a>
+	  <div class="content">
+
+		<h2>Mettre à jour les anciens mods</h2><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Mettre à jour les anciens mods</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+<!-- ============== V e r s i o n   H i s t o r y =============== -->
+	  <a name="version" id="version"></a>
+	  <div class="content" id="versionHistory">
+
+		<h2>Historique des versions</h2><br>
+
+		<h6>Version 6.0.0 &nbsp;(nn mars 2021)</h6>
+
+		  <ul>
+			<li>Modification des noms de code des animations pour les rendre <strong>compatibles avec les code pages non occidentaux</strong> (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable) et correction des doublons de slots d'animation de dragon (XDR3, XDR6). &#128521;</li>
+			<li>Ajout de la compatibilité avec les jeux EE: adaptation du code pour une meilleure compatibilité du mod, avec notamment l'harmonisation des noms des animations.</li>
+			<li>Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.</li>
+			<li>Ajout de la traduction française (Gwendolyne).</li>
+			<li>Téléversement du mod dans le compte GitHub officiel de Spellhold Studios.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 5 &nbsp;(12 mai 2010)</h6>
+
+		  <ul>
+			<li>Modification du patch de l'exécutable afin qu'il modifie le code page et redémarre l'ordinateur s'il détecte un code page non occidental.</li>
+			<li>Mise à jour du patch de l'exécutable pour qu'il reconnaisse les avatars de voleur de <acronym title="Baldur's Gate">BG1</acronym>.</li>
+			<li>Clonage des fichiers d'attribution de sons existants [<em>NdT : fichiers 2da</em>] pour créer ceux qui manquent.</li>
+			<li>Ajout des autres fichiers d'attribution de sons manquants dans le répertoire &#x1F4C1; /content.</li>
+			<li>Ajout des sons manquants du minotaure et de l'<acronym title="NdT : water weird">esprit des eaux</acronym>.</li>
+			<li>Suppression de l'empilage des mêmes animations dans le fichier chitin.key, qui posait problème.</li>
+			<li>Affectation aux créatures de leurs jeux de sons lorsque c'est approprié (mise à jour importante).</li>
+			<li>Correction d'un <a href="http://www.shsforums.net/topic/44716-error-installing/?p=483927">dysfonctionnement mineur de la commande <span class="tp2">READ_BYTE</span></a> dans les patches de créatures.</li>
+			<li>Ajout d'un contrôle interdisant l'installation des sous-composants si le composant principal n'est pas installé (pour empêcher des crashes).</li>
+			<li>Ajout des <acronym title="NdT : night hags">sorcières de la nuit</acronym> [<em>NdT : ou guenaudes nocturnes selon les traductions</em>] dans le composant « <em>Démons différenciés</em> ».</li>
+			<li>Ajout de l'animation de la reine goule au composant « <em>Morts-vivants différenciés</em> ».</li>
+			<li>Ajout de l'animation <acronym title="NdT : white-haired Ellesime">Ellesime avec des cheveux blancs</acronym> au composant « <em>Plus d'animations d'<acronym title="Icewind Dale II">IWD2</acronym></em> ».</li>
+			<li>Ajout de l'animation <acronym title="NdT : lagoon creature">créature des lagons</acronym> au composant « <em>Plus d'animations d'<acronym title="Icewind Dale II">IWD2</acronym></em> ».</li>
+			<li>Déplacement du traitement des tieffelins des composants « cambions » et « alu-démons » dans le composant « <em>Plus d'animations de <acronym title="Planescape: Torment">PS:T</acronym></em> ».</li>
+			<li>Correction du petit bogue qui faisait apparaître les combattants squelettes sous la forme de verbeegs.</li>
+			<li>Ajout de l'animation d'Amel au composant « <em>Plus d'animations de <acronym title="Neverwinter Nights">NWN</acronym></em> » (si <acronym title="Northern Tales of the Sword Coast">NTotSC</acronym> est installé).</li>
+			<li>Ajout du composant « <em>Correction des animations des humanoïdes</em> ».</li>
+			<li>Ajout du composant « <em>Avatars de Moinesse pour IA</em> ».</li>
+			<li>Ajout du composant « <em>Plus d'animations de <acronym title="Planescape: Torment">PS:T</acronym></em> ».</li>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> dans les parties sauvegardées</em> ».</li>
+			<li>Ajout du composant « <em>Correction des animations dans les parties sauvegardées</em> ».</li>
+			<li>Traification manuelle de ce foutu mod pour faciliter le travail des traducteurs (de rien, <acronym title="Weimer Dialogue Utility">WeiDU</acronym> ! &#128541;).</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 4 &nbsp;(7 février 2010)</h6>
+
+		  <ul>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Non Joueurs [NdT : traduction de NPC, ou Non-Player Characters]">PNJs</acronym></em> ».</li>
+			<li>Ajout du composant « <em>Animations de personnages de <acronym title="Baldur's Gate">BG1</acronym> pour les <acronym title="Personnages Joueurs [NdT : traduction de PC, ou Player Characters">PJs</acronym> exportés</em> ».</li>
+			<li>Modification de la procédure de modification des démons.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 3 &nbsp;(1er février 2010)</h6>
+ 
+		  <ul>
+			<li>Correction des bugs d'animations _LOW qui causaient des crashs de zones au chargement.</li>
+			<li>Correction des scripts et des dialogues qui <acronym title="Polymorph">métamorphosent</acronym> en créatures utilisant des animations _LOW.</li>
+			<li>Correction d'un dysfonctionnement du code qui empêchait l'installation de composants optionnels.</li>
+			<li>Ajout de l'option d'installation des sons dans le composant « <em>Animations de svirfneblins</em> ».</li>
+			<li>Ajout du composant « <em>Correction des références des créatures dans les cartes</em> ».</li>
+			<li>Ajout des fichiers révisés d'attribution de sons des salamandres (slots MSAL et MSA2).</li>
+			<li>Amélioration de la compatibilité avec <a href="http://www.shsforums.net/topic/38261-atweaks-v264-released/">aTweaks</a>.</li>
+			<li>Amélioration des procédures de modification de créatures pour les démons et les orques chamans.</li>
+		  </ul><br><br>
+
+		<h6>Version Beta 2 &nbsp;(23 janvier 2010</h6>
+
+		  <ul>
+			<li>Ajout de la prise en charge des systèmes non ANSI par la procédure d'installation.</li>
+		  </ul><br><br>
+
+		<h6>Version <acronym title="Weimer Dialogue Utility">WeiDU</acronym> Beta 1 &nbsp;(11 janvier 2010)</h6>
+
+		  <ul>
+			<li>Première sortie en version <acronym title="Weimer Dialogue Utility">WeiDU</acronym>.</li>
+			<li>Toutes les créatures du jeu et des mods affectées par IA sont modifiées.</li>
+			<li>Ajout des composants optionnels.</li>
+		  </ul><br><br>
+
+		<h6>Version r.10010043</h6>
+
+		  <ul>
+			<li>Correction d'un bogue affectant les slots d'animation d'Icewind Dale dans Baldur's Gate II.</li>
+		  </ul><br><br>
+
+		<h6>Mise à jour de la version r.09102252</h6>
+
+		  <ul>
+			<li>Mise à jour de la documentation et du Reference Picker.</li>
+			<li>Ajout d'une feuille de style alternative. &#128521;</li>
+		  </ul><br><br>
+
+		<h6>Version r.09102252</h6>
+
+		  <ul>
+			<li>Sortie initiale.</li>
+		  </ul><br><br>
+
+		<address>
+			<span class="footer">Infinity Animations : Note pour les moddeurs &gt; Version Changelog (core component only)</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+		</address>
+	  </div>
+
+	</div>
+  </div>
+</body>
+</html>
+  
