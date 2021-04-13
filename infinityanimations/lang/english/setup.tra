@@ -80,7 +80,7 @@ infinityanimations/archives folder.~
 
 // Installing animations
 // ---------------------
-@18   = ~Patching IDS files...~
+@18   = ~Patching IDS files (this may take a while)...~
 @19   = ~Updating scripts and dialogs files...~
 @20   = ~Restoring previously overwritten BG2 animations...~
 @21   = ~Copying new animations to the game (this may take a while)...

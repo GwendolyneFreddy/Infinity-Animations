@@ -3,12 +3,14 @@
  * --------------------------------------------------- *
  *  t-main.tpa traified                                *
  * =================================================== */
-@10000 = ~Yuan-ti Mage~      // = strref #1154 (BG2)
-@10001 = ~Yuan-ti~           // = strref #1323 (BG2)
-@10002 = ~Gnoll Captain~     // = strref #2243 (BG2)
-@10003 = ~Hobgoblin Captain~ // = strref #2258 (BG2)
-@10004 = ~Hobgoblin Wizard~  // = strref #2268 (BG2)
-@10005 = ~Balor~             // = strref #8449 (BG2)
+@10000 = ~Yuan-ti Mage~               // = strref #1154 (BG2)
+@10001 = ~Yuan-ti~                    // = strref #1323 (BG2)
+@10002 = ~Gnoll Captain~              // = strref #2243 (BG2)
+@10003 = ~Hobgoblin Captain~          // = strref #2258 (BG2)
+@10004 = ~Hobgoblin Wizard~           // = strref #2268 (BG2)
+@10005 = ~Balor~                      // = strref #8449 (BG2)
+@23827 = ~[TANAR'RI 02] ~ [tanar02a]  // = strref #23827 (BGEE) !!! DO NOT TRANSLATE !!!
+@23831 = ~[TANAR'RI 01] ~ [tanar01a]  // = strref #23831 (BGEE) !!! DO NOT TRANSLATE !!!
 
 
 /* =================================================== *

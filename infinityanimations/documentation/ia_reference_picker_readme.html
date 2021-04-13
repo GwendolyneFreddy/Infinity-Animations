@@ -787,7 +787,7 @@
 			Note that differing from other animation types equipping non-existent objects CRASHES for characters.
 		</p>
 		<p>
-			This animation type differs from the one used for the original game files in that I've decided not to split the G animation series. It's exactly the same content, just kept in one file (see BGII SPLIT/BGII UNSPLIT). Essentially, if you'd like a duplicate or edit of a current character animation, you will have to join the G1 G11 G12... files into a single G1 file. This is done mainly to save override clutter (et makes it easier to create content to boot).
+			This animation type differs from the one used for the original game files in that I've decided not to split the G animation series. It's exactly the same content, just kept in one file (see BGII SPLIT/BGII UNSPLIT). Essentially, if you'd like a duplicate or edit of a current character animation, you will have to join the G1 G11 G12... files into a single G1 file. This is done mainly to save override clutter (and makes it easier to create content to boot).
 		</p>
 		<p>
 			If you'd like to have an animation using existing object animations (e.g. because it's an edit of an existing animation), choose one of the CHARACTER BGII WQM/L/N/S animation slots with the desired size category.
@@ -845,7 +845,7 @@
 			DFB <span style="padding-left:26px">// 5 Seq. (fall)</span><br>
 			GUP <span style="padding-left:24px">// 5 Seq. (get up)</span><br>
 			HIT <span style="padding-left:30px">// 5 Seq. (hit)</span><br>
-			S2C <span style="padding-left:26px">// 5 Seq. (idle->combat)</span><br>
+			S2C <span style="padding-left:26px">// 5 Seq. (idle -> combat)</span><br>
 			SF1 <span style="padding-left:28px">// 5 Seq. (stretch)</span><br>
 			SP1 <span style="padding-left:28px">// 5 Seq. (spell)</span><br>
 			SP2 <span style="padding-left:28px">// 5 Seq. (spell)</span><br>
@@ -878,13 +878,28 @@
 		<p>
 			<strong>&#8258 To install without the provided <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer:</strong>
 		</p>
-		<ul style="margin-top: 4px;margin-left: 4%;width: 88%;">
-			<li>i. Exe patching is done via Colin Percival's freely available tools bsdiff/bspatch available <a href="http://www.daemonology.net/bsdiff/">here</a>.</li>
-			<li>ii. Copy the <em class="rule">.patch</em> file (found in <em class="rule">infinityanimations/patch</em>) and <em class="rule">bspatch</em> to your game directory.</li>
-			<li>iii. From a command prompt enter something like: <br>
-				<em class="rule">bspatch BGMain.exe BGMain_patched.exe Infinity10010043.patch</em></li>
-			<li>iv. Run the game from BGMain_patched.exe, or rename it to BGMain.exe (be sure to keep the original executable just in case).</li>
-		  </ul><br>
+		<div style="margin: 0px auto;width: 85%; border-style: solid; border-width: 1px; border-color: #781808; margin-top: 20px; margin-bottom: 2px; padding: 4px;">
+			<div class="quotetitle">
+				<em>&nbsp;&nbsp;&#x25BA; Deprecated as of v 6.0.0:</em>
+				<input value="Show" style="color: #e3e3db; margin: 0px; padding: 0px; width: 60px; background:#781808;"
+				onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Show'; }" type="button" >
+			</div>
+			<div class="quotecontent">
+				<div style="display: none; ">
+				<p style="width:90%; color:#5f5f5f;">
+					<ul style="margin-top: 4px;margin-left: 4%;width: 88%;">
+						<li>i. Exe patching is done via Colin Percival's freely available tools bsdiff/bspatch available <a href="http://www.daemonology.net/bsdiff/">here</a>.</li>
+						<li>ii. Copy the <em class="rule">.patch</em> file (found in <em class="rule">infinityanimations/patch</em>) and <em class="rule">bspatch</em> to your game directory.</li>
+						<li>iii. From a command prompt enter something like:<br>
+							<em class="rule">bspatch BGMain.exe BGMain_patched.exe Infinity10010043.patch</em></li>
+						<li>iv. Run the game from BGMain_patched.exe, or rename it to BGMain.exe (be sure to keep the original executable just in case).</li>
+					</ul>
+				</p>
+				</div>
+			</div>
+		</div><br><br>
+
+		<hr style="width: 90%" /><br>
 
 		<p>
 			<strong>&#8258 For the animation slot mapper</strong>
@@ -899,14 +914,14 @@
 			&#x26A0;&#xFE0F; Please note that the translations need to be encoded in UTF-16 LE BOM. UTF-8 will not work.
 		</p>
 		<p>
-			You can also use a hotkey (Alt+L) to be able to load a different language file from within the GUI. This will cause the program to restart with the new language.
+			You can also use a hotkey (<span style="color: #781808;">Alt+L</span>) to be able to load a different language file from within the GUI. This will cause the program to restart with the new language.
 		</p>
 		<p>
 			<center><img src="images/rp61.png" /></center>
 			<center><img src="images/rp62.png" /></center>
 		</p><br>
 		<p>
-			The file <em class="rule">anims.list</em> is necessary for the tool to run. <em><strong>DO NOT MODIFY THIS FILE</strong></em>.
+			<span style="color: #781808;">&#10173;</span> <em class="rule">anims.list</em> file is necessary for the tool to run. <em><strong>DO NOT MODIFY THIS FILE</strong></em>.
 		</p><br>
 
 		<address>

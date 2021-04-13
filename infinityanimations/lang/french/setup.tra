@@ -84,7 +84,7 @@ Assurez-vous que vous avez bien installe le patch 26498 pour ToB !~
 
 // Installing animations
 // ---------------------
-@18   = ~Modification des fichiers IDS...~
+@18   = ~Modification des fichiers IDS (veuillez patienter)...~
 @19   = ~Mise a jour des scripts et des dialogues...~
 @20   = ~Retablissement des animations de BG2 ecrasees par d'autres mods...~
 @21   = ~Copie des nouvelles animations dans le jeu (veuillez patienter)...
@@ -416,7 +416,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 @1102 = ~  ==> %countf% fichier(s) manquant(s) de l'animation IA %folder% installe(s)~
 
 @1121 = ~  ==> fichier ini de l'animation %inifile% installe : 0x%GW_nv_ini%.ini~
-@1122 = ~  ==> fichier ini de l'animation %inifile% pas installé~
+@1122 = ~  ==> fichier ini de l'animation %inifile% pas installe.~
 
 /* ------------------ *
  *  t-animate_ee.tpa  *
