@@ -909,7 +909,9 @@ This component patches any changed creature animation in saved games to prevent 
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
     - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replace_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correct_creature animations.tpa*, *ia_correct_weapon_animations.tpa*). :wink:
     - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
-    - *t-animate.tpa*: Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
+    - <ins>t-animate.tpa</ins>:
+        - Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
+        - Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
     - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - Added new *ia_sort_ids* installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. :wink:

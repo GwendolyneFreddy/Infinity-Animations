@@ -1656,10 +1656,10 @@
 			<img width=29 height=74 src="images/0x5d4b.gif" title="bariaur_male_pst" />
 			<img width=31 height=81 src="images/0x5dad.gif" title="townie_wizard_pst" />
 			<img width=26 height=55 src="images/0x6841.gif" title="moinesse_mage_female_elf" />
-			<img width=25 height=63 src="images/0x6845.gif" title="moinesse_druid_female_human" />
-			<img width=25 height=63 src="images/0x6846.gif" title="moinesse_fighter_female_human" />
-			<img width=31 height=63 src="images/0x6847.gif" title="moinesse_mage_female_human" />
-			<img width=25 height=64 src="images/0x6848.gif" title="moinesse_thief_female_human" />
+			<img width=25 height=63 src="images/0x684d.gif" title="moinesse_druid_female_human" />
+			<img width=25 height=63 src="images/0x684e.gif" title="moinesse_fighter_female_human" />
+			<img width=31 height=63 src="images/0x684f.gif" title="moinesse_mage_female_human" />
+			<img width=25 height=64 src="images/0x6850.gif" title="moinesse_thief_female_human" />
 			<img width=26 height=64 src="images/0x683f.gif" title="moinesse_vampire" />
 			<img width=25 height=63 src="images/0x683e.gif" title="moinesse_ninja_male_human" />
 			<img width=25 height=63 src="images/0x683d.gif" title="moinesse_barbarian_male_human" />
@@ -2167,7 +2167,11 @@
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-8%;">Découpage de cet énorme composant principal en plus petits pour assurer une meilleure lecture et faciliter sa maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replace_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correct_creature animations.tpa</em>, <em>ia_correct_weapon_animations.tpa</em>).</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la compatibilité avec ToBEx : patche le fichier externalisé de gestion des sons de déplacement (<em>t-aniwksnd.tpa</em>) et résout les conflits entre soundsets d'animations de créatures (<em>ia_soundsets_conflicts.tpa</em>).</li>
-				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em> : correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. &#x1F621;</li>
+				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em> :</li>
+				  <ul>
+					<li style="margin-left:-8%; margin-right:-8%;">Correction de la foutue régression introduite par le BWP Fixpack (à partir de la v. 18) qui écrase le fichier animate.ids et corrompt l'installation d'IA en ajoutant des doublons et des slots d'animation valables uniquement pour les jeux EE. &#x1F621;</li>
+					<li style="margin-left:-8%; margin-right:-8%;">Correction d'un <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">problème d'affichage des animations de Moinesse des femmes humaines</a> : leurs animations d'armes n'étaient pas affichées correctement, à la fois dans leurs mains et sur les paperdolls. Remplacer leurs slot d'animation de la catégorie CHARACTER BGII WQN paletted par la catégorie CHARACTER BGII WQL paletted a résolu le problème. (Merci à eyre-j pour l'avoir signalé)</li>
+				  </ul>
 				<li style="margin-left:-4%; margin-right:-8%;">Compatibilité avec NTotSC : suppression de la correction du dialogue ntkeelor.dlg (Keelor le nain) puisque les dernières version de NTotSC l'ont déjà fait.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ne corrige plus les noms de créatures (suppression des espaces superflus et des retours à la ligne) si le mod est installé dans une langue différente de celle du jeu.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Ajout de la nouvelle option d'installation <em>ia_sort_ids</em> (1 par défaut) : trie automatiquement par ordre hexadécimal les fichiers animate.ids, anisnd.ids et aniwksnd.2da après leur modification (très utile pour les moddeurs...). Si vous souhaitez accélérer le temps d'installation du mod de 1 ou 2 secondes, attribuez-lui la valeur 0. &#128521;</li>

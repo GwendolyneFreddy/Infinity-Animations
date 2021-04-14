@@ -8,7 +8,10 @@
  *  -----------                                                                                           *
  *      - Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids   *
  *        and breaks IA installation by adding duplicated entries and populating the file with animation  *
- *        slots used by EE games...                                                                       *
+ *        slots used by EE games... (#40)                                                                 *
+ *      - Fixed an issue with Moinesse human female animations: their weapon animations were not          *
+ *        displayed properly both in character's hands and paperdolls. Moving their animation slots from  *
+ *        CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted slots solved the issue (#749).       *
  * ====================================================================================================== */
 
 SILENT
@@ -317,8 +320,8 @@ ACTION_IF is_bwp_fixpack BEGIN
 
 END
 
-//2. Then, apply original IA patches.
-// ----------------------------------
+// 2. Then, apply original IA patches.
+// -----------------------------------
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~DEMIGORGON~             ~DEMOGORGON~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GHOUL_REVEANT~          ~REVENANT~         // renamed to avoid conflict with EE games
@@ -344,14 +347,14 @@ COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_CORNUGONSKI~         ~CORNUGON~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ICE_GOLEM~              ~GOLEM_ICE~        // renamed to avoid conflict with EE games
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GLAB~                ~GLABREZU~
-//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GHOUL_GREATER~ ~GHOUL_IWD~
+//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GHOUL_GREATER~          ~GHOUL_IWD~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GHOUL~               ~GHOUL_GREATER~    // former GHOUL_IWD, renamed to avoid conflict with EE games
-//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GHAST_GREATER~ ~GHAST_IWD~
+//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GHAST_GREATER~          ~GHAST_IWD~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GHAST~               ~GHAST_GREATER~    // former GHAST_IWD, renamed to avoid conflict with EE games
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GOBLINELITE~            ~GOBLIN_ELITE~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARDCASTER1~          ~LIZARD_MAN_ELITE~ // former LIZARDMAN_BROWN, renamed to avoid conflict with EE games
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARDMAN2~             ~LIZARD_MAN~       // former LIZARDMAN_GREEN, renamed to avoid conflict with EE games
-//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARD_MAN~ ~LIZARDMAN_GREEN~
+//	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARD_MAN~             ~LIZARDMAN_GREEN~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARDCASTER3~          ~LIZARD_KING~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~LIZARD_MAN_KING~        ~LIZARD_KING~      // fixed BG2 Fixpack entry, renamed to avoid conflict with EE games
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~MYCONID2~               ~MYCONID_BLUE~
@@ -717,7 +720,7 @@ APPEND ~animate.ids~ ~0x6415 CLERIC_FEMALE_DWARF_BG1~       UNLESS ~^0x6415~    
 APPEND ~animate.ids~ ~0x6416 CLERIC_MALE_HALFLING_BG1~      UNLESS ~^0x6416~            // former L_CLERIC_MALE_HALFLING
 APPEND ~animate.ids~ ~0x6417 CLERIC_FEMALE_HALFLING_BG1~    UNLESS ~^0x6417~            // former L_CLERIC_FEMALE_HALFLING
 APPEND ~animate.ids~ ~0x6420 FIGHTER_MALE_HUMAN_BG1~        UNLESS ~^0x6420~            // former L_FIGHTER_MALE_HUMAN
-APPEND ~animate.ids~ ~0x6421 FIGHTER_FEMALE_HUMAN_BG1~      UNLESS ~^0x6421~            // former L_FIGHTER_FEMALE_HUMAN 
+APPEND ~animate.ids~ ~0x6421 FIGHTER_FEMALE_HUMAN_BG1~      UNLESS ~^0x6421~            // former L_FIGHTER_FEMALE_HUMAN
 APPEND ~animate.ids~ ~0x6422 FIGHTER_MALE_ELF_BG1~          UNLESS ~^0x6422~            // former L_FIGHTER_MALE_ELF
 APPEND ~animate.ids~ ~0x6423 FIGHTER_FEMALE_ELF_BG1~        UNLESS ~^0x6423~            // former L_FIGHTER_FEMALE_ELF
 APPEND ~animate.ids~ ~0x6424 FIGHTER_MALE_DWARF_BG1~        UNLESS ~^0x6424~            // former L_FIGHTER_MALE_DWARF
@@ -740,13 +743,13 @@ APPEND ~animate.ids~ ~0x6446 THIEF_MALE_HALFLING_BG1~       UNLESS ~^0x6446~    
 APPEND ~animate.ids~ ~0x6447 THIEF_FEMALE_HALFLING_BG1~     UNLESS ~^0x6447~            // former L_THIEF_FEMALE_HALFLING
 
 APPEND ~animate.ids~ ~0x683D MOINESSE_BARBARIAN_MALE_HUMAN~ UNLESS ~^0x683[Dd]~
-APPEND ~animate.ids~ ~0x683E MOINESSE_NINJA_MALE_HUMAN~     UNLESS ~^0x683{Ee]~
-APPEND ~animate.ids~ ~0x683F MOINESSE_VAMPIRE~              UNLESS ~^0x683{Ff]~
+APPEND ~animate.ids~ ~0x683E MOINESSE_NINJA_MALE_HUMAN~     UNLESS ~^0x683[Ee]~
+APPEND ~animate.ids~ ~0x683F MOINESSE_VAMPIRE~              UNLESS ~^0x683[Ff]~
 APPEND ~animate.ids~ ~0x6841 MOINESSE_MAGE_FEMALE_ELF~      UNLESS ~^0x6841~
-APPEND ~animate.ids~ ~0x6845 MOINESSE_DRUID_FEMALE_HUMAN~   UNLESS ~^0x6845~
-APPEND ~animate.ids~ ~0x6846 MOINESSE_FIGHTER_FEMALE_HUMAN~ UNLESS ~^0x6846~
-APPEND ~animate.ids~ ~0x6847 MOINESSE_MAGE_FEMALE_HUMAN~    UNLESS ~^0x6847~
-APPEND ~animate.ids~ ~0x6848 MOINESSE_THIEF_FEMALE_HUMAN~   UNLESS ~^0x6848~
+APPEND ~animate.ids~ ~0x684D MOINESSE_DRUID_FEMALE_HUMAN~   UNLESS ~^0x684[Dd]~         // former 0x6845 - moved to a WQL paletted slot (was WQN) to solve the issue of weapon animations not being displayed properly both in character's hands and paperdolls.
+APPEND ~animate.ids~ ~0x684E MOINESSE_FIGHTER_FEMALE_HUMAN~ UNLESS ~^0x684[Ee]~         // former 0x6846 - id.
+APPEND ~animate.ids~ ~0x684G MOINESSE_MAGE_FEMALE_HUMAN~    UNLESS ~^0x684[Ff]~         // former 0x6847 - id.
+APPEND ~animate.ids~ ~0x6850 MOINESSE_THIEF_FEMALE_HUMAN~   UNLESS ~^0x6850~            // former 0x6847 - id.
 
 APPEND ~animate.ids~ ~0x7302 SHAMBLING_MOUND~               UNLESS ~^0x7302~
 APPEND ~animate.ids~ ~0x7312 ELEMENTAL_FIRE_PURPLE~         UNLESS ~^0x7312~

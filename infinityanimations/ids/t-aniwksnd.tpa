@@ -37,7 +37,6 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_ICE_GOLEM~                               
 */
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE0F2[%ws%]+IC_WAILING_VIRGIN[%ws%]+WAL_09[%ws%]+4~  ~0xE0F2  WAILING_VIRGIN                 *           *~   // id. + remove walking sound (was WAL_09  4)
 
-
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IC_GOBLIN~                                            ~GOBLIN~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GOBLINELITE~                                          ~GOBLIN_ELITE~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~0xE500[%ws%]+IC_LIZARDCASTER1[%ws%]+WAL_09[%ws%]+4~   ~0xE500  LIZARD_MAN_ELITE               WAL_24      4~  // former LIZARDMAN_BROWN - from 0xe500.ini
@@ -125,7 +124,7 @@ APPEND ~aniwksnd.2da~ ~0x130A  ELEMENTAL_ZAAMAN_WOW           WAL_30      4~    
 
 APPEND ~aniwksnd.2da~ ~0x5001  DRIDER_FEMALE                  WAL_14      5~    UNLESS ~^0x5001~           // from 0xe282.ini
 APPEND ~aniwksnd.2da~ ~0x5002  DRIDER_MALE                    WAL_14      5~    UNLESS ~^0x5002~           // from 0xe283.ini
-APPEND ~aniwksnd.2da~ ~0x500E  BUGBEAR                        WAL_24      4~    UNLESS ~^0x500{Ee]~        // from 0xE266.ini
+APPEND ~aniwksnd.2da~ ~0x500E  BUGBEAR                        WAL_24      4~    UNLESS ~^0x500[Ee]~        // from 0xE266.ini
 APPEND ~aniwksnd.2da~ ~0x500F  BUGBEAR_CAPTAIN                WAL_24      4~    UNLESS ~^0x500[Ff]~        // from 0xE267.ini
 //TODO APPEND ~aniwksnd.2da~ ~0x5010  CHIMERA		~    UNLESS ~^0x5010~           // same as
 APPEND ~aniwksnd.2da~ ~0x5011  ELEMENTAL_WATER_SMALL          WAL_01      5~    UNLESS ~^0x5011~           // same as 0x5039 ELEMENTAL_WATER
@@ -337,10 +336,10 @@ APPEND ~aniwksnd.2da~ ~0x683D  MOINESSE_BARBARIAN_MALE_HUMAN  TERRAIN     *~    
 APPEND ~aniwksnd.2da~ ~0x683E  MOINESSE_NINJA_MALE_HUMAN      TERRAIN     *~    UNLESS ~^0x683[Ee]~
 APPEND ~aniwksnd.2da~ ~0x683F  MOINESSE_VAMPIRE               TERRAIN     *~    UNLESS ~^0x683[Ff]~
 APPEND ~aniwksnd.2da~ ~0x6841  MOINESSE_MAGE_FEMALE_ELF       TERRAIN     *~    UNLESS ~^0x6841~
-APPEND ~aniwksnd.2da~ ~0x6845  MOINESSE_DRUID_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x6845~
-APPEND ~aniwksnd.2da~ ~0x6846  MOINESSE_FIGHTER_FEMALE_HUMAN  TERRAIN     *~    UNLESS ~^0x6846~
-APPEND ~aniwksnd.2da~ ~0x6847  MOINESSE_MAGE_FEMALE_HUMAN     TERRAIN     *~    UNLESS ~^0x6847~
-APPEND ~aniwksnd.2da~ ~0x6848  MOINESSE_THIEF_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x6848~
+APPEND ~aniwksnd.2da~ ~0x684D  MOINESSE_DRUID_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x684[Dd]~        // former 0x6845 - moved to a WQL paletted slot (was WQN) to solve the issue of weapon animations not being displayed properly both in character's hands and paperdolls.
+APPEND ~aniwksnd.2da~ ~0x684E  MOINESSE_FIGHTER_FEMALE_HUMAN  TERRAIN     *~    UNLESS ~^0x684[Ee]~        // former 0x6846 - id.
+APPEND ~aniwksnd.2da~ ~0x684F  MOINESSE_MAGE_FEMALE_HUMAN     TERRAIN     *~    UNLESS ~^0x684[Ff]~        // former 0x6847 - id.
+APPEND ~aniwksnd.2da~ ~0x6850  MOINESSE_THIEF_FEMALE_HUMAN    TERRAIN     *~    UNLESS ~^0x6850~           // former 0x6848 - id.
 
 APPEND ~aniwksnd.2da~ ~0x7F3F  GIANT_YAGA-SHURA               TERRAIN     *~    UNLESS ~^0x7[Ff]3[Ff]~     // former FIRE_GIANT_YAGA_SHURA - same as 0x7F3E GIANT_FIRE
 

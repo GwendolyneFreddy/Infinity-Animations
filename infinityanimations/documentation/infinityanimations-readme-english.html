@@ -1653,10 +1653,10 @@
 			<img width=29 height=74 src="images/0x5d4b.gif" title="bariaur_male_pst" />
 			<img width=31 height=81 src="images/0x5dad.gif" title="townie_wizard_pst" />
 			<img width=26 height=55 src="images/0x6841.gif" title="moinesse_mage_female_elf" />
-			<img width=25 height=63 src="images/0x6845.gif" title="moinesse_druid_female_human" />
-			<img width=25 height=63 src="images/0x6846.gif" title="moinesse_fighter_female_human" />
-			<img width=31 height=63 src="images/0x6847.gif" title="moinesse_mage_female_human" />
-			<img width=25 height=64 src="images/0x6848.gif" title="moinesse_thief_female_human" />
+			<img width=25 height=63 src="images/0x684d.gif" title="moinesse_druid_female_human" />
+			<img width=25 height=63 src="images/0x684e.gif" title="moinesse_fighter_female_human" />
+			<img width=31 height=63 src="images/0x684f.gif" title="moinesse_mage_female_human" />
+			<img width=25 height=64 src="images/0x6850.gif" title="moinesse_thief_female_human" />
 			<img width=26 height=64 src="images/0x683f.gif" title="moinesse_vampire" />
 			<img width=25 height=63 src="images/0x683e.gif" title="moinesse_ninja_male_human" />
 			<img width=25 height=63 src="images/0x683d.gif" title="moinesse_barbarian_male_human" />
@@ -2160,7 +2160,11 @@
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-8%;">Split this huge component into smaller ones for more comfortable readability and maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replace_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correct_creature animations.tpa</em>); <em>ia_correct_weapon_animations.tpa</em>.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added ToBEx compatibility: checks for ToBEx external walking sound files (<em>t-aniwksnd.tpa</em>) and resolves soundsets creature animation conflicts (<em>ia_soundsets_conflicts.tpa</em>).</li>
-				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em>: Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. &#x1F621;</li>
+				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em>:</li>
+				  <ul>
+					<li style="margin-left:-8%; margin-right:-8%;">Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. &#x1F621;</li>
+					<li style="margin-left:-8%; margin-right:-8%;">Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)</li>
+				  </ul>
 				<li style="margin-left:-4%; margin-right:-8%;">NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">No longer fixes creature names strref typos (deletes extra spaces and line breaks) if the selected mod language is not the game language.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added new <em>ia_sort_ids</em> installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. &#128521;</li>
