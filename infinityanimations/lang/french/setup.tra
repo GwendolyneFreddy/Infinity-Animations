@@ -390,7 +390,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 @1030 = ~Le fichier %BASH_FOR_FILE% existe deja dans le dossier %DestinationDir% et sera ecrase.~
 @1031 = ~Le fichier %BASH_FOR_FILE% existe deja dans le jeu et sera ecrase.~
 
-@1041 = ~RAPPEL : langue dans laquelle les jeux de sons devraient etre installes = %soundset_lang% - %soundset_lang_ee%~
+@1041 = ~RAPPEL : langue dans laquelle les jeux de son devraient etre installes = %soundset_lang% - %soundset_lang_ee%~
 @1042 = ~CONTENU A TRAITER : %iacontent% (#%archives%)~
 @1043 = ~  ==> Contenu du repertoire %iacontent% (#%archives%) installe dans le repertoire override : %Count% fichiers copies (valeur de l'option de configuration ia_%iacontent% = %variable%).~
 @1044 = ~  ==> Contenu du repertoire %iacontent% (#%archives%) non installe dans le repertoire override (valeur de l'option de configuration ia_%iacontent% = %variable%).~
@@ -400,7 +400,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 @1052 = ~Restauration des fichiers son traduits dans les jeux EE.
 --------------------------------------------------------~
 
-@1061 = ~Fichiers sons wav detectes (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
+@1061 = ~Fichiers son wav detectes (%wav_exists%) ==> sounds_folder_found = %sounds_folder_found%~
 @1062 = ~Fichiers son specifiques a l'animation detectes~
 @1063 = ~Aucun fichier son specifique a l'animation n'a ete detecte.~
 @1064 = ~Repertoire de fichiers son trouve = %sounds_folder%~
@@ -411,7 +411,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 /* --------------------- *
  *  gw_functions_ee.tpa  *
  * --------------------- */
-@1100 = ~  ==> %countf% fichier(s) manquant(s) specifiques a EE de l'animation %folder% installe(s)~
+@1100 = ~  ==> %countf% fichier(s) manquant(s) specifique(s) a EE de l'animation %folder% installe(s)~
 @1101 = ~  ==> %countf% fichier(s) manquant(s) de l'animation IE %folder% installe(s)~
 @1102 = ~  ==> %countf% fichier(s) manquant(s) de l'animation IA %folder% installe(s)~
 
@@ -441,7 +441,7 @@ contient bien le sous-repertoire bg1_character_animations.~
 @1214 = ~(Competence en style de combat a deux armes)~
 @1215 = ~(cimeterre ou katana)~
 @1216 = ~Modifier~
-@1217 = ~[Y(Oui)/N(on)]?~
+@1217 = ~[Y(Oui) / N(on)]?~
 @1218 = ~a un objet ou une competence qui peut
 crasher le jeu avec sa nouvelle animation~
 @1219 = ~Le modifier quand meme ? [Y(Oui)/N(on)]~

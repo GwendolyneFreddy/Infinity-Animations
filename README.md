@@ -909,15 +909,15 @@ This component patches any changed creature animation in saved games to prevent 
 - [0] Infinity Animations (t-main.tpa, t-main_ee.tpa)
     - Split this huge component into smaller ones for more comfortable readability and maintenance (*ia_mod_content_check.tpa*, *ia_restore_bg2_animations.tpa*, *ia_replace_low_animations.tpa*, *ia_update_cre_animation_offset.tpa*, *ia_soundsets_conflicts.tpa*, *ia_correct_creature animations.tpa*, *ia_correct_weapon_animations.tpa*). :wink:
     - Added ToBEx compatibility: checks for ToBEx external walking sound files (*t-aniwksnd.tpa*) and resolves soundsets creature animation conflicts (*ia_soundsets_conflicts.tpa*).
-    - <ins>t-animate.tpa</ins>:
-        - Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
-        - Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)
     - NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.
     - No longer fixes creature names strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.
     - Added new *ia_sort_ids* installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. :wink:
     - <ins>ia_replace_low_animations.tpa</ins>:
         - Re-formated *t-low_fix.log* file entries to be more friendly readable.
         - Appends *t-cre_fixer.log* file only if needed.
+    - <ins>t-animate.tpa</ins>:
+        - Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. :rage:
+        - Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)
     - <ins>ia_restore_bg2_animations.tpa</ins>:
         - Integrated <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-12#entry562939">Lollorian's Ghouls transforming to Golems fix</a> and <a href="http://www.shsforums.net/topic/47635-notes-oddities-and-possible-bugs-in-my-bwp-game-spoilers/page-35#entry579291">Lollorian's patch to handle non-biffed installations</a>. Source: <a href="https://github.com/BigWorldProject/Big-World-Fixpack/commit/5ff3f32fda8f22711b55cf5065dca194d52cbffd">commit</a>.
         - Fixed <a href="http://www.shsforums.net/topic/48626-cyclops-bug/">Cyclops</a> and <a href="http://www.shsforums.net/topic/47995-zombie/">Yellow Zombie</a> animations not being disabled bugs.

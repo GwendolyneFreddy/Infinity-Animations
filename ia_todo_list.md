@@ -18,7 +18,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Add missing localized sound clips (2021.03.25)
 - [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Add missing localized sound clips (2021.03.26)
 - [x] Resolve the f.....g mess with black dragon sound clips and ini files, different and buggy in EE games (2021.03.27)
-- [ ] 0x6405 DOOM_GUARD and 0x6406 DOOM_GUARD_LARGER: populate ini files with IA t-dug sound clips?
+- [ ] 0x6405 DOOM_GUARD and 0x6406 DOOM_GUARD_LARGER: populate ini files with IA t-dugnn sound clips?
 - [ ] IWD:EE: harmonize 1201.ini and 1203.ini (DRAGON_BLACK and DRAGON_GREEN) sound clips (replace black0[1-5] with black0[1-5]a)?
 
 ## 
@@ -32,6 +32,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### EE version
 
+- [ ] <ins>Note for modders</ins>: add a section explaining ini files keywords meanings.
 - [ ] <ins>All components</ins>: list all EE games specific creatures that need to be patched.
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
 - [ ] <ins>IA Reference Picker documentation</ins>: update animation types description.

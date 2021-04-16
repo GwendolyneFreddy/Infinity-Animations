@@ -9,8 +9,8 @@
  *      - Variables needed for installation are read from infinityanimations-config-default.ini or infinityanimations-config-user.ini files.                                           *
  *        The previous version interrupted installation when IA content was missing, asked for downloading them and to reinstall the mod. As of v6.0.0, those controls set during      *
  *        installation have been moved into infinityanimations-config-default.ini file in infinityanimations folder. This file provides a standard installation. If players want to    *
- *        The define their own customized installation, they have to modify the variables in infinityanimations-config-default.ini and save it as infinityanimations-config-user.ini.  *
- *        installation process will read both .ini files and prioritize user values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation       *
+ *        define their own customized installation, they have to modify the variables in infinityanimations-config-default.ini and save it as infinityanimations-config-user.ini.      *
+ *        The installation process will read both .ini files and prioritize user values. If a value is not set or mismatched in infinityanimations-config-user.ini, any installation   *
  *        failure will be prevented by reverting it back to its default value.                                                                                                         *
  *      - Modified animations namespaces, now compatible with non-Western code pages: got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western  *
  *        code page was detected (#50).                                                                                                                                                *
@@ -440,11 +440,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ring95.itm AND NOT FILE_EXISTS_IN_GAME ringg95.itm
 		PATCH_IF (%SOURCE_SIZE% > 0x71) BEGIN          // file size sanity check (filters out 0 byte files i.e. ALLOW_MISSING)
 			LPF ADD_ITEM_EQEFFECT                      // makes it glow
 				INT_VAR	opcode = 8                     // set colorglow solid
-						target = 1                     // self
-						timing = 2                     // while equipped
-						parameter1 = 0xc800            // green/blue/red/2 empty
-						parameter2 = 2                 // Major Color
-						probability1 = 100             // probability1: 100%
+				        target = 1                     // self
+				        timing = 2                     // while equipped
+				        parameter1 = 0xc800            // green/blue/red/2 empty
+				        parameter2 = 2                 // Major Color
+				        probability1 = 100             // probability1: 100%
 			END
 		END
 

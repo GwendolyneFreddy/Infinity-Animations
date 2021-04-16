@@ -2160,11 +2160,6 @@
 			  <ul style="padding-top: 4px">
 				<li style="margin-left:-4%; margin-right:-8%;">Split this huge component into smaller ones for more comfortable readability and maintenance (<em>ia_mod_content_check.tpa</em>, <em>ia_restore_bg2_animations.tpa</em>, <em>ia_replace_low_animations.tpa</em>, <em>ia_update_cre_animation_offset.tpa</em>, <em>ia_soundsets_conflicts.tpa</em>, <em>ia_correct_creature animations.tpa</em>); <em>ia_correct_weapon_animations.tpa</em>.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added ToBEx compatibility: checks for ToBEx external walking sound files (<em>t-aniwksnd.tpa</em>) and resolves soundsets creature animation conflicts (<em>ia_soundsets_conflicts.tpa</em>).</li>
-				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em>:</li>
-				  <ul>
-					<li style="margin-left:-8%; margin-right:-8%;">Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. &#x1F621;</li>
-					<li style="margin-left:-8%; margin-right:-8%;">Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)</li>
-				  </ul>
 				<li style="margin-left:-4%; margin-right:-8%;">NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">No longer fixes creature names strref typos (deletes extra spaces and line breaks) if the selected mod language is not the game language.</li>
 				<li style="margin-left:-4%; margin-right:-8%;">Added new <em>ia_sort_ids</em> installation option (1 by default): automatically sorts animate.ids, anisnd.ids and aniwksnd.2da files after modification and appending (maybe useful for modders...). If you want to speed up installation time by 1 or 2 seconds, set it to 0. &#128521;</li>
@@ -2172,6 +2167,11 @@
 				  <ul>
 					<li style="margin-left:-8%; margin-right:-8%;">Re-formated <em>t-low_fix.log</em> file entries to be more friendly readable.</li>
 					<li style="margin-left:-8%; margin-right:-8%;">Appends <em>t-cre_fixer.log</em> file only if needed.</li>
+				  </ul>
+				<li style="margin-left:-4%; margin-right:-8%;"><em>t-animate.tpa</em>:</li>
+				  <ul>
+					<li style="margin-left:-8%; margin-right:-8%;">Fixed the regression mess introduced by BWP Fixpack (as of v. 18) that overwrites animate.ids and breaks IA installation by adding duplicated entries and populating the file with animation slots used by EE games. &#x1F621;</li>
+					<li style="margin-left:-8%; margin-right:-8%;">Fixed an <a href="https://github.com/SpellholdStudios/Infinity-Animations/issues/3">issue with Moinesse human female animations</a>: their weapon animations were not displayed properly both in character's hands and paperdolls. Moving their animation slots from CHARACTER BGII WQN paletted to CHARACTER BGII WQL paletted solved the issue. (thanks eyre-j for reporting it)</li>
 				  </ul>
 				<li style="margin-left:-4%; margin-right:-6%;"><em>ia_restore_bg2_animations.tpa</em>:</li>
 				  <ul>
