@@ -863,7 +863,8 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
     - Archive IA BGII_IWDII : sanglier arctique, gobelours, capitaine gobelours, tréant, petit élémentaire d'eau, géant fomorian, gobelins (vert avec hache, vert avec arc, capitaine, d'élite vert avec hache, d'élite vert avec arc, chevaucheur de worg, capitaine chevaucheur de worg), crochorreur, kegs, lémure, orque mort-vivant avec hache, blaireau-garou, rat-garou, worg.
     - Archive IA IWD : petites armures animées (bronze/sombre/verte), barbares guerriers (bleu, rouge, marron), fatalité rampante, mort noyé, élémentaire (de terre, de feu, d'eau), géant du feu, géant verbeeg, nécrophage des tertres, rémorhaz, yeti.
     - Archive IA Shadows_Harpy_Frostgiant : ombres alternatives (« murky »), géant du givre.
-    - Infinity Animations installe désormais automatiquement les fichiers son des créatures dans la langue du jeu. Une <a href="#forcelanguage">variable<a> définie dans le fichier *infinityanimations-config-default.ini* permet toutefois de forcer la langue par défaut de ces fichiers.
+  - Correction des coordonnées x et y des paperdolls des animations de personnages de BG1 pour afficher correctement leur équipement dans l'écran d'inventaire.
+  - Infinity Animations installe désormais automatiquement les fichiers son des créatures dans la langue du jeu. Une <a href="#forcelanguage">variable<a> définie dans le fichier *infinityanimations-config-default.ini* permet toutefois de forcer la langue par défaut de ces fichiers.
 <br><br>
 
 &#9755; <ins>b. Refonte générale</ins>

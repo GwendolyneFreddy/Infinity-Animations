@@ -865,7 +865,8 @@ This component patches any changed creature animation in saved games to prevent 
     - IA BGII_IWDII content: Arctic Boar, Bugbear, Bugbear Captain, Dark Treant, Elemental Water small, Giant Fomorian, Goblin axe green, Goblin bow green, Goblin Captain, Goblin elite axe green, Goblin elite bow green, Goblin worgrider, Goblin worgrider Captain, Hook Horror, Kegs, Lemure, Orc Axe Undead, Werebadger, Wererat, Worg.
     - IA IWD content: Animated Plate small (bronze, dark, green), Barbarian warrior (tan, red, brown), Creeping Doom, Drowned Dead, Elemental (Earth, Fire, Water), Giant Fire, Giant Verbeeg, Remorhaz, Tundra Yeti, Wight Barrow.
     - IA Shadows_Harpy_Frostgiant content: Alternate ("murky") Shadows, Frost Giant.
-    - Infinity Animations now automatically installs creatures sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in *infinityanimations-config-default.ini* file gives the choice to bypass the default soundset language.
+  - Fixed BG1 characters animations paperdolls x and y offsets to display properly their equipment overlays in inventory screen.
+  - Infinity Animations now automatically installs creatures sound clips accordingly to the game language localization whenever relevant. However, a <a href="#forcelanguage">variable</a> set in *infinityanimations-config-default.ini* file gives the choice to bypass the default soundset language.
 <br><br>
 
 &#9755; <ins>b. General overhaul and re-looking</ins>

@@ -101,12 +101,16 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### Moinesse's Avatars for IA component [7000-7010-7020-7030]
 
+- [ ] Fix paperdolls x and y offsets to display equipment overlays properly: MOINESSE_THIEF_FEMALE.
 - [ ] Resolve illasera duplicate entries in GW_moinesse_mage_female_human and GW_moinesse_fighter_female_human arrays.
 
 ## 
 
 #### BG1 Animations for NPCs component [8000-8010-8020-8030]
 
+- [ ] Fix paperdolls x and y offsets to display properly equipment overlays.
+    - Classic games: CLERIC_MALE_ELF, CLERIC_FEMALE_HUMAN, CLERIC_FEMALE_ELF, FIGHTER_MALE_ELF, FIGHTER_FEMALE_ELF.
+    - EE games: CLERIC_FEMALE_HALFORC_BG1, FIGHTER_FEMALE_HALFORC_BG1 (THIEF_FEMALE_HALFORC_BG1 DONE!).
 - [ ] Why not dynamically build an array of NPCs to be patched?
 - [ ] What about halforc animations?
 - [ ] Write a more inclusive 1PP compatibility (maybe include some 1pp BG1 avatars and animations content)?
