@@ -43,7 +43,6 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 	 *    Check game's localization    *
 	 * ------------------------------- */
 
-//	OUTER_TEXT_SPRINT game_lang ~en_us~
 	// 1. EE games: language is defined by WeiDU EE_LANGUAGE variable
 	ACTION_IF (VARIABLE_IS_SET "EE_LANGUAGE") BEGIN
 
@@ -91,7 +90,7 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 	OUTER_SET is_tdd         = (FILE_EXISTS_IN_GAME ~ddfrost1.cre~) ? 1 : 0
 	OUTER_SET is_ts          = (FILE_EXISTS_IN_GAME ~purang.cre~) ? 1 : 0
 	OUTER_SET is_rpgkit      = (FILE_EXISTS_IN_GAME ~s#crow.cre~) ? 1 : 0
-	OUTER_SET is_bwp_fixpack = ((FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x6621~) = 1) AND (FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x7D04~) = 1)) ? 1 : 0 // 0x6621 FIGHTER_FEMALE_HUMAN_BG1 - 0x7D04 HARLOT_FIGHTER ou RESOURCE_CONTAINS
+	OUTER_SET is_bwp_fixpack = (is_classic AND (FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x6621~) = 1) AND (FILE_CONTAINS_EVALUATED (~animate.ids~ ~0x7D04~) = 1)) ? 1 : 0 // 0x6621 FIGHTER_FEMALE_HUMAN_BG1 - 0x7D04 HARLOT_FIGHTER ou RESOURCE_CONTAINS
 /* Mod checks: BP (looking for TUNDRA_YETI animation)
 // ------------------------------------------------------------------------------
 LAF ps_recursive_search STR_VAR ParentDir = "infinityanimations/archives/iwd" ChildDirRegex = "iwd_tundra_yeti" FileRegex = "^3daa1.bam$" RET F_Exists = Count END
@@ -254,7 +253,7 @@ Creature  Item      Slot   Issue
 
 	// Converts once .tra files
 	LAF ~check_ini~ STR_VAR ini = ia_force_tra_rebuild RET ia_force_tra_rebuil = value END
-	ACTION_IF (!FILE_EXISTS "%MOD_FOLDER%/ia_languages_installed.mrk"  || ia_force_tra_rebuild) BEGIN
+	ACTION_IF is_ee AND (!FILE_EXISTS "%MOD_FOLDER%/ia_languages_installed.mrk"  || ia_force_tra_rebuild) BEGIN
 
 		COPY ~.../infinityanimations-inlined/blank~ ~%MOD_FOLDER%/ia_languages_installed.mrk~
 
@@ -282,7 +281,7 @@ Creature  Item      Slot   Issue
 	LOAD_TRA ~infinityanimations/lang/%LANGUAGE%/setup.tra~
 
 	/* TRAs used in original games must be loaded by hand */
-	ACTION_IF (NOT is_ee) BEGIN
+	ACTION_IF is_classic BEGIN
 		LOAD_TRA ~%MOD_FOLDER%/lang/%base_language%/strings.tra~	~%MOD_FOLDER%/lang/%LANGUAGE%/strings.tra~
 	END
 
