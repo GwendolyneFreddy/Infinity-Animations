@@ -11,13 +11,13 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 - [ ] Remove all DEBUGGING CONTROL LOG messages
 - [ ] Arrays: fill all unknown creature mods references
-- [x] Check WRITE_LONG 0x28 ID values
-- [x] Modders content: Check Ulb's sound files encoding (2021.02.27: converted to wavc)
-- [ ] Fix Ellesime White-Haired\3aag2.bam <a ref="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/?p=490477">red hair color</a>
+- [x] Checked WRITE_LONG 0x28 ID values
+- [x] Modders content: Checked Ulb's sound files encoding (2021.02.27: converted to wavc)
+- [x] Fixed Ellesime White-Haired\3aag2.bam <a ref="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/page-4#entry490477">red hair color</a> (2021.04.24 : thanks Sam!)
 - [ ] Check ABISHAI_BLACK bam files (classic and EE games versions seem to be different).
-- [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Add missing localized sound clips (2021.03.25)
-- [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Add missing localized sound clips (2021.03.26)
-- [x] Resolve the f.....g mess with black dragon sound clips and ini files, different and buggy in EE games (2021.03.27)
+- [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Added missing localized sound clips (2021.03.25)
+- [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Added missing localized sound clips (2021.03.26)
+- [x] Resolved the f.....g mess with black dragon sound clips and ini files, different and buggy in EE games (2021.03.27)
 - [ ] 0x6405 DOOM_GUARD and 0x6406 DOOM_GUARD_LARGER: populate ini files with IA t-dugnn sound clips?
 - [ ] IWD:EE: harmonize 1201.ini and 1203.ini (DRAGON_BLACK and DRAGON_GREEN) sound clips (replace black0[1-5] with black0[1-5]a)?
 
@@ -32,6 +32,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 #### EE version
 
+- [ ] Check new patches: maybe they added missing animations? (WIP)
 - [ ] <ins>Note for modders</ins>: add a section explaining ini files keywords meanings.
 - [ ] <ins>All components</ins>: list all EE games specific creatures that need to be patched.
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
@@ -62,20 +63,20 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 
 ## 
 
-##### Cambions get Isair Animation component [260-280]
+#### Cambions get Isair Animation component [260-280]
 
 - [ ] gw_ia_cambions_arrays.tph: Should we removed from this array a few creatures designed to be Lesser demons and not cambions? [demlord and uddemon (BG2), kz#dmlrd (Kiara-Zaiya), tg#did1 (Refinements)]
 
 ## 
 
-##### Distinctive Undead component [400]
+#### Distinctive Undead component [400]
 
 - [ ] Remove IA Base Animations content requirement as it is automatically installed by main component as of this version?
 - [ ] <ins>*Ghoul Queens get the ghoul_queen animation*</ins>: replace `ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ AND FILE_EXISTS_IN_GAME ~3erg1.bam~` condition with Fiends_Genies content requirement check?
 
 ## 
 
-##### Seer Animation component [450-455]
+#### Seer Animation component [450-455]
 
 - [ ] gw_ia_seers_arrays.tph: Why not merging all arrays into one single and use t-seer variable to patch only beggars, slaves, or both?
 
