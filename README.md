@@ -3,7 +3,7 @@
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Infinity-Animations?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
-<a href="README-FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Readme français"></a>
+<a href="README-FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Lisez-moi français"></a>
 
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
@@ -31,9 +31,9 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE and EET<h3>
 
 ## 
 
-[Read the mod's readme](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-english.html)
+:page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-english.html)
 
-[Download the mod at Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
+:inbox_tray: [Download the mod at Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
 
 ## 
 
@@ -51,19 +51,20 @@ This mod patches Baldur's Gate II: Throne of Bhaal to support additional creatur
 
 Infinity Animations supports a wide variety of animation types from Baldur's Gate I, Baldur's Gate II, Icewind Dale I, Icewind Dale II, Planescape: Torment and Neverwinter Nights. As an added bonus, the mod restores Baldur's Gate I character animations in their entirety, and paperdolls have been unlocked for some animations that did not support them previously.
 
-An important feature for players who use several large mods (known as 'megamods') is a resolution of animation conflicts, and a restoration of standard animations that megamods have overwritten.
+An important feature for players who use several large mods (known as 'mega-mods') is a resolution of animation conflicts, and a restoration of standard animations that mega-mods have overwritten.
 
 
 Finally, this mod contains optional components that implement many new animations into the game. Ongoing work will address sound sets for new animations. While the number of supported animations may not be 'infinite' as the name suggests, it should be large enough to accommodate everyone's present (and in all likelihood future) needs.
 
 **Key features:**
+- As of version 6.0.0, is also compatible with EE games (except PsT:EE)
 - Restores Baldur's Gate I character animations
 - Improves paperdoll support for existing animations
 - Adds custom game animations for characters and creatures (including dragons)
 - Allows use of many different animation *types* (some never before seen in the games)
 - Resolves the problems of animation stacking, and of animations slot, naming and creature soundsets conflicts
 - Harmonizes animations names in all games to avoid conflicts with EE games. For more details, please read <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_animations_ref_chart.html">Infinity Animations Reference Chart</a>
-- As of version 6.0.0, automatically install creature sound clips accordingly to the game language localization
+- As of version 6.0.0, automatically installs creature sound clips accordingly to the game language localization
 - Offers GUI support for adding new animations
 - Lets you watch as the percentage of free animation entries refuses to go down &#128578;
 <div align="right"><a href="#top">Back to top</a></div>
@@ -99,7 +100,7 @@ If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-in
 
 >Although it is not required for Infinity Animations to function properly, ToB players are strongly recommended to download and install the latest version of the <a href="https://www.gibberlings3.net/mods/fixes/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 
-In a perfect world, Infinity Animations would be installed as a data base that would be usable by anyone who would like to add animation entries to the game without being bogged down by issues of mod conflicts and incompatibilities. Unfortunately, since it was designed a long time after the first megamods generation that were overwriting game files, in particular to resolve animation conflicts and restore standard animations that megamods have overwritten; it needs to be installed after those megamods, at least until their authors will update them to benefit from Infinity Animations content... &#128577;
+In a perfect world, Infinity Animations would be installed as a data base that would be usable by anyone who would like to add animation entries to the game without being bogged down by issues of mod conflicts and incompatibilities. Unfortunately, since it was designed a long time after the first mega-mods generation that were overwriting game files, in particular to resolve animation conflicts and restore standard animations that mega-mods have overwritten; it needs to be installed after those mega-mods, at least until their authors will update them to benefit from Infinity Animations content... &#128577;
 
 While waiting for this marvelous day, here is the recommended installation order:
 - Please install Infinity Animations after ToBEx, BG2 Fixpack, EET, and mods that add creatures or animations.
@@ -131,7 +132,7 @@ You can extract files from the archive using <a href="https://www.7-zip.org/down
 
 <details><summary>DEPRECATED as of v 6.0.0</summary>
 <p></br>
-<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most megamod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
+<strong>Important:</strong> Download all content you may require from the Infinity Animations download category at <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. If in doubt, download them all (most mega-mod installs will need all archives). Extract all archives using the "<em>Do not extract paths</em>" option on the <strong>Advanced</strong> tab in WinRAR. Also, make sure the "Destination path" on the <strong>General</strong> tab terminates in <strong>/content</strong> or <strong>/restore</strong> after <strong>infinityanimations</strong> (there should be no sub-folders beyond that).
 
 <p>Extract all archives to the :file_folder: /content folder except IA_BG2_Restores.rar, which should go in the :file_folder: /restore folder. If you extract IA_Wh_Dr_Wyv_LoP.rar (currently only needed for the Planar Sphere mod), you can delete the sub-archive The_Lady's_Shadow.rar after extraction, as it is currently unused due to animation size limitations.</p>
 
@@ -235,14 +236,14 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
 		<td><ins>IA Content - BG2 Restores</ins><br><br>
 		- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
-		- This is the content module for BG2 restored slots. It is only necessary for a megamod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
+		- This is the content module for BG2 restored slots. It is only necessary for a mega-mod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
 		<em>Installation forced only if needed [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_missing</strong><br><br>
 		(EE games only)</td>
 		<td><ins>IA Content - Base EE Content</ins> (New)<br><br>
-		- Content: all missing animations that already have animation slots in Enhanced games. Includes all relevant missing creature sounds and ini files.<br>
+		- Content: all missing animations that already have animation slots in Enhanced games. Includes all relevant missing creature sound and ini files.<br>
 		- Needed for all EE games (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Needed for all components.<br><br>
 		<em>1 = Installation by default</em></td>
@@ -438,14 +439,14 @@ The installer includes the following components. The number of each is the compo
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (main component)**
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Classic game: Requires ToB v26498</em><br><br>
 
-- Checks megamod content
+- Checks mega-mod content
 - Classic game only: Checks .exe validity, backs up and patches the .exe
 - Classic game only: Replaces _LOW creature animations
 - Classic game only: Resolves soundsets creature animation conflicts if TobEx is installed
 - Updates .ids, .2da and .ini files
 - Harmonizes animations names in all games to avoid conflicts with EE games
 - Restores any necessary previously mod-overwritten animations and resolves the problems of animation stacking, slot and naming conflicts
-- Copies new animations (any extracted to :file_folder: /archives folder)
+- Automatically copies new animations (any extracted to :file_folder: /archives folder)
 - Fixes any affected creatures
 - Fixes creature weapons animations issues
 <div align="right"><a href="#components">Back to components list</a></div>
@@ -796,7 +797,7 @@ This component patches any changed creature animation in saved games to prevent 
 
 - <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).
 - Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: Huge thanks for his invaluable contribution to this update (*ps_recursive_copy.tpa* library, better bam compressing process, executable patch update...) and for having completely rewritten IA Reference Picker tool.
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: Huge thanks for his invaluable contribution to this update (*ps_recursive_copy.tpa* library, better bam compressing process, executable patch update, Ellesime white haired fix...) and for having completely rewritten IA Reference Picker tool.
 - <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his `FIND_FREE_ANIM_SLOT` WeiDU function (*a7_functions.tpa* library) to automatically install new animation slots in EE games.
 - <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a>: thanks for providing his *Infinity Sounds* project mod code resolving soundsets creature animation conflicts.
 - Modders: <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.
@@ -854,7 +855,7 @@ This component patches any changed creature animation in saved games to prevent 
     - Scattered into various components: <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> and many other miscellaneous fixes (listed in *Components specific changes and fixes* part).
   - Integrated all BWP Fixpack graphic fixes (thanks to their authors!):
     - IA base_anims content: Miloch's <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">missing IWD Lizardman (green) casting with weapon animations fix</a>, Miloch's <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">Wyvern/Tanar'ri Animation Fix</a> (that fixes a long-standing issue with crashes when killing tanar'ri and white wyverns with certain graphics cards - mainly ATI HD cards it seems) and Polytope's <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">better Doppelganger attack animations</a>.
-    - IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a> and <a href="https://github.com/GwendolyneFreddy/Infinity-Animations/issues/5.">Sam"s fix</a> to solve <a href="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/page-4#entry490477">Ellesime White-Haired animation that still had red hair color when attacking or casting spells</a>.
+    - IA_BGII_IWDII content: Gwendolyne's <a href="http://www.shsforums.net/topic/55742-fixed-small-elemental-water-bug/">Small Water Elemental bug fix</a> and <a href="https://github.com/GwendolyneFreddy/Infinity-Animations/issues/5.">Sam's fix</a> to solve <a href="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/page-4#entry490477">Ellesime White-Haired animation that still had red hair color when attacking or casting spells</a>.
     - IA_IWD content: Miloch's <a href="http://www.shsforums.net/topic/53322-sahuagin-bug/?p=530224">Sahuagin with crossbow crash when walking fix</a>.
     - IA_NWN_01_modron content: Gwendolyne's <a href="http://www.shsforums.net/topic/56013-fixed-basilisk-nwn-bug/">NWN Basilisk bug fix</a>.
     - NWN_Misc_I content: Gwendolyne's <a href="http://www.shsforums.net/topic/55823-fixed-bovine-thing-axe-bug/">Bovine axe thing fix</a>.
@@ -886,7 +887,7 @@ This component patches any changed creature animation in saved games to prevent 
   - ...
   - Coding simplification:
     - Used new and more efficient WeiDU functions (not released when Erephine wrote this mod) and got rid of deprecated functions (such as `DECOMPILE_BCS_TO_BAF` and `DECOMPILE_DLG_TO_D` replaced with `DECOMPILE_AND_PATCH`).
-    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory; and Gwendolyne's `gw_install_archives` and `gw_update_content` macros to install all needed animations and sounds files from archives/subfolders to override folder.
+    - Used new <a href="http://www.shsforums.net/user/10485-sam/">Sam</a>'s `ps_recursive_copy.tpa` library, a WeiDU action function that will recursively search files into a parent directory, then copy them to a destination directory; and Gwendolyne's `gw_install_archives` and `gw_update_content` macros to install all needed animations and sound files from archives/subfolders to override folder.
     - Replaced specific "*%tsx%*" IA variables with more compatible "*%tutu%_scriptx%*" variables: from now on, IA uses up-to-date *crossmod platform variables*.
     - Updated `fj_cre_validity.tpp`, `fj_cre_reindex.tpp` and `fj_cre_eff_v2.tpp` patch functions to WeiDU new versions standards.
     - Enjoy Gwendolyne's silent `gw_handle_audio`, adapted from WeiDU `HANDLE_AUDIO` action function, that may make installation a more easy-on-the-eyes visual experience!

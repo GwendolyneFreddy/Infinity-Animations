@@ -544,6 +544,11 @@ pre {
 	font-size: 100%;
 }
 
+.comment {
+	color: green;
+	background-color: yellow;
+}
+
 /* --------------------- *
  * Image-logo d'en-tête  *
  * --------------------- */

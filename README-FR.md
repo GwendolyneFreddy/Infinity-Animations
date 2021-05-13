@@ -51,11 +51,12 @@ Ce mod modifie le jeu Baldur's Gate II : Trône de Bhaal de façon à ce qu'il d
 
 Infinity Animations prend en charge les types d'animation très divers des jeux Baldur's Gate I, Baldur's Gate II, Icewind Dale I, Icewind Dale II, Planescape: Torment et Neverwinter Nights. En bonus, le mod rétablit l'intégralité des animations de personnages de Baldur's Gate I, et permet à certaines animations qui n'en avaient pas jusqu'à présent de disposer dorénavant d'un paperdoll [*NdT : silhouette dans l'écran des personnages*].
 
-Point important pour les joueurs installant plusieurs mods conséquents (appelés « megamods »), Infinity Animations résout les conflits de slots d'animation [*NdT : plusieurs mods utilisant les mêmes slots pour des animations différentes, le dernier installé écrase les modifications effectuées par les précédents</em>], et rétablit les animations de base que les megamods ont modifiées.
+Point important pour les joueurs installant plusieurs mods conséquents (appelés « mega-mods »), Infinity Animations résout les conflits de slots d'animation [*NdT : plusieurs mods utilisant les mêmes slots pour des animations différentes, le dernier installé écrase les modifications effectuées par les précédents</em>], et rétablit les animations de base que les mega-mods ont modifiées.
 
 Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouvelles animations dans le jeu, ainsi que leurs jeux de sons associés (soundsets). Bien que le nombre d'animations supportées ne soit pas « infini », comme le nom du mod l'indique, il devrait toutefois être assez important pour répondre aux besoins actuels (et probablement futurs) de tout le monde.
 
 **Principales fonctions :**
+- À partir de la version 6.0.0, est compatible avec les jeux en version EE (sauf PsT:EE).
 - Rétablit les animations de personnages de Baldur's Gate I.
 - Améliore la prise en charge des paperdolls pour les animations existantes.
 - Ajoute des animations de jeu personnalisées pour les personnages et les créatures (dont les dragons).
@@ -98,7 +99,7 @@ Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.s
 
 >Bien qu'il ne soit pas requis pour faire correctement tourner Infinity Animations, nous recommandons fortement aux joueurs de ToB original de télécharger et d'installer la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> avant d'installer ce mod.</br>
 
-Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de megamods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les megamods avaient modifiées, il doit être installé après ces megamods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
+Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de mega-mods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les mega-mods avaient modifiées, il doit être installé après ces mega-mods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
 
 En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
 - Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
@@ -130,7 +131,7 @@ Vous pouvez extraire les fichiers de l'archive à l'aide de <a href="https://www
 
 <details><summary>Obsolète depuis la version 6.0.0</summary>
 <p></br>
-<strong>Important :</strong> Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de megamods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « <em>Ne pas extraire les chemins d'accès</em> » de l'onglet <strong>Avancé</strong> de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet <strong>Général</strong> se termine par <strong>/content</strong> ou <strong>/restore</strong> après <strong>infinityanimations</strong> (ils ne doivent pas comporter de sous-répertoires).
+<strong>Important :</strong> Téléchargez tout le contenu dont vous avez besoin dans la section de téléchargement d'Infinity Animations de <a href="http://www.shsforums.net/files/category/98-infinity-animations/">Spellhold Studios</a>. En cas de doute, téléchargez toutes les archives (la plupart des installations de mega-mods les nécessitent toutes). Extrayez les archives en sélectionnant l'option « <em>Ne pas extraire les chemins d'accès</em> » de l'onglet <strong>Avancé</strong> de WinRAR. Assurez-vous aussi que le « Chemin d'accès de destination » de l'onglet <strong>Général</strong> se termine par <strong>/content</strong> ou <strong>/restore</strong> après <strong>infinityanimations</strong> (ils ne doivent pas comporter de sous-répertoires).
 
 Extrayez toutes les archives dans le répertoire &#x1F4C1; /content sauf IA_BG2_Restores.rar, dont les fichiers doivent aller dans le répertoire &#x1F4C1; /restore. Si vous extrayez IA_Wh_Dr_Wyv_LoP.rar (à ce jour, seul le mod la Sphère Planaire en a besoin), vous pouvez supprimer le fichier The_Lady's_Shadow.rar après extraction, car il n'est pas utilisé à cause des dimensions de l'animation, trop grandes pour être supportées par le moteur du jeu.
 
@@ -436,14 +437,14 @@ Le programme d'installation comprend les composants suivants. Chacun possède un
 <a name="0" id="0"></a>&#10173; **[0] Infinity Animations (composant principal)**
 ###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Jeu original : Nécessite le patch ToB v26498.</em><br><br>
 
-- Vérifie la présence des fichiers nécessaires pour mettre à jour les megamods.
+- Vérifie la présence des fichiers nécessaires pour mettre à jour les mega-mods.
 - Seulement pour ToB original : Vérifie la validité de l'exécutable, en fait une copie de sauvegarde et le modifie.
 - Seulement pour ToB original : Remplace les animations _LOW de créatures.
 - Seulement pour ToB original : Résout les conflits de jeux de sons des animations de créatures si TobEx est installé.
 - Met à jour les fichiers .ids, .2da et .ini.
 - Harmonise les noms des animations dans tous les jeux pour éviter les conflits avec les jeux EE.
 - Rétablit toutes les animations écrasées par les mods et résout les problèmes d'empilement d'animations et les conflits de slots, de désignation des animations de créature.
-- Installe les nouvelles animations (toutes celles extraites dans le répertoire :file_folder: /archives).
+- Installe automatiquement les nouvelles animations (toutes celles extraites dans le répertoire :file_folder: /archives).
 - Corrige toutes les créatures affectées.
 - Corrige les problèmes d'animation des armes portées par les créatures.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
@@ -794,7 +795,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 
 - L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
 - Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
-- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : un énorme merci pour son inestimable contribution à cette mise à jour (librairie *ps_recursive_copy.tpa*, meilleur taux de compression des fichiers bam, mise à jour du patch de l'exécutable...) et pour avoir réécrit complètement l'utilitaire IA Reference Picker.
+- <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : un énorme merci pour son inestimable contribution à cette mise à jour (librairie *ps_recursive_copy.tpa*, meilleur taux de compression des fichiers bam, mise à jour du patch de l'exécutable, correction de l'animation d'Ellesime aux cheveux blancs...) et pour avoir réécrit complètement l'utilitaire IA Reference Picker.
 - <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_functions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
 - <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a> : merci pour avoir partagé le code de son projet de mod *Infinity Sounds* qui résout les conflits entre soundsets d'animations de créatures.
 - Moddeurs : <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
