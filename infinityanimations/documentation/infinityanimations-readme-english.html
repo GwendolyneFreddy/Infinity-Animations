@@ -84,6 +84,23 @@
 			<li>Lets you watch as the percentage of free animation entries refuses to go down &#128578;</li>
 		  </ul><br>
 
+		<hr style="width: 90%; height: 1px; border: 0; "/><a name="mage_robes" id="mage_robes"></a><br>
+
+		<p>
+			&#9888;&#65039; <strong><span style="color: #781808;">&#10173;</span> Note for players installing the Baldur's Gate I character animations components in classic games.</strong>
+		</p><br>
+
+		<p>
+			Due to IE and EE engines hard-coded features, restored BG1 mage sprites do not swap with armor level changes (mage animations are always identified by the animation slot's second digit that must be '2', which is not the case in IA). In other words, they always display the same 'unarmored' sprite whatever the robe level they equip (2W, 3W, 4W).
+		</p>
+		<p>
+			To circumvent this rather annoying behaviour, please follow this workaround:
+		</p>
+		  <ul style="margin-left: 5%;">
+			<li>Install TobEx before Infinity Animations.</li>
+			<li>Install Insomniator's <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">BG2 Impoved Gui</a> mod after Infinity Animations: it will provide a custom tobex.dll library that allows displaying mage robes for BG1 character animations.</li>
+		  </ul><br>
+
 		<hr style="width: 90%; height: 1px; border: 0; "/><br>
 
 		<p>
@@ -145,8 +162,8 @@
 			While waiting for this marvelous day, here is the recommended installation order:
 		</p>
 		<ul style="margin-left: 5%;">
-			<li>Please install Infinity Animations after ToBEx, BG2 Fixpack, EET, and mods that add creatures or animations.</li>
-			<li>Please install Infinity Animations before 1PP, EET_End, and any final "biffing" routines.</li>
+			<li>Please install Infinity Animations after TobEx, BG2 Fixpack, EET, and mods that add creatures or animations.</li>
+			<li>Please install Infinity Animations before 1PP, BG2 Impoved Gui, EET_End, and any final "biffing" routines.</li>
 		</ul><br>
 
 		<p>
@@ -250,11 +267,11 @@
 		<hr style="width: 90%;"/><br>
 
 
-		<h3>Mac OS X</h3>
+		<h3>Mac OS/h3>
 
 		<div class="important" style="width: 85%; margin-top:2%;">
-			<p style ="width: 100%;">&#9888;&#65039; Unfortunately, <strong>this mod is not currently fully compatible with OS X</strong> because the main component patching exe file does not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)</p><br>
-			<p style ="width: 100%;">&#128541; <strong>However, </strong>since EE games don't need to be patched to benefit from Infinity Animations, <strong>it can be installed on Mac OS X EE games</strong>.</p>
+			<p style ="width: 100%;">&#9888;&#65039; Unfortunately, <strong>this mod is not currently fully compatible with Mac OS</strong> because the main component patching exe file does not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)</p><br>
+			<p style ="width: 100%;">&#128541; <strong>However, </strong>since EE games don't need to be patched to benefit from Infinity Animations, <strong>it can be installed on Mac OS EE games</strong>.</p>
 		</div>
 
 		<p>
@@ -1342,6 +1359,7 @@
 			<li>The last option is "most" instead of "all" because certain creatures are excluded</li>
 			<li>These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since <acronym title="Baldur's Gate">BG1</acronym> did not have these animations</li>
 			<li>&#9888;&#65039; <strong>Use with caution</strong> in the case of joinable <acronym title="Non-Player Characters">NPCs</acronym>: it will avoid any characters with the two weapon proficiency or a second weapon equipped, but do not try to dual wield</li>
+			<li><strong><span style="color: #781808;">&#9755;</span> Classic games only:</strong> To fix the Robed BG1 animations do not swap with armor level changes bug, please follow <a href="#mage_robes">this workaround</a></li>
 		  </ul>
 		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
 		</p>
@@ -1402,6 +1420,7 @@
 			<li>The second option patches all <acronym title="Player Characters">PCs</acronym> but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot</li>
 			<li>Scimitars and katanas should work, but will appear as longswords on character avatars</li>
 			<li>&#9888;&#65039; <strong>Use with caution</strong>: do not try to dual wield or the game will likely crash</li>
+			<li><strong><span style="color: #781808;">&#9755;</span> Classic games only:</strong> To fix the Robed BG1 animations do not swap with armor level changes bug, please follow <a href="#mage_robes">this workaround</a></li>
 		  </ul>
 		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
 		</p>
@@ -2005,8 +2024,9 @@
 			<li><a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>).</li>
 			<li>Original assistance: <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> and <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.</li>
 			<li><a href="http://www.shsforums.net/user/10485-sam/">Sam</a>: Huge thanks for his invaluable contribution to this update (<span class="tp2">ps_recursive_copy.tpa</span> library, better bam compressing process, executable patch update, Ellesime white haired fix...) and for having completely rewritten IA Reference Picker tool.</li>
-			<li><a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his <span class="tp2">FIND_FREE_ANIM_SLOT</span> <acronym title="Weimer Dialogue Utility">WeiDU</acronym> function (<em>a7_functions.tpa</em> library) to automatically install new animation slots in EE games.</li>
+			<li><a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a>: thanks for letting me use and adapt his <span class="tp2" style="color: #C00040">FIND_FREE_ANIM_SLOT</span> <acronym title="Weimer Dialogue Utility">WeiDU</acronym> function (<em>a7_functions.tpa</em> library) to automatically install new animation slots in EE games.</li>
 			<li><a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a>: thanks for providing his <em>Infinity Sounds</em> project mod code resolving soundsets creature animation conflicts.</li>
+			<li><a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a>: thanks for providing his custom tobex.dll library (<a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">BG2 Impoved Gui</a> mod) which resolves the Robed BG1 animations do not swap with armor level changes bug.</li>
 			<li>Modders: <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> and <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> for letting us integrate some of their creature animations into a new IA content package.</li>
 			<li>French translation: <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne (<a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading).</li>
 			<li>Special: <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> for proofreading French translation and for his contribution with fixing a few missing EE animations.</li>
@@ -2061,6 +2081,7 @@
 			<li>Modified animations name-spaces, <strong>now compatible with non-Western code pages</strong> (got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western code page was detected), and fixed duplicate usage of dragon type slots (XDR3, XDR6). &#128521;</li>
 			<li>From now on, Infinity Animations is released with all available creature animations content. It is no longer necessary to download all their archive files, but you can still select the ones you want to install. For more details on how to customize your installation, please read this <a href="#config">chapter</a>.</li>
 			<li>Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his <em>Infinity Sounds</em> project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).</li>
+			<li>Classic games: Fixed the '<em>Robed BG1 animations do not swap with armor level changes bug</em>' (<a href="http://www.shsforums.net/topic/43501-infinity-animations-readme/page-3#entry520015">here</a>, and <a href="http://www.shsforums.net/topic/44249-cannot-get-bg1-animations-to-work/page-2">there</a>). A huge thanks to <a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a> for providing the <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">custom tobex.dll library</a> that allows this exploit.</li>
 			<li>Updated IA Reference Picker tool (can now be translated) and updated its documentation.</li>
 			<li>...</li>
 			<li>Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Chicken white, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm,  Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.</li>

@@ -5,17 +5,7 @@
 ![Language](https://img.shields.io/static/v1?label=langues&message=Anglais%20%7C%20Fran%C3%A7ais&color=limegreen)
 <a href="README.md"><img align="right" src="infinityanimations/documentation/images/uk-flag-32.png" title="English Readme"></a>
 
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=indigo)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=red)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=crimson)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deeppink)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orangered)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=darkorange)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orange)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=fuchsia)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=magenta)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deepskyblue)
-![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=dodgerblue)
+![Supported games](https://img.shields.io/static/v1?label=jeux%20concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=dodgerblue)
 
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
@@ -43,9 +33,9 @@ Baldur's Gate Trilogy, Tutu, BG:EE, SoD, IWD:EE et EET</h3>
 
 ## 
 
-[Lisez-moi du mod](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-french.html)
+:page_facing_up: [Lisez-moi du mod](https://spellholdstudios.github.io/readmes/infinityanimations/documentation/infinityanimations-readme-french.html)
 
-[Téléchargez le mod à Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
+:inbox_tray: [Téléchargez le mod à Spellhold Studios](http://www.shsforums.net/files/category/98-infinity-animations/)<br>
 
 ## 
 
@@ -67,6 +57,8 @@ Point important pour les joueurs installant plusieurs mods conséquents (appelé
 
 Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouvelles animations dans le jeu, ainsi que leurs jeux de sons associés (soundsets). Bien que le nombre d'animations supportées ne soit pas « infini », comme le nom du mod l'indique, il devrait toutefois être assez important pour répondre aux besoins actuels (et probablement futurs) de tout le monde.
 
+## 
+
 **Principales fonctions :**
 - À partir de la version 6.0.0, est compatible avec les jeux en version EE (sauf PsT:EE).
 - Rétablit les animations de personnages de Baldur's Gate I.
@@ -78,6 +70,16 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 - À partir de la version 6.0.0, installe automatiquement les fichiers son des créatures dans la langue du jeu.
 - Fournit un utilitaire GUI[*NdT : interface graphique*] pour vous aider à ajouter de nouvelles animations dans le jeu.
 - Vous permet de visualiser à quel point le pourcentage de slots d'animation disponibles refuse obstinément de diminuer. &#128578;
+
+## <a name="mage_robes" id="mage_robes">
+
+:warning: &#9755; Note aux joueurs qui installent les composants rétablissant les animations de personnages de Baldur's Gate I dans un jeu classique.
+
+Certaines fonctions codée en dur dans les moteurs de jeu IE et EE empêchent les animations de mages de BG1 de changer d'apparence lorsque ces personnages changent de type de robe (les moteurs identifient les animations de mage à partir du deuxième chiffre de leur slot qui doit impérativement être un "2" ; ce qui n'est malheureusement pas le cas dans IA). En d'autres termes, les mages sont toujours représentés par le même sprite " sans armure " quel que soit le type de robe qu'ils portent (2W, 3W, 4W).
+
+Pour contourner ce comportement plutôt ennuyeux, veuillez procéder comme suit :
+- Installez TobEx avant Infinity Animations.
+- Installez le mod <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">BG2 Impoved Gui</a> d'Insomniator après Infinity Animations : sa version adaptée de la librairie tobex.dll permet d'afficher les robes des animations de mages de BG1.
 <div align="right"><a href="#top">Retour en haut de page</a></div>
 
 
@@ -114,11 +116,11 @@ Si vous rencontrez des bugs, veuillez les signaler dans le <a href="http://www.s
 Dans un monde parfait, Infinity Animations devrait être installé comme un pack correctif qui fonctionnerait comme une base de données centralisée, utilisable par quiconque souhaite ajouter de nouvelles animations de créature dans le jeu sans être confronté à des problèmes de conflits et d'incompatibilité avec d'autres mods. Malheureusement, comme il a été conçu après la première génération de mega-mods qui écrasaient les fichiers du jeu, notamment pour résoudre les conflits de slots d'animation et rétablir les animations de base que les mega-mods avaient modifiées, il doit être installé après ces mega-mods, au moins jusqu'à ce que leurs auteurs les mettent à jour pour tirer parti de toutes les possibilités offertes par Infinity Animations... &#128577;
 
 En attendant ce jour merveilleux, voici l'ordre d'installation conseillé :
-- Veuillez installer Infinity Animations après ToBEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
-- Veuillez installer Infinity Animations avant 1PP, EET_End et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
+- Veuillez installer Infinity Animations après TobEx, BG2 Fixpack, EET et la plupart des mods qui ajoutent des créatures ou des animations.</li>
+- Veuillez installer Infinity Animations avant 1PP, BG2 Impoved Gui, EET_End et les procédures finales de « biffing » [*NdT : archivage avec Generalized biffing*].
 
 
-&#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="ia_notes-for-modders-french.html">IA Notes pour moddeurs</a> qui les guidera à travers toutes les étapes nécessaires.
+&#9755; :warning: Les moddeurs souhaitant rendre leurs mods compatibles avec Infinity Animations sont fortement invités à lire le document <a href="https://spellholdstudios.github.io/readmes/infinityanimations/documentation/ia_notes-for-modders-french.html">IA Notes pour moddeurs</a> qui les guidera à travers toutes les étapes nécessaires.
 
 ## 
 
@@ -736,6 +738,7 @@ Ce composant attribue à certains PNJs des animations de personnages de BG1 :
 - La dernière option est intitulée « la plupart » plutôt que « toutes », car certaines créatures sont exclues des modifications.
 - Cela inclue les créatures utilisant des cimeterres, des katanas ou autre chose d'autre qu'un bouclier dans leur deuxième main (ou dotées de ces compétences), puisque BG1 ne dispose pas de ces animations.
 - :warning: **À utiliser avec précaution** avec des PNJs recrutables : si ce composant ne traitera pas les personnages compétents en style de combat à deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.
+- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -758,6 +761,7 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
 - La deuxième option modifie tous les PJs, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.
 - Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.
 - :warning: **À utiliser avec précaution** : n'essayez pas de porter deux armes, sinon le jeu crashera probablement.
+- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -808,8 +812,9 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 - L'équipe de <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> pour l'hébergement de ce mod (<a href="http://www.shsforums.net">Forums</a>).
 - Assistance originale : <a href="http://www.shsforums.net/user/948-arkenor/">Arkenor</a> et <a href="http://www.shsforums.net/user/4994-sergis/">SergIS</a>.
 - <a href="http://www.shsforums.net/user/10485-sam/">Sam</a> : un énorme merci pour son inestimable contribution à cette mise à jour (librairie *ps_recursive_copy.tpa*, meilleur taux de compression des fichiers bam, mise à jour du patch de l'exécutable, correction de l'animation d'Ellesime aux cheveux blancs...) et pour avoir réécrit complètement l'utilitaire IA Reference Picker.
-- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_functions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
+- <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a> : merci pour m'avoir laissé utiliser et adapter sa fonction `WeiDU FIND_FREE_ANIM_SLOT` (libraire *a7_functions.tpa*) pour installer automatiquement de nouveaux slots d'animation dans les jeux EE.
 - <a href="http://www.shsforums.net/user/41045-skellytz/">skellytz</a> : merci pour avoir partagé le code de son projet de mod *Infinity Sounds* qui résout les conflits entre soundsets d'animations de créatures.
+- <a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a> : merci pour avoir permis de résoudre le bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsqu'ils changent de type de robe grâce à la version adaptée de la librairie tobex.dll de son mod <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">BG2 Impoved Gui</a>.
 - Moddeurs : <a href="http://www.shsforums.net/user/26975-jarl2/">Jarl</a>, <a href="http://www.shsforums.net/user/776-kwiat-w/">Kwiat_W</a>, <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a> et <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> pour nous avoir permis d'intégrer certaines de leurs animations de créatures dans le nouveau pack d'animations de créatures de moddeurs pour IA.
 - Traduction française : <a href="http://www.shsforums.net/user/24495-gwendolyne/">Gwendolyne</a> (relecture par <a href="http://www.shsforums.net/user/16735-luren/">Luren</a>).
 - Spécial : <a href="http://www.shsforums.net/user/16735-luren/">Luren</a> pour la relecture de la documentation et sa contribution à la conversion des animations de EE pour ToB.
@@ -848,8 +853,9 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
 &#9755; <ins>a.Principales mises à jour</ins>
   - Modification des noms de code des animations pour les rendre **compatibles avec les code pages non occidentaux** (suppression de la procédure automatique de changement de code page dans le patch de l'exécutable) et correction des doublons de slots d'animation de dragon (XDR3, XDR6). :wink:
   - Dorénavant, Infinity Animations est livré avec l'ensemble des animations de créatures disponibles. Il n'est donc plus nécessaire de télécharger tous leurs fichiers d'archives, mais vous pouvez toujours sélectionner celles que vous souhaitez installer. Pour de plus amples précisions sur la manière de personnaliser leur installation, veuillez consulter ce <a href="#config">chapitre</a>.
-  - Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.
   - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux (MMIN), les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
+  - Jeux classiques : résolution du " *bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsqu'ils changent de type de robe* " (<a href="http://www.shsforums.net/topic/43501-infinity-animations-readme/page-3#entry520015">ici</a> et <a href="http://www.shsforums.net/topic/44249-cannot-get-bg1-animations-to-work/page-2">là</a>). Un grand merci à <a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a> et à sa version adaptée de la <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">librairie tobex.dll</a> qui permet cet exploit.
+  - Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.
   - Ajout du nouveau pack de contenu ee_tob (animations de EE pour ToB) : sanglier sauvage, vargouille, gobelours chaman, poulet blanc, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (vert, rouge), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, efrit noble, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure avec hache, en armure avec arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
   - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : poulet marron (Jarl), chien gris de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul) ; pygargue à tête blanche (et petit), leprechaun annah, easter egg morte, golem d'ambre, petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
   - Compatibilité native avec les jeux Enhanced Edition :
