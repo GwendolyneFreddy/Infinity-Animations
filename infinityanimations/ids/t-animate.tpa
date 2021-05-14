@@ -699,6 +699,7 @@ APPEND ~animate.ids~ ~0x5FC0 JANNI~                         UNLESS ~^0x5[Ff][Cc]
 APPEND ~animate.ids~ ~0x5FC1 JANNI_LEGS~                    UNLESS ~^0x5[Ff][Cc]1~
 APPEND ~animate.ids~ ~0x5FC2 MARID~                         UNLESS ~^0x5[Ff][Cc]2~
 APPEND ~animate.ids~ ~0x5FC3 MARID_LEGS~                    UNLESS ~^0x5[Ff][Cc]3~
+APPEND ~animate.ids~ ~0x5FC4 GW_GOLEM_AMBER~                UNLESS ~^0x5[Ff][Cc]4~      // Modders content: shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel)
 
 APPEND ~animate.ids~ ~0x5FD4 RED_WIZARD~                    UNLESS ~^0x5[Ff][Dd]4~      // EE animations content
 APPEND ~animate.ids~ ~0x5FD5 SAILOR_GREEN~                  UNLESS ~^0x5[Ff][Dd]5~      // id.
@@ -748,8 +749,8 @@ APPEND ~animate.ids~ ~0x683F MOINESSE_VAMPIRE~              UNLESS ~^0x683[Ff]~
 APPEND ~animate.ids~ ~0x6841 MOINESSE_MAGE_FEMALE_ELF~      UNLESS ~^0x6841~
 APPEND ~animate.ids~ ~0x684D MOINESSE_DRUID_FEMALE_HUMAN~   UNLESS ~^0x684[Dd]~         // former 0x6845 - moved to a WQL paletted slot (was WQN) to solve the issue of weapon animations not being displayed properly both in character's hands and paperdolls.
 APPEND ~animate.ids~ ~0x684E MOINESSE_FIGHTER_FEMALE_HUMAN~ UNLESS ~^0x684[Ee]~         // former 0x6846 - id.
-APPEND ~animate.ids~ ~0x684G MOINESSE_MAGE_FEMALE_HUMAN~    UNLESS ~^0x684[Ff]~         // former 0x6847 - id.
-APPEND ~animate.ids~ ~0x6850 MOINESSE_THIEF_FEMALE_HUMAN~   UNLESS ~^0x6850~            // former 0x6847 - id.
+APPEND ~animate.ids~ ~0x684F MOINESSE_MAGE_FEMALE_HUMAN~    UNLESS ~^0x684[Ff]~         // former 0x6847 - id.
+APPEND ~animate.ids~ ~0x6850 MOINESSE_THIEF_FEMALE_HUMAN~   UNLESS ~^0x6850~            // former 0x6848 - id.
 
 APPEND ~animate.ids~ ~0x7302 SHAMBLING_MOUND~               UNLESS ~^0x7302~
 APPEND ~animate.ids~ ~0x7312 ELEMENTAL_FIRE_PURPLE~         UNLESS ~^0x7312~

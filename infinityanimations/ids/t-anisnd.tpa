@@ -403,6 +403,7 @@ APPEND ~anisnd.ids~ ~0x5FC0 8CS      CGAMEANIMATIONTYPE_JANNI~                  
 APPEND ~anisnd.ids~ ~0x5FC1 8CT      CGAMEANIMATIONTYPE_JANNI_LEGS~                     UNLESS ~^0x5[Ff][Cc]1~
 APPEND ~anisnd.ids~ ~0x5FC2 8CU      CGAMEANIMATIONTYPE_MARID~                          UNLESS ~^0x5[Ff][Cc]2~
 APPEND ~anisnd.ids~ ~0x5FC3 8CV      CGAMEANIMATIONTYPE_MARID_LEGS~                     UNLESS ~^0x5[Ff][Cc]3~
+APPEND ~anisnd.ids~ ~0x5FC4 8CW      CGAMEANIMATIONTYPE_GW_GOLEM_AMBER~                 UNLESS ~^0x5[Ff][Cc]4~      // Modders content: shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel)
 
 APPEND ~anisnd.ids~ ~0x5FD4 8DM      CGAMEANIMATIONTYPE_RED_WIZARD~                     UNLESS ~^0x5[Ff][Dd]4~      // EE animations content
 APPEND ~anisnd.ids~ ~0x5FD5 8DN      CGAMEANIMATIONTYPE_SAILOR_GREEN~                   UNLESS ~^0x5[Ff][Dd]5~      // id.

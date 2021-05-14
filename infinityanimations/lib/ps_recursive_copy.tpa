@@ -488,11 +488,11 @@ BEGIN
 			END
 			LOG @1042 // ~ARCHIVE IN PROCESS: %iacontent% (%archives%)~
 
-			ACTION_IF is_ee AND (("%iacontent%" STR_CMP "chicken_brown") AND ("%iacontent%" STR_CMP "elemental_sunnis_wow") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow") AND ("%iacontent%" STR_CMP "snakes_small")) BEGIN
+			ACTION_IF is_ee AND (("%iacontent%" STR_CMP "chicken_brown") AND ("%iacontent%" STR_CMP "elemental_sunnis_wow") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow") AND ("%iacontent%" STR_CMP "golem_amber") AND ("%iacontent%" STR_CMP "snakes_small")) BEGIN
 				LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/modders/%iacontent%" DestinationDir = "override" RET Count END
 				PRINT @1045 // ~  ==> Folder %iacontent% (#%archives%) content copied to override: %Count% files.~
 			END
-			ACTION_IF NOT is_ee AND (("%iacontent%" STR_CMP "elemental_sunnis_wow_ee") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow_ee") AND ("%iacontent%" STR_CMP "snakes_small_ee")) BEGIN
+			ACTION_IF NOT is_ee AND (("%iacontent%" STR_CMP "elemental_sunnis_wow_ee") AND ("%iacontent%" STR_CMP "elemental_zaaman_wow_ee") AND ("%iacontent%" STR_CMP "snakes_small_ee") AND ("%iacontent%" STR_CMP "golem_amber_ee")) BEGIN
 				LAF gw_recursive_copy INT_VAR WarnOnOverwrite = 0 STR_VAR ParentDir = EVAL "infinityanimations/archives/modders/%iacontent%" DestinationDir = "override" RET Count END
 				PRINT @1045
 			END

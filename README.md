@@ -5,6 +5,29 @@
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French&color=limegreen)
 <a href="README-FR.md"><img align="right" src="infinityanimations/documentation/images/fr-flag-32.png" title="Lisez-moi français"></a>
 
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=indigo)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=red)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=crimson)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=DeepPink)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=OrangeRed)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=DarkOrange)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=Orange)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=Fuchsia)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=Magenta)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=DeepSkyBlue)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE
+&color=DodgerBlue)
+
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
 
@@ -385,7 +408,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
 		<td><ins>IA Content - Modders resources</ins> (New)<br><br>
-		- Content: Chicken Brown (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
+		- Content: Chicken Brown (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); bald eagle, small bald eagle, leprechaun annah, easter egg morte, golem amber, small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
 		- Plus more to come.<br><br>
 		0 = Don't install<br>
 		<em>1 = Install [default]</em></td>
@@ -841,7 +864,7 @@ This component patches any changed creature animation in saved games to prevent 
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
   - Rewrote IA Reference Picker tool (can now be translated) and updated its documentation.
   - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Chicken White, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
-  - Added IA modders content: Chicken Brown (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, small snake, small snake green and small snake red (Gwendolyne).
+  - Added IA modders content: Chicken Brown (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, golem amber, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
     - Restored missing bam content in EE games: Abishais (black, green, red, white), Animated plates, Arundel, Barbarian shaman (club, hammer, staff), Barbarian warriors (brown, red, tan), Barbarian Icasaracht, Beetles (boring, fire, bombardier, rhinoceros), Belhifet, Belhifet priest, Boar arctic, Bonebat, Bugbear (and captain), Chicken (brown, white), Chimera, Cornugon, Creeping doom, Cyclops, Dark treant, Deva monadic fallen, Dragons BG2 (black, red, silver), Dragons juvenile (green and red), Dragon white (and young), Driders (female, male), Drowned dead, Elemental earth, Elemental (fire, water, water small), Feyr (and greater), Ghast greater, Ghost, Ghoul greater, Giant fire 2, Giant fire IWD, Giant frost, Giant fomorian, Giant hill, Giant verbeeg, Glabrezu, Goblins (captain, shaman, worg, worg captain), Golem ice, Golem iron (IWD), Golem mini, Hag (annis, night), Halfdragon (black, red), Harpy, Hephernaan, Histachii, Hook horror, Isair, Kegs (1, 2, 3), Kuo-toa (and large), Lemure, Lich white, Lizard man (and elite, king), Madae, Malarite, Marilith, Marilith (IWD), Megalocentipede, Mkhiins, Neothelid, Orc axe undead, Orc shaman undead, Orog shaman, Planetar, Planetar fallen, Remorhaz, Sahuagin IWD (and large), Seer, Shadow (small, large), Shenrical, Svirfneblins (pale and dark, with/without axe), Trolls (ice, scrag, snow), Tundra yeti, Tunnel worm, Umber hulk (elder, vodyanoi), Wailing virgin, Water weird, Werebadger, Wererat, Wights (barrow, gray, green, yellow), Will o wisp (and small), Worg IWD, Yuan-ti halfbreed, Zombie (blue, yellow).
     - Restored missing palettes content in EE games: Abishai blue, Black pudding, Boar wild, Bugbear shaman, Crusader soldier, Dog gray, Dragons BG2, Dragon green IWD, Dragon green juvenile, Dragons young (green, silver), Drowned dead red, Efreeti noble, Elemental fire small purple, Ettin ghost, Fiends (blue, green, red), Gibberling brood, Goblin worg (elite, shaman), Hags (green, sea), Hakeashar, Halfdragon green, Hephernaan, Maurezhi, Myrlochar, Nishruu, Red wizard, Sailors (green, red, dark), Snake water, Spider water, Troll spectral, Wyrmling albino, Wyvern white, Wyvern white big, Yochlol.

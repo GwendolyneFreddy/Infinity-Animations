@@ -14,8 +14,8 @@
  *        failure will be prevented by reverting it back to its default value.                                                                                                         *
  *      - Modified animations namespaces, now compatible with non-Western code pages: got rid of the the .exe patch routine forcing a code page change and rebooting if a non-Western  *
  *        code page was detected (#50).                                                                                                                                                *
- *      - ToBEx compatibility: checks for ToBEx external walking sound files (#192) and resolves soundsets creature animation conflicts (#403).                                        *
- *      - Added new Correct creature weapons animations routine that patches vanilla creature files with new cloned weapons compatible with their animations (#416).                   *
+ *      - ToBEx compatibility: checks for ToBEx external walking sound files (#192) and resolves soundsets creature animation conflicts (#409).                                        *
+ *      - Added new Correct creature weapons animations routine that patches vanilla creature files with new cloned weapons compatible with their animations (#422).                   *
  *      - Externalized lists of creatures to be patched into arrays for easier maintenance (gw_ia_correct_arrays.tph library).                                                         *
  *      - Used Gwendolyne's gw_install_archives function to install new animations (any extracted in /archives folder).                                                                *
  *      - Coding simplification:                                                                                                                                                       *
@@ -26,7 +26,7 @@
  *  ---------------                                                                                                                                                                    *
  *      - #213  ==> NTotSC compatibility: removed ntkeelor.dlg patch (Keelor the Dwarf dialog) because it has already been fixed in latest NTotSC versions.                            *
  *      - #243  ==> Patches soundsets 2da files with new animations names for consistency.                                                                                             *
- *      - #341  ==> Strings updates: No longer fixes strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.                        *
+ *      - #347  ==> Strings updates: No longer fixes strref typos (Deletes extra spaces and line breaks) if the selected mod language is not the game language.                        *
  * =================================================================================================================================================================================== */
 
 /* ----------------------------------------------------------- *
@@ -38,13 +38,13 @@
  *  Patching IDS files                                 #  175  *
  *  Scripts and dialogs updates                        #  200  *
  *  2DA files updates                                  #  240  *
- *  Strings updates                                    #  338  *
- *  Restoring previously overwritten BG2 animations    #  368  *
- *  Update .CRE animation offsets                      #  375  *
- *  Copying new animations to the game                 #  382  *
- *  Correcting creature animations                     #  409  *
- *  Correcting creature weapons animations             #  416  *
- *  Items fixes                                        #  423  *
+ *  Strings updates                                    #  344  *
+ *  Restoring previously overwritten BG2 animations    #  374  *
+ *  Update .CRE animation offsets                      #  381  *
+ *  Copying new animations to the game                 #  388  *
+ *  Correcting creature animations                     #  415  *
+ *  Correcting creature weapons animations             #  422  *
+ *  Items fixes                                        #  429  *
  * ----------------------------------------------------------- */
 
 /* DEPRECATED as of v6.0.0
@@ -332,6 +332,12 @@ END ELSE BEGIN
 		REPLACE_TEXTUALLY ~^MSKT.+$~ ~%DEST_RES% / skeleton_monster~
 	BUT_ONLY
 END
+
+// Clone clay golem to gw_golem_amber
+// ----------------------------------
+COPY_EXISTING ~mglc.2da~ ~override/8cw.2da~
+	REPLACE_TEXTUALLY ~^Mglc.+$~ ~%DEST_RES% / gw_golem_amber~
+BUT_ONLY
 
 
 /* ======================================================== *
