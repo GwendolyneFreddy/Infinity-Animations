@@ -8,14 +8,14 @@
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=indigo)
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=red)
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=crimson)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=DeepPink)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=OrangeRed)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=DarkOrange)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=Orange)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=Fuchsia)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=Magenta)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=DeepSkyBlue)
-![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=DodgerBlue)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deeppink)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orangered)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=darkorange)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orange)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=fuchsia)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=magenta)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deepskyblue)
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=dodgerblue)
 
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>

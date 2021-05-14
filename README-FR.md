@@ -5,6 +5,18 @@
 ![Language](https://img.shields.io/static/v1?label=langues&message=Anglais%20%7C%20Fran%C3%A7ais&color=limegreen)
 <a href="README.md"><img align="right" src="infinityanimations/documentation/images/uk-flag-32.png" title="English Readme"></a>
 
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=indigo)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=red)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=crimson)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deeppink)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orangered)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=darkorange)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=orange)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=fuchsia)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=magenta)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=deepskyblue)
+![Supported games](https://img.shields.io/static/v1?label=jeux%concern%C3%A9s&message=BG2%3AToB%20%7C%20BGT%20%7C%20Tutu%20%7C%20BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=dodgerblue)
+
 
 <div align="center"><h1>Infinity Animations (WIP)</h1>
 
