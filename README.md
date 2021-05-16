@@ -74,7 +74,7 @@ Finally, this mod contains optional components that implement many new animation
 
 ## <a name="mage_robes" id="mage_robes">
 
-:warning: &#9755; Note for players installing the Baldur's Gate I character animations components in classic games.
+:warning: &#9755; <ins>Note for players installing the Baldur's Gate I character animations components in classic games.</ins>
 
 Due to IE and EE engines hard-coded features, restored BG1 mage sprites do not swap with armor level changes (mage animations are always identified by the animation slot's second digit that must be '2', which is not the case in IA). In other words, they always display the same 'unarmored' sprite whatever the robe level they equip (2W, 3W, 4W).
 
@@ -104,7 +104,7 @@ Infinity Animations is designed to work on most Infinity Engine games. This incl
 This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. However, we cannot test every single one. Though we are striving to make Infinity Animations compatible with as many other mods as possible, there is always a chance that incompatibilities will arise. Below are the ones discovered thus far:
 
 - <a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a>.
-- :warning: Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. As result, _**allowing the BWP Fixpack to overwrite animate.ids is at your own risk**_.
+- :warning: Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. Therefore, _**allowing the BWP Fixpack to overwrite animate.ids is at your own risk**_.
 
 If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
 
@@ -740,7 +740,7 @@ This component assigns some NPCs distinctive BG1 Character Animations:
 - The last option is "most" instead of "all" because certain creatures are excluded
 - These include creatures with scimitars, katanas or anything other than a shield in the offhand slot (or related proficiencies) since BG1 did not have these animations
 - :warning: **Use with caution** in the case of joinable NPCs: it will avoid any characters with the two weapon proficiency or a second weapon equipped, but do not try to dual wield
-- &#9755; **Classic games only:** To fix the Robed BG1 animations do not swap with armor level changes bug, please follow <a href="#mage_robes">this workaround</a>.
+- &#9755; **Classic games only:** To fix the *Robed BG1 animations do not swap with armor level changes bug*, please follow <a href="#mage_robes">this workaround</a>.
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 
@@ -763,7 +763,7 @@ This component assigns some exported PCs distinctive BG1 Character Animations:
 - The second option patches all PCs but prompts for those with scimitars, katanas or anything other than a shield in the offhand slot
 - Scimitars and katanas should work, but will appear as long swords on character avatars
 - :warning: **Use with caution**: do not try to dual wield or the game will likely crash
-- &#9755; **Classic games only:** To fix the Robed BG1 animations do not swap with armor level changes bug, please follow <a href="#mage_robes">this workaround</a>.
+- &#9755; **Classic games only:** To fix the *Robed BG1 animations do not swap with armor level changes bug*, please follow <a href="#mage_robes">this workaround</a>.
 <div align="right"><a href="#components">Back to components list</a></div>
 
 ## 

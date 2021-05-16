@@ -73,7 +73,7 @@ Enfin, il comporte des composants optionnels qui introduisent de nombreuses nouv
 
 ## <a name="mage_robes" id="mage_robes">
 
-:warning: &#9755; Note aux joueurs qui installent les composants rétablissant les animations de personnages de Baldur's Gate I dans un jeu classique.
+:warning: &#9755; <ins>Note aux joueurs qui installent les composants rétablissant les animations de personnages de Baldur's Gate I dans un jeu classique.</ins>
 
 Certaines fonctions codée en dur dans les moteurs de jeu IE et EE empêchent les animations de mages de BG1 de changer d'apparence lorsque ces personnages changent de type de robe (les moteurs identifient les animations de mage à partir du deuxième chiffre de leur slot qui doit impérativement être un "2" ; ce qui n'est malheureusement pas le cas dans IA). En d'autres termes, les mages sont toujours représentés par le même sprite " sans armure " quel que soit le type de robe qu'ils portent (2W, 3W, 4W).
 
@@ -738,7 +738,7 @@ Ce composant attribue à certains PNJs des animations de personnages de BG1 :
 - La dernière option est intitulée « la plupart » plutôt que « toutes », car certaines créatures sont exclues des modifications.
 - Cela inclue les créatures utilisant des cimeterres, des katanas ou autre chose d'autre qu'un bouclier dans leur deuxième main (ou dotées de ces compétences), puisque BG1 ne dispose pas de ces animations.
 - :warning: **À utiliser avec précaution** avec des PNJs recrutables : si ce composant ne traitera pas les personnages compétents en style de combat à deux armes ou équipés d'une seconde arme, n'essayez en aucun cas d'équiper les PNJs d'une seconde arme.
-- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe.
+- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le *bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe*.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
@@ -761,7 +761,7 @@ Ce composant attribue à certains PJs exportés des animations de personnages de
 - La deuxième option modifie tous les PJs, mais demande une confirmation pour ceux équipés de cimeterres, de katanas ou d'autre chose d'autre qu'un bouclier dans leur deuxième main.
 - Utiliser des cimeterres et des katanas devrait cependant fonctionner, mais ils apparaîtront comme des épées longues sur les avatars des personnages.
 - :warning: **À utiliser avec précaution** : n'essayez pas de porter deux armes, sinon le jeu crashera probablement.
-- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe.
+- &#9755; **Uniquement pour les jeux classiques :** cette <a href="#mage_robes">procédure</a> permet de résoudre le *bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsque ces personnages changent de type de robe*.
 <div align="right"><a href="#components">Retour à la liste des composants</a></div>
 
 ## 
