@@ -10,6 +10,8 @@
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                *
  *      - Tutu variables: replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables and added missing tutu variable for BG1 kent and sailned files.  *
  *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).             *
+ *      - Added two options to disable "Male human fighters get the fighter instead of cleric animation" for Flaming Fist members (#51) and "Amnian guards get the Amnian     *
+ *        soldier animation" for Nashkel guards (#335).                                                                                                                       *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)      *
  *        whenever relevant.                                                                                                                                                  *
  * ========================================================================================================================================================================== */
@@ -17,19 +19,19 @@
 /* ----------------------------------------------------------------------------- *
  *                             CREATURES                                   line  *
  * ----------------------------------------------------------------------------- *
- *  Male human fighters get the fighter instead of cleric animation      #   45  *
- *  Male elf fighters get the fighter instead of cleric animation        #   81  *
- *  Male halfling fighters get the fighter instead of cleric animation   #  104  *
- *  Female human fighters get the fighter instead of cleric animation    #  125  *
- *  Male human mages get the mage instead of cleric animation            #  152  *
- *  Male elf mages get the mage instead of cleric animation              #  175  *
- *  Male human thieves get the thief instead of fighter animation        #  200  *
- *  Female human thieves get the thief instead of fighter animation      #  221  *
- *  Male human monks get the monk instead of cleric animation            #  240  *
- *  Male human pirates get the pirate animation                          #  265  *
- *  Male human sailors get the sailor_man animation                      #  303  *
- *  Amnian soldiers get the amnian_soldier animation                     #  329  *
- *  Male human Shadow Thieves get the shadow_thief animation             #  360  *
+ *  Male human fighters get the fighter instead of cleric animation      #   47  *
+ *  Male elf fighters get the fighter instead of cleric animation        #   83  *
+ *  Male halfling fighters get the fighter instead of cleric animation   #  106  *
+ *  Female human fighters get the fighter instead of cleric animation    #  127  *
+ *  Male human mages get the mage instead of cleric animation            #  154  *
+ *  Male elf mages get the mage instead of cleric animation              #  177  *
+ *  Male human thieves get the thief instead of fighter animation        #  202  *
+ *  Female human thieves get the thief instead of fighter animation      #  223  *
+ *  Male human monks get the monk instead of cleric animation            #  242  *
+ *  Male human pirates get the pirate animation                          #  267  *
+ *  Male human sailors get the sailor_man animation                      #  305  *
+ *  Amnian soldiers get the amnian_soldier animation                     #  331  *
+ *  Male human Shadow Thieves get the shadow_thief animation             #  362  *
  * ----------------------------------------------------------------------------- */
 
 PRINT @28 // ~Patching creature files...~
@@ -46,7 +48,7 @@ INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_humanoid_fixes_arrays.tph~
  * ======================================================================= */
 ACTION_PHP_EACH GW_male_human_fighters AS t-bcre => correct BEGIN
 
-	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ AND (((ia_flaming_fist_get_fighter_anim = 0) AND (correct = 1)) OR (ia_flaming_fist_get_fighter_anim = 1))) BEGIN
 
 		COPY_EXISTING ~%t-bcre%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
@@ -330,7 +332,7 @@ ACTION_CLEAR_ARRAY GW_male_sailors
  * =============================================================== */
 ACTION_PHP_EACH GW_amnian_soldiers AS t-bcre => correct BEGIN
 
-	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ AND (((ia_nashkel_guards_get_bg2_amnian_anim = 0) AND (correct = 1)) OR (ia_nashkel_guards_get_bg2_amnian_anim = 1))) BEGIN
 
 		COPY_EXISTING ~%t-bcre%.cre~ ~override~
 			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~

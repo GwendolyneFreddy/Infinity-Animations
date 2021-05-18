@@ -140,7 +140,7 @@
 		</p>
 		<ul style="margin-left: 5%;">
 			<li><a href="https://forums.beamdog.com/discussion/19501/resource-pack-extended-animations/p1">Viader's Extended Animations</a></li>
-			<li>&#9888;&#65039; Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. As result, <strong><em>allowing the BWP Fixpack to overwrite animate.ids is at your own risk</em></strong>.</li>
+			<li>&#9888;&#65039; Latest versions of <a href="http://www.shsforums.net/files/file/521-big-world-fixpack/">BWP Fixpack</a> introduce a f.....g regression by overwriting animate.ids file. They add duplicated entries and populates it with animation slots used by EE games. As a result, it corrupts IA installation. IA v6.0.0 tries to fix this issue and it seems to be working. But it has not been tested on every available mega installation. Therefore, <strong><em>allowing the BWP Fixpack to overwrite animate.ids is at your own risk</em></strong>.</li>
 		</ul>
 		<p>
 			If you encounter any bugs, please <a href="http://www.shsforums.net/forum/594-infinity-animations/">report them on the forum!</a>
@@ -267,7 +267,7 @@
 		<hr style="width: 90%;"/><br>
 
 
-		<h3>Mac OS/h3>
+		<h3>Mac OS</h3>
 
 		<div class="important" style="width: 85%; margin-top:2%;">
 			<p style ="width: 100%;">&#9888;&#65039; Unfortunately, <strong>this mod is not currently fully compatible with Mac OS</strong> because the main component patching exe file does not support OS X. If you wish to make it so, please post your interest in the <a href="http://www.shsforums.net/forum/594-infinity-animations/">forum</a>. (It may help to examine your game launcher and the contents of the existing patch in an editor if you have any technical expertise.)</p><br>
@@ -367,6 +367,20 @@
 				  </ul>
 				  <span style="color: #781808; padding-left:40px;">0 = Install sound clips in the game language [default]</span><br>
 				  <span style="padding-left:40px;">1 = Install sound clips in the selected mod language</span></td>
+			</tr>
+
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_flaming_fist_get_fighter_anim</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-top:20px; padding-bottom:20px; "><a name="flamingfist" id="flamingfist"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Male human fighters get the fighter instead of cleric animation</em>" for Flaming Fist members.<br><br>
+				  <span style="padding-left:40px;">0 = No, Flaming Fist members keep their original cleric animation</span><br>
+				  <span style="color: #781808; padding-left:40px;">1 = Yes, Flaming Fist members get the fighter animation [default]</span></td>
+			</tr>
+
+			<tr>
+				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px; "><strong><span style="color: #781808;">ia_nashkel_guards_get_bg2_amnian_anim</span></strong></td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-top:20px; padding-bottom:20px; "><a name="nashkelguards" id="nashkelguards"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Amnian guards get the Amnian soldier animation</em>" for Nashkel guards.<br><br>
+				  <span style="padding-left:40px;">0 = No, Nashkel guards keep their original cleric animation</span><br>
+				  <span style="color: #781808; padding-left:40px;">1 = Yes, Nashkel guards get the Amnian soldier animation [default]</span></td>
 			</tr>
 
 			<tr>
@@ -668,8 +682,9 @@
 		<p>
 			&#10173; This component fixes humanoid creature files that have wrong animation slots:
 		</p>
+
 		  <ul style="margin-left: 6%;">
-			<li>Male human fighters get the fighter instead of cleric animation</li>
+			<li>Male human fighters get the fighter instead of cleric animation <sup><span style="color: #781808;">(1)</span></sup></li>
 			<li>Male elf fighters get the fighter instead of cleric animation</li>
 			<li>Male halfling fighters get the fighter instead of cleric animation</li>
 			<li>Female human fighters get the fighter instead of cleric animation</li>
@@ -680,8 +695,15 @@
 			<li>Male human monks get the monk instead of cleric animation</li>
 			<li>Male human pirates get the pirate animation</li>
 			<li>Male human sailors get the sailor animation</li>
-			<li>Amnian guards get the Amnian guard animation</li>
+			<li>Amnian guards get the Amnian soldier animation <sup><span style="color: #781808;">(1)</span></sup></li>
 			<li>Male human Shadow Thieves get the Shadow Thief animation</li>
+		  </ul>
+		<p>
+			<sup><span style="color: #781808;">(1)</span></sup> As of v6.0.0, two new options fine-tune this component, at the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE:
+		</p>
+		  <ul style="margin-left: 6%;">
+			<li><a href="#flamingfist">ia_flaming_fist_get_fighter_anim</a>: this option disables the "<em>Male human fighters get the fighter instead of cleric animation</em>" for Flaming Fist members if set to 0 (1 by default).</li>
+			<li><a href="#nashkelguards">ia_nashkel_guards_get_bg2_amnian_anim</a>: this option disables the "<em>Amnian guards get the Amnian soldier animation</em>" for Nashkel guards if set to 0 (1 by default).</li>
 		  </ul>
 		<p style="font-size:90%;text-align: right;"><a href="#compon">BACK TO COMPONENTS INDEX</a>
 		</p>
@@ -2218,6 +2240,7 @@
 				<li style="margin-left:-4%; margin-right:-6%;">Externalized lists of creatures to be patched into arrays (built in "<em>gw_ia_humanoid_fixes_arrays.tph</em>" library) for easier maintenance.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Tutu variables: added missing tutu variable for BG kent and sailned files ("<em>GW_male_human_fighters</em>" array).</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Added two options to disable the "<em>Male human fighters get the fighter instead of cleric animation</em>" for Flaming Fist members and the "<em>Amnian guards get the Amnian soldier animation</em>" for Nashkel guards.</li>
 			  </ul><br>
 
 			<li><span style="color: #781808;">[50] Distinctive Genies</span> (t-genie.tpa)</li>
@@ -2342,7 +2365,7 @@
 
 			<li><span style="color: #781808;">[9600-9610-9620] BG1 Character Animations for Saved Games</span> (t-bg1sav.tpa)</li>
 			  <ul style="padding-top: 4px">
-				<li style="margin-left:-4%; margin-right:-6%;">Resolved <a ref="http://www.shsforums.net/topic/47267-saved-game-fixer-problem/">random bug with adding &#x1F4C1; \mpsave folder to the scan.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Resolved <a href="http://www.shsforums.net/topic/47267-saved-game-fixer-problem/">random bug</a> with adding &#x1F4C1; \mpsave folder to the scan.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Component should no longer crash if &#x1F4C1; \save or &#x1F4C1; \mpsave folders do not exist (Thanks Sam for fixing!).</li>
 				<li style="margin-left:-4%; margin-right:-6%;">EE games compatibility: used new "<span style="color: purple;">%<em>ia-animationtype_bg1</em>%</span>" variables to patch files according to the game.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Used new "<span style="color: purple;">%<em>low_0xnnnn</em>%</span>" variables to define former _LOW animations ID removed by Infinity Animations.</li>
@@ -2351,7 +2374,7 @@
 
 			<li><span style="color: #781808;">[9900-9910] Saved Games Animations Fixer</span> (t-savfix.tpa)</li>
 			  <ul style="padding-top: 4px">
-				<li style="margin-left:-4%; margin-right:-6%;">Resolved <a ref="http://www.shsforums.net/topic/47267-saved-game-fixer-problem/">random bug</a> with adding &#x1F4C1; \mpsave folder to the scan.</li>
+				<li style="margin-left:-4%; margin-right:-6%;">Resolved <a href="http://www.shsforums.net/topic/47267-saved-game-fixer-problem/">random bug</a> with adding &#x1F4C1; \mpsave folder to the scan.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Component should no longer crash if &#x1F4C1; \save or &#x1F4C1; \mpsave folders do not exist.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Used new "<span style="color: purple;">%<em>low_0xnnnn</em>%</span>" variables to define former _LOW animations ID removed by Infinity Animations.</li>
 				<li style="margin-left:-4%; margin-right:-6%;">Re-formated <em>t-savlog.txt</em> file entries to be more friendly readable.</li>

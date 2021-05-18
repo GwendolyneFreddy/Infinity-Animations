@@ -28,7 +28,7 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 
 	OUTER_SET is_tutu    = (GAME_IS ~tutu tutu_totsc~) ? 1 : 0                            // tutu
 	OUTER_SET is_bgt     = (GAME_IS ~bgt~) ? 1 : 0                                        // bgt
-	OUTER_SET is_tob     = (GAME_IS ~tob ca~ AND (is_tutu = 0) AND (is_bgt = 0)) ? 1 : 0  // based on classical ToB standalone
+	OUTER_SET is_tob     = (GAME_IS ~tob ca~ AND (is_tutu = 0) AND (is_bgt = 0)) ? 1 : 0  // based on classic ToB standalone
 
 	OUTER_SET is_bgee    = (GAME_IS "bgee" AND NOT GAME_INCLUDES ~sod~) ? 1 : 0           // bgee without SoD
 	OUTER_SET is_sod     = (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) ? 1 : 0               // SoD
@@ -36,20 +36,20 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 	OUTER_SET is_iwdee   = (GAME_IS "iwdee") ? 1 : 0                                      // iwdee
 	OUTER_SET is_eet     = (GAME_IS "eet") ? 1 : 0                                        // eet
 	OUTER_SET is_ee      = (GAME_IS "bgee bg2ee iwdee eet") ? 1 : 0                       // based on EE games, except PSTEE
-	OUTER_SET is_classic = (is_ee = 0) ? 1 : 0                                            // based classic games
+	OUTER_SET is_classic = (is_ee = 0) ? 1 : 0                                            // based on classic games
 
 
 	/* ------------------------------- *
 	 *    Check game's localization    *
 	 * ------------------------------- */
 
-	// 1. EE games: language is defined by WeiDU EE_LANGUAGE variable
+	// 1. EE games: language is defined by WeiDU %EE_LANGUAGE% variable
 	ACTION_IF (VARIABLE_IS_SET "EE_LANGUAGE") BEGIN
 
 		OUTER_TEXT_SPRINT game_lang ~%EE_LANGUAGE%~
 		ACTION_TO_LOWER "game_lang"
 
-	// 2. Original games: we must find in which language the game is installed (look for string #6913 and compare it with foreign languages strings).
+	// 2. Original games: we must find in which language the game is installed (looking for string #6913 and compare it with foreign languages strings files).
 	END ELSE BEGIN
 
 		ACTION_GET_STRREF 6913 collier
@@ -72,6 +72,7 @@ ACTION_IF !VARIABLE_IS_SET always_once_section BEGIN
 
 	END
 	PRINT "CONTROL Check game's localization ===> GAME LANGUAGE = %game_lang%"
+	SILENT
 
 
 	/* ------------------------ *
@@ -136,6 +137,7 @@ ACTION_IF ((FILE_EXISTS_IN_GAME ~frost01.cre~)) AND NOT F_Exists BEGIN // FILE_E
 	ACTION_IF is_iwdee BEGIN
 		PRINT @1008 // ~Icewind Dale Enhanced Edition install detected.~
 	END
+	SILENT
 
 
 	/* -------------------------- *
@@ -213,12 +215,12 @@ Creature  Item      Slot   Issue
 	 * ------------------------------------------------- */
 
 	LAM ~gw_check_sound_language~
-	PRINT "==> soundset_lang = %soundset_lang% - soundset_lang_ee = %soundset_lang_ee%"
-
 
 	PRINT @1014 /* ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
 ---------------------------------------------------
 	ia_force_soundset = %ia_force_soundset%
+	ia_flaming_fist_get_fighter_anim = %ia_flaming_fist_get_fighter_anim%
+	ia_nashkel_guards_get_bg2_amnian_anim = %ia_nashkel_guards_get_bg2_amnian_anim%
 	ia_base_anims = %ia_base_anims%
 	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
 	ia_bg1_character_animations = %ia_bg1_character_animations%
@@ -272,10 +274,10 @@ Creature  Item      Slot   Issue
 	END
 
 
-	/* --------------------------------------------------------- *
-	 *    TRAs declared in LANGUAGE must be reloaded             *
-	 *    by hand, because of the copying (for non-EE version    *
-	 * --------------------------------------------------------- */
+	/* ---------------------------------------------------------- *
+	 *    TRAs declared in LANGUAGE must be reloaded              *
+	 *    by hand, because of the copying (for non-EE version)    *
+	 * ---------------------------------------------------------- */
 
 	LOAD_TRA ~infinityanimations/lang/%base_language%/setup.tra~
 	LOAD_TRA ~infinityanimations/lang/%LANGUAGE%/setup.tra~

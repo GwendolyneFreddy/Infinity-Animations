@@ -11,8 +11,8 @@
  *  - FUNCTION check_ini               : CHECKS an ini value (case-insensitive) / Vérifie une variable (en minuscules).     => line #  50   *
  *  - MACRO GW_CHECK_CONFIG_VARIABLES  : CHECKS configuration options values validity.                                      => line #  72   *
  *                                       VÉRIFIE la validité des options de configuration.                                                  *
- *  - MACRO gw_check_sound_language    : DEFINES which language soundsets to install.                                       => line # 155   *
- *                                       DÉTERMINE dans quelle langue les jeux de sons sont installés.                                      *
+ *  - MACRO gw_check_sound_language    : DEFINES which language sound clips to install.                                     => line # 155   *
+ *                                       DÉTERMINE dans quelle langue les jeux de son sont installés.                                       *
  * ======================================================================================================================================== */
 
 
@@ -84,12 +84,15 @@ ACTION_CLEAR_ARRAY ia_ini_variables_check
 ACTION_DEFINE_ASSOCIATIVE_ARRAY ia_ini_variables_check BEGIN
 //  VARIABLE                  VALUES : MAX  => DEFAULT
 	force_tra_rebuild,                  1	=> 0 // used during mod development. YOU SHOULD NOT BE ALLOWED TO MODIFY IT.
-	sort_ids,                           1	=> 0 // id.
+	sort_ids,                           1	=> 1 // id.
 	force_soundset,                     1	=> 0
+	flaming_fist_get_fighter_anim,      1	=> 1
+	nashkel_guards_get_bg2_amnian_anim, 1	=> 1
 	bg1_character_animations,           1	=> 1
 	bg2_restores,                       1	=> 1
 	ee_missing,                         1	=> 1
 	base_anims,                         1	=> 1
+	modders,                            1	=> 1
 	belhifet_and_marilith,              1	=> 1
 	bg2_iwd2,                           1	=> 1
 	ee_tob,                             1	=> 1
@@ -104,7 +107,6 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY ia_ini_variables_check BEGIN
 	pst_paletted,                       1	=> 1
 	shadows_harpy_frostgiant,           1	=> 1
 	wh_dr_wyv_lop,                      1	=> 1
-	modders,                            1	=> 1
 END
 
 DEFINE_ACTION_MACRO ~GW_CHECK_CONFIG_VARIABLES~
@@ -135,7 +137,7 @@ BEGIN
 
 		OUTER_SET EVAL "ia_%variable_0%" = value
 
-/*TODO remove (only used during development)
+/*TODO REMOVE (only used during development)
 LAF ~check_ini~ STR_VAR ini = EVAL "ia_%variable_0%" RET var = value END
 PRINT "CONTROL check_ini ia_%variable_0% = %var%"*/
 
@@ -152,18 +154,18 @@ END	// of DEFINE_ACTION_MACRO
 
 
 /* ============================================================================================================================================== *
- *  MACRO gw_check_sound_language : DEFINES which language soundsets to install.                                                                  *
- *                                  DÉTERMINE dans quelle langue les jeux de sons sont installés.                                                 *
+ *  MACRO gw_check_sound_language : DEFINES which language sound clips to install.                                                                *
+ *                                  DÉTERMINE dans quelle langue les jeux de son sont installés.                                                  *
  * ---------------------------------------------------------------------------------------------------------------------------------------------- *
  *  Infinity Animations automatically install sound clips accordingly to the game language localization. However it is possible to bypass this    *
  *  behaviour  by setting %ia_force_soundset% variable to 1.                                                                                      *
- *  For example, if you install the mod in English in a French BG2 game, IA will install French soundsets unless you set this variable to 1.      *
- *  In which  case, English soundsets will be installed instead of French ones.                                                                   *
+ *  For example, if you install the mod in English in a French BG2 game, IA will install French sound clips unless you set this variable to 1.    *
+ *  In which case, English sound clips will be installed instead of French ones.                                                                  *
  * ---------------------------------------------------------------------------------------------------------------------------------------------- *
  *  This macro returns %soundset_lang% and %soundset_lang_ee% variables which define which language soundset will be installed.                   *
  *  By default, it prioritizes 1) the game installation language, 2) the mod installation language, 3) English.                                   *
  * ---------------------------------------------------------------------------------------------------------------------------------------------- *
- *  Cette macro retourne les variables %soundset_lang% et %soundset_lang_ee% qui déterminent dans quelle langue les jeux de sons sont installés.  *
+ *  Cette macro retourne les variables %soundset_lang% et %soundset_lang_ee% qui déterminent dans quelle langue les jeux de son sont installés.   *
  *  Par défaut, il s'agit par ordre de priorité de 1) la langue d'installation du jeu, 2) la langue d'installation du mod, 3) l'anglais.          *
  * ============================================================================================================================================== */
 

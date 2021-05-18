@@ -353,6 +353,8 @@ bg1_character_animations sub-folder.~
 @1014 = ~LIST OF CONFIGURATION OPTIONS SET FOR INSTALLATION:
 ---------------------------------------------------
 	ia_force_soundset = %ia_force_soundset%
+	ia_flaming_fist_get_fighter_anim = %ia_flaming_fist_get_fighter_anim%
+	ia_nashkel_guards_get_bg2_amnian_anim = %ia_nashkel_guards_get_bg2_amnian_anim%
 	ia_base_anims = %ia_base_anims%
 	ia_belhifet_and_marilith = %ia_belhifet_and_marilith%
 	ia_bg1_character_animations = %ia_bg1_character_animations%

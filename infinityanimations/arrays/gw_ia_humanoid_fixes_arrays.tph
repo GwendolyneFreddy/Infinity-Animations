@@ -11,25 +11,25 @@
  * -----------------------------------                                                                                                                     *
  *  - GW_male_human_fighters      :   LISTS vanilla and modded Male Human Fighters creatures needing to be patched.                        => line #  37   *
  *                                    LISTE les guerriers humains du jeu et de mods nécessitant d'être modifiés.                                           *
- *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures needing to be patched.                          => line # 234   *
+ *  - GW_male_elf_fighters        :   LISTS vanilla and modded Male Elf Fighters creatures needing to be patched.                          => line # 235   *
  *                                    LISTE les guerriers elfes du jeu et de mods nécessitant d'être modifiés.                                             *
- *  - GW_male_halfling_fighters   :   LISTS vanilla and modded Male Halfling Fighters creatures needing to be patched.                     => line # 266   *
+ *  - GW_male_halfling_fighters   :   LISTS vanilla and modded Male Halfling Fighters creatures needing to be patched.                     => line # 267   *
  *                                    LISTE les guerriers halfelins du jeu et de mods nécessitant d'être modifiés.                                         *
- *  - GW_female_human_fighters    :   LISTS vanilla and modded Female Human Fighters creatures needing to be patched.                      => line # 298   *
+ *  - GW_female_human_fighters    :   LISTS vanilla and modded Female Human Fighters creatures needing to be patched.                      => line # 299   *
  *                                    LISTE les guerrières humaines du jeu et de mods nécessitant d'être modifiées.                                        *
- *  - GW_male_human_mages         :   LISTS vanilla and modded Male Human Mages creatures needing to be patched.                           => line # 325   *
+ *  - GW_male_human_mages         :   LISTS vanilla and modded Male Human Mages creatures needing to be patched.                           => line # 327   *
  *                                    LISTE les mages humains du jeu et de mods nécessitant d'être modifiés.                                               *
- *  - GW_male_elf_mages           :   LISTS vanilla and modded Male Elf Mages creatures needing to be patched.                             => line # 356   *
+ *  - GW_male_elf_mages           :   LISTS vanilla and modded Male Elf Mages creatures needing to be patched.                             => line # 357   *
  *                                    LISTE les mages elfes du jeu et de mods nécessitant d'être modifiés.                                                 *
- *  - GW_male_human_monks         :   LISTS vanilla and modded Male Human Monks creatures needing to be patched.                           => line # 384   *
+ *  - GW_male_human_monks         :   LISTS vanilla and modded Male Human Monks creatures needing to be patched.                           => line # 385   *
  *                                    LISTE les moines du jeu et de mods nécessitant d'être modifiés.                                                      *
- *  - GW_male_human_pirates       :   LISTS vanilla and modded Male Human Pirates creatures needing to be patched.                         => line # 419   *
+ *  - GW_male_human_pirates       :   LISTS vanilla and modded Male Human Pirates creatures needing to be patched.                         => line # 420   *
  *                                    LISTE les pirates hommes du jeu et de mods nécessitant d'être modifiés.                                              *
- *  - GW_male_sailors             :   LISTS vanilla and modded Male Sailors creatures needing to be patched.                               => line # 479   *
+ *  - GW_male_sailors             :   LISTS vanilla and modded Male Sailors creatures needing to be patched.                               => line # 480   *
  *                                    LISTE les marins du jeu et de mods nécessitant d'être modifiés.                                                      *
- *  - GW_amniab_soldiers          :   LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.                            => line # 506   *
+ *  - GW_amniab_soldiers          :   LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.                            => line # 507   *
  *                                    LISTE les soldats amniens du jeu et de mods nécessitant d'être modifiés.                                             *
- *  - GW_shadow_thieves           :   LISTS vanilla and modded Male human Shadow Thieves creatures needing to be patched.                  => line # 555   *
+ *  - GW_shadow_thieves           :   LISTS vanilla and modded Male human Shadow Thieves creatures needing to be patched.                  => line # 556   *
  *                                    LISTE les Voleurs de l'Ombre humains du jeu et de mods nécessitant d'être modifiés.                                  *
  * ======================================================================================================================================================= */
 
@@ -37,6 +37,7 @@
  *  ARRAY  GW_male_human_fighters : LISTS vanilla and modded Male Human Fighters creatures needing to be patched.  *
  * --------------------------------------------------------------------------------------------------------------- *
  *  Male Human Fighters get the fighter_male_human animation (was cleric).                                         *
+ *  As of v6.0.0, if value = 0 and ia_flaming_fist_get_fighter_anim = 0, they keep their cleric animation.         *
  * =============================================================================================================== */
 
 ACTION_CLEAR_ARRAY GW_male_human_fighters
@@ -45,51 +46,51 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_male_human_fighters BEGIN
 
 // BG
 // --
-"%tutu_scriptf%lambrid"	=> 1	// Flaming Fist Mercenary
-"%tutu_scriptf%lamhusb"	=> 1	// Flaming Fist Enforcer
-"%tutu_scriptf%lampun2"	=> 1	// id.
-"%tutu_scriptp%heogurd"	=> 1	// Phoenix Guard
 "%tutu_var%bardol"      => 1	// Bardolan
 "%tutu_var%benjy"       => 1	// Benjy
 "%tutu_var%bill"        => 1	// Bill
 "%tutu_var%bouncer"     => 1	// Bouncer
 "%tutu_var%caedmo"      => 1	// Caedmon
-"%tutu_var%chimp5"      => 1	// Flaming Fist Mercenary
+"%tutu_var%chimp5"      => 0	// Flaming Fist Mercenary
 "%tutu_var%dandal"      => 1	// Dandal
 "%tutu_var%fergus"      => 1	// Fergus
 "%tutu_var%ffhunt"      => 1	// Flaming Fist Enforcer
-"%tutu_var%ffsleep"     => 1	// id.
-"%tutu_var%flam"        => 1	// Flaming Fist Mercenary
-"%tutu_var%flam10"      => 1	// id.
-"%tutu_var%flam11"      => 1	// id.
-"%tutu_var%flam12"      => 1	// id.
+"%tutu_var%ffsleep"     => 0	// id.
+"%tutu_var%flam"        => 0	// Flaming Fist Mercenary
+"%tutu_var%flam10"      => 0	// id.
+"%tutu_var%flam11"      => 0	// id.
+"%tutu_var%flam12"      => 0	// id.
 "%tutu_var%flam13"      => 1	// Dilos
-"%tutu_var%flam2"       => 1	// Flaming Fist Mercenary
-"%tutu_var%flam4"       => 1	// id.
-"%tutu_var%flam5"       => 1	// id.
-"%tutu_var%flam6"       => 1	// id.
-"%tutu_var%flam7"       => 1	// id.
-"%tutu_var%flam8"       => 1	// id.
-"%tutu_var%flam9"       => 1	// id.
+"%tutu_var%flam2"       => 0	// Flaming Fist Mercenary
+"%tutu_var%flam4"       => 0	// id.
+"%tutu_var%flam5"       => 0	// id.
+"%tutu_var%flam6"       => 0	// id.
+"%tutu_var%flam7"       => 0	// id.
+"%tutu_var%flam8"       => 0	// id. _flam8 is not installed in tutu
+"%tutu_var%flam9"       => 0	// id.
 "%tutu_var%flamal"      => 1	// Flaming Fist Enforcer
-"%tutu_var%flamc7"      => 1	// Flaming Fist Mercenary
-"%tutu_var%flame"       => 1	// Flaming Fist Enforcer
-"%tutu_var%flamen"      => 1	// id.
-"%tutu_var%flamen2"     => 1	// id.
-"%tutu_var%flamgg"      => 1	// Flaming Fist Enforcer
-"%tutu_var%flampun"     => 1	// Flaming Fist Enforcer
-"%tutu_var%flamsco"     => 1	// Flaming Fist Scout
-"%tutu_var%flamvai"     => 1	// Flaming Fist Mercenary
-"%tutu_var%flamwiz"     => 1	// Flaming Fist Battle Wizard
+"%tutu_scriptf%lambrid"	=> 0	// Flaming Fist Mercenary
+"%tutu_var%flamc7"      => 0	// id. flamc7 is not installed in BGT
+"%tutu_var%flame"       => 0	// Flaming Fist Enforcer
+"%tutu_var%flamen"      => 0	// id.
+"%tutu_var%flamen2"     => 0	// id.
+"%tutu_var%flamgg"      => 0	// Flaming Fist Enforcer
+"%tutu_scriptf%lamhusb"	=> 0	// id.
+"%tutu_var%flampun"     => 0	// id.
+"%tutu_scriptf%lampun2"	=> 0	// id.
+"%tutu_var%flamsco"     => 0	// Flaming Fist Scout
+"%tutu_var%flamvai"     => 0	// Flaming Fist Mercenary
+"%tutu_var%flamwiz"     => 0	// Flaming Fist Battle Wizard
 "%tutu_var%guard"       => 1	// Guard
 "%tutu_var%jonavi"      => 1	// Jonavin
 "%tutu_var%kent"        => 1	// Kent
 "%tutu_var%leaggu1"     => 1	// Merchants' League Counting House Guard
 "%tutu_var%leaggu7"     => 1	// id.
-"%tutu_var%phoenix"     => 1	// Phoenix Guard
+"%tutu_scriptp%heogurd"	=> 1	// Phoenix Guard
+"%tutu_var%phoenix"     => 1	// id.
 "%tutu_var%sailned"     => 1	// Sailor Ned
 "%tutu_var%sorrel"      => 1	// Sorrel
-"%tutu_var%watchm"      => 1	// Flaming Fist Mercenary
+"%tutu_var%watchm"      => 0	// Flaming Fist Mercenary
 
 // BG2
 // ---
@@ -502,26 +503,27 @@ xcrew03                 => 1	// id.
 END
 
 
-/* ====================================================================================================== *
- *  ARRAY GW_amnian_soldiers : LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.  *
- * ------------------------------------------------------------------------------------------------------ *
- *  Amnian Soldiers get the amnian_soldier animation (was cleric).                                        *
- * ====================================================================================================== */
+/* ============================================================================================================= *
+ *  ARRAY GW_amnian_soldiers : LISTS vanilla and modded Amnian Soldiers creatures needing to be patched.         *
+ * ------------------------------------------------------------------------------------------------------------- *
+ *  Amnian Soldiers get the amnian_soldier animation (was cleric).                                               *
+ *  As of v6.0.0, if value = 0 and ia_nashkel_guards_get_bg2_amnian_anim = 0, they keep their cleric animation.  *
+ * ============================================================================================================= */
 
 ACTION_CLEAR_ARRAY GW_amnian_soldiers
 ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_amnian_soldiers BEGIN
 
 // BG
 // --
-"%tutu_var%amnis"       => 1	// Amnian Soldier
-"%tutu_var%amnis3"      => 1	// id.
-"%tutu_var%amnis4"      => 1	// id.
-"%tutu_var%amnise"      => 1	// id.
-"%tutu_var%amnise2"     => 1	// id.
-"%tutu_var%amsleep"     => 1	// id.
-"%tutu_var%dead2"       => 1	// id.
-"%tutu_scriptd%eadfuck" => 1	// id.
-"%tutu_var%hick"        => 1	// id.
+"%tutu_var%amnis"       => 0	// Amnian Soldier
+"%tutu_var%amnis3"      => 0	// id.
+"%tutu_var%amnis4"      => 0	// id.
+"%tutu_var%amnise"      => 0	// id.
+"%tutu_var%amnise2"     => 0	// id.
+"%tutu_var%amsleep"     => 0	// id.
+"%tutu_var%dead2"       => 0	// id.
+"%tutu_scriptd%eadfuck" => 0	// id.
+"%tutu_var%hick"        => 0	// id.
 
 // BG2
 // ---
@@ -549,7 +551,6 @@ c#q04005                => 1	// id.
 c#q04006                => 1	// id.
 
 END
-
 
 /* =============================================================================================================== *
  *  ARRAY GW_shadow_thieves : LISTS vanilla and modded Male human Shadow Thieves creatures needing to be patched.  *
