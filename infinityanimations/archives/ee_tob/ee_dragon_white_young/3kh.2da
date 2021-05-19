@@ -12,7 +12,7 @@ CONJURE         		0
 DAMAGE          		t-bab07a t-bab08a
 DAMAGE          		0 0
 DIE             		t-bab09a t-bab10a
-DIE             		0
+DIE             		0 0
 HEAD_TURN       		***
 HEAD_TURN       		0
 READY           		***

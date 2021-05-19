@@ -33,7 +33,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 #### EE version
 
 - [ ] Check new patches: maybe they added missing animations? (WIP)
-- [ ] <ins>Note for modders</ins>: add a section explaining ini files keywords meanings.
+- [x] <ins>Note for modders</ins>: add a section explaining ini files keywords meanings. (2021.05.18 : thanks Argent77 for proofreading and providing missing definitions!)
 - [ ] <ins>All components</ins>: list all EE games specific creatures that need to be patched.
 - [ ] <ins>Distinctive Fiends component</ins>: Is it very useful to add creatures sound clips for EE games?
 - [ ] <ins>IA Reference Picker documentation</ins>: update animation types description.
@@ -139,9 +139,3 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 #### Saved Games Animations Fixer component [9900-9910]
 
 - [ ] Why asking for each saved game?
-
-## 
-
-####  component []
-
-- [ ] 
