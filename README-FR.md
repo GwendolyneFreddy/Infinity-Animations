@@ -244,20 +244,20 @@ Voici le tableau des options concernées :</br></br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en français ==> les fichiers sons français sont installés.<br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons français sont installés si l'option ia_force_soundset est égale à 0.<br>
 		- Vous jouez un jeu en français et avez installé Infinity Animations en anglais ==> les fichiers sons anglais sont installés si l'option ia_force_soundset est égale à 1.<br><br>
-		*0 = Installer les fichiers sons dans la langue du jeu [par défaut]*<br>
+		<em>0 = Installer les fichiers sons dans la langue du jeu [par défaut]</em><br>
 		1 = Installer les fichiers sons dans la langue sélectionnée pour installer le mod</td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_flaming_fist_get_fighter_anim</strong></td>
-		<td><a name="flamingfist" id="flamingfist"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " *l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre* " pour les membres du Poing Enflammé.<br><br>
+		<td><a name="flamingfist" id="flamingfist"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " <em>l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre</em> " pour les membres du Poing Enflammé.<br><br>
 		0 = Non, les membres du Poing Enflammé conservent leur animation initiale de clerc<br>
-		*1 = Oui, on attribue aux membres du Poing Enflammé l'animation de guerrier [par défaut]*</td>
+		<em>1 = Oui, on attribue aux membres du Poing Enflammé l'animation de guerrier [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nashkel_guards_get_bg2_amnian_anim</strong></td>
-		<td><a name="nashkelguards" id="nashkelguards"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " *l'attribution aux gardes amniens l'animation de soldat amnien* " pour les gardes de Nashkel.<br><br>
+		<td><a name="nashkelguards" id="nashkelguards"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " <em>l'attribution aux gardes amniens l'animation de soldat amnien</em> " pour les gardes de Nashkel.<br><br>
 		0 = Non, les gardes de Nashkel conservent leur animation initiale de clerc<br>
-		*1 = Oui, on attribue aux gardes de Nashkel l'animation de de soldat amnien [par défaut]*</td>
+		<em>1 = Oui, on attribue aux gardes de Nashkel l'animation de de soldat amnien [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
@@ -273,7 +273,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : toutes les animations manquantes référencées dans les jeux Enhanced Editions. Comprend tous les jeux de sons et les fichiers ini des créatures concernées.<br>
 		- Nécessaire pour tous les jeux EE (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Nécessaire pour tous les composants.<br><br>
-		*1 = Installation automatique [par défaut]*</td>
+		<em>1 = Installation automatique [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
@@ -284,7 +284,7 @@ Voici le tableau des options concernées :</br></br>
 		- Nécessaire pour les composants Morts-vivants différenciés [400] et Plus d'animations de base [500].<br>
 		- Nécessaire pour les mods BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS et RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg1_character_animations</strong></td>
@@ -292,7 +292,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : animations de personnages de BG1. Comprend les animations de cimeterre de BG1.<br>
 		- Nécessaire pour les composants Animations de personnages de BG1 pour les PNJs [8000-8010-8020-8030] et pour les PJ exportés [9500-9510-9520].<br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_belhifet_and_marilith</strong></td>
@@ -300,7 +300,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : animations et jeux de sons du belhifet et de la marilith d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les mods Drizzt Saga, RoT, TDD, TS et TS-BP.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
@@ -309,7 +309,7 @@ Voici le tableau des options concernées :</br></br>
 		- Nécessaire pour les composants Démons différenciés [100], Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
 		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
@@ -317,7 +317,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (nouveau)<br><br>
 		- Contenu: sanglier sauvage, vargouille, gobelours chaman, poulet blanc, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (rouge, vert), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, efrit noble, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure et hache, en armure et arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
@@ -325,7 +325,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : démon bleu, démon vert (Nabassu), marilith sombre, maurezhi, myrlochar, dao, dao avec jambes, éfrit, éfrit avec jambes, jann, jann avec jambes, marid, marid avec jambes, yochlol, reine des goules, guenaudes (annis, nocturne, verte, des mers). Comprend aussi les fichiers de sons pour démon vert (Nabassu), erinyes, gelugon, guenaude nocturne et tieffelins.<br>
 		- Nécessaire pour les composants Génies différenciés [50], Démons différenciés [100] et Morts-vivants différenciés [400].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd</strong></td>
@@ -334,7 +334,7 @@ Voici le tableau des options concernées :</br></br>
 		- Nécessaire pour les composants Démons différenciés [100], Morts-vivants différenciés [400], Combattants squelettes [410-415-420], Animation de pauvre hère [450-455-460] et Plus d'animations d'Icewind Dale [550].<br>
 		- Nécessaire pour les mods BP, BH, CtB, NEJ, RoT, SOS et TS.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd_svirfneblin</strong></td>
@@ -342,7 +342,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : les animations de IWD/IWD2 pour svirfneblins (gnomes des profondeurs). Par défaut, la couleur de leur peau est pâles alors que, dans les références AD&D, elle devrait être plus foncée (couleur pierre). Le jeu original comportait des variantes avec et sans pioches (mais sans animation d'arme séparée). Comme ces emplacements ne sont pas palettisés, les variantes suivantes sont disponibles (les deux dernières étant des versions personnalisées des animations pâles IWD): svirfneblin pâle avec hache, svirfneblin pâle sans hache, svirfneblin foncé avec hache, svirfneblin foncé sans hache. Comprend des jeux de sons empruntés à NWN.<br>
 		- Nécessaire pour le composant Animations de svirfneblins [480-490].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
@@ -351,7 +351,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : Barbare humain, Druidesse humaine, Guerrière humaine, Magicienne humaine, Magicienne elfe, Voleuse humaine, Ninja humain, Vampire homme.<br>
 		- Nécessaire pour le composant Avatars de Moinesse pour IA [7000-7010-7020-7030].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
@@ -359,7 +359,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (EE compatible version)<br><br>
 		Même contenu que le précédent, mais compatible avec les jeux EE.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
@@ -367,14 +367,14 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : modrone alternatif, animations de NWN portées par WoRm (Amel, basilic, bebilith, hamatula, osyluth, diantrefosse, épouvantail, Vedred). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Diantrefosses [150-175], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_misc_1</strong></td>
 		<td><ins>IA Content - Miscellaneous NWN Animations I</ins><br><br>
 		- Contenu :  bête éclipsante, géante du feu et du givre, scarabée bombardier, succube (avec les animations d'armes), l'espèce de chose bovine (ne me demandez pas pourquoi). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Plus d'animations de Neverwinter Nights [650] et pour le mod RPG KitsPack.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_abishai</strong></td>
@@ -382,7 +382,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : abishai bleue, noire, rouge et verte (d'après les animations de PS:T). Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Démons différenciés [100].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_paletted</strong></td>
@@ -390,7 +390,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : femme Aasimar, baurier mâle, catin, citoyen et citoyenne de Maudith, citoyen et citoyenne des classes supérieures, femme et homme poussière, femme et homme goule, githzerai, homme-dieu, citoyen et citoyenne des classes inférieures, magicien citoyen, marchand, midwife, sicaire et grand sicaire, prêtre et travailleur squelette, thokola, tieffelin homme et femme, zombi femme et homme. Comprend leurs jeux de sons.<br>
 		- Nécessaire pour le composant Plus d'animations de Planescape: Torment [710-720-760-740].<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_shadows_harpy_frostgiant</strong></td>
@@ -398,7 +398,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : ombres alternatives d'IWD (« murky »), harpie et géant du givre d'IWD. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le composant Morts-vivants différenciés [400] et pour les mods BP, Drizzt Saga, NEJv691, RoT, TDD et TS.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_wh_dr_wyv_lop</strong></td>
@@ -406,7 +406,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : dragon blanc et wiverne majeure blanche d'IWD, Dame de la Douleur. Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Nécessaire pour le mod Planar Sphere.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_modders</strong></td>
@@ -414,7 +414,7 @@ Voici le tableau des options concernées :</br></br>
 		- Contenu : poulet marron (Jarl), chien gris de jastey, mule (Kwiat_W) ; ours de Diablo II, ours garou de Diablo II, boucher de Heroes of the Storm, abeille géante, élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul (Ulb) ; leprechaun annah, easter egg morte, golem d'ambre, pygargue à tête blanche (et petit), petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne). Comprend les tables et les jeux de sons des créatures concernées.<br>
 		- Et bien plus encore à venir dans le futur.<br><br>
 		0 = Ne pas l'installer<br>
-		*1 = L'installer [par défaut]*</td>
+		<em>1 = L'installer [par défaut]</em></td>
 	</tr>
 </table><br>
 <div align="right"><a href="#top">Retour en haut de page</a></div>

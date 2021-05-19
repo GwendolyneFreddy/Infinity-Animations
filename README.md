@@ -243,27 +243,27 @@ Here is a chart listing the options related to the installation process:</br></b
 		- You play a French game and Infinity Animations is installed in French ==> French soundsets are installed.<br>
 		- You play a French game and Infinity Animations is installed in English ==> French soundsets are installed if ia_force_soundset = 0.<br>
 		- You play a French game and Infinity Animations is installed in English ==> English soundsets are installed if ia_force_soundset = 1.<br><br>
-		*0 = Install sound clips in the game language [default]*<br>
+		<em>0 = Install sound clips in the game language [default]</em>
 		1 = Install sound clips in the selected mod language</td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_flaming_fist_get_fighter_anim</strong></td>
-		<td><a name="flamingfist" id="flamingfist"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "*Male human fighters get the fighter instead of cleric animation*" for Flaming Fist members.<br><br>
+		<td><a name="flamingfist" id="flamingfist"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who want to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Male human fighters get the fighter instead of cleric animation</em>" for Flaming Fist members.<br><br>
 		0 = No, Flaming Fist members keep their original cleric animation<br>
-		*1 = Yes, Flaming Fist members get the fighter animation [default]*</td>
+		<em>1 = Yes, Flaming Fist members get the fighter animation [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nashkel_guards_get_bg2_amnian_anim</strong></td>
-		<td><a name="nashkelguards" id="nashkelguards"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "*Amnian guards get the Amnian soldier animation*" for Nashkel guards.<br><br>
+		<td><a name="nashkelguards" id="nashkelguards"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who want to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Amnian guards get the Amnian soldier animation</em>" for Nashkel guards.<br><br>
 		0 = No, Nashkel guards keep their original cleric animation<br>
-		*1 = Yes, Nashkel guards get the Amnian soldier animation [default]*</td>
+		<em>1 = Yes, Nashkel guards get the Amnian soldier animation [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_restores</strong></td>
 		<td><ins>IA Content - BG2 Restores</ins><br><br>
 		- Content: Goblin elite with axe (MGO3), Goblin elite with bow (MGO4), Lich (MLIC), Lich black (MLER), Marilith (MTAN), Myconid blue (MMY2), Orc elite melee (MOR3), Orog (MNO1), Orog elite (MNO2), Static spider woman (MSPL). Includes relevant creature sound tables.<br>
 		- This is the content module for BG2 restored slots. It is only necessary for a mega-mod install which has overwritten these slots, which are: BP, BoneHill, CtB, Drizzt Saga, NEJ2, RoT, SOS, TDD, TS, TS-BP, Sheena, Planar Sphere and RPG KitsPack mods.<br><br>
-		*Installation forced only if needed [default]*</td>
+		<em>Installation forced only if needed [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_missing</strong><br><br>
@@ -272,7 +272,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: all missing animations that already have animation slots in Enhanced games. Includes all relevant missing creature sound and ini files.<br>
 		- Needed for all EE games (BGEE, SoD, BG2EE, IWDEE, EET).<br>
 		- Needed for all components.<br><br>
-		*1 = Installation by default*</td>
+		<em>1 = Installation by default</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
@@ -283,7 +283,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Distinctive Undead [400] and More Base Animations [500] components.<br>
 		- Needed for BP, CtB, Drizzt Saga, NEJ, RoT, SOS, TDD, TS and RPG Kitspack mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg1_character_animations</strong></td>
@@ -291,7 +291,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: restored BG I character animations. Includes BG1 scimitars.<br>
 		- Needed for BG1 Character Animations for NPCs [8000-8010-8020-8030] and for Exported PCs [9500-9510-9520] components.<br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_belhifet_and_marilith</strong></td>
@@ -299,7 +299,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: animation and audio files for the IWD Belhifet and IWD Marilith. Includes properly-slotted creature sounds and tables.<br>
 		- Needed for Drizzt Saga, RoT, TDD, TS and TS-BP mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
@@ -308,7 +308,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Distinctive Fiends [100], Cambions get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
 		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_ee_tob</strong><br><br>
@@ -316,7 +316,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><ins>IA Content - EE games new Animations ported to ToB</ins> (New)<br><br>
 		- Content: Boar Wild, Bonebat, Bugbear Shaman, Chicken White, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Red Juvenile, Dragon Green Young, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_fiends_genies</strong></td>
@@ -324,7 +324,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Fiend blue, Fiend green (Nabassu), Marilith Dark, Maurezhi, Myrlochar, Dao, Dao with legs, Efreeti, Efreeti with legs, Janni, Janni with legs, Marid, Marid with legs, Ghoul Queen, Hag Annis, Night Hag, Green Hag, Sea Hag, Yochlol. Includes Erinyes, Fiend green (Nabassu), Gelugon, Hag Night and Tieflings sound files.<br>
 		- Needed for Distinctive Genies [50], Distinctive Fiends [100] and Distinctive Undead [400] components.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd</strong></td>
@@ -333,7 +333,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Needed for Distinctive Fiends [100], Distinctive Undead [400], Skeleton Warriors [410-415-420], Seer Animation [450-455-460] and More Icewind Dale Animations [550] components.<br>
 		- Needed for BP, BH, CtB, NEJ, RoT, SOS and TS mods.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_iwd_svirfneblin</strong></td>
@@ -341,7 +341,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: IWD/IWD2 animations for svirfneblin (deep gnomes). By default, they are pale (flesh-coloured) whereas in canon references, they should be darker (stone-coloured). The original game had variants with and without pickaxes (they do not display separate weapon animations). Since these slots are unpaletted, there are alternates as follows (the last two being custom variants of the IWD pale animations): Svirfneblin pale with axe, Svirfneblin pale without axe, Svirfneblin dark with axe, Svirfneblin dark without axe. Includes gnome sounds ported from NWN.<br>
 		- Needed for Svirfneblins Animations [480-490] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised</strong><br><br>
@@ -350,7 +350,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Female Elf Mage, Female Human Druid, Female Human Fighter, Female Human Mage, Female Human Thief, Male Human Barbarian, Male Human Ninja, Male Vampire.<br>
 		- Needed for Moinesse's Avatars for IA [7000-7010-7020-7030] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_moinesse_edits_iaised_ee</strong><br><br>
@@ -358,7 +358,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><ins>IA Content - Moinesse's Avatar Edits</ins> (EE compatible version)<br><br>
 		Same content as above, but EE games compatible.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_01_modron</strong></td>
@@ -366,7 +366,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Alternate Modron, WoRm's NWN ports (Amel, Basilisk, Bebilith, Hamatula, Osyluth, Pit Fiend, Scarecrow, Vedred). Includes all relevant creature sounds and tables.<br>
 		- Needed for Distinctive Fiends [100], Pit Fiends [150-175] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_nwn_misc_1</strong></td>
@@ -374,7 +374,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Bombardier Beetle, Displacer Beast, Female Fire and Frost Giants, Succubus (with object animations), Bovine Axe Thing (don't ask). Includes all relevant creature sounds and tables.<br>
 		- Needed for Distinctive Fiends [100] and More Neverwinter Nights Animations [650] components; and for RPG Kitspack mod.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_abishai</strong></td>
@@ -382,7 +382,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Black Abishai, Blue Abishai, Green Abishai, Red Abishai (based on PS:T animations). Includes creature sounds.<br>
 		- Needed for Distinctive Fiends [100] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_pst_paletted</strong></td>
@@ -390,7 +390,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Aasimar Female, Baurier Male, Curst Townie Female, Curst Townie Male, Dustman Female, Dustman Male, Ghoul Female, Ghoul Male, Githzerai, Godsman, Large Thug, Lower Class Townie Female, Lower Class Townie Male, Merchant, Midwife, Prostitute, Skeleton Priest, Skeleton Worker, Thokola, Thug, Tiefling Female, Tiefling Male, Townie Wizard, Upper Class Townie Female, Upper Class Townie Male, Zombie Female, Zombie Male. Includes animation sound clips.<br>
 		- Needed for More Planescape: Torment Animations [710-720-760-740] component.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_shadows_harpy_frostgiant</strong></td>
@@ -414,7 +414,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		- Content: Chicken Brown (Jarl), jastey's Wolfhound, Pack Mule (Kwiat_W); D2 Bear, D2 Werebear, Butcher animation from Heroes of the Storm, Giant Bee, Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals (Ulb); bald eagle, small bald eagle, leprechaun annah, easter egg morte, golem amber, small snake, small snake green and small snake red (Gwendolyne). Includes all relevant creature sounds and tables.<br>
 		- Plus more to come.<br><br>
 		0 = Don't install<br>
-		*1 = Install [default]*</td>
+		<em>1 = Install [default]</em></td>
 	</tr>
 </table><br>
 <div align="right"><a href="#top">Back to top</a></div>
@@ -496,7 +496,7 @@ This component fixes humanoid creature files that have wrong animation slots:
 - Amnian guards get the Amnian soldier animation<sup>(1)</sup>
 - Male human Shadow Thieves get the Shadow Thief animation
 
-<sup>(1)</sup> As of v6.0.0, two new options fine-tune this component, at the request of nostalgic players who wants to enjoy the original BG magic experience when playing the trilogy or BG:EE:
+<sup>(1)</sup> As of v6.0.0, two new options fine-tune this component, at the request of nostalgic players who want to enjoy the original BG magic experience when playing the trilogy or BG:EE:
 - <a href="#flamingfist">ia_flaming_fist_get_fighter_anim</a>: this option disables the "*Male human fighters get the fighter instead of cleric animation*" for Flaming Fist members if set to 0 (1 by default).
 - <a href="#nashkelguards">ia_nashkel_guards_get_bg2_amnian_anim</a>: this option disables the "*Amnian guards get the Amnian soldier animation*" for Nashkel guards if set to 0 (1 by default).
 <div align="right"><a href="#components">Back to components list</a></div>

@@ -3,12 +3,12 @@
  * --------------------------------------------------- *
  *  t-main.tpa traified                                *
  * =================================================== */
-@10000 = ~Mage Yuan-ti~
-@10001 = ~Yuan-ti~
-@10002 = ~Capitaine gnoll~
-@10003 = ~Capitaine Hobgobelin~
-@10004 = ~Magicien Hobgobelin~
-@10005 = ~Balor~
+@10000 = ~Mage Yuan-ti~               // = strref #1154  (BG2)
+@10001 = ~Yuan-ti~                    // = strref #1323  (BG2)
+@10002 = ~Capitaine gnoll~            // = strref #2243  (BG2)
+@10003 = ~Capitaine Hobgobelin~       // = strref #2258  (BG2)
+@10004 = ~Magicien Hobgobelin~        // = strref #2268  (BG2)
+@10005 = ~Balor~                      // = strref #8449  (BG2)
 @23827 = ~[TANAR'RI 02] ~ [tanar02a]  // = strref #23827 (BGEE) !!! DO NOT TRANSLATE !!!
 @23831 = ~[TANAR'RI 01] ~ [tanar01a]  // = strref #23831 (BGEE) !!! DO NOT TRANSLATE !!!
 
@@ -32,13 +32,13 @@
 @10110 = ~Eh bien... Bonjour, mes jolis !~ [t-hag01]             // = rav001.wav
 @10111 = ~Tes os et ton sang recouvriront mon jardin.~ [t-hag77] // = rav077.wav
 @10112 = ~Va-t-en. Je suis morte.~ [t-hag90a]                    // = rav090a.wav
-@10113 = ~Ne me pousse-pas à bout !~ [t-hag13]                   // = rav013.wav - French and German missing (empty sound clips!) have been replaced with English sound clip.
+@10113 = ~Ne me pousse-pas à bout !~ [t-hag13]                   // = rav013.wav - missing French and German (empty sound clips!) have been replaced with English sound clip.
 // sound clips without strref: t-hag66a_b_c = rav066_b_c.wav - hag06a = swi_01a.wav - hag06b = swi_01b.wav
 
 // Erinyes get wings
 // -----------------
 @10121 = ~Ailes~
-// Gwen fix: BGEE #27583 strref for better 1pp, Infinity Animations and EE compatibility. If 1pp is already translated, please copy paste @209101 and @209102 as @10121 and @10122
+// Gwen fix: BGEE #27583 strref for better 1pp, Infinity Animations and EE compatibility. If 1pp is already translated, please copy paste 1pp @209101 and @209102 strrefs as @10121 and @10122 IA strrefs
 @10122 = ~Ces douces ailes de plumes ont une apparence céleste. Pourtant, en y regardant de plus près, on se rend compte qu'il s'agit de deux fausses ailes reliées entre elles par des rubans en satin attachés à leurs bases. Même si elles n'ont rien de magique, elles semblent se mouvoir avec leur porteur, bien que leur mécanisme supposé ne semble pas pouvoir le leur permettre.
 
 PARAMÈTRES :
@@ -160,10 +160,10 @@ Utilisable uniquement par :
 @71004 = ~Mon sang bout et le vôtre va couler à flots.~ [t-tim01d]                                   // vs_nx2valem_tant.wav - #101094 bout
 @71005 = ~Vous voulez mourir maintenant ? Parce que ça peut s'arranger, si vous y tenez.~ [t-tim01E] // vs_nx2valem_warn.wav - #101126
 @71006 = ~Salutations.~ [t-tim02a]                                                                   // vs_nx2valem_hi.wav   - #101113
-@71007 = ~Oui.~ [t-tim02b]                                                                           // vs_nx2valem_yes.wav   - #101114
-@71008 = ~À vos ordres.~ [t-tim02c]                                                                  // vs_nx2valem_slct.wav   - #101112
+@71007 = ~Oui.~ [t-tim02b]                                                                           // vs_nx2valem_yes.wav  - #101114
+@71008 = ~À vos ordres.~ [t-tim02c]                                                                  // vs_nx2valem_slct.wav - #101112
 @71009 = ~Qu'avons-nous là ?~ [t-tim02d]                                                             // vs_nx2valem_look.wav - #101102
-@71010 = ~Non.~ [t-tim11]                                                                            // vs_nx2valem_no.wav - #101115
+@71010 = ~Non.~ [t-tim11]                                                                            // vs_nx2valem_no.wav   - #101115
 @71011 = ~Ma magie n'a pas fonctionné !~ [t-tim12]                                                   // vs_nx2valem_spel.wav - #101099
 // sound clips without strref: t-tim03 = vs_nx2valem_atk1.wav - t-tim07 = vs_nx2valem_hit1.wav - t-tim09 = vs_nx2valem_dead.wav
 

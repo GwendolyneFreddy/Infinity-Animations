@@ -3,12 +3,12 @@
  * --------------------------------------------------- *
  *  t-main.tpa traified                                *
  * =================================================== */
-@10000 = ~Yuan-ti Mage~               // = strref #1154 (BG2)
-@10001 = ~Yuan-ti~                    // = strref #1323 (BG2)
-@10002 = ~Gnoll Captain~              // = strref #2243 (BG2)
-@10003 = ~Hobgoblin Captain~          // = strref #2258 (BG2)
-@10004 = ~Hobgoblin Wizard~           // = strref #2268 (BG2)
-@10005 = ~Balor~                      // = strref #8449 (BG2)
+@10000 = ~Yuan-ti Mage~               // = strref #1154  (BG2)
+@10001 = ~Yuan-ti~                    // = strref #1323  (BG2)
+@10002 = ~Gnoll Captain~              // = strref #2243  (BG2)
+@10003 = ~Hobgoblin Captain~          // = strref #2258  (BG2)
+@10004 = ~Hobgoblin Wizard~           // = strref #2268  (BG2)
+@10005 = ~Balor~                      // = strref #8449  (BG2)
 @23827 = ~[TANAR'RI 02] ~ [tanar02a]  // = strref #23827 (BGEE) !!! DO NOT TRANSLATE !!!
 @23831 = ~[TANAR'RI 01] ~ [tanar01a]  // = strref #23831 (BGEE) !!! DO NOT TRANSLATE !!!
 
@@ -32,13 +32,13 @@
 @10110 = ~Well... hello, my pretty!~ [t-hag01]                    // = rav001.wav
 @10111 = ~Your bones and blood will blanket my garden.~ [t-hag77] // = rav077.wav
 @10112 = ~Off with ye. Dead I am.~ [t-hag90a]                     // = rav090a.wav
-@10113 = ~Do not push me!~ [t-hag13]                              // = rav013.wav - French and German missing (empty sound clips!) have been replaced with English sound clip.
+@10113 = ~Do not push me!~ [t-hag13]                              // = rav013.wav - missing French and German (empty sound clips!) have been replaced with English sound clip.
 // sound clips without strref: t-hag66a_b_c = rav066_b_c.wav - hag06a = swi_01a.wav - hag06b = swi_01b.wav
 
 // Erinyes get wings
 // -----------------
 @10121 = ~Wings~
-// Gwen fix: BGEE #27583 strref for better 1pp, Infinity Animations and EE compatibility. If 1pp is already translated, please copy paste @209101 and @209102 as @10121 and @10122
+// Gwen fix: BGEE #27583 strref for better 1pp, Infinity Animations and EE compatibility. If 1pp is already translated, please copy paste 1pp @209101 and @209102 strrefs as @10121 and @10122 IA strrefs
 @10122 = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. Though not radiating a noticeable magical aura, the wings do seem to move with their bearer in a way that defies their supposed mechanism.
 
 STATISTICS:
