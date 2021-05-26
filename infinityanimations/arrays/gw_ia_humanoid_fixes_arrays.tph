@@ -69,15 +69,15 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_male_human_fighters BEGIN
 "%tutu_var%flam8"       => 0	// id. _flam8 is not installed in tutu
 "%tutu_var%flam9"       => 0	// id.
 "%tutu_var%flamal"      => 1	// Flaming Fist Enforcer
-"%tutu_scriptf%lambrid"	=> 0	// Flaming Fist Mercenary
+"%tutu_scriptf%lambrid" => 0	// Flaming Fist Mercenary
 "%tutu_var%flamc7"      => 0	// id. flamc7 is not installed in BGT
 "%tutu_var%flame"       => 0	// Flaming Fist Enforcer
 "%tutu_var%flamen"      => 0	// id.
 "%tutu_var%flamen2"     => 0	// id.
 "%tutu_var%flamgg"      => 0	// Flaming Fist Enforcer
-"%tutu_scriptf%lamhusb"	=> 0	// id.
+"%tutu_scriptf%lamhusb" => 0	// id.
 "%tutu_var%flampun"     => 0	// id.
-"%tutu_scriptf%lampun2"	=> 0	// id.
+"%tutu_scriptf%lampun2" => 0	// id.
 "%tutu_var%flamsco"     => 0	// Flaming Fist Scout
 "%tutu_var%flamvai"     => 0	// Flaming Fist Mercenary
 "%tutu_var%flamwiz"     => 0	// Flaming Fist Battle Wizard
@@ -86,7 +86,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_male_human_fighters BEGIN
 "%tutu_var%kent"        => 1	// Kent
 "%tutu_var%leaggu1"     => 1	// Merchants' League Counting House Guard
 "%tutu_var%leaggu7"     => 1	// id.
-"%tutu_scriptp%heogurd"	=> 1	// Phoenix Guard
+"%tutu_scriptp%heogurd" => 1	// Phoenix Guard
 "%tutu_var%phoenix"     => 1	// id.
 "%tutu_var%sailned"     => 1	// Sailor Ned
 "%tutu_var%sorrel"      => 1	// Sorrel
@@ -310,7 +310,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_female_human_fighters BEGIN
 "%tutu_var%laola"       => 1	// Laola Axehand
 "%tutu_var%leaggu2"     => 1	// Merchants' League Counting House Guard
 "%tutu_scriptp%heoarch" => 1	// Phoenix Guard
-"%tutu_var%vai"         => 1	// Officer Vai
+"%tutu_var%vai"         => 0	// Officer Vai
 
 // BG2
 // ---

@@ -249,7 +249,7 @@ Voici le tableau des options concernées :</br></br>
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_flaming_fist_get_fighter_anim</strong></td>
-		<td><a name="flamingfist" id="flamingfist"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " <em>l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre</em> " pour les membres du Poing Enflammé.<br><br>
+		<td><a name="flamingfist" id="flamingfist"></a>Le composant Correction des animations des humanoïdes [25] rétablit les slots d'animation adéquats de certaines créatures humanoïdes. À la demande de joueurs nostalgiques qui souhaitent profiter de leur première expérience de BG dans la trilogie ou dans BG:EE, cette option désactive " <em>l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre</em> " et " <em>l'attribution aux guerrières humaines l'animation de guerrière plutôt que celle de prêtresse</em> " pour les membres du Poing Enflammé.<br><br>
 		0 = Non, les membres du Poing Enflammé conservent leur animation initiale de clerc<br>
 		<em>1 = Oui, on attribue aux membres du Poing Enflammé l'animation de guerrier [par défaut]</em></td>
 	</tr>
@@ -967,7 +967,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : ajout des variables manquantes pour les fichiers kent and sailned de BG (array " *GW_male_human_fighters* ").
     - Intégration du <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">patch de correction des typos dans les boucles par Lollorian</a> (les elfes magiciens n'étaient pas patchés).
-    - Ajout de deux options qui désactivent " *l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre* " pour les membres du Poing Enflammé et " *l'attribution aux gardes amniens l'animation de soldat amnien* " pour les gardes de Nashkel.
+    - Ajout de deux options qui désactivent " *l'attribution aux guerriers humains l'animation de guerrier plutôt que celle de prêtre* " et " *l'attribution aux guerrières humaines l'animation de guerrière plutôt que celle de prêtresse* " pour les membres du Poing Enflammé et " *l'attribution aux gardes amniens l'animation de soldat amnien* " pour les gardes de Nashkel.
 - [50] Genies différenciés (t-genie.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_genies_arrays.tph*") pour faciliter leur mise à jour.
 - [100] Démons différenciés (t-fiend.tpa)

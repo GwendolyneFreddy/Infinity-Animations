@@ -248,7 +248,7 @@ Here is a chart listing the options related to the installation process:</br></b
 	</tr>
 	<tr>
 		<td><div align="center"><strong>ia_flaming_fist_get_fighter_anim</strong></td>
-		<td><a name="flamingfist" id="flamingfist"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who want to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Male human fighters get the fighter instead of cleric animation</em>" for Flaming Fist members.<br><br>
+		<td><a name="flamingfist" id="flamingfist"></a>The Humanoid Animations Fixes component [25] fixes humanoid creature files that have wrong animation slots. At the request of nostalgic players who want to enjoy the original BG magic experience when playing the trilogy or BG:EE, this option disables the "<em>Male human fighters get the fighter instead of cleric animation</em>" and "<em>Female human fighters get the fighter instead of cleric animation</em>" features for Flaming Fist members.<br><br>
 		0 = No, Flaming Fist members keep their original cleric animation<br>
 		<em>1 = Yes, Flaming Fist members get the fighter animation [default]</em></td>
 	</tr>
@@ -969,7 +969,7 @@ This component patches any changed creature animation in saved games to prevent 
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
     - Tutu variables: added missing tutu variable for BG kent and sailned files ("*GW_male_human_fighters*" array).
     - Integrated <a href="http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298">Lollorian's patch to correct loops</a> (male elf mages were not patched).
-    - Added two options to disable "*Male human fighters get the fighter instead of cleric animation*" for Flaming Fist members and "*Amnian guards get the Amnian soldier animation*" for Nashkel guards.
+    - Added two options to disable "*Male human fighters get the fighter instead of cleric animation*" and "*Female human fighters get the fighter instead of cleric animation*" features for Flaming Fist members and "*Amnian guards get the Amnian soldier animation*" for Nashkel guards.
 - [50] Distinctive Genies (t-genie.tpa)
      - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_genies_arrays.tph*" library) for easier maintenance.
 - [100] Distinctive Fiends (t-fiend.tpa)

@@ -10,7 +10,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 #### Before official release
 
 - [ ] Remove all DEBUGGING CONTROL LOG messages
-- [ ] Arrays: fill all unknown creature mods references
+- [ ] Arrays: fill all unknown mods creatures references
 - [x] Checked WRITE_LONG 0x28 ID values
 - [x] Modders content: Checked Ulb's sound files encoding (2021.02.27: converted to wavc)
 - [x] Fixed Ellesime White-Haired\3aag2.bam <a ref="http://www.shsforums.net/topic/44203-ia-bugs-and-fixes/page-4#entry490477">red hair color</a> (2021.04.24 : thanks Sam!)
@@ -18,7 +18,7 @@ Anyone interested in contributing may contact Gwendolyne at <a href="http://www.
 - [x] 0x2000 SIRINE, 0x2200 OGRE_MAGE, 0x7000 HALF_OGRE, 0x7001 OGRILLON and 0x7f3d MELISSAN : Added missing localized sound clips (2021.03.25)
 - [x] 0x2300 DEATH_KNIGHT, 0x7f11 UMBER_HULK and 0xe0d0 UMBER_HULK_ELDER : Added missing localized sound clips (2021.03.26)
 - [x] Resolved the f.....g mess with black dragon sound clips and ini files, different and buggy in EE games (2021.03.27)
-- [ ] 0x6405 DOOM_GUARD and 0x6406 DOOM_GUARD_LARGER: populate ini files with IA t-dugnn sound clips?
+- [ ] 0x6405 DOOM_GUARD and 0x6406 DOOM_GUARD_LARGER: populate ini files with IA t-dug[n] sound clips?
 - [ ] IWD:EE: harmonize 1201.ini and 1203.ini (DRAGON_BLACK and DRAGON_GREEN) sound clips (replace black0[1-5] with black0[1-5]a)?
 
 ## 

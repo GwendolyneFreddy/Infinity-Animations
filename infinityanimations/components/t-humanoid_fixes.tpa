@@ -10,8 +10,8 @@
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_humanoid_fixes_arrays.tph library) for easier maintenance.                                *
  *      - Tutu variables: replaced specific %tsx% ia variables with more compatible %tutu_scriptx% variables and added missing tutu variable for BG1 kent and sailned files.  *
  *      - Integrated Lollorian's patch to correct loops: male elf mages were not patched ( http://www.shsforums.net/topic/43531-ia-comments/page-3#entry549298 ).             *
- *      - Added two options to disable "Male human fighters get the fighter instead of cleric animation" for Flaming Fist members (#51) and "Amnian guards get the Amnian     *
- *        soldier animation" for Nashkel guards (#335).                                                                                                                       *
+ *      - Added two options to disable "Male human fighters get the fighter instead of cleric animation" (#51) and "Female Human Fighters get the fighter_female_human        *
+ *        animation" (#131) for Flaming Fist members and "Amnian guards get the Amnian soldier animation" for Nashkel guards (#339).                                          *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)      *
  *        whenever relevant.                                                                                                                                                  *
  * ========================================================================================================================================================================== */
@@ -23,15 +23,15 @@
  *  Male elf fighters get the fighter instead of cleric animation        #   83  *
  *  Male halfling fighters get the fighter instead of cleric animation   #  106  *
  *  Female human fighters get the fighter instead of cleric animation    #  127  *
- *  Male human mages get the mage instead of cleric animation            #  154  *
- *  Male elf mages get the mage instead of cleric animation              #  177  *
- *  Male human thieves get the thief instead of fighter animation        #  202  *
- *  Female human thieves get the thief instead of fighter animation      #  223  *
- *  Male human monks get the monk instead of cleric animation            #  242  *
- *  Male human pirates get the pirate animation                          #  267  *
- *  Male human sailors get the sailor_man animation                      #  305  *
- *  Amnian soldiers get the amnian_soldier animation                     #  331  *
- *  Male human Shadow Thieves get the shadow_thief animation             #  362  *
+ *  Male human mages get the mage instead of cleric animation            #  158  *
+ *  Male elf mages get the mage instead of cleric animation              #  181  *
+ *  Male human thieves get the thief instead of fighter animation        #  206  *
+ *  Female human thieves get the thief instead of fighter animation      #  227  *
+ *  Male human monks get the monk instead of cleric animation            #  246  *
+ *  Male human pirates get the pirate animation                          #  271  *
+ *  Male human sailors get the sailor_man animation                      #  309  *
+ *  Amnian soldiers get the amnian_soldier animation                     #  335  *
+ *  Male human Shadow Thieves get the shadow_thief animation             #  366  *
  * ----------------------------------------------------------------------------- */
 
 PRINT @28 // ~Patching creature files...~
@@ -128,21 +128,25 @@ ACTION_CLEAR_ARRAY GW_male_halfling_fighters
  * =========================================================================== */
 ACTION_PHP_EACH GW_female_human_fighters AS t-bcre => correct BEGIN
 
-	ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ AND (((ia_flaming_fist_get_fighter_anim = 0) AND (correct = 1)) OR (ia_flaming_fist_get_fighter_anim = 1))) BEGIN
 
-		COPY_EXISTING ~%t-bcre%.cre~ ~override~
-			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
-			PATCH_IF valid BEGIN
-				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
-				WRITE_LONG 0x28 0x6110  // Animation ID (fighter_female_human)
-				WRITE_BYTE 0x237 2      // Sex (female)
-				// If thief
-				PATCH_IF BYTE_AT 0x273 = 4 BEGIN
-					WRITE_BYTE 0x273 2  // Class (fighter)
+		ACTION_IF FILE_EXISTS_IN_GAME ~%t-bcre%.cre~ BEGIN
+
+			COPY_EXISTING ~%t-bcre%.cre~ ~override~
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+				PATCH_IF valid BEGIN
+					PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+					WRITE_LONG 0x28 0x6110  // Animation ID (fighter_female_human)
+					WRITE_BYTE 0x237 2      // Sex (female)
+					// If thief
+					PATCH_IF BYTE_AT 0x273 = 4 BEGIN
+						WRITE_BYTE 0x273 2  // Class (fighter)
+					END
+					WRITE_BYTE 0x275 2      // Gender (female)
 				END
-				WRITE_BYTE 0x275 2      // Gender (female)
-			END
-		BUT_ONLY
+			BUT_ONLY
+
+	END
 
 	END
 
