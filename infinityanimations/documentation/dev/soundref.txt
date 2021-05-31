@@ -15,154 +15,227 @@ the following slots, though there are numerous exceptions.
 07-08  DAMAGE
 09-10  DYING
 
-AnimPrefix  2DA?  Code    Animation                     SndPrefix     Archive
-1aa         Y     0x547a  maurezhi                      ghast/unearm  IA_Fiends_Genies
-1ab         Y     0x547b  myrlochar                     t-myr         IA_Fiends_Genies
-1jx         Y     0x557b  basilisk_nwn                  t-bas         IA_NWN_01_Modron
-3aa         N     0x523d  treant_dark                   t-tre         IA_BGII_IWDII
-3aa         N     0x5b00  ellesime_white                ellesi        IA_BGII_IWDII
-3ab         N     0x5001  drider_female                 t-drf         IA_BGII_IWDII
-3ab         N     0x5b01  lagoon_creature               mist          IA_BGII_IWDII
-3ac         N     0x5002  drider_male                   t-drm         IA_BGII_IWDII
-3ac         N     0x5b02  modron_round                  t-mod         IA_NWN_01_Modron
-3ad         N     0x5240  halfdragon_black              t-hdr         IA_BGII_IWDII
-3ad         N     0x5b03  abishai_black                 t-abi         IA_PST_Abishai
-3ae         N     0x5241  halfdragon_red                t-hdr         IA_BGII_IWDII
-3ae         N     0x5b04  abishai_blue                  t-abi         IA_PST_Abishai
-3af         N     0x5242  isair                         t-isa         IA_BGII_IWDII
-3af         N     0x5b05  abishai_green                 t-abi         IA_PST_Abishai
-3ag         N     0x5243  madae                         t-mad         IA_BGII_IWDII
-3ag         N     0x5b06  abishai_red                   t-abi         IA_PST_Abishai
-3ah         N     0x5244  malarite                      t-mal         IA_BGII_IWDII
-3ah         N     0x5b07  displacer_beast               t-dis         NWN_Misc_I
-3ai         N     0x5245  shenrical                     t-hdr         IA_BGII_IWDII
-3ai         N     0x5b08  ghoul_queen                   t-ghq         IA_Fiends_Genies
-3aj         N     0x5246  werebadger                    t-wba         IA_BGII_IWDII
-3aj         N     0x5b09  hag_annis                     t-hag         IA_Fiends_Genies
-3ak         N     0x5247  wererat                       t-wra         IA_BGII_IWDII
-3ak         N     0x5b0a  hag_night                     t-hag         IA_Fiends_Genies
-3al         N     0x5248  yuan-ti_half                  t-yhb         IA_BGII_IWDII
-3al         N     0x5b0b  hag_green                     t-hag         IA_Fiends_Genies
-3am         N     0x5249  abishai_white                 t-abi         IA_BGII_IWDII
-3am         N     0x5b0c  hag_sea                       t-hag         IA_Fiends_Genies
-3an         N     0x524a  boar_arctic                   t-boa         IA_BGII_IWDII
-3an         N     0x5d4a  aasimar_female_pst            t-aas         IA_PST_Paletted
-3ao         N     0x500e  bugbear                       t-bug         IA_BGII_IWDII
-3ao         N     0x5d4b  baurier_male_pst              t-bar         IA_PST_Paletted
-3ap         N     0x500f  bugbear_captain               t-bgc         IA_BGII_IWDII
-3ap         N     0x5d4c  townie_curst_female_pst       t-tcf         IA_PST_Paletted
-3aq         N     0x5010  chimera                       t-chi         IA_BGII_IWDII
-3aq         N     0x5d4d  townie_curst_male_pst         t-tcm         IA_PST_Paletted
-3ar         N     0x5011  elemental_water_small         t-wat         IA_BGII_IWDII
-3ar         N     0x5d4e  dustman_female_pst            t-dmf         IA_PST_Paletted
-3as         N     0x524f  feyr                          t-fey         IA_BGII_IWDII
-3as         N     0x5d4f  dustman_male_pst              t-dmm         IA_PST_Paletted
-3at         N     0x5013  feyr_greater                  t-fgr         IA_BGII_IWDII
-3at         N     0x5d50  ghoul_female_pst              t-ghf         IA_PST_Paletted
-3au         N     0x5014  giant_fomorian                t-fom         IA_BGII_IWDII
-3au         N     0x5d51  ghoul_male_pst                t-ghm         IA_PST_Paletted
-3av         N     0x5252  goblin_captain                t-gbc         IA_BGII_IWDII
-3av         N     0x5d52  githzerai_pst                 t-gzr         IA_PST_Paletted
-3aw         N     0x5253  goblinelite_axe_green         t-gix         IA_BGII_IWDII
-3aw         N     0x5d53  godsman_pst                   t-gdm         IA_PST_Paletted
-3ax         N     0x5254  goblinelite_bow_green         t-geb         IA_BGII_IWDII
-3ax         N     0x5d54  thug_large_pst                t-thl         IA_PST_Paletted
-3ay         N     0x5018  goblin_worg                   t-gbw         IA_BGII_IWDII
-3ay         N     0x5d55  townie_lower_class_female_pst t-tcf         IA_PST_Paletted
-3az         N     0x5019  goblin_worg_captain           t-gcw         IA_BGII_IWDII
-3az         N     0x5d55  townie_lower_class_male_pst   t-tcm         IA_PST_Paletted
-3ba         N     0x5257  goblin_shaman                 t-gbs         IA_BGII_IWDII
-3ba         N     0x5d57  merchant_pst                  t-mrc         IA_PST_Paletted
-3bb         N     0x5258  goblin_axe_green              t-gbx         IA_BGII_IWDII
-3bb         N     0x5d58  midwife_pst                   t-mdw         IA_PST_Paletted
-3bc         N     0x5259  goblin_bow_green              t-gbb         IA_BGII_IWDII
-3bc         N     0x5d59  harlot_pst                    t-hlt         IA_PST_Paletted
-3bd         N     0x525a  hook_horror                   t-hoo         IA_BGII_IWDII
-3bd         N     0x5d5a  skeleton_priest_pst           t-skp         IA_PST_Paletted
-3be         N     0x525b  keg1                          t-keg         IA_BGII_IWDII
-3be         N     0x5d5b  skeleton_worker_pst           t-skw         IA_PST_Paletted
-3bf         N     0x525c  keg2                          t-keg         IA_BGII_IWDII
-3bf         N     0x5d5c  thokola_pst                   t-thk         IA_PST_Paletted
-3bg         N     0x525d  keg3                          t-keg         IA_BGII_IWDII
-3bg         N     0x5d5d  thug_pst                      t-ths         IA_PST_Paletted
-3bh         N     0x525e  lemure                        t-lem         IA_BGII_IWDII
-3bh         N     0x5d5e  tiefling_female_pst           t-tcf         IA_PST_Paletted
-3bi         N     0x525f  orog_shaman                   t-nos         IA_BGII_IWDII
-3bi         N     0x5d5f  tiefling_male_pst             t-tmp         IA_PST_Paletted
-3bj         N     0x5260  orc_shaman_undead             t-osu         IA_BGII_IWDII
-3bj         N     0x5d60  townie_wizard_pst             t-twz         IA_PST_Paletted
-3bk         N     0x5261  orc_axe_undead                t-oru         IA_BGII_IWDII
-3bk         N     0x5d61  townie_upper_class_female_pst t-tuf         IA_PST_Paletted
-3bl         N     0x5262  worg                          t-wor         IA_BGII_IWDII
-3bl         N     0x5d62  townie_upper_class_male_pst   t-tum         IA_PST_Paletted
-3bm         N     0x5263  svirfneblin_pale_axe          t-sva         IA_IWD_Svirfneblin
-3bm         N     0x5d63  zombie_female_pst             t-zmf         IA_PST_Paletted
-3bn         N     0x5264  svirfneblin_pale_noaxe        t-svn         IA_IWD_Svirfneblin
-3bn         N     0x5d64  zombie_male_pst               t-zmm         IA_PST_Paletted
-3bo         N     0x5265  svirfneblin_dark_axe          t-sva         IA_IWD_Svirfneblin
-3bp         N     0x5266  svirfneblin_dark_noaxe        t-svn         IA_IWD_Svirfneblin
-3bq         Y     0x502a  marilith_iwd                  t-mar         Belhifet_and_Marilith
-3br         Y     0x502b  giant_frost                   t-fro         Shadows_harpy_frostgiant
-3bs         Y     0x5269  harpy                         t-har         Shadows_harpy_frostgiant
-3bt         Y     0x526a  shadow_small_murky            t-shs         Shadows_harpy_frostgiant
-3bu         Y     0x526b  shadow_large_murky            t-shl         Shadows_harpy_frostgiant
-3bv         Y     0x502f  belhifet                      t-bel         Belhifet_and_Marilith
-3bw         Y     0x526d  amel_pc_nwn                   t-aml         IA_NWN_01_Modron
-3bx         Y     0x526e  vedred_pc_nwn                 t-ved         IA_NWN_01_Modron
-3by         Y     0x5032  bebilith_nwn                  t-beb         IA_NWN_01_Modron
-3bz         Y     0x5033  hamatula_nwn                  t-ham         IA_NWN_01_Modron
-3ca         Y     0x5271  osyluth_nwn                   t-osy         IA_NWN_01_Modron
-3cb         Y     0x5035  pit_fiend_nwn                 t-pit         IA_NWN_01_Modron
-3cc         Y     0x5273  scarecrow_nwn                 t-sca         IA_NWN_01_Modron
-3cd         Y     0x5037  elemental_earth_iwd           t-ear         IA_IWD
-3ce         Y     0x5038  elemental_fire_iwd            t-fir         IA_IWD
-3cf         Y     0x5039  elemental_water               t-wat         IA_IWD
-3cg         Y     0x5277  sahuagin_iwd                  t-sah         IA_IWD
-3ch         Y     0x5278  sahuagin_large_iwd            t-sai         IA_IWD
-3ci         Y     0x5279  animated_plate_bronze_small   t-dgu         IA_IWD
-3cj         Y     0x527a  animated_plate_dark_small     t-dgu         IA_IWD
-3ck         Y     0x527b  animated_plate_green_small    t-dgu         IA_IWD
-3cl         N     0x527c  arundel                       druid         IA_IWD
-3cm         Y     0x527d  barbarian_shaman_hammer       t-bsh         IA_IWD
-3cn         Y     0x527e  barbarian_shaman_staff        t-bsh         IA_IWD
-3co         Y     0x527f  barbarian_shaman_club         t-bsh         IA_IWD
-3cp         Y     0x5280  barbarian_warrior_tan         t-bwa         IA_IWD
-3cq         Y     0x5281  barbarian_warrior_red         t-bwa         IA_IWD
-3cr         Y     0x5282  barbarian_warrior_brown       t-bwa         IA_IWD
-3cs         Y     0x5283  barbarian_icasaracht          t-bic         IA_IWD
-3ct         Y     0x5284  belhifet_priest               t-bep         IA_IWD
-3cu         Y     0x5285  creeping_doom                 t-cre         IA_IWD
-3cv         Y     0x5286  drowned_dead                  t-drn         IA_IWD
-3cw         Y     0x504a  giant_fire_iwd                gfire         IA_IWD
-3cx         Y     0x504b  golem_iron_iwd                t-gol         IA_IWD
-3cy         Y     0x504c  remorhaz                      t-rem         IA_IWD
-3cz         Y     0x528a  seer                          t-see         IA_IWD
-3da         Y     0x528b  tundra_yeti                   t-yet         IA_IWD
-3db         Y     0x528c  umber_hulk_vodyanoi           t-vod         IA_IWD
-3dc         Y     0x5050  giant_verbeeg                 t-ver         IA_IWD
-3dd         Y     0x528e  wight_barrow                  t-wgb         IA_IWD
-3de         Y     0x5052  marilith_dark                 snake/unearf  IA_Fiends_Genies
-3df         Y     0x5290  succubus_nwn                  t-suc         NWN_Misc_I
-3dg         Y     0x5291  beetle_bombardier_nwn         t-bwn         NWN_Misc_I
-3dh         Y     0x5292  bovine_axe_thing              t-bov         NWN_Misc_I
-3jw         Y     0x5c00  death_tyrant                  bhold         IA_BGII_IWDII
-3jx         Y     0x5c01  giant_fire_2                  gfire         IA_BGII_IWDII
-3jy         N     0x5c02  lady_of_pain                  solar         IA_Wh_Dr_Wyv_LoP
-3jz         Y     0x5c03  giant_fire_female             t-fgf         NWN_Misc_I
-3ka         Y     0x5c04  giant_frost_female            t-frf         NWN_Misc_I
-4aa         Y     0x1001  fiend_green                   t-nab         IA_Fiends_Genies
-4ab         Y     0x1002  fiend_blue                    gorchr/tanar  IA_Fiends_Genies
-4ac         Y     0x1003  wyvern_white_big              wyver         IA_Wh_Dr_Wyv_LoP
-4jw         Y     0x1101  dragon_white                  t-dra         IA_Wh_Dr_Wyv_LoP
-8co         Y     0x5fbc  dao                           djinni        IA_Fiends_Genies
-8cp         Y     0x5fbd  dao_legs                      djinni        IA_Fiends_Genies
-8cq         Y     0x5fbe  efreeti                       djinni        IA_Fiends_Genies
-8cr         Y     0x5fbf  efreeti_legs                  djinni        IA_Fiends_Genies
-8cs         Y     0x5fc0  janni                         djinni        IA_Fiends_Genies
-8ct         Y     0x5fc1  janni_legs                    djinni        IA_Fiends_Genies
-8cu         Y     0x5fc2  marid                         djinni        IA_Fiends_Genies
-8cv         Y     0x5fc3  marid_legs                    djinni        IA_Fiends_Genies
-8dv         Y     0x5fdd  yochlol                       t-yoc         IA_Fiends_Genies
+APPEND ~anisnd.ids~ ~0x5328 3JB      CGAMEANIMATIONTYPE_ANIMATED_PLATE_BRONZE~          UNLESS ~^0x5328~            // IWD : shared by Gwendolyne (Menace sur le Royaume de Diamant Éternel).
+APPEND ~anisnd.ids~ ~0x5329 3JC      CGAMEANIMATIONTYPE_ANIMATED_PLATE_DARK~            UNLESS ~^0x5329~            // id.
+APPEND ~anisnd.ids~ ~0x532A 3JD      CGAMEANIMATIONTYPE_ANIMATED_PLATE_GREEN~           UNLESS ~^0x532[Aa]~         // id.
+3jb         Y     0x5328  animated_plate_bronze         t-dgu         ???
+3jc         Y     0x5329  animated_plate_dark           t-dgu         ???
+3jd         Y     0x532a  animated_plate_green          t-dgu         ???
+
+AnimPrefix  2DA   Code    Animation                     SndPrefix     Archive
+======================================================================================
+1aa         Y     0x547a  maurezhi                      ghast/unearm  fiends_genies
+1ab         Y     0x547b  myrlochar                     t-myr         fiends_genies
+1ac         N     0x547c  chicken_brown                 -             modders (new content)
+1au         N     0x548e  chicken_white                 -             ee_tob (new content)
+1ck         Y     0x54b8  dog_gray                      wadog         ee_tob (new content)
+1cl         Y     0x54b9  spider_water                  gspid         ee_tob (new content)
+1cm         Y     0x54ba  gibberling_brood              giber         ee_tob (new content
+1cn         Y     0x54bb  black_pudding                 gooze         ee_tob (new content)
+1jx         Y     0x557b  basilisk_nwn                  t-bas         nwn_01_modron
+2aa         Y     0xa001  megalocentipede               carrn         ee_tob (new content)
+2ab         Y     0xa002  wyvern_white                  t-wyvs        ee_tob (new content)
+3aa         N     0x523d  treant_dark                   t-tre         bg2_iwd2
+3aa         N     0x5b00  ellesime_white                ellesi        bg2_iwd2
+3ab         N     0x5001  drider_female                 t-drf         bg2_iwd2
+3ab         N     0x5b01  lagoon_creature               mist          bg2_iwd2
+3ac         N     0x5002  drider_male                   t-drm         bg2_iwd2
+3ac         N     0x5b02  modron_round                  t-mod         nwn_01_modron
+3ad         N     0x5240  halfdragon_black              t-hdr         bg2_iwd2
+3ad         N     0x5b03  abishai_black                 t-abi         pst_abishai
+3ae         N     0x5241  halfdragon_red                t-hdr         bg2_iwd2
+3ae         N     0x5b04  abishai_blue                  t-abi         pst_abishai
+3af         N     0x5242  isair                         t-isa         bg2_iwd2
+3af         N     0x5b05  abishai_green                 t-abi         pst_abishai
+3ag         N     0x5243  madae                         t-mad         bg2_iwd2
+3ag         N     0x5b06  abishai_red                   t-abi         pst_abishai
+3ah         N     0x5244  malarite                      t-mal         bg2_iwd2
+3ah         N     0x5b07  displacer_beast               t-dis         nwn_misc_1
+3ai         N     0x5245  shenrical                     t-hdr         bg2_iwd2
+3aj         N     0x5246  werebadger                    t-wba         bg2_iwd2
+3ak         N     0x5247  wererat                       t-wra         bg2_iwd2
+3ak         N     0x5b0a  hag_night                     t-hag         fiends_genies
+3al         N     0x5248  yuan-ti_half                  t-yhb         bg2_iwd2
+3al         N     0x5b0b  hag_green                     t-hag         fiends_genies
+3am         N     0x5249  abishai_white                 t-abi         bg2_iwd2
+3am         N     0x5b0c  hag_sea                       t-hag         fiends_genies
+3an         N     0x524a  boar_arctic                   t-boa         bg2_iwd2
+3ao         N     0x500e  bugbear                       t-bug         bg2_iwd2
+3ao         N     0x5d4b  baurier_male_pst              t-bar         pst_paletted
+3ap         N     0x500f  bugbear_captain               t-bgc         bg2_iwd2
+3ap         N     0x5d4c  townie_curst_female_pst       t-tcf         pst_paletted
+3aq         N     0x5010  chimera                       t-chi         bg2_iwd2
+3ar         N     0x5011  elemental_water_small         t-wat         bg2_iwd2
+3as         N     0x524f  feyr                          t-fey         bg2_iwd2
+3at         N     0x5013  feyr_greater                  t-fgr         bg2_iwd2
+3au         N     0x5014  giant_fomorian                t-fom         bg2_iwd2
+3av         N     0x5252  goblin_captain                t-gbc         bg2_iwd2
+3av         N     0x5d52  githzerai_pst                 t-gzr         pst_paletted
+3aw         N     0x5253  goblinelite_axe_green         t-gix         bg2_iwd2
+3aw         N     0x5d53  godsman_pst                   t-gdm         pst_paletted
+3ax         N     0x5254  goblinelite_bow_green         t-geb         bg2_iwd2
+3ax         N     0x5d54  thug_large_pst                t-thl         pst_paletted
+3ay         N     0x5018  goblin_worg                   t-gbw         bg2_iwd2
+3ay         N     0x5d55  townie_lower_class_female_pst t-tcf         pst_paletted
+3az         N     0x5019  goblin_worg_captain           t-gcw         bg2_iwd2
+3az         N     0x5d56  townie_lower_class_male_pst   t-tcm         pst_paletted
+3ba         N     0x5257  goblin_shaman                 t-gbs         bg2_iwd2
+3bb         N     0x5258  goblin_axe_green              t-gbx         bg2_iwd2
+3bb         N     0x5d58  midwife_pst                   t-mdw         pst_paletted
+3bc         N     0x5259  goblin_bow_green              t-gbb         bg2_iwd2
+3bc         N     0x5d59  harlot_pst                    t-hlt         pst_paletted
+3bd         N     0x525a  hook_horror                   t-hoo         bg2_iwd2
+3be         N     0x525b  keg1                          t-keg         bg2_iwd2
+3be         N     0x5d5b  skeleton_worker_pst           t-skw         pst_paletted
+3bf         N     0x525c  keg2                          t-keg         bg2_iwd2
+3bf         N     0x5d5c  thokola_pst                   t-thk         pst_paletted
+3bg         N     0x525d  keg3                          t-keg         bg2_iwd2
+3bg         N     0x5d5d  thug_pst                      t-ths         pst_paletted
+3bh         N     0x525e  lemure                        t-lem         bg2_iwd2
+3bi         N     0x525f  orog_shaman                   t-nos         bg2_iwd2
+3bj         N     0x5260  orc_shaman_undead             t-osu         bg2_iwd2
+3bk         N     0x5261  orc_axe_undead                t-oru         bg2_iwd2
+3bl         N     0x5262  worg                          t-wor         bg2_iwd2
+3bl         N     0x5d62  townie_upper_class_male_pst   t-tum         pst_paletted
+3bm         N     0x5263  svirfneblin_pale_axe          t-sva         iwd_svirfneblin
+3bm         N     0x5d63  zombie_female_pst             t-zmf         pst_paletted
+3bn         N     0x5264  svirfneblin_pale_noaxe        t-svn         iwd_svirfneblin
+3bn         N     0x5d64  zombie_male_pst               t-zmm         pst_paletted
+
+	3bq         Y     0x502a  marilith_iwd                  t-mar         belhifet_and_marilith
+3br         Y     0x502b  giant_frost                   t-fro         shadows_harpy_frostgiant
+3bs         Y     0x5269  harpy                         t-har         shadows_harpy_frostgiant
+3bt         Y     0x526a  shadow_small_murky            t-shs         shadows_harpy_frostgiant
+3bu         Y     0x526b  shadow_large_murky            t-shl         shadows_harpy_frostgiant
+3bv         Y     0x502f  belhifet                      t-bel         belhifet_and_marilith
+3bw         Y     0x526d  amel_pc_nwn                   t-aml         nwn_01_modron
+3bx         Y     0x526e  vedred_pc_nwn                 t-ved         nwn_01_modron
+3by         Y     0x5032  bebilith_nwn                  t-beb         nwn_01_modron
+3bz         Y     0x5033  hamatula_nwn                  t-ham         nwn_01_modron
+3ca         Y     0x5271  osyluth_nwn                   t-osy         nwn_01_modron
+3cb         Y     0x5035  pit_fiend_nwn                 t-pit         nwn_01_modron
+3cc         Y     0x5273  scarecrow_nwn                 t-sca         nwn_01_modron
+3cd         Y     0x5037  elemental_earth_iwd           t-ear         iwd
+3ce         Y     0x5038  elemental_fire_iwd            t-fir         iwd
+3cf         Y     0x5039  elemental_water               t-wat         iwd
+3cg         Y     0x5277  sahuagin_iwd                  t-sah         iwd
+3ch         Y     0x5278  sahuagin_large_iwd            t-sai         iwd
+3ci         Y     0x5279  animated_plate_bronze_small   t-dgu         iwd
+3cj         Y     0x527a  animated_plate_dark_small     t-dgu         iwd
+3ck         Y     0x527b  animated_plate_green_small    t-dgu         iwd
+3cm         Y     0x527d  barbarian_shaman_hammer       t-bsh         iwd
+3cn         Y     0x527e  barbarian_shaman_staff        t-bsh         iwd
+3co         Y     0x527f  barbarian_shaman_club         t-bsh         iwd
+3cp         Y     0x5280  barbarian_warrior_tan         t-bwa         iwd
+3cq         Y     0x5281  barbarian_warrior_red         t-bwa         iwd
+3cr         Y     0x5282  barbarian_warrior_brown       t-bwa         iwd
+3cs         Y     0x5283  barbarian_icasaracht          t-bic         iwd
+3ct         Y     0x5284  belhifet_priest               t-bep         iwd
+3cu         Y     0x5285  creeping_doom                 t-cre         iwd
+3cv         Y     0x5286  drowned_dead                  t-drn         iwd
+3cw         Y     0x504a  giant_fire_iwd                gfire         iwd
+3cx         Y     0x504b  golem_iron_iwd                t-gol         iwd
+3cy         Y     0x504c  remorhaz                      t-rem         iwd
+3cz         Y     0x528a  seer                          t-see         iwd
+3da         Y     0x528b  tundra_yeti                   t-yet         iwd
+3db         Y     0x528c  umber_hulk_vodyanoi           t-vod         iwd
+3dc         Y     0x5050  giant_verbeeg                 t-ver         iwd
+3dd         Y     0x528e  wight_barrow                  t-wgb         iwd
+3de         Y     0x5052  marilith_dark                 snake/unearf  fiends_genies
+3df         Y     0x5290  succubus_nwn                  t-suc         nwn_misc_1
+
+	3dg         Y     0x5291  beetle_bombardier_nwn         t-bwn         nwn_misc_1 ou t-bmn???
+3dh         Y     0x5292  bovine_axe_thing              t-bov         nwn_misc_1
+3di         Y     0x5293  pack_mule_wow                 w_m           modders (new content)
+3dj         Y     0x5294  werebear_d2                   cbear         modders (new content)
+3dk         Y     0x5295  bear_giant_d2                 pbear         modders (new content)
+3dl         Y     0x5296  jastey_wolfhound              wadog         modders (new content)
+3eb         Y     0x52a6  bonebat                       t-var         ee_tob (new content)
+3eh         N     0x5dac  tiefling_male_pst             t-tmp         pst_paletted
+3ei         N     0x5dad  townie_wizard_pst             t-twz         pst_paletted
+3ej         N     0x5dae  townie_upper_class_female_pst t-tuf         pst_paletted
+3er         N     0x5b79  ghoul_queen                   t-ghq         fiends_genies
+3et         N     0x5b7b  hag_annis                     t-hag         fiends_genies
+3ev         N     0x5dba  aasimar_female_pst            t-aas         pst_paletted
+3ew         N     0x5dbb  townie_curst_male_pst         t-tcm         pst_paletted
+3ex         N     0x5dbc  dustman_female_pst            t-dmf         pst_paletted
+3ez         N     0x5dbe  dustman_male_pst              t-dmm         pst_paletted
+3fa         N     0x5dbf  ghoul_female_pst              t-ghf         pst_paletted
+3fb         N     0x5dc0  ghoul_male_pst                t-ghm         pst_paletted
+3fc         N     0x5dc1  merchant_pst                  t-mrc         pst_paletted
+3fd         N     0x5dc2  skeleton_priest_pst           t-skp         pst_paletted
+3fe         N     0x5dc3  tiefling_female_pst           t-tcf         pst_paletted
+
+	3gc         N     0x5b9e  snake_small                                 modders (new content)
+	3gd         N     0x5b9f  snake_small_green                           modders (new content)
+	3ge         N     0x5bao  snake_small_red                             modders (new content)
+3gf         N     0x5ba1  leprechaun_annah_pst          -             modders (new content)
+3gh         N     0x5ba3  easter_egg_morte_pst          -             modders (new content)
+3js         Y     0x5339  the_butcher_hots              ub#tb_        modders (new content)
+3jw         Y     0x5c00  death_tyrant                  bhold         bg2_iwd2
+3jx         Y     0x5c01  giant_fire_2                  gfire         bg2_iwd2
+3jz         Y     0x5c03  giant_fire_female             t-fgf         nwn_misc_1
+3ka         Y     0x5c04  giant_frost_female            t-frf         nwn_misc_1
+3ke         N     0x5345  svirfneblin_dark_axe          t-sva         iwd_svirfneblin
+
+	3ke         N     0x5c08  lady_of_pain                  solar         wh_dr_wyv_lop
+3kf         N     0x5346  svirfneblin_dark_noaxe        t-svn         iwd_svirfneblin
+3kg         N     0x5347  arundel                       druid         iwd
+3kh         Y     0x510b  dragon_white_young            t-bab         ee_tob (new content)
+3ki         Y     0x510c  dragon_green_young            t-bab         ee_tob (new content)				  
+3kj         Y     0x510d  dragon_silver_young           t-bab         ee_tob (new content)
+3kk         Y     0x534b  troll_scrag                   t-scra        ee_tob (new content)
+3kl         Y     0x534c  troll_spectral                troll         ee_tob (new content)
+3km         N     0x534d  hephernaan                    -             ee_tob (new content)
+3kn         Y     0x5111  goblin_worg_elite             t-gbw         ee_tob (new content)
+3ko         Y     0x5112  goblin_worg_shaman            t-gcw         ee_tob (new content)
+3kp         Y     0x5350  drowned_dead_red              t-drn         ee_tob (new content)
+3kq         Y     0x5351  halfdragon_green              t-hdr         ee_tob (new content)
+3kr         Y     0x5352  boar_wild                     t-boa         ee_tob (new content)
+3ks         Y     0x5353  bugbear_shaman                t-bgc         ee_tob (new content)
+3kt         Y     0x5117  ettin_ghost                   ettin         ee_tob (new content)
+3ku         Y     0x5355  mkhiin                        gobaxe        ee_tob (new content)
+3kv         Y     0x5356  mkhiin_bow                    gobaxe        ee_tob (new content)
+3kw         Y     0x5357  mkhiin_staff                  t-gbs         ee_tob (new content)
+3kx         Y     0x5358  mkhiin_armor_axe              gobaxe        ee_tob (new content)
+3ky         Y     0x5359  mkhiin_armor_bow              gobaxe        ee_tob (new content)
+3kz         Y     0x535a  bee_giant_wow                 ub_b_         modders (new content)
+3la         Y     0x511e  elemental_ice_wow             ubup          modders (new content)
+
+	3lc         N     0x535d  gw_bald_eagle                               modders (new content)
+	3ld         N     0x535e  gw_bald_eagle_small                         modders (new content)
+4aa         Y     0x1001  fiend_green                   t-nab         fiends_genies
+4ab         Y     0x1002  fiend_blue                    gorchr/tanar  fiends_genies
+4ac         Y     0x1003  wyvern_white_big              wyver         wh_dr_wyv_lop
+4aj         Y     0x100a  wyrmling_albino               t-wyvr/wyver  ee_tob (new content)
+4ak         Y     0x100b  fiend_red                     tanar         ee_tob (new content)
+4al         Y     0x100c  tunnel_worm                   carrn         ee_tob (new content)
+4jw         Y     0x1101  dragon_white                  t-dra         wh_dr_wyv_lop
+4jy         Y     0x1103  dragon_green_iwd              t-dra         ee_tob (new content)
+8co         Y     0x5fbc  dao                           djinni        fiends_genies
+8cp         Y     0x5fbd  dao_legs                      djinni        fiends_genies
+8cq         Y     0x5fbe  efreeti                       djinni        fiends_genies
+8cr         Y     0x5fbf  efreeti_legs                  djinni        fiends_genies
+8cs         Y     0x5fc0  janni                         djinni        fiends_genies
+8ct         Y     0x5fc1  janni_legs                    djinni        fiends_genies
+8cu         Y     0x5fc2  marid                         djinni        fiends_genies
+8cv         Y     0x5fc3  marid_legs                    djinni        fiends_genies
+8dm         N     0x5fd4  red_wizard                    -             ee_tob (new content)
+8dn         N     0x5fd5  sailor_green                  -             ee_tob (new content)
+8do         N     0x5fd6  sailor_red                    -             ee_tob (new content)
+8dp         N     0x5fd7  sailor_dark                   -             ee_tob (new content)
+8dq         N     0x5fd8  crusader_soldier              -             ee_tob (new content)
+8dr         Y     0x5fd9  golem_mini                    clayg         ee_tob (new content)
+8ds         Y     0x5fda  snake_water                   snake         ee_tob (new content)
+8dt         Y     0x5fdb  efreeti_noble                 djinni        ee_tob (new content)
+8dv         Y     0x5fdd  yochlol                       t-yoc         fiends_genies
+
+-af         Y     0x1306  dragon_red_juvenile           red           ee_tob (new content)
+-ag         Y     0x1307  dragon_green_juvenile         black         ee_tob (new content)
+-ah         Y     0x1308  giant_hill                    t-ver         ee_tob (new content)
+-ai         Y     0x1309  elemental_sunnis_wow          earth         modders (new content)
+-aj         Y     0x130a  elemental_zaaman_wow          gfire         modders (new content)
+
 abat        N     0xc000  bat_inside                    -             -
 abat        N     0xc500  bat_outside                   -             -
 abir        N     0xd300  bird                          -             -
@@ -244,21 +317,21 @@ mair        Y     0x7320  elemental_air                 airel         -
 mais        Y     0x7321  elemental_air_small           airsm         -
 makh        Y     0x3000  ankheg                        ankhg         -
 masl        Y     0x7f3c  deva_monadic                  solarf        -
-mbas        Y     0x7100  basilisk                      basil         IA_Base_Anims
-mbas2       Y     0x7101  basilisk_greater              gbasi         IA_Base_Anims
-mbbm        Y     0xe220  beetle_bombardier             t-bmb         IA_Base_Anims
+mbas        Y     0x7100  basilisk                      basil         base_anims
+mbas2       Y     0x7101  basilisk_greater              gbasi         base_anims
+mbbm        Y     0xe220  beetle_bombardier             t-bmb         base_anims
 mbeh        Y     0x7f02  beholder                      bhold         -
 mber        Y     0x7201  bear_brown                    rbear         -
 mber2       Y     0x7203  bear_polar                    pbear         -
 mber3       Y     0x7202  bear_cave                     cbear         -
 mber4       Y     0x7200  bear_black                    bbear         -
 mbes        Y     0x7f15  beholder_small                behols        -
-mbet        Y     0xe200  beetle_boring                 t-btl         IA_Base_Anims
-mbfi        Y     0xe210  beetle_fire                   t-bmb         IA_Base_Anims
-mbrh        Y     0xe230  beetle_rhinoceros             t-rhi         IA_Base_Anims
+mbet        Y     0xe200  beetle_boring                 t-btl         base_anims
+mbfi        Y     0xe210  beetle_fire                   t-bmb         base_anims
+mbrh        Y     0xe230  beetle_rhinoceros             t-rhi         base_anims
 mcar        Y     0xa100  carrion_crawler               carrn         -
 mcor        Y     0xe0e0  cornugon                      cornu         -
-mcyc        Y     0xe000  cyclops                       t-cyc         IA_Base_Anims
+mcyc        Y     0xe000  cyclops                       t-cyc         base_anims
 mdem        Y     0x1300  demogorgon                    demo          -
 mdgu        Y     0x6405  doom_guard                    t-dgu         -
 mdgu        Y     0x6406  doom_guard_larger             t-dgu         -
@@ -299,12 +372,12 @@ mfis        Y     0x7311  elemental_fire_small          firee         -
 mfis        Y     0x7313  elemental_fire_small_purple   firee         -
 mgcl        Y     0x7f0b  greatcat_leopard              leopa         -
 mgcp        Y     0x7f0a  greatcat_panther              panth         -
-mgh2        Y     0xe310  ghoul_greater                 ghoul         IA_Base_Anims
-mgh3        Y     0xe320  ghast_greater                 t-ght         IA_Base_Anims
+mgh2        Y     0xe310  ghoul_greater                 ghoul         base_anims
+mgh3        Y     0xe320  ghast_greater                 t-ght         base_anims
 mghl        Y     0x7700  ghoul                         ghoul         -
 mghl        Y     0x7701  revenant                      ghoul         -
 mghl2       Y     0x7702  ghast                         ghast         -
-mgho        Y     0xe300  ghost                         t-ghs         IA_Base_Anims
+mgho        Y     0xe300  ghost                         t-ghs         base_anims
 mgib        Y     0x7800  gibberling                    giber         -
 mgic        Y     0xe0f0  golem_ice                     icegol        -
 mgit        Y     0x7f14  githyanki                     githy         -
@@ -313,10 +386,10 @@ mglc        Y     0x7f07  golem_clay                    clayg         -
 mgnl        Y     0x8000  gnoll                         gnoll         -
 mgo1        Y     0xe400  goblin_axe                    gobaxe        -
 mgo2        Y     0xe410  goblin_bow                    gobaxe        -
-mgo3        Y     0xe420  goblin_elite_axe              t-gex         IA_BG2_Restores
-mgo4        Y     0xe430  goblin_elite_bow              t-geb         IA_BG2_Restores
+	mgo3        Y     0xe420  goblin_elite_axe              t-gex         bg2_restores bg2_iwd2
+	mgo4        Y     0xe430  goblin_elite_bow              t-geb         bg2_restores
 mgwe        Y     0x7e01  werewolf_greater              wereg_        -
-mhis        Y     0xe040  histachii                     t-his         IA_Base_Anims
+mhis        Y     0xe040  histachii                     t-his         base_anims
 mhob        Y     0x8100  hobgoblin                     hobgl         -
 migo        Y     0x7f04  golem_iron                    iron          -
 mimp        Y     0x7f03  imp                           imppp         -
@@ -324,23 +397,24 @@ mkob        Y     0x8200  kobold                        kobld         -
 mkul        Y     0x7f28  kuo-toa_large                 kuoto         -
 mkuo        Y     0x7f0c  kuo-toa                       kuoto         -
 mkur        N     0x7f33  mdk2_kurt                     -             -
-mler        Y     0xe050  lich_black                    lerel         IA_BG2_Restores
+mler        Y     0xe050  lich_black                    lerel         bg2_restores
 mli2        Y     0xe510  lizard_man                    lizon         -
-mli3        Y     0xe520  lizard_king                   t-lzk         IA_Base_Anims
-mlic        Y     0x7f0d  lich                          lichh         IA_BG2_Restores
-mlic        Y     0xe060  lich_white                    lichh         -
+mli3        Y     0xe520  lizard_king                   t-lzk         base_anims
+mlic        Y     0x7f0d  lich                          lichh         bg2_restores
+
+	mlic        Y     0xe060  lich_white                    lichh         - voir lerel
 mliz        Y     0xe500  lizard_man_elite              lizon         -
 mmax        N     0x7f2b  mdk2_max                      -             -
 mmel        Y     0x7f3d  melissan                      melis         -
 mmin        Y     0x7f01  mindflayer                    mindf         -
-mmta        N     0xe070  minotaur                      t-min         IA_Core
+	mmta        N     0xe070  minotaur                      t-min         IA_Core ==> moved to base_anims (as of v6.0.0)
 mmis        Y     0x7f35  mist_creature                 mist          -
 mmst        Y     0x7f39  blob_mist_creature            mist          -
 mmum        Y     0xe080  mummy                         mummy         -
-mmy2        Y     0xe610  myconid_blue                  mycon         IA_BG2_Restores
+mmy2        Y     0xe610  myconid_blue                  mycon         bg2_restores
 mmyc        Y     0xe600  myconid_red                   mycon         -
-mno1        Y     0xe700  orog                          orog          IA_BG2_Restores
-mno2        Y     0xe710  orog_elite                    orog          IA_BG2_Restores
+mno1        Y     0xe700  orog                          orog          bg2_restores
+mno2        Y     0xe710  orog_elite                    orog          bg2_restores
 mno3        Y     0xe720  orog_chieftain                orogc         -
 mogh        Y     0x7000  half_ogre                     hogre         -
 mogm        Y     0x2200  ogre_mage                     ogrem         -
@@ -348,7 +422,7 @@ mogn        Y     0x7001  ogrillon                      ogril         -
 mogr        Y     0x9000  ogre                          ogree         -
 mor1        Y     0xe800  orc_melee                     orcaxe        -
 mor2        Y     0xe810  orc_range                     orcbw         -
-mor3        Y     0xe820  orc_elite_melee               orcaxe        IA_BG2_Restores
+mor3        Y     0xe820  orc_elite_melee               orcaxe        bg2_restores
 mor4        Y     0xe830  orc_elite_range               orcbw         -
 mor5        Y     0xe840  orc_shaman                    orcsh         -
 moty        Y     0x7f08  otyugh                        otyug         -
@@ -358,8 +432,8 @@ msa2        Y     0xe910  salamander_frost              salam         -
 msah        Y     0x7f09  sahuagin                      sahsm         -
 msal        Y     0xe900  salamander_fire               salam         -
 msat        Y     0x7f23  sahuagin_large                sahua         -
-msh1        Y     0xea10  shadow_small                  t-shs         IA_Base_Anims
-msh2        Y     0xea20  shadow_large                  t-shl         IA_Base_Anims
+msh1        Y     0xea10  shadow_small                  t-shs         base_anims
+msh2        Y     0xea20  shadow_large                  t-shl         base_anims
 mshd        Y     0x7703  shadow                        shadow        -
 mshr        Y     0xea00  shrieker                      shrie         -
 msir        Y     0x2000  sirine                        sirin         -
@@ -380,16 +454,18 @@ mspi        Y     0x7a01  spider_huge                   hspid         -
 mspi        Y     0x7a02  spider_phase                  pspid         -
 mspi        Y     0x7a03  spider_sword                  sspid         -
 mspi        Y     0x7a04  spider_wraith                 wspid         -
-mspl        N     0x4300  static_spider_woman           centl         IA_BG2_Restores
+mspl        N     0x4300  static_spider_woman           centl         bg2_restores
 msps        Y     0x7f2f  spider_small                  smspid        -
-mtan        Y     0x1100  tanarri                       tanar         IA_BG2_Restores
-mtan        N     0xe090  marilith                      snake/unearf  IA_BG2_Restores
-mtas        Y     0x7c01  kobold_tasloi                 taslo         IA_Base_Anims
-mtic        Y     0xe0a0  troll_ice                     t-ict         IA_Base_Anims
-mtro        Y     0x7f00  troll                         troll         -
-mtro        Y     0xe0b0  troll_blue                    troll         -
+
+	mtan        Y     0x1100  tanarri                       tanar         bg2_restores ??? ==> moved to base_anims (as of v6.0.0)
+	mtan        N     0xe090  marilith                      snake/unearf  bg2_restores
+mtas        Y     0x7c01  kobold_tasloi                 taslo         base_anims
+mtic        Y     0xe0a0  troll_ice                     t-ict         base_anims
+
+	mtro        Y     0x7f00  troll                         troll         -
+	mtro        Y     0xe0b0  troll_blue                    troll         -
 mtrs        Y     0x7f0f  troll_small                   icetr         -
-mtsn        Y     0xe0c0  troll_snow                    t-tsn         IA_Base_Anims
+mtsn        Y     0xe0c0  troll_snow                    t-tsn         base_anims
 mumb        Y     0x7f11  umber_hulk                    umber         -
 mumb        Y     0xe0d0  umber_hulk_elder              umber         -
 mvaf        Y     0x7f22  vampire_female                vampf         -
@@ -397,8 +473,8 @@ mvam        Y     0x7f12  vampire                       vampp         -
 mwav        Y     0xe0f2  wailing_virgin                virgin        -
 mwer        Y     0x7e00  werewolf                      wereg_        -
 mwfm        Y     0x7f2d  wyvern_familiar               pseudo        -
-mwi2        Y     0xec10  wight_green                   t-wgr         IA_Base_Anims
-mwi3        Y     0xec20  wight_yellow                  t-wgy         IA_Base_Anims
+mwi2        Y     0xec10  wight_green                   t-wgr         base_anims
+mwi3        Y     0xec20  wight_yellow                  t-wgy         base_anims
 mwig        Y     0xec00  wight_gray                    wight         -
 mwlf        Y     0x7b00  wolf                          dwolf         -
 mwlf        Y     0x7b01  wolf_worg                     dwolf         -
@@ -407,15 +483,15 @@ mwlf2       Y     0x7b03  wolf_winter                   wwolf         -
 mwlf3       Y     0x7b05  wolf_dread                    rwolf         -
 mwlf4       Y     0x7b04  wolf_vampiric                 vwolf         -
 mwls        Y     0x7b06  wolf_shadow                   dwolf         -
-mwwe        Y     0xef10  water_weird                   t-wei         IA_Core ==> IA_Base_Anims
+mwwe        Y     0xef10  water_weird                   t-wei         IA_Core ==> moved to base_anims (as of v6.0.0)
 mwyv        Y     0x1000  wyvern_big                    wyver         -
 mwyv        Y     0xa000  wyvern                        wyver         -
 mxvt        Y     0x7c00  kobold_xvart                  xvart         -
 myu1        Y     0xed00  yuan-ti                       yanti         -
 myu2        Y     0xed10  yuan-ti_elite                 yanel         -
 myu3        Y     0xed20  yuan-ti_priest                yanpr         -
-mzo2        Y     0xee00  zombie_yellow                 t-zow         IA_Base_Anims
-mzo3        Y     0xee10  zombie_blue                   t-zow         IA_Base_Anims
+mzo2        Y     0xee00  zombie_yellow                 t-zow         base_anims
+mzo3        Y     0xee10  zombie_blue                   t-zow         base_anims
 mzom        Y     0x7d00  zombie                        zombi         -
 nbeg        N     0xb200  static_beggar_man             -             -
 nbeg        N     0xc600  beggar_man                    -             -
@@ -478,33 +554,33 @@ usar        N     0x6404  sarevok                       sarevo        -
 uvol        N     0x2100  volo                          voloo         -
 webe        N     0x0800  web_travel                    -             -
 webe        N     0x0810  web_static                    -             -
-xdmc        N     0x6414  cleric_male_dwarf_low         -             IA_Base_Anims
-xdmc        N     0x6415  cleric_female_dwarf_low       -             IA_Base_Anims
-xdmf        N     0x6424  fighter_male_dwarf_low        -             IA_Base_Anims
-xdmf        N     0x6425  fighter_female_dwarf_low      -             IA_Base_Anims
-xdmt        N     0x6444  thief_male_dwarf_low          -             IA_Base_Anims
-xdmt        N     0x6445  thief_female_dwarf_low        -             IA_Base_Anims
-xdmw        N     0x6434  mage_male_dwarf_low           -             IA_Base_Anims
-xdmw        N     0x6435  mage_female_dwarf_low         -             IA_Base_Anims
-xefc        N     0x6413  cleric_female_elf_low         -             IA_Base_Anims
-xeff        N     0x6423  fighter_female_elf_low        -             IA_Base_Anims
-xeft        N     0x6443  thief_female_elf_low          -             IA_Base_Anims
-xefw        N     0x6433  mage_female_elf_low           -             IA_Base_Anims
-xemc        N     0x6412  cleric_male_elf_low           -             IA_Base_Anims
-xemf        N     0x6422  fighter_male_elf_low          -             IA_Base_Anims
-xemt        N     0x6442  thief_male_elf_low            -             IA_Base_Anims
-xemw        N     0x6432  mage_male_elf_low             -             IA_Base_Anims
-xhfc        N     0x6411  cleric_female_human_low       -             IA_Base_Anims
-xhff        N     0x6421  fighter_female_human_low      -             IA_Base_Anims
-xhft        N     0x6441  thief_female_human_low        -             IA_Base_Anims
-xhfw        N     0x6431  mage_female_human_low         -             IA_Base_Anims
-xhmc        N     0x6410  cleric_male_human_low         -             IA_Base_Anims
-xhmf        N     0x6420  fighter_male_human_low        -             IA_Base_Anims
-xhmt        N     0x6440  thief_male_human_low          -             IA_Base_Anims
-xhmw        N     0x6430  mage_male_human_low           -             IA_Base_Anims
-xifc        N     0x6417  cleric_female_halfling_low    -             IA_Base_Anims
-xiff        N     0x6427  fighter_female_halfling_low   -             IA_Base_Anims
-xift        N     0x6447  thief_female_halfling_low     -             IA_Base_Anims
-ximc        N     0x6416  cleric_male_halfling_low      -             IA_Base_Anims
-ximf        N     0x6426  fighter_male_halfling_low     -             IA_Base_Anims
-ximt        N     0x6446  thief_male_halfling_low       -             IA_Base_Anims
+xdmc        N     0x6414  cleric_male_dwarf_low         -             base_anims ==> moved to bg1_character_animations (as of v6.0.0)
+xdmc        N     0x6415  cleric_female_dwarf_low       -             base_anims ==> id.
+xdmf        N     0x6424  fighter_male_dwarf_low        -             base_anims ==> id.
+xdmf        N     0x6425  fighter_female_dwarf_low      -             base_anims ==> id.
+xdmt        N     0x6444  thief_male_dwarf_low          -             base_anims ==> id.
+xdmt        N     0x6445  thief_female_dwarf_low        -             base_anims ==> id.
+xdmw        N     0x6434  mage_male_dwarf_low           -             base_anims ==> id.
+xdmw        N     0x6435  mage_female_dwarf_low         -             base_anims ==> id.
+xefc        N     0x6413  cleric_female_elf_low         -             base_anims ==> id.
+xeff        N     0x6423  fighter_female_elf_low        -             base_anims ==> id.
+xeft        N     0x6443  thief_female_elf_low          -             base_anims ==> id.
+xefw        N     0x6433  mage_female_elf_low           -             base_anims ==> id.
+xemc        N     0x6412  cleric_male_elf_low           -             base_anims ==> id.
+xemf        N     0x6422  fighter_male_elf_low          -             base_anims ==> id.
+xemt        N     0x6442  thief_male_elf_low            -             base_anims ==> id.
+xemw        N     0x6432  mage_male_elf_low             -             base_anims ==> id.
+xhfc        N     0x6411  cleric_female_human_low       -             base_anims ==> id.
+xhff        N     0x6421  fighter_female_human_low      -             base_anims ==> id.
+xhft        N     0x6441  thief_female_human_low        -             base_anims ==> id.
+xhfw        N     0x6431  mage_female_human_low         -             base_anims ==> id.
+xhmc        N     0x6410  cleric_male_human_low         -             base_anims ==> id.
+xhmf        N     0x6420  fighter_male_human_low        -             base_anims ==> id.
+xhmt        N     0x6440  thief_male_human_low          -             base_anims ==> id.
+xhmw        N     0x6430  mage_male_human_low           -             base_anims ==> id.
+xifc        N     0x6417  cleric_female_halfling_low    -             base_anims ==> id.
+xiff        N     0x6427  fighter_female_halfling_low   -             base_anims ==> id.
+xift        N     0x6447  thief_female_halfling_low     -             base_anims ==> id.
+ximc        N     0x6416  cleric_male_halfling_low      -             base_anims ==> id.
+ximf        N     0x6426  fighter_male_halfling_low     -             base_anims ==> id.
+ximt        N     0x6446  thief_male_halfling_low       -             base_anims ==> id.
