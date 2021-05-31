@@ -41,11 +41,11 @@
  *                                    LISTE les créatures brumes empoisonnées du jeu et de mods nécessitant d'être modifiées.                             *
  *  - GW_death_tyrant             :   LISTS vanilla and modded Death Tyrants creatures needing to be patched.                            => line #  500   *
  *                                    LISTE les créatures tyramorts du jeu et de mods nécessitant d'être modifiées.                                       *
- *  - GW_wererat                  :   LISTS vanilla and modded Wererat creatures needing to be patched.                                  => line #  530   *
+ *  - GW_wererat                  :   LISTS vanilla and modded Wererat creatures needing to be patched.                                  => line #  531   *
  *                                    LISTE les créatures rats-garous du jeu et de mods nécessitant d'être modifiées.                                     *
- *  - GW_worg                     :   LISTS vanilla and modded Worgs creatures needing to be patched.                                    => line #  548   *
+ *  - GW_worg                     :   LISTS vanilla and modded Worgs creatures needing to be patched.                                    => line #  549   *
  *                                    LISTE les créatures worgs du jeu et de mods nécessitant d'être modifiées.                                           *
- *  - GW_yuan-ti_half             :   LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.                       => line #  571   *
+ *  - GW_yuan-ti_half             :   LISTS vanilla and modded Yuan-Ti Halfbreeds creatures needing to be patched.                       => line #  572   *
  *                                    LISTE les créatures Yuan-ti demi-sang du jeu et de mods nécessitant d'être modifiées.                               *
  * ====================================================================================================================================================== */
 
@@ -510,6 +510,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_death_tyrant BEGIN
 // ---
 behund01                => 1	// Death Tyrant
 melsum03                => 1	// id.
+rngbeh01				=> 1	// id.
 
 // BP
 // --
