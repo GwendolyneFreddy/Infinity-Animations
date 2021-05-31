@@ -962,7 +962,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
         - Intégration du correctif <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Suppression par Miloch de la classe d'innocent des orques et ogres du cirque de la Promenade de Waukyne</a>.
         - Dorénavant, ne corrige les jeux de son des créatures que si la résolution des conflits entre soundsets d'animations de créatures a échoué.
     - <ins>ia_correct_weapon_animations.tpa</ins> : ajout d'une nouvelle routine qui corrige les problèmes d'animation des armes portées par les créatures (elle équipe les fichiers .cre de nouvelles armes clonées compatibles avec leur animation).
-    - .
+    - ...
 - [25] Correction des animations des humanoïdes (t-humanoid_fixes.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_humanoid_fixes_arrays.tph*") pour faciliter leur mise à jour.
     - Variables tutu : ajout des variables manquantes pour les fichiers kent and sailned de BG (array " *GW_male_human_fighters* ").

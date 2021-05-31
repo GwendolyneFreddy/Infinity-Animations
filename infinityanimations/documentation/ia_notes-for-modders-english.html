@@ -103,10 +103,6 @@
 
 		<p>
 			&#x26A0;&#xFE0F; Note that these instructions are also available for ANISND.ids file.
-		</p>
-
-		<p>
-			...
 		</p><br>
 
 		<address>
@@ -588,8 +584,8 @@ fall_frame=0 </pre>
 				  </ul>
 				  Note: if <span class="tp2">brightest=1</span> and <span class="tp2">multiply_blend=1</span>, then
 				  <ul style="margin-left: -1%; margin-right: 40px">
-					<li style="margin-right: -10%">srcFactor = DRAW_SRC_COLOR</li>
-					<li style="margin-right: -10%">destFactor = DRAW_ONE</li>
+					<li style="margin-right: -10%">srcFactor = GL_SRC_COLOR</li>
+					<li style="margin-right: -10%">destFactor = GL_ONE</li>
 				  </ul></td>
 				<td style="border: 1px solid #781808; padding-left:20px; padding-top:20px; padding-bottom:20px;">Boolean:<br><br>
 				  <span style="color: #781808;">0 = No [default]</span><br>
@@ -732,7 +728,7 @@ fall_frame=0 </pre>
 				(monster_quadrant and monster_ankheg animations only)</td>
 				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px; padding-top:20px; padding-bottom:20px;">Whether the bam files need mirrored directions.<br>
 				By default ('No'), the engine automatically mirrors directions. Otherwise eastern directions are available as xxxE-BAMs.<br>
-				monster_ankheg type: Number of available directions per sequence (e.g. 5 for ankhegs)</td>
+				monster_ankheg type: Number of available directions per sequence (e.g. 5 for ankhegs).</td>
 				<td style="border: 1px solid #781808; padding-left:20px; padding-top:20px; padding-bottom:20px;">Boolean:<br><br>
 				  <span style="color: #781808;">0 = No [default]</span><br>
 				  1 = Yes</td>
@@ -812,7 +808,8 @@ fall_frame=0 </pre>
 			<tr>
 				<td style="border: 1px solid #781808; text-align: center; padding-top:20px; padding-bottom:20px;"><strong><span style="color: #781808;">height_code_shield</span></strong><br><br>
 				(character animation animations only)</td>
-				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px; padding-top:20px; padding-bottom:20px;">Same as above, but for the shields animations. TODO WQH does not seem to exist...</td>
+				<td style="border: 1px solid #781808; padding-left:5px; padding-right:5px; padding-top:20px; padding-bottom:20px;">Same as above, but for the shields animations.<br>
+				Note: WQH does not seem to exist...</td>
 				<td style="border: 1px solid #781808; padding-left:20px; padding-top:20px; padding-bottom:20px;">String</td>
 			</tr>
 

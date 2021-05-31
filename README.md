@@ -964,7 +964,7 @@ This component patches any changed creature animation in saved games to prevent 
         - Integrated <a href="http://www.shsforums.net/topic/45925-pst-animations-and-circus-orcs/">Miloch's Circus orcs/ogres should not have INNOCENT class patch</a>.
         - From now on, Tanar'ri, Marilith, Minotaurs and Mind Flayers soundsets are fixed only if resolving soundsets creature animation conflicts has not been successfully installed.
     - <ins>ia_correct_weapon_animations.tpa</ins>: Added new correcting creature weapons animations routine that fixes creature weapons animations issues (patches vanilla creature files with new cloned weapons compatible with their animations).
-    - .
+    - ...
 - [25] Humanoid Animations Fixes (t-humanoid_fixes.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_humanoid_fixes_arrays.tph*" library) for easier maintenance.
     - Tutu variables: added missing tutu variable for BG kent and sailned files ("*GW_male_human_fighters*" array).

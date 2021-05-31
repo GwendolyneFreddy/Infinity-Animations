@@ -189,7 +189,7 @@ Creature  Item      Slot   Issue
 	INCLUDE ~%MOD_FOLDER%/lib/ia_read_configuration.tph~    // Library of functions and macros reading the configuration options values (Bibliothèque de fonctions et de macros lisant les options de configuration).
 	INCLUDE ~%MOD_FOLDER%/lib/ps_recursive_copy.tpa~        // Sam's library allowing to recursively search into a parent directory, then copy files to a destination directory. Gwendolyne's library to install IA content.
 	INCLUDE ~%MOD_FOLDER%/lib/gw_handle_audio.tpa~          // Customised silent HANDLE_AUDIO function.
-	INCLUDE ~%MOD_FOLDER%/lib/a7_functions.tpa~             // Loads Argent77's functions library to install new animations slots into ANIMATE.ids (big thanks to him!) - Ajout automatique de slots d'animations de créatures dans BG2EE. Merci à Argent77 pour sa procédure !
+	INCLUDE ~%MOD_FOLDER%/lib/a7_functions.tpa~             // Argent77's functions library to install new animations slots into ANIMATE.ids (big thanks to him!) - Ajout automatique de slots d'animations de créatures dans BG2EE. Merci à Argent77 pour sa procédure !
 	INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~             // Shared library of functions and macros.
 
 
