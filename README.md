@@ -278,6 +278,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_base_anims</strong></td>
 		<td><ins>IA Content 001 - Base Content</ins><br><br>
 		- Content: Basilisk and Tasloi animations, the missing IWD animations that already have animation slots in BGII (Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ghast greater, Ghost, Ghoul greater, Histachii, Lich white, Lizard man, Lizard King, Shadow small, Shadow large, Troll ice, Troll snow, Umber hulk elder, Wight gray, Wight green, Wight yellow, Zombie blue, Zombie yellow). Includes all relevant creature sounds and tables.<br>
+		- As of v6.0.0, Death Tyrant, Alternate Ellesime and Alternate Fire Giant animations have been moved from IA Content 002 - IWDII and unused BGII Animations.<br>
 		- (New) missing casting animations (sp and ca bam files, with weapons variants when needed): Beetle bombardier, Beetle boring, Beetle fire, Beetle rhinoceros, Cyclops, Ettin, Ghast greater, Ghost, Ghoul greater, Goblin with axe, Goblin with bow, Goblin Elite with axe, Goblin Elite with bow, Golem Ice, Histachii, Lizard man, Minotaur, Mummy, Orc melee, Orc range, Orc elite melee, Orc elite range, Orog, Orog elite, Orog Chieftain, Salamander fire/frost, Shadow small, Shadow large, Skeleton fiend, Skeleton warrior, Troll blue, Troll ice, Troll snow, Water weird, Yuan-ti, Yuan-ti elite, Zombie blue, Zombie yellow.<br>
 		- (New) BWP Fixpack graphic fixes (thanks to their authors!): <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">Miloch's Wyvern and Tanar'ri Animation Fix</a> and <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Polytope's better Doppelganger attack animations</a>.<br>
 		- Needed for Distinctive Undead [400] and More Base Animations [500] components.<br>
@@ -305,6 +306,7 @@ Here is a chart listing the options related to the installation process:</br></b
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Content: all IWD II animations that are neither in BGII (Death Tyrant, Alternate Ellesime, Alternate Fire Giant, Lagoon Creature) or IWD (Abishai White, Arctic Boar, Bugbear, Bugbear Captain, Chimera, Dark Treant, Drider male/female, Elemental Water Small, Feyr lesser/greater, Fomorian Giant, IWD II goblins, Goblin Worgrider, Goblin Worgrider Captain, Half-dragon black/red, Hook Horror, Isair, Kegs, Lemure, Madae, Malarite, Orog Shaman, Shenrical, Undead Orcs, Werebadger, Wererat, Worg, Yuan-Ti Halfbreed). Includes all relevant creature sounds and tables.<br>
+		- As of v6.0.0, Death Tyrant, Alternate Ellesime and Alternate Fire Giant animations have been moved into IA Content 001 - Base Content.<br>
 		- Needed for Distinctive Fiends [100], Cambions get Isair Animation [210-230], Alu-Fiends get Madae Animation [260-280] and More Icewind Dale II Animations [600] components.<br>
 		- Needed for BP, CtB, NEJ, Planar Sphere, RoT and Sheena mods.<br><br>
 		0 = Don't install<br>
@@ -634,6 +636,9 @@ This component assigns all IWD svirfneblins animations variants for Underdark de
 <a name="500" id="500"></a>&#10173; **[500] More Base Animations**<br><br>
 
 This component assigns some creatures distinctive basic animations:
+- Death tyrants get the death tyrant animation
+- Ellesime clones get the white-haired Ellesime animation
+- Greater fire giants and firbolgs get the fire giant variant animation
 - Histachii get the IWD histachii animation
 - Lizardman warriors get the lizardman elite animation (brown)
 - Lizardman shamans get the lizardman animation (green)
@@ -664,13 +669,10 @@ This component assigns some creatures distinctive IWD animations:
 <a name="600" id="600"></a>&#10173; **[600] More Icewind Dale II Animations**<br><br>
 
 This component assigns some creatures distinctive IWD2 animations:
-- Greater fire giants and firbolgs get the fire giant variant animation
 - Variant goblins get their proper animation (worgriders, leaders, browns, greens, elites)
 - Hook horrors get the hook horror animation
 - Shadow druids get the Malarite animation
-- Ellesime clones get the white-haired Ellesime animation
 - Poison mists get the lagoon creature animation
-- Death tyrants get the death tyrant animation
 - Wererat gets the wererat animation
 - Worgs get the IWD2 worg animation
 - Yuan-Tis Halfbreed get the IWD2 yuan-ti halfbreed animation
@@ -874,6 +876,7 @@ This component patches any changed creature animation in saved games to prevent 
   - Resolved soundsets creature animation conflicts (Courtesy of skellytz - from his *Infinity Sounds* project mod): Mind Flayer (MMIN) conflicts with Minotaur (MMin), Marilith (MTan) with Tanar'ri (MTAN), BG2 Lich (MLIC) with IWD Lich_White (MLic - offset restored by Infinity Animations), BG2 Troll (MTRO) with IWD Troll Blue (MTro).
   - Classic games: Fixed the '*Robed BG1 animations do not swap with armor level changes bug*' (<a href="http://www.shsforums.net/topic/43501-infinity-animations-readme/page-3#entry520015">here</a>, and <a href="http://www.shsforums.net/topic/44249-cannot-get-bg1-animations-to-work/page-2">there</a>). A huge thanks to <a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a> for providing the <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">custom tobex.dll library</a> that allows this exploit.
   - Rewrote IA Reference Picker tool (can now be translated) and updated its documentation.
+  - For consistency, Death Tyrant, Alternate Ellesime and Alternate Fire Giant animations have been moved from IA Content 002 - IWDII and unused BGII Animations to IA Content 001 - Base Content. From now on, all affected creatures are no more patched by the *More Icewind Dale II Animations* component, but by the *More Base Animations* component..
   - Added new IA ee_tob content (EE games new Animations ported to ToB): Boar Wild, Bonebat, Bugbear Shaman, Chicken White, Crusader Soldier, Dog Gray, Dragon Green IWD, Dragon Green Juvenile, Dragon Green Young, Dragon Red Juvenile, Dragon Silver Young, Dragon White Young, Drowned Dead Red, Efreeti Noble, Ettin Ghost, Fiend Red, Giant Hill, Gibberling Brood, Goblins Mkhiin (common, with bow, with staff, with armor and axe, with armor and bow), Goblin Worg Elite, Goblin Worg Shaman, Golem Mini, Halfdragon Green, Hephernaan, Megalocentipede, Black Pudding, Red Wizard, Sailor Dark, Sailor Green, Sailor Red, Snake Water, Spider Water, Troll Scrag, Troll Spectral, Tunnel Worm, Wyrmling Albino, Wyvern White. Includes all relevant creature sounds and tables.
   - Added IA modders content: Chicken Brown (Jarl), jastey's Wolfhound, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (Elemental Ice, Sunnis Princess of Earth Elementals and Zaaman Rul Prince of Fire Elementals); bald eagle, small bald eagle, leprechaun annah, easter egg morte, golem amber, small snake, small snake green and small snake red (Gwendolyne).
   - Native compatibility with Enhanced Editions games:
@@ -1004,11 +1007,13 @@ This component patches any changed creature animation in saved games to prevent 
     - Fixed sound clips typos (a few were misspelled "*t_sva*" and "*t_svn*" instead of "*t-sva*" and "*t-svn*").
 - [500] More Base Animations (t-baseanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_base_anim_arrays.tph*" library) for easier maintenance.
+    - For consistency, Death Tyrant, Alternate Ellesime and Alternate Fire Giant animations patching has been moved from the *More Icewind Dale II Animations* component.
 - [550] More Icewind Dale Animations (t-iwdanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd_anim_arrays.tph*" library) for easier maintenance.
     - BG:EE compatibility: added `IF_EXISTS` after `COPY_EXISTING` to avoid installation failure.
 - [600] More Icewind Dale II Animations (t-iwd2anims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_iwd2_anim_arrays.tph*" library) for easier maintenance.
+    - For consistency, Death Tyrant, Alternate Ellesime and Alternate Fire Giant animations patching has been moved into the *More Base Animations* component..
     - Appends *t-cre_fixer.log* file only if needed.
 - [650] More Neverwinter Nights Animations (t-nwnanims.tpa)
     - Externalized lists of creatures to be patched into arrays (built in "*gw_ia_more_nwn_anim_arrays.tph*" library) for easier maintenance.

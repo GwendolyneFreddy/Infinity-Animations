@@ -279,6 +279,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_base_anims</strong></td>
 		<td><ins>IA Content 001 - Base Content</ins><br><br>
 		- Contenu : animations de basilic et de tasloi, les animations manquantes de IWD référencées dans BGII (scarabée bombardier, scarabée de feu, scarabée scolyte, scarabée rhinocéros, cyclope, fantôme, blême majeur, goule majeure, histachii, homme lézard, homme lézard roi, liche blanche, nécrophage gris/vert/jaune, ombre petite/grande), ombre des roches ancienne, troll des glaces, troll des neiges, zombi bleu/jaune). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- À partir de la version 6.0.0, il contient aussi les animations Ellesime avec des cheveux blancs, géant du feu alternatif et tyramort qui ont été déplacées du contenu IA Content 002 - IWDII and unused BGII Animations.<br>
 		- (Nouveau) Animations manquantes de lancement de sort (fichiers bam ca et sp, avec les armes quand nécessaire) : scarabées (bombardier, scolyte, de feu, rhinocéros), cyclope, ettin, fantôme, blême majeur, goule majeure, gobelins (avec hache, avec arc, d'élite avec hache, d'élite avec arc), golem de glace, histachii, minotaure, momie, orque (mêlée, archer, d'élite, archer d'élite), orog, orog d'élite, chef orog, salamandre (du feu, du givre), ombre (petite, grande), squelette démon, combattant squelette, trolls (bleu, des glaces, des neiges), esprit des eaux, yuan-ti, yuan-ti d'élite, zombi (bleu, jaune).<br>
 		- (Nouveau) Correctifs graphiques des animations du BWP Fixpack (merci à leurs auteurs !) : <a href="http://www.shsforums.net/topic/47692-fixed-lizardman-shaman-bug/">Animations manquantes des hommes lézards (verts) quand ils lancent un sort avec des armes de Miloch</a>, <a href="http://www.shsforums.net/files/file/1052-ia-content-fixed-tanarri-and-wyvern/">animations de wiverne majeure et de tanar'ri de Miloch</a> et <a href="https://www.gibberlings3.net/forums/topic/23792-doppelganger-animations/">Meilleures animations d'attaque du Doppelganger de Polytope</a>.<br>
 		- Nécessaire pour les composants Morts-vivants différenciés [400] et Plus d'animations de base [500].<br>
@@ -306,6 +307,7 @@ Voici le tableau des options concernées :</br></br>
 		<td><div align="center"><strong>ia_bg2_iwd2</strong></td>
 		<td><ins>IA Content 002 - IWDII and unused BGII Animations</ins><br><br>
 		- Contenu : toutes les animations de IWD II que l'on ne trouve ni dans BGII (Ellesime avec des cheveux blancs, géant du feu alternatif, créature des lagons, tyramort), ni dans IWD (abishai blanc, blaireau-garou, chimère, crochorreur, demi-dragon noir/rouge, drider mâle/femelle, élémentaire de l'eau petit, freyeur normale/grande, géant Fomorian, gobelins de IWD II, gobelins chevaucheurs de worg, gobelours, capitaine gobelours, isair, kegs, lémure, madae, malarite, orog chaman, orques morts-vivants, rat-garou, tréant, sanglier arctique, shenrical, worg, yuan-ti demi-sang). Comprend les tables et les jeux de sons des créatures concernées.<br>
+		- À partir de la version 6.0.0, les animations Ellesime avec des cheveux blancs, géant du feu alternatif et tyramort ont été déplacées dans le contenu IA Content 001 - Base Content.<br>
 		- Nécessaire pour les composants Démons différenciés [100], Animation d'Isair pour les cambions [210-230], Animation de Madae pour les alu-démons [260-280] et Plus d'animations d'Icewind Dale II [600].<br>
 		- Nécessaire pour les mods BP, CtB, NEJ, Planar Sphere, RoT et Sheena.<br><br>
 		0 = Ne pas l'installer<br>
@@ -632,6 +634,9 @@ Ce composant toutes les différentes animations de svirfneblin d'IWD aux gnomes 
 <a name="500" id="500"></a>&#10173; **[500] Plus d'animations de base**<br><br>
 
 Ce composant attribue à certaines créatures des animations basiques différenciées :
+- Attribue aux tyramorts l'animation de tyramort [<em>NdT : death tyrant</em>].
+- Attribue aux clones d'Ellesime l'animation d'Ellesime avec des cheveux blancs.
+- Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.
 - Attribue aux histachii l'animation d'histachii d'IWD.
 - Attribue aux guerriers hommes-lézards l'animation d'homme-lézard d'élite (brune).
 - Attribue aux chamans homme-lézards l'animation d'homme-lézard vert.
@@ -662,13 +667,10 @@ Ce composant attribue à certaines créatures des animations d'IWD différencié
 <a name="600" id="600"></a>&#10173; **[600] Plus d'animations d'Icewind Dale II**<br><br>
 
 Ce composant attribue à certaines créatures des animations d'IWD1 différenciées :
-- Attribue aux géants du feu majeurs et aux firbolgs l'animation alternative de géant du feu.
 - Attribue des animations différenciées aux gobelins (chevaucheurs de worg, leaders, marrons, verts, d'élite).
 - Attribue aux crochorreurs l'animation de crochorreur.
 - Attribue aux druides de l'Ombre l'animation de Malarite.
-- Attribue aux clones d'Ellesime l'animation d'Ellesime avec des cheveux blancs.
 - Attribue aux brumes empoisonnées l'animation de créature des lagons.
-- Attribue aux tyramorts l'animation de tyramort [<em>NdT : death tyrant</em>].
 - Attribue aux rats-garous l'animation de rat-garou.
 - Attribue aux worgs l'animation de worg d'IWD2.
 - Attribue aux Yuan-Ti demi-sang l'animation de yuan-ti demi-sang de IWD2.
@@ -872,6 +874,7 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
   - Résolution des conflits entre soundsets d'animations de créatures (cadeau de skellytz - tiré de son projet de mod *Infinity Sounds*) : les minotaures (MMin) utilisaient les sons des flagelleurs mentaux (MMIN), les mariliths (MTan) celui des Tanar'ris (MTAN), la liche blanche d'IWD (MLic - restaurée par Infinity Animations) celui de la liche de BG2 (MLIC), et le troll bleu d'IWD (MTro) celui du troll de BG2 (MTRO).
   - Jeux classiques : résolution du " *bogue des animations de mages de BG1 qui ne changent pas d'apparence lorsqu'ils changent de type de robe* " (<a href="http://www.shsforums.net/topic/43501-infinity-animations-readme/page-3#entry520015">ici</a> et <a href="http://www.shsforums.net/topic/44249-cannot-get-bg1-animations-to-work/page-2">là</a>). Un grand merci à <a href="http://www.shsforums.net/user/41628-insomniator/">Insomniator</a> et à sa version adaptée de la <a href="http://www.shsforums.net/files/file/1265-bg2-impoved-gui/">librairie tobex.dll</a> qui permet cet exploit.
   - Réécriture de l'utilitaire IA Reference Picker (supporte désormais les traductions) et mise à jour de sa documentation.
+  - Par souci de cohérence, les animations Ellesime avec des cheveux blancs, géant du feu alternatif et tyramort qui ont été déplacées du contenu IA Content 002 - IWDII and unused BGII Animations dans le contenu IA Content 001 - Base Content. Désormais, toutes les créatures affectées ne sont plus traitées par le composant *Plus d'animations d'Icewind Dale II*, mais par le composant *Plus d'animations de base*.
   - Ajout du nouveau pack de contenu ee_tob (animations de EE pour ToB) : sanglier sauvage, vargouille, gobelours chaman, poulet blanc, soldat croisé, chien gris, dragon vert (IWD), dragons juvéniles (vert, rouge), dragons jeunes (vert, d'argent, blanc), mort noyé rouge, efrit noble, ettin fantôme, démon rouge, géant des collines, gibberling brood, gobelins Mkhiin (commun, avec arc, avec bâton, en armure avec hache, en armure avec arc), gobelins chevaucheurs de worg (d'élite, chaman), golem minuscule, demi-dragon vert, hephernaan, mégalo-mille-pattes, pouding noir, magicien rouge, marin (aux habits sombres, verts, rouges), serpent aquatique, araignée aquatique, trolls (d'eau douce, spectral), ver de tunnels, grande wiverne albinos, wiverne blanche. Comprend les tables et les jeux de sons des créatures concernées.
   - Ajout du nouveau pack d'animations de créatures de moddeurs pour IA : poulet marron (Jarl), chien gris de jastey, <a href="http://www.shsforums.net/files/file/908-ia-content-wow-pack-mule/">Packmule_wow content pack</a> (Kwiat_W), <a href="http://www.shsforums.net/files/file/956-ia-content-d2-bear-werebear/">D2 Bear & Werebear Animations</a>, <a href="http://www.shsforums.net/topic/59381-modresource-the-butcher-hots-animation-for-ees-classic/">Butcher animation from Heroes of the Storm</a>, <a href="https://github.com/thisisulb/ModResource_BeeAnimation">Giant Bee</a> (Ulb), <a href="https://github.com/thisisulb/UlbsAnimationPack">Ulb's animation Pack</a> (élémentaire de glace, Princesse élémentaire de terre Sunnis et Prince élémentaire de feu Zaaman Rul) ; pygargue à tête blanche (et petit), leprechaun annah, easter egg morte, golem d'ambre, petit serpent, petit serpent vert et petit serpent rouge (Gwendolyne).
   - Compatibilité native avec les jeux Enhanced Edition :
@@ -1002,11 +1005,13 @@ Ce composant corrige dans les parties sauvegardées les animations de créatures
     - Correction de noms de fichiers son mal orthographiés ("*t_sva*" et "*t_svn*" replacés par "*t-sva*" et "*t-svn*").
 - [500] Plus d'animations de base (t-baseanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_base_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Par souci de cohérence, le traitement des animations Ellesime avec des cheveux blancs, géant du feu alternatif et tyramort a été déplacé depuis le composant *Plus d'animations d'Icewind Dale II*.
 - [550] Plus d'animations d'Icewind Dale (t-iwdanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd_anim_arrays.tph*") pour faciliter leur mise à jour.
     - Compatibilité avec BG:EE : ajout de la condition `IF_EXISTS` après `COPY_EXISTING` pour éviter un échec de l'installation.
 - [600] Plus d'animations d'Icewind Dale II (t-iwd2anims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_iwd2_anim_arrays.tph*") pour faciliter leur mise à jour.
+    - Par souci de cohérence, le traitement des animations Ellesime avec des cheveux blancs, géant du feu alternatif et tyramort a été déplacé dans le composant *Plus d'animations de base*.
     - Ne modifie le fichier *t-cre_fixer.log* qu'en cas de besoin.
 - [650] Plus d'animations de Neverwinter Nights (t-nwnanims.tpa)
     - Externalisation des listes de fichiers de créatures à modifier dans des tables (définies dans la librairie "*gw_ia_more_nwn_anim_arrays.tph*") pour faciliter leur mise à jour.

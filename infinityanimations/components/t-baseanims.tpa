@@ -8,25 +8,30 @@
  *  change-log:                                                                                                                                                           *
  *  -----------                                                                                                                                                           *
  *      - Externalized lists of creatures to be patched into arrays (built in gw_ia_more_base_anim_arrays.tph library) for easier maintenance.                            *
+ *      - Moved BG2 content from More IWD2 Animations component (t-iwd2anims.tpa): Death Tyrants (#46), Ellesime Clones (#71), Fire Giants (#98 and #130).                *
  *      - Rewrote animation ID patching to solve EE games compatibility: replaced WRITE_SHORT 0x28 hexcode with WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~animation name~)  *
  *        whenever relevant.                                                                                                                                              *
  * ====================================================================================================================================================================== */
 
-/* --------------------------------------------------------------------- *
- *                    CREATURES                                    line  *
- * --------------------------------------------------------------------- *
- *  Histachii get the histachii animation                        #   41  *
- *  Brown Lizardmen get the lizard_man_elite animation           #   65  *
- *  Lizardman Shamans get the lizard_man animation               #   89  *
- *  Lizardman chiefs get the lizard_king animation               #  115  *
- *  Trolls get the troll animation                               #  141  *
- *  Blue Trolls get the troll_blue animation                     #  166  *
- *  Ice Trolls get the troll_ice animation                       #  203  *
- *  Small Trolls get the troll_small animation                   #  227  *
- *  Snow Trolls get the troll_snow animation                     #  251  *
- *  Umber Hulks get the umber_hulk animation                     #  278  *
- *  Elder Umber Hulks get the umber_hulk_elder (IWD) animation   #  305  *
- * --------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------ *
+ *                    CREATURES                                             line  *
+ * ------------------------------------------------------------------------------ *
+ *  Death Tyrants get the death_tyrant animation                          #   46  *
+ *  Ellesime Clones get the ellesime_white animation                      #   71  *
+ *  Fire Giants get the giant_fire animation                              #   98  *
+ *  Greater fire giants and firbolgs get the giant_fire_2 animation       #  130  *
+ *  Histachii get the histachii animation                                 #  161  *
+ *  Brown Lizardmen get the lizard_man_elite animation                    #  185  *
+ *  Lizardman Shamans get the lizard_man animation                        #  209  *
+ *  Lizardman chiefs get the lizard_king animation                        #  235  *
+ *  Trolls get the troll animation                                        #  261  *
+ *  Blue Trolls get the troll_blue animation                              #  286  *
+ *  Ice Trolls get the troll_ice animation                                #  323  *
+ *  Small Trolls get the troll_small animation                            #  347  *
+ *  Snow Trolls get the troll_snow animation                              #  371  *
+ *  Umber Hulks get the umber_hulk animation                              #  398  *
+ *  Elder Umber Hulks get the umber_hulk_elder (IWD) animation            #  425  *
+ * ------------------------------------------------------------------------------ */
 
 PRINT @28 // ~Patching creature files...~
 SILENT
@@ -35,6 +40,121 @@ SILENT
  *  Loads creatures lists arrays  *
  * ============================== */
 INCLUDE ~%MOD_FOLDER%/arrays/gw_ia_more_base_anim_arrays.tph~
+
+
+/* =============================================================================== *
+ *  Death Tyrants get the death_tyrant animation                                   *
+ * ------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)  *
+ * =============================================================================== */
+ACTION_PHP_EACH GW_death_tyrant AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~DEATH_TYRANT~) // original 0x5c00 - EE 0x7f46
+				WRITE_BYTE 0x271 4  // General (undead)
+				WRITE_BYTE 0x275 4  // Gender (neither)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_death_tyrant
+
+
+/* =============================================================================== *
+ *  Ellesime Clones get the ellesime_white animation                               *
+ * ------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)  *
+ * =============================================================================== */
+ACTION_PHP_EACH GW_ellesime_white AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~ELLESIME_WHITE~) // original 0x5b00 - EE 0x7f44
+				// If invalid class
+				PATCH_IF (BYTE_AT 0x273 = 114) OR (BYTE_AT 0x273 = 255) BEGIN
+					WRITE_BYTE 0x273 3  // Class (cleric)
+				END
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_ellesime_white
+
+
+/* =============================================================================== *
+ *  Fire Giants get the giant_fire animation                                       *
+ * ------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)  *
+ * =============================================================================== */
+ACTION_PHP_EACH GW_giant_fire AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 0x7f3e  // Animation ID (giant_fire)
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 5      // General (gianthumanoid)
+				WRITE_BYTE 0x272 142    // Race (giant)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
+				END
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_giant_fire
+
+
+/* =============================================================================== *
+ *  Greater Fire Giants and firbolgs get the giant_fire_2 animation                *
+ * ------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)  *
+ * =============================================================================== */
+ACTION_PHP_EACH GW_giant_fire_2 AS nb => correct BEGIN
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~%nb%.cre~ BEGIN
+
+		COPY_EXISTING ~%nb%.cre~ ~override~
+			PATCH_INCLUDE ~infinityanimations/lib/fj_cre_validity.tpp~
+			PATCH_IF valid BEGIN
+				PATCH_INCLUDE ~infinityanimations/lib/fj_cre_reindex.tpp~
+				WRITE_LONG 0x28 IDS_OF_SYMBOL (animate ~GIANT_FIRE_2~) // original 0x5c01 - EE 0x7f47
+				WRITE_BYTE 0x237 1      // Sex (male)
+				WRITE_BYTE 0x271 5      // General (gianthumanoid)
+				READ_BYTE  0x275 gd     // Gender
+				// If not summoned or illusionary
+				PATCH_IF (gd != 6) AND (gd != 7) BEGIN
+					WRITE_BYTE 0x275 1  // Gender (male)
+				END
+				WRITE_BYTE 0x27b 19     // Alignment (lawful evil by definition)
+			END
+		BUT_ONLY
+
+	END
+
+END
+ACTION_CLEAR_ARRAY GW_giant_fire_2
 
 
 /* ======================================= *

@@ -9,29 +9,181 @@
  * ====================================================================================================================================================== *
  *  LIST of ARRAYS - LISTE des TABLES                                                                                                                     *
  * -----------------------------------                                                                                                                    *
- *  - GW_histachii                :   LISTS vanilla and modded Histachii creatures needing to be patched.                                => line #   37   *
+ *  - GW_death_tyrant             :   LISTS vanilla and modded Death Tyrants creatures needing to be patched.                            => line #   45   *
+ *                                    LISTE les créatures tyramorts du jeu et de mods nécessitant d'être modifiées.                                       *
+ *  - GW_ellesime_white           :   LISTS vanilla and modded Ellesime Clones needing to be patched.                                    => line #   78   *
+ *                                    LISTE les clones d'Ellesime du jeu et de mods nécessitant d'être modifiés.                                          *
+ *  - GW_giant_fire               :   LISTS vanilla and modded Fire Giants needing to be patched.                                        => line #  112   *
+ *                                    LISTE les créatures Géants du feu du jeu et de mods nécessitant d'être modifiées.                                   *
+ *  - GW_giant_fire_2             :   LISTS vanilla and modded Greater fire giants needing to be patched.                                => line #  155   *
+ *                                    LISTE les créatures géants du feu majeurs et firbolgs du jeu et de mods nécessitant d'être modifiées.               *
+ *  - GW_histachii                :   LISTS vanilla and modded Histachii creatures needing to be patched.                                => line #  189   *
  *                                    LISTE les créatures histachii du jeu et de mods nécessitant d'être modifiées.                                       *
- *  - GW_lizardmen_brown          :   LISTS vanilla and modded Brown Lizardmen creatures needing to be patched.                          => line #   62   *
+ *  - GW_lizardmen_brown          :   LISTS vanilla and modded Brown Lizardmen creatures needing to be patched.                          => line #  214   *
  *                                    LISTE les guerriers hommes-lézards du jeu et de mods nécessitant d'être modifiés.                                   *
- *  - GW_lizardmen_green          :   LISTS vanilla and modded Lizardman Shamans creatures needing to be patched.                        => line #   98   *
+ *  - GW_lizardmen_green          :   LISTS vanilla and modded Lizardman Shamans creatures needing to be patched.                        => line #  250   *
  *                                    LISTE les créatures chaman hommes-lézards du jeu et de mods nécessitant d'être modifiées.                           *
- *  - GW_lizardmen_kings          :   LISTS vanilla and modded Lizardman chiefs creatures needing to be patched.                         => line #  133   *
+ *  - GW_lizardmen_kings          :   LISTS vanilla and modded Lizardman chiefs creatures needing to be patched.                         => line #  285   *
  *                                    LISTE les créatures chefs hommes-lézards du jeu et de mods nécessitant d'être modifiées.                            *
- *  - GW_trolls                   :   LISTS vanilla and modded Troll creatures needing to be patched.                                    => line #  162   *
+ *  - GW_trolls                   :   LISTS vanilla and modded Troll creatures needing to be patched.                                    => line #  314   *
  *                                    LISTE les créatures trolls du jeu et de mods nécessitant d'être modifiées.                                          *
- *  - GW_troll_blue               :   LISTS vanilla and modded Blue Troll creatures needing to be patched.                               => line #  260   *
+ *  - GW_troll_blue               :   LISTS vanilla and modded Blue Troll creatures needing to be patched.                               => line #  412   *
  *                                    LISTE les créatures trolls bleus du jeu et de mods nécessitant d'être modifiées.                                    *
- *  - GW_troll_ice                :   LISTS vanilla and modded Ice Troll creatures needing to be patched.                                => line #  310   *
+ *  - GW_troll_ice                :   LISTS vanilla and modded Ice Troll creatures needing to be patched.                                => line #  462   *
  *                                    LISTE les créatures trolls des glaces du jeu et de mods nécessitant d'être modifiées.                               *
- *  - GW_troll_small              :   LISTS vanilla and modded Small Troll creatures needing to be patched.                              => line #  344   *
+ *  - GW_troll_small              :   LISTS vanilla and modded Small Troll creatures needing to be patched.                              => line #  496   *
  *                                    LISTE les petits trolls du jeu et de mods nécessitant d'être modifiés.                                              *
- *  - GW_troll_snow               :   LISTS vanilla and modded Snow Troll creatures needing to be patched.                               => line #  377   *
+ *  - GW_troll_snow               :   LISTS vanilla and modded Snow Troll creatures needing to be patched.                               => line #  529   *
  *                                    LISTE les créatures trolls des neiges du jeu et de mods nécessitant d'être modifiées.                               *
- *  - GW_lumber_hulk              :   LISTS vanilla and modded Umber Hulk creatures needing to be patched.                               => line #  404   *
+ *  - GW_lumber_hulk              :   LISTS vanilla and modded Umber Hulk creatures needing to be patched.                               => line #  556   *
  *                                    LISTE les créatures ombres des roches du jeu et de mods nécessitant d'être modifiées.                               *
- *  - GW_umber_hulk_elder         :   LISTS vanilla and modded Elder Umber Hulk creatures needing to be patched.                         => line #  443   *
+ *  - GW_umber_hulk_elder         :   LISTS vanilla and modded Elder Umber Hulk creatures needing to be patched.                         => line #  595   *
  *                                    LISTE les créatures ombres des roches anciennes du jeu et de mods nécessitant d'être modifiées.                     *
  * ====================================================================================================================================================== */
+
+/* ================================================================================================= *
+ *  ARRAY GW_death_tyrant : LISTS vanilla and modded Death Tyrants creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------- *
+ *  Death Tyrants get the death_tyrant animation.                                                    *
+ * ------------------------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)                    *
+ * ================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_death_tyrant
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_death_tyrant BEGIN
+
+// BG2
+// ---
+behund01                => 1	// Death Tyrant
+melsum03                => 1	// id.
+rngbeh01				=> 1	// id.
+
+// BP
+// --
+tyrorb                  => 1	// Death Tyrant
+
+// Domains of Dread
+// ----------------
+demtyra                 => 1	// Death Tyrant
+
+// Exnem
+// -----
+xsbehold                => 1	// Death Tyrant
+
+END
+
+
+/* =========================================================================================== *
+ *  ARRAY GW_ellesime_white : LISTS vanilla and modded Ellesime Clones needing to be patched.  *
+ * ------------------------------------------------------------------------------------------- *
+ *  Ellesime Clones get the ellesime_white animation.                                          *
+ * ------------------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)              *
+ * =========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_ellesime_white
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_ellesime_white BEGIN
+
+// BG2
+// ---
+clone01                 => 1	// Escaped Clone
+clone1                  => 1	// id.
+drelle                  => 1	// Dream Vision
+drelle2                 => 1	// id.
+
+// BG1 NPC
+// -------
+x#elles                 => 1	// Queen Ellesime
+
+// Planar Sphere
+// -------------
+psmysend                => 1	// Mystra
+
+// Xan NPC for BG2
+// ---------------
+o#clone                 => 1	// Guardian Clone
+
+END
+
+
+/* ========================================================================================== *
+ *  ARRAY giant_fire : LISTS vanilla and modded Fire Giants needing to be patched.            *
+ * ------------------------------------------------------------------------------------------ *
+ *  Fire Giants get the giant_fire animation.                                                 *
+ * ------------------------------------------------------------------------------------------ *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)             *
+ * ========================================================================================== */
+
+ACTION_CLEAR_ARRAY GW_giant_fire
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire BEGIN
+
+// BG2
+// ---
+giafir01                => 1	// Fire Giant
+giantf01                => 1	// id.
+hgmag01                 => 1	// Fire Giant Mage
+hgmag02                 => 1	// id.
+hgwar01                 => 1	// Fire Giant
+yaga01                  => 1	// Yaga-Shura
+yagaspir                => 1	// id.
+ysguar01                => 1	// Fire Giant
+
+// Ascension & BP
+// --------------
+finyaga                 => 1	// Yaga-Shura
+
+// Bonehill
+// --------
+bhfgiant                => 1	// Fire Giant
+
+// Improved Volcano! Pack
+// ----------------------
+sumgia                  => 1	// Fire Giant
+
+// RoT
+// ---
+giantfr                 => 1	// Greater Fire Giant
+cultmo9                 => 1	// Fire Giant
+
+END
+
+
+/* ======================================================================================================= *
+ *  ARRAY GW_giant_fire_2 : LISTS vanilla and modded Greater fire giants creatures needing to be patched.  *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  Greater fire giants and firbolgs get the giant_fire_2 animation.                                       *
+ * ------------------------------------------------------------------------------------------------------- *
+ *  ==> As of v6.0.0: Moved from More IWD2 Animations component (t-iwd2anims.tpa)                          *
+ * ======================================================================================================= */
+
+ACTION_CLEAR_ARRAY GW_giant_fire_2
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY GW_giant_fire_2 BEGIN
+
+// Heart of the Wood
+// -----------------
+firbolg                 => 1	// Firbolg
+
+// RoT
+// ---
+ggiantf1                => 1	// Greater Fire Giant
+ggiantf2                => 1	// id.
+ggiantf3                => 1	// id.
+ggiantfr                => 1	// id.
+
+// SoS
+// ---
+cb4300gt                => 1	// Bandit Giant
+
+// Tsujatha Romance
+// ----------------
+tsjgiant                => 1	// Sorkyst's Giant
+
+END
+
 
 /* ========================================================================================== *
  *  ARRAY GW_histachii : LISTS vanilla and modded Histachii creatures needing to be patched.  *
